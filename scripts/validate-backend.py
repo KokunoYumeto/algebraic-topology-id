@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Validate the locale-neutral Unit 001 interoperability backend.
+"""Validate the locale-neutral Units 001-002 interoperability backend.
 
 The validator is deliberately self-contained and offline.  It checks canonical
 JSONL serialization, referential integrity, source-span hashes, artifact hashes,
-the existing artifact manifest, and complete exercise-to-solution linkage.
+both exact artifact manifests, and complete mastery linkage.
 """
 
 from __future__ import annotations
@@ -135,6 +135,25 @@ HEX64_RE = re.compile(r"^[0-9a-f]{64}$")
 HEX40_RE = re.compile(r"^[0-9a-f]{40}$")
 TIMESTAMP_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 SOURCE_ID_RE = re.compile(r"\{[^}\n]*#([A-Za-z0-9-]+)[^}\n]*\}")
+SOURCE_FILES = {
+    "source/id-ID/reader-unit-001.md": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15",
+    "source/id-ID/units/unit-002-lecture-002.md": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
+}
+SOURCE_LINE_COUNTS = {
+    "source/id-ID/reader-unit-001.md": 225,
+    "source/id-ID/units/unit-002-lecture-002.md": 674,
+}
+EXPECTED_SOURCE_ID_COUNT = 70
+ARTIFACT_MANIFESTS = {
+    "output/ARTIFACT_MANIFEST.csv": {
+        "output/html/index.html",
+        "output/pdf/topologi-aljabar-unit-001-id.pdf",
+    },
+    "output/ARTIFACT_MANIFEST_UNITS_001_002.csv": {
+        "output/html/units-001-002/index.html",
+        "output/pdf/topologi-aljabar-unit-001-002-id.pdf",
+    },
+}
 
 
 class ValidationError(Exception):
@@ -363,23 +382,57 @@ def validate_files_and_spans(
             if source_local_id not in first_line:
                 fail(f"{record_id}: source_local_id not anchored at target line_start")
 
-    source_path = safe_path(lane_root, "source/id-ID/reader-unit-001.md")
-    source_text = source_path.read_text(encoding="utf-8")
-    source_ids = set(SOURCE_ID_RE.findall(source_text))
-    unit_ids = {
-        record["source_local_id"]
-        for record in records
-        if record["entity_type"] == "unit" and record["source_local_id"] is not None
-    }
-    segment_ids = {
-        record["source_local_id"]
-        for record in records
-        if record["entity_type"] == "segment"
-    }
-    if unit_ids != source_ids:
-        fail(f"stable source ids vs unit records differ: missing={sorted(source_ids-unit_ids)}, extra={sorted(unit_ids-source_ids)}")
-    if segment_ids != source_ids:
-        fail(f"stable source ids vs segment records differ: missing={sorted(source_ids-segment_ids)}, extra={sorted(segment_ids-source_ids)}")
+    source_id_paths: dict[str, str] = {}
+    for relative, expected_hash in SOURCE_FILES.items():
+        source_path = safe_path(lane_root, relative)
+        raw, file_hash, _ = cached(source_path)
+        if file_hash != expected_hash:
+            fail(f"frozen source hash mismatch for {relative}")
+        try:
+            source_text = raw.decode("utf-8")
+        except UnicodeDecodeError as exc:
+            fail(f"{relative}: source is not valid UTF-8: {exc}")
+        local_ids = SOURCE_ID_RE.findall(source_text)
+        duplicates = sorted(record_id for record_id, count in Counter(local_ids).items() if count != 1)
+        if duplicates:
+            fail(f"{relative}: duplicate stable source ids {duplicates}")
+        for source_id in local_ids:
+            if source_id in source_id_paths:
+                fail(f"stable source id occurs in two source files: {source_id}")
+            source_id_paths[source_id] = relative
+
+    source_ids = set(source_id_paths)
+    if len(source_ids) != EXPECTED_SOURCE_ID_COUNT:
+        fail(f"expected {EXPECTED_SOURCE_ID_COUNT} stable source ids, found {len(source_ids)}")
+
+    for entity_type in ("unit", "segment"):
+        local_ids = [
+            record["source_local_id"]
+            for record in records
+            if record["entity_type"] == entity_type and record["source_local_id"] is not None
+        ]
+        counts = Counter(local_ids)
+        mapped_ids = set(counts)
+        duplicates = sorted(record_id for record_id, count in counts.items() if count != 1)
+        if duplicates:
+            fail(f"duplicate {entity_type} mappings for stable source ids: {duplicates}")
+        if mapped_ids != source_ids:
+            fail(
+                f"stable source ids vs {entity_type} records differ: "
+                f"missing={sorted(source_ids-mapped_ids)}, extra={sorted(mapped_ids-source_ids)}"
+            )
+
+    for record in records:
+        if record["entity_type"] not in {"unit", "segment"}:
+            continue
+        source_local_id = record["source_local_id"]
+        if source_local_id is None:
+            if record["entity_type"] != "unit" or record["unit_kind"] != "reader_unit":
+                fail(f"{record['id']}: only reader_unit roots may omit source_local_id")
+            continue
+        expected_path = source_id_paths[source_local_id]
+        if record["target_locator"]["path"] != expected_path:
+            fail(f"{record['id']}: target source does not contain its stable source id")
 
     segments_by_local = {
         record["source_local_id"]: record
@@ -398,8 +451,23 @@ def validate_hierarchy_and_mastery(records: list[dict[str, Any]], by_id: dict[st
     units = [record for record in records if record["entity_type"] == "unit"]
     unit_by_id = {record["id"]: record for record in units}
     roots = [record for record in units if record["unit_kind"] == "reader_unit"]
-    if len(roots) != 1:
-        fail(f"expected exactly one reader_unit root, found {len(roots)}")
+    root_paths = [record["target_locator"]["path"] for record in roots]
+    if len(roots) != len(SOURCE_FILES) or set(root_paths) != set(SOURCE_FILES):
+        fail(
+            "expected exactly one reader_unit root for each frozen source file; "
+            f"found roots for {sorted(root_paths)}"
+        )
+    for root in roots:
+        locator = root["target_locator"]
+        relative = locator["path"]
+        if root["parent_id"] != root["course_id"] or by_id[root["parent_id"]]["entity_type"] != "course":
+            fail(f"{root['id']}: reader_unit root must be parented by its course")
+        if (
+            locator["line_start"] != 1
+            or locator["line_end"] != SOURCE_LINE_COUNTS[relative]
+            or locator["content_sha256"] != SOURCE_FILES[relative]
+        ):
+            fail(f"{root['id']}: reader_unit root must span its complete frozen source file")
 
     sibling_orders: defaultdict[str, list[int]] = defaultdict(list)
     for unit in units:
@@ -413,11 +481,17 @@ def validate_hierarchy_and_mastery(records: list[dict[str, Any]], by_id: dict[st
         if parent_id in unit_by_id:
             if path[:-1] != unit_by_id[parent_id]["path"]:
                 fail(f"{record_id}: path does not extend parent path")
-        elif len(path) != 1:
-            fail(f"{record_id}: non-unit parent requires a root-length path")
+        elif len(path) != 1 or unit["unit_kind"] != "reader_unit":
+            fail(f"{record_id}: only reader_unit roots may have a non-unit parent")
         if not isinstance(unit["order"], int) or unit["order"] < 1:
             fail(f"{record_id}: order must be a positive integer")
         sibling_orders[parent_id].append(unit["order"])
+
+        root = unit_by_id[path[0]]
+        if root["unit_kind"] != "reader_unit":
+            fail(f"{record_id}: unit path does not begin at a reader_unit root")
+        if unit["target_locator"]["path"] != root["target_locator"]["path"]:
+            fail(f"{record_id}: unit target source differs from its reader_unit root")
     for parent_id, orders in sibling_orders.items():
         if len(orders) != len(set(orders)):
             fail(f"{parent_id}: duplicate child order values")
@@ -438,37 +512,60 @@ def validate_hierarchy_and_mastery(records: list[dict[str, Any]], by_id: dict[st
     if set(solution_links) != solutions or any(count != 1 for count in solution_links.values()):
         fail("every solution must solve exactly one exercise")
 
+    answers = [record for record in relations if record["relation_type"] == "answers"]
+    questions = {record["id"] for record in units if record["unit_kind"] == "question"}
+    answer_units = {record["id"] for record in units if record["unit_kind"] == "answer"}
+    question_links: Counter[str] = Counter()
+    answer_links: Counter[str] = Counter()
+    for relation in answers:
+        if relation["from_id"] not in answer_units or relation["to_id"] not in questions:
+            fail(f"{relation['id']}: answers must link answer -> question")
+        answer_links[relation["from_id"]] += 1
+        question_links[relation["to_id"]] += 1
+    if set(question_links) != questions or any(count != 1 for count in question_links.values()):
+        fail("every formal question must have exactly one answers relation")
+    if set(answer_links) != answer_units or any(count != 1 for count in answer_links.values()):
+        fail("every answer must answer exactly one formal question")
 
-def validate_artifact_manifest(records: list[dict[str, Any]], lane_root: Path) -> None:
+
+def validate_artifact_manifests(records: list[dict[str, Any]], lane_root: Path) -> None:
     artifacts = {record["path"]: record for record in records if record["entity_type"] == "artifact"}
-    manifest_path = safe_path(lane_root, "output/ARTIFACT_MANIFEST.csv")
-    raw = manifest_path.read_text(encoding="utf-8-sig")
-    reader = csv.DictReader(io.StringIO(raw))
-    if reader.fieldnames != ["path", "bytes", "sha256"]:
-        fail("artifact manifest header must be path,bytes,sha256")
-    seen: set[str] = set()
-    for row in reader:
-        relative = row["path"]
-        if relative in seen:
-            fail(f"artifact manifest duplicates {relative}")
-        seen.add(relative)
-        path = safe_path(lane_root, relative)
-        if not path.is_file():
-            fail(f"artifact manifest path is missing: {relative}")
-        try:
-            expected_bytes = int(row["bytes"])
-        except ValueError:
-            fail(f"artifact manifest has invalid byte count for {relative}")
-        if path.stat().st_size != expected_bytes or sha256_file(path) != row["sha256"]:
-            fail(f"artifact manifest mismatch for {relative}")
-        if relative not in artifacts:
-            fail(f"artifact manifest path lacks backend artifact record: {relative}")
-        artifact = artifacts[relative]
-        if artifact["bytes"] != expected_bytes or artifact["sha256"] != row["sha256"]:
-            fail(f"backend artifact disagrees with manifest for {relative}")
-    required_outputs = {"output/html/index.html", "output/pdf/topologi-aljabar-unit-001-id.pdf"}
-    if seen != required_outputs:
-        fail(f"artifact manifest output set differs: {sorted(seen)}")
+    for manifest_relative, required_outputs in ARTIFACT_MANIFESTS.items():
+        if manifest_relative not in artifacts:
+            fail(f"artifact manifest lacks its own backend artifact record: {manifest_relative}")
+        manifest_artifact = artifacts[manifest_relative]
+        manifest_path = safe_path(lane_root, manifest_relative)
+        raw = manifest_path.read_text(encoding="utf-8-sig")
+        reader = csv.DictReader(io.StringIO(raw))
+        if reader.fieldnames != ["path", "bytes", "sha256"]:
+            fail(f"{manifest_relative}: header must be path,bytes,sha256")
+        seen: set[str] = set()
+        for row in reader:
+            relative = row["path"]
+            if relative in seen:
+                fail(f"{manifest_relative}: duplicate output {relative}")
+            seen.add(relative)
+            path = safe_path(lane_root, relative)
+            if not path.is_file():
+                fail(f"{manifest_relative}: output is missing: {relative}")
+            try:
+                expected_bytes = int(row["bytes"])
+            except ValueError:
+                fail(f"{manifest_relative}: invalid byte count for {relative}")
+            if path.stat().st_size != expected_bytes or sha256_file(path) != row["sha256"]:
+                fail(f"{manifest_relative}: output mismatch for {relative}")
+            if relative not in artifacts:
+                fail(f"{manifest_relative}: output lacks backend artifact record: {relative}")
+            artifact = artifacts[relative]
+            if artifact["bytes"] != expected_bytes or artifact["sha256"] != row["sha256"]:
+                fail(f"backend artifact disagrees with {manifest_relative} for {relative}")
+            if artifact["manifest_artifact_id"] != manifest_artifact["id"]:
+                fail(f"{relative}: backend artifact points to the wrong manifest")
+        if seen != required_outputs:
+            fail(
+                f"{manifest_relative}: output set differs; "
+                f"missing={sorted(required_outputs-seen)}, extra={sorted(seen-required_outputs)}"
+            )
 
 
 def summarize(records: Iterable[dict[str, Any]], backend_dir: Path) -> None:
@@ -498,7 +595,7 @@ def main() -> int:
         validate_references(records, by_id)
         validate_files_and_spans(records, by_id, lane_root)
         validate_hierarchy_and_mastery(records, by_id)
-        validate_artifact_manifest(records, lane_root)
+        validate_artifact_manifests(records, lane_root)
         summarize(records, backend_dir)
     except (OSError, ValidationError) as exc:
         print(f"backend validation: FAIL: {exc}", file=sys.stderr)

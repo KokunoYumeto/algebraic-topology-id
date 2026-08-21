@@ -27,7 +27,7 @@ jobs:
       - name: Check out exact source
         uses: actions/checkout@v6
 
-      - name: Verify frozen Unit 1 reader
+      - name: Verify frozen readers
         shell: bash
         run: |
           python - <<'PY'
@@ -36,13 +36,16 @@ jobs:
 
           expected = {
               "output/html/index.html": (85580, "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8"),
+              "output/html/units-001-002/index.html": (220035, "d3b5cbfaa3511823821ecf9ba26a4eaec7c84d937417927d11bde3f66abc9f54"),
           }
           for name, (size, digest) in expected.items():
               path = Path(name)
               data = path.read_bytes()
               assert len(data) == size, (name, len(data), size)
               assert sha256(data).hexdigest() == digest, name
-          print("Frozen Unit 1 HTML verified")
+          actual = sorted(path.relative_to(Path("output/html")).as_posix() for path in Path("output/html").rglob("*") if path.is_file())
+          assert actual == ["index.html", "units-001-002/index.html"], actual
+          print("Frozen Unit 1 and cumulative Unit 1-2 HTML verified")
           PY
 
       - name: Configure Pages

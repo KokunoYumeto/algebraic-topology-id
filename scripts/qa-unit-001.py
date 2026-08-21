@@ -185,9 +185,11 @@ def verify_source(authority: dict) -> tuple[list[str], dict[str, int]]:
         require(secret not in text, f"Private/control residue in source: {secret}")
 
     cursor = read_json(CURSOR)
-    require(cursor["completed_through_line"] == 348, "Cursor end mismatch")
-    require(cursor["next_line"] == 349, "Cursor next-line mismatch")
-    require(cursor["completed_units"] == ["o012-rbt-l01"], "Cursor completed-unit mismatch")
+    # This historical Unit 1 verifier must remain valid as the cumulative
+    # production cursor advances beyond the first frozen boundary.
+    require(cursor["completed_through_line"] >= 348, "Cursor regressed before Unit 1 end")
+    require(cursor["next_line"] == cursor["completed_through_line"] + 1, "Cursor continuity mismatch")
+    require("o012-rbt-l01" in cursor["completed_units"], "Cursor lost completed Unit 1")
     return ids, dict(sorted(block_counts.items()))
 
 

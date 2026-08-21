@@ -1,0 +1,12 @@
+.question {
+  margin: 1.25rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 0.3rem solid #9a5d20;
+  background: #fff8ef;
+}
+
+@media (prefers-color-scheme: dark) {
+  .question {
+    background: #28231d;
+  }
+}

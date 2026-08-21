@@ -1,0 +1,836 @@
+                                      Topologi Aljabar
+                Unit 1–2 — Ruang Topologis, Perekatan, dan Keterhubungan
+
+
+                           David Michael Roberts (materi sumber)
+                   Edisi Bahasa Indonesia dengan pendamping penguasaan
+
+                                          21 Agustus 2026
+
+
+Daftar Isi
+Tentang unit ini                                                                                    1
+
+1 Kuliah 1                                                                                          2
+  1.1 Apa yang dipelajari oleh topologi aljabar? . . . . . . . . . . . . . . . . . . . . . . .      2
+  1.2 Ruang topologis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   2
+
+Pendamping penguasaan terpecahkan                                                                    4
+  1.3 Solusi Latihan 1.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     5
+  1.4 Solusi Latihan 1.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     5
+  1.5 Pemeriksaan Lema 1.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       5
+  1.6 Contoh terpecahkan: penciutan radial . . . . . . . . . . . . . . . . . . . . . . . . .         5
+
+Tentang unit ini                                                                                    6
+
+2 Kuliah 2                                                                                           6
+  2.1 Kelanjutan topologi awal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       6
+  2.2 Topologi akhir dan ruang hasil bagi . . . . . . . . . . . . . . . . . . . . . . . . . . .      7
+  2.3 Gabungan saling lepas dan sifat universalnya . . . . . . . . . . . . . . . . . . . . .         8
+  2.4 Sampul dan lema perekatan . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        9
+  2.5 Homotopi dan kontraktibilitas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     10
+
+Pendamping penguasaan terpecahkan                                                                   12
+  2.6 Solusi Latihan 2.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    12
+  2.7 Bukti lengkap Lema 2.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      12
+  2.8 Solusi Latihan 2.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    12
+  2.9 Solusi Latihan 2.3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    13
+  2.10 Solusi Latihan 2.4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   13
+  2.11 Solusi Latihan 2.5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   13
+  2.12 Bukti Lema 2.3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   14
+  2.13 Solusi Latihan 2.6 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   14
+  2.14 Solusi Latihan 2.7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   14
+  2.15 Jawaban Pertanyaan 2.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     15
+
+
+Tentang unit ini
+Unit ini merupakan terjemahan dan adaptasi Bahasa Indonesia atas Algebraic Topology
+karya David Michael Roberts (2019), tepatnya Notes.tex baris 134–348 pada commit
+
+
+                                                  1
+b947ad2e9f9e301bfe24590a9db653bc54fa1a53. Karya sumber tersedia di bawah Creative
+Commons Attribution 4.0 International. Perubahan pada unit ini meliputi penerjemahan,
+pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, pemindahan satu latihan dari
+catatan pinggir ke blok latihan, penjelasan kasus keluarga kosong pada topologi awal, dan koreksi
+identitas invers sumber dari g ◦ f = idX dan g ◦ f = idY menjadi g ◦ f = idX dan f ◦ g = idY .
+Materi pendamping penguasaan setelah teks inti ditulis khusus untuk edisi ini dan juga tersedia di
+bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan
+dari penulis sumber.
+
+
+1     Kuliah 1
+1.1    Apa yang dipelajari oleh topologi aljabar?
+Topologi aljabar mempelajari pemetaan
+
+
+                                  {Ruang} −→ {Objek aljabar},
+
+atau, lebih tepatnya, pemetaan semacam itu yang “berperilaku baik”. Pemetaan tersebut juga harus
+mengirim fungsi kontinu antarruang ke pemetaan aljabar dengan tetap menghormati komposisi
+(jadi, pemetaan itu berupa funktor). Selain itu, ruang yang dibangun dari ruang-ruang yang lebih
+sederhana semestinya dikirim ke objek aljabar yang dibangun secara serasi dari komponen-komponen
+yang lebih sederhana.
+Di sini, “ruang” secara kasar berarti ruang topologis hingga deformasi—biasanya hingga homotopi,
+meskipun tidak selalu demikian. Kelas-kelas ekuivalensi semacam ini disebut tipe homotopi. “Objek
+aljabar” dapat berarti grup (abelian), gelanggang, modul, atau bahkan kompleks rantai dari
+objek-objek tersebut.
+Catatan. Kompleks rantai adalah suatu jenis barisan pemetaan tertentu, · · · → V0 → V1 → V2 →
+· · ·.
+Contoh 1.1. Bagaimana kita dapat menentukan apakah permukaan bola S 2 dan torus S 1 × S 1
+dapat dideformasikan satu sama lain? Bagaimana kita membuktikan bahwa deformasi semacam
+itu tidak mungkin?
+Contoh 1.2. Sebagai contoh positif, kita dapat menciutkan R3 \ {0} → S 2 ,→ R3 \ {0} dengan
+                 x
+mengirim x 7→ |x|  . Pemetaan komposit ini dapat dideformasikan secara kontinu menjadi pemetaan
+identitas. Jadi, dimensi tidak selalu dipertahankan.
+Contoh 1.3. Mungkinkah S 1 ∼ S 2 ?
+Pertama-tama kita perlu memahami bagaimana ruang dibangun.
+
+1.2    Ruang topologis
+Ingat kembali definisi berikut.
+Prasyarat sumber. Topologi dan Analisis III.
+Definisi 1.1 (topologi). Suatu topologi pada himpunan X adalah koleksi T yang terdiri atas
+subset-subset X dan memenuhi:
+    1. ∅, X ∈ T ;
+    2. jika U, V ∈ T , maka U ∩ V ∈ T ;
+    3. jika {Uα }α∈I adalah sembarang keluarga himpunan dalam T , maka α∈I Uα ∈ T .
+                                                                      S
+
+
+
+
+                                                2
+Di sini I adalah himpunan indeks. Jika U ∈ T , kita mengatakan bahwa U terbuka. Suatu ruang
+topologis adalah himpunan X yang dilengkapi dengan topologi T .
+Contoh 1.4. Pada himpunan bilangan real, topologi Euklides (atau topologi “biasa”) didefinisikan
+dengan menyatakan bahwa suatu himpunan terbuka jika dan hanya jika himpunan itu merupakan
+gabungan selang-selang terbuka (a, b). Gabungan kosong juga diperbolehkan dan menghasilkan ∅.
+Topologi diskret pada himpunan X diperoleh dengan mengambil T sebagai koleksi semua subset X.
+Topologi indiskret diperoleh dengan mengambil T = {∅, X}.
+Definisi tersebut ringkas, tetapi bukan selalu cara terbaik untuk mendefinisikan topologi. Kita juga
+akan menggunakan lingkungan.
+Definisi 1.2 (lingkungan). Dalam topologi T pada X, suatu himpunan N ⊆ X disebut lingkungan
+dari titik x ∈ X jika terdapat himpunan terbuka U ⊆ N dengan x ∈ U .
+Contoh 1.5. Ambil R dengan topologi Euklides. Himpunan (−1, 1), [−1, 1], dan [−1, 1) semuanya
+merupakan lingkungan dari setiap −1 < x < 1, tetapi [0, 1) bukan lingkungan dari 0. Sebagai
+contoh yang sedikit lebih rumit, [0, 1] ∪ {2} ∪ [5, 6] merupakan lingkungan dari setiap 0 < x < 1
+dan setiap 5 < x < 6.
+Contoh 1.6. Misalkan (X, d) adalah ruang metrik. Topologi metrik didefinisikan dengan menya-
+takan bahwa subset U ⊆ X terbuka jika dan hanya jika, untuk setiap x ∈ U , terdapat εx > 0
+sehingga bola terbuka B(x, εx ) ⊆ U . Bola terbuka yang berpusat di x merupakan lingkungan dari
+x; demikian pula bola tertutup berjari-jari positif.
+Pendekatan berikut lebih konkret dan memungkinkan kita mendefinisikan topologi secara ringkas.
+Definisi 1.3 (basis lingkungan). Suatu basis lingkungan N pada himpunan X adalah keluarga
+{N (x)}x∈X , dengan setiap N (x) merupakan koleksi tak kosong yang terdiri atas subset-subset X,
+sehingga untuk setiap x ∈ X berlaku:
+  1. untuk setiap N ∈ N (x), berlaku x ∈ N ;
+  2. untuk setiap N1 , N2 ∈ N (x), terdapat N ∈ N (x) dengan N ⊆ N1 ∩ N2 ;
+  3. untuk setiap N ∈ N (x), terdapat subset U ⊆ N sehingga x ∈ U dan, untuk setiap y ∈ U ,
+     terdapat V ∈ N (y) dengan V ⊆ U .
+Himpunan-himpunan dalam N (x) disebut lingkungan dasar dari x.
+Sebagai contoh, jika (X, T ) adalah ruang topologis, kita memperoleh basis lingkungan dengan
+mendefinisikan N (x) sebagai koleksi semua lingkungan dari x. Kita juga memperoleh basis
+lingkungan dengan mendefinisikan N ′ (x) sebagai koleksi semua himpunan terbuka yang memuat x.
+Jika N adalah basis lingkungan pada X, definisikan subset U ⊆ X sebagai N -terbuka jika dan
+hanya jika, untuk setiap x ∈ U , terdapat N ∈ N (x) dengan N ⊆ U .
+Proposisi 1.1. Himpunan-himpunan N -terbuka membentuk suatu topologi pada X.
+Bukti. Kita memeriksa ketiga aksioma topologi.
+  1. Syarat bahwa ∅ bersifat N -terbuka benar secara vakum. Karena N (x) tidak kosong, di setiap
+     titik terdapat lingkungan dasar; akibatnya X bersifat N -terbuka.
+  2. Misalkan U dan V keduanya N -terbuka. Ambil x ∈ U ∩ V . Terdapat NU , NV ∈ N (x)
+     dengan NU ⊆ U dan NV ⊆ V . Selain itu, x ∈ NU ∩ NV . Jadi terdapat N ∈ N (x) dengan
+     N ⊆ NU ∩ NV ⊆ U ∩ V . Hal ini berlaku untuk setiap x ∈ U ∩ V , sehingga U ∩ V bersifat
+     N -terbuka.
+  3. Misalkan setiap Uα , α ∈ I, bersifat N -terbuka, dan tetapkan U = α∈I Uα . Ambil x ∈ U .
+                                                                        S
+
+     Ada α0 dengan x ∈ Uα0 . Karena Uα0 bersifat N -terbuka, terdapat lingkungan dasar N dari
+     x dengan N ⊆ Uα0 ⊆ U . Maka U bersifat N -terbuka. □
+
+
+
+                                                 3
+Topologi pada proposisi ini disebut topologi yang dibangkitkan oleh N . Lingkungan dalam topologi
+ini adalah himpunan yang memuat suatu lingkungan dasar: V merupakan lingkungan dari x jika
+terdapat N ∈ N (x) dengan N ⊆ V .
+Dengan basis lingkungan N pada X, kita dapat mengenali penutupan suatu himpunan S ⊂ X
+sebagai koleksi titik x ∈ X yang memenuhi: untuk setiap N ∈ N (x), terdapat s ∈ N ∩ S.
+Contoh 1.7. Pada ruang metrik (X, d), bola-bola terbuka membentuk basis lingkungan pada X,
+dan topologi yang dibangkitkannya adalah topologi metrik.
+Dengan demikian, banyak definisi yang dikenal dari ruang metrik tetap berlaku untuk ruang
+topologis asalkan dapat dirumuskan menggunakan lingkungan dasar. Salah satu yang terpenting
+adalah kontinuitas.
+Definisi 1.4 (kontinuitas). Misalkan NX dan NY masing-masing merupakan basis lingkungan
+pada himpunan X dan Y . Fungsi f : X → Y disebut kontinu jika, untuk setiap x ∈ X dan
+N ∈ NY (f (x)), himpunan f −1 (N ) memuat suatu lingkungan dasar dari x.
+Definisi ini merupakan perumuman besar dari definisi kontinuitas ε–δ.
+Latihan 1.1. Buktikan bahwa jika f : (X, NX ) → (Y, NY ) kontinu menurut definisi di atas, maka
+f kontinu untuk topologi yang dibangkitkan oleh basis lingkungan pada X dan Y .
+Ingat bahwa kontinuitas untuk topologi berarti f −1 (U ) terbuka untuk setiap himpunan terbuka U .
+Sebagai pemeriksaan kewajaran, fungsi identitas idX pada ruang X memang kontinu. Setiap fungsi
+menuju ruang indiskret juga kontinu, demikian pula setiap fungsi dari ruang diskret.
+Definisi 1.5 (homeomorfisme). Fungsi kontinu f : X → Y disebut homeomorfisme jika terdapat
+fungsi kontinu g : Y → X dengan g ◦ f = idX dan f ◦ g = idY . Dalam keadaan ini, X dan Y disebut
+homeomorfik.
+Sekarang kita perlu menjelaskan cara membangun ruang baru serta pemetaan kontinu yang
+menghubungkannya dengan ruang asal.
+Definisi 1.6 (topologi awal). Misalkan X adalah himpunan; (Yα , Nα ), α ∈ I, adalah keluarga
+himpunan yang dilengkapi basis lingkungan; dan fα : X → Yα adalah keluarga fungsi. Topologi awal
+pada X dibangkitkan oleh basis lingkungan berikut: suatu himpunan bagian B ⊆ X merupakan
+lingkungan dasar dari x jika dan hanya jika B berbentuk
+
+
+                                      fα−1
+                                         1
+                                           (N1 ) ∩ · · · ∩ fα−1
+                                                              k
+                                                                (Nk ),
+
+untuk beberapa α1 , . . . , αk dan Ni ∈ Nαi (fαi (x)). Untuk keluarga kosong, irisan kosong ditafsirkan
+sebagai X.
+Latihan 1.2. Buktikan bahwa koleksi pada Definisi 1.6 benar-benar merupakan basis lingkungan.
+Konstruksi ini merangkum topologi produk. Untuk X = Y1 × Y2 dan proyeksi fi : X → Yi ,
+fi (y1 , y2 ) = yi , topologi awal adalah topologi produk. Konstruksi yang sama juga menghasilkan
+topologi subruang: ambil injeksi f : X ,→ Y lalu berikan X topologi awal.
+Lema 1.1 (sifat universal topologi awal). Setelah X diberi topologi awal, setiap fungsi
+fα : X → Yα kontinu. Selain itu, fungsi k : Z → X kontinu jika dan hanya jika fα ◦ k : Z → Yα
+kontinu untuk setiap α.
+
+
+Pendamping penguasaan terpecahkan
+Bagian ini merupakan materi baru untuk edisi Bahasa Indonesia. Tujuannya bukan mengganti
+latihan sumber, melainkan menyediakan bukti lengkap, pemeriksaan konsep, dan satu perhitungan
+
+                                                     4
+deformasi yang menutup hasil belajar Unit 1.
+
+1.3   Solusi Latihan 1.1
+Misalkan U terbuka dalam topologi pada Y yang dibangkitkan oleh NY . Kita harus membuktikan
+bahwa f −1 (U ) terbuka dalam topologi pada X yang dibangkitkan oleh NX .
+Ambil x ∈ f −1 (U ). Karena f (x) ∈ U dan U bersifat NY -terbuka, terdapat N ∈ NY (f (x)) dengan
+N ⊆ U . Kontinuitas menurut Definisi 1.4 memberi lingkungan dasar M ∈ NX (x) yang memenuhi
+
+
+                                     M ⊆ f −1 (N ) ⊆ f −1 (U ).
+
+Jadi setiap titik x ∈ f −1 (U ) memiliki lingkungan dasar yang termuat dalam f −1 (U ). Artinya,
+f −1 (U ) bersifat NX -terbuka. Karena hal ini berlaku untuk setiap U terbuka, f kontinu untuk
+topologi-topologi yang dibangkitkan tersebut.
+
+1.4   Solusi Latihan 1.2
+                                                  Tk       −1
+Tuliskan anggota calon basis di x sebagai B =         i=1 fαi (Ni ), dengan Ni ∈ Nαi (fαi (x)).
+
+  1. Karena fαi (x) ∈ Ni untuk setiap i, berlaku x ∈ B.
+  2. Jika B1 dan B2 adalah dua lingkungan dasar di x, irisannya kembali merupakan irisan
+     berhingga dari prabayangan lingkungan dasar. Apabila indeks yang sama muncul dua kali,
+     aksioma kedua basis lingkungan di Yα memberi lingkungan dasar yang lebih kecil di dalam
+     irisan keduanya. Jadi terdapat lingkungan dasar B3 ⊆ B1 ∩ B2 .
+  3. Untuk setiap Ni pada representasi B, aksioma ketiga basis lingkungan di Yαi memberi Ui ⊆ Ni
+     yang memuat fαi (x) dan mempunyai sifat penyempurnaan lokal. Tetapkan U = i fα−1          (Ui ) ⊆
+                                                                                      T
+                                                                                  T −1 i
+     B. Jika y ∈ U , untuk setiap i pilih Vi ∈ Nαi (fαi (y)) dengan Vi ⊆ Ui . Maka i fαi (Vi ) adalah
+     lingkungan dasar dari y yang termuat dalam U .
+Ketiga aksioma basis lingkungan terpenuhi. Jika I kosong, satu-satunya irisan yang diperlukan
+adalah irisan kosong X, dan argumen yang sama tetap berlaku.
+
+1.5   Pemeriksaan Lema 1.1
+Untuk N ∈ Nα (fα (x)), prabayangan fα−1 (N ) adalah salah satu lingkungan dasar pembangkit di x.
+Jadi setiap fα kontinu.
+Jika k : Z → X kontinu, komposisi fα ◦ k kontinu karena komposisi fungsi kontinu bersifat kontinu.
+Sebaliknya, anggap setiap fα ◦ k kontinu. Untuk lingkungan dasar B = m          −1
+                                                                         T
+                                                                           i=1 fαi (Ni ) di sekitar
+k(z), kita mempunyai
+
+                                                m
+                                   k −1 (B) =       (fαi ◦ k)−1 (Ni ).
+                                                \
+
+                                                i=1
+
+Setiap faktor di ruas kanan memuat suatu lingkungan dasar dari z. Dengan aksioma irisan berhingga
+untuk basis lingkungan di Z, irisannya juga memuat suatu lingkungan dasar dari z. Jadi k kontinu.
+
+1.6   Contoh terpecahkan: penciutan radial
+Definisikan r : R3 \ {0} → S 2 dengan r(x) = x/∥x∥, dan misalkan i : S 2 ,→ R3 \ {0} adalah inklusi.
+Jelas r ◦ i = idS 2 .
+Untuk membandingkan i ◦ r dengan identitas pada R3 \ {0}, gunakan
+
+
+
+                                                      5
+                                                  t
+                                                    
+                           H(x, t) = (1 − t) +       x,      0 ≤ t ≤ 1.
+                                                 ∥x∥
+
+Koefisien di dalam kurung selalu positif, sehingga H(x, t) ̸= 0. Selain itu, H(x, 0) = x dan
+H(x, 1) = x/∥x∥ = i(r(x)). Jadi H adalah homotopi dari identitas ke i ◦ r. Jika x ∈ S 2 , maka
+∥x∥ = 1 dan H(x, t) = ((1 − t) + t)x = x untuk setiap t. Homotopi ini menetapkan S 2 titik demi
+titik. Dengan demikian, S 2 memang merupakan retrak deformasi dari R3 \ {0}.
+Pemeriksaan konsep. Contoh ini tidak mengatakan bahwa homeomorfisme boleh mengubah
+dimensi. Contoh ini mengatakan bahwa tipe homotopi dapat sama walaupun dimensi ruang berbeda.
+Perbedaan antara homeomorfisme dan ekuivalensi homotopi akan menjadi pusat unit berikutnya.
+
+
+Tentang unit ini
+Unit ini merupakan terjemahan dan adaptasi Bahasa Indonesia atas Algebraic Topology
+karya David Michael Roberts (2019), tepatnya Notes.tex baris 349–584 pada commit
+b947ad2e9f9e301bfe24590a9db653bc54fa1a53. Penanda \lecturenum{3} muncul di tengah
+baris 585, sesudah kata “This”; seluruh kalimat pada baris 585 dan seterusnya disisihkan untuk
+unit berikutnya agar batas kuliah tidak menghasilkan fragmen kalimat. Karya sumber tersedia di
+bawah Creative Commons Attribution 4.0 International.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian
+pengenal stabil, pemindahan satu latihan dari catatan pinggir ke blok latihan, pelengkapan bukti
+yang hanya diisyaratkan oleh sumber, dan tujuh koreksi terbatas: tanda pembentuk himpunan
+pada definisi Dn , faktor koordinat dalam pemeriksaan kontinuitas kontraksi, argumen nilai antara
+untuk ruang diskret, peubah terikat yang hilang pada syarat surjektif bersama, kasus ruang kosong
+dalam definisi keterhubungan, serta dua syarat kontinuitas yang hilang pada klaim tentang lintasan
+dan pemetaan ke ruang diskret. Materi pendamping penguasaan setelah teks inti ditulis khusus
+untuk edisi ini dan juga tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak
+menyiratkan dukungan atau pengesahan dari penulis sumber.
+
+
+2     Kuliah 2
+2.1   Kelanjutan topologi awal
+Contoh 2.1 (topologi subruang). Misalkan keluarga fungsi hanya terdiri atas satu pemetaan
+injektif, yaitu ι : X ,→ Y , dengan Y suatu ruang topologis. Topologi awal pada X adalah topologi
+subruang: lingkungan dasar dari x berbentuk
+
+
+                                             ι−1 (N ),
+
+dengan N lingkungan dasar dari ι(x). Jika X dipandang sebagai himpunan bagian dari Y , himpunan
+ini pada dasarnya adalah N ∩ X.
+Contoh 2.2 (fungsi konstan). Sebaliknya, misalkan cy0 : X → Y adalah fungsi konstan yang
+mengirim setiap x ∈ X ke y0 ∈ Y . Untuk setiap lingkungan N dari y0 ,
+
+
+                                          c−1
+                                           y0 (N ) = X.
+
+
+Jadi satu-satunya lingkungan dari setiap x ∈ X dalam topologi awal tersebut adalah X sendiri.
+Dengan demikian, topologi awal yang dihasilkan oleh fungsi konstan adalah topologi indiskret.
+Secara umum, suatu keluarga fungsi fα : X → Yα menentukan fungsi tunggal
+
+                                                 6
+                                            Y                                
+                             (fα ) : X −→       Yα ,            x 7−→ fα (x) α .
+                                            α
+
+Jika α Yα diberi topologi produk, topologi awal pada X yang dibangkitkan oleh keluarga {fα }
+      Q
+
+sama dengan topologi awal yang dibangkitkan oleh fungsi tunggal (fα ). Oleh karena itu, jika (fα )
+injektif, X mewarisi topologi subruang dari ruang produk tersebut. Inilah penggunaan utama
+topologi awal yang akan kita jumpai.
+Contoh 2.3 (submanifold). Suatu submanifold M ⊆ Rn memperoleh topologinya dari fungsi-
+fungsi koordinat
+
+                                                           pr
+                                        M ,→ Rn −−→
+                                                  i
+                                                    R.
+
+Suatu pemetaan menuju M kontinu jika dan hanya jika komposisinya dengan setiap fungsi koordinat
+kontinu.
+Latihan 2.1. Diberikan suatu himpunan X, ruang topologis Y , dan fungsi f : X → Y . Andaikan
+x1 , x2 ∈ X memenuhi f (x1 ) = f (x2 ). Buktikan bahwa, dalam topologi awal pada X, subset V ⊆ X
+merupakan lingkungan dari x1 jika dan hanya jika V merupakan lingkungan dari x2 .
+
+2.2   Topologi akhir dan ruang hasil bagi
+Konstruksi berikut akan lebih penting bagi kita dan mungkin belum dikenal oleh sebagian besar
+pembaca.
+Definisi 2.1 (topologi akhir). Misalkan X adalah suatu himpunan; (Zβ , Nβ ), β ∈ J, adalah
+keluarga ruang topologis, dengan ruang yang sama boleh muncul lebih dari sekali; dan gβ : Zβ → X
+adalah keluarga fungsi. Perhatikan bahwa arah fungsi-fungsi ini berlawanan dengan arah fungsi
+pada topologi awal.
+Topologi akhir pada X didefinisikan sebagai berikut: subset U ⊆ X terbuka jika dan hanya jika
+
+
+                         gβ−1 (U ) terbuka dalam Zβ             untuk setiap β ∈ J.
+
+Topologi akhir lebih mudah dirumuskan dengan himpunan terbuka daripada dengan lingkungan.
+Lema 2.1 (sifat universal topologi akhir). Setelah X diberi topologi akhir, semua fungsi
+gβ : Zβ → X kontinu. Selain itu, suatu fungsi h : X → W kontinu jika dan hanya jika h◦gβ : Zβ → W
+kontinu untuk setiap β ∈ J.
+Kita akan sering menggunakan dua kasus khusus berikut.
+Contoh 2.4 (topologi hasil bagi). Misalkan Z adalah ruang topologis dan ∼ suatu relasi
+ekuivalensi pada Z. Definisikan X = Z/∼ dan pemetaan hasil bagi
+
+
+                                    π : Z → X,              y 7−→ [y].
+
+Topologi akhir pada X terdiri atas subset-subset U ⊆ X yang memenuhi
+
+
+                     U terbuka dalam X          ⇐⇒         π −1 (U ) terbuka dalam Z.
+
+Sebagai contoh, berikan S 2 topologi awal yang dibangkitkan oleh fungsi-fungsi koordinat
+
+                                                                pr
+                                      xi : S 2 ,→ R3 −−→
+                                                       i
+                                                         R;
+
+                                                       7
+ini adalah topologi biasa pada S 2 . Bentuk relasi ekuivalensi yang dibangkitkan oleh x ∼ −x
+untuk setiap x ∈ S 2 . Ruang hasil baginya adalah bidang projektif real RP2 . Kita memberinya
+topologi akhir yang berasal dari S 2 → RP2 ; topologi inilah yang dimilikinya sebagai manifold.
+Sebagai catatan, pemetaan ini menjadikan S 2 suatu ruang penutup dari RP2 . Ruang penutup akan
+dipelajari pada bagian pertama mata kuliah ini.
+
+2.3   Gabungan saling lepas dan sifat universalnya
+Ingat kembali gabungan saling lepas dari himpunan-himpunan. Untuk keluarga himpunan {Zβ }β∈J
+terdapat injeksi
+
+                                                             G
+                                          inγ : Zγ ,→             Zβ ,
+                                                             β
+
+
+dengan salinan-salinan Zβ saling lepas. Jika setiap Zβ adalah ruang topologis, kita memberikan
+F
+  β Zβ topologi akhir yang dibangkitkan oleh semua pemetaan inγ . Topologi ini disebut topologi
+gabungan saling lepas atau topologi jumlah, dan ruangnya kadang-kadang disebut jumlah topologis.
+Suatu titik di dalamnya dapat ditulis sebagai pasangan (β, z) dengan z ∈ Zβ .
+Latihan 2.2 (latihan pinggir pada sumber). Buktikan bahwa pemetaan kanonik
+
+                       G                       G                                        
+                  Φ:       (X × Zβ ) −→ X ×        Zβ ,           Φ β, (x, z) = x, (β, z) ,
+                       β                       β
+
+
+adalah suatu homeomorfisme.
+Latihan 2.3 (pemetaan keluar dari suatu jumlah). Diberikan fungsi-fungsi kontinu hβ : Zβ →
+W , buktikan bahwa terdapat tepat satu fungsi kontinu
+
+                                                         G
+                                       h = ⟨hβ ⟩ :           Zβ → W
+                                                         β
+
+
+yang memenuhi hβ = h ◦ inβ untuk setiap β. Dengan kata lain, diagram berikut komutatif:
+
+                                                   inγ       G
+                                          Zγ       −−→            Zβ
+                                                              β
+                                               ↘hγ            ↓h
+                                                              W
+
+Lema 2.2. Topologi akhir pada X yang dibangkitkan oleh gβ : Zβ → X sama dengan topologi
+akhir yang dibangkitkan oleh fungsi tunggal
+
+                                                     G
+                                       g = ⟨gβ ⟩ :           Zβ → X,
+                                                         β
+
+
+dengan domain diberi topologi jumlah.
+Bukti. Untuk setiap U ⊆ X,
+
+             U terbuka ⇐⇒ gβ−1 (U ) terbuka untuk setiap β
+                           ⇐⇒ (g ◦ inβ )−1 (U ) = in−1 −1                
+                                                    β g (U ) terbuka untuk setiap β
+                           ⇐⇒ g −1 (U ) terbuka dalam topologi jumlah.
+
+
+                                                     8
+Kondisi pertama mendefinisikan topologi akhir untuk keluarga {gβ }, sedangkan kondisi terakhir
+mendefinisikan topologi akhir untuk g. Jadi kedua topologi itu sama. □
+Jika keluarga gβ : Zβ → X surjektif secara bersama-sama, artinya
+
+
+                               ∀x ∈ X ∃β ∈ J ∃z ∈ Zβ                  gβ (z) = x,
+
+kita dapat menafsirkan topologi akhir sebagai topologi perekatan. Berikan relasi ekuivalensi pada
+F
+  β Zβ dengan
+
+
+                       (β1 , z1 ) ∼ (β2 , z2 )       ⇐⇒       gβ1 (z1 ) = gβ2 (z2 ) ∈ X.
+
+Sebagai himpunan, X adalah himpunan kelas ekuivalensi dari relasi ini. Jadi kita dapat memandang
+X sebagai hasil perekatan himpunan-himpunan yang mendasari ruang-ruang Zβ . Topologi akhir
+adalah topologi alami pada ruang yang diperoleh dengan merekatkan ruang-ruang tersebut.
+
+2.4   Sampul dan lema perekatan
+Latihan 2.4 (sampul terbuka). Misalkan {Uα } adalah suatu sampul terbuka dari ruang X.
+Buktikan bahwa topologi X adalah topologi akhir yang dibangkitkan oleh semua inklusi
+
+
+                                                     Uα ,→ X,
+
+atau, secara ekuivalen, oleh pemetaan
+
+                                                 G
+                                                     Uα −→ X.
+                                                 α
+
+Contoh 2.5 (atlas manifold). Setiap manifold M mempunyai topologi akhir yang berasal dari
+sembarang atlas yang dipilih untuknya.
+Latihan 2.5 (sampul tertutup berhingga). Misalkan {Vi }ni=1 adalah sampul tertutup berhingga
+dari X. Buktikan bahwa topologi X adalah topologi akhir yang dibangkitkan oleh
+
+                                                 n
+                                                 G
+                                                       Vi −→ X.
+                                                 i=1
+
+Contoh 2.6 (selang yang dipecah). Setiap selang tertutup [a, b] ⊂ R dengan topologi subruang
+mempunyai topologi akhir yang berasal dari koleksi subselang
+
+
+                                       [a, t1 ], [t1 , t2 ], . . . , [tk , b],
+
+yang masing-masing diberi topologi subruang dari R.
+Latihan-latihan tersebut menghasilkan pernyataan yang biasanya disebut lema perekatan atau lema
+penempelan.
+Lema 2.3 (lema perekatan). Misalkan X adalah ruang topologis dan {Uα }α∈I suatu sampul
+terbuka sembarang, atau {Vi }ni=1 suatu sampul tertutup berhingga. Misalkan pula Y adalah ruang
+topologis. Jika pembatasan fungsi f : X → Y ke setiap Uα kontinu—atau, dalam kasus kedua,
+pembatasannya ke setiap Vi kontinu—maka f kontinu pada X.
+
+
+
+                                                         9
+Kelak kita akan menjumpai ruang-ruang yang dibangun dengan merekatkan banyak ruang “seder-
+hana”, misalnya cakram
+
+
+                                    Dn := x ∈ Rn | ∥x∥ ≤ 1 ,
+                                             
+
+
+dengan topologi subruang dari Rn . Dalam konteks ini, “sederhana” secara kasar berarti “dapat
+diciutkan menjadi satu titik”.
+
+2.5   Homotopi dan kontraktibilitas
+“Dapat diciutkan” menyatakan suatu proses kontinu yang berlangsung sepanjang waktu. Ambil
+I = [0, 1] dan definisikan
+
+                                     H : I × Dn −→ Dn ,
+                                             (t, x) 7−→ (1 − t)x.
+
+Pemetaan ini memang bernilai di Dn , sebab ∥(1 − t)x∥ = (1 − t)∥x∥ ≤ 1 untuk 0 ≤ t ≤ 1 dan
+x ∈ Dn .
+Untuk setiap t ∈ I, fungsi ini memberi pemetaan Ht : Dn → Dn . Pada kedua ujung selang,
+
+
+                                   H0 = idDn ,          H1 (x) = 0.
+
+Fungsi H kontinu. Untuk melihatnya, ingat bahwa Dn ⊂ Rn dan I ⊂ R diberi topologi subruang,
+sedangkan Rn diberi topologi produk. Karena topologi pada Dn adalah topologi awal untuk
+fungsi-fungsi koordinat xi : Dn → R, kontinuitas H dapat diperiksa koordinat demi koordinat.
+Komposisi koordinat ke-i adalah
+
+                                  id ×x                             µ
+                         I × Dn −−I−−→
+                                     i
+                                       I × R −→ R × R −−→ R,
+                           (t, x) 7−→ (t, xi ) 7−→ (1 − t, xi ) 7−→ (1 − t)xi ,
+
+dengan µ(a, b) = ab.
+Latihan 2.6 (produk pemetaan). Jika f : X → W dan g : Y → Z kontinu, buktikan bahwa
+
+
+                       f × g : X × Y → W × Z,               (x, y) 7−→ (f (x), g(y)),
+
+juga kontinu. Jika X dan Y masing-masing mempunyai sekurang-kurangnya satu titik, buktikan
+pula implikasi sebaliknya: kontinuitas f × g mengakibatkan kontinuitas f dan g.
+Jadi, untuk membuktikan H kontinu, tinggal membuktikan bahwa perkalian µ : R × R → R kontinu.
+Topologi biasa pada R berasal dari metrik, sehingga kita dapat memakai kriteria barisan untuk
+kontinuitas. Jika (an , bn ) → (a, b) dalam R × R, maka
+
+                           |an bn − ab| = |an bn − abn + abn − ab|
+                                          ≤ |an − a| |bn | + |a| |bn − b|
+                                          ≤ |an − a| sup |bn | + |a| |bn − b|
+                                                        n
+                                          −→ 0 + 0 = 0.
+
+Barisan (bn ) terbatas karena konvergen. Maka perkalian kontinu, sehingga setiap fungsi koordinat
+dari H kontinu dan akhirnya H sendiri kontinu.
+
+                                                   10
+Definisi 2.2 (ruang kontraktil). Ruang X disebut kontraktil—atau dapat dikontraksikan ke
+x0 ∈ X—jika terdapat titik x0 ∈ X dan fungsi kontinu
+
+
+                                            H: I ×X → X
+
+yang memenuhi, untuk setiap x ∈ X,
+
+
+                                    H(0, x) = x,         H(1, x) = x0 .
+
+Fungsi H disebut suatu kontraksi.
+Kita telah membuktikan bahwa Dn kontraktil.
+Latihan 2.7. Buktikan bahwa R kontraktil. Buktikan pula bahwa produk sembarang dari
+ruang-ruang kontraktil adalah kontraktil.
+Contoh 2.7 (ruang diskret yang kontraktil). Misalkan ruang diskret S kontraktil ke suatu
+titik ∗ ∈ S melalui h : I × S → S. Untuk s ∈ S, batasi h pada I × {s} sehingga diperoleh lintasan
+
+
+                              hs : I → S,      hs (0) = s,      hs (1) = ∗.
+
+Andaikan s ̸= ∗. Karena S diskret, fungsi karakteristik
+
+
+                    χ{∗} : S → R,       χ{∗} (∗) = 1,      χ{∗} (u) = 0 untuk u ̸= ∗,
+
+kontinu. Komposisi h       {∗} ◦ hs : I → R juga kontinu, mempunyai h(0) = 0 dan h(1) = 1, tetapi
+                     e=χ                                             e           e
+citranya termuat dalam {0, 1}. Teorema nilai antara menyatakan bahwa citranya harus memuat
+                                                                    ̸ ∗, dan S tepat mempunyai
+setiap nilai di antara 0 dan 1, suatu kontradiksi. Jadi tidak ada s =
+satu anggota.
+Pertanyaan 2.1. Jika X kontraktil, apakah pilihan titik x0 ∈ X berpengaruh? Jika X dapat
+dikontraksikan ke x0 , apakah X juga dapat dikontraksikan ke setiap x ̸= x0 ?
+Suatu selang hanya dapat dipetakan secara kontinu ke ruang diskret jika pemetaannya konstan;
+secara ekuivalen, citranya hanya terdiri atas satu titik. Sifat ini cukup penting untuk diberi nama.
+Definisi 2.3 (keterhubungan). Ruang X disebut terhubung jika setiap pemetaan kontinu dari
+X ke suatu ruang diskret mempunyai citra yang memuat paling banyak satu titik.
+Definisi ini ekuivalen dengan definisi keterhubungan yang biasa dan, seperti definisi biasa itu,
+menggolongkan ruang kosong sebagai ruang terhubung. Untuk ruang tak kosong, “paling banyak
+satu titik” tentu berarti “tepat satu titik”.
+Selang I merupakan contoh ruang terhubung. Lebih kuat lagi, jika dua titik x, y ∈ X dihubungkan
+oleh suatu lintasan, yaitu pemetaan kontinu
+
+
+                               γ : I → X,          γ(0) = x,    γ(1) = y,
+
+maka setiap fungsi kontinu f : X → S ke ruang diskret memenuhi f (x) = f (y).
+Contoh 2.8. Setiap ruang kontraktil terhubung. Memang, jika X kontraktil melalui H ke x0 ,
+maka untuk setiap y ∈ X pemetaan t 7→ H(t, y) adalah lintasan dari y ke x0 . Karena itu, untuk
+setiap pemetaan kontinu f : X → S ke ruang diskret,
+
+
+
+                                                    11
+                                           f (y) = f (x0 )
+
+untuk semua y ∈ X. Jadi citra f hanya mempunyai satu titik.
+Ada banyak ruang yang terhubung tetapi tidak kontraktil, namun kita belum dapat membuktikannya
+pada tahap ini.
+
+
+Pendamping penguasaan terpecahkan
+Bagian ini merupakan materi baru untuk edisi Bahasa Indonesia. Setiap latihan dan pertanyaan
+pada Kuliah 2 dijawab lengkap; dua sifat universal yang menjadi penghubung utama argumen
+perekatan juga dibuktikan secara eksplisit.
+
+2.6   Solusi Latihan 2.1
+Dalam topologi awal yang dibangkitkan oleh f , lingkungan dasar dari x ∈ X berbentuk f −1 (N ),
+dengan N lingkungan dari f (x) dalam Y .
+Andaikan V merupakan lingkungan dari x1 . Maka terdapat lingkungan N dari f (x1 ) dengan
+
+
+                                           f −1 (N ) ⊆ V.
+
+Karena f (x1 ) = f (x2 ), himpunan N juga merupakan lingkungan dari f (x2 ), sehingga f −1 (N )
+adalah lingkungan dasar dari x2 . Jadi V merupakan lingkungan dari x2 . Argumen yang sama
+dengan menukar x1 dan x2 memberi implikasi sebaliknya.
+Makna. Topologi awal tidak dapat membedakan dua titik yang mempunyai citra sama di bawah
+semua pemetaan pembangkit. Untuk suatu keluarga {fα }, argumen yang sama berlaku jika
+fα (x1 ) = fα (x2 ) untuk setiap α.
+
+2.7   Bukti lengkap Lema 2.1
+Ambil U ⊆ X terbuka dalam topologi akhir. Menurut definisi, gβ−1 (U ) terbuka dalam Zβ untuk
+setiap β. Jadi setiap gβ kontinu.
+Jika h : X → W kontinu, maka setiap komposisi h ◦ gβ kontinu. Sebaliknya, andaikan semua h ◦ gβ
+kontinu. Untuk setiap himpunan terbuka O ⊆ W dan setiap β,
+
+
+                                 gβ−1 h−1 (O) = (h ◦ gβ )−1 (O)
+                                               
+
+
+terbuka dalam Zβ . Definisi topologi akhir lalu menyatakan bahwa h−1 (O) terbuka dalam X.
+Karena hal ini berlaku untuk setiap O, fungsi h kontinu.
+
+2.8   Solusi Latihan 2.2
+Pemetaan Φ jelas bijektif, dengan invers
+
+                                                                
+                                    Ψ x, (β, z) = β, (x, z) .
+
+Untuk setiap β, pembatasan Φ pada komponen X × Zβ adalah
+
+                                            idX × inβ        G
+                                  X × Zβ −−−−−−→ X ×             Zγ ,
+                                                             γ
+
+
+                                                   12
+yang kontinu menurut Latihan 2.6. Karena domain Φ diberi topologi jumlah, sifat universal topologi
+akhir menunjukkan bahwa Φ kontinu.
+                                                                                    F
+Untuk kontinuitas Ψ, perhatikan bahwa setiap komponen inβ (Zβ ) terbuka dalam γ Zγ : praba-
+yangannya pada suatu komponen Zγ adalah Zγ jika γ = β dan kosong jika tidak. Oleh karena
+itu,
+
+
+                                            X × inβ (Zβ )
+
+membentuk sampul terbuka dari X × γ Zγ . Pada komponen ini, pembatasan Ψ adalah komposisi
+                                      F
+
+invers homeomorfisme kanonik X × Zβ → X × inβ (Zβ ) dengan inklusi komponen X × Zβ ,→
+  γ (X × Zγ ), sehingga kontinu. Lema perekatan memberi bahwa Ψ kontinu secara global. Jadi Φ
+F
+
+adalah homeomorfisme.
+
+2.9    Solusi Latihan 2.3
+Definisikan fungsi h pada gabungan saling lepas dengan
+
+
+                                          h(β, z) = hβ (z).
+
+Fungsi ini unik dengan sifat h ◦ inβ = hβ , sebab setiap titik pada gabungan saling lepas berada
+pada tepat satu komponen. Karena topologi jumlah adalah topologi akhir bagi pemetaan-pemetaan
+inklusi tersebut, Lema 2.1 memberi
+
+
+                    h kontinu    ⇐⇒       h ◦ inβ = hβ kontinu untuk setiap β.
+
+Syarat di ruas kanan telah diberikan, sehingga h kontinu.
+
+2.10    Solusi Latihan 2.4
+Misalkan A ⊆ X memenuhi bahwa A ∩ Uα terbuka dalam Uα untuk setiap α. Karena Uα terbuka
+dalam X, setiap subset yang terbuka dalam Uα juga terbuka dalam X. Jadi semua A ∩ Uα terbuka
+dalam X. Karena {Uα } menutupi X,
+
+                                                  [            [
+                             A=A∩X =A∩                  Uα =          (A ∩ Uα ),
+                                                    α             α
+
+yang terbuka dalam X. Sebaliknya, jika A terbuka dalam X, maka A ∩ Uα terbuka dalam Uα .
+Inilah persis syarat topologi akhir untuk semua inklusi Uα ,→ X.
+
+2.11    Solusi Latihan 2.5
+Misalkan A ⊆ X dan A ∩ Vi terbuka dalam Vi untuk setiap i. Tetapkan F = X \ A. Maka
+
+
+                                      F ∩ Vi = Vi \ (A ∩ Vi )
+
+tertutup dalam Vi . Karena Vi tertutup dalam X, himpunan F ∩ Vi juga tertutup dalam X.
+Sampulnya berhingga, sehingga
+
+                                                n
+                                                [
+                                          F =         (F ∩ Vi )
+                                                i=1
+
+
+
+                                                  13
+adalah gabungan berhingga himpunan tertutup dan karenanya tertutup dalam X. Jadi A terbuka.
+Implikasi sebaliknya langsung dari definisi topologi subruang. Dengan demikian, topologi X adalah
+topologi akhir untuk pemetaan inklusi Vi ,→ X.
+Syarat “berhingga” tidak boleh dihapus dari argumen ini: gabungan tak berhingga himpunan
+tertutup tidak harus tertutup.
+
+2.12   Bukti Lema 2.3
+Untuk sampul terbuka, Latihan 2.4 mengatakan bahwa X mempunyai topologi akhir bagi pemetaan
+inklusi Uα ,→ X. Pembatasan f |Uα adalah komposisi
+
+                                                      f
+                                                 → Y.
+                                         Uα ,→ X −
+
+Jika semua komposisi ini kontinu, sifat universal pada Lema 2.1 menyatakan bahwa f kontinu.
+Untuk sampul tertutup berhingga, gunakan Latihan 2.5 dengan argumen yang sama.
+
+2.13   Solusi Latihan 2.6
+Topologi produk pada W × Z adalah topologi awal untuk proyeksi prW dan prZ . Karena
+
+
+                      prW ◦(f × g) = f ◦ prX ,        prZ ◦(f × g) = g ◦ prY ,
+
+dan semua fungsi di ruas kanan kontinu, sifat universal topologi awal menunjukkan bahwa f × g
+kontinu.
+Sekarang andaikan f × g kontinu serta pilih y0 ∈ Y dan x0 ∈ X. Pemetaan
+
+
+                               iX : X → X × Y,            x 7−→ (x, y0 )
+
+kontinu karena kedua fungsi koordinatnya—identitas pada X dan fungsi konstan ke y0 —kontinu.
+Maka
+
+
+                                     f = prW ◦(f × g) ◦ iX
+
+kontinu. Dengan cara yang sama, pemetaan iY (y) = (x0 , y) memberi
+
+
+                                     g = prZ ◦(f × g) ◦ iY ,
+
+sehingga g kontinu. Kebutuhan akan x0 dan y0 menjelaskan syarat bahwa kedua domain tidak
+kosong.
+
+2.14   Solusi Latihan 2.7
+Kontraksi R ke 0 diberikan oleh
+
+
+                             H : I × R → R,         H(t, x) = (1 − t)x.
+
+Fungsi ini kontinu, H(0, x) = x, dan H(1, x) = 0.
+Untuk setiap α ∈ A, misalkan Xα kontraktil ke x0α melalui
+
+
+
+                                                 14
+                                          Hα : I × Xα → Xα .
+
+Definisikan
+
+                                            Y             Y
+                                 H: I ×          Xα −→          Xα ,
+                                           α∈A            α∈A
+                                                                      
+                                     H t, (xα )α = Hα (t, xα ) α .
+
+Untuk setiap proyeksi prα ,
+
+
+                                    prα ◦H = Hα ◦ (idI × prα ),
+
+yang kontinu. Sifat universal topologi produk menyatakan bahwa H kontinu. Selain itu,
+
+
+                                                        H 1, (xα )α = (x0α )α .
+                                                                      
+                         H 0, (xα )α = (xα )α ,
+
+Jadi produk sembarang tersebut kontraktil.
+
+2.15   Jawaban Pertanyaan 2.1
+Pilihan titik kontraksi tidak berpengaruh: jika X dapat dikontraksikan ke x0 , maka X dapat
+dikontraksikan ke setiap x1 ∈ X.
+Misalkan H adalah kontraksi ke x0 . Definisikan
+                                          
+                                          H(2t, y),            0 ≤ t ≤ 12 ,
+                              K(t, y) =
+                                          H(2 − 2t, x ),       1
+                                                         1      2 ≤ t ≤ 1.
+
+
+Pada t = 12 , kedua rumus bernilai x0 , sebab H(1, y) = x0 = H(1, x1 ). Masing-masing rumus
+kontinu pada subruang tertutup [0, 21 ] × X dan [ 12 , 1] × X; Lema perekatan menunjukkan bahwa K
+kontinu. Akhirnya,
+
+
+                       K(0, y) = H(0, y) = y,          K(1, y) = H(0, x1 ) = x1 .
+
+Jadi K adalah kontraksi X ke x1 .
+
+
+
+
+                                                  15
+

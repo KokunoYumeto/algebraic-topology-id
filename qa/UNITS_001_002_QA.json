@@ -1,0 +1,96 @@
+{
+  "artifacts": [
+    {
+      "bytes": 220035,
+      "path": "output/html/units-001-002/index.html",
+      "sha256": "d3b5cbfaa3511823821ecf9ba26a4eaec7c84d937417927d11bde3f66abc9f54"
+    },
+    {
+      "bytes": 395385,
+      "path": "output/pdf/topologi-aljabar-unit-001-002-id.pdf",
+      "sha256": "0413c3a3280955cc482a5c0c2d7615b78128dccba3b6b1901dee1bf34d133b8e"
+    }
+  ],
+  "block_counts": {
+    "unit_001": {
+      "definition": 6,
+      "example": 7,
+      "exercise": 2,
+      "lemma": 1,
+      "note": 2,
+      "proof": 1,
+      "proposition": 1
+    },
+    "unit_002": {
+      "definition": 3,
+      "example": 8,
+      "exercise": 7,
+      "lemma": 3,
+      "proof": 1,
+      "question": 1
+    }
+  },
+  "course_id": "D60",
+  "gates": {
+    "authority_exact": true,
+    "exercise_solution_closure": true,
+    "html_semantic_offline": true,
+    "pdf_reproducible_by_build_script": true,
+    "privacy_secret_scan": true,
+    "question_answer_closure": true,
+    "seven_source_corrections_verified": true,
+    "source_spans_bound": true,
+    "structure_bound": true,
+    "unit_001_artifacts_unchanged": true,
+    "visual_review": "pass_manual_all_15_pages_and_browser_desktop_mobile"
+  },
+  "html": {
+    "html_ids": 99,
+    "mathml_nodes": 621,
+    "stable_ids": 70
+  },
+  "known_caveat": "PDF is intentionally secondary and untagged; semantic HTML is the accessibility surface.",
+  "pdf": {
+    "all_fonts_embedded": true,
+    "all_fonts_tounicode": true,
+    "encrypted": false,
+    "extracted_characters": 31176,
+    "fonts": 19,
+    "lang": "id-ID",
+    "pages": 15,
+    "tagged": false
+  },
+  "reader_sources": [
+    {
+      "bytes": 16179,
+      "path": "source/id-ID/reader-unit-001.md",
+      "sha256": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15",
+      "stable_ids": 29
+    },
+    {
+      "bytes": 25090,
+      "path": "source/id-ID/units/unit-002-lecture-002.md",
+      "sha256": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
+      "stable_ids": 41
+    }
+  ],
+  "role_id": "O012",
+  "schema_version": "1.0",
+  "source_authority": {
+    "commit_sha1": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_end": 584,
+    "line_start": 134,
+    "path": "Notes.tex",
+    "tree_sha1": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5"
+  },
+  "status": "pass",
+  "unit_ids": [
+    "o012-rbt-l01",
+    "o012-rbt-l02"
+  ],
+  "witnesses": {
+    "extracted_text_sha256": "ca507d19a8c3089ef9190fcbd31d56c41ea61dd59e5849bba7d0ed1e65ef37b1",
+    "independent_review_sha256": "a2e879546f0b9c6caeae78e8b7babe0ce32da17118d7840d6803e9b89d82d3f5",
+    "visual_review_sha256": "939576c3d3fd9e1a2bbd6ca54080ffbdf0a60fc7aecce1baed90e7e46c3f6ffe"
+  }
+}

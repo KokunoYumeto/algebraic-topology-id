@@ -4,15 +4,16 @@ Edisi Bahasa Indonesia yang sedang diproduksi dari *Algebraic Topology* karya Da
 
 ## Baca
 
-- [Pembaca HTML Unit 1](https://kokunoyumeto.github.io/algebraic-topology-id/) — permukaan utama yang semantik, mandiri, dan memakai MathML asli.
-- [PDF Unit 1](output/pdf/topologi-aljabar-unit-001-id.pdf) — permukaan sekunder A4, 5 halaman.
-- [Sumber semantik Unit 1](source/id-ID/reader-unit-001.md).
+- [Pembaca HTML kumulatif Unit 1–2](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-002/) — permukaan utama terbaru yang semantik, mandiri, dan memakai MathML asli.
+- [PDF kumulatif Unit 1–2](output/pdf/topologi-aljabar-unit-001-002-id.pdf) — permukaan sekunder A4, 15 halaman.
+- [Pembaca HTML Unit 1](https://kokunoyumeto.github.io/algebraic-topology-id/) dan [PDF Unit 1](output/pdf/topologi-aljabar-unit-001-id.pdf) tetap dipertahankan sebagai batas publikasi pertama.
+- Sumber semantik: [Unit 1](source/id-ID/reader-unit-001.md) dan [Unit 2](source/id-ID/units/unit-002-lecture-002.md).
 
-Unit 1 mencakup `Notes.tex` baris 134–348: pengantar topologi aljabar, ruang topologis, basis lingkungan, kontinuitas, homeomorfisme, topologi awal, serta sifat universalnya. Kedua latihan sumber mempunyai solusi lengkap. Pendamping penguasaan juga memuat pemeriksaan lema dan contoh penciutan radial.
+Unit 1–2 mencakup `Notes.tex` baris 134–584: pengantar topologi aljabar, ruang topologis, basis lingkungan, kontinuitas, homeomorfisme, topologi awal dan akhir, ruang hasil bagi, gabungan saling lepas, perekatan, homotopi, kontraktibilitas, serta keterhubungan. Kesembilan latihan mempunyai solusi lengkap; pertanyaan sumber juga dijawab. Pendamping penguasaan memuat bukti sifat universal, lema perekatan, contoh penciutan radial, dan pemeriksaan konsep.
 
 ## Backend modular
 
-Direktori [`backend/`](backend/) memuat graf `curriculum.interop 0.1.0` yang locale-neutral: otoritas, edisi, unit, segmen, konsep, istilah, relasi, latihan–solusi, hak, koreksi, QA, dan artefak. Unit 1 saat ini mempunyai 139 rekaman kanonis dalam 11 berkas JSONL. Validasi offline:
+Direktori [`backend/`](backend/) memuat graf `curriculum.interop 0.1.0` yang locale-neutral: otoritas, edisi, unit, segmen, konsep, istilah, relasi, latihan–solusi, hak, koreksi, QA, dan artefak. Validasi offline:
 
 ```powershell
 python scripts/validate-backend.py
@@ -25,6 +26,8 @@ Backend bukan pengganti pembaca; ia memungkinkan unit yang sama dipilih, diaudit
 ```powershell
 powershell -NoProfile -File scripts/build-unit-001.ps1
 python scripts/qa-unit-001.py
+powershell -NoProfile -File scripts/build-units-001-002.ps1
+python scripts/qa-units-001-002.py
 python scripts/validate-backend.py
 ```
 
@@ -38,5 +41,7 @@ Build PDF ganda dengan epoch tetap menghasilkan byte identik. HTML memakai CSS t
 - [Status produksi](00_control/CURRENT_STATE.md)
 - [QA Unit 1](qa/UNIT_001_QA.json)
 - [Rereview independen](qa/UNIT_001_INDEPENDENT_REVIEW.md)
+- [QA kumulatif Unit 1–2](qa/UNITS_001_002_QA.json)
+- [Rereview independen Unit 2](qa/UNIT_002_INDEPENDENT_REVIEW.md)
 
 Pembaca lengkap masih dalam produksi. Inti Roberts akan diterjemahkan secara berurutan; materi homologi/metode seluler dan lapisan penguasaan yang tidak tersedia dalam inti akan ditulis tersendiri dan ditandai sebagai materi edisi.

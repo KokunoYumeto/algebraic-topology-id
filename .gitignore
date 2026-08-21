@@ -2,5 +2,6 @@
 baseline/build-*/Notes*
 qa/.unit-001-build-check/
 qa/unit-001-render/
+tmp/pdfs/
 __pycache__/
 *.pyc
