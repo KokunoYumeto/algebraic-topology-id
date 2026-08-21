@@ -2,7 +2,7 @@
 
 Updated: 2026-08-21
 
-Status: active production. Source admission is closed. Unit 001 is translated, built, independently rereviewed, visually checked, and backend-complete; it is the first GitHub publication boundary. Lecture 2 exists as a local draft but is not admitted or included in this boundary.
+Status: active production. Source admission is closed. Unit 001 is translated, built, independently rereviewed, visually checked, backend-complete, and publicly verified on GitHub Pages. Lecture 2 exists as a local draft but is not admitted or included in this boundary.
 
 ## Frozen Unit 001 boundary
 
@@ -15,6 +15,9 @@ Status: active production. Source admission is closed. Unit 001 is translated, b
 - QA receipt: SHA-256 `194c231b57e044fefeefc109d96850791101948584c0ebded4d338b30ff332b3`.
 - Independent final rereview: P1 = 0, P2 = 0, P3 = 0.
 - Visual scope: all 5 physical pages; no clipping, overlap, broken formula, missing glyph, blank object, or orphan page.
+- Public reader: `https://kokunoyumeto.github.io/algebraic-topology-id/`; anonymous HTTP 200 readback is exactly 85,580 bytes with the frozen HTML SHA-256.
+- Repository: `https://github.com/KokunoYumeto/algebraic-topology-id`; deployed commit `b4146e31a1473e4aabc6704d223769bdc862c6ec`, workflow run `32475551030`, deployment `6020246064`, all successful.
+- Publication receipt: `PUBLICATION_RECEIPT_UNIT_001.json`, 4,554 bytes, SHA-256 `3b1b46d6ae20239201a8aeea39ec6d72c2c645b0be70d8c5c567ac7362604480`.
 
 Both source prompts are exposed as stable exercises and have complete solutions. The source inverse-identity defect is corrected and exactly disclosed. The additive radial example now proves the required fixed-set condition for a deformation retract. HTML is offline, self-contained, `lang=id-ID`, and native MathML; PDF is secondary and explicitly untagged.
 
@@ -24,11 +27,10 @@ The exact Roberts archive, commit/tree, seven-file manifest, CC BY 4.0 license, 
 
 ## Current production
 
-1. Publish the frozen Unit 001 boundary to `KokunoYumeto/algebraic-topology-id` and verify its Pages reader.
-2. Audit and admit the local Lecture 2 draft against `Notes.tex:349–584`.
-3. Extend the same backend schema and build the next combined reader boundary.
-4. Continue from the Lecture 3 marker on source line 585.
-5. After the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
+1. Audit and admit the local Lecture 2 draft against `Notes.tex:349–584`.
+2. Extend the same backend schema and build the next combined reader boundary.
+3. Continue from the Lecture 3 marker on source line 585.
+4. After the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
 
 ## Non-overlap boundary
 

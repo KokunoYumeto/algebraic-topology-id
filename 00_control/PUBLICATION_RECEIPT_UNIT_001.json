@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0",
+  "boundary_id": "o012-rbt-unit-001-github-pages",
+  "recorded_at": "2026-08-21T13:07:07+02:00",
+  "status": "published_and_anonymously_verified",
+  "scope": {
+    "role_id": "O012",
+    "course_id": "D60",
+    "included_units": [
+      "o012-rbt-l01"
+    ],
+    "source_span": "Notes.tex:134-348",
+    "unit_002_included": false,
+    "github_release_created": false,
+    "upstream_contacted": false
+  },
+  "repository": {
+    "id": 1341710570,
+    "full_name": "KokunoYumeto/algebraic-topology-id",
+    "url": "https://github.com/KokunoYumeto/algebraic-topology-id",
+    "visibility": "public",
+    "default_branch": "main",
+    "homepage": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+    "pages_enabled": true
+  },
+  "authority": {
+    "repository": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019",
+    "commit_sha": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "tree_sha": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+    "license": "CC BY 4.0"
+  },
+  "repository_history": {
+    "initial_content_commit": "1bc387c4653d00c9040638f5cca0978347692016",
+    "exact_artifact_commit": "7e17efa7e880a9fa464eced42d3320dee4e5171b",
+    "deployed_commit_sha": "b4146e31a1473e4aabc6704d223769bdc862c6ec",
+    "deployed_tree_sha": "b67749479ce55edc1fb7d0a6fb7466e79290bf22",
+    "workflow_path": ".github/workflows/pages.yml",
+    "workflow_bytes": 1437,
+    "workflow_sha256": "cb6b62f51913a1e90281dfbdde50d5feeaf66e932148e3c263baa22fc54feadc"
+  },
+  "pages_workflow": {
+    "run_id": 32475551030,
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32475551030",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 96751007619,
+    "job_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32475551030/job/96751007619",
+    "job_name": "deploy",
+    "all_steps_successful": true
+  },
+  "pages_deployment": {
+    "deployment_id": 6020246064,
+    "deployment_status_id": 17116941864,
+    "state": "success",
+    "environment": "github-pages",
+    "environment_url": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+    "deployed_commit_sha": "b4146e31a1473e4aabc6704d223769bdc862c6ec"
+  },
+  "anonymous_public_readback": {
+    "checked_at": "2026-08-21T13:07:07+02:00",
+    "requested_url": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+    "final_url": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 85580,
+    "sha256": "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8",
+    "exact_match_to_local_reader": true
+  },
+  "artifacts": {
+    "reader_source": {
+      "path": "source/id-ID/reader-unit-001.md",
+      "bytes": 16179,
+      "sha256": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15"
+    },
+    "html": {
+      "path": "output/html/index.html",
+      "bytes": 85580,
+      "sha256": "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-id.pdf",
+      "bytes": 321743,
+      "pages": 5,
+      "sha256": "6f71546a616c02ef81f8747ecfce3875784842065fc131cc82e5060b066a59c9"
+    },
+    "artifact_manifest": {
+      "path": "output/ARTIFACT_MANIFEST.csv",
+      "bytes": 228,
+      "sha256": "13772b2e2400923351225f422effe5f958e1dd8e178b9f6a32207682f791bcc3"
+    }
+  },
+  "backend": {
+    "schema": "curriculum.interop 0.1.0",
+    "jsonl_files": 11,
+    "records": 139,
+    "bundle_sha256": "f91b618748fb85687abbc2117ffd6a64412244e8ca418fa0f07299bd6bd13195",
+    "validation": "pass"
+  },
+  "quality": {
+    "qa_receipt_sha256": "194c231b57e044fefeefc109d96850791101948584c0ebded4d338b30ff332b3",
+    "independent_review_sha256": "efb9858eda0dcc6f90e60ce7218b80ed6218ca5775d1c5a49d51ac0629d04c24",
+    "visual_review_sha256": "686fe066d9c5a21f0c14c483371a649c5a95602d40e965ec03da9c5c13579675",
+    "independent_findings": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    }
+  },
+  "recovery_note": {
+    "failed_run_id": 32475207601,
+    "failure": "The first Linux checkout observed 84753 bytes instead of the verified 85580-byte HTML because Git had normalized the generated file's line endings.",
+    "resolution": "Generated HTML and the extracted-text witness were marked binary in .gitattributes, exact bytes were recommitted, and the frozen hash gate then passed.",
+    "successful_exact_artifact_run_id": 32475378877,
+    "final_deployment_run_id": 32475551030
+  }
+}
