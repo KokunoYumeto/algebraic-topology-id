@@ -3,6 +3,9 @@ name: Deploy Indonesian reader
 on:
   push:
     branches: [main]
+    paths:
+      - output/html/**
+      - .github/workflows/pages.yml
   workflow_dispatch:
 
 permissions:
