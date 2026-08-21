@@ -1,3 +1,6 @@
 * text=auto eol=lf
 *.pdf binary
 *.gz binary
+output/**/*.html binary
+qa/*-extracted.txt binary
+baseline/**/*.txt binary
