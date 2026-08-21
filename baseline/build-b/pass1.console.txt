@@ -1,0 +1,1885 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(Notes.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-03-20>
+
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tufte-latex\tufte-hand
+out.cls
+Document Class: tufte-handout 2015/06/21 v3.5.2 Tufte-handout class
+
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tufte-latex\tufte-comm
+on.def
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyval.tex))
+)) (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/xifthen\xifthen.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/ifmtarg\ifmtarg.sty))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hardwrap\hardwrap.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.
+sty (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmd
+s.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.
+sty) (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.
+sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.st
+y))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty)
+
+Package ifplatform Warning: 
+    shell escape is disabled, so I can only detect \ifwindows.
+
+) (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty)
+) (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty)
+ (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty
+)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.st
+y)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefin
+ekeys.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.
+sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\getti
+tlestring.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.st
+y)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.
+sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcal
+c.sty)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
+lecheck.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\unique
+counter.sty)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty)
+ (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
+)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.
+sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/paralist\paralist.sty)
+ (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/textcase\textcase.sty
+)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/microtype\letterspace.
+sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+ (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+)
+
+Package xcolor Warning: Package option `usenames' is obsolete and ignored on in
+put line 265.
+
+
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.de
+f)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx
+))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def)
+ (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\svgnam.def)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/natbib\bibentry.sty)
+No file Notes.bbl.
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/sauerj\optparams.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathpazo.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/bera\beramono.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pplj.fd))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\stmaryrd.sty)
+ (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty)
+) (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+ (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz
+.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.s
+ty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+l-common.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+l-latex.def)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs
+.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex
+)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore
+.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.
+cfg)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys
+.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+s.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+slibraryfiltered.code.tex))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.
+cfg)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys-pdftex.def
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ys-common-pdf.def)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+yssoftpath.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+ysprotocol.code.tex))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+re.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+e.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil
+.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpars
+er.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.basic.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.trigonometric.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.random.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.comparison.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.base.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.round.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.misc.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+tions.integerarithmetics.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc
+.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloa
+t.code.tex))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code
+.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repoints.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathconstruct.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathusage.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rescopes.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+regraphicstate.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+retransformations.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+requick.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reobjects.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repathprocessing.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rearrows.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reshade.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reimage.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+reexternal.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+relayers.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+retransparency.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+repatterns.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+rerdf.code.tex)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+eshapes.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+eplot.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
+omp-version-0-65.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
+omp-version-1-18.sty))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.s
+ty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.
+sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+s.code.tex))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+e.tex))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor
+.code.tex))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz\tikz.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryplothandlers.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+ematrix.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarytopaths.code.tex)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarydecorations.markings.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarydecorations.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+edecorations.code.tex))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decora
+tions\pgflibrarydecorations.markings.code.tex))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryintersections.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryintersections.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryfpu.code.tex)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hobby\tikzlibraryhobby
+.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hobby\pgflibraryhobby.
+code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hobby\hobby.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hobby\pml3array.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+ftex.def))))))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikz-cd.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikzlibrarycd.
+code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarymatrix.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryquotes.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryarrows.meta.code.tex)))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibrarycalc.code.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+kz/libraries\tikzlibraryarrows.code.tex
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+raryarrows.code.tex))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\stackrel.sty)
+ (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.tex
+Bootstrap'ing: catcodes, docmode,
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrecat.tex)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyidioms.tex)
+
+ Xy-pic version 3.8.9 <2013/10/06>
+ Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
+ Xy-pic is free software: see the User's Guide for details.
+
+Loading kernel: messages; fonts; allocations: state, direction,
+utility macros; pictures: \xy, positions, objects, decorations;
+kernel objects: directionals, circles, text; options; algorithms: directions,
+edges, connections;  Xy-pic loaded)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycmtip.tex
+ Xy-pic option: Computer Modern tip extension v.3.7
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xytips.tex
+ Xy-pic option: More Tips extension v.3.11 loaded) loaded)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyall.tex
+ Xy-pic option: All features v.3.8
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycurve.tex
+ Xy-pic option: Curve and Spline extension v.3.12 curve, circles, loaded)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyframe.tex
+ Xy-pic option: Frame and Bracket extension v.3.14 loaded)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyline.tex
+ Xy-pic option: Line styles extension v.3.10 loaded)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrotate.tex
+ Xy-pic option: Rotate and Scale extension v.3.8 loaded)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycolor.tex
+ Xy-pic option: Colour extension v.3.11 loaded)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xymatrix.tex
+ Xy-pic option: Matrix feature v.3.14 loaded)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyarrow.tex
+ Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xygraph.tex
+ Xy-pic option: Graph feature v.3.11 loaded) loaded)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf.tex
+ Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-co.tex
+loaded) Xy-pic pdf driver: `curve' extension support
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-cu.tex
+loaded) Xy-pic pdf driver: `frame' extension support
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-fr.tex
+loaded) Xy-pic pdf driver: `line' extension support
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-li.tex
+loaded) Xy-pic pdf driver: `rotate' extension support
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-ro.tex
+loaded) loaded))
+No file Notes.aux.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
+kii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
+base.sty
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.
+cfg))
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pplx.fd)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/bera\t1fvm.fd)
+Underfull \hbox (badness 1152) in paragraph at lines 128--128
+\T1/pplj/m/n/8 un-der a CC-By li-cense: 
+
+Overfull \hbox (5.3706pt too wide) in paragraph at lines 128--128
+[]\T1/fvm/m/n/8 creativecommons.org/licenses/by/4.0/[]\T1/pplj/m/n/8 .  
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd)
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+
+LaTeX Warning: Marginpar on page 1 moved.
+
+[1{C:/Users/Floris/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/F
+loris/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+
+Overfull \hbox (4.45752pt too wide) in paragraph at lines 226--229
+[][]\T1/pplj/b/n/10 Definition 3. []\T1/pplj/m/n/10 A \T1/pplj/m/it/10 neigh-bo
+ur-hood base $\OMS/zplm/m/n/10 N$ \T1/pplj/m/n/10 on a set $\OML/zplm/m/it/10 X
+$ \T1/pplj/m/n/10 is a fam-ily $\OMS/zplm/m/n/10 fN\OT1/zplm/m/n/10 (\OML/zplm/
+m/it/10 x\OT1/zplm/m/n/10 )\OMS/zplm/m/n/10 g[]$ 
+[2]
+
+LaTeX Warning: Marginpar on page 3 moved.
+
+[3]
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+
+LaTeX Warning: Marginpar on page 4 moved.
+
+[4]
+
+LaTeX Warning: Marginpar on page 5 moved.
+
+
+Overfull \hbox (2.17447pt too wide) in paragraph at lines 407--414
+[]\T1/pplj/m/n/10 For in-stance, we can give $\OML/zplm/m/it/10 S[]$ \T1/pplj/m
+/n/10 the ini-tial topol-ogy for the maps $\OML/zplm/m/it/10 x[] [] [] S[] \OMS
+/zplm/m/n/10 ! 
+
+LaTeX Warning: Marginpar on page 5 moved.
+
+<xymatrix 2x2 141> [5]
+
+LaTeX Warning: Marginpar on page 6 moved.
+
+[6]
+
+LaTeX Warning: Marginpar on page 7 moved.
+
+(compiling to `Notes-01.xyc' <xymatrix 4x2 187> done) (Notes-01.xyc)
+Overfull \hbox (44.77267pt too wide) detected at line 533
+[]
+
+LaTeX Warning: Marginpar on page 7 moved.
+
+[7]
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+(compiling to `Notes-02.xyc' <xymatrix 2x2 110> done) (Notes-02.xyc)
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+[8]
+
+LaTeX Warning: Marginpar on page 9 moved.
+
+
+LaTeX Warning: Marginpar on page 9 moved.
+
+(compiling to `Notes-03.xyc' <xymatrix 2x3 187> done) (Notes-03.xyc)
+
+LaTeX Warning: Marginpar on page 9 moved.
+
+
+LaTeX Warning: Reference `eg:annulus' on page 9 undefined on input line 643.
+
+[9]
+
+LaTeX Warning: Reference `ex:closed_cover_gluing_lemma' on page 10 undefined on
+ input line 674.
+
+
+LaTeX Warning: Marginpar on page 10 moved.
+
+[10]
+Overfull \hbox (15.70935pt too wide) in paragraph at lines 721--722
+[][]\T1/pplj/b/n/10 Definition 14. []\T1/pplj/m/n/10 A \T1/pplj/m/it/10 cat-e-g
+ory $\OMS/zplm/m/n/10 C$ \T1/pplj/m/n/10 con-sists of a col-lec-tion of \T1/ppl
+j/m/it/10 ob-jects $\OML/zplm/m/it/10 W\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 X\O
+T1/pplx/m/n/10 , \OML/zplm/m/it/10 Y\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 Z\OT1/
+pplx/m/n/10 , []$ 
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+
+LaTeX Warning: Marginpar on page 11 moved.
+
+[11]
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pplj.fd)
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+
+LaTeX Warning: Marginpar on page 12 moved.
+
+[12] (compiling to `Notes-04.xyc' <xymatrix 2x2 150> done) (Notes-04.xyc)
+[13]
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+(compiling to `Notes-05.xyc' <xymatrix 2x2 116> done) (Notes-05.xyc)
+
+LaTeX Warning: Marginpar on page 14 moved.
+
+[14]
+
+LaTeX Warning: Marginpar on page 15 moved.
+
+(compiling to `Notes-06.xyc' <xymatrix 2x2 150> done) (Notes-06.xyc)
+(compiling to `Notes-07.xyc' <xymatrix 2x2 162> done) (Notes-07.xyc) [15]
+
+LaTeX Warning: Reference `lemma:pi0s_preserve_coprods' on page 16 undefined on 
+input line 995.
+
+[16]
+
+LaTeX Warning: Marginpar on page 17 moved.
+
+[17] (compiling to `Notes-08.xyc' <xymatrix 2x2 125> done) (Notes-08.xyc)
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+
+LaTeX Warning: Reference `prop:iso_fibres_of_cov_sp' on page 18 undefined on in
+put line 1135.
+
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+[18] (compiling to `Notes-09.xyc' <xymatrix 3x2 110> done) (Notes-09.xyc)
+
+LaTeX Warning: Marginpar on page 19 moved.
+
+(compiling to `Notes-10.xyc' <xymatrix 2x2 162> done) (Notes-10.xyc)
+
+LaTeX Warning: Reference `def:pullback_of_cov_sp' on page 19 undefined on input
+ line 1193.
+
+
+LaTeX Warning: Marginpar on page 19 moved.
+
+[19]
+
+LaTeX Warning: Marginpar on page 20 moved.
+
+
+LaTeX Warning: Reference `prop:covering_sp_of_interval_triv' on page 20 undefin
+ed on input line 1223.
+
+
+LaTeX Warning: Marginpar on page 20 moved.
+
+[20]
+
+LaTeX Warning: Marginpar on page 21 moved.
+
+
+LaTeX Warning: Reference `prop:iso_fibres_of_cov_sp' on page 21 undefined on in
+put line 1282.
+
+
+LaTeX Warning: Marginpar on page 21 moved.
+
+
+LaTeX Warning: Marginpar on page 21 moved.
+
+
+LaTeX Warning: Marginpar on page 21 moved.
+
+
+LaTeX Warning: Reference `eq:loops_to_fibre' on page 21 undefined on input line
+ 1323.
+
+[21]
+
+LaTeX Warning: Reference `eq:loops_to_fibre' on page 22 undefined on input line
+ 1340.
+
+
+LaTeX Warning: Marginpar on page 22 moved.
+
+
+LaTeX Warning: Marginpar on page 22 moved.
+
+
+Overfull \hbox (83.86171pt too wide) detected at line 1365
+\OML/zplm/m/it/10 N[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 t[] < [] < t[]\OT1/ppl
+x/m/n/10 ; \OML/zplm/m/it/10 U[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m/it/10 U[]\O
+T1/zplm/m/n/10 ) := \OMS/zplm/m/n/10 f\OML/zplm/m/it/10 ^^Q [] [] I \OMS/zplm/m
+/n/10 ! \OML/zplm/m/it/10 X \OMS/zplm/m/n/10 j 8\OML/zplm/m/it/10 i \OT1/zplm/m
+/n/10 = \OT1/pplx/m/n/10 0, [] \OML/zplm/m/it/10 n\OT1/pplx/m/n/10 ,  \OML/zplm
+/m/it/10 ^^Q\OT1/zplm/m/n/10 ([\OML/zplm/m/it/10 t[]\OT1/pplx/m/n/10 , \OML/zpl
+m/m/it/10 t[]\OT1/zplm/m/n/10 ]) \OMS/zplm/m/n/10 ^^R \OML/zplm/m/it/10 U[]\OMS
+/zplm/m/n/10 g ^^R []\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 I\OT1/pplx/m/n/10 , \O
+ML/zplm/m/it/10 X\OT1/zplm/m/n/10 )
+
+LaTeX Warning: Reference `lemma:compact_open_base' on page 22 undefined on inpu
+t line 1371.
+
+[22]
+
+LaTeX Warning: Marginpar on page 23 moved.
+
+
+Overfull \hbox (5.78346pt too wide) in paragraph at lines 1398--1401
+[]\T1/pplj/m/n/10 A key prop-erty of the nat-u-ral trans-for-ma-tion $[] \OMS/z
+plm/m/n/10 ) [] \OML/zplm/m/it/10 ^^Y[] [] [] [] \OMS/zplm/m/n/10 ! 
+(compiling to `Notes-11.xyc' <xymatrix 2x2 104> done) (Notes-11.xyc) [23]
+
+LaTeX Warning: Reference `eq:path_space_action_fibres' on page 24 undefined on 
+input line 1429.
+
+
+LaTeX Warning: Marginpar on page 24 moved.
+
+
+LaTeX Warning: Marginpar on page 24 moved.
+
+[24]
+
+LaTeX Warning: Marginpar on page 25 moved.
+
+
+LaTeX Warning: Marginpar on page 25 moved.
+
+
+LaTeX Warning: Marginpar on page 25 moved.
+
+
+Overfull \hbox (31.07953pt too wide) detected at line 1552
+\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 ^^M\OT1/pplx/m/n/10 #\OML/zplm/m/it/10 ^^M\
+OT1/zplm/m/n/10 )\OT1/pplx/m/n/10 #\OML/zplm/m/it/10 ^^M \OT1/zplm/m/n/10 = [] 
+ [] \OML/zplm/m/it/10 ^^M\OT1/pplx/m/n/10 #\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 
+^^M\OT1/pplx/m/n/10 #\OML/zplm/m/it/10 ^^M\OT1/zplm/m/n/10 ) = []
+[25]
+
+LaTeX Warning: Marginpar on page 26 moved.
+
+
+LaTeX Warning: Marginpar on page 26 moved.
+
+[26]
+
+LaTeX Warning: Marginpar on page 27 moved.
+
+
+LaTeX Warning: Marginpar on page 27 moved.
+
+
+LaTeX Warning: Marginpar on page 27 moved.
+
+
+LaTeX Warning: Marginpar on page 27 moved.
+
+
+LaTeX Warning: Marginpar on page 27 moved.
+
+[27]
+
+LaTeX Warning: Marginpar on page 28 moved.
+
+
+LaTeX Warning: Marginpar on page 28 moved.
+
+[28]
+
+LaTeX Warning: Marginpar on page 29 moved.
+
+
+LaTeX Warning: Marginpar on page 29 moved.
+
+
+Overfull \hbox (4.41035pt too wide) in paragraph at lines 1831--1835
+\T1/pplj/m/n/10 of ob-jects $\OML/zplm/m/it/10 A$\T1/pplj/m/n/10 , and the set 
+of mor-phisms from $\OML/zplm/m/it/10 x$ \T1/pplj/m/n/10 to $\OML/zplm/m/it/10 
+y$ \T1/pplj/m/n/10 is $\OT1/zplm/m/n/10 ^^E[](\OML/zplm/m/it/10 X\OT1/pplx/m/n/
+10 , \OML/zplm/m/it/10 A\OT1/zplm/m/n/10 )(\OML/zplm/m/it/10 x\OT1/pplx/m/n/10 
+, \OML/zplm/m/it/10 y\OT1/zplm/m/n/10 ) := 
+
+LaTeX Warning: Marginpar on page 29 moved.
+
+
+Overfull \hbox (15.57256pt too wide) in paragraph at lines 1850--1851
+[][]\T1/pplj/b/n/10 Proposition 12. []\T1/pplj/m/n/10 The fun-da-men-tal groupo
+id gives a func-tor $\OT1/zplm/m/n/10 ^^E[] [] [] [][] \OMS/zplm/m/n/10 ! 
+(compiling to `Notes-12.xyc' <xymatrix 2x2 156> done) (Notes-12.xyc) [29]
+
+LaTeX Warning: Marginpar on page 30 moved.
+
+
+LaTeX Warning: Marginpar on page 30 moved.
+
+
+LaTeX Warning: Marginpar on page 30 moved.
+
+[30] (compiling to `Notes-13.xyc' <xymatrix 2x2 150> done) (Notes-13.xyc)
+(compiling to `Notes-14.xyc' <xymatrix 2x2 150> done) (Notes-14.xyc)
+
+LaTeX Warning: Marginpar on page 31 moved.
+
+[31]
+
+LaTeX Warning: Marginpar on page 32 moved.
+
+[32]
+
+LaTeX Warning: Reference `prop:cov_space_of_IxX' on page 33 undefined on input 
+line 2019.
+
+
+LaTeX Warning: Reference `prop:pullback_by_homotopic_maps_iso' on page 33 undef
+ined on input line 2035.
+
+
+LaTeX Warning: Marginpar on page 33 moved.
+
+
+Overfull \hbox (17.26976pt too wide) in paragraph at lines 2040--2043
+\T1/pplj/m/n/10 Hilbert space has no in-ter-est-ing cov-er-ing spaces. The infi
+nite-dimensional 
+(compiling to `Notes-15.xyc' <xymatrix 2x2 199> done) (Notes-15.xyc)
+
+LaTeX Warning: Marginpar on page 33 moved.
+
+
+LaTeX Warning: Reference `thm:cov_space_gives_faithful_functor' on page 33 unde
+fined on input line 2070.
+
+[33]
+
+LaTeX Warning: Reference `thm:cov_space_gives_faithful_functor' on page 34 unde
+fined on input line 2073.
+
+
+LaTeX Warning: Marginpar on page 34 moved.
+
+
+LaTeX Warning: Marginpar on page 34 moved.
+
+
+LaTeX Warning: Marginpar on page 34 moved.
+
+[34]
+
+LaTeX Warning: Reference `eg:piS^1_infinite' on page 35 undefined on input line
+ 2135.
+
+
+LaTeX Warning: Reference `cor:fibre_of_univ_cov_space' on page 35 undefined on 
+input line 2140.
+
+
+Overfull \hbox (12.8498pt too wide) in paragraph at lines 2181--2183
+[]\T1/pplj/m/n/10 So we are go-ing to fo-cus a bit on cal-cu-lat-ing the fun-da
+-men-tal group(oid) 
+[35]
+
+LaTeX Warning: Marginpar on page 36 moved.
+
+
+LaTeX Warning: Marginpar on page 36 moved.
+
+
+LaTeX Warning: Marginpar on page 36 moved.
+
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+LaTeX Warning: Marginpar on page 36 moved.
+
+
+LaTeX Warning: Marginpar on page 36 moved.
+
+
+LaTeX Warning: Marginpar on page 36 moved.
+
+
+LaTeX Warning: Marginpar on page 36 moved.
+
+
+LaTeX Warning: Marginpar on page 36 moved.
+
+[36] (compiling to `Notes-16.xyc' <xymatrix 3x3 234> done) (Notes-16.xyc)
+
+LaTeX Warning: Marginpar on page 37 moved.
+
+(compiling to `Notes-17.xyc' <xymatrix 2x2 162> done) (Notes-17.xyc)
+
+LaTeX Warning: Marginpar on page 37 moved.
+
+
+LaTeX Warning: Marginpar on page 37 moved.
+
+(compiling to `Notes-18.xyc' <xymatrix 2x2 138> done) (Notes-18.xyc) [37]
+(compiling to `Notes-19.xyc' <xymatrix 2x2 153> done) (Notes-19.xyc)
+(compiling to `Notes-20.xyc' <xymatrix 2x2 138> done) (Notes-20.xyc)
+(compiling to `Notes-21.xyc' <xymatrix 2x2 144> done) (Notes-21.xyc)
+(compiling to `Notes-22.xyc' <xymatrix 2x2 150> done) (Notes-22.xyc)
+
+LaTeX Warning: Marginpar on page 38 moved.
+
+(compiling to `Notes-23.xyc' <xymatrix 2x2 153> done) (Notes-23.xyc) [38]
+(compiling to `Notes-24.xyc' <xymatrix 2x2 168> done) (Notes-24.xyc)
+
+LaTeX Warning: Marginpar on page 39 moved.
+
+[39]
+
+LaTeX Warning: Marginpar on page 40 moved.
+
+
+LaTeX Warning: Marginpar on page 40 moved.
+
+
+LaTeX Warning: Marginpar on page 40 moved.
+
+[40]
+
+LaTeX Warning: Marginpar on page 41 moved.
+
+(compiling to `Notes-25.xyc' <xymatrix 4x4 428> done) (Notes-25.xyc)
+
+LaTeX Warning: Marginpar on page 41 moved.
+
+
+LaTeX Warning: Marginpar on page 41 moved.
+
+
+LaTeX Warning: Marginpar on page 41 moved.
+
+
+LaTeX Warning: Marginpar on page 41 moved.
+
+[41]
+
+LaTeX Warning: Reference `lemma:retracts_of_pushouts' on page 42 undefined on i
+nput line 2584.
+
+
+LaTeX Warning: Reference `eg:retracts_of_Pi1' on page 42 undefined on input lin
+e 2587.
+
+
+LaTeX Warning: Marginpar on page 42 moved.
+
+(compiling to `Notes-26.xyc' <xymatrix 2x2 138> done) (Notes-26.xyc)
+
+LaTeX Warning: Reference `eg:retracts_of_Pi1' on page 42 undefined on input lin
+e 2608.
+
+[42] (compiling to `Notes-27.xyc' <xymatrix 2x2 138> done) (Notes-27.xyc)
+(compiling to `Notes-28.xyc' <xymatrix 2x2 138> done) (Notes-28.xyc) [43]
+(compiling to `Notes-29.xyc' <xymatrix 2x2 138> done) (Notes-29.xyc)
+(compiling to `Notes-30.xyc' <xymatrix 2x2 138> done) (Notes-30.xyc)
+
+LaTeX Warning: Marginpar on page 44 moved.
+
+
+Overfull \hbox (3.19414pt too wide) in paragraph at lines 2731--2737
+\T1/pplj/m/it/10 free prod-uct with amal-ga-ma-tion $\OML/zplm/m/it/10 G \OMS/z
+plm/m/n/10 ^^C[] \OML/zplm/m/it/10 H$ \T1/pplj/m/n/10 is the group $\OML/zplm/m
+/it/10 G \OMS/zplm/m/n/10 ^^C \OML/zplm/m/it/10 H\OT1/zplm/m/n/10 /\OMS/zplm/m/
+n/10 h\OML/zplm/m/it/10 ^^^\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/1
+0 )\OML/zplm/m/it/10  \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )[]
+\OMS/zplm/m/n/10 i$\T1/pplj/m/n/10 , 
+[44]
+
+LaTeX Warning: Marginpar on page 45 moved.
+
+
+Overfull \hbox (1.04912pt too wide) detected at line 2746
+\OML/zplm/m/it/10 G \OMS/zplm/m/n/10 ^^C[] \OML/zplm/m/it/10 H \OMS/zplm/m/n/10
+ ' h\OML/zplm/m/it/10 g[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m/it/10 g[]\OT1/pplx
+/m/n/10 , \OML/zplm/m/it/10 h[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m/it/10 h[] \O
+MS/zplm/m/n/10 j \OML/zplm/m/it/10 R[]\OT1/pplx/m/n/10 , [] \OML/zplm/m/it/10 R
+[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 Q[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m/i
+t/10 Q[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 ^^^\OT1/zplm/m/n/10 (\OML/zplm/m/i
+t/10 x\OT1/zplm/m/n/10 )\OML/zplm/m/it/10  \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 
+x\OT1/zplm/m/n/10 )[] = \OML/zplm/m/it/10 e\OMS/zplm/m/n/10 i
+
+LaTeX Warning: Marginpar on page 45 moved.
+
+(compiling to `Notes-31.xyc' <xymatrix 2x2 144> done) (Notes-31.xyc)
+(compiling to `Notes-32.xyc' <xymatrix 2x2 144> done) (Notes-32.xyc)
+
+LaTeX Warning: Marginpar on page 45 moved.
+
+[45] (compiling to `Notes-33.xyc' <xymatrix 2x2 150> done) (Notes-33.xyc)
+
+LaTeX Warning: Marginpar on page 46 moved.
+
+(compiling to `Notes-34.xyc' <xymatrix 2x2 85> done) (Notes-34.xyc) [46]
+
+LaTeX Warning: Marginpar on page 47 moved.
+
+Missing character: There is no ; in font nullfont!
+
+LaTeX Warning: Marginpar on page 47 moved.
+
+[47] (compiling to `Notes-35.xyc' <xymatrix 2x2 138> done) (Notes-35.xyc)
+(compiling to `Notes-36.xyc' <xymatrix 2x2 138> done) (Notes-36.xyc)
+Missing character: There is no ; in font nullfont!
+[48]
+
+LaTeX Warning: Marginpar on page 49 moved.
+
+(compiling to `Notes-37.xyc' <xymatrix 2x2 138> done) (Notes-37.xyc)
+(compiling to `Notes-38.xyc' <xymatrix 2x2 138> done) (Notes-38.xyc)
+
+LaTeX Warning: Marginpar on page 49 moved.
+
+<xymatrix 2x2 161> [49] <xymatrix 2x2 161>
+
+LaTeX Warning: Marginpar on page 50 moved.
+
+<xymatrix 2x2 154>
+
+LaTeX Warning: Reference `eg:one-relator_group' on page 50 undefined on input l
+ine 3039.
+
+
+LaTeX Warning: Marginpar on page 50 moved.
+
+
+LaTeX Warning: Marginpar on page 50 moved.
+
+(compiling to `Notes-39.xyc' <xymatrix 3x2 128> done) (Notes-39.xyc) [50]
+
+LaTeX Warning: Marginpar on page 51 moved.
+
+(compiling to `Notes-40.xyc' <xymatrix 2x2 162> done) (Notes-40.xyc)
+
+LaTeX Warning: Marginpar on page 51 moved.
+
+
+Overfull \hbox (23.54683pt too wide) in paragraph at lines 3094--3096
+[][]\T1/pplj/b/n/10 Example 49. []\T1/pplj/m/n/10 Re-gard $\OML/zplm/m/it/10 S[
+] \OMS/zplm/m/n/10 ^^Z \U/fplmbb/m/n/10 C$\T1/pplj/m/n/10 . Re-call the cov-er-
+ing spaces $[]\OT1/zplm/m/n/10 (\OT1/pplx/m/n/10 2\OML/zplm/m/it/10 ^^Yi\OT1/zp
+lm/m/n/10 (\OMS/zplm/m/n/10 ^^@\OT1/zplm/m/n/10 )) [] [] \U/fplmbb/m/n/10 R \OM
+S/zplm/m/n/10 ! 
+(compiling to `Notes-41.xyc' <xymatrix 3x2 128> done) (Notes-41.xyc) [51]
+
+LaTeX Warning: Marginpar on page 52 moved.
+
+
+Overfull \hbox (18.16249pt too wide) in paragraph at lines 3161--3162
+[]\T1/pplj/m/n/10 Now no-tice also that $\OT1/zplm/m/n/10 ^^E[](\OML/zplm/m/it/
+10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 A\OT1/zplm/m/n/10 ) = ^^E[]([][] \OML/
+zplm/m/it/10 X[]\OT1/pplx/m/n/10 , [][]\OMS/zplm/m/n/10 f\OML/zplm/m/it/10 a[]\
+OMS/zplm/m/n/10 g\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ' [][] \U/fplmbb/m/n/10 B\
+OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X[]\OT1/pplx/m/n/10 ,
+ \OML/zplm/m/it/10 a[]\OT1/zplm/m/n/10 )$  
+[52]
+
+LaTeX Warning: Marginpar on page 53 moved.
+
+
+LaTeX Warning: Marginpar on page 53 moved.
+
+
+Overfull \hbox (17.79079pt too wide) in paragraph at lines 3184--3185
+[][]\T1/pplj/b/n/10 Lemma 17. []\T1/pplj/m/n/10 The func-tor just de-scribed gi
+ves an iso-mor-phism $\OT1/zplm/m/n/10 [\U/fplmbb/m/n/10 B\OML/zplm/m/it/10 G\O
+T1/pplx/m/n/10 , []\OT1/zplm/m/n/10 ] [] 
+
+Overfull \hbox (15.91196pt too wide) detected at line 3191
+\OT1/zplm/m/n/10 [^^E[](\OML/zplm/m/it/10 X\OT1/zplm/m/n/10 )\OT1/pplx/m/n/10 ,
+ []\OT1/zplm/m/n/10 ] \OMS/zplm/m/n/10 ! \OT1/zplm/m/n/10 [^^E[](\OML/zplm/m/it
+/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 A\OT1/zplm/m/n/10 )\OT1/pplx/m/n/10 ,
+ []\OT1/zplm/m/n/10 ] \OMS/zplm/m/n/10 ' []\OT1/zplm/m/n/10 [\U/fplmbb/m/n/10 B
+\OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X[]\OT1/pplx/m/n/10 
+, \OML/zplm/m/it/10 a[]\OT1/zplm/m/n/10 )\OT1/pplx/m/n/10 , []\OT1/zplm/m/n/10 
+] \OMS/zplm/m/n/10 ' [] \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it
+/10 X[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 a[]\OT1/zplm/m/n/10 )[]\OT1/pplx/m/
+n/10 .
+
+LaTeX Warning: Marginpar on page 53 moved.
+
+[53]
+
+LaTeX Warning: Reference `eq:fibre_functor' on page 54 undefined on input line 
+3221.
+
+(compiling to `Notes-42.xyc' <xymatrix 1x2 39> done) (Notes-42.xyc)
+(compiling to `Notes-43.xyc' <xymatrix 1x2 39> done) (Notes-43.xyc)
+(compiling to `Notes-44.xyc' <xymatrix 1x2 39> done) (Notes-44.xyc)
+(compiling to `Notes-45.xyc' <xymatrix 1x2 39> done) (Notes-45.xyc)
+
+LaTeX Warning: Marginpar on page 54 moved.
+
+
+LaTeX Warning: Marginpar on page 54 moved.
+
+
+LaTeX Warning: Marginpar on page 54 moved.
+
+
+LaTeX Warning: Reference `eq:fibre_quotient_of_loops' on page 54 undefined on i
+nput line 3242.
+
+[54]
+Overfull \hbox (2.30745pt too wide) in paragraph at lines 3263--3264
+[]\T1/pplj/m/n/10 Recall what our orig-i-nal ques-tion was: what rep-re-sen-ta-
+tions $\OT1/zplm/m/n/10 ^^E[](\OML/zplm/m/it/10 X\OT1/zplm/m/n/10 ) \OMS/zplm/m
+/n/10 ! 
+
+Overfull \hbox (18.75978pt too wide) in paragraph at lines 3263--3264
+[]$ \T1/pplj/m/n/10 arise from cov-er-ing spaces of $\OML/zplm/m/it/10 X$ \T1/p
+plj/m/n/10 via the func-tor $[][] \OMS/zplm/m/n/10 ! \OT1/zplm/m/n/10 [^^E[](\O
+ML/zplm/m/it/10 X\OT1/zplm/m/n/10 )\OT1/pplx/m/n/10 , []\OT1/zplm/m/n/10 ]$\T1/
+pplj/m/n/10 ? 
+[55]
+
+LaTeX Warning: Marginpar on page 56 moved.
+
+
+LaTeX Warning: Marginpar on page 56 moved.
+
+
+LaTeX Warning: Marginpar on page 56 moved.
+
+(compiling to `Notes-46.xyc' <xymatrix 2x2 104> done) (Notes-46.xyc)
+
+LaTeX Warning: Marginpar on page 56 moved.
+
+[56]
+
+LaTeX Warning: Marginpar on page 57 moved.
+
+(compiling to `Notes-47.xyc' <xymatrix 3x2 110> done) (Notes-47.xyc) [57]
+Overfull \hbox (12.85767pt too wide) in paragraph at lines 3353--3354
+[]\T1/pplj/m/n/10 Surjective: Sup-pose I have $\OT1/zplm/m/n/10 [\OML/zplm/m/it
+/10 x[] [] x[]\OT1/zplm/m/n/10 ] \OMS/zplm/m/n/10 2 \OML/zplm/m/it/10 X[]$\T1/p
+plj/m/n/10 . Then $\OT1/zplm/m/n/10 [\OML/zplm/m/it/10 ^^M\OT1/zplm/m/n/10 ] = 
+[\OML/zplm/m/it/10 ^^M\OT1/zplm/m/n/10 ][\OML/zplm/m/it/10 ^^Q[]\OT1/zplm/m/n/1
+0 ][][\OML/zplm/m/it/10 ^^Q[]\OT1/zplm/m/n/10 ]$\T1/pplj/m/n/10 .  
+
+LaTeX Warning: Marginpar on page 58 moved.
+
+
+LaTeX Warning: Marginpar on page 58 moved.
+
+[58]
+
+LaTeX Warning: Marginpar on page 59 moved.
+
+[59]
+
+LaTeX Warning: Marginpar on page 60 moved.
+
+
+LaTeX Warning: Marginpar on page 60 moved.
+
+
+Overfull \hbox (196.12868pt too wide) detected at line 3432
+\OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , 
+\OML/zplm/m/it/10 x\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ^^B \OML/zplm/m/it/10 ^^
+Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 x\
+OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ' \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (
+[]\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 c[]\OT1/zplm/m/n/10 )
+ \OMS/zplm/m/n/10 ^^B \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (
+[]\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 c[]\OT1/zplm/m/n/10 )
+ \OMS/zplm/m/n/10 ' \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (
+[]\OML/zplm/m/it/10 X \OMS/zplm/m/n/10 ^^B \OT1/zplm/m/n/10 
+[]\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OT1/zplm/m/n/10 (\OML/zplm/m/it/10 c[]
+\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 c[]\OT1/zplm/m/n/10 )) \OMS/zplm/m/n/10 ! 
+\OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (
+[]\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 c[]\OT1/zplm/m/n/10 )
+ \OMS/zplm/m/n/10 ' \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 
+X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 x\OT1/zplm/m/n/10 )
+[60]
+
+LaTeX Warning: Marginpar on page 61 moved.
+
+
+Overfull \hbox (54.549pt too wide) in paragraph at lines 3460--3461
+[][]\OT1/zplm/m/n/10 ((\OML/zplm/m/it/10 S[]\OT1/pplx/m/n/10 , 1\OT1/zplm/m/n/1
+0 )\OT1/pplx/m/n/10 , \OT1/zplm/m/n/10 (
+[]\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 c[]\OT1/zplm/m/n/10 )
+)$\T1/pplj/m/n/10 . We can it-er-ate this, to get $[][]\OT1/zplm/m/n/10 ((\OML/
+zplm/m/it/10 S[]\OT1/pplx/m/n/10 , 1\OT1/zplm/m/n/10 )\OT1/pplx/m/n/10 , \OT1/z
+plm/m/n/10 (
+[]\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 c[]\OT1/zplm/m/n/10 )
+) \OMS/zplm/m/n/10 ' 
+[61]
+
+LaTeX Warning: Marginpar on page 62 moved.
+
+[62]
+
+LaTeX Warning: Marginpar on page 63 moved.
+
+
+LaTeX Warning: Marginpar on page 63 moved.
+
+
+LaTeX Warning: Marginpar on page 63 moved.
+
+(compiling to `Notes-48.xyc' <xymatrix 2x3 128> done) (Notes-48.xyc) [63]
+
+LaTeX Warning: Marginpar on page 64 moved.
+
+(compiling to `Notes-49.xyc' <xymatrix 3x2 128> done) (Notes-49.xyc)
+
+LaTeX Warning: Marginpar on page 64 moved.
+
+[64]
+Overfull \hbox (1.68979pt too wide) in paragraph at lines 3589--3590
+[][]\T1/pplj/b/n/10 Example 57. []\T1/pplj/m/n/10 A spe-cial case is where we h
+ave three suc-ces-sive nonzero 
+
+Overfull \hbox (211.86682pt too wide) detected at line 3612
+ [] \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/
+10 F\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 p\OT1/zplm/m/n/10 ) [] \OML/zplm/m/it/
+10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 P\OT1/pplx/m/n/10 , \OML/zplm/m/it/
+10 p\OT1/zplm/m/n/10 ) [] \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/
+it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 x\OT1/zplm/m/n/10 ) [] \OML/zplm/m/
+it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 F\OT1/pplx/m/n/10 , \OML/zplm/m/
+it/10 p\OT1/zplm/m/n/10 ) [] [] \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/
+zplm/m/n/10 (\OML/zplm/m/it/10 F\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 p\OT1/zplm
+/m/n/10 ) [] \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 P\OT1/p
+plx/m/n/10 , \OML/zplm/m/it/10 p\OT1/zplm/m/n/10 ) [] \OML/zplm/m/it/10 ^^Y[]\O
+T1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 x\OT1/z
+plm/m/n/10 ) [] [[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 F\OT1/zplm/m/n/10 ] [] 
+[[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 P\OT1/zplm/m/n/10 ] [] [[]\OT1/pplx/m/n
+/10 , \OML/zplm/m/it/10 X\OT1/zplm/m/n/10 ]
+[65]
+Overfull \hbox (45.37018pt too wide) detected at line 3626
+[] \OMS/zplm/m/n/10 ! \OT1/pplx/m/n/10 0 \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 ^
+^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 Z[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10
+ z\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10
+ (\OML/zplm/m/it/10 Z\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 ) \
+OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\
+OT1/pplx/m/n/10 , \OML/zplm/m/it/10 x\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML
+/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 Z[]\OT1/pplx/m/n/10 , \O
+ML/zplm/m/it/10 z\OT1/zplm/m/n/10 ) = \OT1/pplx/m/n/10 0 \OMS/zplm/m/n/10 ! [] 
+ \OML/zplm/m/it/10 n > \OT1/pplx/m/n/10 1
+
+Overfull \hbox (41.7603pt too wide) detected at line 3630
+[] \OMS/zplm/m/n/10 ! \OT1/pplx/m/n/10 0 \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 ^
+^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 Z[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10
+ z\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10
+ (\OML/zplm/m/it/10 Z\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 z\OT1/zplm/m/n/10 ) \
+OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\
+OT1/pplx/m/n/10 , \OML/zplm/m/it/10 x\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OT1
+/zplm/m/n/10 [[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 Z[]\OT1/zplm/m/n/10 ] = \O
+ML/zplm/m/it/10 Z[] \OMS/zplm/m/n/10 ! \OT1/zplm/m/n/10 [[]\OT1/pplx/m/n/10 , \
+OML/zplm/m/it/10 Z\OT1/zplm/m/n/10 ] \OMS/zplm/m/n/10 ! \OT1/zplm/m/n/10 [[]\OT
+1/pplx/m/n/10 , \OML/zplm/m/it/10 X\OT1/zplm/m/n/10 ]
+[66]
+Overfull \hbox (11.51392pt too wide) detected at line 3646
+[] \OMS/zplm/m/n/10 ! \OT1/pplx/m/n/10 0 \OT1/zplm/m/n/10 = \OML/zplm/m/it/10 ^
+^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[]\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 
+! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[]\OT1/zplm/m/n/1
+0 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/
+10 S[]\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/
+n/10 (\OML/zplm/m/it/10 S[]\OT1/zplm/m/n/10 ) = \OT1/pplx/m/n/10 0 \OMS/zplm/m/
+n/10 ! []  \OML/zplm/m/it/10 n > \OT1/pplx/m/n/10 2
+
+Overfull \hbox (21.47705pt too wide) in paragraph at lines 3654--3656
+\T1/pplj/m/n/10 This im-plies that $\OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\O
+ML/zplm/m/it/10 S[]\OT1/zplm/m/n/10 )$ \T1/pplj/m/n/10 is an in-fi-nite abelian
+ group, and $\OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[]\OT1
+/zplm/m/n/10 )/\OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[]\O
+T1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ' 
+
+Overfull \hbox (7.37724pt too wide) in paragraph at lines 3657--3658
+[]\T1/pplj/m/n/10 Allowing our-selves some black box re-sults, then it is true 
+that $\OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[]\OT1/zplm/m
+/n/10 ) = 
+
+LaTeX Warning: Marginpar on page 67 moved.
+
+
+LaTeX Warning: Marginpar on page 67 moved.
+
+[67]
+Overfull \hbox (1.86261pt too wide) in paragraph at lines 3690--3691
+[]\T1/pplj/m/n/10 Trivial-seeming, but use-ful, is the re-sult that $\OML/zplm/
+m/it/10 SU\OT1/zplm/m/n/10 (\OT1/pplx/m/n/10 2\OT1/zplm/m/n/10 ) = \OML/zplm/m/
+it/10 SU\OT1/zplm/m/n/10 (\OT1/pplx/m/n/10 2\OT1/zplm/m/n/10 )/\OML/zplm/m/it/1
+0 SU\OT1/zplm/m/n/10 (\OT1/pplx/m/n/10 1\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ' 
+
+LaTeX Warning: Marginpar on page 68 moved.
+
+
+Overfull \hbox (42.18867pt too wide) detected at line 3695
+[] \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/1
+0 S[]\OT1/pplx/m/n/10 , \OMS/zplm/m/n/10 ^^C\OT1/zplm/m/n/10 ) = \OT1/pplx/m/n/
+10 0 \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it
+/10 SO\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 n\OT1/zplm/m/n/10 )\OT1/pplx/m/n/10 ,
+ \OML/zplm/m/it/10 I\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y
+[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 SO\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 n \
+OT1/zplm/m/n/10 + \OT1/pplx/m/n/10 1\OT1/zplm/m/n/10 )\OT1/pplx/m/n/10 , \OML/z
+plm/m/it/10 I\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/
+zplm/m/n/10 (\OML/zplm/m/it/10 S[]\OT1/pplx/m/n/10 , \OMS/zplm/m/n/10 ^^C\OT1/z
+plm/m/n/10 ) = \OT1/pplx/m/n/10 0 \OMS/zplm/m/n/10 ! []
+
+Overfull \hbox (98.45164pt too wide) detected at line 3699
+[] \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/1
+0 SO\OT1/zplm/m/n/10 (\OT1/pplx/m/n/10 3\OT1/zplm/m/n/10 )\OT1/pplx/m/n/10 , \O
+ML/zplm/m/it/10 I\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\
+OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[]\OT1/pplx/m/n/10 , \OMS/zplm/m/n/10 ^^C\O
+T1/zplm/m/n/10 ) = \U/fplmbb/m/n/10 Z \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[
+]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 SO\OT1/zplm/m/n/10 (\OT1/pplx/m/n/10 2\OT1
+/zplm/m/n/10 )\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 I\OT1/zplm/m/n/10 ) \OMS/zpl
+m/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 SO\OT1/zp
+lm/m/n/10 (\OT1/pplx/m/n/10 3\OT1/zplm/m/n/10 )\OT1/pplx/m/n/10 , \OML/zplm/m/i
+t/10 I\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 ^^Y[]\OT1/zplm/m/
+n/10 (\OML/zplm/m/it/10 S[]\OT1/pplx/m/n/10 , \OMS/zplm/m/n/10 ^^C\OT1/zplm/m/n
+/10 ) = \OT1/pplx/m/n/10 0 \OMS/zplm/m/n/10 ! []
+[68]
+
+LaTeX Warning: Marginpar on page 69 moved.
+
+
+LaTeX Warning: Marginpar on page 69 moved.
+
+[69] (compiling to `Notes-50.xyc' <xymatrix 3x2 144> done) (Notes-50.xyc)
+[70]
+
+LaTeX Warning: Marginpar on page 71 moved.
+
+
+LaTeX Warning: Marginpar on page 71 moved.
+
+[71]
+
+LaTeX Warning: Marginpar on page 72 moved.
+
+(compiling to `Notes-51.xyc' <xymatrix 2x2 162> done) (Notes-51.xyc)
+(compiling to `Notes-52.xyc' <xymatrix 6x2 546> done) (Notes-52.xyc)
+(compiling to `Notes-53.xyc' <xymatrix 5x2 471> done) (Notes-53.xyc)
+
+LaTeX Warning: Marginpar on page 72 moved.
+
+[72]
+
+LaTeX Warning: Marginpar on page 73 moved.
+
+
+LaTeX Warning: Marginpar on page 73 moved.
+
+
+LaTeX Warning: Marginpar on page 73 moved.
+
+
+LaTeX Warning: Marginpar on page 73 moved.
+
+
+LaTeX Warning: Marginpar on page 73 moved.
+
+
+LaTeX Warning: Marginpar on page 73 moved.
+
+[73]
+
+LaTeX Warning: Reference `eg:triangle_graph' on page 74 undefined on input line
+ 3955.
+
+
+LaTeX Warning: Marginpar on page 74 moved.
+
+
+LaTeX Warning: Reference `remark:finite_complexes_basis' on page 74 undefined o
+n input line 4012.
+
+[74]
+
+LaTeX Warning: Marginpar on page 75 moved.
+
+
+LaTeX Warning: Reference `eg:triangle_graph_cplx' on page 75 undefined on input
+ line 4069.
+
+
+LaTeX Warning: Marginpar on page 75 moved.
+
+
+LaTeX Warning: Marginpar on page 75 moved.
+
+
+LaTeX Warning: Marginpar on page 75 moved.
+
+
+LaTeX Warning: Reference `eg:triangle_Delta_complex' on page 75 undefined on in
+put line 4116.
+
+[75]
+
+LaTeX Warning: Marginpar on page 76 moved.
+
+
+LaTeX Warning: Marginpar on page 76 moved.
+
+
+LaTeX Warning: Marginpar on page 76 moved.
+
+
+Overfull \hbox (11.91985pt too wide) in paragraph at lines 4127--4153
+\T1/pplj/m/n/10 `com-po-nents' in a sur-face, much as a graph is gener-i-cally 
+1-dimensional, 
+
+LaTeX Warning: Marginpar on page 76 moved.
+
+
+LaTeX Warning: Reference `eg:triangle_Delta_complex' on page 76 undefined on in
+put line 4156.
+
+
+LaTeX Warning: Reference `eg:triangle_graph' on page 76 undefined on input line
+ 4159.
+
+[76]
+
+LaTeX Warning: Marginpar on page 77 moved.
+
+
+LaTeX Warning: Reference `eg:combinatorial_torus' on page 77 undefined on input
+ line 4223.
+
+
+LaTeX Warning: Reference `eq:simpl_ids_surf' on page 77 undefined on input line
+ 4254.
+
+[77]
+
+LaTeX Warning: Marginpar on page 78 moved.
+
+
+LaTeX Warning: Marginpar on page 78 moved.
+
+[78]
+
+LaTeX Warning: Marginpar on page 79 moved.
+
+[79]
+
+LaTeX Warning: Marginpar on page 80 moved.
+
+
+Overfull \hbox (12.54922pt too wide) detected at line 4422
+\OT1/zplm/m/n/10 ^^A[] := \OMS/zplm/m/n/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10
+ v[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 v[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m
+/it/10 v[]\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 2 \U/fplmbb/m/n/10 R[] \OMS/zplm/
+m/n/10 j 8 \OT1/pplx/m/n/10 0 \OMS/zplm/m/n/10 ^^T \OML/zplm/m/it/10 i \OMS/zpl
+m/m/n/10 ^^T \OML/zplm/m/it/10 n\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 v[] \OMS/z
+plm/m/n/10 ^^U \OT1/pplx/m/n/10 0[]\OML/zplm/m/it/10 v[] \OT1/zplm/m/n/10 + [] 
++ \OML/zplm/m/it/10 v[] \OT1/zplm/m/n/10 = \OT1/pplx/m/n/10 1\OMS/zplm/m/n/10 g
+
+
+Overfull \hbox (2.94223pt too wide) in paragraph at lines 4422--4426
+\OML/zplm/m/it/10 @[] [] [] \OT1/zplm/m/n/10 ^^A[] \OMS/zplm/m/n/10 ! \OT1/zplm
+/m/n/10 ^^A[]$ \T1/pplj/m/n/10 de-fined to be $\OML/zplm/m/it/10 @[]\OT1/zplm/m
+/n/10 (\OML/zplm/m/it/10 v[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m/it/10 v[]\OT1/z
+plm/m/n/10 ) = (\OML/zplm/m/it/10 v[]\OT1/pplx/m/n/10 , [] , \OML/zplm/m/it/10 
+v[]\OT1/pplx/m/n/10 , 0, \OML/zplm/m/it/10 v[]\OT1/pplx/m/n/10 , [] , \OML/zplm
+/m/it/10 v[]\OT1/zplm/m/n/10 )$\T1/pplj/m/n/10 , 
+
+LaTeX Warning: Marginpar on page 80 moved.
+
+[80]
+
+LaTeX Warning: Marginpar on page 81 moved.
+
+
+LaTeX Warning: Marginpar on page 81 moved.
+
+
+LaTeX Warning: Marginpar on page 81 moved.
+
+[81]
+
+LaTeX Warning: Marginpar on page 82 moved.
+
+
+Overfull \hbox (1.38016pt too wide) in paragraph at lines 4593--4594
+ [] 
+[82] <xymatrix 2x2 168>
+
+LaTeX Warning: Reference `eg:infinite_cylinder' on page 83 undefined on input l
+ine 4635.
+
+
+LaTeX Warning: Marginpar on page 83 moved.
+
+[83]
+Overfull \hbox (13.6736pt too wide) in paragraph at lines 4672--4676
+\T1/pplj/m/n/10 Each of the sub-sets in these sets is or-dered, and the func-ti
+on $\OML/zplm/m/it/10 d[] [] [] [] \OMS/zplm/m/n/10 ! 
+(compiling to `Notes-54.xyc' <xymatrix 2x2 107> done) (Notes-54.xyc) [84]
+
+LaTeX Warning: Marginpar on page 85 moved.
+
+(compiling to `Notes-55.xyc' <xymatrix 2x2 150> done) (Notes-55.xyc) [85]
+
+LaTeX Warning: Marginpar on page 86 moved.
+
+[86]
+
+LaTeX Warning: Marginpar on page 87 moved.
+
+
+Overfull \hbox (1.04852pt too wide) in paragraph at lines 4908--4910
+\T1/pplj/m/n/10 ules, we get from $\OML/zplm/m/it/10 $ \T1/pplj/m/n/10 as abov
+e an $\OML/zplm/m/it/10 R$\T1/pplj/m/n/10 -linear map $\OML/zplm/m/it/10 H[]\OT
+1/zplm/m/n/10 (\OML/zplm/m/it/10 X[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/
+zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zp
+lm/m/it/10 X[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 S\OT1/zplm/m/n/10 )$\T1/pplj
+/m/n/10 , 
+[87]
+
+LaTeX Warning: Reference `eg:name_of_simplex' on page 88 undefined on input lin
+e 4941.
+
+
+LaTeX Warning: Marginpar on page 88 moved.
+
+(compiling to `Notes-56.xyc' <xymatrix 4x2 280> done) (Notes-56.xyc)
+
+LaTeX Warning: Marginpar on page 88 moved.
+
+[88]
+
+LaTeX Warning: Marginpar on page 89 moved.
+
+
+LaTeX Warning: Marginpar on page 89 moved.
+
+[89]
+Overfull \hbox (0.62231pt too wide) in paragraph at lines 5027--5030
+[]$\OML/zplm/m/it/10 U[]$ \T1/pplj/m/n/10 has the same ver-tices as $\OML/zplm/
+m/it/10 @\OT1/zplm/m/n/10 ^^A[\OT1/pplx/m/n/10 3\OT1/zplm/m/n/10 ]$ \T1/pplj/m/
+n/10 but only two $\OT1/pplx/m/n/10 2$\T1/pplj/m/n/10 -simplices: $\OMS/zplm/m/
+n/10 f\OT1/pplx/m/n/10 0, 1, 2\OMS/zplm/m/n/10 g$ 
+
+LaTeX Warning: Marginpar on page 90 moved.
+
+
+LaTeX Warning: Marginpar on page 90 moved.
+
+(compiling to `Notes-57.xyc' <xymatrix 2x2 138> done) (Notes-57.xyc) [90]
+
+LaTeX Warning: Marginpar on page 91 moved.
+
+[91]
+
+LaTeX Warning: Marginpar on page 92 moved.
+
+[92]
+
+LaTeX Warning: Marginpar on page 93 moved.
+
+
+LaTeX Warning: Marginpar on page 93 moved.
+
+
+LaTeX Warning: Marginpar on page 93 moved.
+
+
+Overfull \hbox (39.24876pt too wide) detected at line 5174
+[] [] \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 A[]\OT1/zplm/m/n
+/10 ) [] \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 B[]\OT1/zplm/
+m/n/10 ) [] \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 C[]\OT1/zp
+lm/m/n/10 ) [] \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 A[]\OT1
+/zplm/m/n/10 ) [] (\OML/zplm/m/it/10 B[]\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! [
+]
+
+LaTeX Warning: Marginpar on page 93 moved.
+
+(compiling to `Notes-58.xyc' <xymatrix 5x2 350> done) (Notes-58.xyc)
+
+LaTeX Warning: Reference `fig:snake_lemma' on page 93 undefined on input line 5
+196.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5239--5244
+[][]
+[93] [94]
+
+LaTeX Warning: Reference `thm:alg_Mayer-Vietoris' on page 95 undefined on input
+ line 5314.
+
+(compiling to `Notes-59.xyc' <xymatrix 5x2 326> done) (Notes-59.xyc)
+Overfull \hbox (21.7268pt too wide) detected at line 5328
+[]
+[95]
+
+LaTeX Warning: Reference `thm:alg_Mayer-Vietoris' on page 96 undefined on input
+ line 5336.
+
+
+Overfull \hbox (16.23112pt too wide) in paragraph at lines 5338--5342
+[]\T1/pplj/m/n/10 First no-tice that $[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 A[]
+\OT1/zplm/m/n/10 /\OML/zplm/m/it/10 ^^N[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 A[
+]\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! [] \OML/zplm/m/it/10 ^^N[]\OT1/zplm/m/n/
+10 ) = [](\OML/zplm/m/it/10 A[]\OT1/zplm/m/n/10 /\OML/zplm/m/it/10 ^^N[]\OT1/zp
+lm/m/n/10 (\OML/zplm/m/it/10 A[]\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! 
+
+LaTeX Warning: Marginpar on page 96 moved.
+
+
+LaTeX Warning: Reference `lemma:setup_for_algMV' on page 96 undefined on input 
+line 5343.
+
+
+LaTeX Warning: Marginpar on page 96 moved.
+
+
+LaTeX Warning: Marginpar on page 96 moved.
+
+
+LaTeX Warning: Marginpar on page 96 moved.
+
+[96]
+Overfull \hbox (61.79831pt too wide) detected at line 5385
+\OT1/pplx/m/n/10 0 \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 C[]\OT1/zplm/m/n/10 (\O
+ML/zplm/m/it/10 X[]\OT1/pplx/m/n/10 , [][] \OML/zplm/m/it/10 X[]\OT1/pplx/m/n/1
+0 ; \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! [] ! \OML/zplm/m/i
+t/10 C[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X[]\OT1/pplx/m/n/10 , [][] \OML/zpl
+m/m/it/10 X[]\OT1/pplx/m/n/10 ; \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm
+/m/n/10 ! \OML/zplm/m/it/10 C[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X[]\OT1/pplx
+/m/n/10 , [][] \OML/zplm/m/it/10 X[]\OT1/pplx/m/n/10 ; \OML/zplm/m/it/10 R\OT1/
+zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OT1/pplx/m/n/10 0
+
+LaTeX Warning: Marginpar on page 97 moved.
+
+
+LaTeX Warning: Marginpar on page 97 moved.
+
+(compiling to `Notes-60.xyc' <xymatrix 4x4 510> done) (Notes-60.xyc)
+
+LaTeX Warning: Reference `eg:dim_minus_one_skeleton_rel_cochains' on page 97 un
+defined on input line 5425.
+
+
+LaTeX Warning: Marginpar on page 97 moved.
+
+[97]
+
+LaTeX Warning: Marginpar on page 98 moved.
+
+
+LaTeX Warning: Marginpar on page 98 moved.
+
+
+Overfull \hbox (13.89925pt too wide) in paragraph at lines 5485--5490
+[]\T1/pplj/m/n/10 You can think of $\OML/zplm/m/it/10 Pt[]$ \T1/pplj/m/n/10 in 
+the last ex-am-ple as a kind of infinite-dimensional 
+[98]
+
+LaTeX Warning: Marginpar on page 99 moved.
+
+(compiling to `Notes-61.xyc' <xymatrix 5x2 513> done) (Notes-61.xyc) [99]
+
+LaTeX Warning: Marginpar on page 100 moved.
+
+
+LaTeX Warning: Marginpar on page 100 moved.
+
+[100]
+Overfull \hbox (6.06206pt too wide) detected at line 5594
+[]
+
+LaTeX Warning: Marginpar on page 101 moved.
+
+[101]
+
+LaTeX Warning: Marginpar on page 102 moved.
+
+
+LaTeX Warning: Marginpar on page 102 moved.
+
+[102]
+Overfull \hbox (30.94138pt too wide) detected at line 5686
+\OT1/pplx/m/n/10 0 \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\O
+ML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 A\OT1/pplx/m/n/10 ; \OML/
+zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/z
+plm/m/n/10 (\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/
+m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/
+it/10 A\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/1
+0 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 
+, \OML/zplm/m/it/10 A\OT1/pplx/m/n/10 ; \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \
+OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT
+1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! []
+
+LaTeX Warning: Reference `thm:alg_Mayer-Vietoris' on page 103 undefined on inpu
+t line 5695.
+
+
+Overfull \hbox (48.11334pt too wide) detected at line 5702
+\OT1/pplx/m/n/10 0 \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\O
+ML/zplm/m/it/10 X\OT1/pplx/m/n/10 , []; \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \
+OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT
+1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/z
+plm/m/it/10 H[]\OT1/zplm/m/n/10 ([]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/z
+plm/m/n/10 ) = \OML/zplm/m/it/10 R \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1
+/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , []; \OML/zplm/m/it/10 R\OT1
+/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/z
+plm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm
+/m/n/10 ! \OT1/pplx/m/n/10 0
+[103]
+
+LaTeX Warning: Marginpar on page 104 moved.
+
+[104]
+
+LaTeX Warning: Reference `thm:homotopy_invariance_cohom' on page 105 undefined 
+on input line 5808.
+
+[105]
+
+LaTeX Warning: Marginpar on page 106 moved.
+
+
+Overfull \hbox (8.18268pt too wide) in paragraph at lines 5844--5845
+[]\T1/pplj/m/n/10 As a re-sult, from a choice $\OML/zplm/m/it/10 x \OMS/zplm/m/
+n/10 2 \OML/zplm/m/it/10 X$ \T1/pplj/m/n/10 we get an iso-mor-phism $[]\OT1/zpl
+m/m/n/10 ([]) \OMS/zplm/m/n/10 ' 
+
+LaTeX Warning: Marginpar on page 106 moved.
+
+[106] (compiling to `Notes-62.xyc' <xymatrix 2x2 162> done) (Notes-62.xyc)
+
+LaTeX Warning: Reference `eq:restr_to_intersection' on page 107 undefined on in
+put line 5867.
+
+
+Overfull \hbox (86.92288pt too wide) detected at line 5874
+\OML/zplm/m/it/10 C[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \O
+ML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) := \OMS/zplm/m/n/10 f\OML/zplm/m/it/10 f []
+ [] []\OT1/zplm/m/n/10 (^^A[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 X\OT1/zplm/m/
+n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 R \OMS/zplm/m/n/10 j \OML/zplm/m/it
+/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 ^^[\OT1/zplm/m/n/10 ) = \OT1/pplx/m/n/
+10 0[]\OMS/zplm/m/n/10 g
+[107]
+Overfull \hbox (128.81401pt too wide) detected at line 5893
+\OT1/pplx/m/n/10 0 \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\O
+ML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/
+zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 U\OT1/pp
+lx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ^^H \OML/zpl
+m/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V\OT1/pplx/m/n/10 , \OML/zplm/
+m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m
+/n/10 (\OML/zplm/m/it/10 U \OMS/zplm/m/n/10 \ \OML/zplm/m/it/10 V\OT1/pplx/m/n/
+10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10
+ H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R
+\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\O
+ML/zplm/m/it/10 U\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/
+zplm/m/n/10 ^^H \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V\OT1/
+pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! []
+
+Overfull \hbox (19.80803pt too wide) detected at line 5897
+\OT1/pplx/m/n/10 0 \OMS/zplm/m/n/10 ! []\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\O
+T1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! []\OT
+1/zplm/m/n/10 (\OML/zplm/m/it/10 U\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zp
+lm/m/n/10 ) \OMS/zplm/m/n/10 ^^H []\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 V\OT1/pp
+lx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! []\OT1/zpl
+m/m/n/10 (\OML/zplm/m/it/10 U \OMS/zplm/m/n/10 \ \OML/zplm/m/it/10 V\OT1/pplx/m
+/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it
+/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 X\OT1/pplx/m/n/10 , \OML/zplm/m/it/1
+0 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! []
+
+Overfull \hbox (215.89198pt too wide) detected at line 5906
+ \OT1/pplx/m/n/10 0 \OMS/zplm/m/n/10 ! []\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[
+]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! []
+\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 D[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\O
+T1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ^^H []\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 D[]
+\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! []\
+OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[] \OMS/zplm/m/n/10 ^^B \OML/zplm/m/it/10 J
+\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OM
+L/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[]\OT1/pplx/m/n/10 , \OM
+L/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1
+/zplm/m/n/10 (\OML/zplm/m/it/10 D[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/z
+plm/m/n/10 ) \OMS/zplm/m/n/10 ^^H \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/z
+plm/m/it/10 D[]\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zp
+lm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 S[] \OMS/z
+plm/m/n/10 ^^B \OML/zplm/m/it/10 J\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zp
+lm/m/n/10 ) \OMS/zplm/m/n/10 ! []
+
+LaTeX Warning: Reference `eg:reduced_cohom_S0' on page 108 undefined on input l
+ine 5921.
+
+
+LaTeX Warning: Reference `eq:sphere_cohomol_reduction' on page 108 undefined on
+ input line 5924.
+
+
+LaTeX Warning: Marginpar on page 108 moved.
+
+
+LaTeX Warning: Marginpar on page 108 moved.
+
+
+LaTeX Warning: Marginpar on page 108 moved.
+
+[108]
+Overfull \hbox (16.21977pt too wide) in paragraph at lines 5949--5950
+\T1/pplj/m/n/10 topol-ogy. We know that a lin-ear iso-mor-phism be-tween finite
+-dimensional 
+
+LaTeX Warning: Marginpar on page 109 moved.
+
+
+LaTeX Warning: Marginpar on page 109 moved.
+
+[109]
+
+LaTeX Warning: Marginpar on page 110 moved.
+
+
+LaTeX Warning: Reference `thm:collapse' on page 110 undefined on input line 598
+8.
+
+
+LaTeX Warning: Reference `thm:collapse' on page 110 undefined on input line 599
+5.
+
+
+LaTeX Warning: Reference `prop:les_of_pair_of_spaces' on page 110 undefined on 
+input line 5995.
+
+[110]
+Overfull \hbox (116.37349pt too wide) detected at line 6017
+[] \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 j
+ [][] \OML/zplm/m/it/10 X[]\OMS/zplm/m/n/10 j\OT1/pplx/m/n/10 , \OML/zplm/m/it/
+10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10
+ (\OMS/zplm/m/n/10 j\OML/zplm/m/it/10 X[]\OMS/zplm/m/n/10 j\OT1/pplx/m/n/10 , \
+OMS/zplm/m/n/10 j [][] \OML/zplm/m/it/10 X[]\OMS/zplm/m/n/10 j\OT1/pplx/m/n/10 
+; \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/zplm/m/it/10 H[
+]\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 j\OML/zplm/m/it/10 X[]\OMS/zplm/m/n/10 j\OT
+1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! \OML/z
+plm/m/it/10 H[]\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 j [][] \OML/zplm/m/it/10 X[]\
+OMS/zplm/m/n/10 j\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/
+zplm/m/n/10 ! []
+
+LaTeX Warning: Reference `thm:collapse' on page 111 undefined on input line 601
+8.
+
+
+Overfull \hbox (8.66823pt too wide) in paragraph at lines 6021--6023
+\OML/zplm/m/it/10 H[]\OT1/zplm/m/n/10 (\OMS/zplm/m/n/10 j\OML/zplm/m/it/10 X[]\
+OMS/zplm/m/n/10 j\OT1/pplx/m/n/10 , \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 )$ \T1/
+pplj/m/n/10 is built up from the co-ho-mol-ogy of the smaller-dimensional 
+[111]
+
+LaTeX Warning: Marginpar on page 112 moved.
+
+(compiling to `Notes-63.xyc' <xymatrix 2x2 138> done) (Notes-63.xyc)
+(compiling to `Notes-64.xyc' <xymatrix 5x2 373> done) (Notes-64.xyc)
+Overfull \hbox (52.84222pt too wide) detected at line 6071
+[]
+(compiling to `Notes-65.xyc' <xymatrix 7x2 583> done) (Notes-65.xyc)
+Overfull \hbox (213.86014pt too wide) detected at line 6077
+ []
+
+Overfull \hbox (34.18968pt too wide) in paragraph at lines 6080--6083
+[]\T1/pplj/b/n/10 Fact. []\T1/pplj/m/n/10 For $\OML/zplm/m/it/10 X[]$ \T1/pplj/
+m/n/10 an $\OML/zplm/m/it/10 n$\T1/pplj/m/n/10 -dimensional $\OT1/zplm/m/n/10 ^
+^A$\T1/pplj/m/n/10 -set, the in-duced map $\OML/zplm/m/it/10 H[]\OT1/zplm/m/n/1
+0 (\OML/zplm/m/it/10 X[]\OT1/pplx/m/n/10 , [][] \OML/zplm/m/it/10 X[]\OT1/pplx/
+m/n/10 ; \OML/zplm/m/it/10 R\OT1/zplm/m/n/10 ) \OMS/zplm/m/n/10 ! 
+[112]
+
+LaTeX Warning: Reference `eq:comparison_iso_simplicial_singular' on page 113 un
+defined on input line 6127.
+
+[113]
+
+LaTeX Warning: Marginpar on page 114 moved.
+
+
+LaTeX Warning: Marginpar on page 114 moved.
+
+(compiling to `Notes-66.xyc' <xymatrix 2x2 153> done) (Notes-66.xyc) [114]
+
+LaTeX Warning: Marginpar on page 115 moved.
+
+[115]
+
+LaTeX Warning: Marginpar on page 116 moved.
+
+
+LaTeX Warning: Marginpar on page 116 moved.
+
+
+LaTeX Warning: Marginpar on page 116 moved.
+
+
+LaTeX Warning: Marginpar on page 116 moved.
+
+[116]
+
+LaTeX Warning: Marginpar on page 117 moved.
+
+
+LaTeX Warning: Marginpar on page 117 moved.
+
+
+LaTeX Warning: Marginpar on page 117 moved.
+
+[117]
+
+LaTeX Warning: Marginpar on page 118 moved.
+
+[118]
+
+LaTeX Warning: Marginpar on page 119 moved.
+
+
+LaTeX Warning: Reference `thm:hairy_sphere' on page 119 undefined on input line
+ 6350.
+
+
+Package bibentry Warning: You have used \nobibliography* 
+(bibentry)                without a following \bibliography.
+(bibentry)                You may not be able to run BibTeX.
+
+[119] (Notes.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.43996pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `Notes.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)<C:/Users/Floris/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Floris/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
+rs/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
+b><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public/f
+pl/fplbj8a.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/mathpazo/fplmbb.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/mathpazo/fplmr.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/font
+s/type1/public/mathpazo/fplmri.pfb><C:/Users/Floris/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/fpl/fplrc8a.pfb><C:/Users/Floris/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/fpl/fplrij8a.pfb><C:/Users/Floris/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/Floris/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Floris/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/F
+loris/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Use
+rs/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:
+/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pf
+b><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic/xycma
+t10.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic
+/xycmbt10.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/xypic/xydash10.pfb>
+Output written on Notes.pdf (119 pages, 748636 bytes).
+Transcript written on Notes.log.

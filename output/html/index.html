@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id-ID" xml:lang="id-ID">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="David Michael Roberts (materi sumber)" />
+  <meta name="author" content="Edisi Bahasa Indonesia dengan pendamping penguasaan" />
+  <title>Topologi Aljabar — Unit 1</title>
+  <style>
+
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+  <style type="text/css">:root {
+color-scheme: light dark;
+font-family: Charter, "Bitstream Charter", "Noto Serif", Georgia, serif;
+line-height: 1.62;
+}
+html {
+background: #f4f1ea;
+}
+body {
+box-sizing: border-box;
+max-width: 58rem;
+margin: 0 auto;
+padding: 3rem 4rem 5rem;
+color: #202124;
+background: #fff;
+box-shadow: 0 0 2rem rgb(0 0 0 / 8%);
+}
+h1,
+h2,
+h3 {
+line-height: 1.2;
+color: #162b49;
+}
+a {
+color: #1259a7;
+}
+.definition,
+.proposition,
+.lemma,
+.example,
+.exercise,
+.proof,
+.note {
+margin: 1.25rem 0;
+padding: 0.8rem 1rem;
+border-left: 0.3rem solid #5875a8;
+background: #f6f8fc;
+}
+.exercise {
+border-left-color: #7a4ea3;
+background: #faf7fd;
+}
+.proof {
+border-left-color: #4c7f5d;
+background: #f5faf6;
+}
+.note {
+border-left-color: #8a6a2f;
+background: #fffaf0;
+}
+math[display="block"] {
+overflow-x: auto;
+overflow-y: hidden;
+padding: 0.25rem 0;
+}
+@media (max-width: 700px) {
+body {
+width: 100%;
+margin: 0;
+padding: 1.25rem 1.1rem 3rem;
+box-shadow: none;
+}
+}
+@media (prefers-color-scheme: dark) {
+html,
+body {
+color: #e7e9ee;
+background: #15171a;
+}
+h1,
+h2,
+h3,
+a {
+color: #a9c7ff;
+}
+.definition,
+.proposition,
+.lemma,
+.example,
+.exercise,
+.proof,
+.note {
+background: #20242a;
+}
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Topologi Aljabar</h1>
+<p class="subtitle">Unit 1 — Pengantar dan Ruang Topologis</p>
+<p class="author">David Michael Roberts (materi sumber)</p>
+<p class="author">Edisi Bahasa Indonesia dengan pendamping
+penguasaan</p>
+<p class="date">21 Agustus 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#o012-rbt-u001-notice" id="toc-o012-rbt-u001-notice">Tentang unit ini</a></li>
+<li><a href="#o012-rbt-l01" id="toc-o012-rbt-l01"><span class="toc-section-number">1</span> Kuliah 1</a>
+<ul>
+<li><a href="#o012-rbt-l01-s01" id="toc-o012-rbt-l01-s01"><span class="toc-section-number">1.1</span> Apa yang dipelajari oleh topologi
+aljabar?</a></li>
+<li><a href="#o012-rbt-l01-s02" id="toc-o012-rbt-l01-s02"><span class="toc-section-number">1.2</span> Ruang topologis</a></li>
+</ul></li>
+<li><a href="#o012-rbt-u001-mastery" id="toc-o012-rbt-u001-mastery">Pendamping penguasaan terpecahkan</a>
+<ul>
+<li><a href="#o012-rbt-l01-sol-001" id="toc-o012-rbt-l01-sol-001"><span class="toc-section-number">1.3</span> Solusi Latihan 1.1</a></li>
+<li><a href="#o012-rbt-l01-sol-002" id="toc-o012-rbt-l01-sol-002"><span class="toc-section-number">1.4</span> Solusi Latihan 1.2</a></li>
+<li><a href="#o012-rbt-l01-check-001" id="toc-o012-rbt-l01-check-001"><span class="toc-section-number">1.5</span> Pemeriksaan Lema 1.1</a></li>
+<li><a href="#o012-rbt-l01-worked-001" id="toc-o012-rbt-l01-worked-001"><span class="toc-section-number">1.6</span> Contoh terpecahkan: penciutan
+radial</a></li>
+</ul></li>
+</ul>
+</nav>
+<section id="o012-rbt-u001-notice" class="level1 unnumbered">
+<h1 class="unnumbered">Tentang unit ini</h1>
+<p>Unit ini merupakan terjemahan dan adaptasi Bahasa Indonesia atas
+<em>Algebraic Topology</em> karya David Michael Roberts (2019), tepatnya
+<code>Notes.tex</code> baris 134–348 pada commit
+<code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>. Karya sumber
+tersedia di bawah <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons
+Attribution 4.0 International</a>. Perubahan pada unit ini meliputi
+penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal
+stabil, pemindahan satu latihan dari catatan pinggir ke blok latihan,
+penjelasan kasus keluarga kosong pada topologi awal, dan koreksi
+identitas invers sumber dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>∘</mo><mi>f</mi><mo>=</mo><msub><mrow><mi mathvariant="normal">id</mi><mo>⁡</mo></mrow><mi>X</mi></msub></mrow><annotation encoding="application/x-tex">g\circ f=\operatorname{id}_X</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>∘</mo><mi>f</mi><mo>=</mo><msub><mrow><mi mathvariant="normal">id</mi><mo>⁡</mo></mrow><mi>Y</mi></msub></mrow><annotation encoding="application/x-tex">g\circ f=\operatorname{id}_Y</annotation></semantics></math>
+menjadi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>∘</mo><mi>f</mi><mo>=</mo><msub><mrow><mi mathvariant="normal">id</mi><mo>⁡</mo></mrow><mi>X</mi></msub></mrow><annotation encoding="application/x-tex">g\circ f=\operatorname{id}_X</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>g</mi><mo>=</mo><msub><mrow><mi mathvariant="normal">id</mi><mo>⁡</mo></mrow><mi>Y</mi></msub></mrow><annotation encoding="application/x-tex">f\circ g=\operatorname{id}_Y</annotation></semantics></math>.
+Materi pendamping penguasaan setelah teks inti ditulis khusus untuk
+edisi ini dan juga tersedia di bawah CC BY 4.0. Edisi ini bersifat
+independen dan tidak menyiratkan dukungan atau pengesahan dari penulis
+sumber.</p>
+</section>
+<section id="o012-rbt-l01" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Kuliah
+1</h1>
+<section id="o012-rbt-l01-s01" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Apa
+yang dipelajari oleh topologi aljabar?</h2>
+<p>Topologi aljabar mempelajari pemetaan</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mtext mathvariant="normal">Ruang</mtext><mo stretchy="false" form="postfix">}</mo><mo>→</mo><mo stretchy="false" form="prefix">{</mo><mtext mathvariant="normal">Objek aljabar</mtext><mo stretchy="false" form="postfix">}</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">
+\{\text{Ruang}\}\longrightarrow\{\text{Objek aljabar}\},
+</annotation></semantics></math></p>
+<p>atau, lebih tepatnya, pemetaan semacam itu yang “berperilaku baik”.
+Pemetaan tersebut juga harus mengirim fungsi kontinu antarruang ke
+pemetaan aljabar dengan tetap menghormati komposisi (jadi, pemetaan itu
+berupa <em>funktor</em>). Selain itu, ruang yang dibangun dari
+ruang-ruang yang lebih sederhana semestinya dikirim ke objek aljabar
+yang dibangun secara serasi dari komponen-komponen yang lebih
+sederhana.</p>
+<p>Di sini, “ruang” secara kasar berarti ruang topologis hingga
+deformasi—biasanya hingga homotopi, meskipun tidak selalu demikian.
+Kelas-kelas ekuivalensi semacam ini disebut <em>tipe homotopi</em>.
+“Objek aljabar” dapat berarti grup (abelian), gelanggang, modul, atau
+bahkan kompleks rantai dari objek-objek tersebut.</p>
+<div id="o012-rbt-l01-note-chain-complex" class="note">
+<p><strong>Catatan.</strong> Kompleks rantai adalah suatu jenis barisan
+pemetaan tertentu,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>⋯</mi><mo>→</mo><msub><mi>V</mi><mn>0</mn></msub><mo>→</mo><msub><mi>V</mi><mn>1</mn></msub><mo>→</mo><msub><mi>V</mi><mn>2</mn></msub><mo>→</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">\cdots\to V_0\to V_1\to V_2\to\cdots</annotation></semantics></math>.</p>
+</div>
+<div id="o012-rbt-l01-exa-001" class="example">
+<p><strong>Contoh 1.1.</strong> Bagaimana kita dapat menentukan apakah
+permukaan bola
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mn>2</mn></msup><annotation encoding="application/x-tex">S^2</annotation></semantics></math>
+dan torus
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>S</mi><mn>1</mn></msup><mo>×</mo><msup><mi>S</mi><mn>1</mn></msup></mrow><annotation encoding="application/x-tex">S^1\times S^1</annotation></semantics></math>
+dapat dideformasikan satu sama lain? Bagaimana kita membuktikan bahwa
+deformasi semacam itu tidak mungkin?</p>
+</div>
+<div id="o012-rbt-l01-exa-002" class="example">
+<p><strong>Contoh 1.2.</strong> Sebagai contoh positif, kita
+<em>dapat</em> menciutkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">ℝ</mi><mn>3</mn></msup><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo><mo>→</mo><msup><mi>S</mi><mn>2</mn></msup><mo>↪</mo><msup><mi mathvariant="double-struck">ℝ</mi><mn>3</mn></msup><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathbb{R}^3\setminus\{0\}\to S^2\hookrightarrow\mathbb{R}^3\setminus\{0\}</annotation></semantics></math>
+dengan mengirim
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>↦</mo><mfrac><mi>x</mi><mrow><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo stretchy="false" form="prefix">|</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">x\mapsto\frac{x}{|x|}</annotation></semantics></math>.
+Pemetaan komposit ini dapat dideformasikan secara kontinu menjadi
+pemetaan identitas. Jadi, dimensi tidak selalu dipertahankan.</p>
+</div>
+<div id="o012-rbt-l01-exa-003" class="example">
+<p><strong>Contoh 1.3.</strong> Mungkinkah
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>S</mi><mn>1</mn></msup><mo>∼</mo><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">S^1\sim S^2</annotation></semantics></math>?</p>
+</div>
+<p>Pertama-tama kita perlu memahami bagaimana ruang dibangun.</p>
+</section>
+<section id="o012-rbt-l01-s02" class="level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span>
+Ruang topologis</h2>
+<p>Ingat kembali definisi berikut.</p>
+<div id="o012-rbt-l01-note-prerequisite" class="note">
+<p><strong>Prasyarat sumber.</strong> Topologi dan Analisis III.</p>
+</div>
+<div id="o012-rbt-l01-def-001" class="definition">
+<p><strong>Definisi 1.1 (topologi).</strong> Suatu <em>topologi</em>
+pada himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+adalah koleksi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>
+yang terdiri atas subset-subset
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+dan memenuhi:</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∅</mi><mo>,</mo><mi>X</mi><mo>∈</mo><mi mathvariant="script">𝒯</mi></mrow><annotation encoding="application/x-tex">\emptyset,X\in\mathcal{T}</annotation></semantics></math>;</li>
+<li>jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>,</mo><mi>V</mi><mo>∈</mo><mi mathvariant="script">𝒯</mi></mrow><annotation encoding="application/x-tex">U,V\in\mathcal{T}</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>∩</mo><mi>V</mi><mo>∈</mo><mi mathvariant="script">𝒯</mi></mrow><annotation encoding="application/x-tex">U\cap V\in\mathcal{T}</annotation></semantics></math>;</li>
+<li>jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><msub><mi>U</mi><mi>α</mi></msub><msub><mo stretchy="false" form="postfix">}</mo><mrow><mi>α</mi><mo>∈</mo><mi>I</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\{U_\alpha\}_{\alpha\in I}</annotation></semantics></math>
+adalah sembarang keluarga himpunan dalam
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>U</mi><mi>α</mi></msub><mo>∈</mo><mi mathvariant="script">𝒯</mi></mrow><annotation encoding="application/x-tex">\bigcup_{\alpha\in I}U_\alpha\in\mathcal{T}</annotation></semantics></math>.</li>
+</ol>
+<p>Di sini
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+adalah himpunan indeks. Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>∈</mo><mi mathvariant="script">𝒯</mi></mrow><annotation encoding="application/x-tex">U\in\mathcal{T}</annotation></semantics></math>,
+kita mengatakan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+<em>terbuka</em>. Suatu <em>ruang topologis</em> adalah himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+yang dilengkapi dengan topologi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>.</p>
+</div>
+<div id="o012-rbt-l01-exa-004" class="example">
+<p><strong>Contoh 1.4.</strong> Pada himpunan bilangan real,
+<em>topologi Euklides</em> (atau topologi “biasa”) didefinisikan dengan
+menyatakan bahwa suatu himpunan terbuka jika dan hanya jika himpunan itu
+merupakan gabungan selang-selang terbuka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(a,b)</annotation></semantics></math>.
+Gabungan kosong juga diperbolehkan dan menghasilkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∅</mi><annotation encoding="application/x-tex">\emptyset</annotation></semantics></math>.</p>
+<p><em>Topologi diskret</em> pada himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+diperoleh dengan mengambil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>
+sebagai koleksi semua subset
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>.
+<em>Topologi indiskret</em> diperoleh dengan mengambil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒯</mi><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>∅</mi><mo>,</mo><mi>X</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathcal{T}=\{\emptyset,X\}</annotation></semantics></math>.</p>
+</div>
+<p>Definisi tersebut ringkas, tetapi bukan selalu cara terbaik untuk
+mendefinisikan topologi. Kita juga akan menggunakan
+<em>lingkungan</em>.</p>
+<div id="o012-rbt-l01-def-002" class="definition">
+<p><strong>Definisi 1.2 (lingkungan).</strong> Dalam topologi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒯</mi><annotation encoding="application/x-tex">\mathcal{T}</annotation></semantics></math>
+pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>,
+suatu himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⊆</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">N\subseteq X</annotation></semantics></math>
+disebut <em>lingkungan</em> dari titik
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">x\in X</annotation></semantics></math>
+jika terdapat himpunan terbuka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>⊆</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">U\subseteq N</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">x\in U</annotation></semantics></math>.</p>
+</div>
+<div id="o012-rbt-l01-exa-005" class="example">
+<p><strong>Contoh 1.5.</strong> Ambil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="double-struck">ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>
+dengan topologi Euklides. Himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(-1,1)</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[-1,1]</annotation></semantics></math>,
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>−</mi><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">[-1,1)</annotation></semantics></math>
+semuanya merupakan lingkungan dari setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1&lt;x&lt;1</annotation></semantics></math>,
+tetapi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">[0,1)</annotation></semantics></math>
+bukan lingkungan dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>.
+Sebagai contoh yang sedikit lebih rumit,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo><mo>∪</mo><mo stretchy="false" form="prefix">{</mo><mn>2</mn><mo stretchy="false" form="postfix">}</mo><mo>∪</mo><mo stretchy="false" form="prefix">[</mo><mn>5</mn><mo>,</mo><mn>6</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[0,1]\cup\{2\}\cup[5,6]</annotation></semantics></math>
+merupakan lingkungan dari setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">0&lt;x&lt;1</annotation></semantics></math>
+dan setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">5&lt;x&lt;6</annotation></semantics></math>.</p>
+</div>
+<div id="o012-rbt-l01-exa-006" class="example">
+<p><strong>Contoh 1.6.</strong> Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(X,d)</annotation></semantics></math>
+adalah ruang metrik. <em>Topologi metrik</em> didefinisikan dengan
+menyatakan bahwa subset
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>⊆</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">U\subseteq X</annotation></semantics></math>
+terbuka jika dan hanya jika, untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">x\in U</annotation></semantics></math>,
+terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ε</mi><mi>x</mi></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\varepsilon_x&gt;0</annotation></semantics></math>
+sehingga bola terbuka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><msub><mi>ε</mi><mi>x</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>⊆</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">B(x,\varepsilon_x)\subseteq U</annotation></semantics></math>.
+Bola terbuka yang berpusat di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+merupakan lingkungan dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>;
+demikian pula bola tertutup berjari-jari positif.</p>
+</div>
+<p>Pendekatan berikut lebih konkret dan memungkinkan kita mendefinisikan
+topologi secara ringkas.</p>
+<div id="o012-rbt-l01-def-003" class="definition">
+<p><strong>Definisi 1.3 (basis lingkungan).</strong> Suatu <em>basis
+lingkungan</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>
+pada himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+adalah keluarga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">{</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msub><mo stretchy="false" form="postfix">}</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\{\mathcal{N}(x)\}_{x\in X}</annotation></semantics></math>,
+dengan setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{N}(x)</annotation></semantics></math>
+merupakan koleksi tak kosong yang terdiri atas subset-subset
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>,
+sehingga untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">x\in X</annotation></semantics></math>
+berlaku:</p>
+<ol type="1">
+<li>untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N\in\mathcal{N}(x)</annotation></semantics></math>,
+berlaku
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">x\in N</annotation></semantics></math>;</li>
+<li>untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mn>1</mn></msub><mo>,</mo><msub><mi>N</mi><mn>2</mn></msub><mo>∈</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N_1,N_2\in\mathcal{N}(x)</annotation></semantics></math>,
+terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N\in\mathcal{N}(x)</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⊆</mo><msub><mi>N</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>N</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">N\subseteq N_1\cap N_2</annotation></semantics></math>;</li>
+<li>untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N\in\mathcal{N}(x)</annotation></semantics></math>,
+terdapat subset
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>⊆</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">U\subseteq N</annotation></semantics></math>
+sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">x\in U</annotation></semantics></math>
+dan, untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">y\in U</annotation></semantics></math>,
+terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>∈</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V\in\mathcal{N}(y)</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>⊆</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">V\subseteq U</annotation></semantics></math>.</li>
+</ol>
+<p>Himpunan-himpunan dalam
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{N}(x)</annotation></semantics></math>
+disebut <em>lingkungan dasar</em> dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.</p>
+</div>
+<p>Sebagai contoh, jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>,</mo><mi mathvariant="script">𝒯</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(X,\mathcal{T})</annotation></semantics></math>
+adalah ruang topologis, kita memperoleh basis lingkungan dengan
+mendefinisikan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{N}(x)</annotation></semantics></math>
+sebagai koleksi semua lingkungan dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.
+Kita juga memperoleh basis lingkungan dengan mendefinisikan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="script">𝒩</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{N}&#39;(x)</annotation></semantics></math>
+sebagai koleksi semua himpunan terbuka yang memuat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.</p>
+<p>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>
+adalah basis lingkungan pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>,
+definisikan subset
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>⊆</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">U\subseteq X</annotation></semantics></math>
+sebagai
+<em><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>-terbuka</em>
+jika dan hanya jika, untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">x\in U</annotation></semantics></math>,
+terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N\in\mathcal{N}(x)</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⊆</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">N\subseteq U</annotation></semantics></math>.</p>
+<div id="o012-rbt-l01-prop-001" class="proposition">
+<p><strong>Proposisi 1.1.</strong> Himpunan-himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>-terbuka
+membentuk suatu topologi pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>.</p>
+</div>
+<div id="o012-rbt-l01-proof-001" class="proof">
+<p><strong>Bukti.</strong> Kita memeriksa ketiga aksioma topologi.</p>
+<ol type="1">
+<li>Syarat bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∅</mi><annotation encoding="application/x-tex">\emptyset</annotation></semantics></math>
+bersifat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>-terbuka
+benar secara vakum. Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{N}(x)</annotation></semantics></math>
+tidak kosong, di setiap titik terdapat lingkungan dasar; akibatnya
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+bersifat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>-terbuka.</li>
+<li>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+keduanya
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>-terbuka.
+Ambil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">x\in U\cap V</annotation></semantics></math>.
+Terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>U</mi></msub><mo>,</mo><msub><mi>N</mi><mi>V</mi></msub><mo>∈</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N_U,N_V\in\mathcal{N}(x)</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>U</mi></msub><mo>⊆</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">N_U\subseteq U</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>V</mi></msub><mo>⊆</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">N_V\subseteq V</annotation></semantics></math>.
+Selain itu,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><msub><mi>N</mi><mi>U</mi></msub><mo>∩</mo><msub><mi>N</mi><mi>V</mi></msub></mrow><annotation encoding="application/x-tex">x\in N_U\cap N_V</annotation></semantics></math>.
+Jadi terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N\in\mathcal{N}(x)</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⊆</mo><msub><mi>N</mi><mi>U</mi></msub><mo>∩</mo><msub><mi>N</mi><mi>V</mi></msub><mo>⊆</mo><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">N\subseteq N_U\cap N_V\subseteq U\cap V</annotation></semantics></math>.
+Hal ini berlaku untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">x\in U\cap V</annotation></semantics></math>,
+sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>∩</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">U\cap V</annotation></semantics></math>
+bersifat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>-terbuka.</li>
+<li>Misalkan setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mi>α</mi></msub><annotation encoding="application/x-tex">U_\alpha</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>∈</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">\alpha\in I</annotation></semantics></math>,
+bersifat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>-terbuka,
+dan tetapkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><msub><mo>⋃</mo><mrow><mi>α</mi><mo>∈</mo><mi>I</mi></mrow></msub><msub><mi>U</mi><mi>α</mi></msub></mrow><annotation encoding="application/x-tex">U=\bigcup_{\alpha\in I}U_\alpha</annotation></semantics></math>.
+Ambil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">x\in U</annotation></semantics></math>.
+Ada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>α</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\alpha_0</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><msub><mi>U</mi><msub><mi>α</mi><mn>0</mn></msub></msub></mrow><annotation encoding="application/x-tex">x\in U_{\alpha_0}</annotation></semantics></math>.
+Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><msub><mi>α</mi><mn>0</mn></msub></msub><annotation encoding="application/x-tex">U_{\alpha_0}</annotation></semantics></math>
+bersifat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>-terbuka,
+terdapat lingkungan dasar
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⊆</mo><msub><mi>U</mi><msub><mi>α</mi><mn>0</mn></msub></msub><mo>⊆</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">N\subseteq U_{\alpha_0}\subseteq U</annotation></semantics></math>.
+Maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+bersifat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>-terbuka.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>▫</mi><annotation encoding="application/x-tex">\square</annotation></semantics></math></li>
+</ol>
+</div>
+<p>Topologi pada proposisi ini disebut topologi yang <em>dibangkitkan
+oleh</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>.
+Lingkungan dalam topologi ini adalah himpunan yang memuat suatu
+lingkungan dasar:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+merupakan lingkungan dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+jika terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N\in\mathcal{N}(x)</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⊆</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">N\subseteq V</annotation></semantics></math>.</p>
+<p>Dengan basis lingkungan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒩</mi><annotation encoding="application/x-tex">\mathcal{N}</annotation></semantics></math>
+pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>,
+kita dapat mengenali <em>penutupan</em> suatu himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>⊂</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">S\subset X</annotation></semantics></math>
+sebagai koleksi titik
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">x\in X</annotation></semantics></math>
+yang memenuhi: untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><mi mathvariant="script">𝒩</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N\in\mathcal{N}(x)</annotation></semantics></math>,
+terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>∈</mo><mi>N</mi><mo>∩</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">s\in N\cap S</annotation></semantics></math>.</p>
+<div id="o012-rbt-l01-exa-007" class="example">
+<p><strong>Contoh 1.7.</strong> Pada ruang metrik
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>,</mo><mi>d</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(X,d)</annotation></semantics></math>,
+bola-bola terbuka membentuk basis lingkungan pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>,
+dan topologi yang dibangkitkannya adalah topologi metrik.</p>
+</div>
+<p>Dengan demikian, banyak definisi yang dikenal dari ruang metrik tetap
+berlaku untuk ruang topologis asalkan dapat dirumuskan menggunakan
+lingkungan dasar. Salah satu yang terpenting adalah kontinuitas.</p>
+<div id="o012-rbt-l01-def-004" class="definition">
+<p><strong>Definisi 1.4 (kontinuitas).</strong> Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒩</mi><mi>X</mi></msub><annotation encoding="application/x-tex">\mathcal{N}_X</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒩</mi><mi>Y</mi></msub><annotation encoding="application/x-tex">\mathcal{N}_Y</annotation></semantics></math>
+masing-masing merupakan basis lingkungan pada himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>.
+Fungsi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f\colon X\to Y</annotation></semantics></math>
+disebut <em>kontinu</em> jika, untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">x\in X</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><msub><mi mathvariant="script">𝒩</mi><mi>Y</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N\in\mathcal{N}_Y(f(x))</annotation></semantics></math>,
+himpunan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f^{-1}(N)</annotation></semantics></math>
+memuat suatu lingkungan dasar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.</p>
+</div>
+<p>Definisi ini merupakan perumuman besar dari definisi kontinuitas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ε</mi><annotation encoding="application/x-tex">\varepsilon</annotation></semantics></math>–<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>.</p>
+<div id="o012-rbt-l01-ex-001" class="exercise">
+<p><strong>Latihan 1.1.</strong> Buktikan bahwa jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>,</mo><msub><mi mathvariant="script">𝒩</mi><mi>X</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mo stretchy="false" form="prefix">(</mo><mi>Y</mi><mo>,</mo><msub><mi mathvariant="script">𝒩</mi><mi>Y</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f\colon(X,\mathcal{N}_X)\to(Y,\mathcal{N}_Y)</annotation></semantics></math>
+kontinu menurut definisi di atas, maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>
+kontinu untuk topologi yang dibangkitkan oleh basis lingkungan pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>.</p>
+<p>Ingat bahwa kontinuitas untuk topologi berarti
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f^{-1}(U)</annotation></semantics></math>
+terbuka untuk setiap himpunan terbuka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>.</p>
+</div>
+<p>Sebagai pemeriksaan kewajaran, fungsi identitas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mi mathvariant="normal">id</mi><mo>⁡</mo></mrow><mi>X</mi></msub><annotation encoding="application/x-tex">\operatorname{id}_X</annotation></semantics></math>
+pada ruang
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+memang kontinu. Setiap fungsi <em>menuju</em> ruang indiskret juga
+kontinu, demikian pula setiap fungsi <em>dari</em> ruang diskret.</p>
+<div id="o012-rbt-l01-def-005" class="definition">
+<p><strong>Definisi 1.5 (homeomorfisme).</strong> Fungsi kontinu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f\colon X\to Y</annotation></semantics></math>
+disebut <em>homeomorfisme</em> jika terdapat fungsi kontinu
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>:</mo><mi>Y</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">g\colon Y\to X</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>∘</mo><mi>f</mi><mo>=</mo><msub><mrow><mi mathvariant="normal">id</mi><mo>⁡</mo></mrow><mi>X</mi></msub></mrow><annotation encoding="application/x-tex">g\circ f=\operatorname{id}_X</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>g</mi><mo>=</mo><msub><mrow><mi mathvariant="normal">id</mi><mo>⁡</mo></mrow><mi>Y</mi></msub></mrow><annotation encoding="application/x-tex">f\circ g=\operatorname{id}_Y</annotation></semantics></math>.
+Dalam keadaan ini,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
+disebut <em>homeomorfik</em>.</p>
+</div>
+<p>Sekarang kita perlu menjelaskan cara membangun ruang baru serta
+pemetaan kontinu yang menghubungkannya dengan ruang asal.</p>
+<div id="o012-rbt-l01-def-006" class="definition">
+<p><strong>Definisi 1.6 (topologi awal).</strong> Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+adalah himpunan;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>Y</mi><mi>α</mi></msub><mo>,</mo><msub><mi mathvariant="script">𝒩</mi><mi>α</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(Y_\alpha,\mathcal{N}_\alpha)</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>∈</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">\alpha\in I</annotation></semantics></math>,
+adalah keluarga himpunan yang dilengkapi basis lingkungan; dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>α</mi></msub><mo>:</mo><mi>X</mi><mo>→</mo><msub><mi>Y</mi><mi>α</mi></msub></mrow><annotation encoding="application/x-tex">f_\alpha\colon X\to Y_\alpha</annotation></semantics></math>
+adalah keluarga fungsi. <em>Topologi awal</em> pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+dibangkitkan oleh basis lingkungan berikut: suatu himpunan bagian
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>⊆</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">B\subseteq X</annotation></semantics></math>
+merupakan lingkungan dasar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+jika dan hanya jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+berbentuk</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><msub><mi>α</mi><mn>1</mn></msub><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>N</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>∩</mo><mi>⋯</mi><mo>∩</mo><msubsup><mi>f</mi><msub><mi>α</mi><mi>k</mi></msub><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>N</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">
+f_{\alpha_1}^{-1}(N_1)\cap\cdots\cap f_{\alpha_k}^{-1}(N_k),
+</annotation></semantics></math></p>
+<p>untuk beberapa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>α</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">\alpha_1,\ldots,\alpha_k</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>i</mi></msub><mo>∈</mo><msub><mi mathvariant="script">𝒩</mi><msub><mi>α</mi><mi>i</mi></msub></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>f</mi><msub><mi>α</mi><mi>i</mi></msub></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N_i\in\mathcal{N}_{\alpha_i}(f_{\alpha_i}(x))</annotation></semantics></math>.
+Untuk keluarga kosong, irisan kosong ditafsirkan sebagai
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>.</p>
+</div>
+<div id="o012-rbt-l01-ex-002" class="exercise">
+<p><strong>Latihan 1.2.</strong> Buktikan bahwa koleksi pada Definisi
+1.6 benar-benar merupakan basis lingkungan.</p>
+</div>
+<p>Konstruksi ini merangkum topologi produk. Untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>=</mo><msub><mi>Y</mi><mn>1</mn></msub><mo>×</mo><msub><mi>Y</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">X=Y_1\times Y_2</annotation></semantics></math>
+dan proyeksi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>:</mo><mi>X</mi><mo>→</mo><msub><mi>Y</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">f_i\colon X\to Y_i</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>y</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">f_i(y_1,y_2)=y_i</annotation></semantics></math>,
+topologi awal adalah topologi produk. Konstruksi yang sama juga
+menghasilkan topologi subruang: ambil injeksi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mi>X</mi><mo>↪</mo><mi>Y</mi></mrow><annotation encoding="application/x-tex">f\colon X\hookrightarrow Y</annotation></semantics></math>
+lalu berikan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+topologi awal.</p>
+<div id="o012-rbt-l01-lem-001" class="lemma">
+<p><strong>Lema 1.1 (sifat universal topologi awal).</strong> Setelah
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+diberi topologi awal, setiap fungsi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>α</mi></msub><mo>:</mo><mi>X</mi><mo>→</mo><msub><mi>Y</mi><mi>α</mi></msub></mrow><annotation encoding="application/x-tex">f_\alpha\colon X\to Y_\alpha</annotation></semantics></math>
+kontinu. Selain itu, fungsi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>:</mo><mi>Z</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">k\colon Z\to X</annotation></semantics></math>
+kontinu jika dan hanya jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>α</mi></msub><mo>∘</mo><mi>k</mi><mo>:</mo><mi>Z</mi><mo>→</mo><msub><mi>Y</mi><mi>α</mi></msub></mrow><annotation encoding="application/x-tex">f_\alpha\circ k\colon Z\to Y_\alpha</annotation></semantics></math>
+kontinu untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>.</p>
+</div>
+</section>
+</section>
+<section id="o012-rbt-u001-mastery" class="level1 unnumbered">
+<h1 class="unnumbered">Pendamping penguasaan terpecahkan</h1>
+<p>Bagian ini merupakan materi baru untuk edisi Bahasa Indonesia.
+Tujuannya bukan mengganti latihan sumber, melainkan menyediakan bukti
+lengkap, pemeriksaan konsep, dan satu perhitungan deformasi yang menutup
+hasil belajar Unit 1.</p>
+<section id="o012-rbt-l01-sol-001" class="level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span>
+Solusi Latihan 1.1</h2>
+<p>Misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+terbuka dalam topologi pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
+yang dibangkitkan oleh
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒩</mi><mi>Y</mi></msub><annotation encoding="application/x-tex">\mathcal{N}_Y</annotation></semantics></math>.
+Kita harus membuktikan bahwa
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f^{-1}(U)</annotation></semantics></math>
+terbuka dalam topologi pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>
+yang dibangkitkan oleh
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒩</mi><mi>X</mi></msub><annotation encoding="application/x-tex">\mathcal{N}_X</annotation></semantics></math>.</p>
+<p>Ambil
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><msup><mi>f</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\in f^{-1}(U)</annotation></semantics></math>.
+Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">f(x)\in U</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+bersifat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒩</mi><mi>Y</mi></msub><annotation encoding="application/x-tex">\mathcal{N}_Y</annotation></semantics></math>-terbuka,
+terdapat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><msub><mi mathvariant="script">𝒩</mi><mi>Y</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N\in\mathcal{N}_Y(f(x))</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⊆</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">N\subseteq U</annotation></semantics></math>.
+Kontinuitas menurut Definisi 1.4 memberi lingkungan dasar
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>∈</mo><msub><mi mathvariant="script">𝒩</mi><mi>X</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">M\in\mathcal{N}_X(x)</annotation></semantics></math>
+yang memenuhi</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>⊆</mo><msup><mi>f</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mo stretchy="false" form="postfix">)</mo><mo>⊆</mo><msup><mi>f</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+M\subseteq f^{-1}(N)\subseteq f^{-1}(U).
+</annotation></semantics></math></p>
+<p>Jadi setiap titik
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><msup><mi>f</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\in f^{-1}(U)</annotation></semantics></math>
+memiliki lingkungan dasar yang termuat dalam
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f^{-1}(U)</annotation></semantics></math>.
+Artinya,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>U</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f^{-1}(U)</annotation></semantics></math>
+bersifat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="script">𝒩</mi><mi>X</mi></msub><annotation encoding="application/x-tex">\mathcal{N}_X</annotation></semantics></math>-terbuka.
+Karena hal ini berlaku untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+terbuka,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>
+kontinu untuk topologi-topologi yang dibangkitkan tersebut.</p>
+</section>
+<section id="o012-rbt-l01-sol-002" class="level2" data-number="1.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span>
+Solusi Latihan 1.2</h2>
+<p>Tuliskan anggota calon basis di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+sebagai
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><msubsup><mo>⋂</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></msubsup><msubsup><mi>f</mi><msub><mi>α</mi><mi>i</mi></msub><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>N</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">B=\bigcap_{i=1}^{k}f_{\alpha_i}^{-1}(N_i)</annotation></semantics></math>,
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>i</mi></msub><mo>∈</mo><msub><mi mathvariant="script">𝒩</mi><msub><mi>α</mi><mi>i</mi></msub></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>f</mi><msub><mi>α</mi><mi>i</mi></msub></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N_i\in\mathcal{N}_{\alpha_i}(f_{\alpha_i}(x))</annotation></semantics></math>.</p>
+<ol type="1">
+<li>Karena
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><msub><mi>α</mi><mi>i</mi></msub></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><msub><mi>N</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">f_{\alpha_i}(x)\in N_i</annotation></semantics></math>
+untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>,
+berlaku
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">x\in B</annotation></semantics></math>.</li>
+<li>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>B</mi><mn>1</mn></msub><annotation encoding="application/x-tex">B_1</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>B</mi><mn>2</mn></msub><annotation encoding="application/x-tex">B_2</annotation></semantics></math>
+adalah dua lingkungan dasar di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+irisannya kembali merupakan irisan berhingga dari prabayangan lingkungan
+dasar. Apabila indeks yang sama muncul dua kali, aksioma kedua basis
+lingkungan di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Y</mi><mi>α</mi></msub><annotation encoding="application/x-tex">Y_\alpha</annotation></semantics></math>
+memberi lingkungan dasar yang lebih kecil di dalam irisan keduanya. Jadi
+terdapat lingkungan dasar
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>3</mn></msub><mo>⊆</mo><msub><mi>B</mi><mn>1</mn></msub><mo>∩</mo><msub><mi>B</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">B_3\subseteq B_1\cap B_2</annotation></semantics></math>.</li>
+<li>Untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>i</mi></msub><annotation encoding="application/x-tex">N_i</annotation></semantics></math>
+pada representasi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>,
+aksioma ketiga basis lingkungan di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Y</mi><msub><mi>α</mi><mi>i</mi></msub></msub><annotation encoding="application/x-tex">Y_{\alpha_i}</annotation></semantics></math>
+memberi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mi>i</mi></msub><mo>⊆</mo><msub><mi>N</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">U_i\subseteq N_i</annotation></semantics></math>
+yang memuat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><msub><mi>α</mi><mi>i</mi></msub></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f_{\alpha_i}(x)</annotation></semantics></math>
+dan mempunyai sifat penyempurnaan lokal. Tetapkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><msub><mo>⋂</mo><mi>i</mi></msub><msubsup><mi>f</mi><msub><mi>α</mi><mi>i</mi></msub><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>U</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>⊆</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">U=\bigcap_i f_{\alpha_i}^{-1}(U_i)\subseteq B</annotation></semantics></math>.
+Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>∈</mo><mi>U</mi></mrow><annotation encoding="application/x-tex">y\in U</annotation></semantics></math>,
+untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+pilih
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>i</mi></msub><mo>∈</mo><msub><mi mathvariant="script">𝒩</mi><msub><mi>α</mi><mi>i</mi></msub></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>f</mi><msub><mi>α</mi><mi>i</mi></msub></msub><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V_i\in\mathcal{N}_{\alpha_i}(f_{\alpha_i}(y))</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>i</mi></msub><mo>⊆</mo><msub><mi>U</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">V_i\subseteq U_i</annotation></semantics></math>.
+Maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>⋂</mo><mi>i</mi></msub><msubsup><mi>f</mi><msub><mi>α</mi><mi>i</mi></msub><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>V</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\bigcap_i f_{\alpha_i}^{-1}(V_i)</annotation></semantics></math>
+adalah lingkungan dasar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+yang termuat dalam
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>.</li>
+</ol>
+<p>Ketiga aksioma basis lingkungan terpenuhi. Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+kosong, satu-satunya irisan yang diperlukan adalah irisan kosong
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>,
+dan argumen yang sama tetap berlaku.</p>
+</section>
+<section id="o012-rbt-l01-check-001" class="level2" data-number="1.5">
+<h2 data-number="1.5"><span class="header-section-number">1.5</span>
+Pemeriksaan Lema 1.1</h2>
+<p>Untuk
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>∈</mo><msub><mi mathvariant="script">𝒩</mi><mi>α</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>f</mi><mi>α</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N\in\mathcal{N}_\alpha(f_\alpha(x))</annotation></semantics></math>,
+prabayangan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>f</mi><mi>α</mi><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f_\alpha^{-1}(N)</annotation></semantics></math>
+adalah salah satu lingkungan dasar pembangkit di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.
+Jadi setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>α</mi></msub><annotation encoding="application/x-tex">f_\alpha</annotation></semantics></math>
+kontinu.</p>
+<p>Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>:</mo><mi>Z</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">k\colon Z\to X</annotation></semantics></math>
+kontinu, komposisi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>α</mi></msub><mo>∘</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">f_\alpha\circ k</annotation></semantics></math>
+kontinu karena komposisi fungsi kontinu bersifat kontinu. Sebaliknya,
+anggap setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>α</mi></msub><mo>∘</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">f_\alpha\circ k</annotation></semantics></math>
+kontinu. Untuk lingkungan dasar
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><msubsup><mo>⋂</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup><msubsup><mi>f</mi><msub><mi>α</mi><mi>i</mi></msub><mrow><mi>−</mi><mn>1</mn></mrow></msubsup><mo stretchy="false" form="prefix">(</mo><msub><mi>N</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">B=\bigcap_{i=1}^m f_{\alpha_i}^{-1}(N_i)</annotation></semantics></math>
+di sekitar
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">k(z)</annotation></semantics></math>,
+kita mempunyai</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>k</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munderover><mo>⋂</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mo stretchy="false" form="prefix">(</mo><msub><mi>f</mi><msub><mi>α</mi><mi>i</mi></msub></msub><mo>∘</mo><mi>k</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>−</mi><mn>1</mn></mrow></msup><mo stretchy="false" form="prefix">(</mo><msub><mi>N</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mi>.</mi></mrow><annotation encoding="application/x-tex">
+k^{-1}(B)=\bigcap_{i=1}^m(f_{\alpha_i}\circ k)^{-1}(N_i).
+</annotation></semantics></math></p>
+<p>Setiap faktor di ruas kanan memuat suatu lingkungan dasar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>.
+Dengan aksioma irisan berhingga untuk basis lingkungan di
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math>,
+irisannya juga memuat suatu lingkungan dasar dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>.
+Jadi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+kontinu.</p>
+</section>
+<section id="o012-rbt-l01-worked-001" class="level2" data-number="1.6">
+<h2 data-number="1.6"><span class="header-section-number">1.6</span>
+Contoh terpecahkan: penciutan radial</h2>
+<p>Definisikan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>:</mo><msup><mi mathvariant="double-struck">ℝ</mi><mn>3</mn></msup><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo><mo>→</mo><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">r\colon\mathbb{R}^3\setminus\{0\}\to S^2</annotation></semantics></math>
+dengan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">‖</mo><mi>x</mi><mo stretchy="true" form="postfix">‖</mo></mrow></mrow><annotation encoding="application/x-tex">r(x)=x/\lVert x\rVert</annotation></semantics></math>,
+dan misalkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>:</mo><msup><mi>S</mi><mn>2</mn></msup><mo>↪</mo><msup><mi mathvariant="double-struck">ℝ</mi><mn>3</mn></msup><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">i\colon S^2\hookrightarrow\mathbb{R}^3\setminus\{0\}</annotation></semantics></math>
+adalah inklusi. Jelas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>∘</mo><mi>i</mi><mo>=</mo><msub><mrow><mi mathvariant="normal">id</mi><mo>⁡</mo></mrow><msup><mi>S</mi><mn>2</mn></msup></msub></mrow><annotation encoding="application/x-tex">r\circ i=\operatorname{id}_{S^2}</annotation></semantics></math>.</p>
+<p>Untuk membandingkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>∘</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">i\circ r</annotation></semantics></math>
+dengan identitas pada
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">ℝ</mi><mn>3</mn></msup><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathbb{R}^3\setminus\{0\}</annotation></semantics></math>,
+gunakan</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mfrac><mi>t</mi><mrow><mo stretchy="true" form="prefix">‖</mo><mi>x</mi><mo stretchy="true" form="postfix">‖</mo></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>x</mi><mo>,</mo><mspace width="2.0em"></mspace><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>1</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">
+H(x,t)=\left((1-t)+\frac{t}{\lVert x\rVert}\right)x,
+\qquad 0\le t\le1.
+</annotation></semantics></math></p>
+<p>Koefisien di dalam kurung selalu positif, sehingga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">H(x,t)\ne0</annotation></semantics></math>.
+Selain itu,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">H(x,0)=x</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi><mi>/</mi><mrow><mo stretchy="true" form="prefix">‖</mo><mi>x</mi><mo stretchy="true" form="postfix">‖</mo></mrow><mo>=</mo><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H(x,1)=x/\lVert x\rVert=i(r(x))</annotation></semantics></math>.
+Jadi
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>
+adalah homotopi dari identitas ke
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>∘</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">i\circ r</annotation></semantics></math>.
+Jika
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x\in S^2</annotation></semantics></math>,
+maka
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">‖</mo><mi>x</mi><mo stretchy="true" form="postfix">‖</mo></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\lVert x\rVert=1</annotation></semantics></math>
+dan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mi>x</mi><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">H(x,t)=((1-t)+t)x=x</annotation></semantics></math>
+untuk setiap
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.
+Homotopi ini menetapkan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mn>2</mn></msup><annotation encoding="application/x-tex">S^2</annotation></semantics></math>
+titik demi titik. Dengan demikian,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mn>2</mn></msup><annotation encoding="application/x-tex">S^2</annotation></semantics></math>
+memang merupakan retrak deformasi dari
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="double-struck">ℝ</mi><mn>3</mn></msup><mo>\</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\mathbb{R}^3\setminus\{0\}</annotation></semantics></math>.</p>
+<p><strong>Pemeriksaan konsep.</strong> Contoh ini tidak mengatakan
+bahwa homeomorfisme boleh mengubah dimensi. Contoh ini mengatakan bahwa
+<em>tipe homotopi</em> dapat sama walaupun dimensi ruang berbeda.
+Perbedaan antara homeomorfisme dan ekuivalensi homotopi akan menjadi
+pusat unit berikutnya.</p>
+</section>
+</section>
+</body>
+</html>

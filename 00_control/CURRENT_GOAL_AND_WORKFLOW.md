@@ -1,0 +1,23 @@
+# Current goal and workflow — O012/D60 Algebraic Topology
+
+Own and complete the bounded O012/D60 Algebraic Topology Bahasa Indonesia lane at `C:\Users\Floris\Documents\interlanguage\04_mirrors\id\algebraic-topology-id`. This is not an audit-only, recommendation, title-allocation, or QA-loop task. Translation and reader production dominate. Deliver the complete id-ID corpus, locale-neutral modular backend, accessible readers, exact rights/provenance, and the lane’s own public GitHub. Push substantial verified boundaries without asking Floris again; use authorized credentials when needed. The curriculum hub consumes frozen handoffs but does not own this corpus.
+
+Authority: David Michael Roberts, `AlgebraicTopology2019`, commit `b947ad2e9f9e301bfe24590a9db653bc54fa1a53`, tree `aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5`, CC BY 4.0. Preserve codeload archive 1,126,421 bytes/SHA-256 `c1b6d814fda9d3bd5d0ad6c712a7d3cffb1ec6ed5d4f6ef25370b1be621c7e2f` and seven-file manifest. Active source: `Notes.tex`, 331,447 bytes/SHA-256 `cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7`. Exclude obsolete `Notes_1-8.*` and the unreferenced/source-incomplete Möbius PDF. Independently redraw, do not copy, the TeX StackExchange-derived diagram blocks at `Notes.tex:4783–4812` and `5411–5417`. MIT 18.905/906 and Fomberg/Lazarovich are rejected benchmarks, not donors, because they fail editable-closure, component-rights, coverage, build, or mastery gates.
+
+Translate all admitted `Notes.tex` contiguously, preserving formulas, definitions, results, proofs, examples, exercises, references, diagram functions, and sequence. Correct only independently determined defects; log location, observed form, correction, rationale, and verification. Assign stable locale-neutral IDs. Add only missing material as separately identified CC BY 4.0 original work: chain complexes; cycles/boundaries/homology; singular and simplicial/Delta-set homology; relative/reduced homology; excision/long exact sequences; Mayer–Vietoris; cellular homology and boundary computations; representative calculations; universal-coefficient connections; and cup products if retained. Supply solved mastery for every upstream prompt and uncovered proof/computation skills. Never borrow uncleared expression.
+
+Current boundary: Unit 001 translates `Notes.tex:134–348`, Lecture 1 through the initial-topology lemma, exposes both upstream prompts with stable IDs, and supplies full solutions plus universal-property and radial-deformation checks. It builds offline semantic HTML and deterministic PDF. Next cursor: `Notes.tex:349`, start of Lecture 2. Continue there; do not repeat frozen selection absent material new primary evidence.
+
+Durability: maintain `CURRENT_GOAL_AND_WORKFLOW`, `CURRENT_STATE`, `SOURCE_DECISION`, `AUTHORITY`, `RIGHTS_AND_COMPONENTS`, `CURSOR`, `TERMINOLOGY`, `ADVERSE_LEDGER`, `BUILD`, `QA`, and publication receipts inside this lane. After compaction, recover from these exact controls/artifacts, not summaries. Deterministic JSONL/CSV/JSON records authority, units, IDs, spans, concepts, terms, prerequisites, relations, exercises, hints, solutions, assets, rights, translation states, corrections, QA events, artifacts, and hashes so another language can reuse the graph without parsing Indonesian prose.
+
+At each substantial boundary: update cursor/logbook/backend; create exact manifests; run bounded structural, math, link, language, accessibility, rights, build, visual, and hash checks; then push the lane repository. QA supports production and must not replace translation. Keep HTML centered/readable and PDF deterministic; disclose accessibility limits. Preserve attribution, licenses, changes, and non-endorsement. Do not start author conversations. Only after the corpus is complete, if warranted, send at most one concise deduplicated high-confidence upstream report signed “Codex — at the user’s direction.” Completion means full core, original bridge, solved mastery, reusable backend, verified readers, exact provenance/rights, public GitHub, and frozen hub handoff.
+
+## Recovery read order
+
+1. This file.
+2. `CURRENT_STATE.md` and `CURSOR.json`.
+3. `AUTHORITY.json`, `SOURCE_DECISION.md`, and `RIGHTS_AND_COMPONENTS.csv`.
+4. `TERMINOLOGY.csv`, `ADVERSE_LEDGER.csv`, and the backend manifests.
+5. Latest unit QA/build receipt and publication receipt.
+
+Do not infer state from chat summaries when these controls exist.

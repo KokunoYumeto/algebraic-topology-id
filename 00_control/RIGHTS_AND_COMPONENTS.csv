@@ -1,0 +1,11 @@
+component_id,path_or_scope,origin,rights,status,required_action
+RGT-0001,Notes.tex,David Michael Roberts,CC BY 4.0,admitted,"attribute; link license; identify translation and changes; preserve non-endorsement"
+RGT-0002,LICENSE.md,David Michael Roberts,CC BY 4.0,admitted,"retain exact license text"
+RGT-0003,Notes_1-8.tex and Notes_1-8.pdf,David Michael Roberts,CC BY 4.0,excluded_obsolete,"retain only in frozen authority archive"
+RGT-0004,Möbius.pdf,David Michael Roberts,CC BY 4.0,excluded_source_incomplete,"do not translate unless editable source is separately recovered or independently transcribed"
+RGT-0005,Notes.tex:4783-4812,Roberts plus credited TeX StackExchange technique,mixed_or_uncertain,quarantined,"redraw independently from mathematical specification; do not copy code"
+RGT-0006,Notes.tex:5411-5417,Roberts plus credited TeX StackExchange answer,mixed_or_uncertain,quarantined,"redraw independently from mathematical specification; do not copy code"
+RGT-0007,Indonesian translated contribution,this lane,CC BY 4.0,admitted,"mark adaptation and changes; retain Roberts attribution"
+RGT-0008,Original mastery and D60 bridge,this lane,CC BY 4.0,admitted,"identify as new companion material; do not imply upstream authorship or endorsement"
+RGT-0009,MIT 18.905-906 repository package,multiple authors/components,insufficient unified clearance,rejected_reference_only,"do not translate or copy expression"
+RGT-0010,Fomberg-Lazarovich notes,Yeheli Fomberg / Nir Lazarovich,CC BY-SA 4.0 site declaration but incomplete closure,rejected_reference_only,"do not translate or copy expression at this boundary"

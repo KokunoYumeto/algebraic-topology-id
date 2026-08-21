@@ -1,0 +1,12 @@
+event_id,severity,source_location,observed,action,status,rationale
+O012-ADV-0001,P3,Notes.tex:188,eqipped,dilengkapi,corrected_in_translation,deterministic spelling correction
+O012-ADV-0002,P3,Notes.tex:196,taking every T to consist,mengambil T sebagai koleksi,corrected_in_translation,repairs malformed subject without changing mathematics
+O012-ADV-0003,P3,Notes.tex:220,neighbouhoods,lingkungan,corrected_in_translation,deterministic spelling correction
+O012-ADV-0004,P3,Notes.tex:273,this set in N-open,himpunan itu bersifat N-terbuka,corrected_in_translation,deterministic grammar correction
+O012-ADV-0005,P1,Notes.tex:320,"g∘f=id_X and g∘f=id_Y","g∘f=id_X and f∘g=id_Y",corrected_in_translation,type and domain force the second inverse identity
+O012-ADV-0006,P2,Notes.tex:333,inline margin exercise without stable object,promoted to stable exercise o012-rbt-l01-ex-002,accessibility_reflow,retains exact task while exposing it to navigation and solution linkage
+O012-ADV-0007,P1,Notes.tex:4783-4812,credited TeX StackExchange TikZ technique,quarantine for independent redraw,pending_future_unit,repo-wide CC BY statement does not erase component provenance
+O012-ADV-0008,P1,Notes.tex:5411-5417,diagram adapted from TeX StackExchange answer,quarantine for independent redraw,pending_future_unit,repo-wide CC BY statement does not erase component provenance
+O012-ADV-0009,P2,upstream baseline,59 overfull boxes and 225 moved-margin warnings,reflow reader into centered semantic HTML/A4 PDF,in_progress,mechanical Tufte reproduction is not a clean reader
+O012-ADV-0010,P2,upstream PDF,untagged PDF with no HTML or figure alternatives,provide semantic HTML primary accessibility surface,in_progress,PDF alone is not an adequate accessible reader
+O012-ADV-0011,P3,Notes.tex:333,empty-family intersection left implicit,interpret the empty intersection as X,clarified_in_translation,required for the stated family construction to cover the empty family without changing its mathematics

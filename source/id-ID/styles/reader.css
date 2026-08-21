@@ -1,0 +1,98 @@
+:root {
+  color-scheme: light dark;
+  font-family: Charter, "Bitstream Charter", "Noto Serif", Georgia, serif;
+  line-height: 1.62;
+}
+
+html {
+  background: #f4f1ea;
+}
+
+body {
+  box-sizing: border-box;
+  max-width: 58rem;
+  margin: 0 auto;
+  padding: 3rem 4rem 5rem;
+  color: #202124;
+  background: #fff;
+  box-shadow: 0 0 2rem rgb(0 0 0 / 8%);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: #162b49;
+}
+
+a {
+  color: #1259a7;
+}
+
+.definition,
+.proposition,
+.lemma,
+.example,
+.exercise,
+.proof,
+.note {
+  margin: 1.25rem 0;
+  padding: 0.8rem 1rem;
+  border-left: 0.3rem solid #5875a8;
+  background: #f6f8fc;
+}
+
+.exercise {
+  border-left-color: #7a4ea3;
+  background: #faf7fd;
+}
+
+.proof {
+  border-left-color: #4c7f5d;
+  background: #f5faf6;
+}
+
+.note {
+  border-left-color: #8a6a2f;
+  background: #fffaf0;
+}
+
+math[display="block"] {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0;
+}
+
+@media (max-width: 700px) {
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 1.25rem 1.1rem 3rem;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    color: #e7e9ee;
+    background: #15171a;
+  }
+
+  h1,
+  h2,
+  h3,
+  a {
+    color: #a9c7ff;
+  }
+
+  .definition,
+  .proposition,
+  .lemma,
+  .example,
+  .exercise,
+  .proof,
+  .note {
+    background: #20242a;
+  }
+}

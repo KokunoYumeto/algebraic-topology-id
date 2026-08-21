@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "role_id": "O012",
+  "course_id": "D60",
+  "source_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+  "source_path": "Notes.tex",
+  "completed_through_line": 348,
+  "next_line": 349,
+  "next_marker": "\\begin{example}\\lecturenum{2}",
+  "completed_units": [
+    "o012-rbt-l01"
+  ],
+  "current_unit": "o012-rbt-l02",
+  "translation_state": "unit_001_admitted_unit_002_draft_present",
+  "backend_state": "unit_001_complete_139_records",
+  "publication_state": "unit_001_ready_to_push",
+  "updated": "2026-08-21"
+}

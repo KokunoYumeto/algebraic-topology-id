@@ -1,0 +1,55 @@
+name: Deploy Indonesian reader
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out exact source
+        uses: actions/checkout@v6
+
+      - name: Verify frozen Unit 1 reader
+        shell: bash
+        run: |
+          python - <<'PY'
+          from hashlib import sha256
+          from pathlib import Path
+
+          expected = {
+              "output/html/index.html": (85580, "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8"),
+          }
+          for name, (size, digest) in expected.items():
+              path = Path(name)
+              data = path.read_bytes()
+              assert len(data) == size, (name, len(data), size)
+              assert sha256(data).hexdigest() == digest, name
+          print("Frozen Unit 1 HTML verified")
+          PY
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload reader artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: output/html
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

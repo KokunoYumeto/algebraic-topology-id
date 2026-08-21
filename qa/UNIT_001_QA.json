@@ -1,0 +1,67 @@
+{
+  "artifacts": [
+    {
+      "bytes": 85580,
+      "path": "output/html/index.html",
+      "sha256": "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8"
+    },
+    {
+      "bytes": 321743,
+      "path": "output/pdf/topologi-aljabar-unit-001-id.pdf",
+      "sha256": "6f71546a616c02ef81f8747ecfce3875784842065fc131cc82e5060b066a59c9"
+    }
+  ],
+  "course_id": "D60",
+  "gates": {
+    "authority_exact": true,
+    "exercise_solution_closure": true,
+    "html_semantic_offline": true,
+    "math_correction_verified": true,
+    "pdf_reproducible_by_build_script": true,
+    "privacy_secret_scan": true,
+    "source_span_bound": true,
+    "structure_bound": true,
+    "visual_review": "pass_manual_all_5_pages; see qa/UNIT_001_VISUAL_QA.md"
+  },
+  "html": {
+    "html_ids": 40,
+    "mathml_nodes": 259
+  },
+  "known_caveat": "PDF is intentionally secondary and untagged; semantic HTML is the accessibility surface.",
+  "pdf": {
+    "all_fonts_embedded": true,
+    "all_fonts_tounicode": true,
+    "encrypted": false,
+    "extracted_characters": 12338,
+    "fonts": 18,
+    "lang": "id-ID",
+    "pages": 5,
+    "tagged": false
+  },
+  "reader_source": {
+    "block_counts": {
+      "definition": 6,
+      "example": 7,
+      "exercise": 2,
+      "lemma": 1,
+      "note": 2,
+      "proof": 1,
+      "proposition": 1
+    },
+    "bytes": 16179,
+    "path": "source/id-ID/reader-unit-001.md",
+    "sha256": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15",
+    "stable_ids": 29
+  },
+  "role_id": "O012",
+  "schema_version": "1.0",
+  "source_authority": {
+    "commit_sha1": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_end": 348,
+    "line_start": 134,
+    "path": "Notes.tex",
+    "tree_sha1": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5"
+  },
+  "status": "pass",
+  "unit_id": "o012-rbt-l01"
+}

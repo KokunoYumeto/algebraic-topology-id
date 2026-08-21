@@ -1,0 +1,254 @@
+                                      Topologi Aljabar
+                           Unit 1 — Pengantar dan Ruang Topologis
+
+
+                           David Michael Roberts (materi sumber)
+                   Edisi Bahasa Indonesia dengan pendamping penguasaan
+
+                                          21 Agustus 2026
+
+
+Daftar Isi
+Tentang unit ini                                                                                    1
+
+1 Kuliah 1                                                                                          1
+  1.1 Apa yang dipelajari oleh topologi aljabar? . . . . . . . . . . . . . . . . . . . . . . .      1
+  1.2 Ruang topologis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   2
+
+Pendamping penguasaan terpecahkan                                                                   4
+  1.3 Solusi Latihan 1.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    4
+  1.4 Solusi Latihan 1.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    4
+  1.5 Pemeriksaan Lema 1.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      5
+  1.6 Contoh terpecahkan: penciutan radial . . . . . . . . . . . . . . . . . . . . . . . . .        5
+
+
+Tentang unit ini
+Unit ini merupakan terjemahan dan adaptasi Bahasa Indonesia atas Algebraic Topology
+karya David Michael Roberts (2019), tepatnya Notes.tex baris 134–348 pada commit
+b947ad2e9f9e301bfe24590a9db653bc54fa1a53. Karya sumber tersedia di bawah Creative
+Commons Attribution 4.0 International. Perubahan pada unit ini meliputi penerjemahan,
+pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, pemindahan satu latihan dari
+catatan pinggir ke blok latihan, penjelasan kasus keluarga kosong pada topologi awal, dan koreksi
+identitas invers sumber dari g ◦ f = idX dan g ◦ f = idY menjadi g ◦ f = idX dan f ◦ g = idY .
+Materi pendamping penguasaan setelah teks inti ditulis khusus untuk edisi ini dan juga tersedia di
+bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan
+dari penulis sumber.
+
+
+1     Kuliah 1
+1.1   Apa yang dipelajari oleh topologi aljabar?
+Topologi aljabar mempelajari pemetaan
+
+
+                                   {Ruang} −→ {Objek aljabar},
+
+atau, lebih tepatnya, pemetaan semacam itu yang “berperilaku baik”. Pemetaan tersebut juga harus
+mengirim fungsi kontinu antarruang ke pemetaan aljabar dengan tetap menghormati komposisi
+(jadi, pemetaan itu berupa funktor). Selain itu, ruang yang dibangun dari ruang-ruang yang lebih
+
+
+                                                  1
+sederhana semestinya dikirim ke objek aljabar yang dibangun secara serasi dari komponen-komponen
+yang lebih sederhana.
+Di sini, “ruang” secara kasar berarti ruang topologis hingga deformasi—biasanya hingga homotopi,
+meskipun tidak selalu demikian. Kelas-kelas ekuivalensi semacam ini disebut tipe homotopi. “Objek
+aljabar” dapat berarti grup (abelian), gelanggang, modul, atau bahkan kompleks rantai dari
+objek-objek tersebut.
+Catatan. Kompleks rantai adalah suatu jenis barisan pemetaan tertentu, · · · → V0 → V1 → V2 →
+· · ·.
+Contoh 1.1. Bagaimana kita dapat menentukan apakah permukaan bola S 2 dan torus S 1 × S 1
+dapat dideformasikan satu sama lain? Bagaimana kita membuktikan bahwa deformasi semacam
+itu tidak mungkin?
+Contoh 1.2. Sebagai contoh positif, kita dapat menciutkan R3 \ {0} → S 2 ,→ R3 \ {0} dengan
+                 x
+mengirim x 7→ |x|  . Pemetaan komposit ini dapat dideformasikan secara kontinu menjadi pemetaan
+identitas. Jadi, dimensi tidak selalu dipertahankan.
+Contoh 1.3. Mungkinkah S 1 ∼ S 2 ?
+Pertama-tama kita perlu memahami bagaimana ruang dibangun.
+
+1.2   Ruang topologis
+Ingat kembali definisi berikut.
+Prasyarat sumber. Topologi dan Analisis III.
+Definisi 1.1 (topologi). Suatu topologi pada himpunan X adalah koleksi T yang terdiri atas
+subset-subset X dan memenuhi:
+  1. ∅, X ∈ T ;
+  2. jika U, V ∈ T , maka U ∩ V ∈ T ;
+  3. jika {Uα }α∈I adalah sembarang keluarga himpunan dalam T , maka α∈I Uα ∈ T .
+                                                                    S
+
+Di sini I adalah himpunan indeks. Jika U ∈ T , kita mengatakan bahwa U terbuka. Suatu ruang
+topologis adalah himpunan X yang dilengkapi dengan topologi T .
+Contoh 1.4. Pada himpunan bilangan real, topologi Euklides (atau topologi “biasa”) didefinisikan
+dengan menyatakan bahwa suatu himpunan terbuka jika dan hanya jika himpunan itu merupakan
+gabungan selang-selang terbuka (a, b). Gabungan kosong juga diperbolehkan dan menghasilkan ∅.
+Topologi diskret pada himpunan X diperoleh dengan mengambil T sebagai koleksi semua subset X.
+Topologi indiskret diperoleh dengan mengambil T = {∅, X}.
+Definisi tersebut ringkas, tetapi bukan selalu cara terbaik untuk mendefinisikan topologi. Kita juga
+akan menggunakan lingkungan.
+Definisi 1.2 (lingkungan). Dalam topologi T pada X, suatu himpunan N ⊆ X disebut lingkungan
+dari titik x ∈ X jika terdapat himpunan terbuka U ⊆ N dengan x ∈ U .
+Contoh 1.5. Ambil R dengan topologi Euklides. Himpunan (−1, 1), [−1, 1], dan [−1, 1) semuanya
+merupakan lingkungan dari setiap −1 < x < 1, tetapi [0, 1) bukan lingkungan dari 0. Sebagai
+contoh yang sedikit lebih rumit, [0, 1] ∪ {2} ∪ [5, 6] merupakan lingkungan dari setiap 0 < x < 1
+dan setiap 5 < x < 6.
+Contoh 1.6. Misalkan (X, d) adalah ruang metrik. Topologi metrik didefinisikan dengan menya-
+takan bahwa subset U ⊆ X terbuka jika dan hanya jika, untuk setiap x ∈ U , terdapat εx > 0
+sehingga bola terbuka B(x, εx ) ⊆ U . Bola terbuka yang berpusat di x merupakan lingkungan dari
+x; demikian pula bola tertutup berjari-jari positif.
+
+                                                 2
+Pendekatan berikut lebih konkret dan memungkinkan kita mendefinisikan topologi secara ringkas.
+Definisi 1.3 (basis lingkungan). Suatu basis lingkungan N pada himpunan X adalah keluarga
+{N (x)}x∈X , dengan setiap N (x) merupakan koleksi tak kosong yang terdiri atas subset-subset X,
+sehingga untuk setiap x ∈ X berlaku:
+  1. untuk setiap N ∈ N (x), berlaku x ∈ N ;
+  2. untuk setiap N1 , N2 ∈ N (x), terdapat N ∈ N (x) dengan N ⊆ N1 ∩ N2 ;
+  3. untuk setiap N ∈ N (x), terdapat subset U ⊆ N sehingga x ∈ U dan, untuk setiap y ∈ U ,
+     terdapat V ∈ N (y) dengan V ⊆ U .
+Himpunan-himpunan dalam N (x) disebut lingkungan dasar dari x.
+Sebagai contoh, jika (X, T ) adalah ruang topologis, kita memperoleh basis lingkungan dengan
+mendefinisikan N (x) sebagai koleksi semua lingkungan dari x. Kita juga memperoleh basis
+lingkungan dengan mendefinisikan N ′ (x) sebagai koleksi semua himpunan terbuka yang memuat x.
+Jika N adalah basis lingkungan pada X, definisikan subset U ⊆ X sebagai N -terbuka jika dan
+hanya jika, untuk setiap x ∈ U , terdapat N ∈ N (x) dengan N ⊆ U .
+Proposisi 1.1. Himpunan-himpunan N -terbuka membentuk suatu topologi pada X.
+Bukti. Kita memeriksa ketiga aksioma topologi.
+  1. Syarat bahwa ∅ bersifat N -terbuka benar secara vakum. Karena N (x) tidak kosong, di setiap
+     titik terdapat lingkungan dasar; akibatnya X bersifat N -terbuka.
+  2. Misalkan U dan V keduanya N -terbuka. Ambil x ∈ U ∩ V . Terdapat NU , NV ∈ N (x)
+     dengan NU ⊆ U dan NV ⊆ V . Selain itu, x ∈ NU ∩ NV . Jadi terdapat N ∈ N (x) dengan
+     N ⊆ NU ∩ NV ⊆ U ∩ V . Hal ini berlaku untuk setiap x ∈ U ∩ V , sehingga U ∩ V bersifat
+     N -terbuka.
+  3. Misalkan setiap Uα , α ∈ I, bersifat N -terbuka, dan tetapkan U = α∈I Uα . Ambil x ∈ U .
+                                                                        S
+
+     Ada α0 dengan x ∈ Uα0 . Karena Uα0 bersifat N -terbuka, terdapat lingkungan dasar N dari
+     x dengan N ⊆ Uα0 ⊆ U . Maka U bersifat N -terbuka. □
+Topologi pada proposisi ini disebut topologi yang dibangkitkan oleh N . Lingkungan dalam topologi
+ini adalah himpunan yang memuat suatu lingkungan dasar: V merupakan lingkungan dari x jika
+terdapat N ∈ N (x) dengan N ⊆ V .
+Dengan basis lingkungan N pada X, kita dapat mengenali penutupan suatu himpunan S ⊂ X
+sebagai koleksi titik x ∈ X yang memenuhi: untuk setiap N ∈ N (x), terdapat s ∈ N ∩ S.
+Contoh 1.7. Pada ruang metrik (X, d), bola-bola terbuka membentuk basis lingkungan pada X,
+dan topologi yang dibangkitkannya adalah topologi metrik.
+Dengan demikian, banyak definisi yang dikenal dari ruang metrik tetap berlaku untuk ruang
+topologis asalkan dapat dirumuskan menggunakan lingkungan dasar. Salah satu yang terpenting
+adalah kontinuitas.
+Definisi 1.4 (kontinuitas). Misalkan NX dan NY masing-masing merupakan basis lingkungan
+pada himpunan X dan Y . Fungsi f : X → Y disebut kontinu jika, untuk setiap x ∈ X dan
+N ∈ NY (f (x)), himpunan f −1 (N ) memuat suatu lingkungan dasar dari x.
+Definisi ini merupakan perumuman besar dari definisi kontinuitas ε–δ.
+Latihan 1.1. Buktikan bahwa jika f : (X, NX ) → (Y, NY ) kontinu menurut definisi di atas, maka
+f kontinu untuk topologi yang dibangkitkan oleh basis lingkungan pada X dan Y .
+Ingat bahwa kontinuitas untuk topologi berarti f −1 (U ) terbuka untuk setiap himpunan terbuka U .
+Sebagai pemeriksaan kewajaran, fungsi identitas idX pada ruang X memang kontinu. Setiap fungsi
+menuju ruang indiskret juga kontinu, demikian pula setiap fungsi dari ruang diskret.
+
+                                                3
+Definisi 1.5 (homeomorfisme). Fungsi kontinu f : X → Y disebut homeomorfisme jika terdapat
+fungsi kontinu g : Y → X dengan g ◦ f = idX dan f ◦ g = idY . Dalam keadaan ini, X dan Y disebut
+homeomorfik.
+Sekarang kita perlu menjelaskan cara membangun ruang baru serta pemetaan kontinu yang
+menghubungkannya dengan ruang asal.
+Definisi 1.6 (topologi awal). Misalkan X adalah himpunan; (Yα , Nα ), α ∈ I, adalah keluarga
+himpunan yang dilengkapi basis lingkungan; dan fα : X → Yα adalah keluarga fungsi. Topologi awal
+pada X dibangkitkan oleh basis lingkungan berikut: suatu himpunan bagian B ⊆ X merupakan
+lingkungan dasar dari x jika dan hanya jika B berbentuk
+
+
+                                      fα−1
+                                         1
+                                           (N1 ) ∩ · · · ∩ fα−1
+                                                              k
+                                                                (Nk ),
+
+untuk beberapa α1 , . . . , αk dan Ni ∈ Nαi (fαi (x)). Untuk keluarga kosong, irisan kosong ditafsirkan
+sebagai X.
+Latihan 1.2. Buktikan bahwa koleksi pada Definisi 1.6 benar-benar merupakan basis lingkungan.
+Konstruksi ini merangkum topologi produk. Untuk X = Y1 × Y2 dan proyeksi fi : X → Yi ,
+fi (y1 , y2 ) = yi , topologi awal adalah topologi produk. Konstruksi yang sama juga menghasilkan
+topologi subruang: ambil injeksi f : X ,→ Y lalu berikan X topologi awal.
+Lema 1.1 (sifat universal topologi awal). Setelah X diberi topologi awal, setiap fungsi
+fα : X → Yα kontinu. Selain itu, fungsi k : Z → X kontinu jika dan hanya jika fα ◦ k : Z → Yα
+kontinu untuk setiap α.
+
+
+Pendamping penguasaan terpecahkan
+Bagian ini merupakan materi baru untuk edisi Bahasa Indonesia. Tujuannya bukan mengganti
+latihan sumber, melainkan menyediakan bukti lengkap, pemeriksaan konsep, dan satu perhitungan
+deformasi yang menutup hasil belajar Unit 1.
+
+1.3   Solusi Latihan 1.1
+Misalkan U terbuka dalam topologi pada Y yang dibangkitkan oleh NY . Kita harus membuktikan
+bahwa f −1 (U ) terbuka dalam topologi pada X yang dibangkitkan oleh NX .
+Ambil x ∈ f −1 (U ). Karena f (x) ∈ U dan U bersifat NY -terbuka, terdapat N ∈ NY (f (x)) dengan
+N ⊆ U . Kontinuitas menurut Definisi 1.4 memberi lingkungan dasar M ∈ NX (x) yang memenuhi
+
+
+                                      M ⊆ f −1 (N ) ⊆ f −1 (U ).
+
+Jadi setiap titik x ∈ f −1 (U ) memiliki lingkungan dasar yang termuat dalam f −1 (U ). Artinya,
+f −1 (U ) bersifat NX -terbuka. Karena hal ini berlaku untuk setiap U terbuka, f kontinu untuk
+topologi-topologi yang dibangkitkan tersebut.
+
+1.4   Solusi Latihan 1.2
+                                                   Tk      −1
+Tuliskan anggota calon basis di x sebagai B =         i=1 fαi (Ni ), dengan Ni ∈ Nαi (fαi (x)).
+
+  1. Karena fαi (x) ∈ Ni untuk setiap i, berlaku x ∈ B.
+  2. Jika B1 dan B2 adalah dua lingkungan dasar di x, irisannya kembali merupakan irisan
+     berhingga dari prabayangan lingkungan dasar. Apabila indeks yang sama muncul dua kali,
+     aksioma kedua basis lingkungan di Yα memberi lingkungan dasar yang lebih kecil di dalam
+     irisan keduanya. Jadi terdapat lingkungan dasar B3 ⊆ B1 ∩ B2 .
+
+                                                     4
+  3. Untuk setiap Ni pada representasi B, aksioma ketiga basis lingkungan di Yαi memberi Ui ⊆ Ni
+     yang memuat fαi (x) dan mempunyai sifat penyempurnaan lokal. Tetapkan U = i fα−1          (Ui ) ⊆
+                                                                                      T
+                                                                                  T −1 i
+     B. Jika y ∈ U , untuk setiap i pilih Vi ∈ Nαi (fαi (y)) dengan Vi ⊆ Ui . Maka i fαi (Vi ) adalah
+     lingkungan dasar dari y yang termuat dalam U .
+Ketiga aksioma basis lingkungan terpenuhi. Jika I kosong, satu-satunya irisan yang diperlukan
+adalah irisan kosong X, dan argumen yang sama tetap berlaku.
+
+1.5   Pemeriksaan Lema 1.1
+Untuk N ∈ Nα (fα (x)), prabayangan fα−1 (N ) adalah salah satu lingkungan dasar pembangkit di x.
+Jadi setiap fα kontinu.
+Jika k : Z → X kontinu, komposisi fα ◦ k kontinu karena komposisi fungsi kontinu bersifat kontinu.
+Sebaliknya, anggap setiap fα ◦ k kontinu. Untuk lingkungan dasar B = m          −1
+                                                                         T
+                                                                           i=1 fαi (Ni ) di sekitar
+k(z), kita mempunyai
+
+                                                m
+                                   k −1 (B) =       (fαi ◦ k)−1 (Ni ).
+                                                \
+
+                                                i=1
+
+Setiap faktor di ruas kanan memuat suatu lingkungan dasar dari z. Dengan aksioma irisan berhingga
+untuk basis lingkungan di Z, irisannya juga memuat suatu lingkungan dasar dari z. Jadi k kontinu.
+
+1.6   Contoh terpecahkan: penciutan radial
+Definisikan r : R3 \ {0} → S 2 dengan r(x) = x/∥x∥, dan misalkan i : S 2 ,→ R3 \ {0} adalah inklusi.
+Jelas r ◦ i = idS 2 .
+Untuk membandingkan i ◦ r dengan identitas pada R3 \ {0}, gunakan
+
+                                                t
+                                                         
+                           H(x, t) = (1 − t) +     x,              0 ≤ t ≤ 1.
+                                               ∥x∥
+
+Koefisien di dalam kurung selalu positif, sehingga H(x, t) ̸= 0. Selain itu, H(x, 0) = x dan
+H(x, 1) = x/∥x∥ = i(r(x)). Jadi H adalah homotopi dari identitas ke i ◦ r. Jika x ∈ S 2 , maka
+∥x∥ = 1 dan H(x, t) = ((1 − t) + t)x = x untuk setiap t. Homotopi ini menetapkan S 2 titik demi
+titik. Dengan demikian, S 2 memang merupakan retrak deformasi dari R3 \ {0}.
+Pemeriksaan konsep. Contoh ini tidak mengatakan bahwa homeomorfisme boleh mengubah
+dimensi. Contoh ini mengatakan bahwa tipe homotopi dapat sama walaupun dimensi ruang berbeda.
+Perbedaan antara homeomorfisme dan ekuivalensi homotopi akan menjadi pusat unit berikutnya.
+
+
+
+
+                                                      5
+

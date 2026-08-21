@@ -1,0 +1,6 @@
+# Narrow, reproducible build scratch only.
+baseline/build-*/Notes*
+qa/.unit-001-build-check/
+qa/unit-001-render/
+__pycache__/
+*.pyc
