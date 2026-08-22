@@ -94,3 +94,41 @@ O012-TERM-0092,wedge,baji,point_set_topology,admitted,"write S^1 vee S^1 explici
 O012-TERM-0093,quotient map,pemetaan hasil bagi,point_set_topology,admitted,
 O012-TERM-0094,branch cut,potongan cabang,complex_analysis,admitted,
 O012-TERM-0095,locally convex topological vector space,ruang vektor topologis yang konveks lokal,functional_analysis,admitted,
+O012-TERM-0096,typical fibre,serat tipikal,covering_spaces,admitted,"an isomorphism class on a path component; no preferred identification"
+O012-TERM-0097,pointed covering space,ruang penutup bertitik,covering_spaces,admitted,"write (Z,z) to (X,x) with pi(z)=x"
+O012-TERM-0098,category of covering spaces,kategori ruang penutup,covering_spaces,admitted,
+O012-TERM-0099,monodromy,monodromi,covering_spaces,admitted,
+O012-TERM-0100,pullback,tarik balik,category_theory,admitted,
+O012-TERM-0101,fibre product,hasil kali serat,category_theory,admitted,
+O012-TERM-0102,slice category,kategori irisan,category_theory,admitted,
+O012-TERM-0103,trivial covering space,ruang penutup trivial,covering_spaces,admitted,
+O012-TERM-0104,section,penampang,covering_spaces,admitted,
+O012-TERM-0105,path lifting,pengangkatan lintasan,covering_spaces,admitted,
+O012-TERM-0106,lifted path,lintasan terangkat,covering_spaces,admitted,
+O012-TERM-0107,fibre transport,transpor serat,covering_spaces,admitted,
+O012-TERM-0108,path reversal,lintasan balik,covering_spaces,admitted,
+O012-TERM-0109,reparameterisation,reparameterisasi,covering_spaces,admitted,
+O012-TERM-0110,Lebesgue number,bilangan Lebesgue,point_set_topology,admitted,
+O012-TERM-0111,pasting lemma,lema penempelan,point_set_topology,admitted,
+O012-TERM-0112,Riemann surface,permukaan Riemann,complex_analysis,admitted,
+O012-TERM-0113,branched map,pemetaan bercabang,complex_analysis,admitted,
+O012-TERM-0114,critical value,nilai kritis,complex_analysis,admitted,
+"O012-TERM-0115","path space","ruang lintasan","mapping_spaces","admitted","use X^I or P_x^yX according to endpoint conditions"
+"O012-TERM-0116","compact-open topology","topologi kompak-terbuka","mapping_spaces","admitted",""
+"O012-TERM-0117","sup metric","metrik supremum","mapping_spaces","admitted",""
+"O012-TERM-0118","loop space","ruang loop","mapping_spaces","admitted","use Omega_xX for based loops"
+"O012-TERM-0119","evaluation map","pemetaan evaluasi","mapping_spaces","admitted",""
+"O012-TERM-0120","postcomposition","pascakomposisi","mapping_spaces","admitted",""
+"O012-TERM-0121","exponential law","hukum eksponensial","mapping_spaces","admitted","topological currying for locally compact Hausdorff domain I"
+"O012-TERM-0122","lifting operator","operator pengangkatan","covering_spaces","admitted",""
+"O012-TERM-0123","endpoint-fixed homotopy","homotopi yang mempertahankan titik ujung","homotopy_theory","admitted","state all four boundary equations"
+"O012-TERM-0124","semilocally simply connected","terhubung sederhana semilokal","point_set_topology","admitted","course convention additionally includes local path connectedness"
+"O012-TERM-0125","mapping space","ruang pemetaan","mapping_spaces","admitted",""
+"O012-TERM-0126","Hawaiian earring","anting-anting Hawaii","counterexamples","admitted",""
+"O012-TERM-0127","concatenation","konkatenasi","homotopy_theory","admitted","use gamma#eta for chronological traversal of gamma then eta"
+"O012-TERM-0128","associative up to homotopy","asosiatif hingga homotopi","homotopy_theory","admitted",""
+"O012-TERM-0129","fundamental group","grup fundamental","homotopy_theory","admitted",""
+"O012-TERM-0130","right action","aksi kanan","group_actions","admitted","direct covering transport is a right action under chronological concatenation"
+"O012-TERM-0131","permutation representation","representasi permutasi","group_actions","admitted","reverse loops to obtain the conventional left representation"
+"O012-TERM-0132","pointed homotopy class","kelas homotopi bertitik","homotopy_theory","admitted",""
+"O012-TERM-0133","pinch map","pemetaan jepit","homotopy_theory","admitted","S1 to S1 wedge S1"

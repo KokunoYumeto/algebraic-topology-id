@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 
-Status: active production. Source admission is closed. Units 001–004 are translated, independently rereviewed, built, visually/browser checked, backend-complete, published, and anonymously byte-verified. Every earlier reader remains byte-frozen. Production continues at Lecture 5.
+Status: active production. Source admission is closed. Units 001–004 remain translated, independently rereviewed, built, visually/browser checked, backend-complete, published, and anonymously byte-verified. Unit 005 is fully verified and ready for its cumulative publication transaction. Units 006–007 are translated and independently clean but are not yet built or backend-frozen. Every earlier reader remains byte-frozen. The next source cursor is Lecture 8.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -44,6 +44,29 @@ The 109 stable IDs cover 68 semantic blocks. All 14 exercises have complete solu
 
 ## Current production
 
+### Verified cumulative Units 001–005 release candidate
+
+- Source span: Roberts `Notes.tex:134–1304` (Lectures 1–5).
+- Unit 005 source: 22,662 bytes, 663 lines, 30 stable IDs, SHA-256 `7333a7b7a92b9618016412abb5c9b2b2a398538f690d0109d4282289a0719852`.
+- Unit 005 independent review: P1/P2/P3 are zero.
+- Cumulative HTML: 610,594 bytes, SHA-256 `8d3accf480101565409909c05f987f44b73f1c98889128e2f5074a4e049f48f3`.
+- Cumulative PDF: 589,065 bytes, 44 A4 pages, SHA-256 `d6929434a9bc7ae78fb71fc060e9cc54dce85d37e4997ffe042ccbab982e64e2`.
+- Cumulative manifest: 247 bytes, SHA-256 `2910fd87871675730aea7ca33e636a70d330d0f81183e887bad74ea1fd2d5190`.
+- Cumulative QA receipt: 4,768 bytes, SHA-256 `ffb6703e4fe2ebc1c7733dc4f87a32c64c53cbe3ebf326d65a8d2da94765635a`.
+- Visual/browser receipt: 2,877 bytes, SHA-256 `ed8249702d8335b01dc40925af1d5b071fa18d2eef9fe628a5535bd9404fbcdd`.
+- Structural closure: 172 stable IDs, 106 fenced semantic blocks, 1,659 native MathML nodes; all fragment links resolve.
+- Backend: 785 canonical records in 11 JSONL files, bundle SHA-256 `c36095ba31dcdbc8db52e327902bfbfd419a65a3c827da41e847aa8dc55bc5e2`.
+- Final browser QA at 1280 x 720 and 390 x 844 found zero document overflow, 17 formula-local scrollers, centered/reflowing content, and no console warning or error. Fresh Poppler rendering and inspection covered all 44 pages; no clipping, overlap, broken glyph, blank object, or orphan continuation page remains. PDF remains secondary and intentionally untagged.
+
+Publication is the immediate remaining action for this boundary.
+
+### Translated and independently reviewed Units 006–007
+
+- Unit 006: `Notes.tex:1305–1515`; 32,106 bytes; 893 lines; 28 unique stable IDs; SHA-256 `3cb182fdf183bd67e45a898228b995a44d4638e808fdfbe6ea6d6a2a2b889e33`; independent review P1/P2/P3 zero.
+- Unit 007: `Notes.tex:1516–1770`; 22,107 bytes; 749 lines; 23 unique stable IDs; SHA-256 `556cea5445e1b0a51f86f1c0ea0e80c4e00a17d365d95fa530f063cc24856569`; independent review P1/P2/P3 zero.
+- These two sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps. They are source-frozen drafts only: no cumulative reader/backend/publication claim is made yet.
+- Next exact source cursor: `Notes.tex:1771`, the Lecture 8 marker on its opening sentence.
+
 ### Verified cumulative Units 001–004 boundary
 
 - Source span: Roberts `Notes.tex:134–1131` (Lectures 1–4).
@@ -60,8 +83,9 @@ The 109 stable IDs cover 68 semantic blocks. All 14 exercises have complete solu
 - Repository boundary: commit `365dff08d41d6a78a8e712504c9f871b6b386094`, tree `f1284946e6622e80a16c90daaabc210f7d99f6ed`, Pages run `32554998308`, job `96987657938`, deployment `6033695000`, success status `17153629829`.
 - Publication receipt: `PUBLICATION_RECEIPT_UNITS_001_004.json`, 18,957 bytes, SHA-256 `3dc601b8ba540bcafee21127535af879506880d6c8f349738d59b9e1168a2e8a`. Anonymous raw readback matched all 33 files in the release commit; all four Pages readers matched their frozen local bytes.
 
-1. Continue contiguously from line 1132, the Lecture 5 marker; the proof of Proposition 4.3 begins at line 1134.
-2. Continue source order with the same source-ID/backend/build/QA/publication discipline; after the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
+1. Publish and anonymously byte-verify the frozen cumulative Units 001–005 reader; persist its sanitized receipt.
+2. Build Units 001–007 cumulatively with the same source-ID/backend/QA discipline, then continue contiguously from line 1771.
+3. After the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
 
 ## Non-overlap boundary
 

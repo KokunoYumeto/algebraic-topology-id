@@ -4,18 +4,21 @@
   "course_id": "D60",
   "source_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
   "source_path": "Notes.tex",
-  "completed_through_line": 1131,
-  "next_line": 1132,
-  "next_marker": "\\lecturenum{5}; proof of Proposition 4.3 begins on line 1134",
+  "completed_through_line": 1770,
+  "next_line": 1771,
+  "next_marker": "\\lecturenum{8}; opening paragraph begins on the same source line",
   "completed_units": [
     "o012-rbt-l01",
     "o012-rbt-l02",
     "o012-rbt-l03",
-    "o012-rbt-l04"
+    "o012-rbt-l04",
+    "o012-rbt-l05",
+    "o012-rbt-l06",
+    "o012-rbt-l07"
   ],
-  "current_unit": "o012-rbt-l05",
-  "translation_state": "units_001_004_complete_reviewed",
-  "backend_state": "units_001_004_complete_638_records_validated_590d28189a06",
+  "current_unit": "o012-rbt-l08",
+  "translation_state": "units_001_007_complete_reviewed",
+  "backend_state": "units_001_005_complete_785_records_validated_c36095ba31dc",
   "publication_state": "units_001_004_github_pages_verified_365dff08d41d",
   "updated": "2026-08-22"
 }

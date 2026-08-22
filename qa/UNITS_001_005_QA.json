@@ -1,0 +1,174 @@
+{
+  "artifacts": [
+    {
+      "bytes": 610594,
+      "path": "output/html/units-001-005/index.html",
+      "sha256": "8d3accf480101565409909c05f987f44b73f1c98889128e2f5074a4e049f48f3"
+    },
+    {
+      "bytes": 589065,
+      "path": "output/pdf/topologi-aljabar-unit-001-005-id.pdf",
+      "sha256": "d6929434a9bc7ae78fb71fc060e9cc54dce85d37e4997ffe042ccbab982e64e2"
+    }
+  ],
+  "block_counts": {
+    "unit_001": {
+      "definition": 6,
+      "example": 7,
+      "exercise": 2,
+      "lemma": 1,
+      "note": 2,
+      "proof": 1,
+      "proposition": 1
+    },
+    "unit_002": {
+      "definition": 3,
+      "example": 8,
+      "exercise": 7,
+      "lemma": 3,
+      "proof": 1,
+      "question": 1
+    },
+    "unit_003": {
+      "definition": 6,
+      "example": 4,
+      "exercise": 5,
+      "lemma": 2,
+      "proof": 5,
+      "proposition": 3
+    },
+    "unit_004": {
+      "definition": 4,
+      "example": 5,
+      "exercise": 4,
+      "lemma": 1,
+      "proof": 2,
+      "proposition": 3,
+      "question": 1
+    },
+    "unit_005": {
+      "corollary": 3,
+      "definition": 1,
+      "example": 1,
+      "exercise": 4,
+      "lemma": 1,
+      "proof": 5,
+      "proposition": 2,
+      "theorem": 1
+    }
+  },
+  "corrections": {
+    "accessibility_reflows": [
+      "O012-ADV-0070"
+    ],
+    "source_corrections": [
+      "O012-ADV-0054",
+      "O012-ADV-0055",
+      "O012-ADV-0056",
+      "O012-ADV-0057",
+      "O012-ADV-0058",
+      "O012-ADV-0059",
+      "O012-ADV-0060",
+      "O012-ADV-0061",
+      "O012-ADV-0062",
+      "O012-ADV-0063",
+      "O012-ADV-0064",
+      "O012-ADV-0065",
+      "O012-ADV-0066",
+      "O012-ADV-0067",
+      "O012-ADV-0068",
+      "O012-ADV-0069"
+    ]
+  },
+  "course_id": "D60",
+  "gates": {
+    "all_prior_published_artifacts_and_qa_unchanged": true,
+    "authority_exact": true,
+    "html_fragments_and_ids_valid": true,
+    "html_semantic_native_mathml_offline": true,
+    "mastery_check_solution_closure": true,
+    "pdf_metadata_fonts_text_pages_verified": true,
+    "pdf_reproducible_by_build_script": true,
+    "privacy_secret_scan": true,
+    "source_omitted_lemma_proof_present": true,
+    "source_spans_bound": true,
+    "structure_bound": true,
+    "unit_005_corrections_and_reflow_verified": true,
+    "visual_review": "pass_manual_all_44_pages_and_browser_desktop_mobile"
+  },
+  "html": {
+    "fragment_links": 66,
+    "html_ids": 240,
+    "mathml_nodes": 1659,
+    "stable_ids": 172
+  },
+  "known_caveat": "PDF is intentionally secondary and untagged; semantic HTML with native MathML is the primary accessibility surface.",
+  "pdf": {
+    "all_fonts_embedded": true,
+    "all_fonts_tounicode": true,
+    "encrypted": false,
+    "extracted_characters": 87895,
+    "fonts": 23,
+    "lang": "id-ID",
+    "pages": 44,
+    "tagged": false
+  },
+  "reader_sources": [
+    {
+      "bytes": 16179,
+      "path": "source/id-ID/reader-unit-001.md",
+      "sha256": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15",
+      "stable_ids": 29
+    },
+    {
+      "bytes": 25090,
+      "path": "source/id-ID/units/unit-002-lecture-002.md",
+      "sha256": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
+      "stable_ids": 41
+    },
+    {
+      "bytes": 25822,
+      "path": "source/id-ID/units/unit-003-lecture-003.md",
+      "sha256": "993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd",
+      "stable_ids": 39
+    },
+    {
+      "bytes": 24582,
+      "path": "source/id-ID/units/unit-004-lecture-004.md",
+      "sha256": "826fcb368275cdad02f72a5cec951fc8466ba68b09ca0139d72c81a4c5591fea",
+      "stable_ids": 33
+    },
+    {
+      "bytes": 22662,
+      "path": "source/id-ID/units/unit-005-lecture-005.md",
+      "sha256": "7333a7b7a92b9618016412abb5c9b2b2a398538f690d0109d4282289a0719852",
+      "stable_ids": 30
+    }
+  ],
+  "role_id": "O012",
+  "schema_version": "1.0",
+  "source_authority": {
+    "commit_sha1": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_end": 1304,
+    "line_start": 134,
+    "next_boundary": "Lecture 6 marker",
+    "next_line": 1305,
+    "path": "Notes.tex",
+    "tree_sha1": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5"
+  },
+  "status": "pass",
+  "unit_ids": [
+    "o012-rbt-l01",
+    "o012-rbt-l02",
+    "o012-rbt-l03",
+    "o012-rbt-l04",
+    "o012-rbt-l05"
+  ],
+  "witnesses": {
+    "extracted_text_bytes": 128786,
+    "extracted_text_sha256": "83aca1060966c7ca7a7852630c27926754f0d893749aeb80888bbfd00f56a725",
+    "prior_units_001_004_qa_sha256": "1670bbe2377712c9f96b9a68cdb75589ae461512f77cea7ad0c9290193724bd5",
+    "unit_005_independent_review_sha256": "399b81a06ac5701eca6604406c40acaa76f100291ee57f8efeb5344e7d7c8de0",
+    "visual_review_sha256": "ed8249702d8335b01dc40925af1d5b071fa18d2eef9fe628a5535bd9404fbcdd"
+  }
+}
