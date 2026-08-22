@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 
-Status: active production. Source admission is closed. Units 001–004 remain historically published/byte-verified, but GitHub account suspension currently makes the repository API return HTTP 403 and every previously deployed Pages URL return HTTP 404. Units 001–010 are cumulatively built, backend-complete, structurally and independently reviewed, and visually/browser verified as a local release candidate. Unit 011 is independently source-frozen. Every earlier local reader remains byte-frozen. The next source cursor is Lecture 12.
+Status: active production. Source admission is closed. Units 001–004 remain historically published/byte-verified, but GitHub account suspension currently makes the repository API return HTTP 403 and every previously deployed Pages URL return HTTP 404. Units 001–010 are cumulatively built, backend-complete, structurally and independently reviewed, and visually/browser verified as a local release candidate. Units 011–012 are independently source-frozen. Every earlier local reader remains byte-frozen. The next source cursor is Lecture 13.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -95,9 +95,10 @@ Publication was attempted at 2026-08-22T09:00:00+02:00 from local commit `849873
 - Unit 008: `Notes.tex:1771–1946`; 28,466 bytes; 930 lines; 26 unique stable IDs; SHA-256 `8369e74c80e391d73575bbcb7844d3bfa62dd771dbca6258eed02360b20529cc`; independent review P1/P2/P3 zero.
 - Unit 009: `Notes.tex:1947–2093`; 25,524 bytes; 939 lines; 30 unique stable IDs; SHA-256 `16da25dea2f8ac5415b02738663046fb619c27e685042a734059e3150ed5ff18`; independent review P1/P2/P3 zero.
 - Unit 010: `Notes.tex:2094–2272`; 26,432 bytes; 934 lines; 26 unique stable IDs; SHA-256 `e1c6ef961ae2266db86baec6d701dd659a1bf78bdd3601cf5b1c6515bc7d0310`; independent review P1/P2/P3 zero.
-- Unit 011: `Notes.tex:2273–2494`; 28,465 bytes; 959 lines; 38 unique stable IDs; SHA-256 `1cdbe0cae239a4e60a72f25c8814c2e3b5ec26b9119da03624bda7f3ff1ae127`; independent review P1/P2/P3 zero.
-- These six sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps available at each source boundary. Units 006–010 are frozen in the cumulative reader/backend; Unit 011 is source-frozen only.
-- Next exact source cursor: `Notes.tex:2495`, the Lecture 12 marker.
+- Unit 011: `Notes.tex:2273–2494`; 28,465 bytes; 959 lines; 39 unique stable IDs; SHA-256 `1cdbe0cae239a4e60a72f25c8814c2e3b5ec26b9119da03624bda7f3ff1ae127`; independent review P1/P2/P3 zero.
+- Unit 012: `Notes.tex:2495–2726`; 32,850 bytes; 1,024 lines; 37 unique stable IDs; SHA-256 `429831df4a5600c59351516915fb787cd73402d8c11c411869210dbf8aaa7ada`; independent review P1/P2/P3 zero.
+- These seven sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps available at each source boundary. Units 006–010 are frozen in the cumulative reader/backend; Units 011–012 are source-frozen only.
+- Next exact source cursor: `Notes.tex:2727`, the Lecture 13 marker.
 
 ### Verified cumulative Units 001–004 boundary
 
@@ -115,7 +116,7 @@ Publication was attempted at 2026-08-22T09:00:00+02:00 from local commit `849873
 - Repository boundary: commit `365dff08d41d6a78a8e712504c9f871b6b386094`, tree `f1284946e6622e80a16c90daaabc210f7d99f6ed`, Pages run `32554998308`, job `96987657938`, deployment `6033695000`, success status `17153629829`.
 - Publication receipt: `PUBLICATION_RECEIPT_UNITS_001_004.json`, 18,957 bytes, SHA-256 `3dc601b8ba540bcafee21127535af879506880d6c8f349738d59b9e1168a2e8a`. Anonymous raw readback matched all 33 files in the release commit; all four Pages readers matched their frozen local bytes.
 
-1. Checkpoint the frozen reader/backend through Unit 010 and continue contiguously from line 2495.
+1. Continue contiguously from line 2727 and extend the next cumulative reader/backend at a coherent boundary.
 2. Push commit `a3dc793ec3a7f0b1c4c0c4211115ff9caf847be0` and its descendants, then anonymously byte-verify the release when GitHub accepts the account; persist a sanitized receipt.
 3. After the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
 

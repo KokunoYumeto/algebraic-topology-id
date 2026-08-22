@@ -27,4 +27,4 @@ The proof boundary is not overstated. Unit 12 must still prove global homotopy i
 
 ## Structural checks
 
-The current-byte recheck found 38 `o012-rbt-l11-*` stable identifiers, all unique; 25 balanced fenced-div pairs; and 140 balanced display-math delimiter lines. Pandoc parsed the complete file to both its native representation and HTML with MathML through read-only stdout pipelines without warning or error. The independent source-and-mathematics review found no remaining P1, P2, or P3 issue.
+The current-byte recheck found 39 stable identifiers in the Unit 11 namespace, all unique: the root identifier `o012-rbt-l11` plus 38 suffixed identifiers. It also found 25 balanced fenced-div pairs and 140 balanced display-math delimiter lines. Pandoc parsed the complete file to both its native representation and HTML with MathML through read-only stdout pipelines without warning or error. The independent source-and-mathematics review found no remaining P1, P2, or P3 issue.
