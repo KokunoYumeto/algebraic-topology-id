@@ -35,6 +35,8 @@
     "state": "passed",
     "fallback_doi": "10.22146/jmt.56529",
     "receipt_path": "qa/INDONESIAN_TERMINOLOGY_QA_2026-08-22.json",
+    "github_commit": "13df3a00b3016d717428078ee451f2b43c398e7d",
+    "github_readback_receipt": "00_control/GITHUB_TERMINOLOGY_QA_RECEIPT_2026-08-22.json",
     "backend_bundle_sha256": "c5ac458a7f4723460ccebccaf3e5738544883c685a54c9a3cfbef854f2db83c5",
     "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
   },

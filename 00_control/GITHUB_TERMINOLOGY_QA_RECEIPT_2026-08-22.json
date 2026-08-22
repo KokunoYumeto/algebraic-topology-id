@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-GITHUB-TERMINOLOGY-QA-2026-08-22",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "content_commit": "13df3a00b3016d717428078ee451f2b43c398e7d",
+  "remote_ref_verified": "refs/heads/main",
+  "verified_at": "2026-08-22T22:11:53+02:00",
+  "verification": "anonymous raw GitHub byte readback",
+  "status": "pushed_and_anonymously_byte_verified",
+  "files": [
+    {
+      "path": "qa/INDONESIAN_TERMINOLOGY_QA_2026-08-22.json",
+      "bytes": 18244,
+      "sha256": "54317e2c8591af9e3f668aa873281ae2c08275c7dc0dc2f1b66a6e314f7152a3",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/INDONESIAN_TERMINOLOGY_QA_2026-08-22.md",
+      "bytes": 4848,
+      "sha256": "a07dffddfbce672873c9c9f26beb78c3d73d4adf2a0c934dfb1e3f4c5bd2f786",
+      "remote_exact": true
+    },
+    {
+      "path": "source/id-ID/units/unit-015-lecture-015.md",
+      "bytes": 27725,
+      "sha256": "e9ab0565ae460236a69c77389b76d32405873156fc451be9cf95c3749e7fe9d1",
+      "remote_exact": true
+    },
+    {
+      "path": "README.md",
+      "bytes": 9145,
+      "sha256": "7d50d92ec6f80e01079b4ef1a1fe5d128d75d04f1cb7c4542725643e8ae60da0",
+      "remote_exact": true
+    },
+    {
+      "path": "ATTRIBUTION.md",
+      "bytes": 1496,
+      "sha256": "b6401845cf3a3b9748c06c93f7626745779f97fde0530c5b027887c40499bb51",
+      "remote_exact": true
+    }
+  ],
+  "backend_bundle_sha256": "c5ac458a7f4723460ccebccaf3e5738544883c685a54c9a3cfbef854f2db83c5",
+  "frozen_release_bytes_modified": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}
