@@ -13,7 +13,7 @@ rights: "Materi adaptasi dan materi pendamping: CC BY 4.0; lihat atribusi di baw
 
 Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas *Algebraic Topology* karya David Michael Roberts (2019), tepatnya [`Notes.tex` baris 1305--1515 pada commit `b947ad2e9f9e301bfe24590a9db653bc54fa1a53`](https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/blob/b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex). Rentang itu dimulai dengan penanda Kuliah 6 dan aksi lintasan pada serat ruang penutup, lalu berakhir setelah teorema Wada--Roberts tentang keterhubungan lintasan semilokal ruang pemetaan. Baris 1516 memulai Kuliah 7 dan tidak termasuk dalam unit ini. Karya sumber tersedia di bawah [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
-Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, dan pemindahan semua keterangan pinggir ke urutan bacaan utama. Koreksi atau klarifikasi substantif yang diterapkan adalah sebagai berikut: contoh penutup eksponensial dibuat konsisten sebagai $p\colon\mathbb{R}\to S^1$, $p(t)=e^{it}$, sehingga serat dan titik akhir pengangkatan benar; hipotesis bagi pemilihan satu titik serat pada setiap komponen lintasan ruang atas dinyatakan; dua salah ketik pada pembahasan faktorisasi dan homotopi diperbaiki; bukti kekontinuan operator pengangkatan diperbaiki dengan kendali eksplisit pada irisan lembar, menggantikan himpunan yang salah tipe, lingkungan yang tidak didefinisikan, dan klaim kesamaan yang tidak terbukti dalam sumber; contoh manifold memakai bola koordinat yang benar-benar konveks; serta indeks anting-anting Hawaii dibatasi pada $n\geq1$. Semua perbaikan merupakan bagian dari adaptasi independen ini, bukan salinan ungkapan dari sumber lain.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, dan pemindahan semua keterangan pinggir ke urutan bacaan utama. Koreksi atau klarifikasi substantif yang diterapkan adalah sebagai berikut: contoh penutup eksponensial dibuat konsisten sebagai $p\colon\mathbb{R}\to S^1$, $p(t)=e^{it}$, sehingga serat dan titik akhir pengangkatan benar; hipotesis bagi pemilihan satu titik serat pada setiap komponen lintasan ruang atas dinyatakan; dua salah ketik pada pembahasan faktorisasi dan homotopi diperbaiki; bukti kekontinuan operator pengangkatan diperbaiki dengan kendali eksplisit pada irisan lembaran, menggantikan himpunan yang salah tipe, lingkungan yang tidak didefinisikan, dan klaim kesamaan yang tidak terbukti dalam sumber; contoh manifold memakai bola koordinat yang benar-benar konveks; serta indeks anting-anting Hawaii dibatasi pada $n\geq1$. Semua perbaikan merupakan bagian dari adaptasi independen ini, bukan salinan ungkapan dari sumber lain.
 
 Rentang sumber tidak memuat lingkungan latihan. Bagian pendamping penguasaan menambahkan empat pemeriksaan beserta solusi lengkap: aksi loop pada penutup lingkaran, basis topologi kompak-terbuka, kekontinuan dan kesurjektifan transpor, serta contoh-contoh SLSC. Bukti utama Wada--Roberts tidak diberikan dalam sumber, melainkan dirujuk ke *Handout 1*. Agar unit dapat dipelajari mandiri, pendamping menutup celah itu dengan pembuktian khusus kasus $n=1$ yang diturunkan langsung dari definisi SLSC dan diberi label tegas sebagai materi edisi, bukan sebagai teks Roberts atau reproduksi handout. Seluruh materi pendamping tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
 
@@ -323,7 +323,7 @@ P_x^yX\times Z_x
 \longrightarrow Z_y.
 $$
 
-Isomorfisme tengah ada karena $Z_x$ diskret. Jika $Z$ terhubung lintasan dan suatu
+Isomorfisma tengah ada karena $Z_x$ diskret. Jika $Z$ terhubung lintasan dan suatu
 $z\in Z_x$ ditetapkan, kita memperoleh fungsi surjektif
 
 $$
@@ -390,13 +390,13 @@ dari $\widetilde{\gamma}$ dalam $Z^I$. Kita akan membangun lingkungan
 $M(\gamma,z)$ yang dipetakan oleh $\operatorname{Lift}$ ke dalam
 $N_{\widetilde{\gamma}}$.
 
-Karena $\pi$ merupakan homeomorfisme lokal dan $I$ kompak, kita dapat memperhalus partisi menjadi
+Karena $\pi$ merupakan homeomorfisma lokal dan $I$ kompak, kita dapat memperhalus partisi menjadi
 
 $$
 0=s_0<s_1<\cdots<s_m=1
 $$
 
-yang memuat semua titik $t_j$, serta memilih lembar-lembar terbuka
+yang memuat semua titik $t_j$, serta memilih lembaran-lembaran terbuka
 $W_1,\ldots,W_m\subseteq Z$ sedemikian sehingga, untuk setiap $k$,
 
 $$
@@ -411,9 +411,9 @@ $$
 \pi|_{W_k}\colon W_k\xrightarrow{\cong}V_k:=\pi(W_k)
 $$
 
-merupakan homeomorfisme ke himpunan terbuka $V_k\subseteq X$.
+merupakan homeomorfisma ke himpunan terbuka $V_k\subseteq X$.
 
-Pada setiap titik sambung $s_k$, kedua lembar $W_k$ dan $W_{k+1}$ memuat
+Pada setiap titik sambung $s_k$, kedua lembaran $W_k$ dan $W_{k+1}$ memuat
 $\widetilde{\gamma}(s_k)$. Pilih lingkungan terbuka
 
 $$
@@ -453,7 +453,7 @@ $$
 
 adalah pengangkatan $\eta|_{[s_0,s_1]}$ yang berawal di $w$. Oleh keunikan pengangkatan,
 $\widetilde{\eta}([s_0,s_1])\subseteq W_1$. Karena
-$\eta(s_1)\in R_1$ dan prapeta $R_1$ pada lembar $W_1$ termuat dalam
+$\eta(s_1)\in R_1$ dan prapeta $R_1$ pada lembaran $W_1$ termuat dalam
 $Q_1\subseteq W_2$, titik $\widetilde{\eta}(s_1)$ juga berada dalam $W_2$.
 
 Argumen yang sama dapat diulang secara induktif. Kita memperoleh
@@ -482,7 +482,7 @@ Setiap lingkungan dasar dari $\widetilde{\gamma}$ mempunyai prapeta yang merupak
 
 ::: {.remark #o012-rbt-l06-rem-001}
 **Catatan 6.1.** Keunikan pengangkatan menunjukkan bahwa
-$\operatorname{Lift}$ sebenarnya bijektif, bahkan homeomorfisme. Inversnya adalah
+$\operatorname{Lift}$ sebenarnya bijektif, bahkan homeomorfisma. Inversnya adalah
 
 $$
 (\pi_*,\operatorname{ev}_0)
@@ -544,7 +544,7 @@ $$
 
 Lintasan-lintasan awal berada di dalam $N$, sedangkan homotopinya diperbolehkan bergerak di seluruh $X$. Ini adalah syarat teknis terakhir pada ruang yang diperlukan dalam bagian mata kuliah ini.
 
-Peringatan istilah: konvensi ini menggabungkan dua syarat yang sering dipisahkan dalam pustaka, yakni *terhubung lintasan lokal* dan *terhubung sederhana semilokal* dalam arti standar. Dengan keterhubungan lintasan lokal, Definisi 6.2 setara dengan adanya basis lingkungan terhubung lintasan $N$ sehingga homomorfisme yang diinduksi inklusi $\pi_1(N,u)\to\pi_1(X,u)$ trivial untuk setiap $u\in N$. Istilah SLSC tanpa syarat tambahan dalam arti standar tidak dengan sendirinya menyiratkan SLPC.
+Peringatan istilah: konvensi ini menggabungkan dua syarat yang sering dipisahkan dalam pustaka, yakni *terhubung lintasan lokal* dan *terhubung sederhana semilokal* dalam arti standar. Dengan keterhubungan lintasan lokal, Definisi 6.2 setara dengan adanya basis lingkungan terhubung lintasan $N$ sehingga homomorfisma yang diinduksi inklusi $\pi_1(N,u)\to\pi_1(X,u)$ trivial untuk setiap $u\in N$. Istilah SLSC tanpa syarat tambahan dalam arti standar tidak dengan sendirinya menyiratkan SLPC.
 :::
 
 Setiap ruang SLSC bersifat SLPC, sebab basis lingkungan dalam Definisi 6.2 khususnya terdiri atas himpunan-himpunan terhubung lintasan.

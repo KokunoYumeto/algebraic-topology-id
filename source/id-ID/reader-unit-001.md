@@ -23,7 +23,7 @@ $$
 \{\text{Ruang}\}\longrightarrow\{\text{Objek aljabar}\},
 $$
 
-atau, lebih tepatnya, pemetaan semacam itu yang “berperilaku baik”. Pemetaan tersebut juga harus mengirim fungsi kontinu antarruang ke pemetaan aljabar dengan tetap menghormati komposisi (jadi, pemetaan itu berupa *funktor*). Selain itu, ruang yang dibangun dari ruang-ruang yang lebih sederhana semestinya dikirim ke objek aljabar yang dibangun secara serasi dari komponen-komponen yang lebih sederhana.
+atau, lebih tepatnya, pemetaan semacam itu yang “berperilaku baik”. Pemetaan tersebut juga harus mengirim fungsi kontinu antarruang ke pemetaan aljabar dengan tetap menghormati komposisi (jadi, pemetaan itu berupa *fungtor*). Selain itu, ruang yang dibangun dari ruang-ruang yang lebih sederhana semestinya dikirim ke objek aljabar yang dibangun secara serasi dari komponen-komponen yang lebih sederhana.
 
 Di sini, “ruang” secara kasar berarti ruang topologis hingga deformasi—biasanya hingga homotopi, meskipun tidak selalu demikian. Kelas-kelas ekuivalensi semacam ini disebut *tipe homotopi*. “Objek aljabar” dapat berarti grup (abelian), gelanggang, modul, atau bahkan kompleks rantai dari objek-objek tersebut.
 
@@ -139,7 +139,7 @@ Ingat bahwa kontinuitas untuk topologi berarti $f^{-1}(U)$ terbuka untuk setiap 
 Sebagai pemeriksaan kewajaran, fungsi identitas $\operatorname{id}_X$ pada ruang $X$ memang kontinu. Setiap fungsi *menuju* ruang indiskret juga kontinu, demikian pula setiap fungsi *dari* ruang diskret.
 
 ::: {.definition #o012-rbt-l01-def-005}
-**Definisi 1.5 (homeomorfisme).** Fungsi kontinu $f\colon X\to Y$ disebut *homeomorfisme* jika terdapat fungsi kontinu $g\colon Y\to X$ dengan
+**Definisi 1.5 (homeomorfisma).** Fungsi kontinu $f\colon X\to Y$ disebut *homeomorfisma* jika terdapat fungsi kontinu $g\colon Y\to X$ dengan
 $g\circ f=\operatorname{id}_X$ dan $f\circ g=\operatorname{id}_Y$.
 Dalam keadaan ini, $X$ dan $Y$ disebut *homeomorfik*.
 :::
@@ -222,4 +222,4 @@ $$
 Koefisien di dalam kurung selalu positif, sehingga $H(x,t)\ne0$. Selain itu,
 $H(x,0)=x$ dan $H(x,1)=x/\lVert x\rVert=i(r(x))$. Jadi $H$ adalah homotopi dari identitas ke $i\circ r$. Jika $x\in S^2$, maka $\lVert x\rVert=1$ dan $H(x,t)=((1-t)+t)x=x$ untuk setiap $t$. Homotopi ini menetapkan $S^2$ titik demi titik. Dengan demikian, $S^2$ memang merupakan retrak deformasi dari $\mathbb{R}^3\setminus\{0\}$.
 
-**Pemeriksaan konsep.** Contoh ini tidak mengatakan bahwa homeomorfisme boleh mengubah dimensi. Contoh ini mengatakan bahwa *tipe homotopi* dapat sama walaupun dimensi ruang berbeda. Perbedaan antara homeomorfisme dan ekuivalensi homotopi akan menjadi pusat unit berikutnya.
+**Pemeriksaan konsep.** Contoh ini tidak mengatakan bahwa homeomorfisma boleh mengubah dimensi. Contoh ini mengatakan bahwa *tipe homotopi* dapat sama walaupun dimensi ruang berbeda. Perbedaan antara homeomorfisma dan ekuivalensi homotopi akan menjadi pusat unit berikutnya.

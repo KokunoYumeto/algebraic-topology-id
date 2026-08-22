@@ -27,8 +27,16 @@
     "o012-rbt-l17"
   ],
   "current_unit": "o012-rbt-l18",
-  "translation_state": "units_001_017_complete_reviewed",
-  "backend_state": "units_001_013_complete_1762_records_validated_bb8512f56a8b",
-  "publication_state": "units_001_013_public_and_anonymously_byte_verified_on_github_pages_zenodo_10_5281_zenodo_22061490_and_figshare_10_6084_m9_figshare_33314982_v1_collection_v35; github_main_d4694835a6cf6bc12a46973efdbb263fead9182a; sources_014_017_frozen; next_publication_only_at_new_substantial_verified_boundary; never_duplicate_repo",
+  "translation_state": "units_001_017_complete_reviewed_and_same_field_indonesian_terminology_qa_passed",
+  "backend_state": "units_001_013_complete_1762_records_validated_c5ac458a7f47_after_terminology_qa; frozen_public_release_snapshot_remains_bb8512f56a8b",
+  "publication_state": "units_001_013_public_and_anonymously_byte_verified_on_github_pages_zenodo_10_5281_zenodo_22061490_and_figshare_10_6084_m9_figshare_33314982_v1_collection_v35; release_content_commit_d4694835a6cf6bc12a46973efdbb263fead9182a; receipts_public_at_github_main_332a361c0428df72ba7d3a4470f5eae1886c8db0; live_sources_001_017_refined_by_terminology_qa_without_mutating_frozen_release_bytes; next_publication_only_at_new_substantial_verified_boundary; never_duplicate_repo",
+  "terminology_qa": {
+    "qa_id": "O012-ID-TERMINOLOGY-QA-2026-08-22",
+    "state": "passed",
+    "fallback_doi": "10.22146/jmt.56529",
+    "receipt_path": "qa/INDONESIAN_TERMINOLOGY_QA_2026-08-22.json",
+    "backend_bundle_sha256": "c5ac458a7f4723460ccebccaf3e5738544883c685a54c9a3cfbef854f2db83c5",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
   "updated": "2026-08-22"
 }

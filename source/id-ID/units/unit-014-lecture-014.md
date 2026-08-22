@@ -39,7 +39,7 @@ maknanya tidak bergantung pada posisi visual.
 Sejumlah cacat sumber diperbaiki secara independen. Dua aksi pada contoh
 lingkaran dibatasi ke grup bertitik $\pi_1(S^1,1)$ dan kodomainnya ditulis
 sebagai grup permutasi himpunan, bukan $\operatorname{Aut}$ yang dapat keliru
-dibaca sebagai automorfisme grup siklik. Aksi monodromi langsung tetap berupa
+dibaca sebagai automorfisma grup siklik. Aksi monodromi langsung tetap berupa
 aksi kanan, konsisten dengan urutan konkatenasi kronologis yang ditetapkan pada
 Unit 7--10. Karena itu kategori himpunan-$G$ ditulis sebagai kategori aksi
 kanan dan dekomposisi orbit memakai koset kanan
@@ -83,7 +83,7 @@ transpor titik akhir langsung pada serat adalah aksi **kanan**.
 
 ## Pemetaan ruang penutup dan transformasi natural {#o012-rbt-l14-s01}
 
-Ingat bahwa setiap ruang penutup $\pi\colon Z\to X$ memberi funktor
+Ingat bahwa setiap ruang penutup $\pi\colon Z\to X$ memberi fungtor
 monodromi
 
 $$
@@ -100,11 +100,11 @@ Di sini $\gamma_*^Z(z)$ adalah titik akhir dari satu-satunya pengangkatan
 $\gamma$ yang berawal di $z$.
 
 Sekarang ambil dua ruang penutup $\pi_1\colon Z_1\to X$ dan
-$\pi_2\colon Z_2\to X$, serta suatu morfisme $f\colon Z_1\to Z_2$ di
+$\pi_2\colon Z_2\to X$, serta suatu morfisma $f\colon Z_1\to Z_2$ di
 $\operatorname{Cov}_X$.
 
 ::: {.figure #o012-rbt-l14-fig-001}
-**Diagram 14.1 (morfisme di atas ruang dasar).** Data panahnya adalah
+**Diagram 14.1 (morfisma di atas ruang dasar).** Data panahnya adalah
 
 $$
 Z_1\xrightarrow{\ f\ }Z_2,
@@ -177,18 +177,18 @@ $$
 :::
 
 Jadi keluarga $(f_x)_{x\in X}$ merupakan transformasi natural
-$\rho_{Z_1}\Rightarrow\rho_{Z_2}$. Ingat bahwa kategori funktor
-$[\mathcal C,\mathbf{Set}]$ mempunyai funktor $\mathcal C\to\mathbf{Set}$
-sebagai objek dan transformasi natural sebagai morfisme.
+$\rho_{Z_1}\Rightarrow\rho_{Z_2}$. Ingat bahwa kategori fungtor
+$[\mathcal C,\mathbf{Set}]$ mempunyai fungtor $\mathcal C\to\mathbf{Set}$
+sebagai objek dan transformasi natural sebagai morfisma.
 
 ::: {.proposition #o012-rbt-l14-prop-001}
-**Proposisi 14.1 (funktor monodromi).** Penetapan
+**Proposisi 14.1 (fungtor monodromi).** Penetapan
 
 $$
 (Z\xrightarrow{\pi}X)\longmapsto\rho_Z
 $$
 
-mendefinisikan funktor
+mendefinisikan fungtor
 
 $$
 \operatorname{Cov}_X
@@ -208,7 +208,7 @@ $$
 Z_1\xrightarrow{f}Z_2\xrightarrow{g}Z_3
 $$
 
-adalah dua morfisme ruang penutup di atas $X$, maka pada setiap $x\in X$
+adalah dua morfisma ruang penutup di atas $X$, maka pada setiap $x\in X$
 
 $$
 (g\circ f)_x=g_x\circ f_x.
@@ -235,7 +235,7 @@ $$
 
 Pemetaan $p\colon\mathbb R\to S^1$ dan
 $q_n\colon S^1\to S^1$ mendefinisikan ruang penutup, sedangkan
-$F_n\colon\mathbb R\to S^1$ adalah morfisme di antara keduanya.
+$F_n\colon\mathbb R\to S^1$ adalah morfisma di antara keduanya.
 
 ::: {.figure #o012-rbt-l14-fig-003}
 **Diagram 14.3 (ruang penutup eksponensial menuju penutup pangkat-$n$).**
@@ -288,8 +288,8 @@ k&\longmapsto\overline{k}.
 \end{aligned}
 $$
 
-Sebuah morfisme dari $1$ ke dirinya sendiri di $\Pi_1(S^1)$ adalah kelas
-loop. Setelah memilih generator berarah positif, grup automorfisme objek itu
+Sebuah morfisma dari $1$ ke dirinya sendiri di $\Pi_1(S^1)$ adalah kelas
+loop. Setelah memilih generator berarah positif, grup automorfisma objek itu
 diidentifikasi dengan
 
 $$
@@ -344,7 +344,7 @@ Ini adalah kasus khusus naturalitas transformasi yang diinduksi oleh $F_n$.
 ## Mereduksi pertanyaan klasifikasi {#o012-rbt-l14-s03}
 
 ::: {.question #o012-rbt-l14-q-001}
-**Pertanyaan 14.1.** Funktor atau representasi manakah
+**Pertanyaan 14.1.** Fungtor atau representasi manakah
 
 $$
 \Pi_1(X)\longrightarrow\mathbf{Set}
@@ -357,7 +357,7 @@ Setiap himpunan jelas dapat direalisasikan sebagai himpunan komponen terhubung
 suatu ruang. Unit 13 juga menjelaskan konstruksi pushout yang, untuk setiap
 grup $G$, menghasilkan suatu ruang bertitik $(Y,*)$ dengan
 $\pi_1(Y,*)\cong G$. Akan tetapi, kedua fakta realisasi tersebut belum
-menunjukkan cara membangun ruang penutup dari sebuah funktor yang diberikan
+menunjukkan cara membangun ruang penutup dari sebuah fungtor yang diberikan
 
 $$
 \Pi_1(X)\longrightarrow\mathbf{Set}.
@@ -418,7 +418,7 @@ $$
 i\colon\mathcal C\hookrightarrow\mathcal D
 $$
 
-adalah inklusi subkategori penuh sekaligus ekuivalensi, maka funktor restriksi
+adalah inklusi subkategori penuh sekaligus ekuivalensi, maka fungtor restriksi
 
 $$
 \begin{aligned}
@@ -456,8 +456,8 @@ $$
 $$
 
 ::: {.lemma #o012-rbt-l14-lem-002}
-**Lema 14.2 (funktor dari koproduk kategori).** Untuk setiap keluarga
-kategori $(\mathcal C_i)_{i\in I}$ terdapat isomorfisme kategori
+**Lema 14.2 (fungtor dari koproduk kategori).** Untuk setiap keluarga
+kategori $(\mathcal C_i)_{i\in I}$ terdapat isomorfisma kategori
 
 $$
 \left[\coprod_{i\in I}\mathcal C_i,\mathbf{Set}\right]
@@ -465,8 +465,8 @@ $$
 \prod_{i\in I}[\mathcal C_i,\mathbf{Set}].
 $$
 
-Sebuah objek di ruas kanan adalah satu tupel funktor, tepat satu dari setiap
-kategori faktor; morfismenya adalah tupel transformasi natural dengan indeks
+Sebuah objek di ruas kanan adalah satu tupel fungtor, tepat satu dari setiap
+kategori faktor; morfismanya adalah tupel transformasi natural dengan indeks
 yang sama.
 :::
 
@@ -505,7 +505,7 @@ p\cdot e=p,
 p\cdot(gh)=(p\cdot g)\cdot h.
 $$
 
-Morfisme $f\colon S\to T$ adalah fungsi ekuivarian, yakni
+Morfisma $f\colon S\to T$ adalah fungsi ekuivarian, yakni
 
 $$
 f(p\cdot g)=f(p)\cdot g
@@ -516,7 +516,7 @@ untuk semua $p\in S$ dan $g\in G$.
 
 Lebih umum, jika $\Gamma$ adalah grupoid dan
 $\rho\colon\Gamma\to\mathbf{Set}$ suatu representasi, maka untuk setiap
-objek $x\in\Gamma$ terdapat aksi oleh grup automorfisme $\Gamma(x,x)$ pada
+objek $x\in\Gamma$ terdapat aksi oleh grup automorfisma $\Gamma(x,x)$ pada
 $\rho(x)$. Dengan urutan produk kronologis, aksi langsung itu adalah aksi
 kanan. Jika $\alpha\colon\rho\Rightarrow\rho'$ adalah transformasi natural,
 komponennya
@@ -529,8 +529,8 @@ ekuivarian terhadap aksi $\Gamma(x,x)$. Evaluasi pada $x$ juga mempertahankan
 identitas dan komposisi transformasi natural.
 
 ::: {.lemma #o012-rbt-l14-lem-003}
-**Lema 14.3 (funktor dari grupoid satu objek).** Dengan konvensi produk
-kronologis, konstruksi sebelumnya memberi isomorfisme kategori
+**Lema 14.3 (fungtor dari grupoid satu objek).** Dengan konvensi produk
+kronologis, konstruksi sebelumnya memberi isomorfisma kategori
 
 $$
 [\mathbf BG,\mathbf{Set}]
@@ -558,7 +558,7 @@ $$
 $$
 
 Ekuivalensi pertama bergantung pada pilihan titik $a_i$ dan, ketika invers
-semu ditulis eksplisit, pada pilihan lintasan menuju titik-titik itu. Funktor
+semu ditulis eksplisit, pada pilihan lintasan menuju titik-titik itu. Fungtor
 monodromi asli $\rho_Z\colon\Pi_1(X)\to\mathbf{Set}$ tidak memerlukan pilihan
 titik pangkal; hasil-hasil dari dua pilihan berbeda berhubungan melalui
 ekuivalensi natural.
@@ -566,7 +566,7 @@ ekuivalensi natural.
 Komposisikan rantai tadi dengan Proposisi 14.1.
 
 ::: {.equation #o012-rbt-l14-eq-fibre-functor}
-**Funktor serat komponen.** Funktor yang dihasilkan adalah
+**Fungtor serat komponen.** Fungtor yang dihasilkan adalah
 
 $$
 \begin{aligned}
@@ -603,7 +603,7 @@ H_j:=\operatorname{Stab}(p_j)
 \{g\in G:p_j\cdot g=p_j\}.
 $$
 
-Maka terdapat isomorfisme himpunan-$G$ kanan
+Maka terdapat isomorfisma himpunan-$G$ kanan
 
 $$
 \begin{aligned}
@@ -628,7 +628,7 @@ itulah hipotesis yang kelak dipakai pada teorema klasifikasi.
 Dalam konvensi mata kuliah ini, SLSC sudah mencakup adanya basis lingkungan
 yang terhubung lintasan. Jadi $X$ terhubung lintasan lokal. Jika
 $\pi\colon Z\to X$ adalah ruang penutup dan $z\in Z$, pilih lingkungan
-terhubung lintasan $U$ dari $\pi(z)$ yang tertutup secara merata. Lembaran
+terhubung lintasan $U$ dari $\pi(z)$ yang tertutup rata. Lembaran
 $V\subseteq\pi^{-1}(U)$ yang memuat $z$ homeomorfik dengan $U$. Lembaran
 semacam itu membentuk basis lingkungan terhubung lintasan di $Z$. Karena itu
 $Z$ terhubung lintasan lokal, sehingga komponen terhubung dan komponen
@@ -652,8 +652,8 @@ memberi bukti bagi lema yang tidak dibuktikan sumber. Seluruh solusi disusun
 mandiri dan tersedia di bawah CC BY 4.0.
 
 ::: {.exercise #o012-rbt-l14-mcheck-001 data-origin="edition-original"}
-**Pemeriksaan penguasaan 14.1 (naturalitas dan funktorialitas).** Misalkan
-$f\colon Z_1\to Z_2$ dan $g\colon Z_2\to Z_3$ adalah morfisme ruang penutup di
+**Pemeriksaan penguasaan 14.1 (naturalitas dan fungtorialitas).** Misalkan
+$f\colon Z_1\to Z_2$ dan $g\colon Z_2\to Z_3$ adalah morfisma ruang penutup di
 atas $X$.
 
 1. Buktikan bahwa $f_y\circ\gamma_*^{Z_1}
@@ -693,7 +693,7 @@ $$
 $$
 
 sehingga keluarga tersebut natural. Perhitungan per komponen juga menunjukkan
-bahwa funktor monodromi mempertahankan komposisi.
+bahwa fungtor monodromi mempertahankan komposisi.
 
 ::: {.exercise #o012-rbt-l14-mcheck-002 data-origin="edition-original"}
 **Pemeriksaan penguasaan 14.2 (solusi Latihan Sumber 14.1).** Jika
@@ -704,14 +704,14 @@ $$
 i^*\colon[\mathcal D,\mathbf{Set}]\to[\mathcal C,\mathbf{Set}]
 $$
 
-dan jelaskan mengapa hasilnya hanya bergantung pada pilihan hingga isomorfisme
+dan jelaskan mengapa hasilnya hanya bergantung pada pilihan hingga isomorfisma
 natural.
 :::
 
 ## Solusi Pemeriksaan 14.2 {#o012-rbt-l14-sol-002}
 
-Karena $i$ ekuivalensi, pilih funktor invers semu
-$r\colon\mathcal D\to\mathcal C$ beserta isomorfisme natural
+Karena $i$ ekuivalensi, pilih fungtor invers semu
+$r\colon\mathcal D\to\mathcal C$ beserta isomorfisma natural
 
 $$
 ri\cong\operatorname{id}_{\mathcal C},
@@ -728,7 +728,7 @@ r^*\colon[\mathcal C,\mathbf{Set}]\longrightarrow
 F\longmapsto F\circ r.
 $$
 
-Pra-komposisi isomorfisme $ri\cong\operatorname{id}_{\mathcal C}$ dengan
+Pra-komposisi isomorfisma $ri\cong\operatorname{id}_{\mathcal C}$ dengan
 setiap $F$ memberi
 
 $$
@@ -741,15 +741,15 @@ $$
 r^*i^*(H)=H\circ i\circ r\cong H
 $$
 
-untuk $H\colon\mathcal D\to\mathbf{Set}$. Kedua isomorfisme natural juga
+untuk $H\colon\mathcal D\to\mathbf{Set}$. Kedua isomorfisma natural juga
 berlaku pada transformasi natural, sehingga $i^*$ dan $r^*$ merupakan
-ekuivalensi invers semu. Pilihan invers semu lain menghasilkan funktor yang
-terhubung oleh isomorfisme natural; karena itu reduksi ini bukan identifikasi
+ekuivalensi invers semu. Pilihan invers semu lain menghasilkan fungtor yang
+terhubung oleh isomorfisma natural; karena itu reduksi ini bukan identifikasi
 kanonik harfiah.
 
 ::: {.exercise #o012-rbt-l14-mcheck-003 data-origin="edition-original"}
 **Pemeriksaan penguasaan 14.3 (solusi Latihan Sumber 14.2).** Bangun kedua
-arah isomorfisme
+arah isomorfisma
 
 $$
 \left[\coprod_i\mathcal C_i,\mathbf{Set}\right]
@@ -757,7 +757,7 @@ $$
 \prod_i[\mathcal C_i,\mathbf{Set}]
 $$
 
-pada objek dan morfisme.
+pada objek dan morfisma.
 :::
 
 ## Solusi Pemeriksaan 14.3 {#o012-rbt-l14-sol-003}
@@ -772,12 +772,12 @@ $$
 Transformasi natural $\alpha\colon F\Rightarrow G$ juga membatasi menjadi
 tupel $(\alpha_i\colon F_i\Rightarrow G_i)_i$.
 
-Sebaliknya, dari tupel $(F_i)_i$, definisikan $F$ pada objek atau morfisme yang
+Sebaliknya, dari tupel $(F_i)_i$, definisikan $F$ pada objek atau morfisma yang
 berasal dari $\mathcal C_i$ dengan memakai $F_i$. Definisi ini lengkap karena
-koproduk kategori tidak memiliki morfisme di antara dua faktor berbeda.
+koproduk kategori tidak memiliki morfisma di antara dua faktor berbeda.
 Tupel transformasi natural dirakit dengan cara yang sama. Pembatasan sesudah
 perakitan dan perakitan sesudah pembatasan sama dengan identitas, baik pada
-objek maupun morfisme. Jadi yang diperoleh benar-benar isomorfisme kategori.
+objek maupun morfisma. Jadi yang diperoleh benar-benar isomorfisma kategori.
 
 ::: {.exercise #o012-rbt-l14-mcheck-004 data-origin="edition-original"}
 **Pemeriksaan penguasaan 14.4 (lema grupoid satu objek).** Buktikan secara
@@ -792,15 +792,15 @@ untuk produk kronologis, termasuk pernyataan tentang transformasi natural.
 
 ## Solusi Pemeriksaan 14.4 {#o012-rbt-l14-sol-004}
 
-Grupoid $\mathbf BG$ mempunyai satu objek $*$ dan morfisme $g\in G$. Produk
-$gh$ berarti menempuh $g$ dahulu, lalu $h$. Dari funktor
+Grupoid $\mathbf BG$ mempunyai satu objek $*$ dan morfisma $g\in G$. Produk
+$gh$ berarti menempuh $g$ dahulu, lalu $h$. Dari fungtor
 $F\colon\mathbf BG\to\mathbf{Set}$, ambil $S=F(*)$ dan definisikan
 
 $$
 p\cdot g:=F(g)(p).
 $$
 
-Hukum funktor untuk urutan kronologis adalah
+Hukum fungtor untuk urutan kronologis adalah
 
 $$
 F(gh)=F(h)\circ F(g).
@@ -820,7 +820,7 @@ himpunan-$G$ kanan.
 
 Sebaliknya, dari aksi kanan pada $S$, tetapkan $F(*)=S$ dan
 $F(g)(p)=p\cdot g$. Kedua hukum aksi tepat menjadi hukum identitas dan
-komposisi funktor. Sebuah transformasi natural antara dua funktor hanya
+komposisi fungtor. Sebuah transformasi natural antara dua fungtor hanya
 mempunyai satu komponen $u\colon S\to T$, dan naturalitas pada $g$ menyatakan
 
 $$
@@ -828,7 +828,7 @@ u(p\cdot g)=u(p)\cdot g.
 $$
 
 Jadi transformasi natural tepat sama dengan fungsi ekuivarian. Kedua
-konstruksi saling invers pada objek dan morfisme.
+konstruksi saling invers pada objek dan morfisma.
 
 ::: {.exercise #o012-rbt-l14-mcheck-005 data-origin="edition-original"}
 **Pemeriksaan penguasaan 14.5 (audit tipe contoh lingkaran).** Untuk contoh
@@ -866,7 +866,7 @@ $$
 jadi $r$ ekuivarian.
 
 Secara umum operator aksi kanan memenuhi
-$R_{gh}=R_h\circ R_g$, sedangkan homomorfisme aksi kiri biasa memenuhi urutan
+$R_{gh}=R_h\circ R_g$, sedangkan homomorfisma aksi kiri biasa memenuhi urutan
 operator yang berlawanan. Pada $\mathbb Z$, penjumlahan dan semua translasi
 yang bersangkutan komutatif, sehingga
 
@@ -938,8 +938,8 @@ $$
 sehingga $\Phi$ ekuivarian.
 
 Terakhir, SLSC dalam konvensi mata kuliah memberi basis lingkungan terhubung
-lintasan pada $X$. Di atas lingkungan yang tertutup secara merata, setiap
-lembar ruang penutup homeomorfik dengan lingkungan tersebut. Lembaran-lembaran
+lintasan pada $X$. Di atas lingkungan yang tertutup rata, setiap
+lembaran ruang penutup homeomorfik dengan lingkungan tersebut. Lembaran-lembaran
 ini memberi basis lingkungan terhubung lintasan pada $Z$, sehingga $Z$
 terhubung lintasan lokal. Pada ruang terhubung lintasan lokal, setiap komponen
 lintasan terbuka; suatu komponen terhubung tidak dapat menjadi gabungan saling

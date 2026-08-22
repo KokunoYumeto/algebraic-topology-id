@@ -8,4 +8,8 @@ Upstream and this Indonesian adaptation are available under the [Creative Common
 
 The worked mastery and bridge material newly authored for this lane is also released under CC BY 4.0 unless a component record states otherwise.
 
+## Production provenance
+
+The Indonesian edition's translation, semantic restructuring, quality assurance, build engineering, and release preparation were carried out with **OpenAI Codex gpt-5.6-sol, Ultra**, acting at Floris's direction. This process note does not replace or diminish the source author's credit, the human direction of the edition, or any component-specific attribution and license notice.
+
 This is an independent edition. It is not sponsored, endorsed, or granted official status by David Michael Roberts, MIT, Haynes Miller, Sanath Devalapurkar, Yeheli Fomberg, Nir Lazarovich, or their institutions.

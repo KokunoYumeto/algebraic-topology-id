@@ -1,6 +1,6 @@
 ---
 title: "Topologi Aljabar"
-subtitle: "Unit 7: Konkatenasi Loop, Grup Fundamental, dan Funktorialitas"
+subtitle: "Unit 7: Konkatenasi Loop, Grup Fundamental, dan Fungtorialitas"
 author:
   - "David Michael Roberts (materi sumber)"
   - "Edisi Bahasa Indonesia dengan pendamping penguasaan"
@@ -11,24 +11,24 @@ rights: "Materi adaptasi dan materi pendamping: CC BY 4.0; lihat atribusi di baw
 
 # Tentang unit ini {.unnumbered #o012-rbt-l07-notice}
 
-Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas *Algebraic Topology* karya David Michael Roberts (2019), tepatnya [`Notes.tex` baris 1516--1770 pada commit `b947ad2e9f9e301bfe24590a9db653bc54fa1a53`](https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/blob/b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex#L1516-L1770). Rentang itu dimulai dengan penanda Kuliah 7 dan pertanyaan tentang transpor sepanjang lintasan yang dikonkatenasi, lalu berakhir setelah funktorialitas grup fundamental. Baris 1771 memulai Kuliah 8 dan tidak termasuk dalam unit ini. Karya sumber tersedia di bawah [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
+Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas *Algebraic Topology* karya David Michael Roberts (2019), tepatnya [`Notes.tex` baris 1516--1770 pada commit `b947ad2e9f9e301bfe24590a9db653bc54fa1a53`](https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/blob/b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex#L1516-L1770). Rentang itu dimulai dengan penanda Kuliah 7 dan pertanyaan tentang transpor sepanjang lintasan yang dikonkatenasi, lalu berakhir setelah fungtorialitas grup fundamental. Baris 1771 memulai Kuliah 8 dan tidak termasuk dalam unit ini. Karya sumber tersedia di bawah [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
 Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, serta pemindahan tugas dan gambar dari catatan pinggir ke urutan bacaan utama. Sepuluh grafik TikZ pinggir diganti dengan rumus eksplisit bagi keenam pemetaan parameter $\phi,\psi,\alpha,\beta,\mu,\nu$; dengan demikian semua informasi matematisnya tetap tersedia dalam bentuk yang dapat dibaca perangkat bantu. Koreksi substantif yang diterapkan adalah: notasi serat $Z_{\gamma(0)}$ diperbaiki; label dua grafik asosiativitas diselaraskan dengan rumusnya; homotopi afin yang keliru karena mengulang $\phi$ diperbaiki agar benar-benar menginterpolasi $\phi$ dan $\psi$; kata “terhubung” pada contoh $S^2$ diperkuat menjadi “terhubung lintasan,” sesuai hipotesis yang dipakai; dan arah aksi transpor dijelaskan secara eksplisit sebagai aksi kanan—atau, setelah membalik loop, sebagai representasi kiri—agar urutan komposisi tidak tersamarkan.
 
-Rentang sumber tidak memberikan bukti bagi lema transpor-konkatenasi, proposisi funktor ruang loop, atau akibat funktorialitas $\pi_1$. Kekontinuan operasi konkatenasi diserahkan ke *Assignment 2*, dan identifikasi dengan kelas homotopi bertitik $S^1\to X$ diberikan sebagai latihan pinggir. Bagian pendamping penguasaan menutup semuanya dengan empat pemeriksaan beserta solusi lengkap dan mandiri. Seluruh materi pendamping tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
+Rentang sumber tidak memberikan bukti bagi lema transpor-konkatenasi, proposisi fungtor ruang loop, atau akibat fungtorialitas $\pi_1$. Kekontinuan operasi konkatenasi diserahkan ke *Assignment 2*, dan identifikasi dengan kelas homotopi bertitik $S^1\to X$ diberikan sebagai latihan pinggir. Bagian pendamping penguasaan menutup semuanya dengan empat pemeriksaan beserta solusi lengkap dan mandiri. Seluruh materi pendamping tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
 
 # Kuliah 7 {#o012-rbt-l07}
 
 ## Konkatenasi dan transpor serat {#o012-rbt-l07-s01}
 
-Apa yang terjadi pada isomorfisme
+Apa yang terjadi pada isomorfisma
 
 $$
 \gamma_*\colon Z_x\longrightarrow Z_y
 $$
 
 jika lintasan $\gamma\colon I\to X$ dipecah menjadi dua sublintasan
-$x\rightsquigarrow x'\rightsquigarrow y$, lalu isomorfisme-isomorfisme yang bersesuaian dikomposisikan?
+$x\rightsquigarrow x'\rightsquigarrow y$, lalu isomorfisma-isomorfisma yang bersesuaian dikomposisikan?
 
 Misalkan $\gamma,\eta\colon I\to X$ memenuhi
 $\gamma(1)=\eta(0)$. *Konkatenasi* keduanya adalah lintasan
@@ -363,7 +363,7 @@ $$
 \pi_1(X,x)\cong\pi_0(\Omega_xX).
 $$
 
-Ingat bahwa funktor $[*,{-}]$ turun menjadi funktor
+Ingat bahwa fungtor $[*,{-}]$ turun menjadi fungtor
 $\mathbf{Ho}\to\mathbf{Set}$, sebagaimana dibuktikan dalam pendamping Unit 4.
 :::
 
@@ -414,7 +414,7 @@ $$
 =\rho([\gamma])\circ\rho([\eta]),
 $$
 
-sehingga $\rho$ benar-benar homomorfisme grup. Untuk ruang SLPC yang tidak SLSC, konstruksi yang sama tetap bekerja dengan kelas homotopi berujung tetap; asumsi SLSC hanya membuat pendekatan melalui komponen terhubung ruang fungsi lebih langsung.
+sehingga $\rho$ benar-benar homomorfisma grup. Untuk ruang SLPC yang tidak SLSC, konstruksi yang sama tetap bekerja dengan kelas homotopi berujung tetap; asumsi SLSC hanya membuat pendekatan melalui komponen terhubung ruang fungsi lebih langsung.
 
 Jika $Z$ terhubung lintasan dan $z\in Z_x$ dipilih, pemetaan orbit
 
@@ -451,30 +451,30 @@ $\mathbb{R}$ terhubung lintasan, sehingga terdapat surjeksi
 $\pi_1(S^1,1)\to\mathbb{Z}$. Akibatnya, $\pi_1(S^1,1)$ merupakan grup tak hingga.
 :::
 
-## Funktorialitas ruang loop dan grup fundamental {#o012-rbt-l07-s04}
+## Fungtorialitas ruang loop dan grup fundamental {#o012-rbt-l07-s04}
 
 ::: {.proposition #o012-rbt-l07-prop-002}
-**Proposisi 7.2.** Konstruksi ruang loop merupakan funktor
+**Proposisi 7.2.** Konstruksi ruang loop merupakan fungtor
 
 $$
 \Omega\colon\mathbf{Top}_*\longrightarrow\mathbf{Top}_*.
 $$
 
 Pada objek, $\Omega(X,x)=(\Omega_xX,c_x)$. Pada pemetaan bertitik
-$f\colon(X,x)\to(Y,y)$, funktor ini bertindak melalui pascakomposisi
+$f\colon(X,x)\to(Y,y)$, fungtor ini bertindak melalui pascakomposisi
 $\Omega f(\gamma)=f\circ\gamma$.
 :::
 
 ::: {.corollary #o012-rbt-l07-cor-001}
-**Akibat 7.1.** Grup fundamental merupakan funktor
+**Akibat 7.1.** Grup fundamental merupakan fungtor
 
 $$
 \pi_1:=[*,{-}]\circ\Omega
 \colon\mathbf{Top}_*\longrightarrow\mathbf{Grp}.
 $$
 
-Pada subkategori penuh ruang-ruang SLSC, funktor ini teridentifikasi secara natural dengan
-$\pi_0\circ\Omega$ setelah setiap $\pi_0(\Omega_xX)$ diberi struktur grup Proposisi 7.1. Selain itu, terdapat isomorfisme natural
+Pada subkategori penuh ruang-ruang SLSC, fungtor ini teridentifikasi secara natural dengan
+$\pi_0\circ\Omega$ setelah setiap $\pi_0(\Omega_xX)$ diberi struktur grup Proposisi 7.1. Selain itu, terdapat isomorfisma natural
 
 $$
 \pi_1(X,x)
@@ -485,7 +485,7 @@ $$
 yang pembuktiannya diberikan dalam Pemeriksaan Penguasaan 7.4.
 :::
 
-Bukti lengkap Proposisi 7.2 dan bagian funktorial Akibat 7.1 juga diberikan dalam Pemeriksaan Penguasaan 7.4.
+Bukti lengkap Proposisi 7.2 dan bagian fungtorial Akibat 7.1 juga diberikan dalam Pemeriksaan Penguasaan 7.4.
 
 # Pendamping penguasaan: pemeriksaan dan solusi lengkap {.unnumbered #o012-rbt-l07-mastery}
 
@@ -636,7 +636,7 @@ $$
 dan loop konstan bertindak sebagai identitas. Jadi ini benar-benar aksi kanan.
 
 ::: {.exercise #o012-rbt-l07-mcheck-004}
-**Pemeriksaan penguasaan 7.4 (funktorialitas dan model lingkaran).** Buktikan Proposisi 7.2 dan Akibat 7.1. Kemudian bangun secara eksplisit isomorfisme natural
+**Pemeriksaan penguasaan 7.4 (fungtorialitas dan model lingkaran).** Buktikan Proposisi 7.2 dan Akibat 7.1. Kemudian bangun secara eksplisit isomorfisma natural
 
 $$
 \pi_1(X,x)
@@ -669,9 +669,9 @@ $$
 \Omega(g\circ f)=\Omega g\circ\Omega f.
 $$
 
-Jadi $\Omega$ merupakan funktor $\mathbf{Top}_*\to\mathbf{Top}_*$.
+Jadi $\Omega$ merupakan fungtor $\mathbf{Top}_*\to\mathbf{Top}_*$.
 
-Funktor $[*,{-}]$ mengirim ruang bertitik ke himpunan komponen lintasannya. Pada ruang loop, konkatenasi memberi struktur grup pada himpunan ini. Pemetaan $\Omega f$ mempertahankan konkatenasi secara literal:
+Fungtor $[*,{-}]$ mengirim ruang bertitik ke himpunan komponen lintasannya. Pada ruang loop, konkatenasi memberi struktur grup pada himpunan ini. Pemetaan $\Omega f$ mempertahankan konkatenasi secara literal:
 
 $$
 (\Omega f)(\gamma\#\eta)
@@ -686,7 +686,7 @@ $$
 [\gamma]\longmapsto[f\circ\gamma],
 $$
 
-adalah homomorfisme grup. Identitas dan komposisi dipertahankan karena sifat yang sama berlaku bagi $\Omega$, sehingga $\pi_1$ merupakan funktor ke
+adalah homomorfisma grup. Identitas dan komposisi dipertahankan karena sifat yang sama berlaku bagi $\Omega$, sehingga $\pi_1$ merupakan fungtor ke
 $\mathbf{Grp}$. Jika $X$ SLSC, Teorema 6.2 mengidentifikasi komponen lintasan dan komponen terhubung $\Omega_xX$ secara natural, yang memberi deskripsi
 $\pi_1\cong\pi_0\circ\Omega$.
 
@@ -729,7 +729,7 @@ $$
 (f\circ\gamma)^\sharp=f\circ\gamma^\sharp.
 $$
 
-Dengan demikian isomorfisme tersebut natural. Untuk memeriksa perkalian, tuliskan $\iota_1,\iota_2\colon S^1\to S^1\vee S^1$ bagi kedua inklusi dan definisikan pemetaan jepit $p\colon S^1\to S^1\vee S^1$ melalui
+Dengan demikian isomorfisma tersebut natural. Untuk memeriksa perkalian, tuliskan $\iota_1,\iota_2\colon S^1\to S^1\vee S^1$ bagi kedua inklusi dan definisikan pemetaan jepit $p\colon S^1\to S^1\vee S^1$ melalui
 
 $$
 p(q(t))=
@@ -746,4 +746,4 @@ $$
 =(u\circ q)\#(v\circ q).
 $$
 
-Jadi perkalian yang diinduksi $p$ tepat bersesuaian dengan konkatenasi loop. Isomorfisme natural di atas merupakan isomorfisme grup.
+Jadi perkalian yang diinduksi $p$ tepat bersesuaian dengan konkatenasi loop. Isomorfisma natural di atas merupakan isomorfisma grup.

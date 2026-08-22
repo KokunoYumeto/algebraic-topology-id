@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 
-Status: active production. Source admission and composite route selection are closed. GitHub reinstated the account on 2026-08-22. The exact Unit 016–017/release boundary is public at commit `d4694835a6cf6bc12a46973efdbb263fead9182a`, tree `7156c0bef02846ffc98e70d3caf1db3d79edef86`; anonymous raw Unit 017, release-manifest, Unit 001–013 HTML, and Pages bytes all match local SHA-256 values. The Units 001–013 reader/backend is also published and anonymously byte-verified on Zenodo (`10.5281/zenodo.22061490`, concept `10.5281/zenodo.22061489`, eight files) and Figshare (`10.6084/m9.figshare.33314982.v1`, project `280296`, collection `10.6084/m9.figshare.c.8668413.v35`, seven reader-first files). The PDF is first on Figshare; the bulky QA/provenance ZIP remains on Zenodo only. Units 014–017 are independently source-frozen. Every earlier local reader remains byte-frozen. The next source cursor is Lecture 18. After all 30 Roberts lectures, the selected Fomberg lines 31–4185 and exact original closure follow; see `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. GitHub reinstated the account on 2026-08-22. The exact Unit 016–017/release-content boundary is public at commit `d4694835a6cf6bc12a46973efdbb263fead9182a`, tree `7156c0bef02846ffc98e70d3caf1db3d79edef86`; the three public release receipts are themselves on `main` at `332a361c0428df72ba7d3a4470f5eae1886c8db0`. Anonymous raw Unit 017, release-manifest, Unit 001–013 HTML, Pages, Zenodo (`10.5281/zenodo.22061490`), and Figshare (`10.6084/m9.figshare.33314982.v1`) bytes match the recorded hashes. A bounded same-field Indonesian terminology QA then refined only the live Unit 001–017 source spellings and canonical backend; all historical rendered/release bytes remain immutable and their receipts remain true. Every live unit retains its line count and stable IDs. The next source cursor is Lecture 18. After all 30 Roberts lectures, the selected Fomberg lines 31–4185 and exact original closure follow; see `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -24,6 +24,15 @@ The 70 stable IDs cover 43 semantic blocks. All nine source exercises have compl
 ## Authority and rights
 
 The exact Roberts archive, commit/tree, seven-file manifest, CC BY 4.0 license, and reproducible upstream baseline remain frozen. MIT 18.905 remains a proof-check reference only. Fomberg `algebraic_topology.tex:31–4185` is the selected post-Roberts CC BY-SA 4.0 homology bridge, with admission deferred until its dependency replacement and two-build gate pass; the separate Fomberg problem bank remains excluded. Two later StackExchange-derived code blocks remain quarantined for independent redraw.
+
+## Same-field Indonesian terminology QA boundary
+
+- No suitable Indonesian algebraic-topology arXiv TeX source appeared in the bounded exact search. The truthful fallback is Valentino Risali and Indah Emilia Wijayanti, *Sifat-Sifat Morfisma di dalam Kategori Ruang Penutup Ruang Topologis yang Terhubung Lintasan*, DOI `10.22146/jmt.56529`, an Indonesian 13-page LaTeX/pdfTeX-generated journal PDF whose editable source is not exposed.
+- Direct page inspection supports `fungtor`, `morfisma`, `lembaran`, and `tertutup rata`. The live Unit 001–017 sources and canonical backend now use those preferred forms. `funktor`, `morfisme`, `lembar`, `diliputi secara merata`, and `persekitaran` remain discoverable as variants where appropriate; modern `objek`, reader-facing `lingkungan`, and translated `penuh dan setia` are retained deliberately.
+- Migration closure: 17 source files; 193 fungtor-family, 327 morfisma-family, 61 lembaran, and six tertutup-rata substitutions; line counts and stable IDs unchanged; formulas, source locators, authority, and frozen public artifacts untouched.
+- Live Unit hashes after the migration are recorded exhaustively in `qa/INDONESIAN_TERMINOLOGY_QA_2026-08-22.json`. Units 014–017 are respectively `da6f18b455d76adafd8b9b648ed7c277958eca95c0b7d76a8bd9895d79ec6677`, `e9ab0565ae460236a69c77389b76d32405873156fc451be9cf95c3749e7fe9d1`, `31dfc4c3647f7d6a1d398d2123efe1faa82348428df0180eee2a2358572f9054`, and `47576d7c26a436ba915c276b692e2bc0ead6fae038295fee3a82a50426ed9a96`.
+- Backend validation passes at 1,762 records in 11 JSONL files, bundle SHA-256 `c5ac458a7f4723460ccebccaf3e5738544883c685a54c9a3cfbef854f2db83c5`. The published Units 001–013 backend snapshot remains separately bound to its original `bb8512f56a8b…` hash.
+- Exact process provenance: `OpenAI Codex gpt-5.6-sol, Ultra`. Source author, comparison-paper authors, human direction, licenses, and non-endorsement remain explicit and unchanged.
 
 ## Frozen public cumulative Units 001–003 boundary
 

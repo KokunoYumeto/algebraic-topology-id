@@ -53,7 +53,7 @@ $H\backslash\widetilde X$.
 
 Edisi ini memperbaiki persamaan peta yang salah tipe pada lema keunikan,
 melengkapi bukti kesetiaan komponen demi komponen, dan memberi bukti penuh
-bagi kepenuhan funktor monodromi, termasuk kontinuitas dalam trivialiasi
+bagi kepenuhan fungtor monodromi, termasuk kontinuitas dalam trivialiasi
 lokal. Rentang $n$ dinyatakan pada setiap hasil: $\pi_0$ mula-mula hanya
 himpunan bertitik, sedangkan model kubus/cakram, adjungsi loop, dan struktur
 grup di sini berlaku untuk $n\geq1$. Argumen Eckmann--Hilton dikoreksi:
@@ -70,7 +70,7 @@ Fomberg, Nir Lazarovich, atau institusi mereka.
 
 # Kuliah 17 {#o012-rbt-l17}
 
-Unit 16 membuktikan bahwa, untuk $X$ SLSC dalam konvensi mata kuliah, funktor
+Unit 16 membuktikan bahwa, untuk $X$ SLSC dalam konvensi mata kuliah, fungtor
 monodromi
 
 $$
@@ -78,7 +78,7 @@ $$
 \longrightarrow[\Pi_1(X),\mathbf{Set}]
 $$
 
-surjektif secara esensial. Kini kita buktikan bahwa funktor itu juga setia
+surjektif secara esensial. Kini kita buktikan bahwa fungtor itu juga setia
 dan penuh. Sesudah klasifikasi ruang penutup selesai, sumber memulai bagian
 baru tentang grup homotopi lebih tinggi.
 
@@ -122,7 +122,7 @@ Lema ini berlaku khususnya bila $Y$ sendiri merupakan ruang total suatu
 ruang penutup dari $X$, asalkan diterapkan pada setiap komponen lintasannya.
 
 ::: {.corollary #o012-rbt-l17-cor-001}
-**Akibat 17.1 (kesetiaan monodromi).** Funktor monodromi
+**Akibat 17.1 (kesetiaan monodromi).** Fungtor monodromi
 
 $$
 \rho\colon\operatorname{Cov}_X
@@ -144,7 +144,7 @@ f_{x_0}=g_{x_0}\colon
 (Z_1)_{x_0}\longrightarrow(Z_2)_{x_0}.
 $$
 
-Kedua pembatasan ini adalah morfisme di $\mathbf{Set}_G$ untuk aksi
+Kedua pembatasan ini adalah morfisma di $\mathbf{Set}_G$ untuk aksi
 monodromi kanan; kesamaannya di sini adalah kesamaan fungsi serat yang
 ekuivarian kanan.
 
@@ -165,7 +165,7 @@ kesamaan pemetaan ruang penutup, yakni $\rho$ setia.
 
 ::: {.theorem #o012-rbt-l17-thm-001}
 **Teorema 17.1 (klasifikasi ruang penutup).** Jika $X$ SLSC dalam konvensi
-mata kuliah, funktor monodromi
+mata kuliah, fungtor monodromi
 
 $$
 \rho\colon\operatorname{Cov}_X
@@ -211,14 +211,14 @@ $$
 A_i:=(Z_i)_x.
 $$
 
-Penandaan lembar oleh titiknya di atas $x$ memberi trivialiasi
+Penandaan lembaran oleh titiknya di atas $x$ memberi trivialiasi
 
 $$
 \tau_i\colon\pi_i^{-1}(U)\xrightarrow{\ \cong\ }U\times A_i.
 $$
 
 Bagi $u\in U$, $a\in A_1$, dan lintasan
-$[\alpha\colon x\rightsquigarrow u]$ di $U$, titik pada lembar berlabel
+$[\alpha\colon x\rightsquigarrow u]$ di $U$, titik pada lembaran berlabel
 $a$ ialah $\alpha_*^{Z_1}(a)$. Naturalitas $\eta$ menyatakan
 
 $$
@@ -228,8 +228,8 @@ $$
 $$
 
 Karena $U$ diliputi secara merata, transpor di dalam $U$ tetap berada pada
-satu lembar dan tidak bergantung pada pilihan lintasan di $U$ setelah label
-lembar ditetapkan. Oleh karena itu, dalam kedua trivialiasi lokal, $F$
+satu lembaran dan tidak bergantung pada pilihan lintasan di $U$ setelah label
+lembaran ditetapkan. Oleh karena itu, dalam kedua trivialiasi lokal, $F$
 mempunyai rumus
 
 $$
@@ -243,7 +243,7 @@ himpunan diskret $A_1$ dan $A_2$; jadi ia kontinu. Lingkungan seperti $U$
 menutupi $X$, maka $F$ kontinu secara global. Dengan demikian $F$ adalah
 pemetaan ruang penutup yang menginduksi $\eta$. Keunikannya langsung dari
 rumus $F(z)=\eta_{\pi_1(z)}(z)$, atau dari kesetiaan yang baru dibuktikan.
-Jadi $\rho$ penuh. Funktor yang penuh, setia, dan surjektif secara esensial
+Jadi $\rho$ penuh. Fungtor yang penuh, setia, dan surjektif secara esensial
 merupakan ekuivalensi kategori.
 
 Untuk menghubungkan bukti ini dengan reduksi bertitik pada sumber, andaikan
@@ -301,13 +301,13 @@ operasi yang dibangun di bawah menjadikannya grup, sehingga istilah
 :::
 
 Untuk setiap $n\geq0$, postkomposisi oleh peta bertitik membuat $\pi_n$
-menjadi funktor
+menjadi fungtor
 
 $$
 \pi_n\colon\mathbf{Top}_*\longrightarrow\mathbf{Set}.
 $$
 
-Kelas peta konstan memberi setiap nilai funktor itu satu titik terpilih,
+Kelas peta konstan memberi setiap nilai fungtor itu satu titik terpilih,
 meskipun kita tetap menuliskan kodomain sumber sebagai $\mathbf{Set}$.
 
 Pemetaan koordinat memberi bijeksi alami
@@ -324,7 +324,7 @@ Untuk pasangan ruang $(Y,A)$, hasil bagi $Y/A$ berarti ruang hasil bagi yang
 mengidentifikasi semua titik $A$ menjadi satu titik dan tidak membuat
 identifikasi lain. Catatan ini berasal dari catatan pinggir sumber.
 
-Jika $n\geq1$, terdapat homeomorfisme bertitik
+Jika $n\geq1$, terdapat homeomorfisma bertitik
 
 $$
 S^n
@@ -448,7 +448,7 @@ $$
 
 memberi invers, dan reparametrisasi interval memberi asosiativitas pada
 kelas homotopi. Postkomposisi oleh peta bertitik mempertahankan semua rumus.
-Jadi, untuk setiap $n\geq1$, diperoleh funktor
+Jadi, untuk setiap $n\geq1$, diperoleh fungtor
 
 $$
 \pi_n\colon\mathbf{Top}_*\longrightarrow\mathbf{Grp}.
@@ -724,8 +724,8 @@ Karena komponen $\eta_x$ memetakan $(Z_1)_x$ ke $(Z_2)_x$, berlaku
 $\pi_2F=\pi_1$, dan pembatasan $F$ pada setiap serat tepat $\eta_x$.
 
 Untuk kontinuitas, pilih lingkungan terbuka terhubung lintasan $U\ni x$
-yang diliputi secara merata oleh kedua penutup. Beri label lembar penutup
-pertama dengan $A_1=(Z_1)_x$ dan lembar penutup kedua dengan
+yang diliputi secara merata oleh kedua penutup. Beri label lembaran penutup
+pertama dengan $A_1=(Z_1)_x$ dan lembaran penutup kedua dengan
 $A_2=(Z_2)_x$. Dalam trivialiasi
 
 $$

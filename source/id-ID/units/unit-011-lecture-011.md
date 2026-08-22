@@ -38,9 +38,9 @@ $\phi=\kappa\circ i$ dan $\psi=\kappa\circ j$. Kalimat tentang presentasi
 yang menukar peran $G$ dan $H$ diselaraskan dengan rumusnya. Deskripsi unsur
 grup bebas dilengkapi dengan reduksi pasangan invers; kata mentah tidak dapat
 langsung menjadi unsur grup karena $x_ix_i^{-1}$ harus sama dengan kata
-kosong. Dalam konstruksi funktor pada bukti van Kampen, notasi sumber
+kosong. Dalam konstruksi fungtor pada bukti van Kampen, notasi sumber
 $F_1(\gamma)$ dan $G_1(\gamma)$ diperbaiki menjadi
-$F_1([\gamma])$ dan $G_1([\gamma])$, sebab domain funktor adalah kelas
+$F_1([\gamma])$ dan $G_1([\gamma])$, sebab domain fungtor adalah kelas
 homotopi lintasan, bukan lintasan mentah. Edisi juga membedakan fungsi
 sementara $\widetilde K_1$ pada lintasan mentah dari fungsi $K_1$ pada kelas
 homotopi yang baru dapat diturunkan setelah invariansi homotopi terbukti.
@@ -88,7 +88,7 @@ dan perkalian dilakukan dengan mengonkatenasikan kata lalu mereduksi hasilnya.
 
 ::: {.definition #o012-rbt-l11-def-002}
 **Definisi 11.2 (produk bebas).** Diberikan grup $G$ dan $H$, *produk bebas*
-$G*H$ adalah grup yang dilengkapi homomorfisme
+$G*H$ adalah grup yang dilengkapi homomorfisma
 
 $$
 i\colon G\longrightarrow G*H,
@@ -96,7 +96,7 @@ i\colon G\longrightarrow G*H,
 j\colon H\longrightarrow G*H,
 $$
 
-dengan sifat berikut. Untuk setiap grup $K$ dan setiap pasangan homomorfisme
+dengan sifat berikut. Untuk setiap grup $K$ dan setiap pasangan homomorfisma
 
 $$
 \phi\colon G\longrightarrow K,
@@ -104,7 +104,7 @@ $$
 \psi\colon H\longrightarrow K,
 $$
 
-terdapat tepat satu homomorfisme
+terdapat tepat satu homomorfisma
 
 $$
 \kappa\colon G*H\longrightarrow K
@@ -186,7 +186,7 @@ X&\xrightarrow{\ c\ }&P
 $$
 
 di $\mathcal C$ dengan sifat universal berikut. Untuk setiap pasangan
-morfisme
+morfisma
 
 $$
 X\xrightarrow{f}Z\xleftarrow{g}Y
@@ -198,7 +198,7 @@ $$
 f\circ a=g\circ b,
 $$
 
-terdapat tepat satu morfisme $k\colon P\to Z$ yang memenuhi
+terdapat tepat satu morfisma $k\colon P\to Z$ yang memenuhi
 
 $$
 f=k\circ c,
@@ -299,7 +299,7 @@ merupakan persegi pushout di $\mathbf{Grp}$.
 
 ::: {.figure #o012-rbt-l11-fig-005}
 **Diagram 11.5 (fungsi diagram produk bebas).** Kedua panah keluar dari grup
-trivial $1$ adalah homomorfisme unik. Memberikan homomorfisme yang kompatibel
+trivial $1$ adalah homomorfisma unik. Memberikan homomorfisma yang kompatibel
 dari $G$ dan $H$ ke grup $K$ kemudian sama persis dengan memberikan pasangan
 $\phi,\psi$ pada Definisi 11.2; pemetaan universal dari pushout adalah
 $\kappa\colon G*H\to K$.
@@ -311,7 +311,7 @@ $\mathbf 2$ yang mempunyai dua objek $0,1$ dan tepat satu panah di antara
 setiap pasangan objek terurut. Tuliskan
 $\operatorname{Disc}(\{0,1\})$ bagi grupoid diskret pada kedua objek itu,
 $*$ bagi grupoid satu-objek trivial, dan $\mathbf B\mathbb Z$ bagi grupoid
-satu-objek dengan grup automorfisme $\mathbb Z$. Persegi
+satu-objek dengan grup automorfisma $\mathbb Z$. Persegi
 
 $$
 \begin{array}{ccc}
@@ -334,14 +334,14 @@ $$
 0\longrightarrow1
 $$
 
-ke automorfisme $1\in\mathbb Z$ dari $\bullet$; panah baliknya dikirim ke
-$-1$. Panah bawah adalah funktor unik dari grupoid satu-objek trivial. Dengan
+ke automorfisma $1\in\mathbb Z$ dari $\bullet$; panah baliknya dikirim ke
+$-1$. Panah bawah adalah fungtor unik dari grupoid satu-objek trivial. Dengan
 menyatukan kedua objek, panah $0\to1$ menjadi satu loop bebas, sehingga
 pushoutnya adalah $\mathbf B\mathbb Z$.
 :::
 
 Sifat universal contoh ini dapat diperiksa langsung. Misalkan $\Gamma$
-sebuah grupoid, dan diberikan funktor kompatibel
+sebuah grupoid, dan diberikan fungtor kompatibel
 
 $$
 A\colon\mathbf 2\longrightarrow\Gamma,
@@ -355,16 +355,16 @@ $$
 A(0)=B(*)=A(1)=:x.
 $$
 
-Karena itu $a:=A(0\to1)$ merupakan automorfisme $x$. Terdapat tepat satu
-funktor
+Karena itu $a:=A(0\to1)$ merupakan automorfisma $x$. Terdapat tepat satu
+fungtor
 
 $$
 L\colon\mathbf B\mathbb Z\longrightarrow\Gamma
 $$
 
 yang mengirim objek tunggal ke $x$ dan mengirim $n\in\mathbb Z$ ke $a^n$.
-Funktor ini membatasi menjadi $A$ dan $B$: khususnya, $1$ dikirim ke $a$ dan
-$-1$ ke $a^{-1}$. Sebaliknya, setiap funktor yang memperluas $A$ dan $B$
+Fungtor ini membatasi menjadi $A$ dan $B$: khususnya, $1$ dikirim ke $a$ dan
+$-1$ ke $a^{-1}$. Sebaliknya, setiap fungtor yang memperluas $A$ dan $B$
 harus mempunyai nilai-nilai tersebut, sehingga $L$ unik. Inilah sifat
 universal pushout, bukan sekadar kemiripan bentuk diagram.
 
@@ -426,7 +426,7 @@ dalam hasil bagi tersebut.
 
 ::: {.theorem #o012-rbt-l11-thm-001}
 **Teorema 11.1 (Seifert--van Kampen).** Misalkan $X$ suatu ruang dan
-$\{U,V\}$ sampul $X$ oleh lingkungan. Maka persegi funktor yang diinduksi
+$\{U,V\}$ sampul $X$ oleh lingkungan. Maka persegi fungtor yang diinduksi
 oleh inklusi
 
 $$
@@ -442,11 +442,11 @@ merupakan persegi pushout di $\mathbf{Gpd}$.
 
 ::: {.figure #o012-rbt-l11-fig-008}
 **Diagram 11.8 (fungsi diagram van Kampen).** Objek kiri atas merekam titik
-dan kelas lintasan yang seluruhnya berada dalam $U\cap V$. Funktor $i_U$ dan
+dan kelas lintasan yang seluruhnya berada dalam $U\cap V$. Fungtor $i_U$ dan
 $i_V$ memandang data yang sama masing-masing di dalam $U$ dan $V$. Kedua
-funktor berikutnya memandangnya di dalam $X$. Pernyataan pushout mengatakan
-bahwa setiap pasangan funktor kompatibel keluar dari $\Pi_1(U)$ dan
-$\Pi_1(V)$ dapat, secara unik, direkatkan menjadi funktor keluar dari
+fungtor berikutnya memandangnya di dalam $X$. Pernyataan pushout mengatakan
+bahwa setiap pasangan fungtor kompatibel keluar dari $\Pi_1(U)$ dan
+$\Pi_1(V)$ dapat, secara unik, direkatkan menjadi fungtor keluar dari
 $\Pi_1(X)$.
 :::
 
@@ -466,14 +466,14 @@ U&\longrightarrow&X
 $$
 
 merupakan pushout di $\mathbf{Top}$. Sifat universal masih harus diperiksa
-terhadap **setiap** grupoid $\Gamma$ dan setiap pasangan funktor kompatibel
+terhadap **setiap** grupoid $\Gamma$ dan setiap pasangan fungtor kompatibel
 
 $$
 \Pi_1(U)\longrightarrow\Gamma\longleftarrow\Pi_1(V).
 $$
 :::
 
-## Konstruksi funktor universal: bagian pertama bukti {#o012-rbt-l11-s04}
+## Konstruksi fungtor universal: bagian pertama bukti {#o012-rbt-l11-s04}
 
 ::: {.proof #o012-rbt-l11-proof-001}
 **Bukti Teorema 11.1 (bagian pertama; berlanjut pada Kuliah 12).** Mulailah
@@ -487,14 +487,14 @@ $$
 \end{array}
 $$
 
-Kita harus membangun funktor
+Kita harus membangun fungtor
 
 $$
 K\colon\Pi_1(X)\longrightarrow\Gamma
 $$
 
 yang kompatibel dengan $F$ dan $G$. Secara konkret, kita perlu membangun
-fungsi pada objek dan morfisme
+fungsi pada objek dan morfisma
 
 $$
 K_0\colon\Pi_1(X)_0=X\longrightarrow\Gamma_0,
@@ -502,17 +502,17 @@ K_0\colon\Pi_1(X)_0=X\longrightarrow\Gamma_0,
 K_1\colon\Pi_1(X)_1\longrightarrow\Gamma_1
 $$
 
-yang bersama-sama memenuhi hukum funktor.
+yang bersama-sama memenuhi hukum fungtor.
 
 ::: {.figure #o012-rbt-l11-fig-009}
-**Diagram 11.9 (masalah universal yang harus diselesaikan).** Funktor $F$ dan
+**Diagram 11.9 (masalah universal yang harus diselesaikan).** Fungtor $F$ dan
 $G$ telah diberikan dan memenuhi
 
 $$
 F\circ i_U=G\circ i_V.
 $$
 
-Funktor yang dicari harus membuat kedua segitiga
+Fungtor yang dicari harus membuat kedua segitiga
 
 $$
 \Pi_1(U)\longrightarrow\Pi_1(X)\xrightarrow{K}\Gamma,
@@ -545,7 +545,7 @@ $$
 $$
 
 pada lintasan nyata, lalu akan menunjukkan bahwa nilainya tidak berubah pada
-kelas homotopi berujung tetap. Hanya setelah itu fungsi pada morfisme dapat
+kelas homotopi berujung tetap. Hanya setelah itu fungsi pada morfisma dapat
 didefinisikan oleh $K_1([\gamma]):=\widetilde K_1(\gamma)$.
 Misalkan $\gamma\colon I\to X$ mempunyai citra di $U$. Definisikan
 
@@ -559,12 +559,12 @@ $$
 \widetilde K_1(\gamma):=G_1([\gamma]_V).
 $$
 
-Jika citranya berada di $U\cap V$, kedua nilai sama karena persegi funktor
+Jika citranya berada di $U\cap V$, kedua nilai sama karena persegi fungtor
 yang diberikan komutatif. Definisi itu kompatibel dengan sumber dan sasaran:
 titik awal serta akhir lintasan di $U$ juga berada di $U$, dan hal yang sama
 berlaku bagi $V$. Definisi juga kompatibel dengan konkatenasi lintasan yang
 seluruhnya berada di $U$ atau seluruhnya berada di $V$, karena $F$ dan $G$
-adalah funktor. Lintasan konstan dikirim ke morfisme identitas di $\Gamma$.
+adalah fungtor. Lintasan konstan dikirim ke morfisma identitas di $\Gamma$.
 
 Jika $\sigma\colon I\to I$ suatu pemetaan kontinu dengan
 $\sigma(0)=0$ dan $\sigma(1)=1$, maka $\gamma\circ\sigma$ homotopik berujung
@@ -631,11 +631,11 @@ $$
 \in\Gamma_1.
 $$
 
-Di sini perkalian morfisme mengikuti urutan komposisi aljabar yang sudah
+Di sini perkalian morfisma mengikuti urutan komposisi aljabar yang sudah
 ditetapkan: faktor paling kiri ditempuh terlebih dahulu.
 
 Jika partisi diperhalus, satu ruas lama diganti oleh beberapa ruas yang masih
-berada dalam anggota sampul yang sama. Funktorialitas $F$ atau $G$ membuat
+berada dalam anggota sampul yang sama. Fungtorialitas $F$ atau $G$ membuat
 komposit nilai ruas-ruas baru sama dengan nilai ruas lama. Jika suatu ruas
 berada dalam $U\cap V$, komutativitas persegi memastikan tidak ada pilihan
 ambigu. Setiap dua partisi memiliki perhalusan bersama. Karena itu nilai
@@ -644,7 +644,7 @@ $\widetilde K_1(\gamma)$ tidak bergantung pada partisi yang dipilih.
 Keterangan pinggir sumber pada langkah ini menyebut secara eksplisit bahwa
 partisi tersebut diperoleh dari lema bilangan Lebesgue.
 
-Untuk menurunkan fungsi ini dari lintasan nyata ke morfisme
+Untuk menurunkan fungsi ini dari lintasan nyata ke morfisma
 $\Pi_1(X)$, kita sekarang harus membuktikan bahwa setiap homotopi berujung
 tetap $H\colon I^2\to X$ dari lintasan $\gamma$ ke lintasan $\eta$ memenuhi
 
@@ -753,9 +753,9 @@ homotopi umum $H\colon I^2\to X$, masih harus dipilih kisi kecil yang setiap
 selnya dipetakan seluruhnya ke $U$ atau ke $V$, lalu kesamaan lokal di atas
 harus ditempelkan sel demi sel. Kelanjutan juga harus membuktikan bahwa fungsi
 yang turun ke kelas homotopi mempertahankan identitas dan komposisi, membatasi
-menjadi $F$ serta $G$, dan merupakan satu-satunya funktor dengan pembatasan
+menjadi $F$ serta $G$, dan merupakan satu-satunya fungtor dengan pembatasan
 itu. Argumen global dimulai pada baris pertama Kuliah 12 dan tidak termasuk
-dalam unit ini. Sumber sampai akhir buktinya menyatakan funktorialitas dari
+dalam unit ini. Sumber sampai akhir buktinya menyatakan fungtorialitas dari
 konstruksi, tetapi tidak menuliskan argumen keunikan $K$ secara eksplisit;
 edisi harus memasok argumen itu ketika bukti ditutup.
 :::
@@ -769,10 +769,10 @@ langkah lokal yang hanya dinyatakan singkat dalam sumber.
 **Pemeriksaan penguasaan 11.1 (pemetaan keluar dari grup bebas dan produk
 bebas).**
 
-1. Diberikan unsur $k_1,\ldots,k_n$ dari grup $K$, bangun homomorfisme unik
+1. Diberikan unsur $k_1,\ldots,k_n$ dari grup $K$, bangun homomorfisma unik
    $\theta\colon F_n\to K$ dengan $\theta(x_i)=k_i$.
 2. Diberikan $\phi\colon G\to K$ dan $\psi\colon H\to K$, jelaskan nilai
-   homomorfisme universal $\kappa\colon G*H\to K$ pada sebuah kata yang
+   homomorfisma universal $\kappa\colon G*H\to K$ pada sebuah kata yang
    huruf-hurufnya berasal bergantian dari $G$ dan $H$.
 3. Periksa tipe kedua persamaan universal dan jelaskan mengapa
    $i\circ\kappa$ tidak dapat menggantikan $\kappa\circ i$.
@@ -798,7 +798,7 @@ $$
 
 Penyisipan atau penghapusan pasangan invers tidak mengubah nilai itu, jadi
 $\theta$ terdefinisi baik pada unsur $F_n$. Konkatenasi kata dipetakan ke
-perkalian di $K$, sehingga $\theta$ homomorfisme. Setiap homomorfisme dengan
+perkalian di $K$, sehingga $\theta$ homomorfisma. Setiap homomorfisma dengan
 nilai $x_i\mapsto k_i$ harus mempunyai rumus tersebut pada semua kata, maka
 $\theta$ unik.
 
@@ -817,9 +817,9 @@ $$
 \phi(g_1)\psi(h_1)\cdots\phi(g_r)\psi(h_r).
 $$
 
-Relasi internal $G$ dihormati karena $\phi$ homomorfisme, dan relasi internal
-$H$ dihormati karena $\psi$ homomorfisme. Presentasi produk bebas tidak
-menambahkan relasi silang, sehingga rumus itu menentukan homomorfisme. Ia
+Relasi internal $G$ dihormati karena $\phi$ homomorfisma, dan relasi internal
+$H$ dihormati karena $\psi$ homomorfisma. Presentasi produk bebas tidak
+menambahkan relasi silang, sehingga rumus itu menentukan homomorfisma. Ia
 unik karena citra semua pembangkit dari kedua faktor sudah ditentukan.
 
 Terakhir,
@@ -918,7 +918,7 @@ Karena itu pemetaan universal tersebut unik.
 ## Solusi Pemeriksaan 11.3 {#o012-rbt-l11-sol-003}
 
 Misalkan satu ruas $\gamma_i$ berada dalam $U$ dan dipotong pada satu titik
-menjadi $\alpha\#\beta$. Dengan konvensi komposisi aljabar, funktorialitas
+menjadi $\alpha\#\beta$. Dengan konvensi komposisi aljabar, fungtorialitas
 $F$ memberi
 
 $$

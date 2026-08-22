@@ -32,21 +32,21 @@ Beberapa rincian matematis diperbaiki atau dilengkapi secara independen.
 Argumen kisi pada bukti Seifert--van Kampen dibuat tak melingkar dengan
 pertukaran satu sel, lalu penurunan fungsi sementara
 $\widetilde K_1$ ke $K_1$, hukum identitas dan komposisi, pembatasan ke $F$
-serta $G$, dan keunikan funktor universal $K$ diperiksa secara eksplisit.
+serta $G$, dan keunikan fungtor universal $K$ diperiksa secara eksplisit.
 Dalam bukti versi relatif, pilihan jalur dibuat sebagai satu keluarga koheren
 dengan mendahulukan $U\cap V$; pilihan terpisah di $U$ dan $V$ tidak dengan
-sendirinya bersepakat pada irisan. Rumus funktor retraksi ditulis dengan jalur
+sendirinya bersepakat pada irisan. Rumus fungtor retraksi ditulis dengan jalur
 balik yang diperlukan. Klaim sumber bahwa empat retraksi simpul saja sudah
-cukup diperketat: keempat retraksi harus merupakan komponen dari satu morfisme
+cukup diperketat: keempat retraksi harus merupakan komponen dari satu morfisma
 balik di $\mathcal C^\square$. Dalam lemma subkategori penuh, peran kategori
 ambient dan subkategori yang tertukar dalam sumber dikembalikan ke arah yang
-bertipe benar. Funktor $\mathbf B$ dinyatakan sepenuhnya setia ke citra esensial
+bertipe benar. Fungtor $\mathbf B$ dinyatakan sepenuhnya setia ke citra esensial
 grupoid satu objek, alih-alih diperlakukan sebagai inklusi harfiah tanpa
 identifikasi itu. Salah eja “homopic” dan “one-obect” juga dinormalkan.
 
 Sumber menyerahkan satu bukti sebagai latihan. Pendamping penguasaan yang
 dibatasi pada empat pemeriksaan memberikan solusi lengkap bagi latihan itu
-serta keterampilan inti unit: pertukaran sel dan keunikan funktor universal,
+serta keterampilan inti unit: pertukaran sel dan keunikan fungtor universal,
 retraksi persegi pushout, retraksi grupoid fundamental dan koherensi kubus,
 serta peralihan dari grupoid ke grup pada contoh sfera. Seluruh materi
 pendamping yang ditambahkan tersedia di bawah CC BY 4.0. Edisi ini bersifat
@@ -225,7 +225,7 @@ K_1([\beta]\circ[\alpha])
 K_1([\beta])\circ K_1([\alpha]).
 $$
 
-Maka pasangan $K=(K_0,K_1)$ adalah funktor
+Maka pasangan $K=(K_0,K_1)$ adalah fungtor
 
 $$
 K\colon\Pi_1(X)\longrightarrow\Gamma.
@@ -234,7 +234,7 @@ $$
 ### Pembatasan dan keunikan {#o012-rbt-l12-proof-universal}
 
 Tuliskan $j_U\colon\Pi_1(U)\to\Pi_1(X)$ dan
-$j_V\colon\Pi_1(V)\to\Pi_1(X)$ bagi funktor inklusi. Pada objek di $U$,
+$j_V\colon\Pi_1(V)\to\Pi_1(X)$ bagi fungtor inklusi. Pada objek di $U$,
 definisi $K_0$ sama dengan $F_0$, dan pada lintasan yang seluruhnya berada di
 $U$, definisi lokal $\widetilde K_1$ sama dengan $F_1$. Jadi
 
@@ -255,16 +255,16 @@ $$
 L\colon\Pi_1(X)\longrightarrow\Gamma
 $$
 
-funktor lain dengan $L\circ j_U=F$ dan $L\circ j_V=G$. Setiap $x\in X$
+fungtor lain dengan $L\circ j_U=F$ dan $L\circ j_V=G$. Setiap $x\in X$
 berada di $U$ atau di $V$, sehingga kedua persamaan pembatasan memaksa
-$L_0(x)=K_0(x)$. Untuk morfisme $[\alpha]$, pilih subdivisi subordinat
+$L_0(x)=K_0(x)$. Untuk morfisma $[\alpha]$, pilih subdivisi subordinat
 
 $$
 \alpha\simeq
 \alpha_0\#\alpha_1\#\cdots\#\alpha_n
 $$
 
-yang setiap ruasnya berada di $U$ atau di $V$. Funktorialitas dan kedua
+yang setiap ruasnya berada di $U$ atau di $V$. Fungtorialitas dan kedua
 pembatasan memaksa
 
 $$
@@ -293,11 +293,11 @@ umum.
 
 Untuk kategori sebarang $\mathcal C$, definisikan kategori
 $\mathcal C^\square$. Objeknya adalah persegi komutatif di $\mathcal C$, dan
-morfismenya adalah kubus komutatif: kubus yang setiap sisinya merupakan
+morfismanya adalah kubus komutatif: kubus yang setiap sisinya merupakan
 persegi komutatif.
 
 ::: {.figure #o012-rbt-l12-fig-002}
-**Diagram 12.2 (morfisme antardua persegi komutatif).** Persegi belakang dan
+**Diagram 12.2 (morfisma antardua persegi komutatif).** Persegi belakang dan
 depan masing-masing adalah
 
 $$
@@ -314,7 +314,7 @@ C_2&\xrightarrow{k_2}&D_2.
 \end{array}
 $$
 
-Selain empat panah pada setiap persegi, morfisme di
+Selain empat panah pada setiap persegi, morfisma di
 $\mathcal C^\square$ mempunyai empat panah penghubung
 
 $$
@@ -345,7 +345,7 @@ pinggir sumber.
 
 ::: {.definition #o012-rbt-l12-def-001}
 **Definisi 12.1 (retrak).** Dalam kategori $\mathcal C$, objek $V$ adalah
-sebuah *retrak* dari objek $W$ jika terdapat morfisme
+sebuah *retrak* dari objek $W$ jika terdapat morfisma
 
 $$
 i\colon V\longrightarrow W,
@@ -359,7 +359,7 @@ $$
 r\circ i=\operatorname{id}_V.
 $$
 
-Morfisme $r$ disebut sebuah *retraksi*.
+Morfisma $r$ disebut sebuah *retraksi*.
 :::
 
 Sebagai contoh, di $\mathbf{Vect}$ setiap subruang vektor
@@ -398,12 +398,12 @@ Pemeriksaan Penguasaan 12.3.
 Kita juga dapat menanyakan kapan sebuah persegi komutatif di $\mathcal C$
 merupakan retrak dari persegi komutatif lain: artinya tepat retrak sebagai
 objek di $\mathcal C^\square$. Ingat bahwa persegi pushout adalah jenis khusus
-persegi komutatif. Secara tepat, kita memerlukan morfisme
+persegi komutatif. Secara tepat, kita memerlukan morfisma
 $i\colon S\to T$ dan $r\colon T\to S$ yang keduanya sudah merupakan kubus
 komutatif. Setelah kompatibilitas kubus itu tersedia, persamaan
 $r\circ i=\operatorname{id}_S$ boleh diperiksa pada masing-masing dari empat
 simpul. Empat retraksi simpul yang dipilih secara terpisah belum tentu
-merakit diri menjadi satu morfisme $r$ di $\mathcal C^\square$.
+merakit diri menjadi satu morfisma $r$ di $\mathcal C^\square$.
 
 ::: {.lemma #o012-rbt-l12-lem-001 data-source-label="lemma:retracts_of_pushouts"}
 **Lemma 12.1 (retrak dari persegi pushout).** Setiap retrak dari persegi
@@ -455,12 +455,12 @@ merupakan persegi pushout di $\mathbf{Gpd}$.
 :::
 
 ::: {.figure #o012-rbt-l12-fig-003}
-**Diagram 12.3 (fungsi persegi relatif).** Keempat panah adalah funktor yang
+**Diagram 12.3 (fungsi persegi relatif).** Keempat panah adalah fungtor yang
 diinduksi oleh inklusi ruang. Panah atas memasukkan data lintasan dari
 $U\cap V$ ke $V$; panah kiri memasukkannya ke $U$. Panah kanan memasukkan
 lintasan di $V$ ke $X$, dan panah bawah melakukan hal yang sama bagi $U$.
 Pada simpul mana pun, hanya titik-titik objek yang berada dalam irisan dengan
-$A$ yang dipertahankan. Kedua komposit dari simpul kiri atas adalah funktor
+$A$ yang dipertahankan. Kedua komposit dari simpul kiri atas adalah fungtor
 inklusi yang sama ke $\Pi_1(X,A)$.
 :::
 
@@ -469,7 +469,7 @@ inklusi yang sama ke $\Pi_1(X,A)$.
 11.1. Kita hanya perlu menunjukkan bahwa persegi pada pernyataan merupakan
 retrak di $\mathbf{Gpd}^\square$ dari persegi pushout pada teorema tersebut.
 
-Funktor inklusi
+Fungtor inklusi
 
 $$
 \begin{aligned}
@@ -480,7 +480,7 @@ $$
 \end{aligned}
 $$
 
-memberi satu morfisme di $\mathbf{Gpd}^\square$. Kita akan membangun morfisme
+memberi satu morfisma di $\mathbf{Gpd}^\square$. Kita akan membangun morfisma
 ke arah sebaliknya sebagai satu keluarga pilihan yang koheren.
 
 Untuk setiap $x\in X$, pilih titik $a_x\in A$ dan kelas lintasan
@@ -502,13 +502,13 @@ Karena $U\cup V=X$, daftar itu mencakup semua titik. Mendahulukan irisan
 memastikan bahwa pilihan yang dipakai pada $U$ dan $V$ benar-benar sama pada
 $U\cap V$.
 
-Definisikan funktor
+Definisikan fungtor
 
 $$
 R_X\colon\Pi_1(X)\longrightarrow\Pi_1(X,A)
 $$
 
-pada objek dengan $R_X(x)=a_x$. Untuk morfisme yang diwakili lintasan
+pada objek dengan $R_X(x)=a_x$. Untuk morfisma yang diwakili lintasan
 $\gamma\colon x\rightsquigarrow y$, tetapkan
 
 $$
@@ -525,9 +525,9 @@ berujung tetap. Lintasan
 $\overline{\eta_x}\#\eta_x$ dan
 $\eta_x\#\overline{\eta_x}$ dapat dibatalkan melalui homotopi berujung
 tetap. Karena itu rumus mempertahankan identitas dan komposisi, sehingga
-$R_X$ memang funktor.
+$R_X$ memang fungtor.
 
-Jika $x\in A$, pilihan $\eta_x$ konstan. Jadi, untuk funktor inklusi
+Jika $x\in A$, pilihan $\eta_x$ konstan. Jadi, untuk fungtor inklusi
 $I_X\colon\Pi_1(X,A)\to\Pi_1(X)$, berlaku
 
 $$
@@ -535,7 +535,7 @@ R_X\circ I_X=\operatorname{id}_{\Pi_1(X,A)}.
 $$
 
 Pilihan koheren di atas juga memastikan bahwa pembatasan $R_X$ memberi
-funktor
+fungtor
 
 $$
 \begin{aligned}
@@ -595,7 +595,7 @@ $$
 
 dan komutativitas berarti $b\circ f=c\circ g$. Hipotesis mengatakan bahwa
 untuk setiap objek target di $\mathcal C$, persegi ini mempunyai sifat
-universal pushout; kesimpulan hanya membatasi objek target dan morfisme ke
+universal pushout; kesimpulan hanya membatasi objek target dan morfisma ke
 $\mathcal D$.
 :::
 
@@ -624,7 +624,7 @@ $k\circ b=u$ dan $k\circ c=v$.
 :::
 
 Pandang data itu di kategori ambient $\mathcal C$. Karena persegi dengan
-sudut $P$ adalah pushout di $\mathcal C$, terdapat tepat satu morfisme
+sudut $P$ adalah pushout di $\mathcal C$, terdapat tepat satu morfisma
 
 $$
 k\colon P\longrightarrow Q
@@ -632,20 +632,20 @@ $$
 
 di $\mathcal C$ dengan $k\circ b=u$ dan $k\circ c=v$. Kedua objek $P,Q$
 berada di $\mathcal D$, dan $\mathcal D$ penuh di $\mathcal C$. Karena itu
-$k$ adalah morfisme di $\mathcal D$; persamaan kedua segitiga tetap berlaku
-di sana. Jika $\ell\colon P\to Q$ adalah morfisme lain di $\mathcal D$ yang
-memenuhi kedua persamaan, maka $\ell$ juga morfisme di $\mathcal C$.
+$k$ adalah morfisma di $\mathcal D$; persamaan kedua segitiga tetap berlaku
+di sana. Jika $\ell\colon P\to Q$ adalah morfisma lain di $\mathcal D$ yang
+memenuhi kedua persamaan, maka $\ell$ juga morfisma di $\mathcal C$.
 Keunikan ambient memberi $\ell=k$. Jadi sifat universal berlaku di
 $\mathcal D$.
 :::
 
-Funktor
+Fungtor
 
 $$
 \mathbf B\colon\mathbf{Grp}\longrightarrow\mathbf{Gpd}
 $$
 
-mengirim sebuah grup ke grupoid satu objeknya. Funktor ini sepenuhnya setia.
+mengirim sebuah grup ke grupoid satu objeknya. Fungtor ini sepenuhnya setia.
 Dengan mengidentifikasi $\mathbf{Grp}$ dengan citra esensialnya, yaitu
 subkategori penuh grupoid satu objek, kita dapat menerapkan Lemma 12.2.
 Secara khusus, untuk ruang bertitik $(Y,x)$ terdapat identifikasi alami
@@ -672,7 +672,7 @@ merupakan persegi pushout di $\mathbf{Grp}$.
 :::
 
 ::: {.figure #o012-rbt-l12-fig-006}
-**Diagram 12.6 (fungsi persegi grup fundamental).** Keempat homomorfisme
+**Diagram 12.6 (fungsi persegi grup fundamental).** Keempat homomorfisma
 diinduksi oleh inklusi ruang bertitik. Dua panah keluar dari
 $\pi_1(U\cap V,x)$ memandang loop yang sama masing-masing di $U$ dan $V$.
 Dua panah berikutnya memandang loop-loop itu di $X$. Komutativitas menyatakan
@@ -742,22 +742,22 @@ $$
 
 ::: {.figure #o012-rbt-l12-fig-007}
 **Diagram 12.7 (pembacaan semantik pushout sfera).** Kedua panah keluar dari
-$\pi_1(S^{n-1}\times(-1,1),x)$ adalah homomorfisme unik ke grup trivial.
+$\pi_1(S^{n-1}\times(-1,1),x)$ adalah homomorfisma unik ke grup trivial.
 Kedua panah dari grup trivial masuk ke $\pi_1(S^n,x)$. Untuk menguji
-pushout, pilih grup sebarang $K$ dan pasangan homomorfisme
+pushout, pilih grup sebarang $K$ dan pasangan homomorfisma
 
 $$
 1\longrightarrow K\longleftarrow1.
 $$
 
 Pasangan itu unik dan otomatis kompatibel pada grup kiri atas. Karena itu
-sifat universal memaksa adanya tepat satu homomorfisme
+sifat universal memaksa adanya tepat satu homomorfisma
 $\pi_1(S^n,x)\to K$.
 :::
 
-Satu-satunya grup yang mempunyai tepat satu homomorfisme ke setiap grup lain
+Satu-satunya grup yang mempunyai tepat satu homomorfisma ke setiap grup lain
 adalah grup trivial. Memang, jika sebuah grup $P$ mempunyai sifat itu, kedua
-homomorfisme $P\to P$ berupa identitas dan homomorfisme trivial harus sama;
+homomorfisma $P\to P$ berupa identitas dan homomorfisma trivial harus sama;
 jadi setiap unsur $P$ adalah identitas. Dengan demikian
 
 $$
@@ -791,7 +791,7 @@ dipakai oleh sumber. Semua solusi hanya mengembangkan data dan argumen unit
 ini.
 
 ::: {.exercise #o012-rbt-l12-mcheck-001}
-**Pemeriksaan penguasaan 12.1 (dari pertukaran sel ke funktor universal).**
+**Pemeriksaan penguasaan 12.1 (dari pertukaran sel ke fungtor universal).**
 
 1. Jelaskan mengapa mengganti satu rute “kanan lalu atas” dengan “atas lalu
    kanan” pada sebuah sel tidak mengandaikan invariansi homotopi global yang
@@ -804,11 +804,11 @@ ini.
 ## Solusi Pemeriksaan 12.1 {#o012-rbt-l12-sol-001}
 
 Setiap sel dipetakan seluruhnya ke satu subruang, katakan $U$. Kedua rute
-batas sel karena itu mewakili morfisme yang sama di $\Pi_1(U)$ melalui
-homotopi persegi lokal dari Unit 11. Menerapkan funktor yang sudah diberikan,
+batas sel karena itu mewakili morfisma yang sama di $\Pi_1(U)$ melalui
+homotopi persegi lokal dari Unit 11. Menerapkan fungtor yang sudah diberikan,
 $F$, menghasilkan nilai yang sama. Jika citra sel berada di $V$, gunakan
-$G$. Jadi langkah lokal hanya memakai funktorialitas $F$ atau $G$ yang sudah
-tersedia; ia belum memakai funktor global $K$ ataupun invariansi global
+$G$. Jadi langkah lokal hanya memakai fungtorialitas $F$ atau $G$ yang sudah
+tersedia; ia belum memakai fungtor global $K$ ataupun invariansi global
 $\widetilde K_1$.
 
 Untuk $\alpha\colon x\rightsquigarrow y$ dan
@@ -841,16 +841,16 @@ K_1([\alpha])K_1([\beta]).
 $$
 
 Terakhir, pembatasan memaksa $L_0=K_0$ karena $U\cup V=X$. Untuk setiap
-$[\alpha]$, subdivisi di atas menulis morfisme itu sebagai komposit morfisme
+$[\alpha]$, subdivisi di atas menulis morfisma itu sebagai komposit morfisma
 yang masing-masing berasal dari $\Pi_1(U)$ atau $\Pi_1(V)$. Pada setiap
 faktor, $L$ dipaksa sama dengan $F$ atau $G$, dan nilai itu persis faktor yang
-mendefinisikan $K$. Funktorialitas memaksa kesamaan pada seluruh komposit.
+mendefinisikan $K$. Fungtorialitas memaksa kesamaan pada seluruh komposit.
 Jadi $L_1=K_1$ dan $L=K$.
 
 ::: {.exercise #o012-rbt-l12-mcheck-002}
 **Pemeriksaan penguasaan 12.2 (Latihan Sumber 12.1: retrak pushout).**
 Misalkan persegi $S$ merupakan retrak dari persegi pushout $T$ di
-$\mathcal C^\square$. Tuliskan morfisme inklusi $i\colon S\to T$ dan
+$\mathcal C^\square$. Tuliskan morfisma inklusi $i\colon S\to T$ dan
 retraksi $r\colon T\to S$, dengan $r\circ i=\operatorname{id}_S$ pada setiap
 simpul. Buktikan bahwa $S$ memenuhi sifat universal pushout.
 :::
@@ -868,7 +868,7 @@ C&\xrightarrow{c}&P,
 $$
 
 dan beri tanda prima pada keempat objek serta panah persegi pushout $T$.
-Komponen morfisme kubus ditulis $i_A,i_B,i_C,i_P$ dan
+Komponen morfisma kubus ditulis $i_A,i_B,i_C,i_P$ dan
 $r_A,r_B,r_C,r_P$.
 
 Ambil kocone kompatibel $u\colon B\to Z$ dan $v\colon C\to Z$, jadi
@@ -931,7 +931,7 @@ Jadi $S$ adalah persegi pushout.
    $R\colon\Pi_1(X,A)\to\Pi_1(X,A')$.
 2. Periksa identitas, komposisi, dan persamaan retraksi.
 3. Jelaskan mengapa pilihan berprioritas pada irisan dalam bukti Teorema 12.1
-   membuat keempat retraksi menjadi satu morfisme di
+   membuat keempat retraksi menjadi satu morfisma di
    $\mathbf{Gpd}^\square$.
 :::
 
@@ -966,8 +966,8 @@ $$
 =R([\gamma][\lambda]).
 $$
 
-Maka $R$ funktor. Jika $x\in A'$, $a_x=x$ dan $\eta_x$ konstan. Pada objek
-dan morfisme yang seluruh titik ujungnya berada di $A'$, komposit
+Maka $R$ fungtor. Jika $x\in A'$, $a_x=x$ dan $\eta_x$ konstan. Pada objek
+dan morfisma yang seluruh titik ujungnya berada di $A'$, komposit
 
 $$
 \Pi_1(X,A')\longrightarrow\Pi_1(X,A)
@@ -977,7 +977,7 @@ $$
 adalah identitas. Jadi ini benar-benar retraksi.
 
 Dalam Teorema 12.1, satu pilihan pada $x\in U\cap V$ dipakai sekaligus untuk
-pembatasan ke $U$, $V$, dan $U\cap V$. Karena rumus objek serta morfismenya
+pembatasan ke $U$, $V$, dan $U\cap V$. Karena rumus objek serta morfismanya
 sama sebelum dan sesudah pembatasan, empat persegi samping kubus komutatif
 secara ketat. Pilihan terpisah tanpa prioritas irisan hanya akan menghasilkan
 retraksi individual dan tidak menjamin komutativitas kubus.
@@ -996,23 +996,23 @@ retraksi individual dan tidak menjamin komutativitas kubus.
 
 ## Solusi Pemeriksaan 12.4 {#o012-rbt-l12-sol-004}
 
-Pushout ambient mula-mula menghasilkan morfisme universal
+Pushout ambient mula-mula menghasilkan morfisma universal
 $k\colon P\to Q$ di $\mathcal C$. Kepenuhan dipakai karena $P,Q$ adalah
-objek $\mathcal D$: setiap morfisme ambient di antara keduanya, termasuk
-$k$, juga merupakan morfisme $\mathcal D$. Untuk keunikan, calon lain di
-$\mathcal D$ dipandang sebagai morfisme di $\mathcal C$, lalu keunikan
+objek $\mathcal D$: setiap morfisma ambient di antara keduanya, termasuk
+$k$, juga merupakan morfisma $\mathcal D$. Untuk keunikan, calon lain di
+$\mathcal D$ dipandang sebagai morfisma di $\mathcal C$, lalu keunikan
 pushout ambient memaksanya sama dengan $k$.
 
 Sekarang ambil diagram $1\leftarrow H\to1$. Untuk setiap grup $K$, hanya ada
-satu homomorfisme dari $1$ ke $K$, sehingga hanya ada satu kocone
+satu homomorfisma dari $1$ ke $K$, sehingga hanya ada satu kocone
 
 $$
 1\longrightarrow K\longleftarrow1,
 $$
 
 dan kompatibilitas pada $H$ otomatis. Grup trivial $1$ mempunyai tepat satu
-homomorfisme ke $K$, jadi ia mewakili sifat universal pushout. Keunikan
-pushout hingga isomorfisme memberi bahwa pushout diagram tersebut adalah
+homomorfisma ke $K$, jadi ia mewakili sifat universal pushout. Keunikan
+pushout hingga isomorfisma memberi bahwa pushout diagram tersebut adalah
 grup trivial.
 
 Untuk $n>1$, $U$, $V$, dan $U\cap V\simeq S^{n-1}\times(-1,1)$ semuanya

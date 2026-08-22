@@ -1,6 +1,6 @@
 ---
 title: "Topologi Aljabar"
-subtitle: "Unit 3: Komponen Terhubung, Homotopi, dan Funktor"
+subtitle: "Unit 3: Komponen Terhubung, Homotopi, dan Fungtor"
 author:
   - "David Michael Roberts (materi sumber)"
   - "Edisi Bahasa Indonesia dengan pendamping penguasaan"
@@ -13,7 +13,7 @@ rights: "Materi adaptasi dan materi pendamping: CC BY 4.0; lihat atribusi di baw
 
 Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas *Algebraic Topology* karya David Michael Roberts (2019), tepatnya `Notes.tex` baris 585-877 pada commit `b947ad2e9f9e301bfe24590a9db653bc54fa1a53`. Baris 878 membuka proposisi yang penandanya, `\lecturenum{4}`, baru muncul pada baris 879; karena itu baris 878 disisihkan bersama isi proposisi untuk Unit 4 agar tidak ada lingkungan LaTeX yang terpotong. Karya sumber tersedia di bawah [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
-Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, pemindahan empat tugas dari catatan pinggir atau prosa ke blok latihan, dan sepuluh koreksi atau klarifikasi terbatas: ketak-kosongan komponen terhubung; syarat jari-jari positif pada homotopi anulus; ketak-kosongan pada klaim $\pi_0(X)=*$; titik akhir homotopi gabungan; subinterval bagi paruh kedua homotopi gabungan; nama homotopi balik; ketak-kosongan dalam definisi keterhubungan lintasan; kategori asal objek pada definisi funktor; kasus citra kosong pada bukti keterhubungan citra; dan asumsi keterhubungan lokal pada bukti kedua funktorialitas $\pi_0$. Materi pendamping penguasaan menjawab seluruh lima latihan dan melengkapi bukti bahwa keterhubungan lintasan mengakibatkan keterhubungan. Materi baru ini juga tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, pemindahan empat tugas dari catatan pinggir atau prosa ke blok latihan, dan sepuluh koreksi atau klarifikasi terbatas: ketak-kosongan komponen terhubung; syarat jari-jari positif pada homotopi anulus; ketak-kosongan pada klaim $\pi_0(X)=*$; titik akhir homotopi gabungan; subinterval bagi paruh kedua homotopi gabungan; nama homotopi balik; ketak-kosongan dalam definisi keterhubungan lintasan; kategori asal objek pada definisi fungtor; kasus citra kosong pada bukti keterhubungan citra; dan asumsi keterhubungan lokal pada bukti kedua fungtorialitas $\pi_0$. Materi pendamping penguasaan menjawab seluruh lima latihan dan melengkapi bukti bahwa keterhubungan lintasan mengakibatkan keterhubungan. Materi baru ini juga tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
 
 # Kuliah 3 {#o012-rbt-l03}
 
@@ -22,7 +22,7 @@ Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah diba
 Inilah contoh pertama kita tentang suatu invarian ruang: apakah sebuah ruang terhubung atau tidak. Ruang terhubung $X$ tidak mungkin homeomorfik dengan ruang $Z$ yang tidak terhubung. Namun, bagaimana kita membedakan dua ruang yang sama-sama tidak terhubung?
 
 ::: {.exercise #o012-rbt-l03-ex-001}
-**Latihan 3.1 (invariansi keterhubungan).** Misalkan $h\colon X\xrightarrow{\cong}Z$ adalah homeomorfisme dan $S$ ruang diskret. Tunjukkan bahwa setiap fungsi kontinu $u\colon X\to S$ berkorespondensi dengan tepat satu fungsi kontinu $v\colon Z\to S$ yang memenuhi $u=v\circ h$. Simpulkan bahwa $X$ terhubung jika dan hanya jika $Z$ terhubung.
+**Latihan 3.1 (invariansi keterhubungan).** Misalkan $h\colon X\xrightarrow{\cong}Z$ adalah homeomorfisma dan $S$ ruang diskret. Tunjukkan bahwa setiap fungsi kontinu $u\colon X\to S$ berkorespondensi dengan tepat satu fungsi kontinu $v\colon Z\to S$ yang memenuhi $u=v\circ h$. Simpulkan bahwa $X$ terhubung jika dan hanya jika $Z$ terhubung.
 :::
 
 ::: {.definition #o012-rbt-l03-def-001}
@@ -129,7 +129,7 @@ Dalam keadaan ini, $X$ dan $Y$ disebut *ekuivalen secara homotopi*.
 **Contoh 3.2.** Setiap ruang kontraktil ekuivalen secara homotopi dengan ruang satu titik.
 :::
 
-Ekuivalensi homotopi dapat dipandang sebagai versi isomorfisme yang lebih kasar. Pemetaan
+Ekuivalensi homotopi dapat dipandang sebagai versi isomorfisma yang lebih kasar. Pemetaan
 
 $$
 \{\text{ruang}\}\longrightarrow\{\text{objek aljabar}\}
@@ -231,18 +231,18 @@ $$
 
 Himpunan *komponen lintasan* dari $Y$ adalah $[*,Y]$. Ruang $Y$ terhubung lintasan jika dan hanya jika $[*,Y]=*$. Perhatikan bahwa $\pi_0(Y)$ dalam catatan ini berarti himpunan **komponen terhubung**, sedangkan $[*,Y]$ berarti himpunan **komponen lintasan**. Keduanya tidak boleh diidentifikasi tanpa hipotesis tambahan, misalnya keterhubungan lintasan lokal yang sesuai.
 
-## Kategori dan funktor {#o012-rbt-l03-s03}
+## Kategori dan fungtor {#o012-rbt-l03-s03}
 
 Sejauh ini kita membahas ruang topologis dan pemetaan kontinu, tetapi kita juga secara tersirat memakai himpunan dan fungsi yang tidak harus kontinu. Pada kedua konteks tersebut, komposisi bersifat asosiatif dan tersedia pemetaan identitas. Kelak kita akan menggunakan kelas-kelas ruang topologis yang lebih terbatas agar sifat yang dibutuhkan benar-benar berlaku.
 
 ::: {.definition #o012-rbt-l03-def-005}
 **Definisi 3.5 (kategori).** Suatu *kategori* $\mathcal{C}$ terdiri atas koleksi objek
-$W,X,Y,Z,\ldots$ dan, untuk setiap pasangan objek $X,Y$, koleksi morfisme
+$W,X,Y,Z,\ldots$ dan, untuk setiap pasangan objek $X,Y$, koleksi morfisma
 $\mathcal{C}(X,Y)$, bersama data berikut:
 
-1. Untuk $f\in\mathcal{C}(X,Y)$ dan $g\in\mathcal{C}(Y,Z)$, dipilih morfisme komposit
+1. Untuk $f\in\mathcal{C}(X,Y)$ dan $g\in\mathcal{C}(Y,Z)$, dipilih morfisma komposit
    $g\circ f\in\mathcal{C}(X,Z)$.
-2. Untuk setiap objek $X$, dipilih morfisme identitas
+2. Untuk setiap objek $X$, dipilih morfisma identitas
    $\operatorname{id}_X\in\mathcal{C}(X,X)$.
 
 Data tersebut harus memenuhi:
@@ -264,13 +264,13 @@ Data tersebut harus memenuhi:
 
 Untuk $f\in\mathcal{C}(X,Y)$, objek $X$ disebut *sumber* $f$ dan $Y$ disebut *sasaran* $f$; ditulis
 $X=s(f)$, $Y=t(f)$, atau $f\colon X\to Y$. Jika setiap
-$\mathcal{C}(X,Y)$ merupakan himpunan, maka $\mathcal{C}$ disebut *kecil secara lokal* dan $\mathcal{C}(X,Y)$ disebut *himpunan morfisme* atau *himpunan-hom*.
+$\mathcal{C}(X,Y)$ merupakan himpunan, maka $\mathcal{C}$ disebut *kecil secara lokal* dan $\mathcal{C}(X,Y)$ disebut *himpunan morfisma* atau *himpunan-hom*.
 :::
 
-Banyak kategori mempunyai objek berupa himpunan yang dilengkapi struktur tambahan, misalnya topologi, dan morfisme berupa fungsi yang sesuai dengan struktur tersebut, tetapi tidak semua kategori berbentuk demikian. Kita telah menjumpai $\mathbf{Top}$, kategori ruang topologis dan pemetaan kontinu, serta $\mathbf{Set}$, kategori himpunan dan fungsi. Ruang vektor, grup, grup abelian, manifold, dan gelanggang memberikan contoh lain.
+Banyak kategori mempunyai objek berupa himpunan yang dilengkapi struktur tambahan, misalnya topologi, dan morfisma berupa fungsi yang sesuai dengan struktur tersebut, tetapi tidak semua kategori berbentuk demikian. Kita telah menjumpai $\mathbf{Top}$, kategori ruang topologis dan pemetaan kontinu, serta $\mathbf{Set}$, kategori himpunan dan fungsi. Ruang vektor, grup, grup abelian, manifold, dan gelanggang memberikan contoh lain.
 
 ::: {.example #o012-rbt-l03-exa-003}
-**Contoh 3.3 (himpunan bertitik).** Kategori $\mathbf{Set}_*$ mempunyai objek berupa himpunan bertitik $(X,x)$, dengan $x\in X$ titik yang ditentukan, dan morfisme berupa pemetaan bertitik
+**Contoh 3.3 (himpunan bertitik).** Kategori $\mathbf{Set}_*$ mempunyai objek berupa himpunan bertitik $(X,x)$, dengan $x\in X$ titik yang ditentukan, dan morfisma berupa pemetaan bertitik
 
 $$
 f\colon(X,x)\longrightarrow(Y,y),
@@ -278,20 +278,20 @@ f\colon(X,x)\longrightarrow(Y,y),
 f(x)=y.
 $$
 
-Kategori ini dapat dipandang sebagai kategori objek aljabar dengan struktur yang paling lemah. Bandingkan dengan homomorfisme, transformasi linear, dan homomorfisme gelanggang, yang semuanya mempertahankan unsur tertentu.
+Kategori ini dapat dipandang sebagai kategori objek aljabar dengan struktur yang paling lemah. Bandingkan dengan homomorfisma, transformasi linear, dan homomorfisma gelanggang, yang semuanya mempertahankan unsur tertentu.
 :::
 
 Kekuatan utama kategori tampak pada hubungannya satu sama lain; sebuah kategori yang terisolasi hanya dapat memberi informasi terbatas.
 
 ::: {.definition #o012-rbt-l03-def-006}
-**Definisi 3.6 (funktor).** Diberikan kategori $\mathcal{C}$ dan $\mathcal{D}$, suatu *funktor*
+**Definisi 3.6 (fungtor).** Diberikan kategori $\mathcal{C}$ dan $\mathcal{D}$, suatu *fungtor*
 $F\colon\mathcal{C}\to\mathcal{D}$ terdiri atas data:
 
 1. Untuk setiap objek $X$ dari $\mathcal{C}$, suatu objek $F(X)$ dari $\mathcal{D}$.
-2. Untuk setiap morfisme $f\colon X\to Y$ dalam $\mathcal{C}$, suatu morfisme
+2. Untuk setiap morfisma $f\colon X\to Y$ dalam $\mathcal{C}$, suatu morfisma
    $F(f)\colon F(X)\to F(Y)$ dalam $\mathcal{D}$.
 
-Untuk setiap objek $X$ dari $\mathcal{C}$ dan setiap pasangan morfisme yang dapat dikomposisikan,
+Untuk setiap objek $X$ dari $\mathcal{C}$ dan setiap pasangan morfisma yang dapat dikomposisikan,
 $f\colon X\to Y$ dan $g\colon Y\to Z$, data ini memenuhi
 
 $$
@@ -300,23 +300,23 @@ F(\operatorname{id}_X)=\operatorname{id}_{F(X)},
 F(g\circ f)=F(g)\circ F(f).
 $$
 
-Sifat kedua disebut *funktorialitas*. Untuk kategori kecil secara lokal, aturan pada morfisme memberikan fungsi
+Sifat kedua disebut *fungtorialitas*. Untuk kategori kecil secara lokal, aturan pada morfisma memberikan fungsi
 
 $$
 \mathcal{C}(X,Y)\longrightarrow\mathcal{D}(F(X),F(Y)).
 $$
 :::
 
-Selain funktor identitas, kita telah melihat sedikitnya tiga contoh:
+Selain fungtor identitas, kita telah melihat sedikitnya tiga contoh:
 
-- funktor pelupa, atau funktor himpunan yang mendasari,
+- fungtor pelupa, atau fungtor himpunan yang mendasari,
   $U\colon\mathbf{Top}\to\mathbf{Set}$;
-- funktor topologi diskret
+- fungtor topologi diskret
   $\operatorname{disc}\colon\mathbf{Set}\to\mathbf{Top}$;
-- funktor komponen terhubung
+- fungtor komponen terhubung
   $\pi_0\colon\mathbf{Top}\to\mathbf{Set}$.
 
-Topologi indiskret juga menghasilkan funktor $\mathbf{Set}\to\mathbf{Top}$, tetapi tidak akan kita gunakan. Kita belum membuktikan bahwa $\pi_0$ benar-benar funktor. Funktor dapat dikomposisikan, sehingga misalnya diperoleh
+Topologi indiskret juga menghasilkan fungtor $\mathbf{Set}\to\mathbf{Top}$, tetapi tidak akan kita gunakan. Kita belum membuktikan bahwa $\pi_0$ benar-benar fungtor. Fungtor dapat dikomposisikan, sehingga misalnya diperoleh
 
 $$
 \operatorname{disc}\circ U\colon\mathbf{Top}\to\mathbf{Top},
@@ -324,17 +324,17 @@ $$
 \operatorname{disc}\circ\pi_0\colon\mathbf{Top}\to\mathbf{Top}.
 $$
 
-Misalkan $\mathcal{C}$ sebuah kategori dan $\mathcal{D}$ suatu *subkategori*: sebagian objek dan sebagian morfisme $\mathcal{C}$ yang dengan sendirinya membentuk kategori. Penyertaan objek dan morfisme membentuk funktor
+Misalkan $\mathcal{C}$ sebuah kategori dan $\mathcal{D}$ suatu *subkategori*: sebagian objek dan sebagian morfisma $\mathcal{C}$ yang dengan sendirinya membentuk kategori. Penyertaan objek dan morfisma membentuk fungtor
 $\mathcal{D}\hookrightarrow\mathcal{C}$, yang disebut *inklusi subkategori*. Jika
 
 $$
 \mathcal{D}(X,Y)=\mathcal{C}(X,Y)
 $$
 
-untuk setiap objek $X,Y$ dari $\mathcal{D}$, maka $\mathcal{D}$ disebut *subkategori penuh*. Secara lebih umum, funktor yang injektif pada objek dan morfisme dapat dipakai untuk mendeskripsikan subkategori.
+untuk setiap objek $X,Y$ dari $\mathcal{D}$, maka $\mathcal{D}$ disebut *subkategori penuh*. Secara lebih umum, fungtor yang injektif pada objek dan morfisma dapat dipakai untuk mendeskripsikan subkategori.
 
 ::: {.example #o012-rbt-l03-exa-004}
-**Contoh 3.4.** Funktor
+**Contoh 3.4.** Fungtor
 $\operatorname{disc}\colon\mathbf{Set}\to\mathbf{Top}$ mengidentifikasi
 $\mathbf{Set}$ dengan subkategori penuh ruang-ruang diskret di dalam $\mathbf{Top}$. Fakta ini akan dipakai tanpa komentar lebih lanjut. Kelak kita juga akan membatasi perhatian pada subkategori-subkategori penuh tertentu dari $\mathbf{Top}$.
 :::
@@ -356,7 +356,7 @@ kontinu. Karena $X$ terhubung, citra komposisi ini memuat paling banyak satu tit
 :::
 
 ::: {.proposition #o012-rbt-l03-prop-003}
-**Proposisi 3.3.** Aturan $X\mapsto\pi_0(X)$ menentukan funktor
+**Proposisi 3.3.** Aturan $X\mapsto\pi_0(X)$ menentukan fungtor
 
 $$
 \pi_0\colon\mathbf{Top}\longrightarrow\mathbf{Set}.
@@ -382,7 +382,7 @@ $$
 $$
 
 Selain itu, $\pi_0(\operatorname{id}_X)$ adalah fungsi identitas pada
-$\pi_0(X)$. Kedua hukum funktor terpenuhi. $\square$
+$\pi_0(X)$. Kedua hukum fungtor terpenuhi. $\square$
 :::
 
 ::: {.proof #o012-rbt-l03-proof-005}
@@ -423,7 +423,7 @@ $$
 =\pi_0(g\circ f)(\alpha),
 $$
 
-yang sekali lagi membuktikan funktorialitas.
+yang sekali lagi membuktikan fungtorialitas.
  $\square$
 :::
 
@@ -434,8 +434,8 @@ $$
 [*,{-}]\colon\mathbf{Top}\longrightarrow\mathbf{Set}
 $$
 
-adalah funktor. Buktikan pula pernyataan yang lebih umum: untuk setiap ruang tetap $A$, aturan
-$[A,{-}]\colon\mathbf{Top}\to\mathbf{Set}$ adalah funktor.
+adalah fungtor. Buktikan pula pernyataan yang lebih umum: untuk setiap ruang tetap $A$, aturan
+$[A,{-}]\colon\mathbf{Top}\to\mathbf{Set}$ adalah fungtor.
 :::
 
 ## Kategori homotopi {#o012-rbt-l03-s04}
@@ -447,10 +447,10 @@ $$
 \mathbf{Ho}(X,Y)=[X,Y].
 $$
 
-Terdapat funktor $\mathbf{Top}\to\mathbf{Ho}$ yang identik pada objek dan mengirim setiap pemetaan kontinu ke kelas homotopinya. Dua objek isomorfik dalam $\mathbf{Ho}$ jika dan hanya jika keduanya ekuivalen secara homotopi.
+Terdapat fungtor $\mathbf{Top}\to\mathbf{Ho}$ yang identik pada objek dan mengirim setiap pemetaan kontinu ke kelas homotopinya. Dua objek isomorfik dalam $\mathbf{Ho}$ jika dan hanya jika keduanya ekuivalen secara homotopi.
 
 ::: {.exercise #o012-rbt-l03-ex-005}
-**Latihan 3.5.** Buktikan bahwa komposisi kelas homotopi terdefinisi dengan baik, sehingga $\mathbf{Ho}$ benar-benar merupakan kategori. Verifikasi pula pernyataan tentang funktor $\mathbf{Top}\to\mathbf{Ho}$ dan isomorfisme objek pada paragraf sebelumnya.
+**Latihan 3.5.** Buktikan bahwa komposisi kelas homotopi terdefinisi dengan baik, sehingga $\mathbf{Ho}$ benar-benar merupakan kategori. Verifikasi pula pernyataan tentang fungtor $\mathbf{Top}\to\mathbf{Ho}$ dan isomorfisma objek pada paragraf sebelumnya.
 :::
 
 # Pendamping penguasaan: solusi lengkap {.unnumbered #o012-rbt-l03-mastery}
@@ -539,7 +539,7 @@ $f(y_0)=f(y_1)$. Karena kedua titik dipilih sembarang, $f(Y)$ memuat tepat satu 
 
 ## Solusi Latihan 3.4 {#o012-rbt-l03-sol-004}
 
-Untuk ruang tetap $A$, definisikan funktor $[A,{-}]$ pada objek dengan
+Untuk ruang tetap $A$, definisikan fungtor $[A,{-}]$ pada objek dengan
 
 $$
 Y\longmapsto[A,Y].
@@ -570,7 +570,7 @@ $$
 =[A,k]\bigl([A,h]([f])\bigr).
 $$
 
-Jadi $[A,{-}]$ adalah funktor. Kasus $A=*$ memberikan funktor
+Jadi $[A,{-}]$ adalah fungtor. Kasus $A=*$ memberikan fungtor
 $[*,{-}]$ yang diminta.
 
 ## Solusi Latihan 3.5 {#o012-rbt-l03-sol-005}
@@ -604,7 +604,7 @@ $$
 Jadi komposisi kelas terdefinisi dengan baik. Asosiativitas diwarisi dari komposisi pemetaan, dan $[\operatorname{id}_X]$ bertindak sebagai identitas. Maka $\mathbf{Ho}$ adalah kategori.
 
 Aturan $Q\colon\mathbf{Top}\to\mathbf{Ho}$ dengan
-$Q(X)=X$ dan $Q(f)=[f]$ mempertahankan identitas dan komposisi secara langsung, sehingga merupakan funktor.
+$Q(X)=X$ dan $Q(f)=[f]$ mempertahankan identitas dan komposisi secara langsung, sehingga merupakan fungtor.
 
 Jika $[f]\colon X\to Y$ isomorfik dalam $\mathbf{Ho}$ dengan invers $[g]$, maka
 
@@ -615,4 +615,4 @@ $$
 $$
 
 Artinya $g\circ f\simeq\operatorname{id}_X$ dan
-$f\circ g\simeq\operatorname{id}_Y$, sehingga $f$ adalah ekuivalensi homotopi. Sebaliknya, setiap ekuivalensi homotopi dengan invers homotopi $g$ memberikan isomorfisme $[f]$ dengan invers $[g]$ dalam $\mathbf{Ho}$.
+$f\circ g\simeq\operatorname{id}_Y$, sehingga $f$ adalah ekuivalensi homotopi. Sebaliknya, setiap ekuivalensi homotopi dengan invers homotopi $g$ memberikan isomorfisma $[f]$ dengan invers $[g]$ dalam $\mathbf{Ho}$.

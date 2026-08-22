@@ -15,7 +15,7 @@ Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas *Algebraic
 Topology* karya David Michael Roberts (2019), tepatnya [Notes.tex baris
 1947--2093 pada commit
 b947ad2e9f9e301bfe24590a9db653bc54fa1a53](https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/blob/b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex#L1947-L2093).
-Rentang itu dimulai dengan penanda Kuliah 9 dan teorema kesetiaan funktor
+Rentang itu dimulai dengan penanda Kuliah 9 dan teorema kesetiaan fungtor
 grupoid fundamental suatu ruang penutup, lalu berakhir tepat setelah
 pernyataan teorema yang mengidentifikasi serat dengan ruang koset. Baris 2094
 memulai Kuliah 10 dan tidak termasuk dalam unit ini. Bukti sumber bagi teorema
@@ -25,7 +25,7 @@ International](https://creativecommons.org/licenses/by/4.0/).
 
 Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah
 dibaca, pemberian pengenal stabil, dan pemindahan ketiga unsur pinggir ke
-urutan bacaan utama: keterangan tentang funktor setia, latihan kontraksi, dan
+urutan bacaan utama: keterangan tentang fungtor setia, latihan kontraksi, dan
 diagram pengangkatan homotopi. Diagram tersebut ditulis ulang sebagai diagram
 linear beserta uraian semua panahnya. Beberapa cacat sumber diperbaiki secara
 independen: salah eja “funtor”, “trivisalisable”, dan “resuls” diperbaiki;
@@ -63,7 +63,7 @@ dari komponen-komponen yang saling lepas. Sekarang kita akan melihat cara lain
 untuk memperoleh informasi tentang grupoid fundamental sebuah ruang dari
 grupoid fundamental ruang lain.
 
-## Ruang penutup menginduksi funktor setia {#o012-rbt-l09-s01}
+## Ruang penutup menginduksi fungtor setia {#o012-rbt-l09-s01}
 
 ::: {.theorem #o012-rbt-l09-thm-001 data-source-label="thm:cov_space_gives_faithful_functor"}
 **Teorema 9.1 (kesetiaan bagi ruang penutup).** Misalkan
@@ -79,7 +79,7 @@ $$
 \end{aligned}
 $$
 
-bersifat injektif. Dengan kata lain, funktor
+bersifat injektif. Dengan kata lain, fungtor
 $\Pi_1(\pi)\colon\Pi_1(Z)\to\Pi_1(X)$ bersifat *setia*.
 :::
 
@@ -94,7 +94,7 @@ $$
 \pi\colon(Z,z)\longrightarrow(X,x),
 $$
 
-homomorfisme terinduksi
+homomorfisma terinduksi
 
 $$
 \pi_*\colon\pi_1(Z,z)\longrightarrow\pi_1(X,x)
@@ -125,7 +125,7 @@ $$
 Z_0:=Z_{\{0\}\times X}=\pi^{-1}(\{0\}\times X).
 $$
 
-Terdapat isomorfisme ruang penutup
+Terdapat isomorfisma ruang penutup
 
 $$
 Z\xrightarrow{\;\cong\;}I\times Z_0
@@ -273,7 +273,7 @@ $$
 \Phi\circ\sigma=\operatorname{id}_{I\times Z_0}.
 $$
 
-Jadi $\Phi$ merupakan isomorfisme di atas $I\times X$. $\square$
+Jadi $\Phi$ merupakan isomorfisma di atas $I\times X$. $\square$
 :::
 
 ::: {.corollary #o012-rbt-l09-cor-002 data-source-label="prop:pullback_by_homotopic_maps_iso"}
@@ -287,7 +287,7 @@ H(0,u)=f(u),
 H(1,u)=g(u).
 $$
 
-Jika $Z\to Y$ suatu ruang penutup, maka terdapat isomorfisme ruang penutup
+Jika $Z\to Y$ suatu ruang penutup, maka terdapat isomorfisma ruang penutup
 
 $$
 f^*Z\cong g^*Z
@@ -310,7 +310,7 @@ H^*Z\cong I\times f^*Z.
 $$
 
 Di sisi lain, pembatasan $H^*Z$ ke $\{1\}\times X$ isomorfik dengan
-$g^*Z$. Membatasi isomorfisme di atas ke $\{1\}\times X$ memberikan
+$g^*Z$. Membatasi isomorfisma di atas ke $\{1\}\times X$ memberikan
 
 $$
 g^*Z
@@ -322,11 +322,11 @@ g^*Z
 f^*Z.
 $$
 
-Semua isomorfisme ini berada di atas $X$. $\square$
+Semua isomorfisma ini berada di atas $X$. $\square$
 :::
 
-Isomorfisme $f^*Z\cong g^*Z$ yang dihasilkan umumnya bergantung pada homotopi
-$H$ yang dipilih; akibat ini menyatakan keberadaan isomorfisme, bukan
+Isomorfisma $f^*Z\cong g^*Z$ yang dihasilkan umumnya bergantung pada homotopi
+$H$ yang dipilih; akibat ini menyatakan keberadaan isomorfisma, bukan
 kanonisitas yang hanya ditentukan oleh kedua pemetaan ujung.
 
 Kita segera memperoleh kriteria yang menjamin bahwa suatu ruang tidak
@@ -335,7 +335,7 @@ memiliki ruang penutup nontrivial.
 ::: {.corollary #o012-rbt-l09-cor-003}
 **Akibat 9.3 (penutup di atas ruang kontraktil).** Jika $X$ kontraktil,
 maka untuk setiap $x\in X$ dan setiap ruang penutup $Z\to X$ terdapat
-isomorfisme
+isomorfisma
 
 $$
 Z\cong X\times Z_x
@@ -360,7 +360,7 @@ c_x^*Z
 X\times Z_x.
 $$
 
-Ini adalah isomorfisme ruang penutup di atas $X$. $\square$
+Ini adalah isomorfisma ruang penutup di atas $X$. $\square$
 :::
 
 ::: {.exercise #o012-rbt-l09-ex-001 data-origin="Roberts Notes.tex:2032-2036 marginal exercise"}
@@ -443,7 +443,7 @@ $$
 s_f\colon X\longrightarrow f^*Z.
 $$
 
-Proposisi 9.1 memberi isomorfisme, yang dinormalisasi pada
+Proposisi 9.1 memberi isomorfisma, yang dinormalisasi pada
 $\{0\}\times X$,
 
 $$
@@ -458,7 +458,7 @@ I\times X\longrightarrow I\times f^*Z,
 (t,u)\longmapsto(t,s_f(u)),
 $$
 
-dengan isomorfisme tersebut, lalu dengan proyeksi $H^*Z\to Z$. Hasilnya
+dengan isomorfisma tersebut, lalu dengan proyeksi $H^*Z\to Z$. Hasilnya
 adalah pemetaan
 
 $$
@@ -487,7 +487,7 @@ Sekarang kita dapat memberikan bukti Teorema 9.1 yang sebelumnya ditunda.
 ::: {.proof #o012-rbt-l09-proof-005}
 **Bukti Teorema 9.1.** Ambil lintasan
 $\gamma,\eta\colon z_1\rightsquigarrow z_2$ di $Z$, dan anggap bahwa
-$\pi\circ\gamma$ dan $\pi\circ\eta$ mewakili morfisme yang sama di
+$\pi\circ\gamma$ dan $\pi\circ\eta$ mewakili morfisma yang sama di
 $\Pi_1(X)$. Jadi terdapat homotopi berujung tetap
 
 $$
@@ -563,7 +563,7 @@ G:=\pi_1(X,x),
 H:=\pi_*\bigl(\pi_1(Z,z)\bigr)\leq G.
 $$
 
-Jika aksi monodromi kanan dari Unit 7--8 digunakan, terdapat isomorfisme
+Jika aksi monodromi kanan dari Unit 7--8 digunakan, terdapat isomorfisma
 himpunan-$G$ kanan
 
 $$
@@ -571,7 +571,7 @@ Z_x\cong H\backslash G.
 $$
 
 Jika aksi itu diubah menjadi aksi kiri melalui
-$g\star u:=u\mathbin{\cdot}g^{-1}$, bentuk yang sama adalah isomorfisme
+$g\star u:=u\mathbin{\cdot}g^{-1}$, bentuk yang sama adalah isomorfisma
 himpunan-$G$ kiri
 
 $$
@@ -632,7 +632,7 @@ setiap titik di $X$.
 **Pemeriksaan penguasaan 9.2 (setia tidak berarti penuh).**
 
 1. Turunkan Akibat 9.1 langsung dari Teorema 9.1.
-2. Berikan ruang penutup yang funktor
+2. Berikan ruang penutup yang fungtor
    $\Pi_1(Z)\to\Pi_1(X)$-nya setia tetapi tidak penuh.
 3. Jelaskan dengan tepat kesimpulan keterhinggaan yang dapat ditarik dari
    penyertaan $\pi_1(Z,z)\hookrightarrow\pi_1(X,x)$.
@@ -640,7 +640,7 @@ setiap titik di $X$.
 
 ## Solusi Pemeriksaan 9.2 {#o012-rbt-l09-sol-002}
 
-Untuk $z_1=z_2=z$, himpunan-hom pada Teorema 9.1 adalah grup automorfisme
+Untuk $z_1=z_2=z$, himpunan-hom pada Teorema 9.1 adalah grup automorfisma
 
 $$
 \Pi_1(Z)(z,z)=\pi_1(Z,z),
@@ -649,9 +649,9 @@ $$
 $$
 
 Pemetaan terinduksi tepat $\pi_*$. Karena pemetaan itu injektif dan juga
-homomorfisme, ia mengidentifikasi domainnya dengan citranya sebagai subgrup.
+homomorfisma, ia mengidentifikasi domainnya dengan citranya sebagai subgrup.
 
-Untuk melihat bahwa funktor tersebut tidak harus penuh, ambil ruang tak kosong
+Untuk melihat bahwa fungtor tersebut tidak harus penuh, ambil ruang tak kosong
 $X$, himpunan diskret $S$ dengan sedikitnya dua unsur, dan penutup trivial
 
 $$
@@ -667,7 +667,7 @@ $$
 
 Namun $\Pi_1(X)(x,x)$ tidak kosong karena memuat kelas lintasan konstan.
 Pemetaan dari himpunan kosong menuju himpunan tak kosong memang injektif,
-tetapi tidak surjektif. Jadi funktor itu setia tetapi tidak penuh.
+tetapi tidak surjektif. Jadi fungtor itu setia tetapi tidak penuh.
 
 Terakhir, injeksi memberi pertidaksamaan kardinal
 
@@ -787,7 +787,7 @@ setiap penampang memberi pengangkatan $f$, sehingga kedua data tersebut
 ekuivalen.
 
 Terapkan Proposisi 9.1 pada $H^*Z\to I\times X$. Trivialitas eksplisitnya
-memberi isomorfisme
+memberi isomorfisma
 
 $$
 \Theta\colon I\times f^*Z\xrightarrow{\;\cong\;}H^*Z
@@ -837,9 +837,9 @@ untuk membuktikan bahwa:
 1. aksi $G$ pada $Z_x$ transitif;
 2. stabilisator $z$ tepat $H=\pi_*\pi_1(Z,z)$;
 3. pemetaan $H\backslash G\to Z_x$, $Hg\mapsto z\cdot g$, merupakan
-   isomorfisme himpunan-$G$ kanan;
+   isomorfisma himpunan-$G$ kanan;
 4. setelah aksi kiri didefinisikan oleh $g\star u=u\cdot g^{-1}$, pemetaan
-   $G/H\to Z_x$, $gH\mapsto z\cdot g^{-1}$, merupakan isomorfisme
+   $G/H\to Z_x$, $gH\mapsto z\cdot g^{-1}$, merupakan isomorfisma
    himpunan-$G$ kiri.
 :::
 

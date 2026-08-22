@@ -75,7 +75,7 @@ dahulu, lalu $g$.
 
 ::: {.definition #o012-rbt-l13-def-001}
 **Definisi 13.1 (produk bebas dengan amalgamasi).** Misalkan diberikan
-sepasang homomorfisme
+sepasang homomorfisma
 
 $$
 G\xleftarrow{\ \phi\ }L\xrightarrow{\ \psi\ }H.
@@ -93,14 +93,14 @@ G*_L H
 $$
 
 di mana kurung ganda menyatakan subgrup normal terkecil dari $G*H$ yang
-memuat semua unsur $\phi(x)\psi(x)^{-1}$. Homomorfisme kanonik
+memuat semua unsur $\phi(x)\psi(x)^{-1}$. Homomorfisma kanonik
 
 $$
 G\longrightarrow G*_L H\longleftarrow H
 $$
 
 membuat $G*_L H$ memenuhi sifat universal pushout di $\mathbf{Grp}$.
-Dengan kata lain, untuk setiap homomorfisme $u\colon G\to K$ dan
+Dengan kata lain, untuk setiap homomorfisma $u\colon G\to K$ dan
 $v\colon H\to K$ dengan
 
 $$
@@ -165,7 +165,7 @@ F_m&\longrightarrow&G,
 $$
 
 dengan $r\colon\mathbb Z\to F_m$ ditentukan oleh $r(1)=R$ dan $!$ satu-
-satunya homomorfisme ke grup trivial. Pushout memaksa citra $R$ menjadi
+satunya homomorfisma ke grup trivial. Pushout memaksa citra $R$ menjadi
 identitas, jadi sudut kanan bawah adalah
 $F_m/\langle\!\langle R\rangle\!\rangle\cong G$.
 :::
@@ -193,7 +193,7 @@ $$
 F_n=\langle a_1,\ldots,a_n\mid\ \rangle,
 $$
 
-dan homomorfisme $r\colon F_n\to F_m$ yang ditentukan oleh kata relator
+dan homomorfisma $r\colon F_n\to F_m$ yang ditentukan oleh kata relator
 $r(a_1),\ldots,r(a_n)$. Maka
 
 $$
@@ -283,8 +283,8 @@ ditangani atau grup bebas-torsi yang sesuai dipakai).
 
 Setelah memperoleh perlakuan konkret bagi pushout grup sebagai produk bebas
 dengan amalgamasi, wajar mengharapkan perlakuan serupa bagi grupoid. Hal itu
-memang dapat dilakukan: morfisme pushout grupoid diwakili oleh kata-kata
-dalam morfisme grupoid yang diberikan. Namun, tidak seperti kata dalam unsur
+memang dapat dilakukan: morfisma pushout grupoid diwakili oleh kata-kata
+dalam morfisma grupoid yang diberikan. Namun, tidak seperti kata dalam unsur
 grup, rangkaian panah hanya bermakna bila sasaran setiap panah sama dengan
 sumber panah berikutnya.
 
@@ -314,7 +314,7 @@ $$
 $$
 
 Keempat grupoid mempunyai himpunan objek yang sama, yaitu $A$, dan setiap
-funktor pada diagram adalah identitas pada objek; misalnya $i_U(a)=a$.
+fungtor pada diagram adalah identitas pada objek; misalnya $i_U(a)=a$.
 Komutativitas berarti bahwa kelas lintasan di $U\cap V$ mempunyai citra yang
 sama setelah dipandang di $X$ melalui salah satu dari dua rute.
 :::
@@ -359,7 +359,7 @@ $$
 
 dan komponen objek $F$ serta $G$ adalah fungsi identitas. Kita hendak
 membangun grupoid $\Gamma*_\Lambda H$ yang melengkapi span tersebut menjadi
-persegi pushout. Himpunan objeknya kembali $A$, sedangkan funktor kanonik
+persegi pushout. Himpunan objeknya kembali $A$, sedangkan fungtor kanonik
 
 $$
 \Gamma\longrightarrow\Gamma*_\Lambda H\longleftarrow H
@@ -368,16 +368,16 @@ $$
 adalah identitas pada objek.
 
 Setiap grupoid---bahkan setiap kategori---mempunyai graf dasar berarah yang
-objek-objeknya menjadi simpul dan setiap morfismenya menjadi sisi. Loop dan
+objek-objeknya menjadi simpul dan setiap morfismanya menjadi sisi. Loop dan
 beberapa sisi dengan pasangan titik ujung sama diperbolehkan. Untuk skema kata
 di sini, hapus sisi identitas dan pandang graf itu sebagai graf berarah dengan
 involusi: dari setiap pasangan $\{\alpha,\alpha^{-1}\}$ cukup satu orientasi
 yang digambar, sedangkan penelusuran balik mewakili inversnya. Jadi sisi yang
-**digambar** tidak diklaim sama secara harfiah dengan seluruh morfisme
+**digambar** tidak diklaim sama secara harfiah dengan seluruh morfisma
 nonidentitas. Dari $\Gamma$ dan $H$, bentuk $\mathcal G$ memakai gabungan
 saling lepas sisi terpilih kedua faktor pada simpul $A$. Alih-alih mengandalkan
 warna sumber, kita beri setiap sisi tag $[\Gamma]$ atau $[H]$; huruf pada kata
-tetap merupakan morfisme sebenarnya dalam faktor terkait.
+tetap merupakan morfisma sebenarnya dalam faktor terkait.
 
 ::: {.figure #o012-rbt-l13-fig-005}
 **Diagram 13.5 (daftar semantik seluruh sisi pada graf sumber).** Gambar
@@ -412,7 +412,7 @@ $$
 Mulailah dengan grupoid
 $\Gamma*_{\Lambda_0}H$, di mana
 $\Lambda_0=\operatorname{Disc}(A)$ adalah grupoid diskret pada himpunan
-objek yang sama. Morfismenya dapat diwakili oleh kata berhingga
+objek yang sama. Morfismanya dapat diwakili oleh kata berhingga
 
 $$
 \alpha_1\alpha_2\cdots\alpha_r
@@ -484,7 +484,7 @@ panah-panah bersebelahan dari faktor yang sama, lalu menerapkan kongruensi.
 $\Gamma*_\Lambda H$ menjadi grupoid.
 :::
 
-Jika yang hendak dihitung hanya grup morfisme dari satu objek $a_i$ ke
+Jika yang hendak dihitung hanya grup morfisma dari satu objek $a_i$ ke
 dirinya sendiri---seperti ketika menghitung grup fundamental melalui
 Seifert--van Kampen grupoid---cukup perhatikan kata yang berawal dan berakhir
 di $a_i$.
@@ -522,7 +522,7 @@ $$
 \end{array}
 $$
 
-Keempat panah diinduksi oleh inklusi; semua funktor mempertahankan kedua
+Keempat panah diinduksi oleh inklusi; semua fungtor mempertahankan kedua
 objek $+1$ dan $-1$. Subskrip $1$ pada $\Pi_1$ kanan bawah memulihkan salah
 tik $\Pi_(S^1,\{\pm1\})$ dalam sumber; subskrip yang sama juga hilang pada
 penyebutan $\Pi_1(U\cap V,\{\pm1\})$ sesudah diagram sumber.
@@ -633,7 +633,7 @@ $$
 n\longmapsto(\gamma\eta)^n
 $$
 
-adalah isomorfisme. Jadi
+adalah isomorfisma. Jadi
 
 $$
 \pi_1(S^1,+1)\cong\mathbb Z.
@@ -732,7 +732,7 @@ $$
 \end{array}
 $$
 
-Kedua panah keluar dari $1$ adalah homomorfisme unik. Karena pushout diagram
+Kedua panah keluar dari $1$ adalah homomorfisma unik. Karena pushout diagram
 $\pi_1(X,x)\leftarrow1\to\pi_1(Y,y)$ adalah produk bebas, panah kanan bawah
 mengidentifikasi sudut tersebut secara kanonik dengan produk bebas.
 :::
@@ -788,7 +788,7 @@ $$
 f_i\colon(S^1,1)\longrightarrow(W_m,*)
 $$
 
-yang kelas loopnya, di bawah isomorfisme
+yang kelas loopnya, di bawah isomorfisma
 $\pi_1(W_m,*)\cong F_m$, adalah kata $R_i$. Gabungkan peta-peta itu menjadi
 $\bigsqcup_i f_i$. Persegi pushoutnya ialah
 
@@ -1009,7 +1009,7 @@ $$
 $$
 
 Jika relasi $\phi(s)=\psi(s)$ berlaku untuk setiap $s\in S$, relasi itu juga
-berlaku untuk invers dan produk pembangkit: homomorfisme dari $L$ yang
+berlaku untuk invers dan produk pembangkit: homomorfisma dari $L$ yang
 diberikan oleh dua komposit ke hasil bagi bersepakat pada $S$, maka
 bersepakat pada seluruh $L$. Jadi cukup menambahkan relasi bagi $s\in S$,
 dan diperoleh
@@ -1023,8 +1023,8 @@ R_\alpha,Q_\beta,
 \right\rangle.
 $$
 
-Presentasi ini juga mempunyai sifat universal yang diinginkan. Homomorfisme
-ke grup $K$ sama dengan pasangan homomorfisme $u\colon G\to K$ dan
+Presentasi ini juga mempunyai sifat universal yang diinginkan. Homomorfisma
+ke grup $K$ sama dengan pasangan homomorfisma $u\colon G\to K$ dan
 $v\colon H\to K$ yang menghormati relasi tambahan; syarat terakhir tepat
 $u\circ\phi=v\circ\psi$ pada $S$, dan karenanya pada $L$.
 
@@ -1098,7 +1098,7 @@ $\Gamma*_\Lambda H$ juga grupoid.
 
 ::: {.exercise #o012-rbt-l13-mcheck-003 data-origin="edition-original"}
 **Pemeriksaan penguasaan 13.3 (solusi Latihan Sumber 13.2).** Untuk grupoid
-$\mathcal K$, misalkan diberikan funktor
+$\mathcal K$, misalkan diberikan fungtor
 
 $$
 P\colon\Gamma\to\mathcal K,
@@ -1106,7 +1106,7 @@ P\colon\Gamma\to\mathcal K,
 Q\colon H\to\mathcal K
 $$
 
-dengan $P\circ G=Q\circ F$. Bangun satu-satunya funktor
+dengan $P\circ G=Q\circ F$. Bangun satu-satunya fungtor
 $T\colon\Gamma*_\Lambda H\to\mathcal K$ yang memperluas $P$ dan $Q$.
 :::
 
@@ -1131,7 +1131,7 @@ dengan $T(\alpha_i)=P(\alpha_i)$ bila huruf itu berasal dari $\Gamma$ dan
 $T(\alpha_i)=Q(\alpha_i)$ bila berasal dari $H$. Produk pada ruas kanan
 dibaca kronologis. Kata kosong dikirim ke identitas.
 
-Funktorialitas $P$ dan $Q$ memastikan bahwa menghapus identitas atau
+Fungtorialitas $P$ dan $Q$ memastikan bahwa menghapus identitas atau
 mengomposisikan dua huruf dari faktor yang sama tidak mengubah nilai. Bagi
 $\lambda\in\Lambda$, kompatibilitas memberi
 
@@ -1144,22 +1144,22 @@ $$
 
 Karena kesamaan di $\mathcal K$ stabil terhadap komposisi dan invers,
 $T$ tetap konstan pada seluruh kongruensi yang dihasilkan relasi tersebut.
-Jadi rumus turun ke funktor
+Jadi rumus turun ke fungtor
 
 $$
 T\colon\Gamma*_\Lambda H\longrightarrow\mathcal K.
 $$
 
 Konstruksinya jelas membatasi menjadi $P$ dan $Q$. Untuk keunikan, setiap
-funktor perluasan harus mempunyai nilai $P(\alpha)$ atau $Q(\alpha)$ pada
-setiap kata satu huruf. Funktorialitas kemudian memaksanya mempunyai nilai
+fungtor perluasan harus mempunyai nilai $P(\alpha)$ atau $Q(\alpha)$ pada
+setiap kata satu huruf. Fungtorialitas kemudian memaksanya mempunyai nilai
 produk di atas pada setiap kata, dan karenanya pada setiap kelas kongruensi.
 Jadi $T$ unik. Inilah tepat sifat universal pushout di $\mathbf{Gpd}$.
 
 ::: {.exercise #o012-rbt-l13-mcheck-004 data-origin="edition-original"}
 **Pemeriksaan penguasaan 13.4 (bentuk normal pada lingkaran).** Tentukan
 semua empat hom-set dari grupoid pada Diagram 13.8. Gunakan jawaban itu untuk
-membuktikan lagi bahwa grup automorfisme di $+1$ isomorfik dengan
+membuktikan lagi bahwa grup automorfisma di $+1$ isomorfik dengan
 $\mathbb Z$.
 :::
 
@@ -1200,7 +1200,7 @@ $$
 =(\gamma\eta)^{m+n}.
 $$
 
-Karena itu $n\mapsto(\gamma\eta)^n$ adalah homomorfisme bijektif dari
+Karena itu $n\mapsto(\gamma\eta)^n$ adalah homomorfisma bijektif dari
 $\mathbb Z$ ke $\operatorname{Aut}(+1)=\pi_1(S^1,+1)$.
 
 ::: {.exercise #o012-rbt-l13-mcheck-005 data-origin="edition-original"}
@@ -1209,7 +1209,7 @@ $\mathbb Z$ ke $\operatorname{Aut}(+1)=\pi_1(S^1,+1)$.
 1. Tunjukkan bahwa $X\vee V$ meretrak deformasi ke $X$, $U\vee Y$
    meretrak deformasi ke $Y$, dan $U\vee V$ kontraktibel ke titik basis.
 2. Jelaskan tepat di mana keterhubungan lintasan $X$ dan $Y$ dipakai.
-3. Turunkan isomorfisme produk bebas dari sifat universal pushout.
+3. Turunkan isomorfisma produk bebas dari sifat universal pushout.
 :::
 
 ## Solusi Pemeriksaan 13.5 {#o012-rbt-l13-sol-005}
@@ -1235,7 +1235,7 @@ $$
 \pi_1(X,x)\longleftarrow1\longrightarrow\pi_1(Y,y).
 $$
 
-Untuk grup $K$, sebuah kocone dari diagram ini tepat pasangan homomorfisme
+Untuk grup $K$, sebuah kocone dari diagram ini tepat pasangan homomorfisma
 
 $$
 \pi_1(X,x)\to K\longleftarrow\pi_1(Y,y),
@@ -1243,7 +1243,7 @@ $$
 
 karena kompatibilitas pada $1$ otomatis. Sifat universal produk bebas
 menunjukkan bahwa pushoutnya adalah
-$\pi_1(X,x)*\pi_1(Y,y)$. Keunikan pushout memberi isomorfisme kanonik dengan
+$\pi_1(X,x)*\pi_1(Y,y)$. Keunikan pushout memberi isomorfisma kanonik dengan
 $\pi_1(X\vee Y,*)$.
 
 ::: {.exercise #o012-rbt-l13-mcheck-006 data-origin="edition-original"}
@@ -1265,16 +1265,16 @@ Gunakan sampul berkerah $\mathcal U\cup\mathcal V$: bagian $\mathcal U$
 meretrak deformasi ke $W$, bagian $\mathcal V$ meretrak deformasi ke cakram
 $D^2$ dan karenanya mempunyai grup fundamental trivial, sedangkan
 $\mathcal U\cap\mathcal V$ meretrak deformasi ke lingkaran batas. Kedua
-homomorfisme dari grup fundamental irisan mengirim generator batas masing-
+homomorfisma dari grup fundamental irisan mengirim generator batas masing-
 masing ke $R$ di $\pi_1(W,*)$ dan ke identitas di $\pi_1(D^2,*)$. Pushout
 grup karena itu menambahkan relasi $R=e$.
 
-Kernel suatu homomorfisme grup selalu subgrup normal. Setelah $R$ menjadi
+Kernel suatu homomorfisma grup selalu subgrup normal. Setelah $R$ menjadi
 identitas, setiap konjugat $wRw^{-1}$ juga harus menjadi identitas; demikian
 pula semua produk konjugat dan inversnya. Jadi sedikitnya seluruh penutupan
 normal $\langle\!\langle R\rangle\!\rangle$ dibunuh. Sebaliknya, hasil bagi
 oleh penutupan normal itu mempunyai sifat universal yang tepat bagi semua
-homomorfisme yang membunuh $R$. Maka grup hasilnya persis
+homomorfisma yang membunuh $R$. Maka grup hasilnya persis
 
 $$
 \pi_1(W,*)/\langle\!\langle R\rangle\!\rangle.

@@ -57,7 +57,7 @@ $Y\to Y/G$ menjadi peta penutup, yang diperlukan adalah aksi penutup, bukan
 kebebasan saja.
 
 Sumber menunda keberadaan ruang penutup terhubung sederhana, realisasi setiap
-subgrup, dan kepenuhan-setiaan funktor monodromi. Edisi ini mempertahankan
+subgrup, dan kepenuhan-setiaan fungtor monodromi. Edisi ini mempertahankan
 batas logis itu. Tujuh pemeriksaan penguasaan asli edisi hanya menyelesaikan
 langkah yang sudah menjadi kewajiban Unit 15: pemisahan menurut komponen,
 aksi kanan, orbit, penstabil, contoh lingkaran, dan sifat torsor yang bersifat
@@ -122,7 +122,7 @@ $$
 
 untuk setiap $j\in I$. Pemetaan ruang penutup $f\colon Z\to Z'$ di atas
 $X$ membatasi menjadi pemetaan
-$f|_{X_j}\colon Z_{X_j}\to Z'_{X_j}$ di atas $X_j$. Jadi diperoleh funktor
+$f|_{X_j}\colon Z_{X_j}\to Z'_{X_j}$ di atas $X_j$. Jadi diperoleh fungtor
 
 $$
 R\colon\operatorname{Cov}_X
@@ -140,17 +140,17 @@ $$
 $$
 
 Koproduk pemetaan $Z_i\to Z'_i$ memberi pemetaan ruang penutup di atas
-$X$. Ini mendefinisikan funktor $C$ dalam arah sebaliknya.
+$X$. Ini mendefinisikan fungtor $C$ dalam arah sebaliknya.
 
 Tarik balik koproduk $\bigsqcup_i Z_i$ ke $X_j$ secara kanonik isomorfik
 dengan $Z_j$, sehingga $RC\cong\mathrm{id}$. Di arah lain, himpunan terbuka
 $p^{-1}(X_i)$ membentuk partisi $Z$, dan pemetaan kanonik
-$\bigsqcup_i p^{-1}(X_i)\to Z$ adalah homeomorfisme di atas $X$; maka
-$CR\cong\mathrm{id}$. Kedua isomorfisme itu natural pada pemetaan ruang
+$\bigsqcup_i p^{-1}(X_i)\to Z$ adalah homeomorfisma di atas $X$; maka
+$CR\cong\mathrm{id}$. Kedua isomorfisma itu natural pada pemetaan ruang
 penutup. Jadi $R$ dan $C$ merupakan ekuivalensi kategori.
 :::
 
-Funktor serat dari Unit 14---antarmuka masuknya bernama stabil
+Fungtor serat dari Unit 14---antarmuka masuknya bernama stabil
 `o012-rbt-l14-eq-fibre-functor`---karenanya memfaktor sebagai
 
 $$
@@ -204,7 +204,7 @@ dengan $\rho_i$ ditentukan oleh
 $z\cdot[\gamma]=\gamma_*(z)$.
 :::
 
-Karena itu, jika setiap funktor
+Karena itu, jika setiap fungtor
 $\operatorname{Cov}_{X_i}\to\mathbf{Set}_{\pi_1(X_i,a_i)}$ dipahami, maka
 kasus umum juga dipahami komponen demi komponen.
 
@@ -214,7 +214,7 @@ Mulai sekarang, anggap $X$ terhubung dan SLSC dalam konvensi mata kuliah,
 serta pilih $x_0\in X$. Karena SLSC mencakup basis lingkungan terhubung
 lintasan, $X$ terhubung lintasan. Untuk $z\in Z$, pilih lingkungan $W$ dari
 $p(z)$ yang diliputi secara merata, lalu pilih lingkungan basis terhubung
-lintasan $U$ dengan $p(z)\in U\subseteq W$. Pembatasan lembar-lembar di atas
+lintasan $U$ dengan $p(z)\in U\subseteq W$. Pembatasan lembaran-lembaran di atas
 $W$ ke $U$ memberi basis lingkungan terhubung lintasan pada $Z$. Jadi $Z$
 terhubung lintasan lokal, komponen terhubungnya sama dengan komponen
 lintasannya, dan setiap komponen bersifat terbuka.
@@ -227,9 +227,9 @@ $$
 
 Setiap pembatasan $p_\alpha\colon Z_\alpha\to X$ merupakan ruang penutup
 terhubung. Memang, di sekitar setiap $x\in X$ pilih lingkungan terhubung
-lintasan $U$ yang diliputi secara merata. Setiap lembar di atas $U$ terhubung
-lintasan, sehingga seluruh lembar itu terletak dalam tepat satu komponen ruang
-total. Akibatnya $p^{-1}(U)\cap Z_\alpha$ merupakan gabungan lembar-lembar
+lintasan $U$ yang diliputi secara merata. Setiap lembaran di atas $U$ terhubung
+lintasan, sehingga seluruh lembaran itu terletak dalam tepat satu komponen ruang
+total. Akibatnya $p^{-1}(U)\cap Z_\alpha$ merupakan gabungan lembaran-lembaran
 utuh, dan $U$ diliputi secara merata oleh pembatasan tersebut. Untuk
 kesurjektifan, pilih $u\in Z_\alpha$. Bagi $x\in X$, pilih lintasan dari
 $p(u)$ ke $x$ dan angkat lintasan itu mulai dari $u$. Seluruh pengangkatan
@@ -348,7 +348,7 @@ H_\alpha:=
 $$
 
 Untuk setiap pilihan $z_\alpha\in Z_{x_0}\cap Z_\alpha$, terdapat
-isomorfisme himpunan-$G$ kanan
+isomorfisma himpunan-$G$ kanan
 
 $$
 Z_{x_0}
@@ -402,10 +402,10 @@ z_\alpha\cdot g
 $$
 
 terdefinisi baik, bijektif, dan ekuivarian kanan. Mengambil gabungan saling
-lepas atas semua $\alpha$ memberi isomorfisme yang dinyatakan.
+lepas atas semua $\alpha$ memberi isomorfisma yang dinyatakan.
 :::
 
-Akibatnya, funktor
+Akibatnya, fungtor
 $\operatorname{Cov}_X\to\mathbf{Set}_G$ mempertahankan gabungan saling
 lepas: ruang penutup $\bigsqcup_{\alpha\in J}Z_\alpha\to X$ dikirim ke
 gabungan saling lepas orbit
@@ -436,7 +436,7 @@ $$
 Dengan kata lain, aksi itu tepat keluarga
 $(\rho_\alpha)_{\alpha\in J}$ dari aksi kanan transitif pada
 $S_\alpha$. Dalam notasi operator, hukum aksi kanan berbunyi
-$\rho_{gh}=\rho_h\circ\rho_g$; ekuivalen dengan sebuah funktor
+$\rho_{gh}=\rho_h\circ\rho_g$; ekuivalen dengan sebuah fungtor
 $G^{\mathrm{op}}\to\mathbf{Set}$.
 :::
 
@@ -450,7 +450,7 @@ $X$ terhubung kita dapat membandingkan dua subkategori penuh:
   terhubung;
 - $\mathbf{Set}_G^{\mathrm{tr}}$, himpunan-$G$ kanan dengan aksi transitif.
 
-Lema 15.2 menunjukkan bahwa funktor monodromi membatasi menjadi
+Lema 15.2 menunjukkan bahwa fungtor monodromi membatasi menjadi
 
 $$
 \operatorname{Cov}_X^{\mathrm{conn}}
@@ -460,10 +460,10 @@ $$
 
 Setiap ruang penutup merupakan gabungan saling lepas komponen terhubungnya,
 dan setiap himpunan-$G$ merupakan gabungan saling lepas orbitnya. Karena itu,
-untuk menentukan **objek** mana yang berada dalam citra esensial funktor
+untuk menentukan **objek** mana yang berada dalam citra esensial fungtor
 monodromi, cukup ditanyakan apakah setiap himpunan-$G$ kanan transitif berasal
 dari suatu ruang penutup terhubung. Reduksi ini belum membuktikan bahwa
-funktor penuh atau setia pada morfisme.
+fungtor penuh atau setia pada morfisma.
 
 Sekarang ambil himpunan-$G$ kanan transitif $S$ dan titik $p\in S$. Grup $G$
 sendiri, dengan aksi perkalian kanan, bebas dan transitif. Peta orbit
@@ -504,7 +504,7 @@ belum membangun atau membuktikan keberadaan ruang penutup seperti itu.
 ## Pertanyaan realisasi subgrup {#o012-rbt-l15-s05}
 
 Untuk ruang penutup terhubung lintasan $p\colon Z\to X$ dan
-$z\in Z_{x_0}$, Lema 15.2 memberi isomorfisme himpunan-$G$ kanan
+$z\in Z_{x_0}$, Lema 15.2 memberi isomorfisma himpunan-$G$ kanan
 
 $$
 Z_{x_0}
@@ -559,18 +559,18 @@ tetap merupakan hasil kemudian.
 Tujuh pemeriksaan berikut adalah materi asli edisi. Semuanya terbatas pada
 hasil yang telah tersedia di Unit 15. Tidak satu pun mengasumsikan atau
 membuktikan keberadaan ruang penutup universal, realisasi subgrup umum, atau
-kepenuhan-setiaan funktor monodromi.
+kepenuhan-setiaan fungtor monodromi.
 
 ::: {.exercise #o012-rbt-l15-mcheck-001 data-origin="edition-original"}
 **Pemeriksaan penguasaan 15.1 (ekuivalensi pada koproduk).** Definisikan
-kedua funktor pada Lema 15.1, termasuk tindakannya pada morfisme, lalu tulis
-isomorfisme natural yang menunjukkan bahwa keduanya saling invers hingga
-isomorfisme.
+kedua fungtor pada Lema 15.1, termasuk tindakannya pada morfisma, lalu tulis
+isomorfisma natural yang menunjukkan bahwa keduanya saling invers hingga
+isomorfisma.
 :::
 
 ## Solusi Pemeriksaan 15.1 {#o012-rbt-l15-sol-001}
 
-Funktor pembatasan adalah
+Fungtor pembatasan adalah
 
 $$
 R(Z\xrightarrow{p}X)
@@ -578,8 +578,8 @@ R(Z\xrightarrow{p}X)
 \bigl(X_i\times_XZ\to X_i\bigr)_{i\in I},
 $$
 
-dan pada morfisme $f\colon Z\to Z'$ ia memakai
-$\mathrm{id}_{X_i}\times_Xf$. Funktor koproduk adalah
+dan pada morfisma $f\colon Z\to Z'$ ia memakai
+$\mathrm{id}_{X_i}\times_Xf$. Fungtor koproduk adalah
 
 $$
 C((Z_i\to X_i)_i)
@@ -587,10 +587,10 @@ C((Z_i\to X_i)_i)
 \left(\bigsqcup_iZ_i\to\bigsqcup_iX_i\right),
 $$
 
-dan pada morfisme ia mengambil koproduk semua pemetaan komponen.
+dan pada morfisma ia mengambil koproduk semua pemetaan komponen.
 
 Untuk keluarga $(Z_i\to X_i)_i$, tarik balik koproduknya ke $X_j$ hanya
-menyisakan $Z_j$, sehingga komponen isomorfisme natural
+menyisakan $Z_j$, sehingga komponen isomorfisma natural
 $RC\Rightarrow\mathrm{id}$ adalah
 
 $$
@@ -598,7 +598,7 @@ X_j\times_X\left(\bigsqcup_iZ_i\right)
 \xrightarrow{\ \cong\ }Z_j.
 $$
 
-Untuk $Z\to X$, komponen isomorfisme natural
+Untuk $Z\to X$, komponen isomorfisma natural
 $CR\Rightarrow\mathrm{id}$ adalah
 
 $$
@@ -608,9 +608,9 @@ $$
 (x,z)\longmapsto z.
 $$
 
-Ia bijektif dan merupakan homeomorfisme karena $X_i$ terbuka dan tertutup
+Ia bijektif dan merupakan homeomorfisma karena $X_i$ terbuka dan tertutup
 dalam koproduk, sehingga $p^{-1}(X_i)$ juga terbuka dan tertutup dalam $Z$.
-Kedua rumus jelas berkomutasi dengan morfisme ruang penutup; jadi keduanya
+Kedua rumus jelas berkomutasi dengan morfisma ruang penutup; jadi keduanya
 natural.
 
 ::: {.exercise #o012-rbt-l15-mcheck-002 data-origin="edition-original"}
@@ -625,15 +625,15 @@ $p|_{Z_\alpha}\colon Z_\alpha\to X$ merupakan ruang penutup surjektif.
 Konvensi SLSC memberi basis lingkungan terbuka terhubung lintasan pada $X$.
 Untuk $z\in Z$, pilih lingkungan $W$ dari $p(z)$ yang diliputi secara merata,
 lalu ambil lingkungan basis terhubung lintasan $U$ dengan
-$p(z)\in U\subseteq W$. Pembatasan setiap lembar di atas $W$ ke $U$
-homeomorfik dengan $U$. Lembar-lembar semacam itu membentuk basis lingkungan
+$p(z)\in U\subseteq W$. Pembatasan setiap lembaran di atas $W$ ke $U$
+homeomorfik dengan $U$. Lembaran-lembaran semacam itu membentuk basis lingkungan
 terhubung lintasan pada $Z$. Maka $Z$ terhubung lintasan lokal; komponen
 terhubungnya terbuka dan sama dengan komponen lintasannya.
 
 Sekarang, di sekitar setiap $x\in X$, pilih $U$ yang sekaligus terhubung
-lintasan dan diliputi secara merata. Setiap lembar di atas $U$ terhubung
+lintasan dan diliputi secara merata. Setiap lembaran di atas $U$ terhubung
 lintasan, jadi termuat dalam tepat satu komponen $Z_\alpha$. Dengan demikian
-$p^{-1}(U)\cap Z_\alpha$ adalah gabungan lembar-lembar utuh; ini membuktikan
+$p^{-1}(U)\cap Z_\alpha$ adalah gabungan lembaran-lembaran utuh; ini membuktikan
 bahwa $p|_{Z_\alpha}$ merupakan peta penutup ke citranya. Untuk menunjukkan
 citranya seluruh $X$, pilih $u\in Z_\alpha$. Karena $X$ terhubung dan
 terhubung lintasan lokal, $X$ terhubung lintasan. Bagi $x\in X$, pilih
@@ -697,7 +697,7 @@ H\backslash G\longrightarrow S,
 Hg\longmapsto p\cdot g
 $$
 
-adalah isomorfisme himpunan-$G$ kanan. Tunjukkan pula mengapa $G/H$ tidak
+adalah isomorfisma himpunan-$G$ kanan. Tunjukkan pula mengapa $G/H$ tidak
 membawa rumus yang sama tanpa mengubah konvensi aksi.
 :::
 
@@ -810,8 +810,8 @@ masih ditunda:
 2. serat penutup terhubung adalah aksi transitif;
 3. setiap aksi transitif direalisasikan oleh penutup terhubung;
 4. setiap subgrup direalisasikan sebagai $p_*\pi_1(Z,z)$;
-5. funktor monodromi surjektif secara esensial;
-6. funktor monodromi penuh dan setia;
+5. fungtor monodromi surjektif secara esensial;
+6. fungtor monodromi penuh dan setia;
 7. jika penutup terhubung sederhana diberikan, seratnya bebas dan transitif.
 :::
 
@@ -825,11 +825,11 @@ kondisional pada keberadaan penutup terhubung sederhana.
 Pernyataan 3 belum dibuktikan. Unit ini hanya mereduksi masalah objek umum
 ke masalah aksi transitif. Pernyataan 4 tepat Pertanyaan 15.1, jadi masih
 terbuka pada batas unit. Karena 3 dan 4 belum diselesaikan, pernyataan 5 juga
-belum diperoleh. Pernyataan 6 merupakan masalah morfisme yang berbeda:
+belum diperoleh. Pernyataan 6 merupakan masalah morfisma yang berbeda:
 bahkan setelah semua objek direalisasikan, masih harus dibuktikan bahwa
 setiap pemetaan ekuivarian berasal dari tepat satu pemetaan ruang penutup.
 Jadi 6 pun ditunda.
 
 Ringkasnya, Unit 15 menyelesaikan dekomposisi dan identifikasi orbit, lalu
 merumuskan masalah realisasi yang tepat. Ia tidak melompati konstruksi ruang
-penutup universal atau bagian morfisme dari teorema klasifikasi.
+penutup universal atau bagian morfisma dari teorema klasifikasi.

@@ -51,7 +51,7 @@ kelas lintasan diberi **topologi basis penutup** secara langsung. Edisi ini
 tidak menyatakan tanpa bukti bahwa topologi tersebut sama dengan topologi
 hasil bagi dari topologi kompak-terbuka, dan tidak memakai pemilihan lintasan
 yang berubah kontinu terhadap titik ujung. Aksi kiri, aksi kanan, aksioma
-basis, partisi lembar, keterhubungan lintasan, keterhubungan sederhana,
+basis, partisi lembaran, keterhubungan lintasan, keterhubungan sederhana,
 realisasi subgrup, dan kesurjektifan esensial semuanya dibuktikan. Prosa
 pembanding tidak disalin. Notasi sumber $X^{(1)}$ untuk penutup universal
 dinormalkan menjadi $\widetilde X$, sedangkan penutup yang merealisasikan
@@ -59,7 +59,7 @@ $H$ selalu ditulis terpisah sebagai $H\backslash\widetilde X$.
 
 Keenam pemeriksaan penguasaan beserta solusi lengkap merupakan materi asli
 edisi, tersedia di bawah CC BY 4.0. Materi itu tidak memperkenalkan
-klasifikasi transformasi dek ataupun kepenuhan dan kesetiaan funktor, yang
+klasifikasi transformasi dek ataupun kepenuhan dan kesetiaan fungtor, yang
 merupakan perkara kuliah kemudian. Edisi ini bersifat independen; edisi ini
 tidak disponsori, didukung, disahkan, ataupun diberi status resmi oleh David
 Michael Roberts, Allen Hatcher, Cornell University, MIT, Haynes Miller,
@@ -95,7 +95,7 @@ p(k\cdot y)=p(y)
 $$
 
 untuk setiap $y\in Y$ dan $k\in K$. Setiap $k$ dengan demikian bertindak
-sebagai homeomorfisme di atas $X$.
+sebagai homeomorfisma di atas $X$.
 :::
 
 Definisi itu memberi satu-satunya pemetaan
@@ -139,16 +139,16 @@ $q\colon Z\to K\backslash Z$ merupakan pemetaan ruang penutup di atas $X$.
 $U\ni x$ yang diliputi secara merata oleh $p$; pilihan seperti ini tersedia
 dalam konvensi SLSC mata kuliah dengan memperkecil suatu lingkungan yang
 diliputi secara merata. Tuliskan $F:=p^{-1}(x)$. Dengan menandai setiap
-lembar oleh satu-satunya titiknya di atas $x$, diperoleh homeomorfisme di
+lembaran oleh satu-satunya titiknya di atas $x$, diperoleh homeomorfisma di
 atas $U$
 
 $$
 p^{-1}(U)\cong U\times F.
 $$
 
-Setiap $k\in K$ mengirim satu lembar terhubung lintasan ke suatu himpunan
-terhubung di atas $U$, jadi ke satu lembar. Karena $k^{-1}$ juga demikian,
-$k$ benar-benar mempermutasikan lembar-lembar utuh. Pada satu lembar,
+Setiap $k\in K$ mengirim satu lembaran terhubung lintasan ke suatu himpunan
+terhubung di atas $U$, jadi ke satu lembaran. Karena $k^{-1}$ juga demikian,
+$k$ benar-benar mempermutasikan lembaran-lembaran utuh. Pada satu lembaran,
 persamaan $p(k\cdot z)=p(z)$ memaksa peta itu menjadi identitas pada
 koordinat $U$. Maka trivialiasi di atas ekuivarian untuk rumus
 
@@ -163,7 +163,7 @@ q^{-1}(q(O))=\bigcup_{k\in K}k\cdot O
 $$
 
 terbuka. Himpunan $p^{-1}(U)$ jenuh terhadap aksi, sehingga pembatasan
-hasil bagi mempunyai topologi yang tepat dan memberi homeomorfisme
+hasil bagi mempunyai topologi yang tepat dan memberi homeomorfisma
 
 $$
 \bar p^{-1}(U)
@@ -317,12 +317,12 @@ p\circ r=e_1.
 $$
 
 Diagram ini belum mengklaim bahwa $r$ kontinu untuk topologi
-kompak-terbuka. Kontinuitas $p$ akan mengikuti langsung dari lembar-lembar
+kompak-terbuka. Kontinuitas $p$ akan mengikuti langsung dari lembaran-lembaran
 basis.
 :::
 
 Sebagai himpunan, konstruksi itu dapat dibaca sebagai gabungan semua
-morfisme grupoid fundamental yang berawal di $x_0$:
+morfisma grupoid fundamental yang berawal di $x_0$:
 
 $$
 \widetilde X
@@ -373,7 +373,7 @@ $$
 
 Kedua aksioma basis terpenuhi.
 
-**Lembar lokal.** Tetapkan lingkungan dapat dipakai $U\ni x$. Untuk setiap
+**Lembaran lokal.** Tetapkan lingkungan dapat dipakai $U\ni x$. Untuk setiap
 $a=[\gamma]\in p^{-1}(x)$, pembatasan
 
 $$
@@ -387,7 +387,7 @@ $\eta_1\#\overline{\eta_2}$ berada di $U$ dan kelasnya trivial di $X$.
 Maka $[\eta_1]=[\eta_2]$ dalam grupoid fundamental, sehingga
 $[\gamma\#\eta_1]=[\gamma\#\eta_2]$.
 
-Pemetaan itu juga homeomorfisme. Memang, jika $O\subseteq U_a$ terbuka dan
+Pemetaan itu juga homeomorfisma. Memang, jika $O\subseteq U_a$ terbuka dan
 $[\alpha]\in O$, aksioma basis memberi lingkungan basis yang memuat
 $[\alpha]$ dan termuat dalam $O$. Dengan memperhalusnya sekaligus di dalam
 $U$, diperoleh lingkungan dapat dipakai $V$ dari titik ujung $\alpha$
@@ -401,7 +401,7 @@ Jadi pembatasan bijektif tersebut terbuka. Argumen yang sama menunjukkan
 bahwa $p$ kontinu, karena setiap titik di $p^{-1}(O)$, untuk $O$ terbuka,
 mempunyai lingkungan basis yang dipetakan ke dalam $O$.
 
-Lembar-lembar itu mempartisi seluruh prabayangan:
+Lembaran-lembaran itu mempartisi seluruh prabayangan:
 
 $$
 p^{-1}(U)
@@ -411,10 +411,10 @@ $$
 
 Untuk keberadaan, jika $[\beta]$ berakhir di $y\in U$, pilih lintasan
 $\eta\colon x\rightsquigarrow y$ di $U$; maka
-$[\beta]\in U_{[\beta\#\overline\eta]}$. Jika dua lembar berpotongan,
+$[\beta]\in U_{[\beta\#\overline\eta]}$. Jika dua lembaran berpotongan,
 perbandingan kedua lintasan di $U$ menghasilkan loop yang trivial di $X$,
 sehingga kedua pusatnya di atas $x$ sama. Dengan demikian $U$ diliputi
-secara merata. Jika $a(b)$ menandai satu-satunya pusat lembar yang memuat
+secara merata. Jika $a(b)$ menandai satu-satunya pusat lembaran yang memuat
 $b\in p^{-1}(U)$, trivialiasi lokal yang bertipe lengkap ialah
 
 $$
@@ -424,8 +424,8 @@ b&\longmapsto\bigl(p(b),a(b)\bigr).
 \end{aligned}
 $$
 
-Inversnya mengirim $(y,a)$ ke satu-satunya titik lembar $U_a$ di atas $y$.
-Konstruksi ini memakai lembar basis, bukan pemilih lintasan kontinu
+Inversnya mengirim $(y,a)$ ke satu-satunya titik lembaran $U_a$ di atas $y$.
+Konstruksi ini memakai lembaran basis, bukan pemilih lintasan kontinu
 $x'\mapsto\eta_{x'}$. Secara khusus,
 $U_a\cap p^{-1}(x)=\{a\}$, sehingga setiap serat $p^{-1}(x)$ diskret.
 
@@ -476,7 +476,7 @@ $$
 h\cdot U_{[\gamma]}=U_{[\omega\#\gamma]},
 $$
 
-sehingga setiap translasi kiri adalah homeomorfisme, dengan invers
+sehingga setiap translasi kiri adalah homeomorfisma, dengan invers
 translasi oleh $h^{-1}$. Karena $G$ diskret, aksi gabungan
 $G\times\widetilde X\to\widetilde X$ kontinu. Asosiativitas mengikuti dari
 asosiativitas komposisi dalam $\Pi_1(X)$. Jika
@@ -509,7 +509,7 @@ $$
 $$
 
 memberi pengangkatannya yang mulai di $[c_{x_0}]$; kontinuitasnya adalah
-argumen lembar basis yang sama seperti untuk $\Gamma_\gamma$. Sekarang ambil
+argumen lembaran basis yang sama seperti untuk $\Gamma_\gamma$. Sekarang ambil
 loop $\lambda$ di $(\widetilde X,[c_{x_0}])$ dan letakkan
 $\alpha=p\circ\lambda$. Karena $\lambda$ dan $\widetilde\alpha$ merupakan
 dua pengangkatan $\alpha$ dengan titik awal yang sama, keunikan pengangkatan
@@ -626,7 +626,7 @@ $\Phi(H_i gk)=s_i\cdot(gk)$.
 
 Jika $F\colon\Pi_1(X)\to\mathbf{Set}$ representasi yang diberikan, ambil
 $S=F(x_0)$ dengan aksi kanan $s\cdot g:=F(g)(s)$ dalam konvensi komposisi
-kronologis unit ini. Tuliskan $M$ untuk monodromi $Z_S$. Isomorfisme $\Phi$
+kronologis unit ini. Tuliskan $M$ untuk monodromi $Z_S$. Isomorfisma $\Phi$
 pada titik basis meluas melalui transpor lintasan: untuk pilihan
 $\alpha\colon x_0\rightsquigarrow x$, definisikan
 
@@ -651,19 +651,19 @@ Ekuivariansi $\Phi\circ M(g)=F(g)\circ\Phi$ membuat kedua rumus untuk
 $\Phi_x$ sama. Jika $[\eta\colon x\rightsquigarrow y]$ diberikan, gunakan
 $\alpha\#\eta$ sebagai pilihan lintasan menuju $y$; langsung diperoleh
 $\Phi_y\circ M(\eta)=F(\eta)\circ\Phi_x$. Jadi $(\Phi_x)_x$ adalah
-isomorfisme natural antara monodromi $Z_S$ dan $F$.
+isomorfisma natural antara monodromi $Z_S$ dan $F$.
 
 Bila $X$ tidak terhubung, konvensi SLSC menjamin bahwa setiap komponen
 lintasannya $X_j$ terbuka. Untuk setiap $j$, pilih titik basis
 $x_j\in X_j$, uraikan **secara independen** himpunan
 $F(x_j)$ menjadi orbit di bawah $\pi_1(X_j,x_j)$, dan lakukan konstruksi di
 atas pada $X_j$. Gabungan saling lepas semua ruang penutup komponen adalah
-ruang penutup dari $X$, dan isomorfisme natural komponen demi komponen
-bergabung menjadi isomorfisme representasi seluruh grupoid fundamental.
+ruang penutup dari $X$, dan isomorfisma natural komponen demi komponen
+bergabung menjadi isomorfisma representasi seluruh grupoid fundamental.
 
 ::: {.proposition #o012-rbt-l16-prop-003}
 **Proposisi 16.3 (surjektivitas esensial monodromi).** Jika $X$ SLSC dalam
-konvensi mata kuliah, funktor monodromi
+konvensi mata kuliah, fungtor monodromi
 
 $$
 \operatorname{Cov}_X
@@ -678,7 +678,7 @@ suatu ruang penutup.
 
 ::: {.note #o012-rbt-l16-note-001 data-origin="edition-original"}
 **Batas hasil.** Proposisi 16.3 hanya menyelesaikan keberadaan **objek**
-hingga isomorfisme. Belum dibuktikan bahwa setiap pemetaan ekuivarian serat
+hingga isomorfisma. Belum dibuktikan bahwa setiap pemetaan ekuivarian serat
 berasal dari suatu pemetaan ruang penutup, ataupun bahwa pemetaan tersebut
 unik. Dengan demikian, kepenuhan, kesetiaan, dan ekuivalensi kategori tidak
 diklaim pada batas Unit 16.
@@ -699,20 +699,20 @@ diskret $K$ bertindak kontinu dari kiri dan serat demi serat pada ruang
 penutup $p\colon Z\to X$, dengan $X$ SLSC dalam konvensi mata kuliah.
 Buktikan langsung bahwa
 $K\backslash Z\to X$ merupakan ruang penutup. Dalam bukti Anda, jelaskan
-mengapa elemen $K$ mempermutasikan lembar utuh dan mengapa topologi hasil
+mengapa elemen $K$ mempermutasikan lembaran utuh dan mengapa topologi hasil
 bagi membatasi dengan benar di atas lingkungan yang diliputi secara merata.
 :::
 
 ## Solusi Pemeriksaan 16.1 {#o012-rbt-l16-sol-001}
 
 Pilih $x\in X$ dan lingkungan terbuka terhubung lintasan $U\ni x$ yang
-diliputi secara merata. Jika $V$ satu lembar di atas $U$, maka $kV$
+diliputi secara merata. Jika $V$ satu lembaran di atas $U$, maka $kV$
 terhubung lintasan, termuat dalam $p^{-1}(U)$, dan karena
 $p(kz)=p(z)$, peta $kV\to U$ masih surjektif. Himpunan terhubung itu termuat
-dalam satu lembar $V'$. Menerapkan $k^{-1}$ menunjukkan $kV=V'$. Jadi setiap
-$k$ mempermutasikan lembar-lembar utuh.
+dalam satu lembaran $V'$. Menerapkan $k^{-1}$ menunjukkan $kV=V'$. Jadi setiap
+$k$ mempermutasikan lembaran-lembaran utuh.
 
-Dengan $F=p^{-1}(x)$, trivialiasi menurut lembar memberi
+Dengan $F=p^{-1}(x)$, trivialiasi menurut lembaran memberi
 
 $$
 p^{-1}(U)\cong U\times F,
@@ -795,7 +795,7 @@ Rumus itu juga menunjukkan bahwa pada serat titik basis aksi yang turun
 adalah $(Hg)\cdot k=H(gk)$ pada $H\backslash G$.
 
 ::: {.exercise #o012-rbt-l16-mcheck-003 data-origin="edition-original"}
-**Pemeriksaan penguasaan 16.3 (basis dan lembar tanpa pemilih lintasan).**
+**Pemeriksaan penguasaan 16.3 (basis dan lembaran tanpa pemilih lintasan).**
 Untuk himpunan kelas lintasan $\widetilde X$, buktikan bahwa semua
 $U_{[\gamma]}$ membentuk basis. Buktikan pula bahwa, untuk lingkungan dapat
 dipakai $U\ni x$,
@@ -804,7 +804,7 @@ $$
 p^{-1}(U)=\bigsqcup_{a\in p^{-1}(x)}U_a
 $$
 
-dan setiap $p|_{U_a}$ merupakan homeomorfisme ke $U$. Jangan memilih
+dan setiap $p|_{U_a}$ merupakan homeomorfisma ke $U$. Jangan memilih
 keluarga lintasan $x'\mapsto\eta_{x'}$ yang diasumsikan kontinu.
 :::
 
@@ -830,12 +830,12 @@ Jika $O\subseteq U_a$ terbuka dan $[\alpha]\in O$, perhalus suatu
 lingkungan basis di dalam $O$ menjadi $V_{[\alpha]}\subseteq O$ dengan
 $V\subseteq U$ dapat dipakai. Himpunan itu dipetakan bijektif ke $V$. Maka
 $p(O)$ terbuka sebagai gabungan lingkungan-lingkungan $V$, sehingga
-$p|_{U_a}$ terbuka dan merupakan homeomorfisme.
+$p|_{U_a}$ terbuka dan merupakan homeomorfisma.
 
-Untuk menunjukkan bahwa lembar-lembar menutupi $p^{-1}(U)$, ambil
+Untuk menunjukkan bahwa lembaran-lembaran menutupi $p^{-1}(U)$, ambil
 $[\beta]$ di atas $y\in U$ dan lintasan $\eta\colon x\rightsquigarrow y$
-dalam $U$. Lalu $[\beta]$ berada pada lembar yang pusatnya
-$[\beta\#\overline\eta]$ di atas $x$. Jika dua lembar bertemu, lintasan
+dalam $U$. Lalu $[\beta]$ berada pada lembaran yang pusatnya
+$[\beta\#\overline\eta]$ di atas $x$. Jika dua lembaran bertemu, lintasan
 dalam $U$ dari kedua pusat ke titik temu berbeda hanya dengan loop di $U$;
 loop itu trivial di $X$, sehingga pusatnya sama. Jadi gabungan itu saling
 lepas. Seluruh argumen hanya menggunakan lintasan satu per satu dan tidak
@@ -963,7 +963,7 @@ $$
 $$
 
 maka $\Phi$ ekuivarian kanan. Transpor dari $x_0$ ke setiap $x$ memperluas
-$\Phi$ menjadi isomorfisme natural monodromi $Z$ dengan $F$; independensi
+$\Phi$ menjadi isomorfisma natural monodromi $Z$ dengan $F$; independensi
 pilihan lintasan tepat merupakan ekuivariansi yang baru dibuktikan.
 
 Untuk $X$ umum, tuliskan
@@ -977,8 +977,8 @@ $$
 \bigsqcup_{j\in J}X_j=X
 $$
 
-adalah ruang penutup. Isomorfisme natural pada setiap komponen bergabung
-karena tidak ada morfisme grupoid fundamental di antara dua komponen
+adalah ruang penutup. Isomorfisma natural pada setiap komponen bergabung
+karena tidak ada morfisma grupoid fundamental di antara dua komponen
 lintasan yang berbeda. Monodromi ruang penutup ini isomorfik dengan $F$.
 Argumen membuktikan surjektivitas esensial saja; tidak ada klaim tentang
-morfisme antarpenutup.
+morfisma antarpenutup.

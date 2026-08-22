@@ -18,6 +18,8 @@ Edisi Bahasa Indonesia yang sedang diproduksi dari *Algebraic Topology* karya Da
 
 Unit 1–13 mencakup `Notes.tex` baris 134–3046: pengantar topologi aljabar, topologi awal dan akhir, perekatan, keterhubungan, homotopi, ruang penutup, pengangkatan, monodromi, grup dan grupoid fundamental, teorema Seifert–van Kampen, presentasi grup, dan kompleks presentasi. Pembaca memuat 426 ID stabil dan 4.682 simpul MathML. Semua latihan/pertanyaan sumber dan pemeriksaan penguasaan yang ditambahkan mempunyai solusi atau jawaban lengkap.
 
+Setelah Unit 17, [QA terminologi Indonesia dalam bidang yang sama](qa/INDONESIAN_TERMINOLOGY_QA_2026-08-22.md) membandingkan edisi ini dengan artikel Indonesia tentang kategori ruang penutup. Sumber hidup Unit 1–17 kini memakai bentuk pilihan `fungtor`, `morfisma`, `lembaran`, dan `tertutup rata`; bentuk lama tetap dapat ditemukan sebagai varian backend. Berkas pembaca/rilis Unit 1–13 yang sudah diterbitkan tidak ditimpa, sehingga hash dan resi historisnya tetap benar; ejaan yang disempurnakan masuk ke pembaca kumulatif berikutnya.
+
 ## Backend modular
 
 Direktori [`backend/`](backend/) memuat graf `curriculum.interop 0.1.0` yang locale-neutral: otoritas, edisi, unit, segmen, konsep, istilah, relasi, latihan–solusi, hak, koreksi, QA, dan artefak. Validasi offline:
@@ -55,6 +57,8 @@ Build PDF ganda dengan epoch tetap menghasilkan byte identik. HTML memakai CSS t
 
 ## Provenans
 
+Produksi terjemahan, restrukturisasi semantik, QA, build, dan persiapan rilis edisi ini dilakukan dengan **OpenAI Codex gpt-5.6-sol, Ultra** atas arahan Floris. Catatan proses ini tidak menggantikan kredit David Michael Roberts sebagai penulis sumber ataupun atribusi dan lisensi setiap komponen.
+
 - [Atribusi dan perubahan](ATTRIBUTION.md)
 - [Keputusan sumber](00_control/SOURCE_DECISION.md)
 - [Identitas otoritas](00_control/AUTHORITY.json)
@@ -88,5 +92,6 @@ Build PDF ganda dengan epoch tetap menghasilkan byte identik. HTML memakai CSS t
 - [Rereview independen Unit 16](qa/UNIT_016_INDEPENDENT_REVIEW.md)
 - [Rereview independen Unit 17](qa/UNIT_017_INDEPENDENT_REVIEW.md)
 - [Audit sumber Unit 17](qa/UNIT_017_SOURCE_AUDIT.md)
+- [QA terminologi Indonesia lintas-sumber](qa/INDONESIAN_TERMINOLOGY_QA_2026-08-22.md)
 
 Pembaca lengkap masih dalam produksi. Inti Roberts akan diterjemahkan secara berurutan; materi homologi/metode seluler dan lapisan penguasaan yang tidak tersedia dalam inti akan ditulis tersendiri dan ditandai sebagai materi edisi.

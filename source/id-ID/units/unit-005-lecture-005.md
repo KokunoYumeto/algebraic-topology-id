@@ -13,7 +13,7 @@ rights: "Materi adaptasi dan materi pendamping: CC BY 4.0; lihat atribusi di baw
 
 Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas *Algebraic Topology* karya David Michael Roberts (2019), tepatnya [`Notes.tex` baris 1132--1304 pada commit `b947ad2e9f9e301bfe24590a9db653bc54fa1a53`](https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/blob/b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex). Rentang itu dimulai dengan penanda Kuliah 5 dan bukti pertama bagi Proposisi 4.3, lalu berakhir dengan invariansi transpor serat terhadap reparameterisasi lintasan. Baris 1305 memulai Kuliah 6 dan tidak termasuk dalam unit ini. Karya sumber tersedia di bawah [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
-Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, serta pemindahan keterangan dari catatan pinggir ke badan teks. Beberapa koreksi dan klarifikasi matematis terbatas juga diterapkan: sampul pada bukti serat diganti dengan subdivisi interval yang tunduk pada sampul trivial; notasi ruang penutup bertitik diperbaiki; konvensi serat kosong dan ketergantungan identifikasi pada pilihan dijelaskan; morfisme kategori ruang penutup dinyatakan lengkap; contoh analisis kompleks dibatasi pada klaim monodromi yang memang didukung; argumen trivialisasi interval memakai rantai subinterval dan lema penempelan; trivialisasi dinormalisasi pada serat awal; kesalahan tipe pada fungsi transisi diperbaiki; serta notasi dan bukti keunikan pengangkatan diperjelas. Semua perubahan substantif tersebut merupakan bagian dari adaptasi, bukan kutipan dari sumber lain.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, serta pemindahan keterangan dari catatan pinggir ke badan teks. Beberapa koreksi dan klarifikasi matematis terbatas juga diterapkan: sampul pada bukti serat diganti dengan subdivisi interval yang tunduk pada sampul trivial; notasi ruang penutup bertitik diperbaiki; konvensi serat kosong dan ketergantungan identifikasi pada pilihan dijelaskan; morfisma kategori ruang penutup dinyatakan lengkap; contoh analisis kompleks dibatasi pada klaim monodromi yang memang didukung; argumen trivialisasi interval memakai rantai subinterval dan lema penempelan; trivialisasi dinormalisasi pada serat awal; kesalahan tipe pada fungsi transisi diperbaiki; serta notasi dan bukti keunikan pengangkatan diperjelas. Semua perubahan substantif tersebut merupakan bagian dari adaptasi, bukan kutipan dari sumber lain.
 
 Sumber tidak memuat lingkungan latihan dalam rentang ini. Karena itu, bagian pendamping penguasaan di akhir unit menambahkan empat pemeriksaan penguasaan beserta solusi lengkap, juga bukti bagi lema kekompakan dan proposisi tarik balik yang tidak dibuktikan dalam sumber. Seluruh materi baru itu tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
 
@@ -67,10 +67,10 @@ F_N
 \cong Z_{x_1}.
 $$
 
-Komposisinya memberikan bijeksi $Z_{x_0}\cong Z_{x_1}$, yang sekaligus merupakan homeomorfisme karena kedua serat diskret. Argumen ini membuktikan keberadaan; pada tahap ini ia belum memberikan identifikasi yang dinyatakan bebas dari pilihan subdivisi dan trivialisasi. $\square$
+Komposisinya memberikan bijeksi $Z_{x_0}\cong Z_{x_1}$, yang sekaligus merupakan homeomorfisma karena kedua serat diskret. Argumen ini membuktikan keberadaan; pada tahap ini ia belum memberikan identifikasi yang dinyatakan bebas dari pilihan subdivisi dan trivialisasi. $\square$
 :::
 
-Jadi, jika $X$ bersifat SLPC, maka untuk setiap $\alpha\in\pi_0(X)$, sebuah ruang penutup $Z\xrightarrow{\pi}X$ menentukan satu kelas isomorfisme himpunan pada komponen terhubung $X_\alpha\subseteq X$. Kelas isomorfisme ini disebut *serat tipikal* di atas $X_\alpha$. Karena komponen terhubung dan komponen lintasan berimpit dalam ruang SLPC, setiap dua serat pada $X_\alpha$ memang isomorfik, tetapi belum ada identifikasi yang lebih disukai tanpa data tambahan.
+Jadi, jika $X$ bersifat SLPC, maka untuk setiap $\alpha\in\pi_0(X)$, sebuah ruang penutup $Z\xrightarrow{\pi}X$ menentukan satu kelas isomorfisma himpunan pada komponen terhubung $X_\alpha\subseteq X$. Kelas isomorfisma ini disebut *serat tipikal* di atas $X_\alpha$. Karena komponen terhubung dan komponen lintasan berimpit dalam ruang SLPC, setiap dua serat pada $X_\alpha$ memang isomorfik, tetapi belum ada identifikasi yang lebih disukai tanpa data tambahan.
 
 **Catatan tentang serat kosong.** Unit ini mengikuti konvensi sumber bahwa serat boleh kosong; dengan kata lain, pemetaan penutup tidak diwajibkan surjektif. Sebagian buku memasukkan surjektivitas ke dalam definisi pemetaan penutup. Jika $X$ bertitik di $x$, sebuah ruang penutup bertitik ditulis
 
@@ -83,7 +83,7 @@ $$
 Data titik di atas itu persis merupakan pilihan $z\in Z_x$. Jika $X$ terhubung dan SLPC, setiap $x'\in X$ dapat dihubungkan ke $x$ oleh suatu lintasan. Identifikasi serat di sepanjang lintasan tersebut membawa $z$ ke suatu titik di $Z_{x'}$, sehingga setiap serat tidak kosong. Identifikasi itu bergantung pada pilihan lintasan; pengangkatan lintasan di bawah akan membuat konstruksinya eksplisit.
 
 Terdapat kategori $\mathbf{Cov}_X$ yang objeknya adalah ruang-ruang penutup
-$\pi_i\colon Z_i\to X$. Sebuah morfisme dari $\pi_1$ ke $\pi_2$ adalah pemetaan kontinu $h\colon Z_1\to Z_2$ di atas $X$, yaitu yang membuat segitiga
+$\pi_i\colon Z_i\to X$. Sebuah morfisma dari $\pi_1$ ke $\pi_2$ adalah pemetaan kontinu $h\colon Z_1\to Z_2$ di atas $X$, yaitu yang membuat segitiga
 
 $$
 \begin{array}{ccccc}
@@ -93,7 +93,7 @@ Z_1&\xrightarrow{\ h\ }&Z_2\\
 \end{array}
 $$
 
-komutatif, atau setara dengan $\pi_2\circ h=\pi_1$. Demikian pula, kategori $\mathbf{Cov}_{(X,x)}$ mempunyai objek ruang penutup bertitik $(Z,z)\to(X,x)$ dan morfisme di atas $X$ yang juga mempertahankan titik terpilih di ruang atas. Kita akan mempelajari kategori-kategori ini untuk melihat informasi apa yang dikandungnya tentang topologi $X$.
+komutatif, atau setara dengan $\pi_2\circ h=\pi_1$. Demikian pula, kategori $\mathbf{Cov}_{(X,x)}$ mempunyai objek ruang penutup bertitik $(Z,z)\to(X,x)$ dan morfisma di atas $X$ yang juga mempertahankan titik terpilih di ruang atas. Kita akan mempelajari kategori-kategori ini untuk melihat informasi apa yang dikandungnya tentang topologi $X$.
 
 ::: {.example #o012-rbt-l05-exa-001}
 **Contoh 5.1 (monodromi pada bidang kompleks berlubang).** Untuk
@@ -102,7 +102,7 @@ $$
 X=\mathbb{C}\setminus\{p_1,\ldots,p_n\},
 $$
 
-kategori $\mathbf{Cov}_X$ mengodekan data penutup tak bercabang dan monodromi. Setiap penutup topologis dari $X$ memperoleh struktur permukaan Riemann yang ditarik balik sehingga proyeksinya holomorfik dan merupakan biholomorfisme lokal. Untuk penutup berlembar hingga, tiap lubang dapat diisi menurut siklus-siklus monodromi lokal sehingga diperoleh pemetaan bercabang; lubang itu menjadi nilai cabang hanya jika monodromi lokalnya tidak trivial. Untuk penutup berlembar tak hingga, pengisian semacam itu memerlukan syarat tambahan pada orbit monodromi atau ujung-ujung ruang. Jadi, data penutup saja tidak membenarkan klaim bahwa semua dan hanya titik $p_i$ pasti merupakan nilai kritis.
+kategori $\mathbf{Cov}_X$ mengodekan data penutup tak bercabang dan monodromi. Setiap penutup topologis dari $X$ memperoleh struktur permukaan Riemann yang ditarik balik sehingga proyeksinya holomorfik dan merupakan biholomorfisma lokal. Untuk penutup berlembar hingga, tiap lubang dapat diisi menurut siklus-siklus monodromi lokal sehingga diperoleh pemetaan bercabang; lubang itu menjadi nilai cabang hanya jika monodromi lokalnya tidak trivial. Untuk penutup berlembar tak hingga, pengisian semacam itu memerlukan syarat tambahan pada orbit monodromi atau ujung-ujung ruang. Jadi, data penutup saja tidak membenarkan klaim bahwa semua dan hanya titik $p_i$ pasti merupakan nilai kritis.
 :::
 
 Jika $X$ terhubung dan SLPC, bukti pertama di atas hanya mengatakan bahwa untuk $x_0,x_1\in X$ *terdapat* suatu bijeksi $Z_{x_0}\cong Z_{x_1}$. Kita akan memperkuat pernyataan ini. Sebelum itu, kita memerlukan sebuah konstruksi untuk ruang penutup.
@@ -136,20 +136,20 @@ Ruang hasil kali serat $Y\times_X Z$ sebenarnya dapat didefinisikan untuk sembar
 **Proposisi 5.1.** Dalam situasi Definisi 5.1, berlaku hal-hal berikut.
 
 1. Pemetaan $p\colon f^*Z\to Y$ merupakan ruang penutup.
-2. Tarik balik mendefinisikan funktor
+2. Tarik balik mendefinisikan fungtor
    $$
    f^*\colon\mathbf{Cov}_X\longrightarrow\mathbf{Cov}_Y.
    $$
-3. Jika $Y_2\xrightarrow{g}Y_1\xrightarrow{f}X$ dan $Z\xrightarrow{\pi}X$, terdapat isomorfisme kanonik dalam $\mathbf{Cov}_{Y_2}$,
+3. Jika $Y_2\xrightarrow{g}Y_1\xrightarrow{f}X$ dan $Z\xrightarrow{\pi}X$, terdapat isomorfisma kanonik dalam $\mathbf{Cov}_{Y_2}$,
    $$
    (f\circ g)^*Z\cong g^*(f^*Z).
    $$
 
-Hanya butir pertama yang memakai asumsi bahwa $\pi$ adalah pemetaan penutup. Butir kedua dan ketiga berlaku bagi tarik balik umum dalam kategori irisan $\mathbf{Top}/X$, yang objeknya adalah pemetaan menuju $X$ dan morfismenya adalah segitiga-segitiga komutatif.
+Hanya butir pertama yang memakai asumsi bahwa $\pi$ adalah pemetaan penutup. Butir kedua dan ketiga berlaku bagi tarik balik umum dalam kategori irisan $\mathbf{Top}/X$, yang objeknya adalah pemetaan menuju $X$ dan morfismanya adalah segitiga-segitiga komutatif.
 :::
 
 ::: {.corollary #o012-rbt-l05-cor-001}
-**Akibat 5.1.** Untuk setiap $y\in Y$, terdapat isomorfisme kanonik
+**Akibat 5.1.** Untuk setiap $y\in Y$, terdapat isomorfisma kanonik
 
 $$
 (f^*Z)_y\cong Z_{f(y)},
@@ -177,7 +177,7 @@ Z_0\times I\xrightarrow{\operatorname{pr}_2}I,
 Z_0:=\pi^{-1}(0).
 $$
 
-Isomorfisme dapat dipilih agar pada $Z_0\times\{0\}$ merupakan identitas serat $Z_0$.
+Isomorfisma dapat dipilih agar pada $Z_0\times\{0\}$ merupakan identitas serat $Z_0$.
 :::
 
 Kita memerlukan lema bantu kecil berikut.
@@ -242,7 +242,7 @@ $$
 z\longmapsto p_z,
 $$
 
-merupakan bijeksi, dan juga homeomorfisme karena kedua ruang diskret.
+merupakan bijeksi, dan juga homeomorfisma karena kedua ruang diskret.
 
 Sekarang terdapat pemetaan
 
@@ -273,9 +273,9 @@ S\colon Z\longrightarrow Z_0\times I
 $$
 
 di atas $I$. Evaluasi titik demi titik menunjukkan
-$S\circ T=\operatorname{id}$ dan $T\circ S=\operatorname{id}$. Jadi $T$ merupakan isomorfisme dalam $\mathbf{Cov}_I$ dan, berkat normalisasi $\tau$, memenuhi $T(z,0)=z$.
+$S\circ T=\operatorname{id}$ dan $T\circ S=\operatorname{id}$. Jadi $T$ merupakan isomorfisma dalam $\mathbf{Cov}_I$ dan, berkat normalisasi $\tau$, memenuhi $T(z,0)=z$.
 
-Langkah dua bagian ini dapat diterapkan berulang sepanjang rantai subinterval. Maka diperoleh isomorfisme ternormalisasi
+Langkah dua bagian ini dapat diterapkan berulang sepanjang rantai subinterval. Maka diperoleh isomorfisma ternormalisasi
 $Z_0\times I\cong Z$ untuk sampul berhingga semula. $\square$
 :::
 
@@ -298,7 +298,7 @@ Dengan kata lain, terdapat tepat satu penampang $\pi$ yang bernilai $z$ pada $0$
 :::
 
 ::: {.proof #o012-rbt-l05-proof-003}
-**Bukti.** Pilih isomorfisme ternormalisasi
+**Bukti.** Pilih isomorfisma ternormalisasi
 
 $$
 T\colon Z_0\times I\xrightarrow{\cong}Z
@@ -472,12 +472,12 @@ $\widetilde{(\gamma\circ\psi)}_z$, dan kedua lintasan terangkat mempunyai titik 
 Bagian ini merupakan materi baru untuk edisi bahasa Indonesia dan tersedia di bawah CC BY 4.0. Tidak ada latihan eksplisit dalam rentang sumber Kuliah 5 ini. Empat pemeriksaan berikut menutup langkah-langkah pembuktian dan penerapan yang paling penting; semuanya langsung disertai solusi lengkap. Bukti Lema 5.1 yang tidak dituliskan dalam sumber juga diberikan.
 
 ::: {.exercise #o012-rbt-l05-mcheck-001}
-**Pemeriksaan penguasaan 5.1 (serat tipikal dan transpor).** Jelaskan perbedaan logis antara pernyataan “semua serat di atas satu komponen lintasan mempunyai tipe isomorfisme yang sama” dan “suatu lintasan $\gamma$ menentukan transpor $\gamma_*$”. Mengapa Akibat 5.3 lebih kuat daripada bukti pertama Proposisi 4.3, tetapi belum memberikan identifikasi yang bebas dari pilihan lintasan?
+**Pemeriksaan penguasaan 5.1 (serat tipikal dan transpor).** Jelaskan perbedaan logis antara pernyataan “semua serat di atas satu komponen lintasan mempunyai tipe isomorfisma yang sama” dan “suatu lintasan $\gamma$ menentukan transpor $\gamma_*$”. Mengapa Akibat 5.3 lebih kuat daripada bukti pertama Proposisi 4.3, tetapi belum memberikan identifikasi yang bebas dari pilihan lintasan?
 :::
 
 ## Solusi Pemeriksaan 5.1 {#o012-rbt-l05-sol-001}
 
-Bukti pertama hanya menghasilkan keberadaan setidaknya satu bijeksi di antara dua serat, melalui pilihan sampul, subdivisi, dan trivialisasi. Kesimpulan yang dapat dicatat tanpa mempertahankan semua pilihan itu hanyalah kelas isomorfisme serat pada setiap komponen lintasan.
+Bukti pertama hanya menghasilkan keberadaan setidaknya satu bijeksi di antara dua serat, melalui pilihan sampul, subdivisi, dan trivialisasi. Kesimpulan yang dapat dicatat tanpa mempertahankan semua pilihan itu hanyalah kelas isomorfisma serat pada setiap komponen lintasan.
 
 Sebaliknya, setelah lintasan tertentu $\gamma$ dan titik awal $z$ diberikan, Teorema 5.1 memilih tepat satu lintasan terangkat. Karena itu rumus
 
@@ -488,7 +488,7 @@ $$
 memberikan fungsi yang ditentukan oleh $\gamma$, bukan sekadar bukti bahwa suatu bijeksi ada. Namun, dua lintasan berbeda dari $x_0$ ke $x_1$ dapat menghasilkan permutasi serat yang berbeda. Unit ini baru membuktikan bahwa reparameterisasi berujung tetap tidak mengubah transpor; belum dibuktikan bahwa deformasi lain pada lintasan tidak mengubahnya.
 
 ::: {.exercise #o012-rbt-l05-mcheck-002}
-**Pemeriksaan penguasaan 5.2 (struktur tarik balik).** Buktikan ketiga butir Proposisi 5.1 dan isomorfisme serat pada Akibat 5.1 secara eksplisit.
+**Pemeriksaan penguasaan 5.2 (struktur tarik balik).** Buktikan ketiga butir Proposisi 5.1 dan isomorfisma serat pada Akibat 5.1 secara eksplisit.
 :::
 
 ## Solusi Pemeriksaan 5.2 {#o012-rbt-l05-sol-002}
@@ -510,7 +510,7 @@ $$
 
 di atas $W$. Jadi $p\colon f^*Z\to Y$ adalah pemetaan penutup.
 
-Untuk butir kedua, jika $h\colon Z_1\to Z_2$ merupakan morfisme di atas $X$, definisikan
+Untuk butir kedua, jika $h\colon Z_1\to Z_2$ merupakan morfisma di atas $X$, definisikan
 
 $$
 f^*h\colon f^*Z_1\longrightarrow f^*Z_2,
@@ -526,7 +526,7 @@ f^*(\operatorname{id})=\operatorname{id},
 f^*(h_2\circ h_1)=f^*h_2\circ f^*h_1.
 $$
 
-Jadi $f^*$ adalah funktor.
+Jadi $f^*$ adalah fungtor.
 
 Untuk butir ketiga, kedua ruang dapat ditulis sebagai
 
@@ -542,7 +542,7 @@ g^*(f^*Z)
 =\{(y_2,(y_1,z))\mid g(y_2)=y_1, f(y_1)=\pi(z)\}.
 $$
 
-Isomorfisme kanoniknya adalah
+Isomorfisma kanoniknya adalah
 
 $$
 (y_2,z)
@@ -560,7 +560,7 @@ $$
 $$
 
 Pemetaan $(y,z)\mapsto z$ merupakan bijeksi kanonik ke
-$Z_{f(y)}$, dan homeomorfisme karena serat-serat ruang penutup diskret. Inversnya adalah $z\mapsto(y,z)$.
+$Z_{f(y)}$, dan homeomorfisma karena serat-serat ruang penutup diskret. Inversnya adalah $z\mapsto(y,z)$.
 
 ## Bukti Lema 5.1 {#o012-rbt-l05-check-001}
 
@@ -617,7 +617,7 @@ $z_0\mapsto z_1\mapsto\cdots\mapsto z_{n-1}\mapsto z_0$.
 
 ::: {.exercise #o012-rbt-l05-mcheck-004}
 **Pemeriksaan penguasaan 5.4 (naturalitas transpor).** Misalkan
-$h\colon Z_1\to Z_2$ merupakan morfisme ruang penutup di atas $X$, dan $\gamma$ lintasan dalam $X$. Buktikan bahwa diagram transpor serat
+$h\colon Z_1\to Z_2$ merupakan morfisma ruang penutup di atas $X$, dan $\gamma$ lintasan dalam $X$. Buktikan bahwa diagram transpor serat
 
 $$
 \begin{array}{ccc}

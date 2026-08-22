@@ -13,9 +13,9 @@ rights: "Materi adaptasi dan materi pendamping: CC BY 4.0; lihat atribusi di baw
 
 Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas *Algebraic Topology* karya David Michael Roberts (2019), tepatnya [Notes.tex baris 1771--1946 pada commit b947ad2e9f9e301bfe24590a9db653bc54fa1a53](https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/blob/b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex#L1771-L1946). Rentang itu dimulai dengan penanda Kuliah 8 dan motivasi bagi grupoid, lalu berakhir setelah pembuktian bahwa ruang kontraktil terhubung sederhana. Baris 1947 memulai Kuliah 9 dan tidak termasuk dalam unit ini. Karya sumber tersedia di bawah [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
-Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, serta pemindahan semua keterangan dan diagram pinggir ke urutan bacaan utama. Beberapa cacat sumber diperbaiki secara independen: pada lema konjugasi, arah morfisme $a$ diubah dari $\Gamma(y,x)$ menjadi $\Gamma(x,y)$ agar semua komposit bertipe benar menurut urutan komposisi aljabar yang dinyatakan sumber; salah eja “groupids” diperbaiki; dua kemunculan $\Pi$ yang kehilangan subskrip $1$ pada rumus produk dan koproduk dipulihkan menjadi $\Pi_1$; frasa “such an cover” diperbaiki; dan dalam contoh kontraksi, $h(0,x)=x_0$ diperbaiki menjadi $h(1,x)=x_0$, sesuai $H|_{\{1\}\times X}$ yang konstan. Ada pula ketidakselarasan cakupan: definisi sumber memakai $\pi_0$ hanya untuk ruang SLSC, sedangkan proposisi berikutnya mengklaim funktor pada semua pasangan ruang. Edisi ini mempertahankan rumus $\pi_0$ pada kasus SLSC dan memakai kelas homotopi berujung tetap $[\{*\},P_x^yX]$ untuk perluasan ke semua pasangan, konsisten dengan definisi umum $\pi_1$ pada Kuliah 7. Diagram komutatif ditulis ulang sebagai susunan rumus dengan uraian tekstual agar hubungan panahnya tetap dapat diakses.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, serta pemindahan semua keterangan dan diagram pinggir ke urutan bacaan utama. Beberapa cacat sumber diperbaiki secara independen: pada lema konjugasi, arah morfisma $a$ diubah dari $\Gamma(y,x)$ menjadi $\Gamma(x,y)$ agar semua komposit bertipe benar menurut urutan komposisi aljabar yang dinyatakan sumber; salah eja “groupids” diperbaiki; dua kemunculan $\Pi$ yang kehilangan subskrip $1$ pada rumus produk dan koproduk dipulihkan menjadi $\Pi_1$; frasa “such an cover” diperbaiki; dan dalam contoh kontraksi, $h(0,x)=x_0$ diperbaiki menjadi $h(1,x)=x_0$, sesuai $H|_{\{1\}\times X}$ yang konstan. Ada pula ketidakselarasan cakupan: definisi sumber memakai $\pi_0$ hanya untuk ruang SLSC, sedangkan proposisi berikutnya mengklaim fungtor pada semua pasangan ruang. Edisi ini mempertahankan rumus $\pi_0$ pada kasus SLSC dan memakai kelas homotopi berujung tetap $[\{*\},P_x^yX]$ untuk perluasan ke semua pasangan, konsisten dengan definisi umum $\pi_1$ pada Kuliah 7. Diagram komutatif ditulis ulang sebagai susunan rumus dengan uraian tekstual agar hubungan panahnya tetap dapat diakses.
 
-Rentang sumber memuat satu latihan, tentang daerah berbentuk bintang, tetapi tidak memberikan solusinya. Lema struktur grupoid dan proposisi funktorialitas grupoid fundamental juga diberikan tanpa bukti. Bagian pendamping penguasaan mempertahankan latihan sumber tersebut dan menambahkan empat pemeriksaan edisi, semuanya dengan solusi lengkap: lema konjugasi dan aksi bebas-transitif; keabsahan komposisi, funktorialitas $\Pi_1$, serta funktor monodromi dan aksi kanan; kriteria keterhubungan sederhana dan penutup; serta argumen kontraksi melalui grupoid. Seluruh materi pendamping yang ditambahkan tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
+Rentang sumber memuat satu latihan, tentang daerah berbentuk bintang, tetapi tidak memberikan solusinya. Lema struktur grupoid dan proposisi fungtorialitas grupoid fundamental juga diberikan tanpa bukti. Bagian pendamping penguasaan mempertahankan latihan sumber tersebut dan menambahkan empat pemeriksaan edisi, semuanya dengan solusi lengkap: lema konjugasi dan aksi bebas-transitif; keabsahan komposisi, fungtorialitas $\Pi_1$, serta fungtor monodromi dan aksi kanan; kriteria keterhubungan sederhana dan penutup; serta argumen kontraksi melalui grupoid. Seluruh materi pendamping yang ditambahkan tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
 
 # Kuliah 8 {#o012-rbt-l08}
 
@@ -29,16 +29,16 @@ jika ada beberapa pilihan alami tanpa satu pun pilihan kanonik, kita dapat
 membentuk invarian yang lebih kaya, yaitu sebuah *grupoid*.
 
 ::: {.definition #o012-rbt-l08-def-001}
-**Definisi 8.1 (grupoid).** Grupoid adalah kategori yang setiap morfismenya
+**Definisi 8.1 (grupoid).** Grupoid adalah kategori yang setiap morfismanya
 memiliki invers.
 :::
 
 Untuk mengenali jenis-jenis grupoid yang muncul, mari kita lihat beberapa
 contoh. Kita hanya akan mempertimbangkan grupoid *kecil*. Artinya, grupoid
-$\Gamma$ bersifat kecil secara lokal—setiap himpunan morfisme
+$\Gamma$ bersifat kecil secara lokal—setiap himpunan morfisma
 $\Gamma(x,y)$ benar-benar merupakan himpunan—dan koleksi objeknya juga
 merupakan suatu himpunan $\Gamma_0$. Dengan demikian, himpunan semua
-morfisme dapat dibentuk sebagai gabungan lepas
+morfisma dapat dibentuk sebagai gabungan lepas
 
 $$
 \Gamma_1
@@ -52,14 +52,14 @@ $$
 s,t\colon\Gamma_1\rightrightarrows\Gamma_0.
 $$
 
-Grupoid beserta funktor di antaranya membentuk kategori
+Grupoid beserta fungtor di antaranya membentuk kategori
 $\mathbf{Gpd}$.
 
 ::: {.example #o012-rbt-l08-exa-001}
 **Contoh 8.1 (tiga grupoid dasar).**
 
 1. Setiap himpunan $S$ menentukan grupoid $\operatorname{Disc}(S)$:
-   himpunan objeknya adalah $S$, dan satu-satunya morfisme adalah morfisme
+   himpunan objeknya adalah $S$, dan satu-satunya morfisma adalah morfisma
    identitas. Konstruksi ini memberikan penyertaan subkategori penuh
 
    $$
@@ -70,14 +70,14 @@ $\mathbf{Gpd}$.
 
 2. Setiap himpunan $C$ juga menentukan grupoid
    $\operatorname{Codisc}(C)$. Objeknya adalah unsur-unsur $C$, tetapi sekarang
-   terdapat tepat satu morfisme dari setiap objek menuju setiap objek lain.
-   Himpunan morfismenya dapat diidentifikasi dengan $C\times C$, dan setiap
-   $c\in C$ mempunyai grup automorfisme trivial. Grupoid seperti ini disebut
+   terdapat tepat satu morfisma dari setiap objek menuju setiap objek lain.
+   Himpunan morfismanya dapat diidentifikasi dengan $C\times C$, dan setiap
+   $c\in C$ mempunyai grup automorfisma trivial. Grupoid seperti ini disebut
    *kodiskret*.
 
 3. Misalkan grup $G$ beraksi di kanan pada himpunan $Y$. Ada grupoid aksi
-   $Y/\!/G$ dengan himpunan objek $Y$ dan himpunan morfisme $Y\times G$.
-   Morfisme $(y,g)$ mempunyai sumber dan sasaran
+   $Y/\!/G$ dengan himpunan objek $Y$ dan himpunan morfisma $Y\times G$.
+   Morfisma $(y,g)$ mempunyai sumber dan sasaran
 
    $$
    s(y,g)=y,
@@ -91,7 +91,7 @@ $\mathbf{Gpd}$.
    (y,g)(yg,h)=(y,gh).
    $$
 
-   Morfisme identitas pada $y$ adalah $(y,e)$, dan inversnya adalah
+   Morfisma identitas pada $y$ adalah $(y,e)$, dan inversnya adalah
 
    $$
    (y,g)^{-1}=(yg,g^{-1}).
@@ -122,7 +122,7 @@ ditulis $fg\colon x\to z$.
 
 ::: {.lemma #o012-rbt-l08-lem-001}
 **Lema 8.1 (konjugasi dan aksi pada himpunan-hom).** Untuk setiap grupoid $\Gamma$, objek
-$x,y\in\Gamma_0$, dan morfisme $a\in\Gamma(x,y)$, pemetaan
+$x,y\in\Gamma_0$, dan morfisma $a\in\Gamma(x,y)$, pemetaan
 
 $$
 \begin{aligned}
@@ -131,7 +131,7 @@ g&\longmapsto a^{-1}ga
 \end{aligned}
 $$
 
-merupakan isomorfisme grup, dengan invers
+merupakan isomorfisma grup, dengan invers
 
 $$
 (\operatorname{Ad}_a)^{-1}
@@ -182,7 +182,7 @@ $$
 **Definisi 8.2 (grupoid fundamental bertumpu pada suatu himpunan).** Misalkan
 $X$ adalah ruang SLSC dan $A\subseteq X$ suatu subruang. *Grupoid fundamental
 bertumpu pada $A$* adalah grupoid $\Pi_1(X,A)$ yang himpunan objeknya $A$ dan
-yang himpunan morfismenya dari $x$ ke $y$ adalah
+yang himpunan morfismanya dari $x$ ke $y$ adalah
 
 $$
 \Pi_1(X,A)(x,y)
@@ -200,7 +200,7 @@ $$
 \pi_0(P_x^zX),
 $$
 
-dan lintasan konstan menjadi morfisme identitas.
+dan lintasan konstan menjadi morfisma identitas.
 :::
 
 Dalam rumus sumber, $\pi_0$ berarti komponen **terhubung**, bukan komponen
@@ -226,9 +226,9 @@ yaitu kelas homotopi lintasan yang mempertahankan titik ujung. Definisi ini
 berlaku tanpa hipotesis lokal apa pun dan, pada ruang SLSC, berimpit dengan
 rumus $\pi_0$ yang ditampilkan dalam Definisi 8.2.
 
-Seperti invarian-invarian lain, grupoid fundamental bersifat funktorial.
+Seperti invarian-invarian lain, grupoid fundamental bersifat fungtorial.
 Definisikan $\mathbf{Top}^{(2)}$ sebagai kategori yang objeknya pasangan
-$(X,A)$, dengan $X$ ruang topologis dan $A\subseteq X$ subruang. Morfisme
+$(X,A)$, dengan $X$ ruang topologis dan $A\subseteq X$ subruang. Morfisma
 
 $$
 f\colon(X,A)\longrightarrow(Y,B)
@@ -243,8 +243,8 @@ $$
 $$
 
 ::: {.proposition #o012-rbt-l08-prop-001}
-**Proposisi 8.1 (funktorialitas grupoid fundamental).** Grupoid fundamental
-memberikan funktor
+**Proposisi 8.1 (fungtorialitas grupoid fundamental).** Grupoid fundamental
+memberikan fungtor
 
 $$
 \Pi_1\colon\mathbf{Top}^{(2)}\longrightarrow\mathbf{Gpd}
@@ -276,7 +276,7 @@ $$
 \mathbf{B}\pi_1(X,x).
 $$
 
-Selain itu, terdapat isomorfisme alami
+Selain itu, terdapat isomorfisma alami
 
 $$
 \Pi_1(X\times Y,A\times B)
@@ -294,9 +294,9 @@ $$
 :::
 
 Produk grupoid pada proposisi ini dibentuk dengan mengambil produk himpunan
-objek dan produk himpunan morfisme. Koproduk atau gabungan lepas grupoid
+objek dan produk himpunan morfisma. Koproduk atau gabungan lepas grupoid
 dibentuk dengan mengambil gabungan lepas himpunan objek dan gabungan lepas
-himpunan morfisme.
+himpunan morfisma.
 
 Ruang tanpa titik dasar juga dapat dimasukkan ke dalam kategori pasangan
 melalui
@@ -305,7 +305,7 @@ $$
 X\longmapsto(X,X).
 $$
 
-Ini memberikan funktor penuh dan setia
+Ini memberikan fungtor penuh dan setia
 $\mathbf{Top}\to\mathbf{Top}^{(2)}$. Jadi, meskipun $X$ sama sekali tidak
 memiliki titik dasar pilihan, kita tetap dapat mendefinisikan
 
@@ -313,7 +313,7 @@ $$
 \Pi_1(X):=\Pi_1(X,X).
 $$
 
-Konstruksi tersebut merupakan funktor
+Konstruksi tersebut merupakan fungtor
 $\mathbf{Top}\to\mathbf{Gpd}$.
 
 ## Ruang terhubung sederhana {#o012-rbt-l08-s03}
@@ -324,13 +324,13 @@ dalam arti kodiskret.
 
 ::: {.definition #o012-rbt-l08-def-003}
 **Definisi 8.3 (terhubung sederhana).** Ruang $X$ disebut *terhubung
-sederhana* jika funktor kanonik
+sederhana* jika fungtor kanonik
 
 $$
 \Pi_1(X)\longrightarrow\operatorname{Codisc}(X)
 $$
 
-merupakan isomorfisme; dengan kata lain,
+merupakan isomorfisma; dengan kata lain,
 
 $$
 \Pi_1(X)\cong\operatorname{Codisc}(X)
@@ -355,7 +355,7 @@ untuk setiap $A\subseteq X$.
 Untuk $X\ne\varnothing$, Definisi 8.3 dapat diuraikan menjadi dua syarat. Pertama, untuk setiap
 $x,y\in X$ terdapat lintasan $x\rightsquigarrow y$, sehingga $X$ terhubung
 lintasan. Kedua, semua lintasan di antara dua titik yang telah ditentukan
-homotopik dengan titik ujung tetap. Jadi terdapat tepat satu morfisme dalam
+homotopik dengan titik ujung tetap. Jadi terdapat tepat satu morfisma dalam
 grupoid fundamental di antara dua objek mana pun. Khususnya,
 
 $$
@@ -397,7 +397,7 @@ $$
 0\xrightarrow{\;\cong\;}1.
 $$
 
-Ia mempunyai dua objek, $0$ dan $1$, serta tepat satu isomorfisme dalam
+Ia mempunyai dua objek, $0$ dan $1$, serta tepat satu isomorfisma dalam
 setiap arah di antara keduanya.
 
 ::: {.exercise #o012-rbt-l08-ex-001 data-origin="Roberts Notes.tex:1894-1900"}
@@ -434,7 +434,7 @@ $$
 \pi\colon Z\longrightarrow X
 $$
 
-bersifat trivial, dalam arti $\pi$ merupakan homeomorfisme.
+bersifat trivial, dalam arti $\pi$ merupakan homeomorfisma.
 :::
 
 ::: {.proof #o012-rbt-l08-proof-001}
@@ -461,11 +461,11 @@ $$
 \pi^{-1}(U)\longrightarrow U
 $$
 
-adalah homeomorfisme. Ambil semua lingkungan semacam itu sebagai suatu
+adalah homeomorfisma. Ambil semua lingkungan semacam itu sebagai suatu
 penutup terbuka $\{U_\alpha\}$ bagi $X$. Invers-invers lokal
 $U_\alpha\to\pi^{-1}(U_\alpha)$ berimpit pada setiap irisan karena
 $\pi$ bijektif. Lema penempelan menggabungkannya menjadi invers kontinu
-$X\to Z$ bagi $\pi$. Jadi $\pi$ adalah homeomorfisme. $\square$
+$X\to Z$ bagi $\pi$. Jadi $\pi$ adalah homeomorfisma. $\square$
 :::
 
 ::: {.example #o012-rbt-l08-exa-003}
@@ -484,7 +484,7 @@ H(0,x)=x,
 H(1,x)=x_0.
 $$
 
-Funktor terinduksi
+Fungtor terinduksi
 
 $$
 h=\Pi_1(H)\colon
@@ -501,7 +501,7 @@ $$
 \mathbf 2\times\Pi_1(X).
 $$
 
-Pada salinan $\{0\}\times\Pi_1(X)$, funktor $h$ adalah identitas karena
+Pada salinan $\{0\}\times\Pi_1(X)$, fungtor $h$ adalah identitas karena
 $H|_{\{0\}\times X}=\operatorname{id}_X$. Pada salinan
 $\{1\}\times\Pi_1(X)$, ia mengirim setiap objek ke $x_0$ dan setiap lintasan
 ke lintasan konstan di $x_0$, karena
@@ -532,8 +532,8 @@ $$
 \end{array}
 $$
 
-Panah vertikal adalah isomorfisme tunggal yang diberikan faktor
-$\mathbf 2$ (dipasangkan dengan morfisme identitas pada objek yang
+Panah vertikal adalah isomorfisma tunggal yang diberikan faktor
+$\mathbf 2$ (dipasangkan dengan morfisma identitas pada objek yang
 bersesuaian). Di bawah $h$, persegi itu menjadi
 
 $$
@@ -633,7 +633,7 @@ a(a^{-1}ga)a^{-1}
 $$
 
 dan perhitungan sebaliknya sama. Jadi
-$\operatorname{Ad}_a$ adalah isomorfisme grup dengan invers
+$\operatorname{Ad}_a$ adalah isomorfisma grup dengan invers
 $\operatorname{Ad}_{a^{-1}}$.
 
 Rumus $g\cdot b=gb$ memenuhi
@@ -659,30 +659,30 @@ $$
 Lalu $g\cdot b=(cb^{-1})b=c$, sehingga aksi transitif.
 
 Dalam $Y/\!/G$, dua objek berada pada komponen grupoid yang sama tepat jika
-mereka berada pada orbit $G$ yang sama. Grup automorfisme objek $y$ adalah
+mereka berada pada orbit $G$ yang sama. Grup automorfisma objek $y$ adalah
 stabilisator
 
 $$
 G_y=\{g\in G\mid yg=y\}.
 $$
 
-Grupoid aksi diskret tepat ketika satu-satunya morfisme pada setiap objek
+Grupoid aksi diskret tepat ketika satu-satunya morfisma pada setiap objek
 adalah identitas. Ini terjadi tepat ketika setiap orbit berupa satu titik
 dan setiap stabilisator trivial, yakni ketika $G$ sendiri trivial apabila
 $Y\neq\varnothing$. Untuk $Y=\varnothing$, grupoid kosong tentu diskret
 untuk setiap $G$. Grupoid aksi kodiskret tepat ketika di antara setiap dua
-objek terdapat tepat satu morfisme. Artinya, aksi $G$ pada $Y$ bebas dan
+objek terdapat tepat satu morfisma. Artinya, aksi $G$ pada $Y$ bebas dan
 transitif. Dengan kata lain, jika $Y\neq\varnothing$, maka grupoid aksi
 kodiskret tepat ketika $Y$ adalah torsor kanan bagi $G$. Jika
 $Y=\varnothing$, maka $Y\mathbin{\!\sslash\!}G=\operatorname{Codisc}(\varnothing)$
 untuk setiap $G$.
 
 ::: {.exercise #o012-rbt-l08-mcheck-003}
-**Pemeriksaan penguasaan 8.3 (keabsahan dan funktorialitas
+**Pemeriksaan penguasaan 8.3 (keabsahan dan fungtorialitas
 $\Pi_1$).** Buktikan bahwa konkatenasi pada Definisi 8.2 terdefinisi baik
-pada kelas, memenuhi aksioma grupoid, dan funktorial terhadap morfisme
-pasangan. Buktikan pula kedua isomorfisme pada Proposisi 8.1. Terakhir,
-tunjukkan bahwa setiap ruang penutup $\pi\colon Z\to X$ menentukan funktor
+pada kelas, memenuhi aksioma grupoid, dan fungtorial terhadap morfisma
+pasangan. Buktikan pula kedua isomorfisma pada Proposisi 8.1. Terakhir,
+tunjukkan bahwa setiap ruang penutup $\pi\colon Z\to X$ menentukan fungtor
 monodromi $\rho_Z\colon\Pi_1(X)\to\mathbf{Set}$ dan jelaskan bagaimana
 restriksinya pada loop menghasilkan aksi kanan Unit 7.
 :::
@@ -710,7 +710,7 @@ menunjukkan asosiativitas pada kelas. Kelas lintasan konstan $[c_x]$
 menjadi identitas, dan kelas lintasan balik $[\bar\gamma]$ menjadi invers.
 Jadi struktur ini benar-benar suatu grupoid.
 
-Untuk morfisme pasangan $f\colon(X,A)\to(Y,B)$, definisikan
+Untuk morfisma pasangan $f\colon(X,A)\to(Y,B)$, definisikan
 
 $$
 \Pi_1(f)(x)=f(x),
@@ -728,9 +728,9 @@ f\circ(\gamma\#\eta)
 f\circ c_x=c_{f(x)}.
 $$
 
-Jadi $\Pi_1(f)$ adalah funktor grupoid. Rumus tersebut jelas mempertahankan
-identitas dan komposisi pemetaan pasangan, sehingga $\Pi_1$ adalah funktor.
-Pada pasangan $(X,\{x\})$, hanya ada satu objek dan grup automorfismenya
+Jadi $\Pi_1(f)$ adalah fungtor grupoid. Rumus tersebut jelas mempertahankan
+identitas dan komposisi pemetaan pasangan, sehingga $\Pi_1$ adalah fungtor.
+Pada pasangan $(X,\{x\})$, hanya ada satu objek dan grup automorfismanya
 adalah $\pi_1(X,x)$. Ini membuktikan komutativitas diagram Proposisi 8.1.
 
 Selanjutnya, pemetaan
@@ -744,7 +744,7 @@ P_x^{x'}X\times P_y^{y'}Y,
 (\operatorname{pr}_X\circ\gamma,\operatorname{pr}_Y\circ\gamma)
 $$
 
-adalah homeomorfisme, dengan invers yang memasangkan kedua lintasan titik
+adalah homeomorfisma, dengan invers yang memasangkan kedua lintasan titik
 demi titik. Setelah mengambil kelas homotopi dan memakai bijeksi alami
 
 $$
@@ -753,18 +753,18 @@ $$
 [\{*\},M]\times[\{*\},N],
 $$
 
-kita memperoleh isomorfisme produk pada objek maupun morfisme. Pada ruang
+kita memperoleh isomorfisma produk pada objek maupun morfisma. Pada ruang
 SLSC, ini juga dapat dibaca sebagai rumus $\pi_0$ dalam Definisi 8.2.
 Rumus tersebut menghormati konkatenasi koordinat demi koordinat.
 
 Terakhir, setiap lintasan $I\to X\sqcup Y$ seluruhnya berada di $X$ atau
 seluruhnya berada di $Y$, karena $I$ terhubung dan kedua bagian gabungan
-lepas itu terbuka sekaligus tertutup. Jadi tidak ada morfisme yang melintasi
-kedua bagian, sedangkan semua morfisme di dalam masing-masing bagian tetap ada. Ini
-memberikan isomorfisme koproduk pada Proposisi 8.1.
+lepas itu terbuka sekaligus tertutup. Jadi tidak ada morfisma yang melintasi
+kedua bagian, sedangkan semua morfisma di dalam masing-masing bagian tetap ada. Ini
+memberikan isomorfisma koproduk pada Proposisi 8.1.
 
-Untuk ruang penutup $\pi\colon Z\to X$, definisikan funktor monodromi pada
-objek dan morfisme dengan
+Untuk ruang penutup $\pi\colon Z\to X$, definisikan fungtor monodromi pada
+objek dan morfisma dengan
 
 $$
 \rho_Z(x)=Z_x,
@@ -783,8 +783,8 @@ $$
 =\rho_Z([\eta])\circ\rho_Z([\gamma]).
 $$
 
-Ini tepat hukum funktor untuk konvensi komposisi aljabar, yakni pertama
-$[\gamma]$ lalu $[\eta]$. Pada grup automorfisme objek $x$, tuliskan
+Ini tepat hukum fungtor untuk konvensi komposisi aljabar, yakni pertama
+$[\gamma]$ lalu $[\eta]$. Pada grup automorfisma objek $x$, tuliskan
 $z\cdot[\gamma]=\gamma_*(z)$. Persamaan yang sama menjadi
 
 $$
@@ -812,7 +812,7 @@ Jelaskan pula dengan contoh mengapa kata “terhubung lintasan” pada Proposisi
 
 Implikasi (1)$\Rightarrow$(3) langsung dari Definisi 8.3, dan
 (3)$\Rightarrow$(2) langsung. Untuk (2)$\Rightarrow$(3), pilih lintasan
-$a\colon x\rightsquigarrow y$. Lema 8.1 memberi isomorfisme konjugasi
+$a\colon x\rightsquigarrow y$. Lema 8.1 memberi isomorfisma konjugasi
 
 $$
 \pi_1(X,x)\xrightarrow{\;\cong\;}\pi_1(X,y).
@@ -831,7 +831,7 @@ $$
 adalah loop pada $x$. Kelasnya trivial, sehingga pembatalan kelas
 $[a]$ dan $[\bar a]$ di dalam grupoid memberi
 $[\gamma]=[\eta]$. Maka di antara setiap dua objek terdapat tepat satu
-morfisme, sehingga $\Pi_1(X)$ kodiskret.
+morfisma, sehingga $\Pi_1(X)$ kodiskret.
 
 Sekarang ambil ruang terhubung sederhana $X$ dan himpunan diskret $S$ yang
 mempunyai sedikitnya dua unsur. Proyeksi penutup trivial
@@ -840,10 +840,10 @@ $$
 S\times X\longrightarrow X
 $$
 
-bukan homeomorfisme, sebab setiap serat mempunyai $|S|>1$ titik. Ruang atas
+bukan homeomorfisma, sebab setiap serat mempunyai $|S|>1$ titik. Ruang atas
 $S\times X$ bukan terhubung lintasan: setiap $\{s\}\times X$ adalah komponen
 lintasannya. Jadi hipotesis keterhubungan lintasan pada $Z$ tepat menyingkirkan
-penutup trivial dengan lebih dari satu lembar.
+penutup trivial dengan lebih dari satu lembaran.
 
 ::: {.exercise #o012-rbt-l08-mcheck-005}
 **Pemeriksaan penguasaan 8.5 (argumen kontraksi tanpa diagram).** Misalkan

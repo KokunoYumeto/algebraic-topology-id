@@ -1,0 +1,488 @@
+{
+  "allowed_changes_only": true,
+  "arxiv_search": {
+    "official_search_base": "https://arxiv.org/search/",
+    "qualification": "bounded no-hit, not a proof of nonexistence",
+    "queries": [
+      "all:\"topologi aljabar\"",
+      "all:\"grup fundamental\"",
+      "all:\"ruang penutup\"",
+      "all:\"ruang topologis\""
+    ],
+    "result": "no_suitable_indonesian_algebraic_topology_tex_source_found"
+  },
+  "backend_changes": {
+    "backend/artifacts.jsonl": {
+      "after_bytes": 49818,
+      "after_sha256": "49ff57b3fc4fb68360b428437e24c5f6123c62ff4b6ed2f7810d3a11f889b69e",
+      "before_bytes": 49818,
+      "before_sha256": "49ff57b3fc4fb68360b428437e24c5f6123c62ff4b6ed2f7810d3a11f889b69e",
+      "changed": false
+    },
+    "backend/assets.jsonl": {
+      "after_bytes": 8621,
+      "after_sha256": "36843e913cf3e805f8f32594ee6c74d02b3ba2f921d0320a0f9eb473072ac18f",
+      "before_bytes": 8621,
+      "before_sha256": "3d6ae604eda82a9e113a121d74560c3a757fd51416a6bfe24af1ba328e7359d9",
+      "changed": true
+    },
+    "backend/corrections.jsonl": {
+      "after_bytes": 170314,
+      "after_sha256": "9e719349f40d069629c19686700014c3224261562be2a4601abb880d8fb9cd72",
+      "before_bytes": 170314,
+      "before_sha256": "1701a426d50c33e2b300c4e7544672c438c996a4d0e05870817be696cd8c3444",
+      "changed": true
+    },
+    "backend/segments.jsonl": {
+      "after_bytes": 487132,
+      "after_sha256": "158d63db0e9e6a9fb32877b23c89a826366e28f9282757f84390877056577ec3",
+      "before_bytes": 487132,
+      "before_sha256": "08eb297d5695034d82ed47c956eaed3bad13e1469acedfbbbaa7d95da0f845b0",
+      "changed": true
+    },
+    "backend/terms.jsonl": {
+      "after_bytes": 114853,
+      "after_sha256": "7a9db1b404dcd41933c3696e35fa13b8d5746d49c51ee41540a75377f682e395",
+      "before_bytes": 114677,
+      "before_sha256": "7933210d72b461e8e0f703949e450d983b386df2e1fd8dfaf2ac945d949ce927",
+      "changed": true
+    },
+    "backend/units.jsonl": {
+      "after_bytes": 520578,
+      "after_sha256": "1bad793b50ec0d0e0f07fc1aa1cbf7f63a1abef7a071be91b6c3a35e706511d0",
+      "before_bytes": 520574,
+      "before_sha256": "2b7db66c30d75ad54c8775741418ad4523b0623e16f92fce59fffd0506f65969",
+      "changed": true
+    }
+  },
+  "control_changes": {
+    "00_control/TERMINOLOGY.csv": {
+      "after_bytes": 23934,
+      "after_sha256": "23d94fd403f08e00a5ccb9fcbdd861c54edf863072584b108679359ce25157f8",
+      "before_bytes": 23399,
+      "before_sha256": "0eae25f66c444f296984d1656b0a86f82188e126a38ddb993fb7cb8dbbe59008",
+      "replacement_counts": {
+        "\\blembar\\b->lembaran": 1,
+        "funktor->fungtor": 10,
+        "morfisme->morfisma": 4,
+        "tertutup secara merata->tertutup rata": 1
+      }
+    }
+  },
+  "date": "2026-08-22",
+  "decisions": [
+    {
+      "action": "changed",
+      "concept": "functor",
+      "preferred": "fungtor",
+      "variant": "funktor"
+    },
+    {
+      "action": "changed with derived forms",
+      "concept": "morphism",
+      "preferred": "morfisma",
+      "variant": "morfisme"
+    },
+    {
+      "action": "changed",
+      "concept": "covering sheet",
+      "preferred": "lembaran",
+      "variant": "lembar"
+    },
+    {
+      "action": "preferred form changed; explanatory variant retained",
+      "concept": "evenly covered",
+      "preferred": "tertutup rata",
+      "variant": "diliputi secara merata"
+    },
+    {
+      "action": "retained",
+      "concept": "neighbourhood",
+      "preferred": "lingkungan",
+      "variant": "persekitaran"
+    },
+    {
+      "action": "retained modern spelling",
+      "concept": "object",
+      "preferred": "objek",
+      "variant": "obyek"
+    },
+    {
+      "action": "retained translated form",
+      "concept": "fully faithful",
+      "preferred": "penuh dan setia",
+      "variant": "fully faithful"
+    }
+  ],
+  "fallback_source": {
+    "article_url": "https://journal.ugm.ac.id/jmt/article/view/56529",
+    "authors": [
+      "Valentino Risali",
+      "Indah Emilia Wijayanti"
+    ],
+    "doi": "10.22146/jmt.56529",
+    "format": "LaTeX/pdfTeX-generated PDF; editable source is not exposed",
+    "journal": "Jurnal Matematika Thales",
+    "language": "Bahasa Indonesia main text; English secondary abstract",
+    "local_witness": "tmp/pdfs/terminology-qa/Risali_Wijayanti_2020_JMT_56529.pdf",
+    "pdf_bytes": 373016,
+    "pdf_pages": 13,
+    "pdf_sha256": "e520234d557737b7c7c64e4f76871875e3d72681b3a2acd7c7254bf088278b7f",
+    "pdf_url": "https://journal.ugm.ac.id/jmt/article/download/56529/28321",
+    "redistribution": "not committed; primary URL and exact byte hash recorded",
+    "title": "Sifat-Sifat Morfisma di dalam Kategori Ruang Penutup Ruang Topologis yang Terhubung Lintasan",
+    "volume_issue_year_pages": "2(1), 2020, 23-35"
+  },
+  "frozen_artifacts_modified": false,
+  "human_report": {
+    "bytes": 4848,
+    "path": "qa/INDONESIAN_TERMINOLOGY_QA_2026-08-22.md",
+    "sha256": "a07dffddfbce672873c9c9f26beb78c3d73d4adf2a0c934dfb1e3f4c5bd2f786"
+  },
+  "line_counts_unchanged": true,
+  "migration_script": {
+    "bytes": 18053,
+    "path": "scripts/apply-indonesian-terminology-qa-2026-08-22.py",
+    "sha256": "5509e8d31c4a30fe444075b6c5a0552c17c735873beeaacaa4883222fe47f571"
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "qa_id": "O012-ID-TERMINOLOGY-QA-2026-08-22",
+  "schema_version": "1.0",
+  "scope": "live Indonesian Units 001-017 and canonical Units 001-013 backend only",
+  "source_files": [
+    {
+      "after_bytes": 16179,
+      "after_cr_bytes": 0,
+      "after_sha256": "dccc7b727695d26d0b425c0eae22db1697cea93e295391fa7685fbca2d011dc7",
+      "before_bytes": 16179,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 16179,
+      "before_git_blob_sha256": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15",
+      "before_sha256": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15",
+      "lines": 225,
+      "path": "source/id-ID/reader-unit-001.md",
+      "replacement_counts": {
+        "funktor->fungtor": 1,
+        "morfisme->morfisma": 4
+      },
+      "stable_id_count": 29
+    },
+    {
+      "after_bytes": 25090,
+      "after_cr_bytes": 0,
+      "after_sha256": "9aa5063c167cc0b2bc8a5edbc81cb36995606d5073a1afe22db608609ad29377",
+      "before_bytes": 25090,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 25090,
+      "before_git_blob_sha256": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
+      "before_sha256": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
+      "lines": 674,
+      "path": "source/id-ID/units/unit-002-lecture-002.md",
+      "replacement_counts": {
+        "morfisme->morfisma": 3
+      },
+      "stable_id_count": 41
+    },
+    {
+      "after_bytes": 25822,
+      "after_cr_bytes": 0,
+      "after_sha256": "f757bc58ea6f0d0dbe37ebdb2e44da7d3814b32052d8e23a39331d66d1f025b2",
+      "before_bytes": 25822,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 25822,
+      "before_git_blob_sha256": "993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd",
+      "before_sha256": "993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd",
+      "lines": 618,
+      "path": "source/id-ID/units/unit-003-lecture-003.md",
+      "replacement_counts": {
+        "Funktor->Fungtor": 3,
+        "funktor->fungtor": 26,
+        "morfisme->morfisma": 19
+      },
+      "stable_id_count": 39
+    },
+    {
+      "after_bytes": 24546,
+      "after_cr_bytes": 0,
+      "after_sha256": "35aa8adfec6f7652f9a9f21f2c6b6656347309f866689a0939d6f0c517974ea3",
+      "before_bytes": 24582,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 24582,
+      "before_git_blob_sha256": "826fcb368275cdad02f72a5cec951fc8466ba68b09ca0139d72c81a4c5591fea",
+      "before_sha256": "826fcb368275cdad02f72a5cec951fc8466ba68b09ca0139d72c81a4c5591fea",
+      "lines": 632,
+      "path": "source/id-ID/units/unit-004-lecture-004.md",
+      "replacement_counts": {
+        "Funktor->Fungtor": 2,
+        "funktor->fungtor": 9,
+        "morfisme->morfisma": 17,
+        "tertutup secara merata->tertutup rata": 4
+      },
+      "stable_id_count": 33
+    },
+    {
+      "after_bytes": 22662,
+      "after_cr_bytes": 0,
+      "after_sha256": "9d25dc7cd89c0c9f69841850b03489e742e8dc50c2e68ca405aff593ec128f90",
+      "before_bytes": 22662,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 22662,
+      "before_git_blob_sha256": "7333a7b7a92b9618016412abb5c9b2b2a398538f690d0109d4282289a0719852",
+      "before_sha256": "7333a7b7a92b9618016412abb5c9b2b2a398538f690d0109d4282289a0719852",
+      "lines": 663,
+      "path": "source/id-ID/units/unit-005-lecture-005.md",
+      "replacement_counts": {
+        "funktor->fungtor": 2,
+        "morfisme->morfisma": 22
+      },
+      "stable_id_count": 30
+    },
+    {
+      "after_bytes": 32116,
+      "after_cr_bytes": 0,
+      "after_sha256": "2276a34177100bc14e3e9f96461f6a7ab3bf27a25f652af4cc2d27493f420c8e",
+      "before_bytes": 32106,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 32106,
+      "before_git_blob_sha256": "3cb182fdf183bd67e45a898228b995a44d4638e808fdfbe6ea6d6a2a2b889e33",
+      "before_sha256": "3cb182fdf183bd67e45a898228b995a44d4638e808fdfbe6ea6d6a2a2b889e33",
+      "lines": 893,
+      "path": "source/id-ID/units/unit-006-lecture-006.md",
+      "replacement_counts": {
+        "\\blembar\\b->lembaran": 5,
+        "morfisme->morfisma": 5
+      },
+      "stable_id_count": 28
+    },
+    {
+      "after_bytes": 22107,
+      "after_cr_bytes": 0,
+      "after_sha256": "f93659dd290272ad3d526b74565f7bdc7316c366c09f1efaac599abde4cbc59d",
+      "before_bytes": 22107,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 22107,
+      "before_git_blob_sha256": "556cea5445e1b0a51f86f1c0ea0e80c4e00a17d365d95fa530f063cc24856569",
+      "before_sha256": "556cea5445e1b0a51f86f1c0ea0e80c4e00a17d365d95fa530f063cc24856569",
+      "lines": 749,
+      "path": "source/id-ID/units/unit-007-lecture-007.md",
+      "replacement_counts": {
+        "Funktor->Fungtor": 3,
+        "funktor->fungtor": 13,
+        "morfisme->morfisma": 10
+      },
+      "stable_id_count": 24
+    },
+    {
+      "after_bytes": 28468,
+      "after_cr_bytes": 0,
+      "after_sha256": "4b5c579a1891a99ddff89c458f9d653ec03973e0aaa32839c87be5896ab653a8",
+      "before_bytes": 28466,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 28466,
+      "before_git_blob_sha256": "8369e74c80e391d73575bbcb7844d3bfa62dd771dbca6258eed02360b20529cc",
+      "before_sha256": "8369e74c80e391d73575bbcb7844d3bfa62dd771dbca6258eed02360b20529cc",
+      "lines": 930,
+      "path": "source/id-ID/units/unit-008-lecture-008.md",
+      "replacement_counts": {
+        "Funktor->Fungtor": 1,
+        "Morfisme->Morfisma": 3,
+        "\\blembar\\b->lembaran": 1,
+        "funktor->fungtor": 19,
+        "morfisme->morfisma": 44
+      },
+      "stable_id_count": 26
+    },
+    {
+      "after_bytes": 25524,
+      "after_cr_bytes": 0,
+      "after_sha256": "c6076a71d38ab54553a0bf5ed42289063044ebcbeb29689df220081e5621a8a1",
+      "before_bytes": 25524,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 25524,
+      "before_git_blob_sha256": "16da25dea2f8ac5415b02738663046fb619c27e685042a734059e3150ed5ff18",
+      "before_sha256": "16da25dea2f8ac5415b02738663046fb619c27e685042a734059e3150ed5ff18",
+      "lines": 939,
+      "path": "source/id-ID/units/unit-009-lecture-009.md",
+      "replacement_counts": {
+        "funktor->fungtor": 7,
+        "morfisme->morfisma": 20
+      },
+      "stable_id_count": 30
+    },
+    {
+      "after_bytes": 26448,
+      "after_cr_bytes": 0,
+      "after_sha256": "ef76aedb378cb8a3d18a20f672082ee976561a877270082968e7df0a1514a8d5",
+      "before_bytes": 26432,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 26432,
+      "before_git_blob_sha256": "e1c6ef961ae2266db86baec6d701dd659a1bf78bdd3601cf5b1c6515bc7d0310",
+      "before_sha256": "e1c6ef961ae2266db86baec6d701dd659a1bf78bdd3601cf5b1c6515bc7d0310",
+      "lines": 934,
+      "path": "source/id-ID/units/unit-010-lecture-010.md",
+      "replacement_counts": {
+        "\\blembar\\b->lembaran": 8,
+        "funktor->fungtor": 2,
+        "morfisme->morfisma": 27
+      },
+      "stable_id_count": 26
+    },
+    {
+      "after_bytes": 28465,
+      "after_cr_bytes": 0,
+      "after_sha256": "7acb205dd9f760631f7548208d77470e22cd208849439e2ad2a8eb4b2465b0f8",
+      "before_bytes": 28465,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 28465,
+      "before_git_blob_sha256": "1cdbe0cae239a4e60a72f25c8814c2e3b5ec26b9119da03624bda7f3ff1ae127",
+      "before_sha256": "1cdbe0cae239a4e60a72f25c8814c2e3b5ec26b9119da03624bda7f3ff1ae127",
+      "lines": 959,
+      "path": "source/id-ID/units/unit-011-lecture-011.md",
+      "replacement_counts": {
+        "Funktor->Fungtor": 5,
+        "funktor->fungtor": 19,
+        "morfisme->morfisma": 22
+      },
+      "stable_id_count": 39
+    },
+    {
+      "after_bytes": 32850,
+      "after_cr_bytes": 0,
+      "after_sha256": "b7ba7cad3d12605628693d57d50a41e06f40a6b7da1109752fe05d870b4b28f0",
+      "before_bytes": 32850,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 32850,
+      "before_git_blob_sha256": "429831df4a5600c59351516915fb787cd73402d8c11c411869210dbf8aaa7ada",
+      "before_sha256": "429831df4a5600c59351516915fb787cd73402d8c11c411869210dbf8aaa7ada",
+      "lines": 1024,
+      "path": "source/id-ID/units/unit-012-lecture-012.md",
+      "replacement_counts": {
+        "Funktor->Fungtor": 6,
+        "Morfisme->Morfisma": 1,
+        "funktor->fungtor": 17,
+        "morfisme->morfisma": 38
+      },
+      "stable_id_count": 37
+    },
+    {
+      "after_bytes": 41196,
+      "after_cr_bytes": 0,
+      "after_sha256": "f3827dc052a70930ad31cc6f9b1a745bf8a17bac31b4f9249cd178b06ac302b6",
+      "before_bytes": 41196,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 41196,
+      "before_git_blob_sha256": "0aa68cb4ed31862d32aeff5a7106b4ac29c13cbc202f7dbc8381fc7cd31418c0",
+      "before_sha256": "0aa68cb4ed31862d32aeff5a7106b4ac29c13cbc202f7dbc8381fc7cd31418c0",
+      "lines": 1306,
+      "path": "source/id-ID/units/unit-013-lecture-013.md",
+      "replacement_counts": {
+        "Funktor->Fungtor": 2,
+        "Morfisme->Morfisma": 1,
+        "funktor->fungtor": 7,
+        "morfisme->morfisma": 25
+      },
+      "stable_id_count": 44
+    },
+    {
+      "after_bytes": 28488,
+      "after_cr_bytes": 0,
+      "after_sha256": "da6f18b455d76adafd8b9b648ed7c277958eca95c0b7d76a8bd9895d79ec6677",
+      "before_bytes": 28504,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 28504,
+      "before_git_blob_sha256": "2a14ccb2acbb0a001ea2db2716f077925a90dbf4d18b0dc2b63a2d3e5e7f7c40",
+      "before_sha256": "2a14ccb2acbb0a001ea2db2716f077925a90dbf4d18b0dc2b63a2d3e5e7f7c40",
+      "lines": 947,
+      "path": "source/id-ID/units/unit-014-lecture-014.md",
+      "replacement_counts": {
+        "Funktor->Fungtor": 4,
+        "Morfisme->Morfisma": 1,
+        "\\blembar\\b->lembaran": 1,
+        "funktor->fungtor": 18,
+        "morfisme->morfisma": 28,
+        "tertutup secara merata->tertutup rata": 2
+      },
+      "stable_id_count": 38
+    },
+    {
+      "after_bytes": 27725,
+      "after_cr_bytes": 0,
+      "after_sha256": "e9ab0565ae460236a69c77389b76d32405873156fc451be9cf95c3749e7fe9d1",
+      "before_bytes": 28485,
+      "before_cr_bytes": 784,
+      "before_git_blob_bytes": 27701,
+      "before_git_blob_sha256": "e50627d3adec0a54ae3ad9b84b96d1c7d513ce373569f7aafebe2f3867788433",
+      "before_sha256": "140f1dbc182b5406dbbdadde59bb6dcdf51f86bd6cf4c50c676e0b88d60540f4",
+      "lines": 835,
+      "path": "source/id-ID/units/unit-015-lecture-015.md",
+      "replacement_counts": {
+        "Funktor->Fungtor": 3,
+        "\\bLembar\\b->Lembaran": 1,
+        "\\blembar\\b->lembaran": 11,
+        "funktor->fungtor": 13,
+        "morfisme->morfisma": 18
+      },
+      "stable_id_count": 34
+    },
+    {
+      "after_bytes": 33919,
+      "after_cr_bytes": 0,
+      "after_sha256": "31dfc4c3647f7d6a1d398d2123efe1faa82348428df0180eee2a2358572f9054",
+      "before_bytes": 33863,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 33863,
+      "before_git_blob_sha256": "6a89d6e02de654c98294a5f6f092bb76bd63f6d537e358a49bcdac25adb8da55",
+      "before_sha256": "6a89d6e02de654c98294a5f6f092bb76bd63f6d537e358a49bcdac25adb8da55",
+      "lines": 984,
+      "path": "source/id-ID/units/unit-016-lecture-016.md",
+      "replacement_counts": {
+        "\\bLembar\\b->Lembaran": 2,
+        "\\blembar\\b->lembaran": 26,
+        "funktor->fungtor": 2,
+        "morfisme->morfisma": 17
+      },
+      "stable_id_count": 33
+    },
+    {
+      "after_bytes": 29933,
+      "after_cr_bytes": 0,
+      "after_sha256": "47576d7c26a436ba915c276b692e2bc0ead6fae038295fee3a82a50426ed9a96",
+      "before_bytes": 29921,
+      "before_cr_bytes": 0,
+      "before_git_blob_bytes": 29921,
+      "before_git_blob_sha256": "713e8b44b22620d9dd0531e19316932a1f18b1109fea80d7787cad218e4e45f9",
+      "before_sha256": "713e8b44b22620d9dd0531e19316932a1f18b1109fea80d7787cad218e4e45f9",
+      "lines": 952,
+      "path": "source/id-ID/units/unit-017-lecture-017.md",
+      "replacement_counts": {
+        "Funktor->Fungtor": 2,
+        "\\blembar\\b->lembaran": 6,
+        "funktor->fungtor": 7,
+        "morfisme->morfisma": 2
+      },
+      "stable_id_count": 34
+    }
+  ],
+  "stable_ids_unchanged": true,
+  "validation": {
+    "backend_bundle_sha256": "c5ac458a7f4723460ccebccaf3e5738544883c685a54c9a3cfbef854f2db83c5",
+    "backend_jsonl_files": 11,
+    "backend_records": 1762,
+    "backend_validator": "PASS",
+    "frozen_artifacts_modified": false,
+    "line_counts_unchanged": true,
+    "stable_ids_unchanged": true
+  },
+  "validation_state": "passed",
+  "validator_change": {
+    "after_bytes": 76924,
+    "after_sha256": "f90d19fbfb4b0525902316dd5c26550fc25c66054cddf32b385bc97f6d526b6e",
+    "before_bytes": 76924,
+    "before_sha256": "87806540ea2a631158b53024ca6f327e92364dc84c8aba42ff0985252ae7d20b"
+  },
+  "verifier": {
+    "bytes": 4608,
+    "path": "scripts/verify-indonesian-terminology-qa-2026-08-22.py",
+    "sha256": "0876958c8c6a416d5be6fb47c52596c7ced76cd5ab9cc9109681887ccc4d1ef4"
+  }
+}

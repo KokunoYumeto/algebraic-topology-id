@@ -2,7 +2,7 @@ term_id,source_term,id_ID,scope,status,note
 O012-TERM-0001,algebraic topology,topologi aljabar,global,admitted,
 O012-TERM-0002,space,ruang,global,admitted,"use ruang topologis when the structure matters"
 O012-TERM-0003,algebraic object,objek aljabar,global,admitted,
-O012-TERM-0004,functor,funktor,global,admitted,
+"O012-TERM-0004","functor","fungtor","global","admitted","preferred after same-field Indonesian usage audit; funktor retained only as a recognized variant"
 O012-TERM-0005,homotopy type,tipe homotopi,global,admitted,
 O012-TERM-0006,chain complex,kompleks rantai,global,admitted,
 O012-TERM-0007,topology,topologi,global,admitted,
@@ -11,12 +11,12 @@ O012-TERM-0009,topological space,ruang topologis,global,admitted,
 O012-TERM-0010,Euclidean topology,topologi Euklides,global,admitted,
 O012-TERM-0011,discrete topology,topologi diskret,global,admitted,
 O012-TERM-0012,indiscrete topology,topologi indiskret,global,admitted,"topologi trivial may be mentioned as an alternate only if needed"
-O012-TERM-0013,neighbourhood,lingkungan,global,admitted,
+"O012-TERM-0013","neighbourhood","lingkungan","global","admitted","persekitaran is a recognized field variant; lingkungan remains the reader-facing preferred form"
 O012-TERM-0014,neighbourhood base,basis lingkungan,global,admitted,
 O012-TERM-0015,basic neighbourhood,lingkungan dasar,global,admitted,
 O012-TERM-0016,closure,penutupan,global,admitted,
 O012-TERM-0017,continuous,kontinu,global,admitted,
-O012-TERM-0018,homeomorphism,homeomorfisme,global,admitted,
+O012-TERM-0018,homeomorphism,homeomorfisma,global,admitted,
 O012-TERM-0019,homeomorphic,homeomorfik,global,admitted,
 O012-TERM-0020,initial topology,topologi awal,global,admitted,
 O012-TERM-0021,product topology,topologi produk,global,admitted,
@@ -63,15 +63,15 @@ O012-TERM-0061,path-connected,terhubung lintasan,global,admitted,
 O012-TERM-0062,path component,komponen lintasan,global,admitted,
 O012-TERM-0063,category,kategori,global,admitted,
 O012-TERM-0064,object,objek,global,admitted,
-O012-TERM-0065,morphism,morfisme,global,admitted,
+"O012-TERM-0065","morphism","morfisma","global","admitted","preferred after same-field Indonesian usage audit; propagate through the homeomorfisma and homomorfisma families"
 O012-TERM-0066,source,sumber,category_theory,admitted,
 O012-TERM-0067,target,sasaran,category_theory,admitted,
 O012-TERM-0068,locally small,kecil secara lokal,category_theory,admitted,
-O012-TERM-0069,hom-set,himpunan morfisme,category_theory,admitted,"himpunan-hom is retained as a compact conventional alias"
+O012-TERM-0069,hom-set,himpunan morfisma,category_theory,admitted,"himpunan-hom is retained as a compact conventional alias"
 O012-TERM-0070,pointed set,himpunan bertitik,category_theory,admitted,
 O012-TERM-0071,pointed map,pemetaan bertitik,category_theory,admitted,
-O012-TERM-0072,functoriality,funktorialitas,category_theory,admitted,
-O012-TERM-0073,underlying-set functor,funktor pelupa,category_theory,admitted,"funktor himpunan yang mendasari is the explicit variant"
+"O012-TERM-0072","functoriality","fungtorialitas","category_theory","admitted","derived consistently from the preferred fungtor form"
+O012-TERM-0073,underlying-set functor,fungtor pelupa,category_theory,admitted,"fungtor himpunan yang mendasari is the explicit variant"
 O012-TERM-0074,subcategory,subkategori,category_theory,admitted,
 O012-TERM-0075,full subcategory,subkategori penuh,category_theory,admitted,
 O012-TERM-0076,subcategory inclusion,inklusi subkategori,category_theory,admitted,
@@ -83,11 +83,11 @@ O012-TERM-0081,coproduct summand,suku koproduk,category_theory,admitted,
 O012-TERM-0082,topologist's sine curve,kurva sinus topolog,point_set_topology,admitted,
 O012-TERM-0083,natural transformation,transformasi natural,category_theory,admitted,
 O012-TERM-0084,component of a natural transformation,komponen transformasi natural,category_theory,admitted,"komponen when the context is unambiguous"
-O012-TERM-0085,natural isomorphism,isomorfisme natural,category_theory,admitted,
+O012-TERM-0085,natural isomorphism,isomorfisma natural,category_theory,admitted,
 O012-TERM-0086,semilocally path connected,terhubung lintasan semilokal,point_set_topology,admitted,"SLPC retained as the source abbreviation"
 O012-TERM-0087,pointed homotopy,homotopi bertitik,homotopy_theory,admitted,
 O012-TERM-0088,covering map,pemetaan penutup,covering_spaces,admitted,
-O012-TERM-0089,evenly covered,tertutup secara merata,covering_spaces,admitted,
+"O012-TERM-0089","evenly covered","tertutup rata","covering_spaces","admitted","preferred adjective; diliputi secara merata remains an explanatory prose variant"
 O012-TERM-0090,fibre,serat,covering_spaces,admitted,"use British-source fibre and Indonesian serat consistently"
 O012-TERM-0091,base space,ruang dasar,covering_spaces,admitted,
 O012-TERM-0092,wedge,baji,point_set_topology,admitted,"write S^1 vee S^1 explicitly where useful"
@@ -147,8 +147,8 @@ O012-TERM-0114,critical value,nilai kritis,complex_analysis,admitted,
 "O012-TERM-0146","simply connected","terhubung sederhana","homotopy_theory","admitted","empty-space convention stated explicitly"
 "O012-TERM-0147","star-shaped region","daerah berbentuk bintang","homotopy_theory","admitted",""
 "O012-TERM-0148","convex subset","himpunan konveks","point_set_topology","admitted","avoid subruang which can suggest a linear subspace"
-"O012-TERM-0149","faithful functor","funktor setia","category_theory","admitted","injective on every hom-set"
-"O012-TERM-0150","full functor","funktor penuh","category_theory","admitted","surjective on every hom-set"
+"O012-TERM-0149","faithful functor","fungtor setia","category_theory","admitted","injective on every hom-set"
+"O012-TERM-0150","full functor","fungtor penuh","category_theory","admitted","surjective on every hom-set"
 "O012-TERM-0151","homotopy invariance","invariansi homotopi","homotopy_theory","admitted",""
 "O012-TERM-0152","homotopy lifting","pengangkatan homotopi","covering_spaces","admitted",""
 "O012-TERM-0153","unit sphere","sfera satuan","functional_analysis","admitted",""
@@ -213,9 +213,9 @@ O012-TERM-0114,critical value,nilai kritis,complex_analysis,admitted,
 "O012-TERM-0212","weak topology","topologi lemah","CW_complexes","admitted","give weak topology in parentheses at first occurrence"
 "O012-TERM-0213","genus","genus","surface_topology","admitted",""
 "O012-TERM-0214","classification of covering spaces","klasifikasi ruang penutup","covering_spaces","admitted",""
-"O012-TERM-0215","representation (groupoid functor)","representasi (funktor grupoid)","category_theory","admitted","distinguish from a linear representation when needed"
-"O012-TERM-0216","functor category","kategori funktor","category_theory","admitted",""
-"O012-TERM-0217","restriction functor","funktor restriksi","category_theory","admitted",""
+"O012-TERM-0215","representation (groupoid functor)","representasi (fungtor grupoid)","category_theory","admitted","distinguish from a linear representation when needed"
+"O012-TERM-0216","functor category","kategori fungtor","category_theory","admitted",""
+"O012-TERM-0217","restriction functor","fungtor restriksi","category_theory","admitted",""
 "O012-TERM-0218","left action","aksi kiri","group_actions","admitted","direct monodromy remains a right action; left action is the inversion-converted convention"
 "O012-TERM-0219","orbit","orbit","group_actions","admitted",""
 "O012-TERM-0220","orbit representative","wakil orbit","group_actions","admitted",""
@@ -229,14 +229,14 @@ O012-TERM-0114,critical value,nilai kritis,complex_analysis,admitted,
 "O012-TERM-0228","classification theorem","teorema klasifikasi","covering_spaces","admitted",""
 "O012-TERM-0229","orbit decomposition","dekomposisi orbit","group_actions","admitted",""
 "O012-TERM-0230","covering action","aksi penutup","group_actions","admitted","a topological action whose quotient map is a covering"
-"O012-TERM-0231","fibre functor","funktor serat","covering_spaces","admitted","the monodromy representation valued in sets"
+"O012-TERM-0231","fibre functor","fungtor serat","covering_spaces","admitted","the monodromy representation valued in sets"
 "O012-TERM-0232","product category","kategori produk","category_theory","admitted",""
 "O012-TERM-0233","essentially surjective","surjektif secara esensial","category_theory","admitted","distinguish from full and faithful"
 "O012-TERM-0234","fibrewise action","aksi serat demi serat","covering_spaces","admitted","distinct here from the right monodromy action"
 "O012-TERM-0235","covering-basis topology","topologi basis penutup","covering_spaces","admitted","basis topology on endpoint-fixed path classes"
 "O012-TERM-0236","path-class space","ruang kelas lintasan","covering_spaces","admitted","endpoint-fixed homotopy classes beginning at a chosen basepoint"
 "O012-TERM-0237","endpoint projection","proyeksi titik ujung","covering_spaces","admitted",""
-"O012-TERM-0238","sheet (of a covering)","lembar","covering_spaces","admitted","use only for one local slice mapped homeomorphically to the base neighbourhood"
+"O012-TERM-0238","sheet (of a covering)","lembaran","covering_spaces","admitted","same-field bilingual definition uses lembaran; use only for one local slice mapped homeomorphically to the base neighbourhood"
 "O012-TERM-0239","closed-lift criterion","kriteria pengangkatan tertutup","covering_spaces","admitted","criterion detecting the induced fundamental-group image"
 "O012-TERM-0240","commuting actions","aksi saling komutatif","group_actions","admitted","keep the left fibrewise and right monodromy actions explicitly distinct"
 "O012-TERM-0241","equivalence of categories","ekuivalensi kategori","category_theory","admitted",""

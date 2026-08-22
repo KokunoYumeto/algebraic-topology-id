@@ -145,7 +145,7 @@ $$
 \Phi\bigl(\beta,(x,z)\bigr)=\bigl(x,(\beta,z)\bigr),
 $$
 
-adalah suatu homeomorfisme.
+adalah suatu homeomorfisma.
 :::
 
 ::: {.exercise #o012-rbt-l02-ex-003}
@@ -498,9 +498,9 @@ $$
 X\times\operatorname{in}_\beta(Z_\beta)
 $$
 
-membentuk sampul terbuka dari $X\times\bigsqcup_\gamma Z_\gamma$. Pada komponen ini, pembatasan $\Psi$ adalah komposisi invers homeomorfisme kanonik
+membentuk sampul terbuka dari $X\times\bigsqcup_\gamma Z_\gamma$. Pada komponen ini, pembatasan $\Psi$ adalah komposisi invers homeomorfisma kanonik
 $X\times Z_\beta\to X\times\operatorname{in}_\beta(Z_\beta)$ dengan inklusi komponen
-$X\times Z_\beta\hookrightarrow\bigsqcup_\gamma(X\times Z_\gamma)$, sehingga kontinu. Lema perekatan memberi bahwa $\Psi$ kontinu secara global. Jadi $\Phi$ adalah homeomorfisme.
+$X\times Z_\beta\hookrightarrow\bigsqcup_\gamma(X\times Z_\gamma)$, sehingga kontinu. Lema perekatan memberi bahwa $\Psi$ kontinu secara global. Jadi $\Phi$ adalah homeomorfisma.
 
 ## Solusi Latihan 2.3 {#o012-rbt-l02-sol-003}
 

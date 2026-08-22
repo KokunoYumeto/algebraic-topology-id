@@ -26,7 +26,7 @@ Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah
 dibaca, pemberian pengenal stabil, serta pemindahan keenam unsur pinggir ke
 urutan bacaan utama: definisi himpunan-$G$, arti ekuivarian, konvensi
 keterhubungan lintasan semilokal, sifat universal baji, diagram penutup tiga
-lembar, dan bentuk kata dalam grup bebas. Diagram penutup diganti dengan
+lembaran, dan bentuk kata dalam grup bebas. Diagram penutup diganti dengan
 daftar simpul dan sisi berarah yang mempertahankan semua data pelabelan,
 proyeksi, dan pengangkatan lintasan.
 
@@ -34,7 +34,7 @@ Sejumlah cacat sumber diperbaiki secara independen. Huruf titik yang berubah
 dari $p$ menjadi $s$ dalam pemetaan orbit--stabilisator diseragamkan; subgrup
 stabilisator ditulis sebagai citra
 $\pi_*\bigl(\pi_1(Z,z)\bigr)$, bukan disamakan secara harfiah dengan grup
-asalnya; variabel $x,y$ pada himpunan morfisme grupoid terbatas disyaratkan
+asalnya; variabel $x,y$ pada himpunan morfisma grupoid terbatas disyaratkan
 berada di $A$; dan dekomposisi grupoid dinyatakan hanya ketika
 $X=X_1\sqcup X_2$ merupakan dekomposisi ke dalam komponen lintasan. Istilah
 *join* yang salah diganti dengan *wedge* atau *baji*, urutan komposisi dalam
@@ -52,14 +52,14 @@ orbit--stabilisator alaminya adalah $H\backslash G$. Sumber memakai aksi kiri
 dan $G/H$. Unit ini mempertahankan kedua bentuk dengan menyatakan operasi
 inversi yang menghubungkannya. Demikian pula, operator titik akhir
 $R_g(u)=u\mathbin{\cdot}g$ memenuhi
-$R_{gh}=R_h\circ R_g$; representasi permutasi sebagai homomorfisme biasa
+$R_{gh}=R_h\circ R_g$; representasi permutasi sebagai homomorfisma biasa
 diperoleh dari $\lambda(g)=R_{g^{-1}}$. Pembedaan ini mencegah urutan
 perkalian terbalik secara diam-diam pada contoh baji dua lingkaran.
 
 Rentang sumber tidak memuat latihan. Bagian pendamping penguasaan menambahkan
 lima pemeriksaan dengan solusi lengkap: aksi reguler dan kesetiaan; langkah
 yang menuntaskan perhitungan $\pi_1(S^1)$; sifat universal baji; pemeriksaan
-lokal dan monodromi penutup tiga lembar; serta batas logis antara
+lokal dan monodromi penutup tiga lembaran; serta batas logis antara
 nonkomutativitas yang sudah dibuktikan dan struktur grup bebas yang baru akan
 dibuktikan. Seluruh materi pendamping yang ditambahkan tersedia di bawah CC
 BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau
@@ -121,7 +121,7 @@ Inilah bentuk aksi kiri yang digunakan dalam sumber.
 
 Terapkan fakta tersebut pada aksi kanan transitif
 $G=\pi_1(X,x)$ di serat $Z_x$. Aksi itu transitif karena $Z$ terhubung
-lintasan. Kita memperoleh isomorfisme himpunan-$G$ kanan
+lintasan. Kita memperoleh isomorfisma himpunan-$G$ kanan
 
 $$
 \operatorname{Stab}(z)\backslash\pi_1(X,x)
@@ -188,7 +188,7 @@ g&\longmapsto z\mathbin{\cdot}g
 \end{aligned}
 $$
 
-merupakan isomorfisme himpunan-$\pi_1(X,x)$ kanan, dengan grup pada ruas kiri
+merupakan isomorfisma himpunan-$\pi_1(X,x)$ kanan, dengan grup pada ruas kiri
 membawa aksi kanan reguler melalui perkalian.
 :::
 
@@ -238,7 +238,7 @@ $$
 R_{gh}=R_h\circ R_g.
 $$
 
-Jadi $g\mapsto R_g$ adalah aksi permutasi kanan, atau antihomomorfisme ke
+Jadi $g\mapsto R_g$ adalah aksi permutasi kanan, atau antihomomorfisma ke
 grup permutasi bila komposisi fungsi dibaca dengan konvensi biasa. Dengan
 membalik unsur grup, kita memperoleh representasi permutasi kiri
 
@@ -249,7 +249,7 @@ g&\longmapsto R_{g^{-1}},
 \end{aligned}
 $$
 
-yang merupakan homomorfisme. Representasi ini *setia*. Jika $g\ne h$, maka
+yang merupakan homomorfisma. Representasi ini *setia*. Jika $g\ne h$, maka
 bijeksi Akibat 10.1 memberi suatu $u\in Z_x$---bahkan titik dasar $z$ sudah
 cukup---dengan
 
@@ -273,7 +273,7 @@ Sekarang kita dapat memberi contoh pertama grup fundamental nontrivial yang
 dihitung secara lengkap.
 
 ::: {.theorem #o012-rbt-l10-thm-001}
-**Teorema 10.1 (grup fundamental lingkaran).** Terdapat isomorfisme grup
+**Teorema 10.1 (grup fundamental lingkaran).** Terdapat isomorfisma grup
 
 $$
 \pi_1(S^1,1)\cong\mathbb Z.
@@ -289,7 +289,7 @@ q\colon\mathbb R\longrightarrow S^1,
 q(t)=e^{2\pi i t},
 $$
 
-yang turun menjadi homeomorfisme
+yang turun menjadi homeomorfisma
 $\mathbb R/\mathbb Z\cong S^1$ dan yang seratnya di atas $1\in S^1$ adalah
 $\mathbb Z$. Inklusi
 
@@ -339,7 +339,7 @@ $$
 \pi_1(S^1,x)\cong\mathbb Z.
 $$
 
-Untuk setiap $x,y\in A$, himpunan morfisme
+Untuk setiap $x,y\in A$, himpunan morfisma
 $\Pi_1(S^1,A)(x,y)$ tidak kosong dan berbijeksi dengan $\mathbb Z$ sebagai
 himpunan. Bijeksi terakhir tidak kanonik sebelum suatu kelas lintasan dari
 $x$ menuju $y$ dipilih.
@@ -352,7 +352,7 @@ $$
 X=X_1\sqcup X_2,
 $$
 
-maka tidak ada morfisme grupoid fundamental di antara kedua komponen, dan
+maka tidak ada morfisma grupoid fundamental di antara kedua komponen, dan
 karena itu
 
 $$
@@ -375,8 +375,8 @@ $$
 \Pi_1(S^1\sqcup S^1,\{1\}\sqcup\{1\})
 $$
 
-mempunyai dua objek. Tidak terdapat morfisme di antara kedua objek itu, dan
-grup automorfisme masing-masing objek isomorfik dengan $\mathbb Z$.
+mempunyai dua objek. Tidak terdapat morfisma di antara kedua objek itu, dan
+grup automorfisma masing-masing objek isomorfik dengan $\mathbb Z$.
 :::
 
 ## Baji ruang bertitik {#o012-rbt-l10-s02}
@@ -441,8 +441,8 @@ $$
 \langle f,g\rangle\circ\operatorname{in}_R=g.
 $$
 
-Karena semua pemetaan tersebut bertitik, funktorialitas $\pi_1$ memberi dua
-homomorfisme
+Karena semua pemetaan tersebut bertitik, fungtorialitas $\pi_1$ memberi dua
+homomorfisma
 
 $$
 \pi_1(X,x)
@@ -475,7 +475,7 @@ $$
 Jadi $a$ dan $b$ adalah kelas loop yang masing-masing mengelilingi lingkaran
 kiri dan kanan satu kali dalam arah positif.
 
-## Penutup tiga lembar yang mendeteksi nonkomutativitas {#o012-rbt-l10-s03}
+## Penutup tiga lembaran yang mendeteksi nonkomutativitas {#o012-rbt-l10-s03}
 
 Definisikan ruang penutup
 
@@ -484,7 +484,7 @@ q_1\colon Z_1\longrightarrow S^1\vee S^1
 $$
 
 sebagai graf berarah berlabel berikut. Sumber menamai panah penutup ini
-$\pi_1$; edisi menulisnya sebagai $q_1$ agar tidak bertabrakan dengan funktor
+$\pi_1$; edisi menulisnya sebagai $q_1$ agar tidak bertabrakan dengan fungtor
 grup fundamental $\pi_1$. Ruang dasar mempunyai satu simpul $*$ dan dua loop
 berarah $a$ dan $b$. Ruang atas mempunyai tiga simpul $A,B,C$, semuanya
 dipetakan ke $*$, dan enam sisi berarah:
@@ -558,7 +558,7 @@ Kedua permutasi tersebut berbeda, sehingga $ab\ne ba$ di
 $\pi_1(S^1\vee S^1,*)$. Dengan kata lain, grup fundamental baji dua
 lingkaran **tidak abelian**.
 
-Jika diinginkan representasi permutasi sebagai homomorfisme dengan komposisi
+Jika diinginkan representasi permutasi sebagai homomorfisma dengan komposisi
 fungsi biasa, definisikan
 
 $$
@@ -575,7 +575,7 @@ $$
 \cong S_3
 $$
 
-merupakan homomorfisme. Karena $a$ dan $b$ dipetakan ke involusi, tetap
+merupakan homomorfisma. Karena $a$ dan $b$ dipetakan ke involusi, tetap
 berlaku
 
 $$
@@ -596,7 +596,7 @@ Perbedaan itu hanyalah akibat konvensi aksi; kedua perhitungan membuktikan
 kesimpulan nonkomutativitas yang sama.
 
 Dengan memilih ruang penutup secara cermat, orang juga dapat membuktikan
-bahwa kedua homomorfisme
+bahwa kedua homomorfisma
 
 $$
 \mathbb Z\longrightarrow\pi_1(S^1\vee S^1,*)
@@ -631,7 +631,7 @@ $$
 dengan setiap eksponen pada blok yang benar-benar tampil tidak nol; blok awal
 atau akhir dapat dihilangkan agar kata dimulai atau berakhir pada salah satu
 faktor. Pernyataan bentuk bebas ini masih merupakan pratinjau pada tahap
-sekarang, bukan akibat dari satu penutup tiga lembar saja.
+sekarang, bukan akibat dari satu penutup tiga lembaran saja.
 
 # Pendamping penguasaan: pemeriksaan dan solusi lengkap {.unnumbered #o012-rbt-l10-mastery}
 
@@ -645,7 +645,7 @@ sederhana).** Dalam situasi Akibat 10.1:
 1. buktikan langsung bahwa pemetaan
    $\Phi(g)=z\mathbin{\cdot}g$ terdefinisi dengan baik dan bijektif;
 2. buktikan bahwa aksi pada $Z_x$ bebas dan transitif;
-3. periksa bahwa $\lambda(g)=R_{g^{-1}}$ merupakan homomorfisme injektif ke
+3. periksa bahwa $\lambda(g)=R_{g^{-1}}$ merupakan homomorfisma injektif ke
    $\operatorname{Aut}(Z_x)$;
 4. untuk penutup terhubung lintasan yang tidak harus terhubung sederhana,
    buktikan bagaimana stabilisator berubah ketika titik pilihan dalam serat
@@ -692,7 +692,7 @@ $$
 
 Jika $\lambda(g)=\lambda(h)$, evaluasi pada $z$ memberi
 $z\mathbin{\cdot}g^{-1}=z\mathbin{\cdot}h^{-1}$. Kebebasan aksi memaksa
-$g^{-1}=h^{-1}$, sehingga $g=h$. Jadi $\lambda$ homomorfisme injektif.
+$g^{-1}=h^{-1}$, sehingga $g=h$. Jadi $\lambda$ homomorfisma injektif.
 
 Untuk pernyataan perubahan titik, sekarang ambil penutup terhubung lintasan
 umum dan tuliskan $H_z=\operatorname{Stab}(z)$. Jika
@@ -734,7 +734,7 @@ Untuk penutup $q(t)=e^{2\pi it}$:
 2. gunakan kebebasan dan transitivitas aksi untuk membuktikan bahwa setiap
    kelas loop sama dengan tepat satu $[\gamma]^k$;
 3. untuk $x,y\in A\subseteq S^1$, jelaskan mengapa
-   $\Pi_1(S^1,A)(x,y)$ hanya *berbijeksi*, bukan berisomorfisme grup secara
+   $\Pi_1(S^1,A)(x,y)$ hanya *berbijeksi*, bukan berisomorfisma grup secara
    alami, dengan $\mathbb Z$ ketika $x\ne y$.
 :::
 
@@ -768,9 +768,9 @@ $$
 $$
 
 sebagai himpunan. Pilihan kelas $c$ lain mengubah bijeksi tersebut. Selain
-itu, bila $x\ne y$, himpunan morfisme itu tidak memiliki operasi komposisi
-internal karena dua morfisme $x\to y$ tidak dapat langsung dikomposisikan.
-Jadi ia merupakan torsor bagi grup automorfisme terkait, bukan sebuah grup
+itu, bila $x\ne y$, himpunan morfisma itu tidak memiliki operasi komposisi
+internal karena dua morfisma $x\to y$ tidak dapat langsung dikomposisikan.
+Jadi ia merupakan torsor bagi grup automorfisma terkait, bukan sebuah grup
 kanonik.
 
 ::: {.exercise #o012-rbt-l10-mcheck-003}
@@ -819,13 +819,13 @@ $X\sqcup Y$. Surjektivitas $q$ memaksa
 $h=\langle f,g\rangle$, yang membuktikan keunikan.
 
 ::: {.exercise #o012-rbt-l10-mcheck-004}
-**Pemeriksaan penguasaan 10.4 (membaca penutup tiga lembar).** Gunakan daftar
+**Pemeriksaan penguasaan 10.4 (membaca penutup tiga lembaran).** Gunakan daftar
 sisi pada Diagram 10.1 untuk:
 
-1. memeriksa secara lokal bahwa $q_1$ adalah penutup graf tiga lembar;
+1. memeriksa secara lokal bahwa $q_1$ adalah penutup graf tiga lembaran;
 2. menghitung $R_a,R_b,R_{ab},R_{ba}$ titik demi titik;
 3. menjelaskan mengapa perbedaan $R_{ab}$ dan $R_{ba}$ membuktikan
-   $ab\ne ba$ tanpa mengharuskan $g\mapsto R_g$ menjadi homomorfisme biasa;
+   $ab\ne ba$ tanpa mengharuskan $g\mapsto R_g$ menjadi homomorfisma biasa;
 4. mengubah aksi kanan itu menjadi representasi kiri $\rho_1$.
 :::
 
@@ -837,7 +837,7 @@ menyediakan tepat satu ruas yang memetakan homeomorfik ke setiap ruas keluar
 dan masuk berlabel $a$ maupun $b$. Ketiga lingkungan bintang yang dihasilkan
 saling lepas dan masing-masing dipetakan homeomorfik ke $U$. Pada bagian
 dalam setiap sisi, sifat penutup jelas dari pemetaan interval ke interval.
-Jadi $q_1$ merupakan penutup tiga lembar.
+Jadi $q_1$ merupakan penutup tiga lembaran.
 
 Dari sisi berlabel $a$,
 
@@ -881,9 +881,9 @@ jadi $R_{ba}=(ACB)$. Jika $ab=ba$ sebagai elemen grup fundamental, aksi apa
 pun harus memberi operator titik akhir yang sama. Karena kedua operator di
 atas berbeda, $ab\ne ba$. Argumen ini hanya memakai bahwa aksi menghormati
 kesamaan unsur; tidak perlu menyebut pemetaan ke grup permutasi sebagai
-homomorfisme biasa.
+homomorfisma biasa.
 
-Untuk memperoleh homomorfisme biasa, tetapkan
+Untuk memperoleh homomorfisma biasa, tetapkan
 $\rho_1(g)=R_{g^{-1}}$. Perhitungan pada Solusi 10.1 membuktikan
 
 $$
@@ -902,7 +902,7 @@ dinyatakan dapat dibuktikan dengan penutup lain, dan yang ditunda sampai
 teorema berikutnya:
 
 1. $a$ dan $b$ tidak komutatif;
-2. masing-masing homomorfisme
+2. masing-masing homomorfisma
    $\mathbb Z\to\pi_1(S^1\vee S^1,*)$ injektif;
 3. $a$ dan $b$ membangkitkan seluruh grup fundamental;
 4. tidak ada relasi taktrivial di antara $a$ dan $b$;
@@ -911,7 +911,7 @@ teorema berikutnya:
 
 ## Solusi Pemeriksaan 10.5 {#o012-rbt-l10-sol-005}
 
-Penutup tiga lembar memberi $R_{ab}\ne R_{ba}$, jadi butir 1 sudah
+Penutup tiga lembaran memberi $R_{ab}\ne R_{ba}$, jadi butir 1 sudah
 dibuktikan. Sumber menyatakan bahwa penutup yang dipilih dengan cermat dapat
 membuktikan injektivitas pada butir 2, tetapi penutup-penutup tambahan itu
 belum dibangun dalam rentang ini. Karena itu butir 2 baru merupakan hasil yang
@@ -925,7 +925,7 @@ $$
 
 yang sumber janjikan untuk dibuktikan kemudian. Nonkomutativitas saja tidak
 menunjukkan bahwa $a,b$ membangkitkan seluruh grup, dan juga tidak meniadakan
-relasi lain. Setelah isomorfisme dengan $F_2$ terbukti, bentuk normal yang
+relasi lain. Setelah isomorfisma dengan $F_2$ terbukti, bentuk normal yang
 tepat adalah kata tereduksi: huruf-huruf bukan identitas berasal
 berganti-ganti dari dua faktor siklik; secara ekuivalen, kata memakai pangkat
 tak nol dari $a$ dan $b$ secara berselang-seling. Identitas adalah kata kosong.

@@ -13,14 +13,14 @@ rights: "Materi adaptasi dan materi pendamping: CC BY 4.0; lihat atribusi di baw
 
 Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas *Algebraic Topology* karya David Michael Roberts (2019), tepatnya `Notes.tex` baris 878-1131 pada commit `b947ad2e9f9e301bfe24590a9db653bc54fa1a53`. Rentang itu dimulai dengan proposisi yang memuat penanda Kuliah 4 dan berakhir tepat setelah pernyataan tentang serat ruang penutup di sepanjang lintasan. Bukti pernyataan terakhir tidak terdapat dalam rentang unit ini. Karya sumber tersedia di bawah [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
-Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, pemindahan diagram dan tugas dari catatan pinggir ke badan teks, serta koreksi atau klarifikasi terbatas yang dicatat satu per satu dalam ledger edisi. Di antaranya: arah pemetaan pada pelestarian koproduk; rumus $\sin(1/x)$ pada kurva sinus topolog; objek kanan bawah diagram naturalitas; kodomain transformasi $U\Rightarrow\pi_0$; karakterisasi SLPC yang benar beserta bukti global Proposisi 4.2; notasi prapeta $\chi^{-1}$; makna basis lingkungan dalam definisi SLPC; definisi pemetaan dan homotopi bertitik; kekontinuan fungsi yang turun melalui pemetaan kuadrat; serta penggunaan homeomorfisme pada definisi ruang penutup dan istilah baji untuk $S^1\vee S^1$. Materi pendamping penguasaan menjawab seluruh empat latihan dan satu pertanyaan sumber, serta melengkapi bukti Lema 4.1 yang tidak dituliskan dalam sumber. Materi baru ini juga tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian pengenal stabil, pemindahan diagram dan tugas dari catatan pinggir ke badan teks, serta koreksi atau klarifikasi terbatas yang dicatat satu per satu dalam ledger edisi. Di antaranya: arah pemetaan pada pelestarian koproduk; rumus $\sin(1/x)$ pada kurva sinus topolog; objek kanan bawah diagram naturalitas; kodomain transformasi $U\Rightarrow\pi_0$; karakterisasi SLPC yang benar beserta bukti global Proposisi 4.2; notasi prapeta $\chi^{-1}$; makna basis lingkungan dalam definisi SLPC; definisi pemetaan dan homotopi bertitik; kekontinuan fungsi yang turun melalui pemetaan kuadrat; serta penggunaan homeomorfisma pada definisi ruang penutup dan istilah baji untuk $S^1\vee S^1$. Materi pendamping penguasaan menjawab seluruh empat latihan dan satu pertanyaan sumber, serta melengkapi bukti Lema 4.1 yang tidak dituliskan dalam sumber. Materi baru ini juga tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
 
 # Kuliah 4 {#o012-rbt-l04}
 
-## Funktor pada kategori homotopi {#o012-rbt-l04-s01}
+## Fungtor pada kategori homotopi {#o012-rbt-l04-s01}
 
 ::: {.proposition #o012-rbt-l04-prop-001}
-**Proposisi 4.1.** Funktor $\pi_0$ turun menjadi sebuah funktor
+**Proposisi 4.1.** Fungtor $\pi_0$ turun menjadi sebuah fungtor
 
 $$
 \pi_0\colon\mathbf{Ho}\longrightarrow\mathbf{Set}.
@@ -28,7 +28,7 @@ $$
 :::
 
 ::: {.proof #o012-rbt-l04-proof-001}
-**Bukti.** Kita buktikan bahwa aturan pada morfisme terdefinisi dengan baik pada setiap himpunan morfisme; sifat-sifat lainnya rutin. Misalkan
+**Bukti.** Kita buktikan bahwa aturan pada morfisma terdefinisi dengan baik pada setiap himpunan morfisma; sifat-sifat lainnya rutin. Misalkan
 $f,g\colon X\to Y$ homotopik melalui $H\colon I\times X\to Y$. Kita harus menunjukkan bahwa untuk setiap $\alpha\in\pi_0(X)$,
 
 $$
@@ -50,8 +50,8 @@ $\pi_0(f)(\alpha)=\pi_0(g)(\alpha)$. $\square$
 Akibatnya, jika $\pi_0(X)\not\cong\pi_0(Y)$, maka $X$ dan $Y$ tidak mungkin ekuivalen secara homotopi, apalagi homeomorfik.
 
 ::: {.exercise #o012-rbt-l04-ex-001}
-**Latihan 4.1.** Tunjukkan bahwa funktor
-$[*,{-}]\colon\mathbf{Top}\to\mathbf{Set}$ turun menjadi funktor
+**Latihan 4.1.** Tunjukkan bahwa fungtor
+$[*,{-}]\colon\mathbf{Top}\to\mathbf{Set}$ turun menjadi fungtor
 $[*,{-}]\colon\mathbf{Ho}\to\mathbf{Set}$.
 :::
 
@@ -59,7 +59,7 @@ Berikut sebuah fakta yang berguna tentang ruang.
 
 ::: {.lemma #o012-rbt-l04-lem-001}
 **Lema 4.1 (pelestarian koproduk).** Untuk setiap keluarga ruang
-$\{X_\beta\}_{\beta\in J}$, terdapat isomorfisme
+$\{X_\beta\}_{\beta\in J}$, terdapat isomorfisma
 
 $$
 \bigsqcup_{\beta\in J}\pi_0(X_\beta)
@@ -79,7 +79,7 @@ Pemetaan maju diinduksi oleh keluarga inklusi
 $\operatorname{in}_\beta\colon X_\beta\to\bigsqcup_{\gamma\in J}X_\gamma$, sedangkan pemetaan balik mengirim setiap komponen ke suku koproduk tunggal yang memuatnya. Dengan kata lain, $\pi_0$ dan $[*,{-}]$ *melestarikan koproduk*.
 :::
 
-Kita telah memperoleh funktor $\pi_0\colon\mathbf{Top}\to\mathbf{Set}$ dan, dengan sedikit penyalahgunaan notasi, funktor
+Kita telah memperoleh fungtor $\pi_0\colon\mathbf{Top}\to\mathbf{Set}$ dan, dengan sedikit penyalahgunaan notasi, fungtor
 $\pi_0\colon\mathbf{Ho}\to\mathbf{Set}$. Keduanya membentuk segitiga komutatif
 
 $$
@@ -169,14 +169,14 @@ Inilah sebuah contoh *transformasi natural*.
 
 ::: {.definition #o012-rbt-l04-def-001}
 **Definisi 4.1 (transformasi natural).** Misalkan
-$F,G\colon\mathcal{C}\to\mathcal{D}$ adalah funktor. Sebuah *transformasi natural*
-$\alpha\colon F\Rightarrow G$ terdiri atas data berikut: untuk setiap objek $X$ dalam $\mathcal{C}$, dipilih sebuah morfisme
+$F,G\colon\mathcal{C}\to\mathcal{D}$ adalah fungtor. Sebuah *transformasi natural*
+$\alpha\colon F\Rightarrow G$ terdiri atas data berikut: untuk setiap objek $X$ dalam $\mathcal{C}$, dipilih sebuah morfisma
 
 $$
 \alpha_X\colon F(X)\longrightarrow G(X),
 $$
 
-yang disebut *komponen* $\alpha$ pada $X$. Data ini harus memenuhi syarat bahwa untuk setiap morfisme $f\colon X\to Y$ dalam $\mathcal{C}$, diagram berikut komutatif:
+yang disebut *komponen* $\alpha$ pada $X$. Data ini harus memenuhi syarat bahwa untuk setiap morfisma $f\colon X\to Y$ dalam $\mathcal{C}$, diagram berikut komutatif:
 
 $$
 \begin{array}{ccc}
@@ -192,7 +192,7 @@ $$
 G(f)\circ\alpha_X=\alpha_Y\circ F(f).
 $$
 
-Transformasi natural disebut *isomorfisme natural* jika semua komponennya merupakan isomorfisme.
+Transformasi natural disebut *isomorfisma natural* jika semua komponennya merupakan isomorfisma.
 :::
 
 Sebagai contoh, terdapat transformasi natural
@@ -221,7 +221,7 @@ $$
 [*,X]\longrightarrow\pi_0(X)
 $$
 
-dari transformasi natural $[*,{-}]\Rightarrow\pi_0$ menjadi isomorfisme untuk setiap ruang $X$ dalam subkategori tersebut.
+dari transformasi natural $[*,{-}]\Rightarrow\pi_0$ menjadi isomorfisma untuk setiap ruang $X$ dalam subkategori tersebut.
 
 ::: {.definition #o012-rbt-l04-def-002}
 **Definisi 4.2 (terhubung lintasan semilokal).** Sebuah ruang $X$ disebut *terhubung lintasan semilokal*, disingkat **SLPC**, jika $X$ mempunyai basis lingkungan yang terdiri atas himpunan-himpunan $N$ dengan sifat berikut: untuk setiap $x,y\in N$, terdapat suatu lintasan di $X$ dari $x$ ke $y$.
@@ -229,7 +229,7 @@ dari transformasi natural $[*,{-}]\Rightarrow\pi_0$ menjadi isomorfisme untuk se
 Lintasan dalam definisi ini tidak disyaratkan tetap berada di dalam $N$.
 :::
 
-Sebuah ruang bersifat SLPC jika dan hanya jika setiap komponen lintasannya terbuka. Pernyataan yang tampak mirip dengan “setiap komponen terhubungnya SLPC” tidak memadai: pada $\mathbb{Q}$ dengan topologi subruang, setiap komponen terhubung adalah ruang satu titik dan karenanya SLPC, tetapi $\mathbb{Q}$ sendiri tidak SLPC. Sifat SLPC dipertahankan oleh homeomorfisme: jika $X\cong Y$ dan salah satunya SLPC, maka yang lain juga SLPC.
+Sebuah ruang bersifat SLPC jika dan hanya jika setiap komponen lintasannya terbuka. Pernyataan yang tampak mirip dengan “setiap komponen terhubungnya SLPC” tidak memadai: pada $\mathbb{Q}$ dengan topologi subruang, setiap komponen terhubung adalah ruang satu titik dan karenanya SLPC, tetapi $\mathbb{Q}$ sendiri tidak SLPC. Sifat SLPC dipertahankan oleh homeomorfisma: jika $X\cong Y$ dan salah satunya SLPC, maka yang lain juga SLPC.
 
 ::: {.proposition #o012-rbt-l04-prop-002}
 **Proposisi 4.2.** Jika $X$ merupakan ruang SLPC, maka pemetaan kanonik
@@ -238,7 +238,7 @@ $$
 [*,X]\longrightarrow\pi_0(X)
 $$
 
-adalah isomorfisme.
+adalah isomorfisma.
 :::
 
 ::: {.proof #o012-rbt-l04-proof-002}
@@ -276,7 +276,7 @@ $$
 $$
 
 Ruang diskret bersifat SLPC, sehingga terdapat pula subkategori
-$\mathbf{Set}\hookrightarrow\mathbf{Top}_{\mathrm{slpc}}$ melalui funktor topologi diskret.
+$\mathbf{Set}\hookrightarrow\mathbf{Top}_{\mathrm{slpc}}$ melalui fungtor topologi diskret.
 
 ::: {.example #o012-rbt-l04-exa-003}
 **Contoh 4.3.** Setiap ruang terhubung lintasan $X$ bersifat SLPC. Memang, untuk lingkungan apa pun $N$ dan setiap $x,y\in N$, sudah tersedia lintasan di $X$ yang menghubungkan $x$ dan $y$.
@@ -325,7 +325,7 @@ $$
 [(X,x_0),(Y,y_0)]_*.
 $$
 
-Kategori $\mathbf{Ho}_*$ didefinisikan secara analog dengan $\mathbf{Ho}$. Kita memperoleh funktor
+Kategori $\mathbf{Ho}_*$ didefinisikan secara analog dengan $\mathbf{Ho}$. Kita memperoleh fungtor
 
 $$
 \pi_0\colon\mathbf{Ho}_*\longrightarrow\mathbf{Set}_*,
@@ -372,7 +372,7 @@ $$
 $$
 
 dengan sifat berikut: untuk setiap $x\in X$, terdapat lingkungan terbuka
-$V_x\ni x$ dan homeomorfisme
+$V_x\ni x$ dan homeomorfisma
 
 $$
 \varphi_x\colon\pi^{-1}(V_x)
@@ -435,7 +435,7 @@ juga merupakan pemetaan penutup.
 
 ::: {.proposition #o012-rbt-l04-prop-003}
 **Proposisi 4.3.** Untuk ruang penutup $Z\xrightarrow{\pi}X$, jika terdapat lintasan
-$x_0\rightsquigarrow x_1$ di $X$, maka terdapat bijeksi—ekuivalen dengan homeomorfisme untuk serat-serat diskret—
+$x_0\rightsquigarrow x_1$ di $X$, maka terdapat bijeksi—ekuivalen dengan homeomorfisma untuk serat-serat diskret—
 
 $$
 Z_{x_0}\cong Z_{x_1}.
@@ -469,7 +469,7 @@ $$
 (t,*)\longmapsto K(t,u(*))
 $$
 
-adalah homotopi $f_0\circ u\simeq f_1\circ u$. Jadi aturan tersebut terdefinisi pada morfisme $[f]$ dalam $\mathbf{Ho}$. Pelestarian identitas dan komposisi mengikuti dari
+adalah homotopi $f_0\circ u\simeq f_1\circ u$. Jadi aturan tersebut terdefinisi pada morfisma $[f]$ dalam $\mathbf{Ho}$. Pelestarian identitas dan komposisi mengikuti dari
 
 $$
 [\operatorname{id}_X\circ u]=[u],
@@ -477,7 +477,7 @@ $$
 [(g\circ f)\circ u]=[g\circ(f\circ u)].
 $$
 
-Maka $[*,{-}]$ turun menjadi funktor $\mathbf{Ho}\to\mathbf{Set}$.
+Maka $[*,{-}]$ turun menjadi fungtor $\mathbf{Ho}\to\mathbf{Set}$.
 
 ## Bukti Lema 4.1 {#o012-rbt-l04-check-001}
 
@@ -587,18 +587,18 @@ Sekarang biarkan $P$ menjadi sebuah komponen lintasan $Y$. Jika dua titik $x_0,x
 
 ## Solusi Latihan 4.4 {#o012-rbt-l04-sol-004}
 
-Tetapkan $x\in X$. Karena $\rho$ adalah pemetaan penutup, terdapat lingkungan terbuka $U\ni x$ yang tertutup secara merata:
+Tetapkan $x\in X$. Karena $\rho$ adalah pemetaan penutup, terdapat lingkungan terbuka $U\ni x$ yang tertutup rata:
 
 $$
 \rho^{-1}(U)=\bigsqcup_{i\in I}U_i,
 $$
 
 dengan setiap pembatasan
-$\rho_i:=\rho|_{U_i}\colon U_i\to U$ suatu homeomorfisme. Himpunan indeks $I$ berkorespondensi dengan serat $Y_x$, sehingga $I$ hingga.
+$\rho_i:=\rho|_{U_i}\colon U_i\to U$ suatu homeomorfisma. Himpunan indeks $I$ berkorespondensi dengan serat $Y_x$, sehingga $I$ hingga.
 
 Untuk setiap $i\in I$, tuliskan
 $y_i=\rho_i^{-1}(x)$. Karena $\pi$ adalah pemetaan penutup, pilih lingkungan terbuka
-$W_i\subseteq U_i$ dari $y_i$ yang tertutup secara merata oleh $\pi$. Himpunan
+$W_i\subseteq U_i$ dari $y_i$ yang tertutup rata oleh $\pi$. Himpunan
 $\rho_i(W_i)$ adalah lingkungan terbuka dari $x$ di $U$. Karena $I$ hingga, irisan
 
 $$
@@ -606,7 +606,7 @@ V=\bigcap_{i\in I}\rho_i(W_i),
 $$
 
 masih merupakan lingkungan terbuka dari $x$; jika $I=\varnothing$, irisan kosong ini dipahami sebagai $U$. Gantikan $U$ dengan $V$ dan setiap $U_i$ dengan
-$V_i:=\rho_i^{-1}(V)\subseteq W_i$. Setiap $V_i$ tetap tertutup secara merata oleh $\pi$ dan dipetakan homeomorfik ke $V$ oleh $\rho$.
+$V_i:=\rho_i^{-1}(V)\subseteq W_i$. Setiap $V_i$ tetap tertutup rata oleh $\pi$ dan dipetakan homeomorfik ke $V$ oleh $\rho$.
 
 Untuk setiap $i$, tuliskan dekomposisi penutup
 
@@ -614,7 +614,7 @@ $$
 \pi^{-1}(V_i)=\bigsqcup_{j\in J_i}W_{ij},
 $$
 
-dengan $\pi|_{W_{ij}}\colon W_{ij}\to V_i$ sebuah homeomorfisme. Maka
+dengan $\pi|_{W_{ij}}\colon W_{ij}\to V_i$ sebuah homeomorfisma. Maka
 
 $$
 (\rho\circ\pi)^{-1}(V)
@@ -628,5 +628,5 @@ W_{ij}\xrightarrow{\ \pi\ }V_i
 \xrightarrow{\ \rho\ }V
 $$
 
-merupakan homeomorfisme. Jadi $V$ tertutup secara merata oleh
+merupakan homeomorfisma. Jadi $V$ tertutup rata oleh
 $\rho\circ\pi$. Karena $x$ dipilih sembarang, komposisi itu merupakan pemetaan penutup.
