@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L18-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 3482,
+    "line_end": 3677,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7"
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-018-lecture-018.md",
+    "bytes": 44415,
+    "lines": 1663,
+    "sha256": "9d0564f6a074441332e42755d46d9a0e858189a5ff4d8b5be52b1def12532598",
+    "stable_ids": 67
+  },
+  "checks": [
+    {
+      "check": "required_files",
+      "status": "PASS",
+      "detail": "all six bounded inputs exist"
+    },
+    {
+      "check": "source_identity",
+      "status": "PASS",
+      "detail": "6368 lines; SHA-256 cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:3482-3677; Lecture 19 at 3678"
+    },
+    {
+      "check": "encoding",
+      "status": "PASS",
+      "detail": "UTF-8; LF only; final newline present"
+    },
+    {
+      "check": "provenance_header",
+      "status": "PASS",
+      "detail": "source span, rights, model, and boundary disclosed"
+    },
+    {
+      "check": "stable_ids",
+      "status": "PASS",
+      "detail": "67 unique IDs; required inventory present"
+    },
+    {
+      "check": "pandoc_structural_ids",
+      "status": "PASS",
+      "detail": "all 67 textual declarations are structural Pandoc IDs"
+    },
+    {
+      "check": "source_census",
+      "status": "PASS",
+      "detail": "{\"definition\": 2, \"example\": 10, \"exercise\": 0, \"lemma\": 2, \"margin\": 5, \"proposition\": 2, \"remark\": 6, \"theorem\": 1}"
+    },
+    {
+      "check": "mastery_closure",
+      "status": "PASS",
+      "detail": "{\"exercise_blocks\": 6, \"hints\": 6, \"solutions\": 6}"
+    },
+    {
+      "check": "forbidden_regressions",
+      "status": "PASS",
+      "detail": "no known type, terminology, or layout regression"
+    },
+    {
+      "check": "required_repairs",
+      "status": "PASS",
+      "detail": "typed, handed, and source-gap repairs present"
+    },
+    {
+      "check": "independent_review_repairs",
+      "status": "PASS",
+      "detail": "n-range declarations=6; five attributed source-margin divs"
+    },
+    {
+      "check": "independent_review_binding",
+      "status": "PASS",
+      "detail": "P1/P2/P3 zero; bound to Unit SHA-256 9d0564f6a074441332e42755d46d9a0e858189a5ff4d8b5be52b1def12532598"
+    },
+    {
+      "check": "ledger_contiguity",
+      "status": "PASS",
+      "detail": "terminology through 0274; adverse through 0257"
+    }
+  ]
+}

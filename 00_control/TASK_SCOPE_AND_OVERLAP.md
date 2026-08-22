@@ -8,7 +8,7 @@ Current Codex task: `01a01f48-fcc8-7b22-a40b-17cbbb7ac45e`
 
 This task is the sole O012/D60 Algebraic Topology corpus owner. It owns source admission, full contiguous id-ID translation, directly related original bridge/mastery content, modular backend, reader builds, task-local controls, its own GitHub repository, and task-local publication receipts.
 
-The earlier delegation correctly supplied the O012 role and candidate leads, but its “no Git/publication in this turn” restriction and any audit-only stopping point conflict with Floris’s attached canonical instructions and are superseded. The source/rights audit remains valid implementation work, not the deliverable.
+The earlier delegation correctly supplied the O012 role and candidate leads, but its “no Git/publication in this turn” restriction and any audit-only stopping point conflict with the user’s attached canonical instructions and are superseded. The source/rights audit remains valid implementation work, not the deliverable.
 
 ## Live-task overlap result
 

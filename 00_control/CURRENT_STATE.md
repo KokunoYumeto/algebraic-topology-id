@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 
-Status: active production. Source admission and composite route selection are closed. GitHub reinstated the account on 2026-08-22. The exact Unit 016–017/release-content boundary is public at commit `d4694835a6cf6bc12a46973efdbb263fead9182a`, tree `7156c0bef02846ffc98e70d3caf1db3d79edef86`; the three public release receipts are themselves on `main` at `332a361c0428df72ba7d3a4470f5eae1886c8db0`. Anonymous raw Unit 017, release-manifest, Unit 001–013 HTML, Pages, Zenodo (`10.5281/zenodo.22061490`), and Figshare (`10.6084/m9.figshare.33314982.v1`) bytes match the recorded hashes. A bounded same-field Indonesian terminology QA then refined only the live Unit 001–017 source spellings and canonical backend; all historical rendered/release bytes remain immutable and their receipts remain true. Every live unit retains its line count and stable IDs. The next source cursor is Lecture 18. After all 30 Roberts lectures, the selected Fomberg lines 31–4185 and exact original closure follow; see `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. Units 001–018 now translate Roberts `Notes.tex:134–3677` contiguously; all are independently reviewed with P1/P2/P3 zero. Unit 18 is 44,415 bytes, 1,663 lines, 67 structural stable IDs, SHA-256 `9d0564f6a074441332e42755d46d9a0e858189a5ff4d8b5be52b1def12532598`; its bounded QA passes and the next source cursor is Lecture 19 at line 3678. The existing Units 001–013 reader remains anonymously byte-verified on GitHub Pages, Zenodo (`10.5281/zenodo.22061490`), and Figshare (`10.6084/m9.figshare.33314982.v1`); later source work has not mutated those frozen bytes. The same-field Indonesian terminology QA governs the live glossary, and Unit 18 was authored against it. After all 30 Roberts lectures, the selected Fomberg lines 31–4185 and exact original closure follow; see `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -112,7 +112,7 @@ Publication was attempted at 2026-08-22T09:00:00+02:00 from local commit `849873
 - This boundary and the Unit 011 source freeze are preserved in local commit `d27c7b7dd784ec4fbbc33a4490759869a6929f89`, tree `945e13bff783a90068560827f72fe54e05ff66f9`, parent `a3dc793ec3a7f0b1c4c0c4211115ff9caf847be0`. It is ready for a subsequent push when GitHub accepts the account again; no public-release claim is made.
 - A single push of the new boundary was attempted from receipt commit `d4a9143efabf62eebf01a369e1ebe63c5e01046b` on 2026-08-22 at 18:05 +02:00. GitHub again returned authenticated HTTP 403 with the explicit account-suspended response; anonymous repository API, Pages root, and Units 001–010 reader checks each returned HTTP 404. No credential or secret is recorded. See `PUBLISH_ATTEMPT_UNITS_001_010.json`; do not loop retries without a changed access state or a later substantial boundary.
 
-### Translated and independently reviewed Units 006–010
+### Translated and independently reviewed Units 006–018
 
 - Unit 006: `Notes.tex:1305–1515`; 32,106 bytes; 893 lines; 28 unique stable IDs; SHA-256 `3cb182fdf183bd67e45a898228b995a44d4638e808fdfbe6ea6d6a2a2b889e33`; independent review P1/P2/P3 zero.
 - Unit 007: `Notes.tex:1516–1770`; 22,107 bytes; 749 lines; 24 unique stable IDs; SHA-256 `556cea5445e1b0a51f86f1c0ea0e80c4e00a17d365d95fa530f063cc24856569`; independent review P1/P2/P3 zero.
@@ -127,8 +127,9 @@ Publication was attempted at 2026-08-22T09:00:00+02:00 from local commit `849873
 - Unit 015: `Notes.tex:3210–3286`; 28,485 bytes; 835 lines; 34 unique stable IDs; SHA-256 `140f1dbc182b5406dbbdadde59bb6dcdf51f86bd6cf4c50c676e0b88d60540f4`; independent review 4,392 bytes/SHA-256 `9776c911f5d4f4cd7027375ac29514ca2722f28877d27e79753fabf61876dc90`; P1/P2/P3 zero; adverse ledger through `O012-ADV-0215`; terminology through `O012-TERM-0233`.
 - Unit 016: `Notes.tex:3287–3383`; 33,863 bytes; 984 lines; 33 unique stable IDs; SHA-256 `6a89d6e02de654c98294a5f6f092bb76bd63f6d537e358a49bcdac25adb8da55`; independent review 8,485 bytes/SHA-256 `335f8ef19f35ba063ad526850d01eec377dc89eb7b697831b8741659a86444c6`; P1/P2/P3 zero; adverse ledger through `O012-ADV-0227`; terminology through `O012-TERM-0240`.
 - Unit 017: `Notes.tex:3384–3481`; 29,921 bytes; 952 lines; 34 unique stable IDs; SHA-256 `713e8b44b22620d9dd0531e19316932a1f18b1109fea80d7787cad218e4e45f9`; independent review 9,903 bytes/SHA-256 `b4885ed709311275a9ae32fedbefe7bf86c72203caafa92de3b557f17c1fc625`; P1/P2/P3 zero; adverse ledger through `O012-ADV-0239`; terminology through `O012-TERM-0251`.
-- These twelve sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps available at each source boundary. Units 006–010 are frozen in the cumulative reader/backend; Units 011–017 are source-frozen only until their next cumulative build boundary.
-- Next exact source cursor: `Notes.tex:3482`, the Lecture 18 marker.
+- Unit 018: `Notes.tex:3482–3677`; 44,415 bytes; 1,663 lines; 67 unique structural stable IDs; SHA-256 `9d0564f6a074441332e42755d46d9a0e858189a5ff4d8b5be52b1def12532598`; independent review P1/P2/P3 zero; QA PASS; adverse ledger through `O012-ADV-0257`; terminology through `O012-TERM-0274`.
+- These thirteen sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps available at each source boundary. Units 006–010 are frozen in an earlier cumulative reader/backend; Units 011–018 are source-frozen until the next cumulative build boundary.
+- Next exact source cursor: `Notes.tex:3678`, the Lecture 19 marker. The exact source audit for lines 3678–3947 is frozen in `qa/UNIT_019_SOURCE_AUDIT.md`.
 
 ### Verified cumulative Units 001–004 boundary
 

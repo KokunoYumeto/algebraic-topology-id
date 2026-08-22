@@ -4,9 +4,9 @@
   "course_id": "D60",
   "source_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
   "source_path": "Notes.tex",
-  "completed_through_line": 3481,
-  "next_line": 3482,
-  "next_marker": "\\lecturenum{18}",
+  "completed_through_line": 3677,
+  "next_line": 3678,
+  "next_marker": "\\lecturenum{19}",
   "completed_units": [
     "o012-rbt-l01",
     "o012-rbt-l02",
@@ -24,12 +24,24 @@
     "o012-rbt-l14",
     "o012-rbt-l15",
     "o012-rbt-l16",
-    "o012-rbt-l17"
+    "o012-rbt-l17",
+    "o012-rbt-l18"
   ],
-  "current_unit": "o012-rbt-l18",
-  "translation_state": "units_001_017_complete_reviewed_and_same_field_indonesian_terminology_qa_passed",
+  "current_unit": "o012-rbt-l19",
+  "translation_state": "units_001_018_complete_reviewed_p1_p2_p3_zero_and_same_field_indonesian_terminology_qa_passed",
   "backend_state": "units_001_013_complete_1762_records_validated_c5ac458a7f47_after_terminology_qa; frozen_public_release_snapshot_remains_bb8512f56a8b",
-  "publication_state": "units_001_013_public_and_anonymously_byte_verified_on_github_pages_zenodo_10_5281_zenodo_22061490_and_figshare_10_6084_m9_figshare_33314982_v1_collection_v35; release_content_commit_d4694835a6cf6bc12a46973efdbb263fead9182a; receipts_public_at_github_main_332a361c0428df72ba7d3a4470f5eae1886c8db0; live_sources_001_017_refined_by_terminology_qa_without_mutating_frozen_release_bytes; next_publication_only_at_new_substantial_verified_boundary; never_duplicate_repo",
+  "publication_state": "units_001_013_public_and_anonymously_byte_verified_on_github_pages_zenodo_10_5281_zenodo_22061490_and_figshare_10_6084_m9_figshare_33314982_v1_collection_v35; release_content_commit_d4694835a6cf6bc12a46973efdbb263fead9182a; receipts_public_at_github_main_332a361c0428df72ba7d3a4470f5eae1886c8db0; live_sources_001_017_refined_by_terminology_qa_without_mutating_frozen_release_bytes_and_unit_018_authored_against_that_glossary; next_publication_only_at_new_substantial_verified_boundary; never_duplicate_repo",
+  "latest_unit": {
+    "unit_id": "o012-rbt-l18",
+    "source_span": "Notes.tex:3482-3677",
+    "path": "source/id-ID/units/unit-018-lecture-018.md",
+    "bytes": 44415,
+    "lines": 1663,
+    "sha256": "9d0564f6a074441332e42755d46d9a0e858189a5ff4d8b5be52b1def12532598",
+    "stable_ids": 67,
+    "independent_review": "P1=0; P2=0; P3=0",
+    "qa_receipt": "qa/UNIT_018_QA.json"
+  },
   "terminology_qa": {
     "qa_id": "O012-ID-TERMINOLOGY-QA-2026-08-22",
     "state": "passed",

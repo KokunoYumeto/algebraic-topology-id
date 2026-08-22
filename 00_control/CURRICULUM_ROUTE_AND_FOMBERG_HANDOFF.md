@@ -125,4 +125,4 @@ GitHub suspension was lifted on 2026-08-22; use only the restored existing repos
 and never create a duplicate. Zenodo and Figshare remain parallel preservation routes.
 No upstream contact during production. After complete-corpus closure only, at most one concise,
 deduplicated, high-confidence report may be sent, signed
-“Codex, acting on Floris's request.”
+“Codex — at the user's direction.”

@@ -22,6 +22,8 @@ $apiRoot = 'https://zenodo.org/api'
 $releaseId = 'o012-roberts-id-units-001-013-v0.13.0'
 $expectedTitle = 'Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–13'
 $expectedVersion = '0.13.0'
+$expectedMetadataSha256 = '02c2e179e8d47da9890df068737116707065c448a3401708bc5025461dfde6a3'
+$expectedManifestSha256 = '0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc'
 $sourceUrl = 'https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53'
 $releaseNames = @(
     '00_TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.pdf',
@@ -125,8 +127,6 @@ function Assert-CriticalMetadata([object]$Metadata, [string]$Context, [object]$R
     $licenseValue = Get-PropertyValue $Metadata 'license'
     $licenseId = if ($licenseValue -is [string]) { [string]$licenseValue } else { [string](Get-PropertyValue $licenseValue 'id') }
     $creators = @(Get-PropertyValue $Metadata 'creators' | ForEach-Object { [string]$_.name })
-    $contributors = @(Get-PropertyValue $Metadata 'contributors')
-    $hasEditor = @($contributors | Where-Object { [string]$_.name -ceq 'Floris' -and [string]$_.type -ceq 'Editor' }).Count -eq 1
     $relatedObjects = @(Get-PropertyValue $Metadata 'related_identifiers')
     $related = @($relatedObjects | ForEach-Object { [string]$_.identifier })
     $hasExactSourceRelation = @($relatedObjects | Where-Object {
@@ -148,7 +148,7 @@ function Assert-CriticalMetadata([object]$Metadata, [string]$Context, [object]$R
         [string](Get-PropertyValue $Metadata 'access_right') -cne 'open' -or
         -not $typeOk -or
         $creators.Count -ne 1 -or $creators[0] -cne 'Roberts, David Michael' -or
-        $contributors.Count -ne 1 -or -not $hasEditor -or $related.Count -ne 1 -or -not $hasExactSourceRelation -or
+        $related.Count -ne 1 -or -not $hasExactSourceRelation -or
         -not ([string](Get-PropertyValue $Metadata 'notes')).Contains($releaseId, [StringComparison]::Ordinal)) {
         throw "Critical metadata identity/rights mismatch in $Context."
     }
@@ -552,6 +552,13 @@ if ($metadataText -match '(?i)\bTTP\b|Translation and Transcription Project|C:\\
 $manifestPath = Join-Path $artifactsDir 'release-manifest.json'
 $metadataHash = Get-Sha256 $metadataPath
 $manifestHash = Get-Sha256 $manifestPath
+$historicalBytesMatch = (
+    $metadataHash -ceq $expectedMetadataSha256 -and
+    $manifestHash -ceq $expectedManifestSha256
+)
+if (-not $historicalBytesMatch) {
+    throw 'This publisher is locked to the exact historical Unit 1–13 metadata and manifest bytes.'
+}
 $manifestDocument = [IO.File]::ReadAllText($manifestPath) | ConvertFrom-Json
 if ([string]$manifestDocument.metadata_sha256 -cne $metadataHash) {
     throw 'External Zenodo metadata is not the exact metadata embedded and bound by the release manifest.'

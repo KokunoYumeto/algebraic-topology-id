@@ -74,7 +74,7 @@ separately records the pre-migration working hash and prior Git-blob hash.
 ## Process provenance
 
 This terminology comparison, migration, and validation were performed with
-**OpenAI Codex gpt-5.6-sol, Ultra**, acting at Floris's direction. That process
+**OpenAI Codex gpt-5.6-sol, Ultra**, acting at the user's direction. That process
 credit does not replace or diminish David Michael Roberts's source authorship,
-Risali and Wijayanti's authorship of the comparison paper, Floris's direction,
+Risali and Wijayanti's authorship of the comparison paper, the user's direction,
 or any component license and attribution.

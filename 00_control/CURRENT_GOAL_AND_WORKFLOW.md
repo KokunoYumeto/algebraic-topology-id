@@ -1,23 +1,74 @@
 # Current goal and workflow — O012/D60 Algebraic Topology
 
-Own and complete the bounded O012/D60 Algebraic Topology Bahasa Indonesia lane rooted at the repository containing this control file. This is not an audit-only, recommendation, title-allocation, or QA-loop task. Translation and reader production dominate. Deliver the complete id-ID corpus, locale-neutral modular backend, accessible readers, exact rights/provenance, and the lane’s own public GitHub. Push substantial verified boundaries without asking Floris again; use authorized credentials when needed. The curriculum hub consumes frozen handoffs but does not own this corpus.
+Complete this bounded Bahasa Indonesia Algebraic Topology lane. Natural id-ID
+translation and useful readers dominate; QA and indexing support production.
+Deliver the admitted corpus, reusable backend, accessible centered/reflowing
+HTML, deterministic PDF, exact rights/provenance, solved self-study surfaces,
+and existing public lineages. Never touch another lane or expand Roberts’s
+topology review into O003’s corpus.
 
-Authority: David Michael Roberts, `AlgebraicTopology2019`, commit `b947ad2e9f9e301bfe24590a9db653bc54fa1a53`, tree `aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5`, CC BY 4.0. Preserve codeload archive 1,126,421 bytes/SHA-256 `c1b6d814fda9d3bd5d0ad6c712a7d3cffb1ec6ed5d4f6ef25370b1be621c7e2f` and seven-file manifest. Active source: `Notes.tex`, 331,447 bytes/SHA-256 `cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7`. Exclude obsolete `Notes_1-8.*` and the unreferenced/source-incomplete Möbius PDF. Independently redraw, do not copy, the TeX StackExchange-derived diagram blocks at `Notes.tex:4783–4812` and `5411–5417`. MIT 18.905 is a proof-check reference only. After the complete Roberts edition, the selected bridge is Yeheli Fomberg's exact CC BY-SA 4.0 source span `algebraic_topology.tex:31–4185`; its separate problem bank is excluded and no MIT or Fomberg expression may enter before its component and build gate is closed.
+## Frozen authority and scope
 
-Translate all admitted `Notes.tex` contiguously, preserving formulas, definitions, results, proofs, examples, exercises, references, diagram functions, and sequence. Correct only independently determined defects; log location, observed form, correction, rationale, and verification. Assign stable locale-neutral IDs. After all 30 Roberts lectures, translate only Fomberg `algebraic_topology.tex:31–4185` under CC BY-SA 4.0, then add the separately identified original CC BY-SA 4.0 proof/mastery/lab/capstone closure frozen in `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`. Preserve all 30 Roberts `edition_unit_id` values and map them to a separate 14-unit `course_route_unit_id` view; never collapse the edition into the route. Supply solved mastery for every upstream prompt and uncovered proof/computation skill. Never borrow uncleared expression or the excluded Fomberg problem bank.
+Core: David Michael Roberts, `AlgebraicTopology2019`, commit
+`b947ad2e9f9e301bfe24590a9db653bc54fa1a53`, tree
+`aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5`, CC BY 4.0. Authority archive
+SHA-256: `c1b6d814fda9d3bd5d0ad6c712a7d3cffb1ec6ed5d4f6ef25370b1be621c7e2f`.
+Active `Notes.tex`: 331,447 bytes/SHA-256
+`cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7`.
+Translate all 30 lectures contiguously, preserving every semantic object and
+sequence. Exclude `Notes_1-8.*` and the unreferenced Möbius PDF; independently
+redraw the StackExchange-derived diagrams at lines 4783–4812 and 5411–5417.
+MIT 18.905 is proof-check reference only.
 
-Current boundary: Units 001–017 translate `Notes.tex:134–3481` contiguously. GitHub reinstated the account on 2026-08-22; the release-content boundary is public at commit `d4694835a6cf6bc12a46973efdbb263fead9182a`, and its GitHub/Zenodo/Figshare receipts are public on `main` at `332a361c0428df72ba7d3a4470f5eae1886c8db0`. The verified cumulative Units 001–013 release reader remains immutable: HTML 1,824,804 bytes/SHA-256 `be1473ab5cb8eff26341e554179661775a12cec5784a8ebf3f9c2f3f0633cb71`; PDF 1,071,382 bytes/138 A4 pages/SHA-256 `14775535f773735db5886195980f39e417aaea24998927956a81b55b0ef77c68`; published backend 1,762 records/SHA-256 `bb8512f56a8bbcf1283ae10ab69a9a7ecebb1bd39c425c1c021b5b848a1b2910`. It is anonymously byte-verified on Zenodo at DOI `10.5281/zenodo.22061490` (concept `10.5281/zenodo.22061489`) and reader-first on Figshare at DOI `10.6084/m9.figshare.33314982.v1` (project `280296`, collection `10.6084/m9.figshare.c.8668413.v35`). A same-field Indonesian terminology QA against Risali–Wijayanti, DOI `10.22146/jmt.56529`, then refined only the live Unit 001–017 sources and canonical backend to `fungtor`, `morfisma`, `lembaran`, and preferred `tertutup rata`; all line counts and stable IDs remain unchanged and frozen release bytes were not edited. The live backend validates at 1,762 records/SHA-256 `c5ac458a7f4723460ccebccaf3e5738544883c685a54c9a3cfbef854f2db83c5`; this terminology boundary is public and anonymously byte-verified at commit `13df3a00b3016d717428078ee451f2b43c398e7d`. Current live hashes are Unit 014: 28,488 bytes/SHA-256 `da6f18b455d76adafd8b9b648ed7c277958eca95c0b7d76a8bd9895d79ec6677`; Unit 015: 27,725 bytes/SHA-256 `e9ab0565ae460236a69c77389b76d32405873156fc451be9cf95c3749e7fe9d1`; Unit 016: 33,919 bytes/SHA-256 `31dfc4c3647f7d6a1d398d2123efe1faa82348428df0180eee2a2358572f9054`; Unit 017: 29,933 bytes/SHA-256 `47576d7c26a436ba915c276b692e2bc0ead6fae038295fee3a82a50426ed9a96`. The exact process provenance is `OpenAI Codex gpt-5.6-sol, Ultra`. Continue from `Notes.tex:3482`, Lecture 18; do not repeat the closed publication, terminology QA, or frozen selection boundary absent material new primary evidence.
+After Roberts, admit Fomberg’s CC BY-SA 4.0
+`algebraic_topology.tex:31–4185` only after its frozen build gate; exclude its
+problem bank. Then execute `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`: eight
+proof repairs, at least 108 solved items, four reproducible labs, and the
+capstone. Preserve 30 Roberts edition units beside the independent 14-unit
+route view. Keep every component’s identity, licence, changes, attribution,
+and non-endorsement distinct.
 
-Durability: maintain `CURRENT_GOAL_AND_WORKFLOW`, `CURRENT_STATE`, `SOURCE_DECISION`, `AUTHORITY`, `RIGHTS_AND_COMPONENTS`, `CURSOR`, `TERMINOLOGY`, `ADVERSE_LEDGER`, `BUILD`, `QA`, and publication receipts inside this lane. After compaction, recover from these exact controls/artifacts, not summaries. Deterministic JSONL/CSV/JSON records authority, units, IDs, spans, concepts, terms, prerequisites, relations, exercises, hints, solutions, assets, rights, translation states, corrections, QA events, artifacts, and hashes so another language can reuse the graph without parsing Indonesian prose.
+## Production sequence and current cursor
 
-At each substantial boundary: update cursor/logbook/backend; create exact manifests; run bounded structural, math, link, language, accessibility, rights, build, visual, and hash checks; then publish to the existing GitHub, Zenodo, and work-level Figshare lineages. Use the restored existing GitHub repository only; never create a duplicate. Keep Zenodo and the public Figshare project/Indonesian collection current with honestly labelled incomplete checkpoints. Figshare stays reader-first, under 500,000,000 bytes per work and 20,000,000,000 bytes for the authenticated whole project, and excludes bulk QA/provenance already preserved on Zenodo. QA supports production and must not replace translation. Keep HTML centered/readable and PDF deterministic; disclose accessibility limits. Preserve attribution, component licenses, changes, and non-endorsement. Do not start author conversations. Only after the corpus is complete, if warranted, send at most one concise deduplicated high-confidence upstream report signed “Codex, acting on Floris's request.” Completion means all 30 Roberts units, the bounded Fomberg bridge, the exact original closure, the 30-unit/14-route backend, verified readers, exact provenance/rights, public preservation lineages, and frozen hub handoff.
+For each lecture: freeze span/census; translate everything in order; reflow
+margins/diagrams accessibly; log only independently verified corrections in
+`ADVERSE_LEDGER.csv`; assign stable IDs; update `TERMINOLOGY.csv`; solve every
+prompt and add only the missing separately marked mastery layer; independently
+review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–018 cover
+`Notes.tex:134–3677`; Unit 18 is 44,415 bytes/1,663 lines/SHA-256
+`9d0564f6a074441332e42755d46d9a0e858189a5ff4d8b5be52b1def12532598`.
+Next: translate/review Lecture 19, lines 3678–3947, then build the coherent
+route-R07 cumulative Units 001–019 reader/backend boundary.
 
-## Recovery read order
+## Backend, QA, and publication gates
 
-1. This file.
-2. `CURRENT_STATE.md` and `CURSOR.json`.
-3. `AUTHORITY.json`, `SOURCE_DECISION.md`, and `RIGHTS_AND_COMPONENTS.csv`.
-4. `TERMINOLOGY.csv`, `ADVERSE_LEDGER.csv`, and the backend manifests.
-5. Latest unit QA/build receipt and publication receipt.
+Validated JSONL/CSV/JSON must losslessly record component/source locator,
+edition/route/stable IDs, language/status, concepts/dependencies, prompts and
+solutions, assets, rights, corrections, QA, and hashes. At substantial
+boundaries run bounded identity, structure, math, language, link,
+accessibility, rights, build, visual, secret/path, and hash checks; prove two
+byte-identical builds where required. HTML must work offline and reflow without
+page-level overflow; PDF is secondary and discloses tagging limits.
 
-Do not infer state from chat summaries when these controls exist.
+Push verified boundaries narrowly to the existing repository; never broad-scan
+Git or create a duplicate. At coherent reader boundaries update the existing
+Zenodo and Figshare lineages, preserve inherited files, label partial scope,
+and anonymously verify public bytes/hashes. The immutable Units 001–013 reader
+is on Pages, Zenodo `10.5281/zenodo.22061490`, and Figshare
+`10.6084/m9.figshare.33314982.v1`; do not republish it for source-only work.
+Record `OpenAI Codex gpt-5.6-sol, Ultra`; never publish the directing user’s
+personal name. The umbrella label stays out of titles/leads and may appear once
+only as linked organization metadata. No author conversation. After full
+closure, at most one deduplicated high-confidence issue, signed
+`Codex — at the user's direction.`
+
+## Durable recovery and terminal condition
+
+Recover only from this file, `CURRENT_STATE.md`, `CURSOR.json`, `AUTHORITY.json`,
+`SOURCE_DECISION.md`, `RIGHTS_AND_COMPONENTS.csv`,
+`CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`, `TERMINOLOGY.csv`,
+`ADVERSE_LEDGER.csv`, backend manifests, and latest QA/build/publication
+receipts. Persist hashes and next action at every boundary. Completion requires
+30 Roberts units, the Fomberg bridge, all proof/mastery/lab/capstone work, the
+30-unit/14-route backend, verified readers, exact rights/provenance, public
+readback from existing lineages, and frozen hub handoff. Otherwise continue.
