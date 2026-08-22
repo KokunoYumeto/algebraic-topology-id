@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Validate the locale-neutral Units 001-005 interoperability backend.
+"""Validate the locale-neutral Units 001-007 interoperability backend.
 
 The validator is deliberately self-contained and offline.  It checks canonical
 JSONL serialization, referential integrity, source-span hashes, artifact hashes,
-the historical manifests, the frozen Units 001-005 manifest, and complete
+the historical manifests, the frozen Units 001-007 manifest, and complete
 mastery linkage.
 """
 
@@ -143,6 +143,8 @@ SOURCE_FILES = {
     "source/id-ID/units/unit-003-lecture-003.md": "993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd",
     "source/id-ID/units/unit-004-lecture-004.md": "826fcb368275cdad02f72a5cec951fc8466ba68b09ca0139d72c81a4c5591fea",
     "source/id-ID/units/unit-005-lecture-005.md": "7333a7b7a92b9618016412abb5c9b2b2a398538f690d0109d4282289a0719852",
+    "source/id-ID/units/unit-006-lecture-006.md": "3cb182fdf183bd67e45a898228b995a44d4638e808fdfbe6ea6d6a2a2b889e33",
+    "source/id-ID/units/unit-007-lecture-007.md": "556cea5445e1b0a51f86f1c0ea0e80c4e00a17d365d95fa530f063cc24856569",
 }
 SOURCE_LINE_COUNTS = {
     "source/id-ID/reader-unit-001.md": 225,
@@ -150,8 +152,10 @@ SOURCE_LINE_COUNTS = {
     "source/id-ID/units/unit-003-lecture-003.md": 618,
     "source/id-ID/units/unit-004-lecture-004.md": 632,
     "source/id-ID/units/unit-005-lecture-005.md": 663,
+    "source/id-ID/units/unit-006-lecture-006.md": 893,
+    "source/id-ID/units/unit-007-lecture-007.md": 749,
 }
-EXPECTED_SOURCE_ID_COUNT = 172
+EXPECTED_SOURCE_ID_COUNT = 224
 ARTIFACT_MANIFESTS = {
     "output/ARTIFACT_MANIFEST.csv": {
         "required": True,
@@ -188,6 +192,13 @@ ARTIFACT_MANIFESTS = {
             "output/pdf/topologi-aljabar-unit-001-005-id.pdf",
         },
     },
+    "output/ARTIFACT_MANIFEST_UNITS_001_007.csv": {
+        "required": True,
+        "outputs": {
+            "output/html/units-001-007/index.html",
+            "output/pdf/topologi-aljabar-unit-001-007-id.pdf",
+        },
+    },
 }
 EXPECTED_UNIT3_ADVERSE_IDS = {f"O012-ADV-{number:04d}" for number in range(21, 35)}
 EXPECTED_UNIT3_REFLOW_IDS = {f"O012-ADV-{number:04d}" for number in range(30, 34)}
@@ -195,6 +206,11 @@ EXPECTED_UNIT4_ADVERSE_IDS = {f"O012-ADV-{number:04d}" for number in range(35, 5
 EXPECTED_UNIT4_REFLOW_IDS = {"O012-ADV-0038"}
 EXPECTED_UNIT5_ADVERSE_IDS = {f"O012-ADV-{number:04d}" for number in range(54, 71)}
 EXPECTED_UNIT5_REFLOW_IDS = {"O012-ADV-0070"}
+EXPECTED_UNIT6_ADVERSE_IDS = {f"O012-ADV-{number:04d}" for number in range(71, 83)}
+EXPECTED_UNIT6_REFLOW_IDS = {"O012-ADV-0082"}
+EXPECTED_UNIT7_ADVERSE_IDS = {f"O012-ADV-{number:04d}" for number in range(83, 95)}
+EXPECTED_UNIT7_REFLOW_IDS = {"O012-ADV-0087", "O012-ADV-0088"}
+EXPECTED_UNIT7_ALIAS_IDS = {"O012-ADV-0094"}
 
 
 class ValidationError(Exception):
@@ -569,7 +585,7 @@ def validate_hierarchy_and_mastery(records: list[dict[str, Any]], by_id: dict[st
         fail("every answer must answer exactly one formal question")
 
 
-def validate_unit5_boundary(records: list[dict[str, Any]], by_id: dict[str, dict[str, Any]]) -> None:
+def validate_unit7_boundary(records: list[dict[str, Any]], by_id: dict[str, dict[str, Any]]) -> None:
     edition = by_id["edition:roberts-at-2019-b947ad2"]
     expected_roots = {
         "unit:o012-rbt-u001",
@@ -577,12 +593,14 @@ def validate_unit5_boundary(records: list[dict[str, Any]], by_id: dict[str, dict
         "unit:o012-rbt-u003",
         "unit:o012-rbt-u004",
         "unit:o012-rbt-u005",
+        "unit:o012-rbt-u006",
+        "unit:o012-rbt-u007",
     }
-    if edition["source_line_start"] != 134 or edition["source_line_end"] != 1304:
-        fail("Roberts edition coverage must be the contiguous admitted range Notes.tex:134-1304")
+    if edition["source_line_start"] != 134 or edition["source_line_end"] != 1770:
+        fail("Roberts edition coverage must be the contiguous admitted range Notes.tex:134-1770")
     derivative_roots = edition.get("local_derivative_unit_ids")
     if not isinstance(derivative_roots, list) or set(derivative_roots) != expected_roots:
-        fail("Roberts edition must enumerate the five local derivative reader roots")
+        fail("Roberts edition must enumerate the seven local derivative reader roots")
 
     expected_source_assets = {
         "asset:o012-u001-source-markdown": "source/id-ID/reader-unit-001.md",
@@ -590,6 +608,8 @@ def validate_unit5_boundary(records: list[dict[str, Any]], by_id: dict[str, dict
         "asset:o012-u003-source-markdown": "source/id-ID/units/unit-003-lecture-003.md",
         "asset:o012-u004-source-markdown": "source/id-ID/units/unit-004-lecture-004.md",
         "asset:o012-u005-source-markdown": "source/id-ID/units/unit-005-lecture-005.md",
+        "asset:o012-u006-source-markdown": "source/id-ID/units/unit-006-lecture-006.md",
+        "asset:o012-u007-source-markdown": "source/id-ID/units/unit-007-lecture-007.md",
     }
     for asset_id, expected_path in expected_source_assets.items():
         asset = by_id.get(asset_id)
@@ -702,15 +722,88 @@ def validate_unit5_boundary(records: list[dict[str, Any]], by_id: dict[str, dict
         if segment["source_locator"] != expected:
             fail(f"{segment['id']}: malformed Unit 005 source authority locator")
 
-    cumulative_rights_id = "rights:o012-units-001-005-composite-cc-by-4.0"
+    unit6_corrections = [
+        record for record in records
+        if record["entity_type"] == "correction" and record["unit_id"] == "unit:o012-rbt-u006"
+    ]
+    adverse_ids = {record.get("adverse_ledger_id") for record in unit6_corrections}
+    if adverse_ids != EXPECTED_UNIT6_ADVERSE_IDS or len(unit6_corrections) != len(EXPECTED_UNIT6_ADVERSE_IDS):
+        fail("Unit 006 corrections must map one-to-one to O012-ADV-0071 through O012-ADV-0082")
+    reflow_ids = {
+        record["adverse_ledger_id"] for record in unit6_corrections
+        if record["correction_type"] == "structural_adaptation"
+    }
+    if reflow_ids != EXPECTED_UNIT6_REFLOW_IDS:
+        fail("Unit 006 structural reflow must be exactly O012-ADV-0082")
+
+    unit7_corrections = [
+        record for record in records
+        if record["entity_type"] == "correction" and record["unit_id"] == "unit:o012-rbt-u007"
+    ]
+    adverse_ids = {record.get("adverse_ledger_id") for record in unit7_corrections}
+    if adverse_ids != EXPECTED_UNIT7_ADVERSE_IDS or len(unit7_corrections) != len(EXPECTED_UNIT7_ADVERSE_IDS):
+        fail("Unit 007 corrections must map one-to-one to O012-ADV-0083 through O012-ADV-0094")
+    reflow_ids = {
+        record["adverse_ledger_id"] for record in unit7_corrections
+        if record["correction_type"] == "structural_adaptation"
+    }
+    if reflow_ids != EXPECTED_UNIT7_REFLOW_IDS:
+        fail("Unit 007 structural reflows must be exactly O012-ADV-0087 and O012-ADV-0088")
+    alias_ids = {
+        record["adverse_ledger_id"] for record in unit7_corrections
+        if record["correction_type"] == "identifier_preservation"
+    }
+    if alias_ids != EXPECTED_UNIT7_ALIAS_IDS:
+        fail("Unit 007 identifier preservation must be exactly O012-ADV-0094")
+
+    for lecture, path, upstream_start, upstream_end, expected_count in (
+        (6, "source/id-ID/units/unit-006-lecture-006.md", 1305, 1515, 28),
+        (7, "source/id-ID/units/unit-007-lecture-007.md", 1516, 1770, 24),
+    ):
+        expected_upstream = {
+            "commit_sha": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+            "line_end": upstream_end,
+            "line_start": upstream_start,
+            "path": "Notes.tex",
+            "precision": "unit_range_only",
+        }
+        expected_original = {"kind": "edition_original", "path": path, "precision": "exact_target_span"}
+        lecture_segments = [
+            record for record in records
+            if record["entity_type"] == "segment" and record["target_locator"]["path"] == path
+        ]
+        if len(lecture_segments) != expected_count:
+            fail(f"Unit {lecture:03d} must have {expected_count} stable-id segments; found {len(lecture_segments)}")
+        for segment in lecture_segments:
+            expected = expected_original if segment["provenance_relation"] == "edition_original" else expected_upstream
+            if segment["source_locator"] != expected:
+                fail(f"{segment['id']}: malformed Unit {lecture:03d} source authority locator")
+
+    alias_unit = by_id.get("unit:o012-rbt-l07-exa-003")
+    alias_segment = by_id.get("segment:o012-rbt-l07-exa-003")
+    if alias_unit is None or alias_unit.get("source_aliases") != ["eg:piS^1_infinite"]:
+        fail("Unit 007 source alias missing from unit record")
+    if alias_segment is None or alias_segment.get("source_aliases") != ["eg:piS^1_infinite"]:
+        fail("Unit 007 source alias missing from segment record")
+
+    expected_term_controls = {f"O012-TERM-{number:04d}" for number in range(115, 134)}
+    unit67_terms = [
+        record for record in records
+        if record["entity_type"] == "term" and record.get("terminology_control_id") in expected_term_controls
+    ]
+    if len(unit67_terms) != 19 or {record.get("terminology_control_id") for record in unit67_terms} != expected_term_controls:
+        fail("Units 006-007 terminology controls must map one-to-one to O012-TERM-0115 through O012-TERM-0133")
+
+    cumulative_rights_id = "rights:o012-units-001-007-composite-cc-by-4.0"
     for authority_id in ("program:o012-id", "course:o012-d60"):
         if by_id[authority_id]["rights_component_id"] != cumulative_rights_id:
-            fail(f"{authority_id}: must point at the cumulative Units 001-005 rights record")
+            fail(f"{authority_id}: must point at the cumulative Units 001-007 rights record")
     cumulative_rights = by_id.get(cumulative_rights_id)
     if cumulative_rights is None or set(cumulative_rights["component_scope"]) != expected_roots:
-        fail("cumulative Units 001-005 rights scope is missing or incomplete")
+        fail("cumulative Units 001-007 rights scope is missing or incomplete")
 
     unit4_cumulative_rights_id = "rights:o012-units-001-004-composite-cc-by-4.0"
+    unit5_cumulative_rights_id = "rights:o012-units-001-005-composite-cc-by-4.0"
 
     manifest_id = "artifact:o012-units-001-004-manifest"
     source_qa = "qa:o012-u004-source-integrity"
@@ -892,7 +985,7 @@ def validate_unit5_boundary(records: list[dict[str, Any]], by_id: dict[str, dict
                 fail(f"{artifact_id}: final Unit 005 boundary {field} mismatch")
         if set(artifact["qa_event_ids"]) != expected["qa_event_ids"]:
             fail(f"{artifact_id}: final Unit 005 boundary QA linkage mismatch")
-        if artifact["rights_component_id"] != cumulative_rights_id:
+        if artifact["rights_component_id"] != unit5_cumulative_rights_id:
             fail(f"{artifact_id}: must use cumulative Units 001-005 rights")
 
     expected_qa5 = {
@@ -919,6 +1012,121 @@ def validate_unit5_boundary(records: list[dict[str, Any]], by_id: dict[str, dict
             fail(f"{qa_id}: final Unit 005 QA result/type mismatch")
         if set(qa_event["witness_artifact_ids"]) != witnesses:
             fail(f"{qa_id}: final Unit 005 witness inventory mismatch")
+
+    manifest7 = "artifact:o012-units-001-007-manifest"
+    source6_qa = "qa:o012-u006-source-integrity"
+    math6_qa = "qa:o012-u006-math-review"
+    language6_qa = "qa:o012-u006-language-review"
+    source7_qa = "qa:o012-u007-source-integrity"
+    math7_qa = "qa:o012-u007-math-review"
+    language7_qa = "qa:o012-u007-language-review"
+    build7_qa = "qa:o012-units-001-007-build"
+    accessibility7_qa = "qa:o012-units-001-007-accessibility"
+    visual7_qa = "qa:o012-units-001-007-visual"
+    expected_artifacts67 = {
+        "artifact:o012-u006-independent-review": {
+            "bytes": 1783, "manifest_artifact_id": None,
+            "path": "qa/UNIT_006_INDEPENDENT_REVIEW.md",
+            "qa_event_ids": {source6_qa, math6_qa, language6_qa},
+            "sha256": "5dd3868192a85e3e60562f42ec7d7b792e0e58811719ecc97207ed2bdc5de4bf",
+            "unit_id": "unit:o012-rbt-u006",
+        },
+        "artifact:o012-u007-independent-review": {
+            "bytes": 1761, "manifest_artifact_id": None,
+            "path": "qa/UNIT_007_INDEPENDENT_REVIEW.md",
+            "qa_event_ids": {source7_qa, math7_qa, language7_qa},
+            "sha256": "87c5129cd7d367893860b150c72948de1d196d7cbefe04d53f7a4efecf921f87",
+            "unit_id": "unit:o012-rbt-u007",
+        },
+        "artifact:o012-units-001-007-html": {
+            "bytes": 899803, "manifest_artifact_id": manifest7,
+            "path": "output/html/units-001-007/index.html",
+            "qa_event_ids": {build7_qa, accessibility7_qa, visual7_qa},
+            "sha256": "55135048eafe0f097c45936add885e008392eefdf475270fea37adf6a2a7b7bb",
+            "unit_id": "unit:o012-rbt-u007",
+        },
+        manifest7: {
+            "bytes": 247, "manifest_artifact_id": None,
+            "path": "output/ARTIFACT_MANIFEST_UNITS_001_007.csv",
+            "qa_event_ids": {build7_qa},
+            "sha256": "7b279f0413892f0ddedce636b3a272884bb7bfa01410bf33a6ce34c0c34db2f9",
+            "unit_id": "unit:o012-rbt-u007",
+        },
+        "artifact:o012-units-001-007-pdf": {
+            "bytes": 702470, "manifest_artifact_id": manifest7,
+            "path": "output/pdf/topologi-aljabar-unit-001-007-id.pdf",
+            "qa_event_ids": {build7_qa, accessibility7_qa, visual7_qa},
+            "sha256": "3764b75ecfb9200e25a165db1f0f97a680384378e2a9a22e129aab57dd860d93",
+            "unit_id": "unit:o012-rbt-u007",
+        },
+        "artifact:o012-units-001-007-qa-receipt": {
+            "bytes": 7384, "manifest_artifact_id": None,
+            "path": "qa/UNITS_001_007_QA.json",
+            "qa_event_ids": {source6_qa, math6_qa, language6_qa, source7_qa, math7_qa, language7_qa, build7_qa, accessibility7_qa, visual7_qa},
+            "sha256": "2982a9465428eff97e6047bffdadba422b2dc0406e34750f632bfe148ed67617",
+            "unit_id": "unit:o012-rbt-u007",
+        },
+        "artifact:o012-units-001-007-qa-text": {
+            "bytes": 190424, "manifest_artifact_id": None,
+            "path": "qa/units-001-007-extracted.txt",
+            "qa_event_ids": {build7_qa, math6_qa, math7_qa},
+            "sha256": "f6839e7eb7f25c8518ec3fc2e2372b82b1f1387b48402899ff8bc40ce153c8dc",
+            "unit_id": "unit:o012-rbt-u007",
+        },
+        "artifact:o012-units-001-007-visual-receipt": {
+            "bytes": 3259, "manifest_artifact_id": None,
+            "path": "qa/UNITS_001_007_VISUAL_QA.md",
+            "qa_event_ids": {accessibility7_qa, visual7_qa},
+            "sha256": "63a4b4545213a7aec1c556a3852b818ba2f207b10cac7e80c62330709604176f",
+            "unit_id": "unit:o012-rbt-u007",
+        },
+    }
+    boundary_artifact_ids = {
+        record["id"] for record in records
+        if record["entity_type"] == "artifact" and record["id"] in expected_artifacts67
+    }
+    if boundary_artifact_ids != set(expected_artifacts67):
+        fail(
+            "Units 006-007 final artifact inventory differs: "
+            f"missing={sorted(set(expected_artifacts67)-boundary_artifact_ids)}, "
+            f"extra={sorted(boundary_artifact_ids-set(expected_artifacts67))}"
+        )
+    for artifact_id, expected in expected_artifacts67.items():
+        artifact = by_id[artifact_id]
+        for field in ("bytes", "manifest_artifact_id", "path", "sha256", "unit_id"):
+            if artifact[field] != expected[field]:
+                fail(f"{artifact_id}: final Units 006-007 boundary {field} mismatch")
+        if set(artifact["qa_event_ids"]) != expected["qa_event_ids"]:
+            fail(f"{artifact_id}: final Units 006-007 QA linkage mismatch")
+        if artifact["rights_component_id"] != cumulative_rights_id:
+            fail(f"{artifact_id}: must use cumulative Units 001-007 rights")
+
+    expected_qa67 = {
+        source6_qa: ("source", {"artifact:o012-u006-independent-review", "artifact:o012-units-001-007-qa-receipt"}, "unit:o012-rbt-u006"),
+        math6_qa: ("math", {"artifact:o012-u006-independent-review", "artifact:o012-units-001-007-qa-receipt", "artifact:o012-units-001-007-qa-text"}, "unit:o012-rbt-u006"),
+        language6_qa: ("language", {"artifact:o012-u006-independent-review"}, "unit:o012-rbt-u006"),
+        source7_qa: ("source", {"artifact:o012-u007-independent-review", "artifact:o012-units-001-007-qa-receipt"}, "unit:o012-rbt-u007"),
+        math7_qa: ("math", {"artifact:o012-u007-independent-review", "artifact:o012-units-001-007-qa-receipt", "artifact:o012-units-001-007-qa-text"}, "unit:o012-rbt-u007"),
+        language7_qa: ("language", {"artifact:o012-u007-independent-review"}, "unit:o012-rbt-u007"),
+        build7_qa: ("build", {"artifact:o012-units-001-007-html", manifest7, "artifact:o012-units-001-007-pdf", "artifact:o012-units-001-007-qa-receipt", "artifact:o012-units-001-007-qa-text"}, "unit:o012-rbt-u007"),
+        accessibility7_qa: ("accessibility", {"artifact:o012-units-001-007-html", "artifact:o012-units-001-007-qa-receipt", "artifact:o012-units-001-007-visual-receipt"}, "unit:o012-rbt-u007"),
+        visual7_qa: ("visual", {"artifact:o012-units-001-007-html", "artifact:o012-units-001-007-pdf", "artifact:o012-units-001-007-visual-receipt"}, "unit:o012-rbt-u007"),
+    }
+    boundary_qa_ids = {
+        record["id"] for record in records
+        if record["entity_type"] == "qa_event" and record["id"] in expected_qa67
+    }
+    if boundary_qa_ids != set(expected_qa67):
+        fail(
+            "Units 006-007 final QA-event inventory differs: "
+            f"missing={sorted(set(expected_qa67)-boundary_qa_ids)}, extra={sorted(boundary_qa_ids-set(expected_qa67))}"
+        )
+    for qa_id, (qa_type, witnesses, unit_id) in expected_qa67.items():
+        qa_event = by_id[qa_id]
+        if qa_event["qa_type"] != qa_type or qa_event["result"] != "passed" or qa_event["unit_id"] != unit_id:
+            fail(f"{qa_id}: final Units 006-007 QA result/type/unit mismatch")
+        if set(qa_event["witness_artifact_ids"]) != witnesses:
+            fail(f"{qa_id}: final Units 006-007 witness inventory mismatch")
 
 
 def validate_artifact_manifests(records: list[dict[str, Any]], lane_root: Path) -> None:
@@ -999,7 +1207,7 @@ def main() -> int:
         validate_references(records, by_id)
         validate_files_and_spans(records, by_id, lane_root)
         validate_hierarchy_and_mastery(records, by_id)
-        validate_unit5_boundary(records, by_id)
+        validate_unit7_boundary(records, by_id)
         validate_artifact_manifests(records, lane_root)
         summarize(records, backend_dir)
     except (OSError, ValidationError) as exc:

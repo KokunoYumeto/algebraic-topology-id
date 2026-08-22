@@ -164,3 +164,36 @@ Final cumulative artifacts and witnesses:
 Strict QA binds 172 stable IDs, 106 fenced semantic blocks, all 22 exercise-solution pairs and both question-answer pairs, 16 Unit 5 source corrections plus one accessibility reflow, 1,659 native MathML nodes, all 66 fragment links, offline/privacy properties, PDF metadata/fonts/text/pages, and both manifest rows. All 44 PDF pages and HTML at 1280 x 720 and 390 x 844 passed visual inspection; 17 wide phone-width formulas scroll locally with zero page-level overflow. P1/P2/P3 are zero, and every earlier publication boundary remains byte-identical.
 
 The cumulative locale-neutral backend contains 785 canonical records in 11 JSONL files and validates with bundle SHA-256 `c36095ba31dcdbc8db52e327902bfbfd419a65a3c827da41e847aa8dc55bc5e2`.
+
+## Indonesian cumulative Units 001-007
+
+Canonical added sources:
+
+- `source/id-ID/units/unit-006-lecture-006.md`: 32,106 bytes; 893 lines; 28 unique stable IDs; SHA-256 `3cb182fdf183bd67e45a898228b995a44d4638e808fdfbe6ea6d6a2a2b889e33`.
+- `source/id-ID/units/unit-007-lecture-007.md`: 22,107 bytes; 749 lines; 24 unique stable IDs; SHA-256 `556cea5445e1b0a51f86f1c0ea0e80c4e00a17d365d95fa530f063cc24856569`.
+- Exact authority extension: frozen `Notes.tex:1305-1770`; line 1771 begins Lecture 8 and is outside this reader boundary.
+
+Build and QA:
+
+```powershell
+pwsh -NoProfile -File scripts/build-units-001-007.ps1
+python scripts/qa-units-001-007.py
+python scripts/validate-backend.py
+```
+
+The cumulative builder freezes every Unit 1-5 source and artifact witness, assembles Units 1-7 with one metadata header, uses Pandoc 3.9.0.2 and MiKTeX pdfTeX 1.40.29 at `SOURCE_DATE_EPOCH=1787356800`, and requires two HTML builds and two PDF builds to be byte-identical. The PDF artifact operation was marked exactly once before creation.
+
+Final cumulative artifacts and witnesses:
+
+- HTML: 899,803 bytes; SHA-256 `55135048eafe0f097c45936add885e008392eefdf475270fea37adf6a2a7b7bb`.
+- PDF: 702,470 bytes; 66 A4 pages; SHA-256 `3764b75ecfb9200e25a165db1f0f97a680384378e2a9a22e129aab57dd860d93`.
+- Manifest: 247 bytes; SHA-256 `7b279f0413892f0ddedce636b3a272884bb7bfa01410bf33a6ce34c0c34db2f9`.
+- QA receipt: 7,384 bytes; SHA-256 `2982a9465428eff97e6047bffdadba422b2dc0406e34750f632bfe148ed67617`.
+- Extracted-text witness: 190,424 bytes; SHA-256 `f6839e7eb7f25c8518ec3fc2e2372b82b1f1387b48402899ff8bc40ce153c8dc`.
+- Independent Unit 6 review: SHA-256 `5dd3868192a85e3e60562f42ec7d7b792e0e58811719ecc97207ed2bdc5de4bf`.
+- Corrected independent Unit 7 review: SHA-256 `87c5129cd7d367893860b150c72948de1d196d7cbefe04d53f7a4efecf921f87`.
+- Visual/browser receipt: 3,259 bytes; SHA-256 `63a4b4545213a7aec1c556a3852b818ba2f207b10cac7e80c62330709604176f`.
+
+Strict QA binds 224 stable IDs, 135 fenced semantic blocks, all 30 exercise-solution pairs and both question-answer pairs, all 24 Unit 6-7 correction records, 2,344 native MathML nodes, all 89 fragment links, the preserved `eg:piS^1_infinite` source alias, offline/privacy properties, and PDF metadata/fonts/text/pages. All 66 PDF pages were rendered and inspected; pages 1, 45, 57, and 66 were also inspected full-size. HTML passed at 1280 x 720 with a centered 928 px body and at 390 x 844 with zero page overflow and 32 formula-local scrollers. P1/P2/P3 are zero, and every earlier boundary remains byte-identical.
+
+The cumulative locale-neutral backend contains 995 canonical records in 11 JSONL files and validates with bundle SHA-256 `0acf007e732682268d904699b4fbcf12c5f1a757b98938b776a72614b432df64`.

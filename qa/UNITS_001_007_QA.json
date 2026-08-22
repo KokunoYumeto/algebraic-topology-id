@@ -1,0 +1,267 @@
+{
+  "artifacts": [
+    {
+      "bytes": 899803,
+      "path": "output/html/units-001-007/index.html",
+      "sha256": "55135048eafe0f097c45936add885e008392eefdf475270fea37adf6a2a7b7bb"
+    },
+    {
+      "bytes": 702470,
+      "path": "output/pdf/topologi-aljabar-unit-001-007-id.pdf",
+      "sha256": "3764b75ecfb9200e25a165db1f0f97a680384378e2a9a22e129aab57dd860d93"
+    }
+  ],
+  "block_counts": {
+    "unit_001": {
+      "definition": 6,
+      "example": 7,
+      "exercise": 2,
+      "lemma": 1,
+      "note": 2,
+      "proof": 1,
+      "proposition": 1
+    },
+    "unit_002": {
+      "definition": 3,
+      "example": 8,
+      "exercise": 7,
+      "lemma": 3,
+      "proof": 1,
+      "question": 1
+    },
+    "unit_003": {
+      "definition": 6,
+      "example": 4,
+      "exercise": 5,
+      "lemma": 2,
+      "proof": 5,
+      "proposition": 3
+    },
+    "unit_004": {
+      "definition": 4,
+      "example": 5,
+      "exercise": 4,
+      "lemma": 1,
+      "proof": 2,
+      "proposition": 3,
+      "question": 1
+    },
+    "unit_005": {
+      "corollary": 3,
+      "definition": 1,
+      "example": 1,
+      "exercise": 4,
+      "lemma": 1,
+      "proof": 5,
+      "proposition": 2,
+      "theorem": 1
+    },
+    "unit_006": {
+      "definition": 2,
+      "example": 3,
+      "exercise": 4,
+      "lemma": 2,
+      "proof": 2,
+      "remark": 1,
+      "theorem": 2
+    },
+    "unit_007": {
+      "corollary": 1,
+      "definition": 1,
+      "example": 3,
+      "exercise": 4,
+      "lemma": 1,
+      "proof": 1,
+      "proposition": 2
+    }
+  },
+  "controls": {
+    "adverse_subset_sha256": "f1ec9603163615c991d508f6f8474b50478c015783754b598a4d23c12e83ac65",
+    "terminology_ids": [
+      "O012-TERM-0115",
+      "O012-TERM-0116",
+      "O012-TERM-0117",
+      "O012-TERM-0118",
+      "O012-TERM-0119",
+      "O012-TERM-0120",
+      "O012-TERM-0121",
+      "O012-TERM-0122",
+      "O012-TERM-0123",
+      "O012-TERM-0124",
+      "O012-TERM-0125",
+      "O012-TERM-0126",
+      "O012-TERM-0127",
+      "O012-TERM-0128",
+      "O012-TERM-0129",
+      "O012-TERM-0130",
+      "O012-TERM-0131",
+      "O012-TERM-0132",
+      "O012-TERM-0133"
+    ],
+    "terminology_subset_sha256": "1023cf7b682cf35e66292608f4bbc985a15445f6bab1fa6df8bcb0e3780d1d00",
+    "unit_006_accessibility_reflows": [
+      "O012-ADV-0082"
+    ],
+    "unit_006_adverse_ids": [
+      "O012-ADV-0071",
+      "O012-ADV-0072",
+      "O012-ADV-0073",
+      "O012-ADV-0074",
+      "O012-ADV-0075",
+      "O012-ADV-0076",
+      "O012-ADV-0077",
+      "O012-ADV-0078",
+      "O012-ADV-0079",
+      "O012-ADV-0080",
+      "O012-ADV-0081",
+      "O012-ADV-0082"
+    ],
+    "unit_007_accessibility_reflows": [
+      "O012-ADV-0087",
+      "O012-ADV-0088"
+    ],
+    "unit_007_adverse_ids": [
+      "O012-ADV-0083",
+      "O012-ADV-0084",
+      "O012-ADV-0085",
+      "O012-ADV-0086",
+      "O012-ADV-0087",
+      "O012-ADV-0088",
+      "O012-ADV-0089",
+      "O012-ADV-0090",
+      "O012-ADV-0091",
+      "O012-ADV-0092",
+      "O012-ADV-0093",
+      "O012-ADV-0094"
+    ],
+    "unit_007_identifier_alias": [
+      "O012-ADV-0094"
+    ]
+  },
+  "course_id": "D60",
+  "gates": {
+    "authority_exact": true,
+    "every_prior_source_artifact_qa_witness_unchanged": true,
+    "html_and_pdf_two_build_byte_identity": true,
+    "html_fragments_ids_and_alias_valid": true,
+    "html_semantic_centered_reflowing_native_mathml_offline": true,
+    "mastery_exercise_solution_closure": true,
+    "pdf_metadata_fonts_text_pages_verified": true,
+    "privacy_secret_scan": true,
+    "rights_attribution_non_endorsement": true,
+    "source_spans_contiguous_and_bound": true,
+    "structure_and_identifiers_bound": true,
+    "unit_006_007_corrections_reflows_aliases_verified": true,
+    "visual_review": "pass_manual_all_66_pages_and_browser_desktop_mobile"
+  },
+  "html": {
+    "external_https_links": 11,
+    "fragment_links": 89,
+    "html_ids": 315,
+    "mathml_nodes": 2344,
+    "source_aliases": 1,
+    "stable_ids": 224
+  },
+  "known_caveat": "PDF is intentionally secondary and untagged; semantic HTML with native MathML is the primary accessibility surface.",
+  "pdf": {
+    "all_fonts_embedded": true,
+    "all_fonts_tounicode": true,
+    "encrypted": false,
+    "extracted_characters": 128031,
+    "fonts": 23,
+    "lang": "id-ID",
+    "pages": 66,
+    "tagged": false
+  },
+  "reader_sources": [
+    {
+      "bytes": 16179,
+      "lines": 225,
+      "path": "source/id-ID/reader-unit-001.md",
+      "sha256": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15",
+      "stable_ids": 29
+    },
+    {
+      "bytes": 25090,
+      "lines": 674,
+      "path": "source/id-ID/units/unit-002-lecture-002.md",
+      "sha256": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
+      "stable_ids": 41
+    },
+    {
+      "bytes": 25822,
+      "lines": 618,
+      "path": "source/id-ID/units/unit-003-lecture-003.md",
+      "sha256": "993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd",
+      "stable_ids": 39
+    },
+    {
+      "bytes": 24582,
+      "lines": 632,
+      "path": "source/id-ID/units/unit-004-lecture-004.md",
+      "sha256": "826fcb368275cdad02f72a5cec951fc8466ba68b09ca0139d72c81a4c5591fea",
+      "stable_ids": 33
+    },
+    {
+      "bytes": 22662,
+      "lines": 663,
+      "path": "source/id-ID/units/unit-005-lecture-005.md",
+      "sha256": "7333a7b7a92b9618016412abb5c9b2b2a398538f690d0109d4282289a0719852",
+      "stable_ids": 30
+    },
+    {
+      "bytes": 32106,
+      "lines": 893,
+      "path": "source/id-ID/units/unit-006-lecture-006.md",
+      "sha256": "3cb182fdf183bd67e45a898228b995a44d4638e808fdfbe6ea6d6a2a2b889e33",
+      "stable_ids": 28
+    },
+    {
+      "bytes": 22107,
+      "lines": 749,
+      "path": "source/id-ID/units/unit-007-lecture-007.md",
+      "sha256": "556cea5445e1b0a51f86f1c0ea0e80c4e00a17d365d95fa530f063cc24856569",
+      "stable_ids": 24
+    }
+  ],
+  "responsive_browser": {
+    "console_warnings_or_errors": 0,
+    "desktop_body_css_px": 928,
+    "desktop_document_overflow_css_px": 0,
+    "desktop_viewport": "1280x720",
+    "mobile_content_css_px": 375,
+    "mobile_document_overflow_css_px": 0,
+    "mobile_locally_scrollable_wide_display_math": 32,
+    "mobile_viewport": "390x844",
+    "mobile_wide_display_math": 32
+  },
+  "role_id": "O012",
+  "schema_version": "1.0",
+  "source_authority": {
+    "commit_sha1": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_end": 1770,
+    "line_start": 134,
+    "next_boundary": "Lecture 8 marker",
+    "next_line": 1771,
+    "path": "Notes.tex",
+    "tree_sha1": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5"
+  },
+  "status": "pass",
+  "unit_ids": [
+    "o012-rbt-l01",
+    "o012-rbt-l02",
+    "o012-rbt-l03",
+    "o012-rbt-l04",
+    "o012-rbt-l05",
+    "o012-rbt-l06",
+    "o012-rbt-l07"
+  ],
+  "witnesses": {
+    "extracted_text_bytes": 190424,
+    "extracted_text_sha256": "f6839e7eb7f25c8518ec3fc2e2372b82b1f1387b48402899ff8bc40ce153c8dc",
+    "prior_boundary_units_001_005_qa_sha256": "ffb6703e4fe2ebc1c7733dc4f87a32c64c53cbe3ebf326d65a8d2da94765635a",
+    "unit_006_independent_review_sha256": "5dd3868192a85e3e60562f42ec7d7b792e0e58811719ecc97207ed2bdc5de4bf",
+    "unit_007_independent_review_sha256": "87c5129cd7d367893860b150c72948de1d196d7cbefe04d53f7a4efecf921f87",
+    "visual_review_sha256": "63a4b4545213a7aec1c556a3852b818ba2f207b10cac7e80c62330709604176f"
+  }
+}

@@ -1,0 +1,3942 @@
+                               Topologi Aljabar - Unit 1-7
+    Ruang Topologis, Homotopi, Ruang Penutup, Pengangkatan, Ruang Loop, dan Grup
+                                    Fundamental
+
+
+                            David Michael Roberts (materi sumber)
+                    Edisi Bahasa Indonesia dengan pendamping penguasaan
+
+                                           22 Agustus 2026
+
+
+Daftar Isi
+Tentang unit ini                                                                                        3
+
+1 Kuliah 1                                                                                              3
+  1.1 Apa yang dipelajari oleh topologi aljabar? . . . . . . . . . . . . . . . . . . . . . . . . .      3
+  1.2 Ruang topologis . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   4
+
+Pendamping penguasaan terpecahkan                                                                        6
+  1.3 Solusi Latihan 1.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     6
+  1.4 Solusi Latihan 1.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     6
+  1.5 Pemeriksaan Lema 1.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       7
+  1.6 Contoh terpecahkan: penciutan radial . . . . . . . . . . . . . . . . . . . . . . . . . . .         7
+
+Tentang unit ini                                                                                        7
+
+2 Kuliah 2                                                                                           8
+  2.1 Kelanjutan topologi awal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+  2.2 Topologi akhir dan ruang hasil bagi . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+  2.3 Gabungan saling lepas dan sifat universalnya . . . . . . . . . . . . . . . . . . . . . . . 9
+  2.4 Sampul dan lema perekatan . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+  2.5 Homotopi dan kontraktibilitas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+
+Pendamping penguasaan terpecahkan                                                                       13
+  2.6 Solusi Latihan 2.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    13
+  2.7 Bukti lengkap Lema 2.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      14
+  2.8 Solusi Latihan 2.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    14
+  2.9 Solusi Latihan 2.3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    14
+  2.10 Solusi Latihan 2.4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   15
+  2.11 Solusi Latihan 2.5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   15
+  2.12 Bukti Lema 2.3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   15
+  2.13 Solusi Latihan 2.6 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   15
+  2.14 Solusi Latihan 2.7 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   16
+  2.15 Jawaban Pertanyaan 2.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     16
+
+Tentang unit ini                                                                                        17
+
+3 Kuliah 3                                                                                      17
+  3.1 Komponen terhubung dan himpunan π0 . . . . . . . . . . . . . . . . . . . . . . . . . . 17
+  3.2 Homotopi dan ekuivalensi homotopi . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+
+                                                    1
+   3.3   Kategori dan funktor . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20
+   3.4   Kategori homotopi . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 23
+
+Pendamping penguasaan: solusi lengkap                                                                   23
+  3.5 Solusi Latihan 3.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    23
+  3.6 Solusi Latihan 3.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    24
+  3.7 Pemeriksaan Contoh 3.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      24
+  3.8 Solusi Latihan 3.3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    24
+  3.9 Bukti Proposisi 3.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   24
+  3.10 Solusi Latihan 3.4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   25
+  3.11 Solusi Latihan 3.5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   25
+
+Tentang unit ini                                                                                        26
+
+4 Kuliah 4                                                                                              26
+  4.1 Funktor pada kategori homotopi . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .        26
+  4.2 Ruang terhubung lintasan semilokal . . . . . . . . . . . . . . . . . . . . . . . . . . . .        29
+  4.3 Ruang dan homotopi bertitik . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       30
+  4.4 Ruang penutup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     31
+
+Pendamping penguasaan: solusi lengkap                                                                   32
+  4.5 Solusi Latihan 4.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    32
+  4.6 Bukti Lema 4.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    33
+  4.7 Solusi Latihan 4.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    33
+  4.8 Solusi Latihan 4.3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    34
+  4.9 Jawaban Pertanyaan 4.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      34
+  4.10 Solusi Latihan 4.4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   34
+
+Tentang unit ini                                                                                        35
+
+5 Kuliah 5                                                                                              36
+  5.1 Serat ruang penutup di sepanjang lintasan . . . . . . . . . . . . . . . . . . . . . . . . .       36
+  5.2 Tarik balik ruang penutup . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     37
+  5.3 Ruang penutup dari interval . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     38
+  5.4 Pengangkatan lintasan dan transpor serat . . . . . . . . . . . . . . . . . . . . . . . . .        40
+
+Pendamping penguasaan: pemeriksaan dan solusi lengkap                                                   42
+  5.5 Solusi Pemeriksaan 5.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    42
+  5.6 Solusi Pemeriksaan 5.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    42
+  5.7 Bukti Lema 5.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    43
+  5.8 Solusi Pemeriksaan 5.3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    44
+  5.9 Solusi Pemeriksaan 5.4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    44
+
+Tentang unit ini                                                                                        45
+
+6 Kuliah 6                                                                                              45
+  6.1 Loop dan aksi pada serat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .      45
+  6.2 Topologi kompak-terbuka pada ruang lintasan . . . . . . . . . . . . . . . . . . . . . . .         47
+  6.3 Kekontinuan operator pengangkatan . . . . . . . . . . . . . . . . . . . . . . . . . . . .         48
+  6.4 Ruang terhubung sederhana semilokal . . . . . . . . . . . . . . . . . . . . . . . . . . .         51
+
+Pendamping penguasaan: pemeriksaan dan solusi lengkap                                                   52
+  6.5 Solusi Pemeriksaan 6.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    53
+  6.6 Solusi Pemeriksaan 6.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    53
+  6.7 Solusi Pemeriksaan 6.3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .    55
+
+
+                                                    2
+    6.8 Solusi Pemeriksaan 6.4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 55
+    Bukti mandiri Teorema 6.2 untuk kasus yang digunakan . . . . . . . . . . . . . . . . . . . . 56
+
+Tentang unit ini                                                                                       57
+
+7 Kuliah 7                                                                                             57
+  7.1 Konkatenasi dan transpor serat . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .     57
+  7.2 Hukum grup hingga homotopi . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .       58
+  7.3 Grup fundamental dan serat ruang penutup . . . . . . . . . . . . . . . . . . . . . . . .         62
+  7.4 Funktorialitas ruang loop dan grup fundamental . . . . . . . . . . . . . . . . . . . . .         63
+
+Pendamping penguasaan: pemeriksaan dan solusi lengkap                                                  63
+  7.5 Solusi Pemeriksaan 7.1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   63
+  7.6 Solusi Pemeriksaan 7.2 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   64
+  7.7 Solusi Pemeriksaan 7.3 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   64
+  7.8 Solusi Pemeriksaan 7.4 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .   65
+
+
+Tentang unit ini
+Unit ini merupakan terjemahan dan adaptasi Bahasa Indonesia atas Algebraic Topology
+karya David Michael Roberts (2019), tepatnya Notes.tex baris 134–348 pada commit
+b947ad2e9f9e301bfe24590a9db653bc54fa1a53.           Karya sumber tersedia di bawah Creative
+Commons Attribution 4.0 International. Perubahan pada unit ini meliputi penerjemahan, pemfor-
+matan ulang agar mudah dibaca, pemberian pengenal stabil, pemindahan satu latihan dari catatan
+pinggir ke blok latihan, penjelasan kasus keluarga kosong pada topologi awal, dan koreksi identitas
+invers sumber dari g ◦ f = idX dan g ◦ f = idY menjadi g ◦ f = idX dan f ◦ g = idY . Materi
+pendamping penguasaan setelah teks inti ditulis khusus untuk edisi ini dan juga tersedia di bawah
+CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari
+penulis sumber.
+
+
+1     Kuliah 1
+1.1    Apa yang dipelajari oleh topologi aljabar?
+Topologi aljabar mempelajari pemetaan
+
+
+                                    {Ruang} −→ {Objek aljabar},
+
+atau, lebih tepatnya, pemetaan semacam itu yang “berperilaku baik”. Pemetaan tersebut juga harus
+mengirim fungsi kontinu antarruang ke pemetaan aljabar dengan tetap menghormati komposisi (jadi,
+pemetaan itu berupa funktor). Selain itu, ruang yang dibangun dari ruang-ruang yang lebih sederhana
+semestinya dikirim ke objek aljabar yang dibangun secara serasi dari komponen-komponen yang lebih
+sederhana.
+Di sini, “ruang” secara kasar berarti ruang topologis hingga deformasi—biasanya hingga homotopi,
+meskipun tidak selalu demikian. Kelas-kelas ekuivalensi semacam ini disebut tipe homotopi. “Objek
+aljabar” dapat berarti grup (abelian), gelanggang, modul, atau bahkan kompleks rantai dari objek-
+objek tersebut.
+Catatan. Kompleks rantai adalah suatu jenis barisan pemetaan tertentu, · · · → V0 → V1 → V2 → · · ·.
+Contoh 1.1. Bagaimana kita dapat menentukan apakah permukaan bola S 2 dan torus S 1 × S 1
+dapat dideformasikan satu sama lain? Bagaimana kita membuktikan bahwa deformasi semacam itu
+tidak mungkin?
+
+
+                                                    3
+Contoh 1.2. Sebagai contoh positif, kita dapat menciutkan R3 \ {0} → S 2 ,→ R3 \ {0} dengan
+mengirim x 7→ |x|x
+                   . Pemetaan komposit ini dapat dideformasikan secara kontinu menjadi pemetaan
+identitas. Jadi, dimensi tidak selalu dipertahankan.
+Contoh 1.3. Mungkinkah S 1 ∼ S 2 ?
+Pertama-tama kita perlu memahami bagaimana ruang dibangun.
+
+1.2   Ruang topologis
+Ingat kembali definisi berikut.
+Prasyarat sumber. Topologi dan Analisis III.
+Definisi 1.1 (topologi). Suatu topologi pada himpunan X adalah koleksi T yang terdiri atas
+subset-subset X dan memenuhi:
+  1. ∅, X ∈ T ;
+  2. jika U, V ∈ T , maka U ∩ V ∈ T ;
+  3. jika {Uα }α∈I adalah sembarang keluarga himpunan dalam T , maka α∈I Uα ∈ T .
+                                                                    S
+
+Di sini I adalah himpunan indeks. Jika U ∈ T , kita mengatakan bahwa U terbuka. Suatu ruang
+topologis adalah himpunan X yang dilengkapi dengan topologi T .
+Contoh 1.4. Pada himpunan bilangan real, topologi Euklides (atau topologi “biasa”) didefinisikan
+dengan menyatakan bahwa suatu himpunan terbuka jika dan hanya jika himpunan itu merupakan
+gabungan selang-selang terbuka (a, b). Gabungan kosong juga diperbolehkan dan menghasilkan ∅.
+Topologi diskret pada himpunan X diperoleh dengan mengambil T sebagai koleksi semua subset X.
+Topologi indiskret diperoleh dengan mengambil T = {∅, X}.
+Definisi tersebut ringkas, tetapi bukan selalu cara terbaik untuk mendefinisikan topologi. Kita juga
+akan menggunakan lingkungan.
+Definisi 1.2 (lingkungan). Dalam topologi T pada X, suatu himpunan N ⊆ X disebut lingkungan
+dari titik x ∈ X jika terdapat himpunan terbuka U ⊆ N dengan x ∈ U .
+Contoh 1.5. Ambil R dengan topologi Euklides. Himpunan (−1, 1), [−1, 1], dan [−1, 1) semuanya
+merupakan lingkungan dari setiap −1 < x < 1, tetapi [0, 1) bukan lingkungan dari 0. Sebagai contoh
+yang sedikit lebih rumit, [0, 1] ∪ {2} ∪ [5, 6] merupakan lingkungan dari setiap 0 < x < 1 dan setiap
+5 < x < 6.
+Contoh 1.6. Misalkan (X, d) adalah ruang metrik. Topologi metrik didefinisikan dengan menyatakan
+bahwa subset U ⊆ X terbuka jika dan hanya jika, untuk setiap x ∈ U , terdapat εx > 0 sehingga bola
+terbuka B(x, εx ) ⊆ U . Bola terbuka yang berpusat di x merupakan lingkungan dari x; demikian pula
+bola tertutup berjari-jari positif.
+Pendekatan berikut lebih konkret dan memungkinkan kita mendefinisikan topologi secara ringkas.
+Definisi 1.3 (basis lingkungan). Suatu basis lingkungan N pada himpunan X adalah keluarga
+{N (x)}x∈X , dengan setiap N (x) merupakan koleksi tak kosong yang terdiri atas subset-subset X,
+sehingga untuk setiap x ∈ X berlaku:
+  1. untuk setiap N ∈ N (x), berlaku x ∈ N ;
+  2. untuk setiap N1 , N2 ∈ N (x), terdapat N ∈ N (x) dengan N ⊆ N1 ∩ N2 ;
+  3. untuk setiap N ∈ N (x), terdapat subset U ⊆ N sehingga x ∈ U dan, untuk setiap y ∈ U ,
+     terdapat V ∈ N (y) dengan V ⊆ U .
+Himpunan-himpunan dalam N (x) disebut lingkungan dasar dari x.
+
+
+
+
+                                                 4
+Sebagai contoh, jika (X, T ) adalah ruang topologis, kita memperoleh basis lingkungan dengan
+mendefinisikan N (x) sebagai koleksi semua lingkungan dari x. Kita juga memperoleh basis lingkungan
+dengan mendefinisikan N ′ (x) sebagai koleksi semua himpunan terbuka yang memuat x.
+Jika N adalah basis lingkungan pada X, definisikan subset U ⊆ X sebagai N -terbuka jika dan hanya
+jika, untuk setiap x ∈ U , terdapat N ∈ N (x) dengan N ⊆ U .
+Proposisi 1.1. Himpunan-himpunan N -terbuka membentuk suatu topologi pada X.
+Bukti. Kita memeriksa ketiga aksioma topologi.
+  1. Syarat bahwa ∅ bersifat N -terbuka benar secara vakum. Karena N (x) tidak kosong, di setiap
+     titik terdapat lingkungan dasar; akibatnya X bersifat N -terbuka.
+  2. Misalkan U dan V keduanya N -terbuka. Ambil x ∈ U ∩ V . Terdapat NU , NV ∈ N (x)
+     dengan NU ⊆ U dan NV ⊆ V . Selain itu, x ∈ NU ∩ NV . Jadi terdapat N ∈ N (x) dengan
+     N ⊆ NU ∩ NV ⊆ U ∩ V . Hal ini berlaku untuk setiap x ∈ U ∩ V , sehingga U ∩ V bersifat
+     N -terbuka.
+  3. Misalkan setiap Uα , α ∈ I, bersifat N -terbuka, dan tetapkan U = α∈I Uα . Ambil x ∈ U .
+                                                                         S
+
+     Ada α0 dengan x ∈ Uα0 . Karena Uα0 bersifat N -terbuka, terdapat lingkungan dasar N dari x
+     dengan N ⊆ Uα0 ⊆ U . Maka U bersifat N -terbuka. □
+Topologi pada proposisi ini disebut topologi yang dibangkitkan oleh N . Lingkungan dalam topologi
+ini adalah himpunan yang memuat suatu lingkungan dasar: V merupakan lingkungan dari x jika
+terdapat N ∈ N (x) dengan N ⊆ V .
+Dengan basis lingkungan N pada X, kita dapat mengenali penutupan suatu himpunan S ⊂ X sebagai
+koleksi titik x ∈ X yang memenuhi: untuk setiap N ∈ N (x), terdapat s ∈ N ∩ S.
+Contoh 1.7. Pada ruang metrik (X, d), bola-bola terbuka membentuk basis lingkungan pada X,
+dan topologi yang dibangkitkannya adalah topologi metrik.
+Dengan demikian, banyak definisi yang dikenal dari ruang metrik tetap berlaku untuk ruang topologis
+asalkan dapat dirumuskan menggunakan lingkungan dasar. Salah satu yang terpenting adalah
+kontinuitas.
+Definisi 1.4 (kontinuitas). Misalkan NX dan NY masing-masing merupakan basis lingkungan pada
+himpunan X dan Y . Fungsi f : X → Y disebut kontinu jika, untuk setiap x ∈ X dan N ∈ NY (f (x)),
+himpunan f −1 (N ) memuat suatu lingkungan dasar dari x.
+Definisi ini merupakan perumuman besar dari definisi kontinuitas ε–δ.
+Latihan 1.1. Buktikan bahwa jika f : (X, NX ) → (Y, NY ) kontinu menurut definisi di atas, maka f
+kontinu untuk topologi yang dibangkitkan oleh basis lingkungan pada X dan Y .
+Ingat bahwa kontinuitas untuk topologi berarti f −1 (U ) terbuka untuk setiap himpunan terbuka U .
+Sebagai pemeriksaan kewajaran, fungsi identitas idX pada ruang X memang kontinu. Setiap fungsi
+menuju ruang indiskret juga kontinu, demikian pula setiap fungsi dari ruang diskret.
+Definisi 1.5 (homeomorfisme). Fungsi kontinu f : X → Y disebut homeomorfisme jika terdapat
+fungsi kontinu g : Y → X dengan g ◦ f = idX dan f ◦ g = idY . Dalam keadaan ini, X dan Y disebut
+homeomorfik.
+Sekarang kita perlu menjelaskan cara membangun ruang baru serta pemetaan kontinu yang menghu-
+bungkannya dengan ruang asal.
+Definisi 1.6 (topologi awal). Misalkan X adalah himpunan; (Yα , Nα ), α ∈ I, adalah keluarga
+himpunan yang dilengkapi basis lingkungan; dan fα : X → Yα adalah keluarga fungsi. Topologi awal
+pada X dibangkitkan oleh basis lingkungan berikut: suatu himpunan bagian B ⊆ X merupakan
+lingkungan dasar dari x jika dan hanya jika B berbentuk
+
+
+
+                                                 5
+                                      fα−1
+                                         1
+                                           (N1 ) ∩ · · · ∩ fα−1
+                                                              k
+                                                                (Nk ),
+
+untuk beberapa α1 , . . . , αk dan Ni ∈ Nαi (fαi (x)). Untuk keluarga kosong, irisan kosong ditafsirkan
+sebagai X.
+Latihan 1.2. Buktikan bahwa koleksi pada Definisi 1.6 benar-benar merupakan basis lingkungan.
+Konstruksi ini merangkum topologi produk. Untuk X = Y1 × Y2 dan proyeksi fi : X → Yi , fi (y1 , y2 ) =
+yi , topologi awal adalah topologi produk. Konstruksi yang sama juga menghasilkan topologi subruang:
+ambil injeksi f : X ,→ Y lalu berikan X topologi awal.
+Lema 1.1 (sifat universal topologi awal). Setelah X diberi topologi awal, setiap fungsi fα : X →
+Yα kontinu. Selain itu, fungsi k : Z → X kontinu jika dan hanya jika fα ◦ k : Z → Yα kontinu untuk
+setiap α.
+
+
+Pendamping penguasaan terpecahkan
+Bagian ini merupakan materi baru untuk edisi Bahasa Indonesia. Tujuannya bukan mengganti latihan
+sumber, melainkan menyediakan bukti lengkap, pemeriksaan konsep, dan satu perhitungan deformasi
+yang menutup hasil belajar Unit 1.
+
+1.3   Solusi Latihan 1.1
+Misalkan U terbuka dalam topologi pada Y yang dibangkitkan oleh NY . Kita harus membuktikan
+bahwa f −1 (U ) terbuka dalam topologi pada X yang dibangkitkan oleh NX .
+Ambil x ∈ f −1 (U ). Karena f (x) ∈ U dan U bersifat NY -terbuka, terdapat N ∈ NY (f (x)) dengan
+N ⊆ U . Kontinuitas menurut Definisi 1.4 memberi lingkungan dasar M ∈ NX (x) yang memenuhi
+
+
+                                       M ⊆ f −1 (N ) ⊆ f −1 (U ).
+
+Jadi setiap titik x ∈ f −1 (U ) memiliki lingkungan dasar yang termuat dalam f −1 (U ). Artinya,
+f −1 (U ) bersifat NX -terbuka. Karena hal ini berlaku untuk setiap U terbuka, f kontinu untuk
+topologi-topologi yang dibangkitkan tersebut.
+
+1.4   Solusi Latihan 1.2
+Tuliskan anggota calon basis di x sebagai B =       i=1 fαi (Ni ), dengan Ni ∈ Nαi (fαi (x)).
+                                                  Tk     −1
+
+
+  1. Karena fαi (x) ∈ Ni untuk setiap i, berlaku x ∈ B.
+  2. Jika B1 dan B2 adalah dua lingkungan dasar di x, irisannya kembali merupakan irisan berhingga
+     dari prabayangan lingkungan dasar. Apabila indeks yang sama muncul dua kali, aksioma kedua
+     basis lingkungan di Yα memberi lingkungan dasar yang lebih kecil di dalam irisan keduanya.
+     Jadi terdapat lingkungan dasar B3 ⊆ B1 ∩ B2 .
+  3. Untuk setiap Ni pada representasi B, aksioma ketiga basis lingkungan di Yαi memberi Ui ⊆ Ni
+     yang memuat fαi (x) dan mempunyai sifat penyempurnaan lokal. Tetapkan U = i fα−1    (Ui ) ⊆ B.
+                                                                                  T
+                                                                                T −1 i
+     Jika y ∈ U , untuk setiap i pilih Vi ∈ Nαi (fαi (y)) dengan Vi ⊆ Ui . Maka i fαi (Vi ) adalah
+     lingkungan dasar dari y yang termuat dalam U .
+Ketiga aksioma basis lingkungan terpenuhi. Jika I kosong, satu-satunya irisan yang diperlukan adalah
+irisan kosong X, dan argumen yang sama tetap berlaku.
+
+
+
+
+                                                     6
+1.5   Pemeriksaan Lema 1.1
+Untuk N ∈ Nα (fα (x)), prabayangan fα−1 (N ) adalah salah satu lingkungan dasar pembangkit di x.
+Jadi setiap fα kontinu.
+Jika k : Z → X kontinu, komposisi fα ◦ k kontinu karena komposisi fungsi kontinu bersifat kontinu.
+Sebaliknya, anggap setiap fα ◦ k kontinu. Untuk lingkungan dasar B = m i=1 fαi (Ni ) di sekitar k(z),
+                                                                            −1
+                                                                     T
+
+kita mempunyai
+
+                                                 m
+                                    k −1 (B) =       (fαi ◦ k)−1 (Ni ).
+                                                 \
+
+                                                 i=1
+
+Setiap faktor di ruas kanan memuat suatu lingkungan dasar dari z. Dengan aksioma irisan berhingga
+untuk basis lingkungan di Z, irisannya juga memuat suatu lingkungan dasar dari z. Jadi k kontinu.
+
+1.6   Contoh terpecahkan: penciutan radial
+Definisikan r : R3 \ {0} → S 2 dengan r(x) = x/∥x∥, dan misalkan i : S 2 ,→ R3 \ {0} adalah inklusi.
+Jelas r ◦ i = idS 2 .
+Untuk membandingkan i ◦ r dengan identitas pada R3 \ {0}, gunakan
+
+                                                        t
+                                                          
+                            H(x, t) = (1 − t) +            x,       0 ≤ t ≤ 1.
+                                                       ∥x∥
+
+Koefisien di dalam kurung selalu positif, sehingga H(x, t) ̸= 0. Selain itu, H(x, 0) = x dan H(x, 1) =
+x/∥x∥ = i(r(x)). Jadi H adalah homotopi dari identitas ke i ◦ r. Jika x ∈ S 2 , maka ∥x∥ = 1 dan
+H(x, t) = ((1 − t) + t)x = x untuk setiap t. Homotopi ini menetapkan S 2 titik demi titik. Dengan
+demikian, S 2 memang merupakan retrak deformasi dari R3 \ {0}.
+Pemeriksaan konsep. Contoh ini tidak mengatakan bahwa homeomorfisme boleh mengubah
+dimensi. Contoh ini mengatakan bahwa tipe homotopi dapat sama walaupun dimensi ruang berbeda.
+Perbedaan antara homeomorfisme dan ekuivalensi homotopi akan menjadi pusat unit berikutnya.
+
+
+Tentang unit ini
+Unit ini merupakan terjemahan dan adaptasi Bahasa Indonesia atas Algebraic Topology
+karya David Michael Roberts (2019), tepatnya Notes.tex baris 349–584 pada commit
+b947ad2e9f9e301bfe24590a9db653bc54fa1a53. Penanda \lecturenum{3} muncul di tengah
+baris 585, sesudah kata “This”; seluruh kalimat pada baris 585 dan seterusnya disisihkan untuk unit
+berikutnya agar batas kuliah tidak menghasilkan fragmen kalimat. Karya sumber tersedia di bawah
+Creative Commons Attribution 4.0 International.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian
+pengenal stabil, pemindahan satu latihan dari catatan pinggir ke blok latihan, pelengkapan bukti
+yang hanya diisyaratkan oleh sumber, dan tujuh koreksi terbatas: tanda pembentuk himpunan pada
+definisi Dn , faktor koordinat dalam pemeriksaan kontinuitas kontraksi, argumen nilai antara untuk
+ruang diskret, peubah terikat yang hilang pada syarat surjektif bersama, kasus ruang kosong dalam
+definisi keterhubungan, serta dua syarat kontinuitas yang hilang pada klaim tentang lintasan dan
+pemetaan ke ruang diskret. Materi pendamping penguasaan setelah teks inti ditulis khusus untuk
+edisi ini dan juga tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan
+dukungan atau pengesahan dari penulis sumber.
+
+
+
+
+                                                       7
+2     Kuliah 2
+2.1   Kelanjutan topologi awal
+Contoh 2.1 (topologi subruang). Misalkan keluarga fungsi hanya terdiri atas satu pemetaan
+injektif, yaitu ι : X ,→ Y , dengan Y suatu ruang topologis. Topologi awal pada X adalah topologi
+subruang: lingkungan dasar dari x berbentuk
+
+
+                                                  ι−1 (N ),
+
+dengan N lingkungan dasar dari ι(x). Jika X dipandang sebagai himpunan bagian dari Y , himpunan
+ini pada dasarnya adalah N ∩ X.
+Contoh 2.2 (fungsi konstan). Sebaliknya, misalkan cy0 : X → Y adalah fungsi konstan yang
+mengirim setiap x ∈ X ke y0 ∈ Y . Untuk setiap lingkungan N dari y0 ,
+
+
+                                              c−1
+                                               y0 (N ) = X.
+
+
+Jadi satu-satunya lingkungan dari setiap x ∈ X dalam topologi awal tersebut adalah X sendiri.
+Dengan demikian, topologi awal yang dihasilkan oleh fungsi konstan adalah topologi indiskret.
+Secara umum, suatu keluarga fungsi fα : X → Yα menentukan fungsi tunggal
+
+
+                               (fα ) : X −→                       x 7−→ fα (x) α .
+                                              Y                                
+                                                  Yα ,
+                                              α
+
+Jika α Yα diberi topologi produk, topologi awal pada X yang dibangkitkan oleh keluarga {fα } sama
+      Q
+
+dengan topologi awal yang dibangkitkan oleh fungsi tunggal (fα ). Oleh karena itu, jika (fα ) injektif,
+X mewarisi topologi subruang dari ruang produk tersebut. Inilah penggunaan utama topologi awal
+yang akan kita jumpai.
+Contoh 2.3 (submanifold). Suatu submanifold M ⊆ Rn memperoleh topologinya dari fungsi-fungsi
+koordinat
+
+                                                             pr
+                                          M ,→ Rn −−→
+                                                    i
+                                                      R.
+
+Suatu pemetaan menuju M kontinu jika dan hanya jika komposisinya dengan setiap fungsi koordinat
+kontinu.
+Latihan 2.1. Diberikan suatu himpunan X, ruang topologis Y , dan fungsi f : X → Y . Andaikan
+x1 , x2 ∈ X memenuhi f (x1 ) = f (x2 ). Buktikan bahwa, dalam topologi awal pada X, subset V ⊆ X
+merupakan lingkungan dari x1 jika dan hanya jika V merupakan lingkungan dari x2 .
+
+2.2   Topologi akhir dan ruang hasil bagi
+Konstruksi berikut akan lebih penting bagi kita dan mungkin belum dikenal oleh sebagian besar
+pembaca.
+Definisi 2.1 (topologi akhir). Misalkan X adalah suatu himpunan; (Zβ , Nβ ), β ∈ J, adalah
+keluarga ruang topologis, dengan ruang yang sama boleh muncul lebih dari sekali; dan gβ : Zβ → X
+adalah keluarga fungsi. Perhatikan bahwa arah fungsi-fungsi ini berlawanan dengan arah fungsi pada
+topologi awal.
+Topologi akhir pada X didefinisikan sebagai berikut: subset U ⊆ X terbuka jika dan hanya jika
+
+
+
+
+                                                         8
+                             gβ−1 (U ) terbuka dalam Zβ         untuk setiap β ∈ J.
+
+Topologi akhir lebih mudah dirumuskan dengan himpunan terbuka daripada dengan lingkungan.
+Lema 2.1 (sifat universal topologi akhir). Setelah X diberi topologi akhir, semua fungsi
+gβ : Zβ → X kontinu. Selain itu, suatu fungsi h : X → W kontinu jika dan hanya jika h ◦ gβ : Zβ → W
+kontinu untuk setiap β ∈ J.
+Kita akan sering menggunakan dua kasus khusus berikut.
+Contoh 2.4 (topologi hasil bagi). Misalkan Z adalah ruang topologis dan ∼ suatu relasi ekuivalensi
+pada Z. Definisikan X = Z/∼ dan pemetaan hasil bagi
+
+
+                                        π : Z → X,          y 7−→ [y].
+
+Topologi akhir pada X terdiri atas subset-subset U ⊆ X yang memenuhi
+
+
+                        U terbuka dalam X       ⇐⇒         π −1 (U ) terbuka dalam Z.
+
+Sebagai contoh, berikan S 2 topologi awal yang dibangkitkan oleh fungsi-fungsi koordinat
+
+                                                            pr
+                                          xi : S 2 ,→ R3 −−→
+                                                           i
+                                                             R;
+
+ini adalah topologi biasa pada S 2 . Bentuk relasi ekuivalensi yang dibangkitkan oleh x ∼ −x untuk
+setiap x ∈ S 2 . Ruang hasil baginya adalah bidang projektif real RP2 . Kita memberinya topologi akhir
+yang berasal dari S 2 → RP2 ; topologi inilah yang dimilikinya sebagai manifold. Sebagai catatan,
+pemetaan ini menjadikan S 2 suatu ruang penutup dari RP2 . Ruang penutup akan dipelajari pada
+bagian pertama mata kuliah ini.
+
+2.3   Gabungan saling lepas dan sifat universalnya
+Ingat kembali gabungan saling lepas dari himpunan-himpunan. Untuk keluarga himpunan {Zβ }β∈J
+terdapat injeksi
+
+
+                                            inγ : Zγ ,→
+                                                           G
+                                                                Zβ ,
+                                                            β
+
+
+dengan salinan-salinan Zβ saling lepas. Jika setiap Zβ adalah ruang topologis, kita memberikan
+  β Zβ topologi akhir yang dibangkitkan oleh semua pemetaan inγ . Topologi ini disebut topologi
+F
+
+gabungan saling lepas atau topologi jumlah, dan ruangnya kadang-kadang disebut jumlah topologis.
+Suatu titik di dalamnya dapat ditulis sebagai pasangan (β, z) dengan z ∈ Zβ .
+Latihan 2.2 (latihan pinggir pada sumber). Buktikan bahwa pemetaan kanonik
+
+
+                   Φ:        (X × Zβ ) −→ X ×                    Φ β, (x, z) = x, (β, z) ,
+                        G                       G                                      
+                                                    Zβ ,
+                         β                      β
+
+
+adalah suatu homeomorfisme.
+Latihan 2.3 (pemetaan keluar dari suatu jumlah). Diberikan fungsi-fungsi kontinu hβ : Zβ → W ,
+buktikan bahwa terdapat tepat satu fungsi kontinu
+
+
+
+
+                                                      9
+                                          h = ⟨hβ ⟩ :
+                                                             G
+                                                                 Zβ → W
+                                                             β
+
+
+yang memenuhi hβ = h ◦ inβ untuk setiap β. Dengan kata lain, diagram berikut komutatif:
+
+                                                       inγ       G
+                                             Zγ        −−→            Zβ
+                                                                  β
+                                                      ↘hγ         ↓h
+                                                                  W
+
+Lema 2.2. Topologi akhir pada X yang dibangkitkan oleh gβ : Zβ → X sama dengan topologi akhir
+yang dibangkitkan oleh fungsi tunggal
+
+
+                                          g = ⟨gβ ⟩ :
+                                                         G
+                                                                 Zβ → X,
+                                                             β
+
+
+dengan domain diberi topologi jumlah.
+Bukti. Untuk setiap U ⊆ X,
+
+              U terbuka ⇐⇒ gβ−1 (U ) terbuka untuk setiap β
+                         ⇐⇒ (g ◦ inβ )−1 (U ) = in−1 −1
+                                                  β g (U ) terbuka untuk setiap β
+                                                                           
+
+                         ⇐⇒ g −1 (U ) terbuka dalam topologi jumlah.
+
+Kondisi pertama mendefinisikan topologi akhir untuk keluarga {gβ }, sedangkan kondisi terakhir
+mendefinisikan topologi akhir untuk g. Jadi kedua topologi itu sama. □
+Jika keluarga gβ : Zβ → X surjektif secara bersama-sama, artinya
+
+
+                                ∀x ∈ X ∃β ∈ J ∃z ∈ Zβ                  gβ (z) = x,
+
+kita dapat menafsirkan topologi akhir sebagai topologi perekatan. Berikan relasi ekuivalensi pada
+  β Zβ dengan
+F
+
+
+
+                        (β1 , z1 ) ∼ (β2 , z2 )       ⇐⇒         gβ1 (z1 ) = gβ2 (z2 ) ∈ X.
+
+Sebagai himpunan, X adalah himpunan kelas ekuivalensi dari relasi ini. Jadi kita dapat memandang
+X sebagai hasil perekatan himpunan-himpunan yang mendasari ruang-ruang Zβ . Topologi akhir
+adalah topologi alami pada ruang yang diperoleh dengan merekatkan ruang-ruang tersebut.
+
+2.4   Sampul dan lema perekatan
+Latihan 2.4 (sampul terbuka). Misalkan {Uα } adalah suatu sampul terbuka dari ruang X.
+Buktikan bahwa topologi X adalah topologi akhir yang dibangkitkan oleh semua inklusi
+
+
+                                                      Uα ,→ X,
+
+atau, secara ekuivalen, oleh pemetaan
+
+                                                  G
+                                                      Uα −→ X.
+                                                  α
+
+
+                                                         10
+Contoh 2.5 (atlas manifold). Setiap manifold M mempunyai topologi akhir yang berasal dari
+sembarang atlas yang dipilih untuknya.
+Latihan 2.5 (sampul tertutup berhingga). Misalkan {Vi }ni=1 adalah sampul tertutup berhingga
+dari X. Buktikan bahwa topologi X adalah topologi akhir yang dibangkitkan oleh
+
+                                               n
+                                               G
+                                                    Vi −→ X.
+                                              i=1
+
+Contoh 2.6 (selang yang dipecah). Setiap selang tertutup [a, b] ⊂ R dengan topologi subruang
+mempunyai topologi akhir yang berasal dari koleksi subselang
+
+
+                                     [a, t1 ], [t1 , t2 ], . . . , [tk , b],
+
+yang masing-masing diberi topologi subruang dari R.
+Latihan-latihan tersebut menghasilkan pernyataan yang biasanya disebut lema perekatan atau lema
+penempelan.
+Lema 2.3 (lema perekatan). Misalkan X adalah ruang topologis dan {Uα }α∈I suatu sampul
+terbuka sembarang, atau {Vi }ni=1 suatu sampul tertutup berhingga. Misalkan pula Y adalah ruang
+topologis. Jika pembatasan fungsi f : X → Y ke setiap Uα kontinu—atau, dalam kasus kedua,
+pembatasannya ke setiap Vi kontinu—maka f kontinu pada X.
+Kelak kita akan menjumpai ruang-ruang yang dibangun dengan merekatkan banyak ruang “sederhana”,
+misalnya cakram
+
+
+                                     Dn := x ∈ Rn | ∥x∥ ≤ 1 ,
+                                              
+
+
+dengan topologi subruang dari Rn . Dalam konteks ini, “sederhana” secara kasar berarti “dapat
+diciutkan menjadi satu titik”.
+
+2.5   Homotopi dan kontraktibilitas
+“Dapat diciutkan” menyatakan suatu proses kontinu yang berlangsung sepanjang waktu. Ambil
+I = [0, 1] dan definisikan
+
+                                      H : I × Dn −→ Dn ,
+                                              (t, x) 7−→ (1 − t)x.
+
+Pemetaan ini memang bernilai di Dn , sebab ∥(1 − t)x∥ = (1 − t)∥x∥ ≤ 1 untuk 0 ≤ t ≤ 1 dan x ∈ Dn .
+Untuk setiap t ∈ I, fungsi ini memberi pemetaan Ht : Dn → Dn . Pada kedua ujung selang,
+
+
+                                    H0 = idDn ,             H1 (x) = 0.
+
+Fungsi H kontinu. Untuk melihatnya, ingat bahwa Dn ⊂ Rn dan I ⊂ R diberi topologi subruang,
+sedangkan Rn diberi topologi produk. Karena topologi pada Dn adalah topologi awal untuk fungsi-
+fungsi koordinat xi : Dn → R, kontinuitas H dapat diperiksa koordinat demi koordinat. Komposisi
+koordinat ke-i adalah
+
+                                   id ×x                                 µ
+                          I × Dn −−I−−→
+                                      i
+                                        I × R −→ R × R −−→ R,
+                            (t, x) 7−→ (t, xi ) 7−→ (1 − t, xi ) 7−→ (1 − t)xi ,
+
+
+                                                      11
+dengan µ(a, b) = ab.
+Latihan 2.6 (produk pemetaan). Jika f : X → W dan g : Y → Z kontinu, buktikan bahwa
+
+
+                         f × g : X × Y → W × Z,                (x, y) 7−→ (f (x), g(y)),
+
+juga kontinu. Jika X dan Y masing-masing mempunyai sekurang-kurangnya satu titik, buktikan pula
+implikasi sebaliknya: kontinuitas f × g mengakibatkan kontinuitas f dan g.
+Jadi, untuk membuktikan H kontinu, tinggal membuktikan bahwa perkalian µ : R × R → R kontinu.
+Topologi biasa pada R berasal dari metrik, sehingga kita dapat memakai kriteria barisan untuk
+kontinuitas. Jika (an , bn ) → (a, b) dalam R × R, maka
+
+                              |an bn − ab| = |an bn − abn + abn − ab|
+                                            ≤ |an − a| |bn | + |a| |bn − b|
+                                            ≤ |an − a| sup |bn | + |a| |bn − b|
+                                                           n
+                                            −→ 0 + 0 = 0.
+
+Barisan (bn ) terbatas karena konvergen. Maka perkalian kontinu, sehingga setiap fungsi koordinat
+dari H kontinu dan akhirnya H sendiri kontinu.
+Definisi 2.2 (ruang kontraktil). Ruang X disebut kontraktil—atau dapat dikontraksikan ke
+x0 ∈ X—jika terdapat titik x0 ∈ X dan fungsi kontinu
+
+
+                                              H: I ×X → X
+
+yang memenuhi, untuk setiap x ∈ X,
+
+
+                                       H(0, x) = x,        H(1, x) = x0 .
+
+Fungsi H disebut suatu kontraksi.
+Kita telah membuktikan bahwa Dn kontraktil.
+Latihan 2.7. Buktikan bahwa R kontraktil. Buktikan pula bahwa produk sembarang dari ruang-ruang
+kontraktil adalah kontraktil.
+Contoh 2.7 (ruang diskret yang kontraktil). Misalkan ruang diskret S kontraktil ke suatu titik
+∗ ∈ S melalui h : I × S → S. Untuk s ∈ S, batasi h pada I × {s} sehingga diperoleh lintasan
+
+
+                                hs : I → S,        hs (0) = s,       hs (1) = ∗.
+
+Andaikan s ̸= ∗. Karena S diskret, fungsi karakteristik
+
+
+                       χ{∗} : S → R,       χ{∗} (∗) = 1,       χ{∗} (u) = 0 untuk u ̸= ∗,
+
+kontinu. Komposisi h  e =χ
+                            {∗} ◦ hs : I → R juga kontinu, mempunyai h(0) = 0 dan h(1) = 1, tetapi
+                                                                       e             e
+citranya termuat dalam {0, 1}. Teorema nilai antara menyatakan bahwa citranya harus memuat
+                                                                    ̸ ∗, dan S tepat mempunyai satu
+setiap nilai di antara 0 dan 1, suatu kontradiksi. Jadi tidak ada s =
+anggota.
+Pertanyaan 2.1. Jika X kontraktil, apakah pilihan titik x0 ∈ X berpengaruh? Jika X dapat
+dikontraksikan ke x0 , apakah X juga dapat dikontraksikan ke setiap x ̸= x0 ?
+
+                                                      12
+Suatu selang hanya dapat dipetakan secara kontinu ke ruang diskret jika pemetaannya konstan; secara
+ekuivalen, citranya hanya terdiri atas satu titik. Sifat ini cukup penting untuk diberi nama.
+Definisi 2.3 (keterhubungan). Ruang X disebut terhubung jika setiap pemetaan kontinu dari X
+ke suatu ruang diskret mempunyai citra yang memuat paling banyak satu titik.
+Definisi ini ekuivalen dengan definisi keterhubungan yang biasa dan, seperti definisi biasa itu, menggo-
+longkan ruang kosong sebagai ruang terhubung. Untuk ruang tak kosong, “paling banyak satu titik”
+tentu berarti “tepat satu titik”.
+Selang I merupakan contoh ruang terhubung. Lebih kuat lagi, jika dua titik x, y ∈ X dihubungkan
+oleh suatu lintasan, yaitu pemetaan kontinu
+
+
+                                γ : I → X,       γ(0) = x,     γ(1) = y,
+
+maka setiap fungsi kontinu f : X → S ke ruang diskret memenuhi f (x) = f (y).
+Contoh 2.8. Setiap ruang kontraktil terhubung. Memang, jika X kontraktil melalui H ke x0 , maka
+untuk setiap y ∈ X pemetaan t 7→ H(t, y) adalah lintasan dari y ke x0 . Karena itu, untuk setiap
+pemetaan kontinu f : X → S ke ruang diskret,
+
+
+                                             f (y) = f (x0 )
+
+untuk semua y ∈ X. Jadi citra f hanya mempunyai satu titik.
+Ada banyak ruang yang terhubung tetapi tidak kontraktil, namun kita belum dapat membuktikannya
+pada tahap ini.
+
+
+Pendamping penguasaan terpecahkan
+Bagian ini merupakan materi baru untuk edisi Bahasa Indonesia. Setiap latihan dan pertanyaan pada
+Kuliah 2 dijawab lengkap; dua sifat universal yang menjadi penghubung utama argumen perekatan
+juga dibuktikan secara eksplisit.
+
+2.6   Solusi Latihan 2.1
+Dalam topologi awal yang dibangkitkan oleh f , lingkungan dasar dari x ∈ X berbentuk f −1 (N ),
+dengan N lingkungan dari f (x) dalam Y .
+Andaikan V merupakan lingkungan dari x1 . Maka terdapat lingkungan N dari f (x1 ) dengan
+
+
+                                             f −1 (N ) ⊆ V.
+
+Karena f (x1 ) = f (x2 ), himpunan N juga merupakan lingkungan dari f (x2 ), sehingga f −1 (N ) adalah
+lingkungan dasar dari x2 . Jadi V merupakan lingkungan dari x2 . Argumen yang sama dengan
+menukar x1 dan x2 memberi implikasi sebaliknya.
+Makna. Topologi awal tidak dapat membedakan dua titik yang mempunyai citra sama di bawah semua
+pemetaan pembangkit. Untuk suatu keluarga {fα }, argumen yang sama berlaku jika fα (x1 ) = fα (x2 )
+untuk setiap α.
+
+
+
+
+                                                   13
+2.7   Bukti lengkap Lema 2.1
+Ambil U ⊆ X terbuka dalam topologi akhir. Menurut definisi, gβ−1 (U ) terbuka dalam Zβ untuk setiap
+β. Jadi setiap gβ kontinu.
+Jika h : X → W kontinu, maka setiap komposisi h ◦ gβ kontinu. Sebaliknya, andaikan semua h ◦ gβ
+kontinu. Untuk setiap himpunan terbuka O ⊆ W dan setiap β,
+
+
+                                   gβ−1 h−1 (O) = (h ◦ gβ )−1 (O)
+                                                
+
+
+terbuka dalam Zβ . Definisi topologi akhir lalu menyatakan bahwa h−1 (O) terbuka dalam X. Karena
+hal ini berlaku untuk setiap O, fungsi h kontinu.
+
+2.8   Solusi Latihan 2.2
+Pemetaan Φ jelas bijektif, dengan invers
+
+
+                                      Ψ x, (β, z) = β, (x, z) .
+                                                                  
+
+
+Untuk setiap β, pembatasan Φ pada komponen X × Zβ adalah
+
+                                             idX × inβ         G
+                                    X × Zβ −−−−−−→ X ×             Zγ ,
+                                                               γ
+
+
+yang kontinu menurut Latihan 2.6. Karena domain Φ diberi topologi jumlah, sifat universal topologi
+akhir menunjukkan bahwa Φ kontinu.
+Untuk kontinuitas Ψ, perhatikan bahwa setiap komponen inβ (Zβ ) terbuka dalam γ Zγ : praba-
+                                                                                      F
+
+yangannya pada suatu komponen Zγ adalah Zγ jika γ = β dan kosong jika tidak. Oleh karena
+itu,
+
+
+                                             X × inβ (Zβ )
+
+membentuk sampul terbuka dari X × γ Zγ . Pada komponen ini, pembatasan Ψ adalah komposisi
+                                       F
+
+invers homeomorfisme kanonik X × Zβ → X × inβ (Zβ ) dengan inklusi komponen X × Zβ ,→
+  γ (X × Zγ ), sehingga kontinu. Lema perekatan memberi bahwa Ψ kontinu secara global. Jadi Φ
+F
+
+adalah homeomorfisme.
+
+2.9   Solusi Latihan 2.3
+Definisikan fungsi h pada gabungan saling lepas dengan
+
+
+                                           h(β, z) = hβ (z).
+
+Fungsi ini unik dengan sifat h ◦ inβ = hβ , sebab setiap titik pada gabungan saling lepas berada pada
+tepat satu komponen. Karena topologi jumlah adalah topologi akhir bagi pemetaan-pemetaan inklusi
+tersebut, Lema 2.1 memberi
+
+
+                      h kontinu   ⇐⇒       h ◦ inβ = hβ kontinu untuk setiap β.
+
+Syarat di ruas kanan telah diberikan, sehingga h kontinu.
+
+
+
+
+                                                    14
+2.10   Solusi Latihan 2.4
+Misalkan A ⊆ X memenuhi bahwa A ∩ Uα terbuka dalam Uα untuk setiap α. Karena Uα terbuka
+dalam X, setiap subset yang terbuka dalam Uα juga terbuka dalam X. Jadi semua A ∩ Uα terbuka
+dalam X. Karena {Uα } menutupi X,
+
+
+                             A=A∩X =A∩                 Uα =          (A ∩ Uα ),
+                                                  [            [
+
+                                                   α             α
+
+yang terbuka dalam X. Sebaliknya, jika A terbuka dalam X, maka A ∩ Uα terbuka dalam Uα . Inilah
+persis syarat topologi akhir untuk semua inklusi Uα ,→ X.
+
+2.11   Solusi Latihan 2.5
+Misalkan A ⊆ X dan A ∩ Vi terbuka dalam Vi untuk setiap i. Tetapkan F = X \ A. Maka
+
+
+                                      F ∩ Vi = Vi \ (A ∩ Vi )
+
+tertutup dalam Vi . Karena Vi tertutup dalam X, himpunan F ∩ Vi juga tertutup dalam X. Sampulnya
+berhingga, sehingga
+
+                                               n
+                                         F =         (F ∩ Vi )
+                                               [
+
+                                               i=1
+
+adalah gabungan berhingga himpunan tertutup dan karenanya tertutup dalam X. Jadi A terbuka.
+Implikasi sebaliknya langsung dari definisi topologi subruang. Dengan demikian, topologi X adalah
+topologi akhir untuk pemetaan inklusi Vi ,→ X.
+Syarat “berhingga” tidak boleh dihapus dari argumen ini: gabungan tak berhingga himpunan tertutup
+tidak harus tertutup.
+
+2.12   Bukti Lema 2.3
+Untuk sampul terbuka, Latihan 2.4 mengatakan bahwa X mempunyai topologi akhir bagi pemetaan
+inklusi Uα ,→ X. Pembatasan f |Uα adalah komposisi
+
+                                                        f
+                                                 → Y.
+                                         Uα ,→ X −
+
+Jika semua komposisi ini kontinu, sifat universal pada Lema 2.1 menyatakan bahwa f kontinu. Untuk
+sampul tertutup berhingga, gunakan Latihan 2.5 dengan argumen yang sama.
+
+2.13   Solusi Latihan 2.6
+Topologi produk pada W × Z adalah topologi awal untuk proyeksi prW dan prZ . Karena
+
+
+                       prW ◦(f × g) = f ◦ prX ,         prZ ◦(f × g) = g ◦ prY ,
+
+dan semua fungsi di ruas kanan kontinu, sifat universal topologi awal menunjukkan bahwa f × g
+kontinu.
+Sekarang andaikan f × g kontinu serta pilih y0 ∈ Y dan x0 ∈ X. Pemetaan
+
+
+                               iX : X → X × Y,              x 7−→ (x, y0 )
+
+
+                                                  15
+kontinu karena kedua fungsi koordinatnya—identitas pada X dan fungsi konstan ke y0 —kontinu.
+Maka
+
+
+                                         f = prW ◦(f × g) ◦ iX
+
+kontinu. Dengan cara yang sama, pemetaan iY (y) = (x0 , y) memberi
+
+
+                                         g = prZ ◦(f × g) ◦ iY ,
+
+sehingga g kontinu. Kebutuhan akan x0 dan y0 menjelaskan syarat bahwa kedua domain tidak kosong.
+
+2.14   Solusi Latihan 2.7
+Kontraksi R ke 0 diberikan oleh
+
+
+                              H : I × R → R,           H(t, x) = (1 − t)x.
+
+Fungsi ini kontinu, H(0, x) = x, dan H(1, x) = 0.
+Untuk setiap α ∈ A, misalkan Xα kontraktil ke x0α melalui
+
+
+                                          Hα : I × Xα → Xα .
+
+Definisikan
+
+                                  H: I ×
+                                            Y              Y
+                                                  Xα −→         Xα ,
+                                            α∈A           α∈A
+                                     H t, (xα )α = Hα (t, xα ) α .
+                                                                      
+
+
+Untuk setiap proyeksi prα ,
+
+
+                                    prα ◦H = Hα ◦ (idI × prα ),
+
+yang kontinu. Sifat universal topologi produk menyatakan bahwa H kontinu. Selain itu,
+
+
+                          H 0, (xα )α = (xα )α ,        H 1, (xα )α = (x0α )α .
+                                                                      
+
+
+Jadi produk sembarang tersebut kontraktil.
+
+2.15   Jawaban Pertanyaan 2.1
+Pilihan titik kontraksi tidak berpengaruh: jika X dapat dikontraksikan ke x0 , maka X dapat
+dikontraksikan ke setiap x1 ∈ X.
+Misalkan H adalah kontraksi ke x0 . Definisikan
+                                          
+                                          H(2t, y),            0 ≤ t ≤ 12 ,
+                              K(t, y) =
+                                          H(2 − 2t, x ),
+                                                                2 ≤ t ≤ 1.
+                                                                1
+                                                          1
+
+
+
+
+                                                   16
+Pada t = 12 , kedua rumus bernilai x0 , sebab H(1, y) = x0 = H(1, x1 ). Masing-masing rumus kontinu
+pada subruang tertutup [0, 12 ] × X dan [ 12 , 1] × X; Lema perekatan menunjukkan bahwa K kontinu.
+Akhirnya,
+
+
+                        K(0, y) = H(0, y) = y,        K(1, y) = H(0, x1 ) = x1 .
+
+Jadi K adalah kontraksi X ke x1 .
+
+
+Tentang unit ini
+Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas Algebraic Topolo-
+gy karya David Michael Roberts (2019), tepatnya Notes.tex baris 585-877 pada commit
+b947ad2e9f9e301bfe24590a9db653bc54fa1a53. Baris 878 membuka proposisi yang penandanya,
+\lecturenum{4}, baru muncul pada baris 879; karena itu baris 878 disisihkan bersama isi proposisi
+untuk Unit 4 agar tidak ada lingkungan LaTeX yang terpotong. Karya sumber tersedia di bawah
+Creative Commons Attribution 4.0 International.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian
+pengenal stabil, pemindahan empat tugas dari catatan pinggir atau prosa ke blok latihan, dan
+sepuluh koreksi atau klarifikasi terbatas: ketak-kosongan komponen terhubung; syarat jari-jari positif
+pada homotopi anulus; ketak-kosongan pada klaim π0 (X) = ∗; titik akhir homotopi gabungan;
+subinterval bagi paruh kedua homotopi gabungan; nama homotopi balik; ketak-kosongan dalam
+definisi keterhubungan lintasan; kategori asal objek pada definisi funktor; kasus citra kosong pada
+bukti keterhubungan citra; dan asumsi keterhubungan lokal pada bukti kedua funktorialitas π0 . Materi
+pendamping penguasaan menjawab seluruh lima latihan dan melengkapi bukti bahwa keterhubungan
+lintasan mengakibatkan keterhubungan. Materi baru ini juga tersedia di bawah CC BY 4.0. Edisi ini
+bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
+
+
+3     Kuliah 3
+3.1    Komponen terhubung dan himpunan π0
+Inilah contoh pertama kita tentang suatu invarian ruang: apakah sebuah ruang terhubung atau tidak.
+Ruang terhubung X tidak mungkin homeomorfik dengan ruang Z yang tidak terhubung. Namun,
+bagaimana kita membedakan dua ruang yang sama-sama tidak terhubung?
+                                                                   ∼
+                                                                   =
+Latihan 3.1 (invariansi keterhubungan). Misalkan h : X −      → Z adalah homeomorfisme dan S
+ruang diskret. Tunjukkan bahwa setiap fungsi kontinu u : X → S berkorespondensi dengan tepat satu
+fungsi kontinu v : Z → S yang memenuhi u = v ◦ h. Simpulkan bahwa X terhubung jika dan hanya
+jika Z terhubung.
+Definisi 3.1 (komponen terhubung dan π0 ). Untuk suatu ruang X:
+    1. Subset tak kosong Y ⊆ X disebut komponen terhubung dari X jika Y terhubung dan maksimal
+       terhadap sifat itu: apabila Y ′ terhubung dan Y ⊆ Y ′ ⊆ X, maka Y = Y ′ .
+    2. Definisikan relasi pada X dengan
+
+
+           x1 ∼ x2   ⇐⇒     x1 dan x2 termuat bersama dalam suatu subset terhubung C ⊆ X.
+
+      Relasi ini merupakan relasi ekuivalensi, dan kelas-kelas ekuivalensinya adalah komponen-
+      komponen terhubung X. Himpunan kelas tersebut dinotasikan dengan
+
+
+                                              π0 (X) = X/∼
+
+
+                                                 17
+      dan disebut himpunan komponen terhubung.
+Latihan 3.2. Buktikan dua pernyataan yang dipakai dalam Definisi 3.1:
+  1. Jika C, D ⊆ X terhubung dan C ∩ D ̸= ∅, maka C ∪ D terhubung.
+  2. Relasi ∼ di atas adalah relasi ekuivalensi dan kelas-kelas ekuivalensinya tepat merupakan
+     komponen-komponen terhubung X.
+Setiap ruang terhubung tak kosong X memenuhi π0 (X) = ∗. Untuk ruang yang tidak terhubung,
+kita dapat membandingkan himpunan π0 -nya.
+Semua ruang yang akan dipertimbangkan dalam mata kuliah ini dapat ditulis sebagai
+
+
+                                           X=
+                                                    G
+                                                           Xα ,
+                                                α∈π0 (X)
+
+
+dengan setiap Xα terhubung, dan mempunyai fungsi kontinu X → π0 (X) ketika π0 (X) diberi topologi
+diskret. Sifat ini berlaku, khususnya, bagi ruang yang terhubung secara lokal. Perlu diingat bahwa Q
+dengan topologi Euklides tidak terhubung secara lokal; banyak contoh menarik lainnya juga tidak.
+Karena itu, kita perlu memahami ruang terhubung, walaupun ruang yang tidak terhubung tetap
+akan digunakan.
+
+3.2   Homotopi dan ekuivalensi homotopi
+Dapatkah kita memperoleh lebih banyak dari gagasan kontraksi? Untuk homotopi H : I × X → X,
+pemetaan ujungnya adalah H0 = idX dan pemetaan konstan H1 ke x0 . Apa yang terjadi jika H0 dan
+H1 merupakan pemetaan kontinu lain?
+Contoh 3.1 (anulus). Ambil 0 < r < R dan anulus
+
+
+                                  A(r, R) = {x ∈ R2 | r ≤ ∥x∥ ≤ R}.
+
+Definisikan
+
+                                                                   x
+                                    H(t, x) = (1 − t)r + tR             .
+                                                                  ∥x∥
+
+Karena ∥x∥ ≥ r > 0, rumus ini terdefinisi dan kontinu. Jari-jari H(t, x) adalah (1 − t)r + tR, sehingga
+citranya tetap di dalam A(r, R). Pada t = 0 ia memetakan setiap titik secara radial ke lingkaran
+dalam dan menetapkan lingkaran itu titik demi titik; pada t = 1 ia melakukan hal yang sama terhadap
+lingkaran luar. Jadi kedua pemetaan ujung benar-benar merupakan retraksi.
+Bagaimana jika kita mempertimbangkan pemetaan kontinu umum X → Y , bukan hanya pemetaan
+X → X?
+Definisi 3.2 (homotopi). Suatu homotopi adalah pemetaan kontinu
+
+
+                                           H : I × X −→ Y.
+
+Jika f = H(0, −) dan g = H(1, −), maka H disebut homotopi dari f ke g, dan f serta g disebut
+homotopik, ditulis f ≃ g.
+Secara diagramatik, jika i0 (x) = (0, x) dan i1 (x) = (1, x), syarat ujungnya ialah
+
+
+                                      H ◦ i0 = f,        H ◦ i1 = g.
+
+
+
+                                                    18
+Contoh 3.1 memberikan homotopi antara dua pemetaan “retraksi” A(r, R) → A(r, R) yang masing-
+masing mengirim titik ke lingkaran dalam dan lingkaran luar.
+Topologi aljabar hampir selalu mempertimbangkan pemetaan hingga homotopi dan, demikian pula,
+“ruang hingga homotopi”.
+Definisi 3.3 (ekuivalensi homotopi). Pemetaan kontinu f : X → Y disebut ekuivalensi homotopi
+jika terdapat pemetaan kontinu g : Y → X sedemikian sehingga
+
+
+                                     g ◦ f ≃ idX ,          f ◦ g ≃ idY .
+
+Dalam keadaan ini, X dan Y disebut ekuivalen secara homotopi.
+Contoh 3.2. Setiap ruang kontraktil ekuivalen secara homotopi dengan ruang satu titik.
+Ekuivalensi homotopi dapat dipandang sebagai versi isomorfisme yang lebih kasar. Pemetaan
+
+
+                                     {ruang} −→ {objek aljabar}
+
+yang menjadi sasaran topologi aljabar seharusnya mengirim ruang-ruang yang ekuivalen secara
+homotopi ke objek-objek aljabar yang isomorfik. Bahasa teori kategori akan membuat gagasan ini
+lebih tepat.
+Sifat homotopi berikut sangat penting dan akan terus digunakan.
+Proposisi 3.1 (penggabungan dan pembalikan homotopi). Misalkan H, H ′ : I × X → Y
+adalah homotopi dengan H1 = H0′ . Maka terdapat homotopi H ′′ dari H0 ke H1′ . Selain itu, terdapat
+homotopi He dari H1 ke H0 .
+
+Bukti. Definisikan
+                                               
+                                               H(2t, x),           0 ≤ t ≤ 12 ,
+                               H ′′ (t, x) =
+                                               H ′ (2t − 1, x),
+                                                                    2 ≤ t ≤ 1.
+                                                                    1
+
+
+
+Kedua rumus memberikan nilai yang sama pada t = 12 , karena H(1, x) = H ′ (0, x). Masing-masing
+kontinu pada subruang tertutup [0, 21 ] × X dan [ 12 , 1] × X; lema perekatan menunjukkan bahwa H ′′
+kontinu. Nilai ujungnya ialah
+
+
+                            H ′′ (0, x) = H(0, x),          H ′′ (1, x) = H ′ (1, x),
+
+sehingga H ′′ merupakan homotopi dari H0 ke H1′ .
+Untuk pembalikan, ambil c : I → I, c(t) = 1 − t, dan definisikan
+
+                                           e = H ◦ (c × idX ).
+                                           H
+
+Maka H(0,
+     e    x) = H(1, x) dan H(1,
+                           e    x) = H(0, x), sebagaimana diperlukan. □
+Homotopi pemetaan merupakan relasi ekuivalensi. Refleksivitas disaksikan oleh homotopi konstan
+C(t, x) = f (x); simetri diberikan oleh pembalikan pada Proposisi 3.1; dan transitivitas diberikan oleh
+penggabungan pada proposisi yang sama.
+Ruang kontraktil menyediakan banyak homotopi.
+Lema 3.1. Jika Y kontraktil ke y0 ∈ Y , maka setiap pemetaan kontinu f : X → Y homotopik dengan
+pemetaan yang citranya termuat dalam {y0 }.
+
+                                                       19
+Bukti. Misalkan K : I × Y → Y menyaksikan kontraktilitas Y . Komposisi
+
+                                              id ×f          K
+                                      I × X −−I−−→ I × Y −→ Y
+
+merupakan homotopi dari f ke pemetaan konstan bernilai y0 . □
+Sebagai akibatnya, setiap dua pemetaan menuju ruang kontraktil saling homotopik: terapkan Lema
+3.1 kepada kedua pemetaan, balik salah satu homotopi menuju pemetaan konstan yang sama, lalu
+gabungkan keduanya dengan Proposisi 3.1. Karena ruang kontraktil dalam arti tertentu bersifat
+trivial, pemetaan menuju ruang tersebut juga trivial dalam arti yang sama.
+Versi antara yang penting muncul ketika ruang asalnya diskret, atau bahkan hanya ruang satu titik.
+Definisi 3.4 (terhubung lintasan). Ruang tak kosong Y disebut terhubung lintasan jika setiap
+dua pemetaan ∗ → Y saling homotopik.
+Dengan menguraikan definisi ini, untuk setiap dua titik y0 , y1 ∈ Y terdapat lintasan kontinu γ : I → Y
+dengan γ(0) = y0 dan γ(1) = y1 .
+Latihan 3.3. Buktikan bahwa ruang tak kosong Y terhubung lintasan jika dan hanya jika, untuk
+setiap ruang diskret S, setiap dua pemetaan kontinu S → Y saling homotopik.
+Proposisi 3.2. Setiap ruang terhubung lintasan adalah terhubung.
+Untuk ruang X dan Y , tuliskan
+
+
+                            [X, Y ] = {f : X → Y | f kontinu}/homotopi.
+
+Himpunan komponen lintasan dari Y adalah [∗, Y ]. Ruang Y terhubung lintasan jika dan hanya jika
+[∗, Y ] = ∗. Perhatikan bahwa π0 (Y ) dalam catatan ini berarti himpunan komponen terhubung,
+sedangkan [∗, Y ] berarti himpunan komponen lintasan. Keduanya tidak boleh diidentifikasi tanpa
+hipotesis tambahan, misalnya keterhubungan lintasan lokal yang sesuai.
+
+3.3   Kategori dan funktor
+Sejauh ini kita membahas ruang topologis dan pemetaan kontinu, tetapi kita juga secara tersirat
+memakai himpunan dan fungsi yang tidak harus kontinu. Pada kedua konteks tersebut, komposisi
+bersifat asosiatif dan tersedia pemetaan identitas. Kelak kita akan menggunakan kelas-kelas ruang
+topologis yang lebih terbatas agar sifat yang dibutuhkan benar-benar berlaku.
+Definisi 3.5 (kategori). Suatu kategori C terdiri atas koleksi objek W, X, Y, Z, . . . dan, untuk setiap
+pasangan objek X, Y , koleksi morfisme C(X, Y ), bersama data berikut:
+  1. Untuk f ∈ C(X, Y ) dan g ∈ C(Y, Z), dipilih morfisme komposit g ◦ f ∈ C(X, Z).
+  2. Untuk setiap objek X, dipilih morfisme identitas idX ∈ C(X, X).
+Data tersebut harus memenuhi:
+  1. Untuk h ∈ C(W, X), f ∈ C(X, Y ), dan g ∈ C(Y, Z),
+
+
+                                          g ◦ (f ◦ h) = (g ◦ f ) ◦ h.
+
+  2. Untuk setiap h ∈ C(W, X) dan f ∈ C(X, Y ),
+
+
+                                        idX ◦h = h,      f ◦ idX = f.
+
+
+
+
+                                                  20
+Untuk f ∈ C(X, Y ), objek X disebut sumber f dan Y disebut sasaran f ; ditulis X = s(f ), Y = t(f ),
+atau f : X → Y . Jika setiap C(X, Y ) merupakan himpunan, maka C disebut kecil secara lokal dan
+C(X, Y ) disebut himpunan morfisme atau himpunan-hom.
+Banyak kategori mempunyai objek berupa himpunan yang dilengkapi struktur tambahan, misalnya
+topologi, dan morfisme berupa fungsi yang sesuai dengan struktur tersebut, tetapi tidak semua
+kategori berbentuk demikian. Kita telah menjumpai Top, kategori ruang topologis dan pemetaan
+kontinu, serta Set, kategori himpunan dan fungsi. Ruang vektor, grup, grup abelian, manifold, dan
+gelanggang memberikan contoh lain.
+Contoh 3.3 (himpunan bertitik). Kategori Set∗ mempunyai objek berupa himpunan bertitik
+(X, x), dengan x ∈ X titik yang ditentukan, dan morfisme berupa pemetaan bertitik
+
+
+                                 f : (X, x) −→ (Y, y),      f (x) = y.
+
+Kategori ini dapat dipandang sebagai kategori objek aljabar dengan struktur yang paling lemah. Ban-
+dingkan dengan homomorfisme, transformasi linear, dan homomorfisme gelanggang, yang semuanya
+mempertahankan unsur tertentu.
+Kekuatan utama kategori tampak pada hubungannya satu sama lain; sebuah kategori yang terisolasi
+hanya dapat memberi informasi terbatas.
+Definisi 3.6 (funktor). Diberikan kategori C dan D, suatu funktor F : C → D terdiri atas data:
+  1. Untuk setiap objek X dari C, suatu objek F (X) dari D.
+  2. Untuk setiap morfisme f : X → Y dalam C, suatu morfisme F (f ) : F (X) → F (Y ) dalam D.
+Untuk setiap objek X dari C dan setiap pasangan morfisme yang dapat dikomposisikan, f : X → Y
+dan g : Y → Z, data ini memenuhi
+
+
+                           F (idX ) = idF (X) ,   F (g ◦ f ) = F (g) ◦ F (f ).
+
+Sifat kedua disebut funktorialitas. Untuk kategori kecil secara lokal, aturan pada morfisme memberikan
+fungsi
+
+
+                                    C(X, Y ) −→ D(F (X), F (Y )).
+
+Selain funktor identitas, kita telah melihat sedikitnya tiga contoh:
+  • funktor pelupa, atau funktor himpunan yang mendasari, U : Top → Set;
+  • funktor topologi diskret disc : Set → Top;
+  • funktor komponen terhubung π0 : Top → Set.
+Topologi indiskret juga menghasilkan funktor Set → Top, tetapi tidak akan kita gunakan. Kita
+belum membuktikan bahwa π0 benar-benar funktor. Funktor dapat dikomposisikan, sehingga misalnya
+diperoleh
+
+
+                          disc ◦U : Top → Top,         disc ◦π0 : Top → Top.
+
+Misalkan C sebuah kategori dan D suatu subkategori: sebagian objek dan sebagian morfisme C yang
+dengan sendirinya membentuk kategori. Penyertaan objek dan morfisme membentuk funktor D ,→ C,
+yang disebut inklusi subkategori. Jika
+
+
+                                          D(X, Y ) = C(X, Y )
+
+
+
+                                                  21
+untuk setiap objek X, Y dari D, maka D disebut subkategori penuh. Secara lebih umum, funktor yang
+injektif pada objek dan morfisme dapat dipakai untuk mendeskripsikan subkategori.
+Contoh 3.4. Funktor disc : Set → Top mengidentifikasi Set dengan subkategori penuh ruang-ruang
+diskret di dalam Top. Fakta ini akan dipakai tanpa komentar lebih lanjut. Kelak kita juga akan
+membatasi perhatian pada subkategori-subkategori penuh tertentu dari Top.
+Lema 3.2 (citra ruang terhubung). Misalkan X terhubung dan f : X → Y kontinu. Maka
+im(f ) ⊆ Y terhubung.
+Bukti. Ambil ruang diskret S dan pemetaan kontinu g : im(f ) → S. Komposisi
+
+                                                  f             g
+                                            → im(f ) →
+                                           X−        − S
+
+kontinu. Karena X terhubung, citra komposisi ini memuat paling banyak satu titik. Pemetaan f : X →
+im(f ) surjektif, sehingga citra g juga memuat paling banyak satu titik. Jadi im(f ) terhubung. □
+Proposisi 3.3. Aturan X 7→ π0 (X) menentukan funktor
+
+
+                                          π0 : Top −→ Set.
+
+Bukti. Untuk pemetaan kontinu f : X → Y , kita perlu mendefinisikan fungsi
+
+
+                                      π0 (f ) : π0 (X) −→ π0 (Y ).
+
+Ambil α ∈ π0 (X) dan komponen terhubung terkait Xα ⊆ X. Menurut Lema 3.2, f (Xα ) terhubung,
+sehingga termuat dalam tepat satu komponen terhubung Y . Definisikan π0 (f )(α) sebagai komponen
+tersebut.
+Jika g : Y → Z kontinu, komponen yang memuat g(f (Xα )) sama dengan komponen yang diperoleh
+dengan menerapkan π0 (g) kepada komponen yang memuat f (Xα ). Jadi
+
+
+                                      π0 (g ◦ f ) = π0 (g) ◦ π0 (f ).
+
+Selain itu, π0 (idX ) adalah fungsi identitas pada π0 (X). Kedua hukum funktor terpenuhi. □
+Bukti kedua untuk Proposisi 3.3 (kasus terhubung secara lokal). Andaikan semua objek
+yang dipakai dalam argumen ini terhubung secara lokal; mula-mula ambil f : X → Y . Pemetaan
+kanonik Y → π0 (Y ) kontinu ketika π0 (Y ) diberi topologi diskret. Karena komposisi
+
+                                              f
+                                           → Y −→ π0 (Y )
+                                          X−
+
+konstan pada setiap komponen Xα , ia turun melalui X → π0 (X) menjadi fungsi
+
+
+                          π0 (f ) : π0 (X) −→ π0 (Y ),              π0 (f )(α) = [f (x)]
+
+untuk sembarang x ∈ Xα . Diagram berikut komutatif:
+
+                                                        f
+                                          X            →
+                                                       −             Y
+                                          ↓                          ↓
+                                                      π0 (f )
+                                       π0 (X) −−−→ π0 (Y ).
+
+
+
+                                                        22
+Pada ruang yang terhubung secara lokal, topologi hasil bagi pada π0 (X) sama dengan topologi diskret;
+jadi pemetaan di baris bawah kontinu, walaupun di sini kita hanya memandangnya sebagai fungsi
+himpunan. Untuk memeriksa komposisi di subkategori ruang terhubung lokal, ambil pula ruang
+terhubung lokal Z, pemetaan g : Y → Z, dan titik x ∈ Xα . Maka
+
+
+                    π0 (g) π0 (f )(α) = π0 (g)([f (x)]) = [g(f (x))] = π0 (g ◦ f )(α),
+                                    
+
+
+yang sekali lagi membuktikan funktorialitas. □
+Latihan 3.4. Buktikan bahwa
+
+
+                                         [∗, −] : Top −→ Set
+
+adalah funktor. Buktikan pula pernyataan yang lebih umum: untuk setiap ruang tetap A, aturan
+[A, −] : Top → Set adalah funktor.
+
+3.4   Kategori homotopi
+Contoh kategori penting lainnya adalah kategori homotopi Ho. Objeknya ialah ruang topologis,
+sedangkan
+
+
+                                         Ho(X, Y ) = [X, Y ].
+
+Terdapat funktor Top → Ho yang identik pada objek dan mengirim setiap pemetaan kontinu ke
+kelas homotopinya. Dua objek isomorfik dalam Ho jika dan hanya jika keduanya ekuivalen secara
+homotopi.
+Latihan 3.5. Buktikan bahwa komposisi kelas homotopi terdefinisi dengan baik, sehingga Ho benar-
+benar merupakan kategori. Verifikasi pula pernyataan tentang funktor Top → Ho dan isomorfisme
+objek pada paragraf sebelumnya.
+
+
+Pendamping penguasaan: solusi lengkap
+Bagian ini merupakan materi baru untuk edisi bahasa Indonesia. Setiap tugas pada Kuliah 3 dijawab
+lengkap, dan bukti Proposisi 3.2 yang tidak dituliskan dalam sumber diberikan secara eksplisit.
+
+3.5   Solusi Latihan 3.1
+Dari u : X → S, definisikan
+
+
+                                         v = u ◦ h−1 : Z → S.
+
+Pemetaan v kontinu karena h−1 dan u kontinu, serta v ◦ h = u. Jika w : Z → S juga memenuhi
+w ◦ h = u, maka
+
+
+                                   w = w ◦ h ◦ h−1 = u ◦ h−1 = v,
+
+sehingga v unik. Konstruksi sebaliknya ialah v 7→ v ◦ h; jadi kita memperoleh korespondensi bijektif
+antara pemetaan kontinu X → S dan Z → S.
+Jika X terhubung, setiap u : X → S mempunyai citra paling banyak satu titik. Karena im(u) =
+im(u ◦ h−1 ), hal yang sama berlaku bagi setiap pemetaan kontinu Z → S, sehingga Z terhubung.
+Argumen dengan h−1 memberikan implikasi sebaliknya.
+
+                                                   23
+3.6   Solusi Latihan 3.2
+Pertama, ambil pemetaan kontinu f : C ∪ D → S ke ruang diskret. Pembatasannya pada C dan D
+masing-masing mempunyai citra paling banyak satu titik. Pilih x ∈ C ∩ D. Jika kedua citra tidak
+kosong, nilai bersama f (x) memaksa keduanya sama. Maka f (C ∪ D) memuat paling banyak satu
+titik, sehingga C ∪ D terhubung.
+Untuk relasi ∼:
+  • refleksivitas mengikuti karena singleton {x} terhubung;
+  • simetri langsung dari definisi;
+  • jika x1 ∼ x2 melalui C dan x2 ∼ x3 melalui D, maka x2 ∈ C ∩ D, sehingga C ∪ D terhubung
+    dan x1 ∼ x3 .
+Jadi ∼ merupakan relasi ekuivalensi. Kelas [x] adalah gabungan semua subset terhubung yang
+memuat x. Gabungan ini terhubung: setiap pemetaan kontinu dari gabungan tersebut ke ruang
+diskret konstan pada tiap anggota keluarga dan semua nilai konstannya sama karena setiap anggota
+memuat x. Kelas [x] juga maksimal, sebab setiap subset terhubung yang memuatnya, dan khususnya
+memuat x, sudah termasuk dalam gabungan yang mendefinisikan [x]. Jadi [x] adalah komponen
+terhubung.
+Sebaliknya, jika C komponen terhubung dan x ∈ C, maka C ⊆ [x]. Karena [x] terhubung dan C
+maksimal, C = [x]. Dengan demikian kelas ekuivalensi dan komponen terhubung tepat sama.
+
+3.7   Pemeriksaan Contoh 3.2
+Misalkan X kontraktil ke x0 ∈ X. Ambil pemetaan tunggal p : X → ∗ dan pemetaan i : ∗ → X
+dengan i(∗) = x0 . Maka
+
+
+                                    p ◦ i = id∗ ,        i ◦ p = cx0 .
+
+Kontraksi memberikan homotopi idX ≃ cx0 ; dengan membalik homotopi tersebut, diperoleh cx0 ≃ idX .
+Jadi p dan i merupakan invers hingga homotopi, sehingga X ekuivalen secara homotopi dengan ruang
+satu titik.
+
+3.8   Solusi Latihan 3.3
+Andaikan dahulu Y terhubung lintasan. Ambil ruang diskret S dan dua pemetaan a, b : S → Y .
+Untuk setiap s ∈ S, pilih lintasan γs : I → Y dari a(s) ke b(s). Definisikan
+
+
+                               H : I × S −→ Y,               H(t, s) = γs (t).
+
+Karena S diskret, I × S adalah gabungan saling lepas dari subruang terbuka I × {s}. Pembatasan H
+pada tiap subruang ini adalah γs dan kontinu; sifat universal gabungan saling lepas menunjukkan
+bahwa H kontinu. Nilai ujungnya adalah a dan b, sehingga a ≃ b.
+Sebaliknya, terapkan syarat tersebut pada ruang diskret satu titik S = ∗. Setiap dua pemetaan ∗ → Y
+homotopik, sehingga Y terhubung lintasan. Ketak-kosongan Y disyaratkan pada kedua rumusan.
+
+3.9   Bukti Proposisi 3.2
+Misalkan Y terhubung lintasan dan f : Y → S kontinu, dengan S diskret. Untuk sembarang y0 , y1 ∈ Y ,
+pilih lintasan γ : I → Y dari y0 ke y1 . Komposisi
+
+                                               γ         f
+                                             →Y −
+                                            I−  →S
+
+
+
+                                                    24
+kontinu. Interval I terhubung, sehingga citranya dalam S memuat paling banyak satu titik. Akibatnya
+f (y0 ) = f (y1 ). Karena kedua titik dipilih sembarang, f (Y ) memuat tepat satu titik. Jadi setiap
+pemetaan kontinu dari Y ke ruang diskret konstan, dan Y terhubung.
+
+3.10    Solusi Latihan 3.4
+Untuk ruang tetap A, definisikan funktor [A, −] pada objek dengan
+
+
+                                               Y 7−→ [A, Y ].
+
+Untuk pemetaan kontinu h : Y → Z, definisikan
+
+
+                              [A, h] : [A, Y ] −→ [A, Z],        [f ] 7−→ [h ◦ f ].
+
+Aturan ini terdefinisi dengan baik. Jika f0 ≃ f1 melalui H : I × A → Y , maka h ◦ H merupakan
+homotopi dari h ◦ f0 ke h ◦ f1 , sehingga kelas hasil tidak bergantung pada wakil.
+Untuk identitas dan komposisi,
+
+
+                                            [A, idY ]([f ]) = [f ],
+
+dan jika k : Z → W , maka
+
+
+                            [A, k ◦ h]([f ]) = [k ◦ h ◦ f ] = [A, k] [A, h]([f ]) .
+                                                                                  
+
+
+Jadi [A, −] adalah funktor. Kasus A = ∗ memberikan funktor [∗, −] yang diminta.
+
+3.11    Solusi Latihan 3.5
+Untuk kelas [f ] ∈ [X, Y ] dan [g] ∈ [Y, Z], definisikan
+
+
+                                             [g] ◦ [f ] = [g ◦ f ].
+
+Kita harus membuktikan bahwa hasil ini tidak bergantung pada wakil. Misalkan f0 ≃ f1 melalui
+H : I × X → Y dan g0 ≃ g1 melalui K : I × Y → Z. Komposisi
+
+
+                                           (t, x) 7−→ g0 (H(t, x))
+
+memberikan homotopi g0 ◦ f0 ≃ g0 ◦ f1 , sedangkan
+
+
+                                           (t, x) 7−→ K(t, f1 (x))
+
+memberikan homotopi g0 ◦ f1 ≃ g1 ◦ f1 . Dengan menggabungkan keduanya menggunakan Proposisi
+3.1, diperoleh
+
+
+                                             g0 ◦ f0 ≃ g1 ◦ f1 .
+
+Jadi komposisi kelas terdefinisi dengan baik. Asosiativitas diwarisi dari komposisi pemetaan, dan
+[idX ] bertindak sebagai identitas. Maka Ho adalah kategori.
+
+
+
+
+                                                      25
+Aturan Q : Top → Ho dengan Q(X) = X dan Q(f ) = [f ] mempertahankan identitas dan komposisi
+secara langsung, sehingga merupakan funktor.
+Jika [f ] : X → Y isomorfik dalam Ho dengan invers [g], maka
+
+
+                                [g ◦ f ] = [idX ],        [f ◦ g] = [idY ].
+
+Artinya g ◦ f ≃ idX dan f ◦ g ≃ idY , sehingga f adalah ekuivalensi homotopi. Sebaliknya, setiap
+ekuivalensi homotopi dengan invers homotopi g memberikan isomorfisme [f ] dengan invers [g] dalam
+Ho.
+
+
+Tentang unit ini
+Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas Algebraic Topology
+karya David Michael Roberts (2019), tepatnya Notes.tex baris 878-1131 pada commit
+b947ad2e9f9e301bfe24590a9db653bc54fa1a53. Rentang itu dimulai dengan proposisi yang
+memuat penanda Kuliah 4 dan berakhir tepat setelah pernyataan tentang serat ruang penutup di
+sepanjang lintasan. Bukti pernyataan terakhir tidak terdapat dalam rentang unit ini. Karya sumber
+tersedia di bawah Creative Commons Attribution 4.0 International.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian
+pengenal stabil, pemindahan diagram dan tugas dari catatan pinggir ke badan teks, serta koreksi
+atau klarifikasi terbatas yang dicatat satu per satu dalam ledger edisi. Di antaranya: arah pemetaan
+pada pelestarian koproduk; rumus sin(1/x) pada kurva sinus topolog; objek kanan bawah diagram
+naturalitas; kodomain transformasi U ⇒ π0 ; karakterisasi SLPC yang benar beserta bukti global
+Proposisi 4.2; notasi prapeta χ−1 ; makna basis lingkungan dalam definisi SLPC; definisi pemetaan
+dan homotopi bertitik; kekontinuan fungsi yang turun melalui pemetaan kuadrat; serta penggunaan
+homeomorfisme pada definisi ruang penutup dan istilah baji untuk S 1 ∨ S 1 . Materi pendamping
+penguasaan menjawab seluruh empat latihan dan satu pertanyaan sumber, serta melengkapi bukti
+Lema 4.1 yang tidak dituliskan dalam sumber. Materi baru ini juga tersedia di bawah CC BY 4.0.
+Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
+
+
+4     Kuliah 4
+4.1   Funktor pada kategori homotopi
+Proposisi 4.1. Funktor π0 turun menjadi sebuah funktor
+
+
+                                          π0 : Ho −→ Set.
+
+Bukti. Kita buktikan bahwa aturan pada morfisme terdefinisi dengan baik pada setiap himpunan
+morfisme; sifat-sifat lainnya rutin. Misalkan f, g : X → Y homotopik melalui H : I × X → Y . Kita
+harus menunjukkan bahwa untuk setiap α ∈ π0 (X),
+
+
+                                        π0 (f )(α) = π0 (g)(α).
+
+Ambil x dalam komponen terhubung Xα . Komposisi
+
+                                               H
+                                I −→ I × X −→ Y,              t 7−→ (t, x),
+
+adalah lintasan f (x) ⇝ g(x). Karena Xα terhubung, masing-masing citra f (Xα ) dan g(Xα ) termuat
+dalam satu komponen terhubung Y . Lintasan di atas menunjukkan bahwa kedua komponen tersebut
+sama. Jadi π0 (f )(α) = π0 (g)(α). □
+
+                                                     26
+Akibatnya, jika π0 (X) ∼
+                       ̸ π0 (Y ), maka X dan Y tidak mungkin ekuivalen secara homotopi, apalagi
+                        =
+homeomorfik.
+Latihan 4.1. Tunjukkan bahwa funktor [∗, −] : Top → Set turun menjadi funktor [∗, −] : Ho → Set.
+Berikut sebuah fakta yang berguna tentang ruang.
+Lema 4.1 (pelestarian koproduk). Untuk setiap keluarga ruang {Xβ }β∈J , terdapat isomorfisme
+                                                                         
+                                                     ∼
+                                                     =
+                                            π0 (Xβ ) −
+                                      G                             G
+                                                     → π0              Xβ 
+                                      β∈J                        β∈J
+
+
+dan
+                                                                        
+                                                    ∼
+                                                    =
+                                            [∗, Xβ ] −
+                                      G                         G
+                                                     → ∗,            Xβ  .
+                                      β∈J                       β∈J
+
+
+Pemetaan maju diinduksi oleh keluarga inklusi inβ : Xβ → γ∈J Xγ , sedangkan pemetaan balik
+                                                                          F
+
+mengirim setiap komponen ke suku koproduk tunggal yang memuatnya. Dengan kata lain, π0 dan
+[∗, −] melestarikan koproduk.
+Kita telah memperoleh funktor π0 : Top → Set dan, dengan sedikit penyalahgunaan notasi, funktor
+π0 : Ho → Set. Keduanya membentuk segitiga komutatif
+
+                                                        π
+                                             Top −−0→ Set
+                                             ↓ Q ↗ π0
+                                             Ho
+
+dengan Q mengirim pemetaan kontinu ke kelas homotopinya.
+Contoh 4.1. Jika X dan Y adalah ruang dengan |π0 (X)| < |π0 (Y )|, tidak ada pemetaan kontinu
+surjektif X → Y . Memang, pemetaan kontinu surjektif akan menginduksi fungsi surjektif π0 (X) →
+π0 (Y ), yang bertentangan dengan pertidaksamaan kardinalitas tersebut.
+Berikut contoh yang instruktif.
+Contoh 4.2 (kurva sinus topolog). Kurva sinus topolog adalah citra C dari pemetaan
+
+
+                                          [−1, 1] ⊔ (0, 1] −→ R2
+
+yang didefinisikan oleh
+
+                                   y 7−→ (0, y),                    y ∈ [−1, 1],
+                                  (
+
+                                   x 7−→ x, sin(1/x) ,              x ∈ (0, 1],
+                                                    
+
+
+dan diberi topologi subruang. Ruang ini merupakan ruang metrik kompak dengan metrik Euklides
+yang diwariskan.
+Faktanya, setiap fungsi kontinu f : C → {0, 1} bersifat konstan. Pada cabang berosilasi, nilai f
+konstan karena (0, 1] terhubung. Tuliskan nilai itu sebagai a. Pada ruas vertikal, nilai f juga konstan;
+tuliskan sebagai b. Karena
+
+                                                 1
+                                                   
+                                                   , 0 −→ (0, 0)
+                                                nπ
+
+
+                                                      27
+di C, kekontinuan memberikan
+
+                                                               1
+                                                                      
+                                b = f (0, 0) = lim f             , 0 = a.
+                                                n→∞           nπ
+
+Jadi C terhubung. Akan tetapi, tidak ada lintasan kontinu γ : [0, 1] → C dengan γ(0) = (0, 0) dan
+γ(1) = (1, sin 1). Karena interval terhubung lintasan, C mempunyai tepat dua komponen lintasan,
+tetapi hanya satu komponen terhubung:
+
+
+                                  [∗, C] ∼
+                                         = {0, 1},        π0 (C) = ∗.
+
+Latihan 4.2. Buktikan klaim pada Contoh 4.2 bahwa tidak ada lintasan dari (0, 0) ke (1, sin 1) di
+dalam C. Petunjuk sumber menyarankan agar Anda memeriksa perilaku limit suatu lintasan saat
+koordinat pertamanya mendekati nol.
+Jadi kita mempunyai dua invarian berbeda. Untuk setiap ruang X, terdapat pemetaan surjektif
+kanonik
+
+
+                                         [∗, X] −→ π0 (X)
+
+yang mengirim setiap komponen lintasan ke komponen terhubung yang memuatnya. Selain itu, untuk
+setiap pemetaan f : X → Y , diagram berikut selalu komutatif:
+
+                                                [∗,f ]
+                                      [∗, X]    −−→           [∗, Y ]
+                                         ↓                      ↓
+                                                π0 (f )
+                                      π0 (X) −−−→ π0 (Y ).
+
+Inilah sebuah contoh transformasi natural.
+Definisi 4.1 (transformasi natural). Misalkan F, G : C → D adalah funktor. Sebuah transformasi
+natural α : F ⇒ G terdiri atas data berikut: untuk setiap objek X dalam C, dipilih sebuah morfisme
+
+
+                                      αX : F (X) −→ G(X),
+
+yang disebut komponen α pada X. Data ini harus memenuhi syarat bahwa untuk setiap morfisme
+f : X → Y dalam C, diagram berikut komutatif:
+
+                                                F (f )
+                                       F (X) −−−→             F (Y )
+                                       αX ↓                   ↓ αY
+                                                G(f )
+                                       G(X) −−−→ G(Y ).
+
+Dengan kata lain,
+
+
+                                     G(f ) ◦ αX = αY ◦ F (f ).
+
+Transformasi natural disebut isomorfisme natural jika semua komponennya merupakan isomorfisme.
+Sebagai contoh, terdapat transformasi natural
+
+
+                                 disc ◦U ⇒ idTop : Top −→ Top,
+
+
+                                                  28
+yang komponennya pada X adalah pemetaan identitas kontinu disc(U (X)) → X, dan transformasi
+natural
+
+
+                                           U ⇒ π0 : Top −→ Set,
+
+yang komponennya adalah pemetaan kanonik U (X) → π0 (X).
+
+4.2   Ruang terhubung lintasan semilokal
+Kita mencari syarat yang menentukan suatu subkategori penuh dari Top sedemikian sehingga
+komponen
+
+
+                                                [∗, X] −→ π0 (X)
+
+dari transformasi natural [∗, −] ⇒ π0 menjadi isomorfisme untuk setiap ruang X dalam subkategori
+tersebut.
+Definisi 4.2 (terhubung lintasan semilokal). Sebuah ruang X disebut terhubung lintasan
+semilokal, disingkat SLPC, jika X mempunyai basis lingkungan yang terdiri atas himpunan-himpunan
+N dengan sifat berikut: untuk setiap x, y ∈ N , terdapat suatu lintasan di X dari x ke y.
+Lintasan dalam definisi ini tidak disyaratkan tetap berada di dalam N .
+Sebuah ruang bersifat SLPC jika dan hanya jika setiap komponen lintasannya terbuka. Pernyataan
+yang tampak mirip dengan “setiap komponen terhubungnya SLPC” tidak memadai: pada Q dengan
+topologi subruang, setiap komponen terhubung adalah ruang satu titik dan karenanya SLPC, tetapi
+Q sendiri tidak SLPC. Sifat SLPC dipertahankan oleh homeomorfisme: jika X ∼
+                                                                          = Y dan salah satunya
+SLPC, maka yang lain juga SLPC.
+Proposisi 4.2. Jika X merupakan ruang SLPC, maka pemetaan kanonik
+
+
+                                                [∗, X] −→ π0 (X)
+
+adalah isomorfisme.
+Bukti. Kasus X = ∅ langsung. Untuk setiap x ∈ X, definisikan χx : X → {0, 1} dengan
+
+                                           1,   jika terdapat lintasan y ⇝ x,
+                                       (
+                            χx (y) =
+                                           0,   jika tidak.
+
+Tuliskan
+
+
+                                                 Cx := χ−1
+                                                        x (1),
+
+
+yakni komponen lintasan yang memuat x. Kita akan menunjukkan bahwa Cx terbuka dan tertutup.
+Ambil y ∈ Cx dan pilih lingkungan V ∋ y dari basis dalam Definisi 4.2. Untuk setiap z ∈ V , terdapat
+lintasan z ⇝ y di X. Menggabungkannya dengan lintasan y ⇝ x menunjukkan bahwa z ∈ Cx . Jadi
+V ⊆ Cx , dan Cx terbuka.
+Sebaliknya, ambil y ∈ Cx dan lingkungan basis V ∋ y. Karena V ∩ Cx ̸= ∅, pilih z ∈ V ∩ Cx . Sifat
+V memberikan lintasan y ⇝ z di X, sedangkan z ∈ Cx memberikan lintasan z ⇝ x. Penggabungan
+keduanya menghasilkan lintasan y ⇝ x, sehingga y ∈ Cx . Maka Cx ⊆ Cx , jadi Cx tertutup.
+
+
+
+
+                                                      29
+Sekarang biarkan K menjadi komponen terhubung dari X. Ruang K merupakan gabungan komponen-
+komponen lintasan yang termuat di dalamnya. Setiap komponen lintasan C ⊆ K terbuka di K, dan
+komplemennya di K merupakan gabungan komponen lintasan lain yang juga terbuka. Jadi C terbuka
+sekaligus tertutup di K. Karena K terhubung dan tak kosong, hanya satu komponen lintasan yang
+termuat di dalam K. Dengan demikian komponen lintasan dan komponen terhubung X berimpit,
+sehingga pemetaan kanonik [∗, X] → π0 (X) bijektif. □
+Untuk sisa bagian mata kuliah ini, kita akan mempertimbangkan ruang-ruang SLPC. Ruang-ruang
+tersebut membentuk subkategori penuh
+
+
+                                         Topslpc ,→ Top.
+
+Ruang diskret bersifat SLPC, sehingga terdapat pula subkategori Set ,→ Topslpc melalui funktor
+topologi diskret.
+Contoh 4.3. Setiap ruang terhubung lintasan X bersifat SLPC. Memang, untuk lingkungan apa
+pun N dan setiap x, y ∈ N , sudah tersedia lintasan di X yang menghubungkan x dan y.
+Latihan 4.3. Tunjukkan bahwa produk dua ruang SLPC bersifat SLPC, dan bahwa setiap ruang
+vektor topologis yang konveks lokal bersifat SLPC.
+Contoh 4.4. Setiap manifold bersifat SLPC, sebab setiap titik berada dalam suatu peta koordinat
+yang homeomorfik dengan sebuah subruang terbuka dari Rn , dan bola-bola Euklides yang cukup kecil
+terhubung lintasan.
+Peringatan: subruang dari ruang SLPC belum tentu SLPC. Sebagai contoh, kurva sinus topolog
+merupakan subruang dari ruang kontraktil R2 , tetapi kurva itu sendiri tidak SLPC.
+Pertanyaan 4.1. Jika X bersifat SLPC dan q : X → Y adalah pemetaan hasil bagi, sehingga Y
+diberi topologi final terhadap q, apakah Y juga bersifat SLPC?
+
+4.3   Ruang dan homotopi bertitik
+Masih ada satu pokok teknis terakhir.
+Definisi 4.3 (ruang bertitik). Sebuah ruang bertitik adalah pasangan (X, x), dengan X ruang
+topologis dan x ∈ X. Pemetaan bertitik
+
+
+                                        f : (X, x) −→ (Y, y)
+
+adalah pemetaan kontinu f : X → Y yang memenuhi f (x) = y. Ruang bertitik dan pemetaan bertitik
+membentuk kategori Top∗ .
+Sebuah homotopi bertitik antara pemetaan bertitik f, g : (X, x0 ) → (Y, y0 ) adalah homotopi H : I ×
+X → Y dari f ke g yang juga memenuhi
+
+
+                               H(t, x0 ) = y0      untuk setiap t ∈ I.
+
+Kelas homotopi bertitik dari pemetaan bertitik dinotasikan dengan
+
+
+                                         [(X, x0 ), (Y, y0 )]∗ .
+
+Kategori Ho∗ didefinisikan secara analog dengan Ho. Kita memperoleh funktor
+
+
+                                        π0 : Ho∗ −→ Set∗ ,
+
+
+                                                  30
+dengan titik terpilih pada π0 (X) adalah komponen yang memuat x0 .
+
+4.4   Ruang penutup
+Kadang-kadang, ketika mempelajari suatu ruang tertentu X, kita perlu membangun ruang-ruang
+lain yang berkaitan dengan X untuk menelaah objek yang menarik.
+Contoh 4.5 (akar kuadrat pada bidang kompleks berlubang). Ambil
+
+
+                                        X = C× := C \ {0}.
+
+Tidak ada pilihan akar kuadrat yang kontinu pada seluruh X; suatu cabang kontinu dapat dipilih
+setelah sebuah potongan cabang dibuang dari domain. Bahkan, untuk fungsi kontinu f : C× → C,
+                 √
+ekspresi x 7→ f ( x) bergantung pada pilihan akar dan tidak serta-merta memberikan fungsi kontinu
+global pada X.
+Namun, kita memperoleh fungsi kontinu jika domainnya diubah. Pemetaan
+
+
+                                Z := C× −→ C× ,             z 7−→ z 2 = x,
+
+tidak injektif dan karena itu tidak mempunyai invers global. Jika kita bersedia memakai Z sebagai
+domain dan memasukkan argumen z yang memenuhi z 2 = x ke dalam f , kita kembali berurusan
+dengan fungsi kontinu. Jika f (z) = f (−z) untuk setiap z ∈ Z, definisikan g(x) = f (z) untuk
+sembarang z dengan z 2 = x. Fungsi g terdefinisi dengan baik dan kontinu: pemetaan p(z) = z 2
+adalah pemetaan terbuka dan surjektif, jadi merupakan pemetaan hasil bagi, dan persamaan f = g ◦ p
+memaksa kekontinuan g.
+Sifat pemetaan z 7→ z 2 di luar nol, serta pemetaan lain seperti z 7→ z n , eksponensial kompleks, dan
+fungsi rasional di luar kutub serta titik kritisnya, mengarah pada gagasan ruang penutup bagi domain
+tertentu di C. Kita memakai definisi umum untuk ruang sembarang.
+Definisi 4.4 (ruang penutup). Sebuah ruang penutup dari X adalah ruang Z yang dilengkapi
+pemetaan
+
+
+                                             π : Z −→ X
+
+dengan sifat berikut: untuk setiap x ∈ X, terdapat lingkungan terbuka Vx ∋ x dan homeomorfisme
+
+                                                    ∼
+                                                    =
+                                                    → Vx × π −1 (x)
+                                    φx : π −1 (Vx ) −
+
+di atas Vx . Artinya, diagram
+
+                                               φx
+                                    π −1 (Vx ) −−−→ Vx × π −1 (x)
+                                       π↓              ↓ pr1
+                                       Vx        =      Vx
+
+komutatif, dengan π −1 (x) diberi topologi diskret. Perhatikan bahwa
+
+
+                                     Vx × π −1 (x) ∼
+                                                            G
+                                                   =                  Vx .
+                                                         z∈π −1 (x)
+
+
+Pemetaan π sendiri juga disebut pemetaan penutup.
+                          π
+                      → X dan x ∈ X, tuliskan
+Untuk ruang penutup Z −
+
+                                                    31
+                                                 Zx := π −1 (x)
+
+untuk serat di atas x. Ruang X disebut ruang dasar.
+Contoh ruang penutup mencakup
+
+                                                                       (−)n
+                 exp : C −→ C× ,       S 2 −→ RP2 ,               U (1) −−−→ U (1)    (n ≥ 1),
+
+serta berbagai penutup ruang berbentuk angka delapan S 1 ∨ S 1 .
+                            π                ρ
+Latihan 4.4. Misalkan Z −   → Y dan Y − → X adalah pemetaan penutup. Andaikan ρ mempunyai
+serat hingga, yakni Yx hingga untuk setiap x ∈ X. Tunjukkan bahwa komposisi
+
+                                                      ρ◦π
+                                                   Z −−→ X
+
+juga merupakan pemetaan penutup.
+                                             π
+                                     → X, jika terdapat lintasan x0 ⇝ x1 di X, maka terdapat
+Proposisi 4.3. Untuk ruang penutup Z −
+bijeksi—ekuivalen dengan homeomorfisme untuk serat-serat diskret—
+
+
+                                                  Z x0 ∼
+                                                       = Z x1 .
+
+Bijeksi tersebut pada umumnya bergantung pada pilihan lintasan. Buktinya dimulai dalam Kuliah 5
+dan karena itu berada dalam unit berikutnya.
+
+
+Pendamping penguasaan: solusi lengkap
+Bagian ini merupakan materi baru untuk edisi bahasa Indonesia. Seluruh tugas dan pertanyaan dalam
+Kuliah 4 dijawab lengkap. Bukti Lema 4.1, yang tidak dituliskan dalam sumber, juga diberikan.
+Proposisi 4.3 sengaja tidak dibuktikan di sini karena pernyataannya berada tepat di batas akhir
+rentang sumber dan pembahasannya dilanjutkan pada unit berikutnya.
+
+4.5   Solusi Latihan 4.1
+Pada objek, tetapkan X 7→ [∗, X]. Untuk kelas homotopi [f ] ∈ Ho(X, Y ), definisikan
+
+
+                           [∗, [f ]] : [∗, X] −→ [∗, Y ],          [u] 7−→ [f ◦ u].
+
+Pertama, aturan ini tidak bergantung pada wakil u. Jika u0 ≃ u1 , maka komposisi suatu homotopi
+H : I × ∗ → X dengan f memberi f ◦ u0 ≃ f ◦ u1 .
+Aturan ini juga tidak bergantung pada wakil f . Jika f0 ≃ f1 melalui K : I × X → Y , maka untuk
+setiap u : ∗ → X, pemetaan
+
+
+                                         (t, ∗) 7−→ K(t, u(∗))
+
+adalah homotopi f0 ◦ u ≃ f1 ◦ u. Jadi aturan tersebut terdefinisi pada morfisme [f ] dalam Ho.
+Pelestarian identitas dan komposisi mengikuti dari
+
+
+                           [idX ◦u] = [u],          [(g ◦ f ) ◦ u] = [g ◦ (f ◦ u)].
+
+Maka [∗, −] turun menjadi funktor Ho → Set.
+
+                                                       32
+4.6   Bukti Lema 4.1
+Dalam koproduk topologis
+
+
+                                              X=
+                                                      G
+                                                            Xβ ,
+                                                      β∈J
+
+
+setiap suku koproduk Xβ terbuka sekaligus tertutup. Setiap subset terhubung tak kosong dari X
+harus termuat dalam satu suku koproduk: jika ia bertemu dua suku, fungsi kontinu ke himpunan
+diskret J yang mencatat indeks suku tidak akan konstan. Sebaliknya, setiap subset terhubung dalam
+sebuah Xβ tetap terhubung setelah dimasukkan ke X. Karena itu, komponen-komponen terhubung
+X tepat merupakan komponen-komponen dari semua Xβ , dan diperoleh bijeksi pertama.
+Untuk komponen lintasan, ambil lintasan γ : I → X. Karena I terhubung, citranya harus termuat
+dalam satu suku koproduk. Jadi dua titik dalam suku berbeda tidak mungkin terhubung oleh lintasan,
+sedangkan lintasan di suatu Xβ tetap merupakan lintasan di X. Komponen lintasan X pun tepat
+merupakan komponen lintasan semua suku, yang memberikan bijeksi kedua. Kedua bijeksi diinduksi
+oleh inklusi suku koproduk dan natural terhadap keluarga pemetaan.
+
+4.7   Solusi Latihan 4.2
+Andaikan terdapat lintasan γ : [0, 1] → C dari (0, 0) ke (1, sin 1). Tuliskan
+
+
+                                           γ(t) = (a(t), b(t)),
+
+dengan a, b kontinu. Karena a(0) = 0 dan a(1) = 1, himpunan a−1 (0) merupakan subset tertutup tak
+kosong dari [0, 1] yang tidak memuat 1. Maka ia mempunyai unsur terbesar
+
+
+                                          t0 = max a−1 (0) < 1.
+
+Untuk setiap t > t0 , kita mempunyai a(t) > 0, sehingga
+
+                                                             1
+                                                                  
+                                           b(t) = sin            .
+                                                            a(t)
+
+Pilih dua barisan bilangan positif yang menuju nol,
+
+                                           1                              1
+                                 rn = π         ,          sn = 3π             .
+                                        2 + 2πn                        2 + 2πn
+
+Untuk setiap k cukup besar, tetapkan mk = a(t0 + 1/k) > 0. Pilih indeks nk sedemikian sehingga
+rnk < mk dan snk < mk . Karena a(t0 ) = 0, teorema nilai antara memberikan titik uk , vk ∈ (t0 , t0 +1/k)
+dengan
+
+
+                                     a(uk ) = rnk ,         a(vk ) = snk .
+
+Jadi uk → t0 dan vk → t0 .
+Akibatnya,
+
+
+                                      b(uk ) = 1,          b(vk ) = −1.
+
+
+
+
+                                                      33
+Namun, kekontinuan b di t0 menuntut kedua barisan nilai itu menuju nilai yang sama, yaitu b(t0 ).
+Kontradiksi. Jadi lintasan tersebut tidak ada.
+Cabang berosilasi adalah citra kontinu dari (0, 1] dan terhubung lintasan, sedangkan ruas vertikal
+juga terhubung lintasan. Argumen di atas, diterapkan setelah reparametrisasi ujung bila perlu,
+menunjukkan bahwa tidak ada lintasan yang menghubungkan kedua bagian itu. Dengan demikian
+keduanya tepat merupakan dua komponen lintasan C.
+
+4.8    Solusi Latihan 4.3
+Misalkan X dan Y bersifat SLPC. Untuk (x, y) ∈ X × Y , ambil lingkungan dasar U × V dengan U
+dan V berasal dari basis SLPC masing-masing. Jika (x0 , y0 ), (x1 , y1 ) ∈ U × V , pilih lintasan
+
+
+                               α : I → X,    α(0) = x0 ,   α(1) = x1 ,
+
+dan
+
+
+                                β : I → Y,   β(0) = y0 ,   β(1) = y1 .
+
+Lintasan t 7→ (α(t), β(t)) berada di X × Y dan menghubungkan kedua titik tersebut. Jadi himpunan-
+himpunan U × V membentuk basis SLPC bagi produk.
+Sekarang misalkan E ruang vektor topologis yang konveks lokal. Setiap titik mempunyai basis
+lingkungan berupa translasi himpunan-himpunan konveks. Jika u dan v berada dalam satu lingkungan
+konveks N , lintasan garis
+
+
+                                        γ(t) = (1 − t)u + tv
+
+bahkan tetap berada dalam N . Karena itu setiap lingkungan basis tersebut memenuhi syarat Definisi
+4.2, sehingga E bersifat SLPC.
+
+4.9    Jawaban Pertanyaan 4.1
+Ya. Menurut Definisi 4.2, suatu ruang bersifat SLPC jika dan hanya jika setiap komponen lintasannya
+terbuka.
+Untuk arah maju, jika P adalah komponen lintasan dan y ∈ P , pilih lingkungan basis N ∋ y. Semua
+titik N dapat dihubungkan ke y oleh lintasan di ruang, sehingga N ⊆ P . Jadi P terbuka. Untuk
+arah balik, jika semua komponen lintasan terbuka, maka himpunan Px ∩ U , dengan Px komponen
+lintasan x dan U lingkungan terbuka dari x, membentuk basis lingkungan. Dua titik di Px ∩ U dapat
+dihubungkan oleh lintasan di X, sebagaimana diperbolehkan oleh Definisi 4.2.
+Sekarang biarkan P menjadi sebuah komponen lintasan Y . Jika dua titik x0 , x1 ∈ X berada dalam
+komponen lintasan yang sama di X, citra suatu lintasan di antara keduanya adalah lintasan dari q(x0 )
+ke q(x1 ) di Y . Jadi q −1 (P ) merupakan gabungan komponen-komponen lintasan X. Karena X SLPC,
+setiap komponen itu terbuka, sehingga q −1 (P ) terbuka. Definisi topologi hasil bagi menyatakan
+bahwa P terbuka di Y karena q −1 (P ) terbuka di X. Dengan demikian semua komponen lintasan Y
+terbuka, dan Y bersifat SLPC.
+
+4.10    Solusi Latihan 4.4
+Tetapkan x ∈ X. Karena ρ adalah pemetaan penutup, terdapat lingkungan terbuka U ∋ x yang
+tertutup secara merata:
+
+
+
+
+                                                 34
+                                           ρ−1 (U ) =
+                                                          G
+                                                                Ui ,
+                                                          i∈I
+
+dengan setiap pembatasan ρi := ρ|Ui : Ui → U suatu homeomorfisme. Himpunan indeks I berkores-
+pondensi dengan serat Yx , sehingga I hingga.
+Untuk setiap i ∈ I, tuliskan yi = ρ−1
+                                    i (x). Karena π adalah pemetaan penutup, pilih lingkungan
+terbuka Wi ⊆ Ui dari yi yang tertutup secara merata oleh π. Himpunan ρi (Wi ) adalah lingkungan
+terbuka dari x di U . Karena I hingga, irisan
+
+
+                                           V =         ρi (Wi ),
+                                                 \
+
+                                                 i∈I
+
+masih merupakan lingkungan terbuka dari x; jika I = ∅, irisan kosong ini dipahami sebagai U .
+Gantikan U dengan V dan setiap Ui dengan Vi := ρ−1i (V ) ⊆ Wi . Setiap Vi tetap tertutup secara
+merata oleh π dan dipetakan homeomorfik ke V oleh ρ.
+Untuk setiap i, tuliskan dekomposisi penutup
+
+
+                                         π −1 (Vi ) =
+                                                         G
+                                                                Wij ,
+                                                         j∈Ji
+
+
+dengan π|Wij : Wij → Vi sebuah homeomorfisme. Maka
+
+
+                                     (ρ ◦ π)−1 (V ) =
+                                                          G G
+                                                                       Wij ,
+                                                          i∈I j∈Ji
+
+
+dan pada setiap Wij , komposisi
+
+                                                π           ρ
+                                          Wij −−→ Vi −−→ V
+
+merupakan homeomorfisme. Jadi V tertutup secara merata oleh ρ ◦ π. Karena x dipilih sembarang,
+komposisi itu merupakan pemetaan penutup.
+
+
+Tentang unit ini
+Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas Algebraic Topology
+karya David Michael Roberts (2019), tepatnya Notes.tex baris 1132–1304 pada commit
+b947ad2e9f9e301bfe24590a9db653bc54fa1a53. Rentang itu dimulai dengan penanda Kuliah 5
+dan bukti pertama bagi Proposisi 4.3, lalu berakhir dengan invariansi transpor serat terhadap
+reparameterisasi lintasan. Baris 1305 memulai Kuliah 6 dan tidak termasuk dalam unit ini. Karya
+sumber tersedia di bawah Creative Commons Attribution 4.0 International.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian
+pengenal stabil, serta pemindahan keterangan dari catatan pinggir ke badan teks. Beberapa koreksi
+dan klarifikasi matematis terbatas juga diterapkan: sampul pada bukti serat diganti dengan subdivisi
+interval yang tunduk pada sampul trivial; notasi ruang penutup bertitik diperbaiki; konvensi serat
+kosong dan ketergantungan identifikasi pada pilihan dijelaskan; morfisme kategori ruang penutup
+dinyatakan lengkap; contoh analisis kompleks dibatasi pada klaim monodromi yang memang didukung;
+argumen trivialisasi interval memakai rantai subinterval dan lema penempelan; trivialisasi dinormalisasi
+pada serat awal; kesalahan tipe pada fungsi transisi diperbaiki; serta notasi dan bukti keunikan
+pengangkatan diperjelas. Semua perubahan substantif tersebut merupakan bagian dari adaptasi,
+bukan kutipan dari sumber lain.
+
+                                                    35
+Sumber tidak memuat lingkungan latihan dalam rentang ini. Karena itu, bagian pendamping
+penguasaan di akhir unit menambahkan empat pemeriksaan penguasaan beserta solusi lengkap, juga
+bukti bagi lema kekompakan dan proposisi tarik balik yang tidak dibuktikan dalam sumber. Seluruh
+materi baru itu tersedia di bawah CC BY 4.0. Edisi ini bersifat independen dan tidak menyiratkan
+dukungan atau pengesahan dari penulis sumber.
+
+
+5     Kuliah 5
+5.1   Serat ruang penutup di sepanjang lintasan
+Kita mulai dengan bukti pertama bagi pernyataan terakhir Unit 4.
+Bukti pertama Proposisi 4.3. Ambil lintasan
+
+
+                                γ : I −→ X,          γ(0) = x0 ,     γ(1) = x1 ,
+                                                                                                π
+dan suatu sampul terbuka {Vα } dari X yang memberikan trivialisasi bagi ruang penutup Z −
+                                                                                        → X.
+Prapeta {γ −1 (Vα )} merupakan sampul terbuka dari interval kompak I. Dengan lema bilangan
+Lebesgue, kita dapat memilih subdivisi
+
+
+                                         0 = t0 < t1 < · · · < tN = 1
+
+dan anggota-anggota sampul terbuka V1 , . . . , VN yang mentrivialkan ruang penutup serta memenuhi
+
+
+                                     γ([ti−1 , ti ]) ⊆ Vi       (1 ≤ i ≤ N ).
+
+Untuk setiap i, pilih trivialisasi
+
+                                                            ∼
+                                                            =
+                                           φi : π −1 (Vi ) −
+                                                           → Vi × Fi ,
+
+dengan Fi diskret. Trivialisasi itu mengidentifikasi setiap serat di atas titik Vi dengan Fi . Karena
+titik sambung γ(ti ) berada dalam Vi ∩ Vi+1 , kita memperoleh rangkaian bijeksi
+
+
+                                   = F1 ∼
+                               Zx0 ∼                   ∼ ··· ∼
+                                                  ∼ F2 =
+                                        = Zγ(t1 ) =          = FN ∼
+                                                                  = Z x1 .
+
+Komposisinya memberikan bijeksi Zx0 ∼   = Zx1 , yang sekaligus merupakan homeomorfisme karena
+kedua serat diskret. Argumen ini membuktikan keberadaan; pada tahap ini ia belum memberikan
+identifikasi yang dinyatakan bebas dari pilihan subdivisi dan trivialisasi. □
+                                                                                   π
+                                                                                 → X menentukan
+Jadi, jika X bersifat SLPC, maka untuk setiap α ∈ π0 (X), sebuah ruang penutup Z −
+satu kelas isomorfisme himpunan pada komponen terhubung Xα ⊆ X. Kelas isomorfisme ini disebut
+serat tipikal di atas Xα . Karena komponen terhubung dan komponen lintasan berimpit dalam ruang
+SLPC, setiap dua serat pada Xα memang isomorfik, tetapi belum ada identifikasi yang lebih disukai
+tanpa data tambahan.
+Catatan tentang serat kosong. Unit ini mengikuti konvensi sumber bahwa serat boleh kosong;
+dengan kata lain, pemetaan penutup tidak diwajibkan surjektif. Sebagian buku memasukkan
+surjektivitas ke dalam definisi pemetaan penutup. Jika X bertitik di x, sebuah ruang penutup bertitik
+ditulis
+
+
+                                     (Z, z) −→ (X, x),            π(z) = x.
+
+
+
+                                                        36
+Data titik di atas itu persis merupakan pilihan z ∈ Zx . Jika X terhubung dan SLPC, setiap x′ ∈ X
+dapat dihubungkan ke x oleh suatu lintasan. Identifikasi serat di sepanjang lintasan tersebut membawa
+z ke suatu titik di Zx′ , sehingga setiap serat tidak kosong. Identifikasi itu bergantung pada pilihan
+lintasan; pengangkatan lintasan di bawah akan membuat konstruksinya eksplisit.
+Terdapat kategori CovX yang objeknya adalah ruang-ruang penutup πi : Zi → X. Sebuah morfisme
+dari π1 ke π2 adalah pemetaan kontinu h : Z1 → Z2 di atas X, yaitu yang membuat segitiga
+
+                                                   h
+                                           Z1    −−→ Z2
+                                                 ↘π1 ↓ π2
+                                                      X
+
+komutatif, atau setara dengan π2 ◦ h = π1 . Demikian pula, kategori Cov(X,x) mempunyai objek
+ruang penutup bertitik (Z, z) → (X, x) dan morfisme di atas X yang juga mempertahankan titik
+terpilih di ruang atas. Kita akan mempelajari kategori-kategori ini untuk melihat informasi apa yang
+dikandungnya tentang topologi X.
+Contoh 5.1 (monodromi pada bidang kompleks berlubang). Untuk
+
+
+                                        X = C \ {p1 , . . . , pn },
+
+kategori CovX mengodekan data penutup tak bercabang dan monodromi. Setiap penutup topologis
+dari X memperoleh struktur permukaan Riemann yang ditarik balik sehingga proyeksinya holomorfik
+dan merupakan biholomorfisme lokal. Untuk penutup berlembar hingga, tiap lubang dapat diisi
+menurut siklus-siklus monodromi lokal sehingga diperoleh pemetaan bercabang; lubang itu menjadi
+nilai cabang hanya jika monodromi lokalnya tidak trivial. Untuk penutup berlembar tak hingga,
+pengisian semacam itu memerlukan syarat tambahan pada orbit monodromi atau ujung-ujung ruang.
+Jadi, data penutup saja tidak membenarkan klaim bahwa semua dan hanya titik pi pasti merupakan
+nilai kritis.
+Jika X terhubung dan SLPC, bukti pertama di atas hanya mengatakan bahwa untuk x0 , x1 ∈ X
+terdapat suatu bijeksi Zx0 ∼
+                           = Zx1 . Kita akan memperkuat pernyataan ini. Sebelum itu, kita
+memerlukan sebuah konstruksi untuk ruang penutup.
+
+5.2   Tarik balik ruang penutup
+                                                               π                   f
+                                                      → X dan pemetaan Y −
+Definisi 5.1 (tarik balik). Diberikan ruang penutup Z −                  → X, tarik balik Z
+sepanjang f adalah subruang
+
+
+                    f ∗ Z := Y ×X Z = {(y, z) ∈ Y × Z | f (y) = π(z)} ⊆ Y × Z.
+
+Ia berada dalam persegi komutatif
+
+                                                         pr
+                                         f ∗Z    −−−2→ Z
+                                       p = pr1 ↓       ↓π
+                                                         f
+                                            Y          −−→     X.
+
+Ruang hasil kali serat Y ×X Z sebenarnya dapat didefinisikan untuk sembarang pasangan pemetaan
+menuju X; pada definisi ini, asumsi bahwa π merupakan pemetaan penutup diperlukan untuk
+menyimpulkan bahwa proyeksi p juga merupakan pemetaan penutup.
+Proposisi 5.1. Dalam situasi Definisi 5.1, berlaku hal-hal berikut.
+  1. Pemetaan p : f ∗ Z → Y merupakan ruang penutup.
+
+                                                    37
+  2. Tarik balik mendefinisikan funktor
+
+                                                f ∗ : CovX −→ CovY .
+              g     f              π
+  3. Jika Y2 →              → X, terdapat isomorfisme kanonik dalam CovY2 ,
+                  → X dan Z −
+             − Y1 −
+
+                                                (f ◦ g)∗ Z ∼
+                                                           = g ∗ (f ∗ Z).
+
+Hanya butir pertama yang memakai asumsi bahwa π adalah pemetaan penutup. Butir kedua dan
+ketiga berlaku bagi tarik balik umum dalam kategori irisan Top/X, yang objeknya adalah pemetaan
+menuju X dan morfismenya adalah segitiga-segitiga komutatif.
+Akibat 5.1. Untuk setiap y ∈ Y , terdapat isomorfisme kanonik
+
+
+                                                (f ∗ Z)y ∼
+                                                         = Zf (y) ,
+
+yang diberikan oleh (y, z) 7→ z.
+                                                                                  π
+                                                             → X, kita dapat membentuk ruang
+Sekarang, untuk suatu lintasan γ : I → X dan ruang penutup Z −
+penutup tarik balik
+
+
+                                                    γ ∗ Z −→ I.
+
+Karena itu, kita perlu memahami ruang-ruang penutup dari I. Untuk setiap ruang diskret S, proyeksi
+S × I → I jelas merupakan ruang penutup.
+
+5.3   Ruang penutup dari interval
+                                                π
+                                      → I isomorfik dalam CovI dengan ruang penutup trivial
+Proposisi 5.2. Setiap ruang penutup Z −
+
+                                               pr
+                                                2
+                                       Z0 × I −−→ I,           Z0 := π −1 (0).
+
+Isomorfisme dapat dipilih agar pada Z0 × {0} merupakan identitas serat Z0 .
+Kita memerlukan lema bantu kecil berikut.
+Lema 5.1. Jika X kompak dan Z → X merupakan ruang penutup, maka terdapat sampul berhingga
+X oleh lingkungan-lingkungan yang di atasnya ruang penutup tersebut trivial. Lingkungan-lingkungan
+itu dapat dipilih terbuka.
+Bukti Proposisi 5.2. Terapkan Lema 5.1 pada I. Dengan memperhalus sampul berhingga
+menggunakan bilangan Lebesgue dan sedikit memperbesar subinterval-subinterval pembagian, kita
+dapat memilih rantai subinterval tertutup
+
+
+                                         [0, t1 ], [s2 , t2 ], . . . , [sN , 1]
+
+yang menutupi I, masing-masing termuat dalam suatu lingkungan trivial, dan memenuhi si+1 < ti
+untuk setiap pasangan berturutan. Argumen induksi pada N mereduksi penempelan menjadi kasus
+dua bagian.
+Jadi, andaikan I = [0, t] ∪ [s, 1] dengan s < t. Tuliskan ZA := π −1 (A). Kita mempunyai trivialisasi
+
+                                                                ∼
+                                                                =
+                                            τ : Z0 × [0, t] −
+                                                            → Z[0,t]
+
+dan
+
+                                                          38
+                                                            ∼
+                                                            =
+                                        σ : F × [s, 1] −
+                                                       → Z[s,1] ,
+
+dengan F diskret. Trivialisasi pertama dapat dinormalisasi: jika pembatasannya pada Z0 × {0}
+menginduksi permutasi b : Z0 → Z0 , prakomposisikan τ dengan b−1 × id. Setelah itu,
+
+
+                                      τ (z, 0) = z          (z ∈ Z0 ).
+
+Pada irisan [s, t], pertimbangkan komposisi
+
+                                        τ            σ −1                    pr
+                            Z0 × [s, t] −−→ Z[s,t] −−−→ F × [s, t] −−−1→ F.
+
+Jika z ∈ Z0 ditetapkan, komposisi itu memberi pemetaan kontinu {z} × [s, t] → F . Karena [s, t]
+terhubung dan F diskret, pemetaan ini konstan. Tuliskan nilai konstannya sebagai pz . Secara eksplisit,
+untuk sembarang r ∈ [s, t],
+
+                                                                    
+                                       pz = pr1 σ −1 (τ (z, r)) .
+
+Pada setiap r tetap, fungsi transisi di atas serat merupakan bijeksi. Karena itu,
+
+
+                                     ϕ : Z0 −→ F,               z 7−→ pz ,
+
+merupakan bijeksi, dan juga homeomorfisme karena kedua ruang diskret.
+Sekarang terdapat pemetaan
+
+                                                            τ
+                                            Z0 × [0, t] −−→ Z
+
+dan
+
+                                              ϕ×id                       σ
+                                 Z0 × [s, 1] −−−−→ F × [s, 1] −−→ Z.
+
+Keduanya sama pada Z0 × [s, t] menurut konstruksi ϕ. Lema penempelan untuk sampul tertutup
+[0, t] ∪ [s, 1] menghasilkan pemetaan kontinu
+
+
+                                            T : Z0 × I −→ Z
+
+di atas I. Dengan menempelkan pemetaan-pemetaan balik pada Z[0,t] dan Z[s,1] , kita memperoleh
+pemetaan kontinu
+
+
+                                            S : Z −→ Z0 × I
+
+di atas I. Evaluasi titik demi titik menunjukkan S ◦ T = id dan T ◦ S = id. Jadi T merupakan
+isomorfisme dalam CovI dan, berkat normalisasi τ , memenuhi T (z, 0) = z.
+Langkah dua bagian ini dapat diterapkan berulang sepanjang rantai subinterval. Maka diperoleh
+isomorfisme ternormalisasi Z0 × I ∼
+                                  = Z untuk sampul berhingga semula. □
+                                                                                              π
+                                                                            → I dan
+Akibat 5.2 (penampang tunggal dengan nilai awal). Diberikan ruang penutup Z −
+titik z ∈ Z0 , terdapat tepat satu lintasan
+
+
+
+                                                     39
+                                               ηz : I −→ Z
+
+sedemikian sehingga
+
+
+                                      ηz (0) = z,      π ◦ ηz = idI .
+
+Dengan kata lain, terdapat tepat satu penampang π yang bernilai z pada 0.
+Bukti. Pilih isomorfisme ternormalisasi
+
+                                                            ∼
+                                                            =
+                                             T : Z0 × I −
+                                                        →Z
+
+dari Proposisi 5.2. Definisikan
+
+
+                                             ηz (t) = T (z, t).
+
+Karena T berada di atas I, pemetaan ini memenuhi π ◦ ηz = idI , dan normalisasi memberikan
+ηz (0) = z.
+Untuk keunikan, jika η ′ merupakan penampang lain dengan nilai awal z, tuliskan
+
+
+                                         T −1 (η ′ (t)) = (a(t), t).
+
+Fungsi a : I → Z0 kontinu. Karena I terhubung dan Z0 diskret, a konstan. Nilai awal memaksa
+a(t) = z untuk semua t, sehingga η ′ (t) = T (z, t) = ηz (t). □
+
+5.4   Pengangkatan lintasan dan transpor serat
+Sekarang kita memperoleh salah satu sifat terpenting ruang penutup.
+                                                                                                    π
+Teorema 5.1 (pengangkatan lintasan tunggal). Diberikan ruang penutup apa pun Z −
+                                                                               → X,
+lintasan γ : I → X, dan titik z ∈ Zγ(0) , terdapat tepat satu pengangkatan
+
+
+                                               γez : I −→ Z
+
+yang memenuhi
+
+
+                                       γez (0) = z,        π ◦ γez = γ.
+
+Tidak diperlukan asumsi bahwa X terhubung atau SLPC.
+Bukti. Bentuk tarik balik
+
+
+                                              p : γ ∗ Z −→ I.
+
+Seratnya di 0 teridentifikasi secara kanonik dengan Zγ(0) , sehingga titik awal yang sesuai adalah (0, z).
+Menurut Akibat 5.2, terdapat tepat satu penampang
+
+
+                                            η(0,z) : I −→ γ ∗ Z
+
+dengan
+
+                                                      40
+                                 η(0,z) (0) = (0, z),            p ◦ η(0,z) = idI .
+
+Definisikan
+
+
+                                        γez = pr2 ◦η(0,z) : I −→ Z.
+
+Persegi tarik balik memberikan
+
+
+                              π ◦ γez = π ◦ pr2 ◦η(0,z) = γ ◦ p ◦ η(0,z) = γ,
+
+dan nilai awalnya adalah z.
+Sebaliknya, setiap pengangkatan lain λ : I → Z dengan λ(0) = z menentukan penampang kedua dari
+p melalui
+
+
+                                                t 7−→ (t, λ(t)).
+
+Penampang itu mempunyai nilai awal (0, z), sehingga oleh keunikan pada Akibat 5.2 ia sama dengan
+η(0,z) . Maka λ = γez . □
+Teorema ini memberi bukti kedua yang lebih eksplisit bagi Proposisi 4.3.
+Akibat 5.3 (transpor sepanjang lintasan). Setiap lintasan γ : I → X mendefinisikan bijeksi
+
+                                            ∼
+                                            =
+                                 γ∗ : Zγ(0) −
+                                            → Zγ(1) ,             γ∗ (z) = γez (1).
+
+Bukti. Pertama, γ∗ memang merupakan fungsi ke Zγ(1) karena
+
+
+                                             π(γez (1)) = γ(1).
+
+Definisikan lintasan balik
+
+
+                                             γ̄(t) = γ(1 − t).
+
+Jika z ∈ Zγ(0) , lintasan balik dari γez dimulai di γ∗ (z) dan merupakan pengangkatan γ̄. Oleh keunikan
+pengangkatan,
+
+
+                                                γ̄∗ γ∗ (z) = z.
+                                                             
+
+
+Argumen simetris, dimulai dari w ∈ Zγ(1) , memberikan
+
+
+                                              γ∗ γ̄∗ (w) = w.
+                                                             
+
+
+Jadi γ̄∗ adalah invers γ∗ , sehingga γ∗ bijektif. □
+Pengamatan pertama tentang transpor ini adalah invariansinya terhadap reparameterisasi. Jika
+
+                                       ∼
+                                       =
+                                 ψ: I −
+                                      → I,          ψ(0) = 0,          ψ(1) = 1,
+
+maka
+
+
+                                                        41
+                                   (γ ◦ ψ)∗ = γ∗ : Zγ(0) −→ Zγ(1) .
+
+Memang, γez ◦ ψ adalah pengangkatan γ ◦ ψ yang berawal di z. Keunikan pengangkatan menyatakan
+bahwa itulah (γ
+              ^ ◦ ψ)z , dan kedua lintasan terangkat mempunyai titik akhir yang sama. Pernyataan
+ini baru membuktikan invariansi terhadap reparameterisasi, belum invariansi terhadap homotopi
+lintasan.
+
+
+Pendamping penguasaan: pemeriksaan dan solusi lengkap
+Bagian ini merupakan materi baru untuk edisi bahasa Indonesia dan tersedia di bawah CC BY 4.0.
+Tidak ada latihan eksplisit dalam rentang sumber Kuliah 5 ini. Empat pemeriksaan berikut menutup
+langkah-langkah pembuktian dan penerapan yang paling penting; semuanya langsung disertai solusi
+lengkap. Bukti Lema 5.1 yang tidak dituliskan dalam sumber juga diberikan.
+Pemeriksaan penguasaan 5.1 (serat tipikal dan transpor). Jelaskan perbedaan logis antara
+pernyataan “semua serat di atas satu komponen lintasan mempunyai tipe isomorfisme yang sama”
+dan “suatu lintasan γ menentukan transpor γ∗ ”. Mengapa Akibat 5.3 lebih kuat daripada bukti
+pertama Proposisi 4.3, tetapi belum memberikan identifikasi yang bebas dari pilihan lintasan?
+
+5.5   Solusi Pemeriksaan 5.1
+Bukti pertama hanya menghasilkan keberadaan setidaknya satu bijeksi di antara dua serat, melalui
+pilihan sampul, subdivisi, dan trivialisasi. Kesimpulan yang dapat dicatat tanpa mempertahankan
+semua pilihan itu hanyalah kelas isomorfisme serat pada setiap komponen lintasan.
+Sebaliknya, setelah lintasan tertentu γ dan titik awal z diberikan, Teorema 5.1 memilih tepat satu
+lintasan terangkat. Karena itu rumus
+
+
+                                             z 7−→ γez (1)
+
+memberikan fungsi yang ditentukan oleh γ, bukan sekadar bukti bahwa suatu bijeksi ada. Namun,
+dua lintasan berbeda dari x0 ke x1 dapat menghasilkan permutasi serat yang berbeda. Unit ini baru
+membuktikan bahwa reparameterisasi berujung tetap tidak mengubah transpor; belum dibuktikan
+bahwa deformasi lain pada lintasan tidak mengubahnya.
+Pemeriksaan penguasaan 5.2 (struktur tarik balik). Buktikan ketiga butir Proposisi 5.1 dan
+isomorfisme serat pada Akibat 5.1 secara eksplisit.
+
+5.6   Solusi Pemeriksaan 5.2
+Untuk butir pertama, tetapkan y0 ∈ Y . Pilih lingkungan terbuka V ∋ f (y0 ) yang di atasnya Z trivial,
+dengan
+
+
+                                          π −1 (V ) ∼
+                                                    =V ×F
+
+di atas V . Himpunan W = f −1 (V ) merupakan lingkungan terbuka y0 . Dengan mengambil hasil kali
+serat, diperoleh
+
+
+                       p−1 (W ) = W ×V π −1 (V ) ∼               ∼W ×F
+                                                 = W ×V (V × F ) =
+
+di atas W . Jadi p : f ∗ Z → Y adalah pemetaan penutup.
+Untuk butir kedua, jika h : Z1 → Z2 merupakan morfisme di atas X, definisikan
+
+
+                                                  42
+                              f ∗ h : f ∗ Z1 −→ f ∗ Z2 ,        (y, z) 7−→ (y, h(z)).
+
+Karena π2 (h(z)) = π1 (z) = f (y), pasangan di ruas kanan memang berada dalam f ∗ Z2 . Rumus ini
+mempertahankan proyeksi ke Y , bersifat kontinu, serta memenuhi
+
+
+                                f ∗ (id) = id,      f ∗ (h2 ◦ h1 ) = f ∗ h2 ◦ f ∗ h1 .
+
+Jadi f ∗ adalah funktor.
+Untuk butir ketiga, kedua ruang dapat ditulis sebagai
+
+
+                                  (f ◦ g)∗ Z = {(y2 , z) | f (g(y2 )) = π(z)}
+
+dan
+
+
+                           g ∗ (f ∗ Z) = {(y2 , (y1 , z)) | g(y2 ) = y1 , f (y1 ) = π(z)}.
+
+Isomorfisme kanoniknya adalah
+
+
+                                          (y2 , z) 7−→ y2 , (g(y2 ), z) ,
+                                                                          
+
+
+dengan invers (y2 , (y1 , z)) 7→ (y2 , z). Kedua pemetaan kontinu, berada di atas Y2 , dan tidak melibatkan
+pilihan apa pun.
+Terakhir,
+
+
+                                      (f ∗ Z)y = {(y, z) | π(z) = f (y)}.
+
+Pemetaan (y, z) 7→ z merupakan bijeksi kanonik ke Zf (y) , dan homeomorfisme karena serat-serat
+ruang penutup diskret. Inversnya adalah z 7→ (y, z).
+
+5.7   Bukti Lema 5.1
+Untuk setiap x ∈ X, definisi ruang penutup memberikan lingkungan terbuka Vx ∋ x yang di atasnya
+Z → X trivial. Keluarga {Vx }x∈X merupakan sampul terbuka dari X. Karena X kompak, terdapat
+subkeluarga berhingga
+
+
+                                                  V x1 , . . . , V xm
+
+yang masih menutupi X. Setiap anggotanya tetap merupakan lingkungan terbuka tempat ruang
+penutup itu trivial. Inilah sampul berhingga yang diminta.
+Pemeriksaan penguasaan 5.3 (mengangkat satu putaran lingkaran). Untuk n ≥ 1, pertim-
+bangkan pemetaan penutup
+
+
+                                       pn : S 1 −→ S 1 ,          pn (z) = z n ,
+
+dan lintasan γ(t) = e2πit . Tentukan pengangkatan yang berawal di zk = e2πik/n , dengan k ∈
+{0, . . . , n − 1}, lalu hitung transpor γ∗ (zk ).
+
+
+
+
+                                                           43
+5.8   Solusi Pemeriksaan 5.3
+Definisikan
+
+
+                                           γezk (t) = e2πi(t+k)/n .
+
+Nilai awalnya adalah e2πik/n = zk , dan
+
+                                                    n
+                       pn (γezk (t)) = e2πi(t+k)/n           = e2πi(t+k) = e2πit = γ(t).
+
+Oleh keunikan pengangkatan, inilah pengangkatan yang diminta. Titik akhirnya adalah
+
+
+                                  γ∗ (zk ) = e2πi(k+1)/n = zk+1 mod n .
+
+Jadi satu putaran positif pada ruang dasar menggerakkan serat dengan siklus z0 7→ z1 7→ · · · 7→
+zn−1 7→ z0 .
+Pemeriksaan penguasaan 5.4 (naturalitas transpor). Misalkan h : Z1 → Z2 merupakan
+morfisme ruang penutup di atas X, dan γ lintasan dalam X. Buktikan bahwa diagram transpor serat
+
+                                                         Z
+                                                     γ 1
+                                        (Z1 )γ(0) −−∗−→ (Z1 )γ(1)
+                                          h↓              ↓h
+                                                         Z
+                                                     γ 2
+                                        (Z2 )γ(0) −−∗−→ (Z2 )γ(1)
+
+komutatif.
+
+5.9   Solusi Pemeriksaan 5.4
+Ambil z ∈ (Z1 )γ(0) . Karena h berada di atas X, kita mempunyai
+
+
+                                               π2 ◦ h = π1 .
+
+Maka komposisi
+
+
+                                            h ◦ γezZ1 : I −→ Z2
+
+merupakan pengangkatan γ dan berawal di h(z). Teorema 5.1 memberikan hanya satu pengangkatan
+dengan nilai awal itu, sehingga
+
+                                                           Z2
+                                             h ◦ γezZ1 = γeh(z) .
+
+Evaluasi pada t = 1 menghasilkan
+
+                                                        Z2
+                           h γ∗Z1 (z) = h γezZ1 (1) = γeh(z) (1) = γ∗Z2 (h(z)).
+                                                    
+
+
+Karena persamaan berlaku untuk setiap z, diagram tersebut komutatif.
+
+
+
+
+                                                     44
+Tentang unit ini
+Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas Algebraic Topology
+karya David Michael Roberts (2019), tepatnya Notes.tex baris 1305–1515 pada commit
+b947ad2e9f9e301bfe24590a9db653bc54fa1a53. Rentang itu dimulai dengan penanda Kuliah 6
+dan aksi lintasan pada serat ruang penutup, lalu berakhir setelah teorema Wada–Roberts tentang
+keterhubungan lintasan semilokal ruang pemetaan. Baris 1516 memulai Kuliah 7 dan tidak termasuk
+dalam unit ini. Karya sumber tersedia di bawah Creative Commons Attribution 4.0 International.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pemberian
+pengenal stabil, dan pemindahan semua keterangan pinggir ke urutan bacaan utama. Koreksi atau
+klarifikasi substantif yang diterapkan adalah sebagai berikut: contoh penutup eksponensial dibuat
+konsisten sebagai p : R → S 1 , p(t) = eit , sehingga serat dan titik akhir pengangkatan benar; hipotesis
+bagi pemilihan satu titik serat pada setiap komponen lintasan ruang atas dinyatakan; dua salah ketik
+pada pembahasan faktorisasi dan homotopi diperbaiki; bukti kekontinuan operator pengangkatan
+diperbaiki dengan kendali eksplisit pada irisan lembar, menggantikan himpunan yang salah tipe,
+lingkungan yang tidak didefinisikan, dan klaim kesamaan yang tidak terbukti dalam sumber; contoh
+manifold memakai bola koordinat yang benar-benar konveks; serta indeks anting-anting Hawaii
+dibatasi pada n ≥ 1. Semua perbaikan merupakan bagian dari adaptasi independen ini, bukan salinan
+ungkapan dari sumber lain.
+Rentang sumber tidak memuat lingkungan latihan. Bagian pendamping penguasaan menambahk-
+an empat pemeriksaan beserta solusi lengkap: aksi loop pada penutup lingkaran, basis topologi
+kompak-terbuka, kekontinuan dan kesurjektifan transpor, serta contoh-contoh SLSC. Bukti utama
+Wada–Roberts tidak diberikan dalam sumber, melainkan dirujuk ke Handout 1. Agar unit dapat
+dipelajari mandiri, pendamping menutup celah itu dengan pembuktian khusus kasus n = 1 yang
+diturunkan langsung dari definisi SLSC dan diberi label tegas sebagai materi edisi, bukan sebagai
+teks Roberts atau reproduksi handout. Seluruh materi pendamping tersedia di bawah CC BY 4.0.
+Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
+
+
+6     Kuliah 6
+6.1   Loop dan aksi pada serat
+Hasil Unit 5 dapat dirumuskan lebih kuat sebagai sebuah fungsi
+
+
+                    {lintasan x0 ⇝ x1 di X} × Zx0 −→ Zx1 ,         (γ, z) 7−→ γ∗ (z).
+
+Jika x0 = x1 = x, fungsi itu menjadi
+
+
+                                   {loop x ⇝ x di X} × Zx −→ Zx .
+
+Setiap loop memberikan bijeksi Zx → Zx , sehingga informasi yang sama dapat dipandang sebagai
+fungsi
+
+
+                           {loop x ⇝ x di X} −→ Aut(Zx ),          γ 7−→ γ∗ .
+
+Jika diinginkan, himpunan lintasan atau loop pada rumus-rumus ini dapat terlebih dahulu dibagi
+menurut reparameterisasi berujung tetap, karena Unit 5 menunjukkan bahwa reparameterisasi tidak
+mengubah γ∗ .
+Untuk ruang penutup bertitik
+
+
+
+
+                                                   45
+                                                     π
+                                                   → (X, x),
+                                            (Z, z) −
+
+kita juga memperoleh fungsi kanonik
+
+
+                            {loop x ⇝ x di X} −→ Zx ,               γ 7−→ γ∗ (z).                  (6.1)
+
+Contoh 6.1 (penutup trivial dan penutup eksponensial). Untuk penutup trivial Z = S × X →
+X, transpor setiap lintasan bertindak sebagai identitas pada koordinat S:
+
+
+                                      γ∗ : S −→ S,          γ∗ = idS .
+
+Karena itu, setelah suatu titik (s, x) dipilih, citra fungsi (6.1) hanya terdiri atas satu titik. Setiap
+ruang penutup dari I bersifat trivial menurut Proposisi 5.2, sehingga fenomena yang sama berlaku di
+sana.
+Sebaliknya, pertimbangkan pemetaan penutup
+
+
+                                     p : R −→ S 1 ,         p(t) = eit ,
+
+dengan titik dasar x = 1 ∈ S 1 dan z = 0 ∈ R. Seratnya adalah
+
+
+                                               p−1 (1) = 2πZ.
+
+Fungsi
+
+
+                      {γ : I → S 1 | γ(0) = γ(1) = 1} −→ 2πZ,                γ 7−→ γ∗ (0),
+
+surjektif. Untuk setiap n ∈ Z, lintasan
+
+
+                                               γen (t) = 2πnt
+
+mengangkat loop
+
+
+                                               γn (t) = e2πint ,
+
+dan memenuhi
+
+
+                                     γen (0) = 0,        γen (1) = 2πn.
+
+Perbedaan dengan penutup trivial berserat lebih dari satu titik adalah bahwa R terhubung lintasan,
+sedangkan X × S tidak terhubung lintasan jika |S| > 1.
+                                π
+Secara umum, andaikan (Z, z) −→ (X, x) merupakan ruang penutup bertitik dan Z terhubung lintasan.
+Untuk setiap z ∈ Zx , terdapat lintasan
+              ′
+
+
+
+                                γe : I −→ Z,        γe (0) = z,    γe (1) = z ′ .
+
+Proyeksinya γ = π ◦ γe adalah loop pada x, dan keunikan pengangkatan memberi γe = γez . Jadi fungsi
+(6.1) surjektif. Dengan demikian, lintasan membatasi ukuran serat ruang penutup terhubung, dan
+
+
+                                                      46
+ukuran serat juga membatasi kemungkinan lintasan. Himpunan loop pada X sendiri tidak bergantung
+pada ruang penutup yang dipilih.
+Lebih umum lagi, andaikan setiap komponen lintasan Zα dari Z bertemu serat Zx ; kondisi ini berlaku,
+misalnya, jika X terhubung lintasan. Pilih satu titik zα ∈ Zα ∩ Zx untuk setiap α. Pilihan itu adalah
+sebuah penampang dari pemetaan kanonik Z → [∗, Z] pada tingkat himpunan. Maka fungsi
+
+
+              {loop pada x} × [∗, Z] ∼
+                                     = {loop pada x} × {zα } −→ Zx ,                (γ, α) 7−→ γ∗ (zα ),   (6.2)
+
+selalu surjektif. Memang, setiap z ′ ∈ Zx berada dalam satu komponen Zα , lalu suatu lintasan dalam
+komponen itu dari zα ke z ′ memproyeksikan ke loop yang diperlukan.
+Jumlah lintasan biasanya sangat besar. Mengambil hasil bagi terhadap reparameterisasi memang
+mengurangi redundansi, tetapi kita dapat berbuat lebih banyak: kita dapat memberi topologi pada
+himpunan lintasan.
+
+6.2   Topologi kompak-terbuka pada ruang lintasan
+Serat Zx dari ruang penutup bersifat diskret, sedangkan himpunan Top(I, X) dari semua lintasan
+I → X dapat diberi topologi. Jika X metrik, kita dapat memakai metrik supremum
+
+
+                                         d∞ (γ, η) = sup d(γ(t), η(t)).
+                                                         t∈I
+
+Tujuan kita adalah mendefinisikan topologi yang juga berlaku ketika X bukan ruang metrik.
+Lema 6.1 (basis lingkungan kompak-terbuka). Misalkan X ruang topologis dan γ ∈ Top(I, X).
+Pilih partisi
+
+
+                                     0 = t0 < t1 < · · · < tn < tn+1 = 1
+
+serta himpunan-himpunan terbuka U0 , . . . , Un ⊆ X sedemikian sehingga
+
+
+                                      γ([ti , ti+1 ]) ⊆ Ui           (0 ≤ i ≤ n),
+
+Definisikan
+
+                           Nγ (t1 < · · · < tn ; U0 , . . . , Un )
+                            := {η : I → X | η([ti , ti+1 ]) ⊆ Ui untuk setiap i}.
+
+Ketika partisi dan himpunan terbuka tersebut bervariasi, himpunan-himpunan Nγ membentuk basis
+lingkungan pada Top(I, X).
+Catatan sumber merumuskan hal yang sama dengan lingkungan Ui dan interior Ui◦ , yang didefinisikan
+di catatan pinggir sebagai gabungan semua himpunan terbuka yang termuat dalam Ui . Edisi ini
+memilih Ui terbuka sejak awal, sehingga Ui◦ = Ui dan rumusnya ekuivalen.
+Definisi 6.1 (ruang lintasan). Ruang lintasan X I adalah himpunan Top(I, X) yang dilengkapi
+topologi dari Lema 6.1. Topologi itu disebut topologi kompak-terbuka.
+Jika X metrik, topologi kompak-terbuka sama dengan topologi yang dihasilkan oleh metrik supremum.
+Sifat penting lainnya adalah hukum eksponensial: karena I kompak Hausdorff, untuk setiap ruang Y ,
+pemetaan kontinu
+
+
+                                                 H : Y × I −→ X
+
+                                                          47
+berkorespondensi dengan pemetaan kontinu
+
+
+                                h : Y −→ X I ,      h(y)(t) = H(y, t),
+
+dan sebaliknya. Secara khusus, homotopi H : I × I → X dapat dipandang sebagai lintasan h : I → X I ,
+dengan
+
+
+                                           hs (t) = H(s, t).
+
+Lema 6.2. Berlaku dua sifat berikut.
+  1. Pemetaan evaluasi
+                                  ev : X I × I −→ X,        ev(γ, t) = γ(t),
+     kontinu.
+  2. Untuk setiap pemetaan kontinu f : X → Y , pemetaan pascakomposisi
+
+                                    f∗ : X I −→ Y I ,      f∗ (γ) = f ◦ γ,
+
+      kontinu.
+Untuk t ∈ I, evaluasi pada waktu tetap
+
+
+                                 evt : X I −→ X,        evt (γ) = γ(t),
+
+kontinu sebagai komposisi
+
+                                                                ev
+                                 XI ∼
+                                    = X I × {t} ,→ X I × I −→ X.
+
+Kasus yang paling sering dipakai adalah t = 0 dan t = 1. Untuk x, y ∈ X, definisikan subruang-
+subruang
+
+                            Px X := {γ ∈ X I | γ(0) = x} = ev−1
+                                                             0 (x),
+                            Pxy X := {γ ∈ X I | γ(0) = x, γ(1) = y}
+                                 = ev−1        −1
+                                     0 (x) ∩ ev1 (y),
+                            Ωx X := Pxx X = {γ ∈ X I | γ(0) = x = γ(1)}.
+
+Dua ruang terakhir sudah muncul sebelumnya, tetapi tanpa topologinya. Lintasan di dalam Pxy X
+berkorespondensi dengan homotopi antarlintasan yang mempertahankan kedua titik ujung. Karena
+itu, komponen lintasan ruang-ruang pemetaan ini berkaitan langsung dengan kelas homotopi lintasan
+relatif terhadap titik ujung.
+
+6.3   Kekontinuan operator pengangkatan
+Transformasi natural
+
+
+                                 id ⇒ disc π0 : Topslpc −→ Topslpc
+
+mempunyai sifat universal berikut. Jika S diskret, X SLPC, dan f : X → S kontinu, terdapat tepat
+satu fungsi f¯: π0 (X) → U (S) yang membuat diagram
+
+
+
+
+                                                   48
+                                                       f
+                                          X        −−→      S
+                                          q↓      ↗disc(f¯)
+                                     disc(π0 (X))
+
+komutatif. Di sini q mengirim setiap titik ke komponen terhubungnya.
+Sekarang ambil ruang penutup Z → X. Fungsi transpor Unit 5 memberikan
+
+
+                            A : Pxy X × Zx −→ Zy ,         A(γ, z) = γ∗ (z).                   (6.3)
+
+Jika A kontinu, karena Zy diskret fungsi itu konstan pada komponen terhubung dan memfaktor
+sebagai
+
+
+                      Pxy X × Zx −→ π0 (Pxy X × Zx ) ∼
+                                                     = π0 (Pxy X) × Zx −→ Zy .
+
+Isomorfisme tengah ada karena Zx diskret. Jika Z terhubung lintasan dan suatu z ∈ Zx ditetapkan,
+kita memperoleh fungsi surjektif
+
+
+                                         π0 (Pxy X) −→ Zy .
+
+Hal ini semakin membatasi topologi ruang lintasan dan serat yang mungkin dimiliki ruang penutup.
+Namun, masih ada dua persoalan:
+  1. kita belum mengetahui bahwa fungsi pengangkatan lintasan kontinu;
+  2. kita belum mengetahui bahwa Pxy X bersifat SLPC, sehingga belum dapat menyamakan kompo-
+     nen lintasan dengan komponen terhubungnya.
+Untuk menangani persoalan pertama, kita tingkatkan sifat pengangkatan lintasan tunggal menjadi
+sebuah fungsi kontinu. Definisikan hasil kali serat
+
+
+                           X I ×X Z := {(γ, z) ∈ X I × Z | γ(0) = π(z)}
+
+dan operator
+
+
+                            Lift : X I ×X Z −→ Z I ,        Lift(γ, z) = γez .
+
+Fungsi ini sudah terdefinisi oleh Teorema 5.1; yang harus dibuktikan sekarang adalah kekontinuannya.
+Setelah itu, fungsi (6.3) dapat ditulis sebagai komposisi
+
+                                                       Lift         ev
+                              Pxy X × Zx ,→ X I ×X Z −−→ Z I −−→
+                                                               1
+                                                                 Z,
+
+yang citranya termuat dalam Zy .
+Teorema 6.1. Fungsi
+
+
+                                      Lift : X I ×X Z −→ Z I
+
+kontinu.
+Bukti. Tetapkan (γ, z) ∈ X I ×X Z, dan tuliskan
+
+
+
+                                                 49
+                                                γe = Lift(γ, z).
+
+Ambil lingkungan dasar
+
+
+                                   Neγ = Neγ (t1 < · · · < tn ; U0 , . . . , Un )
+
+dari γe dalam Z I . Kita akan membangun lingkungan M (γ, z) yang dipetakan oleh Lift ke dalam Neγ .
+Karena π merupakan homeomorfisme lokal dan I kompak, kita dapat memperhalus partisi menjadi
+
+
+                                        0 = s0 < s1 < · · · < sm = 1
+
+yang memuat semua titik tj , serta memilih lembar-lembar terbuka W1 , . . . , Wm ⊆ Z sedemikian
+sehingga, untuk setiap k,
+
+
+                                        γe ([sk−1 , sk ]) ⊆ Wk ⊆ Uj(k) ,
+
+subinterval [sk−1 , sk ] termuat dalam [tj(k) , tj(k)+1 ], dan pembatasan
+
+                                                       ∼
+                                                       =
+                                                  → Vk := π(Wk )
+                                        π|Wk : Wk −
+
+merupakan homeomorfisme ke himpunan terbuka Vk ⊆ X.
+Pada setiap titik sambung sk , kedua lembar Wk dan Wk+1 memuat γe (sk ). Pilih lingkungan terbuka
+
+
+                                    Qk ∋ γe (sk ),         Qk ⊆ Wk ∩ Wk+1 ,
+
+yang dipetakan homeomorfik oleh π ke lingkungan terbuka Rk := π(Qk ) dari γ(sk ).
+Definisikan lingkungan terbuka B dari γ dalam X I dengan
+
+                                                                           m−1
+                        B := Nγ (s1 < · · · < sm−1 ; V1 , . . . , Vm ) ∩         ev−1
+                                                                                   sk (Rk ).
+                                                                           \
+
+                                                                           k=1
+
+Lalu tetapkan
+
+
+                                   M (γ, z) := (B × W1 ) ∩ (X I ×X Z).
+
+Ini merupakan lingkungan terbuka (γ, z) dalam hasil kali serat.
+Ambil (η, w) ∈ M (γ, z) dan tuliskan ηe = Lift(η, w). Pada subinterval pertama, lintasan
+
+
+                                            t 7−→ (π|W1 )−1 (η(t))
+
+adalah pengangkatan η|[s0 ,s1 ] yang berawal di w. Oleh keunikan pengangkatan, ηe([s0 , s1 ]) ⊆ W1 .
+Karena η(s1 ) ∈ R1 dan prapeta R1 pada lembar W1 termuat dalam Q1 ⊆ W2 , titik ηe(s1 ) juga berada
+dalam W2 .
+Argumen yang sama dapat diulang secara induktif. Kita memperoleh
+
+
+                                         ηe([sk−1 , sk ]) ⊆ Wk ⊆ Uj(k)
+
+                                                        50
+untuk setiap k. Karena partisi sk memperhalus partisi tj , hal ini menunjukkan
+
+
+                                               ηe ∈ Neγ .
+
+Jadi
+
+
+                                       M (γ, z) ⊆ Lift−1 (Neγ ).
+
+Setiap lingkungan dasar dari γe mempunyai prapeta yang merupakan lingkungan (γ, z). Maka Lift
+kontinu. □
+Catatan 6.1. Keunikan pengangkatan menunjukkan bahwa Lift sebenarnya bijektif, bahkan homeo-
+morfisme. Inversnya adalah
+
+
+                        (π∗ , ev0 ) : Z I −→ X I ×X Z,      λ 7−→ (π ◦ λ, λ(0)).
+
+Pemetaan invers itu kontinu menurut Lema 6.2. Komposisi pada kedua arah adalah identitas karena
+setiap lintasan λ merupakan pengangkatan tunggal dari π ◦ λ dengan nilai awal λ(0).
+Dengan demikian fungsi transpor
+
+
+                                          Pxy X × Zx −→ Zy
+
+kontinu dan menghasilkan fungsi
+
+
+                                       π0 (Pxy X) × Zx −→ Zy .
+
+Kita masih ingin mengetahui bahwa dua titik γ, η ∈ Pxy X dalam komponen terhubung yang sama
+dapat dihubungkan oleh lintasan dalam Pxy X. Lintasan seperti itu setara dengan homotopi
+
+
+                                           H : I × I −→ X
+
+dari γ ke η yang mempertahankan titik ujung, yaitu
+
+
+                     H(0, t) = γ(t),      H(1, t) = η(t)      untuk setiap t ∈ I,
+
+dan
+
+
+                       H(s, 0) = x,       H(s, 1) = y       untuk setiap s ∈ I.
+
+6.4    Ruang terhubung sederhana semilokal
+Definisi 6.2 (terhubung sederhana semilokal). Dalam konvensi mata kuliah ini, sebuah ruang X
+disebut terhubung sederhana semilokal, disingkat SLSC, jika setiap titik mempunyai basis lingkungan
+terbuka N dengan kedua sifat berikut:
+  1. N terhubung lintasan;
+  2. untuk setiap x, y ∈ N dan setiap dua lintasan γ, η ∈ Pxy N , terdapat homotopi di X dari γ ke η
+     yang mempertahankan titik ujung.
+
+
+
+
+                                                  51
+Lintasan-lintasan awal berada di dalam N , sedangkan homotopinya diperbolehkan bergerak di seluruh
+X. Ini adalah syarat teknis terakhir pada ruang yang diperlukan dalam bagian mata kuliah ini.
+Peringatan istilah: konvensi ini menggabungkan dua syarat yang sering dipisahkan dalam pustaka,
+yakni terhubung lintasan lokal dan terhubung sederhana semilokal dalam arti standar. Dengan
+keterhubungan lintasan lokal, Definisi 6.2 setara dengan adanya basis lingkungan terhubung lintasan
+N sehingga homomorfisme yang diinduksi inklusi π1 (N, u) → π1 (X, u) trivial untuk setiap u ∈ N .
+Istilah SLSC tanpa syarat tambahan dalam arti standar tidak dengan sendirinya menyiratkan SLPC.
+Setiap ruang SLSC bersifat SLPC, sebab basis lingkungan dalam Definisi 6.2 khususnya terdiri atas
+himpunan-himpunan terhubung lintasan.
+Contoh 6.2. Setiap manifold bersifat SLSC. Untuk manifold tanpa batas, di dalam suatu peta
+koordinat kita dapat memilih lingkungan yang citranya merupakan bola Euklides kecil. Untuk
+manifold dengan batas, gunakan setengah bola yang konveks dalam peta koordinat batas. Dalam
+kedua kasus citra itu konveks, sehingga dua lintasan di dalamnya yang mempunyai titik ujung sama
+dapat dihubungkan oleh homotopi garis lurus yang mempertahankan titik ujung.
+Contoh 6.3 (anting-anting Hawaii). Anting-anting Hawaii adalah subruang
+
+                                [                                   1          1
+                                                                               
+                         H :=         (u, v) ∈ R2     (u, v) −         ,0   =     .
+                                n≥1
+                                                                     n          n
+
+Ruang ini tidak SLSC. Setiap lingkungan titik (0, 0) memuat seluruh lingkaran penyusun untuk semua
+n yang cukup besar. Loop yang mengitari salah satu lingkaran itu tidak dapat dikontraksikan bahkan
+di dalam seluruh H.
+Teorema 6.2 (Wada 1955; diperkuat oleh Roberts 2010). Jika X terhubung sederhana
+semilokal, maka ruang-ruang
+
+
+                         XI ,     Px X,      Pxy X,       dan karenanya Ωx X,
+
+bersifat terhubung lintasan semilokal.
+Atribusi yang dicantumkan dalam sumber: H. Wada, “Local connectivity of mapping spaces,” Duke
+Mathematical Journal 22(3), 1955, hlm. 419–425; dan D. M. Roberts, “Fundamental bigroupoids and
+2-covering spaces,” Teorema 5.12 (2010). Teorema 6.2 adalah kasus n = 1 dari hasil Roberts tersebut.
+Bukti (tidak diujikan dalam catatan sumber). Sumber merujuk pembaca ke Handout 1.
+Argumen lengkap tidak terdapat dalam rentang sumber unit ini dan tidak direkonstruksi sebagai
+seolah-olah merupakan teks Roberts. Sebagai pengganti untuk keperluan belajar mandiri, bagian
+pendamping di bawah memberikan pembuktian kasus n = 1 yang diturunkan secara independen dari
+definisi-definisi unit ini dan dilabeli sebagai materi edisi. □
+
+
+Pendamping penguasaan: pemeriksaan dan solusi lengkap
+Bagian ini merupakan materi baru untuk edisi bahasa Indonesia dan tersedia di bawah CC BY 4.0.
+Keempat pemeriksaan berikut dapat dikerjakan tanpa sumber tambahan dan semuanya disertai solusi
+lengkap. Bagian terakhir memberikan bukti mandiri khusus kasus Teorema 6.2 yang digunakan dalam
+mata kuliah ini; bukti tersebut merupakan kontribusi edisi dan bukan reproduksi Handout 1.
+Pemeriksaan penguasaan 6.1 (aksi loop pada penutup lingkaran). Untuk p(t) = eit : R → S 1 ,
+tentukan transpor pada serat 2πZ yang dihasilkan oleh loop γn (t) = e2πint . Tunjukkan pula bahwa
+penggabungan loop dengan bilangan putaran m dan n menghasilkan transpor dengan bilangan
+putaran m + n.
+
+
+
+                                                    52
+6.5     Solusi Pemeriksaan 6.1
+Jika titik awal pada serat ditulis 2πk, pengangkatan tunggal adalah
+
+
+                                             γen,k (t) = 2πk + 2πnt,
+
+sebab
+
+
+                                p(γen,k (t)) = ei(2πk+2πnt) = e2πint = γn (t).
+
+Karena titik akhirnya 2π(k + n), transpor bertindak sebagai translasi
+
+
+                                          (γn )∗ : 2πk 7−→ 2π(k + n).
+
+Jika loop berputaran m diikuti loop berputaran n, pengangkatan bagian kedua dimulai di 2π(k + m)
+dan berakhir di 2π(k + m + n). Jadi transpor gabungan adalah translasi sebesar 2π(m + n), sama
+dengan komposisi kedua transpor.
+Pemeriksaan penguasaan 6.2 (basis dan pemetaan dasar ruang lintasan). Mulai dari definisi
+standar topologi kompak-terbuka dengan subbasis
+
+
+                                     [K, O] := {η : I → X | η(K) ⊆ O},
+
+dengan K ⊆ I kompak dan O ⊆ X terbuka. Buktikan Lema 6.1 dan kedua bagian Lema 6.2. Jika X
+metrik, buktikan pula bahwa topologi ini sama dengan topologi metrik supremum. Terakhir, buktikan
+hukum eksponensial
+
+
+                                        Top(Y × I, X) ∼
+                                                      = Top(Y, X I )
+
+untuk setiap ruang Y .
+
+6.6     Solusi Pemeriksaan 6.2
+Setiap lingkungan pada Lema 6.1 adalah irisan berhingga
+
+                                                                        n
+                            Nγ (t1 < · · · < tn ; U0 , . . . , Un ) =         [ti , ti+1 ], Ui ,
+                                                                        \                   
+
+                                                                        i=0
+
+sehingga terbuka dalam topologi kompak-terbuka.
+Sebaliknya, ambil lingkungan dasar
+
+                                                        r
+                                                W=          [Kj , Oj ]
+                                                        \
+
+                                                        j=1
+
+
+yang memuat γ. Semua Kj kompak, dan karena I Hausdorff, semuanya tertutup. Untuk setiap t ∈ I,
+                                                                                                       / Kj ,
+pilih interval terbuka relatif At ∋ t dengan sifat berikut: jika t ∈ Kj , maka At ⊆ γ −1 (Oj ); jika t ∈
+maka At ∩ Kj = ∅. Pilihan serentak ini mungkin karena hanya ada berhingga banyak j.
+Sampul {At }t∈I mempunyai bilangan Lebesgue. Pilih partisi cukup halus sehingga setiap [ti , ti+1 ]
+termuat dalam suatu Aai . Definisikan
+
+
+
+                                                          53
+                          Ji := {j | [ti , ti+1 ] ∩ Kj ̸= ∅},       Ui :=
+                                                                            \
+                                                                                   Oj ,
+                                                                            j∈Ji
+
+
+dengan irisan kosong dipahami sebagai X. Dari sifat Aai diperoleh γ([ti , ti+1 ]) ⊆ Ui . Jika η ∈
+Nγ (t1 < · · · < tn ; U0 , . . . , Un ) dan s ∈ Kj , setiap subinterval partisi yang memuat s mempunyai
+j ∈ Ji , sehingga η(s) ∈ Oj . Jadi Nγ ⊆ W, dan keluarga pada Lema 6.1 memang merupakan basis
+lingkungan.
+Untuk kekontinuan evaluasi, tetapkan (γ, t) dan lingkungan terbuka O ∋ γ(t). Prapeta γ −1 (O)
+terbuka di I, sehingga terdapat lingkungan relatif terbuka J dari t yang penutupannya K = J kompak
+dan termuat dalam γ −1 (O). Maka
+
+
+                                                [K, O] × J
+
+adalah lingkungan (γ, t) yang dipetakan evaluasi ke O.
+Untuk pascakomposisi, cukup diperiksa pada subbasis. Bagi K ⊆ I kompak dan O ⊆ Y terbuka,
+
+
+                                    (f∗ )−1 ([K, O]) = [K, f −1 (O)],
+
+yang terbuka dalam X I . Jadi f∗ kontinu.
+Sekarang andaikan X metrik. Pertama, ambil lingkungan subdasar [K, O] dari γ. Himpunan kompak
+γ(K) termuat dalam himpunan terbuka O, sehingga terdapat ε > 0 dengan
+
+
+                                    {x ∈ X | d(x, γ(K)) < ε} ⊆ O.
+
+Karena itu bola metrik supremum B∞ (γ, ε) termuat dalam [K, O]. Sebaliknya, untuk ε > 0,
+kekontinuan seragam γ pada interval kompak memberi partisi cukup halus sehingga citra setiap
+subinterval termuat dalam bola berjari-jari ε/3 terhadap suatu nilai γ(ai ). Pilih
+
+                                                         2ε
+                                                               
+                                          Ui = B γ(ai ),    .
+                                                         3
+
+Lingkungan Nγ (t1 < · · · < tn ; U0 , . . . , Un ) lalu termuat dalam B∞ (γ, ε) menurut pertidaksamaan
+segitiga. Kedua topologi jadi sama.
+Terakhir, misalkan H : Y × I → X kontinu dan definisikan h(y)(t) = H(y, t). Untuk menunjukkan h
+kontinu, ambil y0 ∈ h−1 ([K, O]). Bagi setiap t ∈ K, kekontinuan H memberi lingkungan Wt ∋ y0 dan
+Vt ∋ t dengan
+
+
+                                            H(Wt × Vt ) ⊆ O.
+
+Kekompakan K memberi subkeluarga berhingga Vt1 , . . . , Vtr yang menutupi K. Irisan W = j Wtj
+                                                                                                T
+
+adalah lingkungan y0 dan memenuhi H(W × K) ⊆ O, jadi W ⊆ h−1 ([K, O]). Maka h kontinu.
+Sebaliknya, jika h : Y → X I kontinu, maka
+
+
+                                           H = ev ◦(h × idI )
+
+kontinu menurut Lema 6.2. Kedua pengubahan ini saling invers, sehingga hukum eksponensial
+terbukti.
+
+
+
+                                                      54
+Pemeriksaan penguasaan 6.3 (transpor kontinu dan surjektif). Gunakan Teorema 6.1 dan
+Lema 6.2 untuk membuktikan bahwa A : Pxy X × Zx → Zy kontinu. Jika Z terhubung lintasan dan
+z ∈ Zx , buktikan bahwa fungsi terinduksi π0 (Pxy X) → Zy surjektif.
+
+6.7   Solusi Pemeriksaan 6.3
+Inklusi
+
+
+                                      Pxy X × Zx ,→ X I ×X Z
+
+kontinu. Menurut Teorema 6.1, Lift kontinu, dan menurut Lema 6.2, ev1 : Z I → Z kontinu. Maka
+komposisi
+
+
+                                (γ, w) 7−→ ev1 (Lift(γ, w)) = γ∗ (w)
+
+kontinu. Citranya berada di subruang diskret Zy , sehingga inilah kekontinuan A.
+Sekarang tetapkan z ∈ Zx dan ambil sembarang w ∈ Zy . Karena Z terhubung lintasan, pilih lintasan
+λ : I → Z dari z ke w. Proyeksi γ = π ◦ λ berada dalam Pxy X. Lintasan λ adalah pengangkatan γ
+yang berawal di z, sehingga keunikan pengangkatan memberi
+
+
+                                        A(γ, z) = γ∗ (z) = w.
+
+Jadi A(−, z) surjektif. Karena Zy diskret dan A(−, z) kontinu, ia konstan pada setiap komponen
+terhubung Pxy X dan turun menjadi fungsi surjektif π0 (Pxy X) → Zy .
+Pemeriksaan penguasaan 6.4 (SLSC dan dua contoh). Buktikan langsung bahwa setiap ruang
+SLSC bersifat SLPC. Jelaskan secara rinci mengapa manifold memenuhi Definisi 6.2 dan mengapa
+anting-anting Hawaii tidak memenuhinya.
+
+6.8   Solusi Pemeriksaan 6.4
+Basis pada Definisi 6.2 terdiri atas lingkungan-lingkungan N yang terhubung lintasan. Jadi, untuk
+setiap dua titik u, v ∈ N , terdapat lintasan di N , dan khususnya di X, dari u ke v. Ini persis
+memenuhi syarat basis dalam definisi SLPC Unit 4.
+Untuk manifold tanpa batas, pilih peta koordinat φ : N → C yang citranya C merupakan bola
+Euklides terbuka; pada titik batas manifold dengan batas, pilih sebagai C sebuah setengah bola yang
+konveks. Karena C konveks, ia terhubung lintasan. Jika γ, η : I → N mempunyai titik ujung sama,
+tuliskan γ̄ = φ ◦ γ dan η̄ = φ ◦ η, lalu definisikan dalam koordinat
+
+
+                         H̄(s, t) = (1 − s)γ̄(t) + sη̄(t),   H = φ−1 ◦ H̄.
+
+Kekonveksan C menjamin H̄(s, t) ∈ C, sedangkan kesamaan titik ujung menjamin H(s, 0) dan H(s, 1)
+tetap. Jadi H membuktikan syarat SLSC.
+Untuk anting-anting Hawaii H, setiap lingkungan relatif dari (0, 0) memuat lingkaran penuh Cn untuk
+semua n yang cukup besar. Untuk satu n tetap, terdapat retraksi kontinu
+
+
+                                            rn : H −→ Cn
+
+yang merupakan identitas pada Cn dan meruntuhkan setiap Cm dengan m = ̸ n ke titik (0, 0). Jika
+loop yang mengitari Cn dapat dikontraksikan dalam H, komposisi kontraksi itu dengan rn akan
+mengontraksikan loop pembangkit di lingkaran Cn , yang mustahil. Jadi setiap lingkungan (0, 0)
+
+                                                  55
+memuat loop yang tetap tidak dapat dikontraksikan di seluruh ruang. Tidak mungkin ada basis
+lingkungan di (0, 0) yang memenuhi Definisi 6.2; maka H tidak SLSC.
+
+Bukti mandiri Teorema 6.2 untuk kasus yang digunakan
+Materi edisi. Kita membuktikan langsung bahwa jika X SLSC menurut Definisi 6.2, maka X I ,
+Px X, dan Pxy X memenuhi definisi SLPC Unit 4. Kasus Ωx X = Pxx X lalu langsung mengikuti. Ingat
+bahwa definisi SLPC hanya meminta dua titik dalam satu lingkungan basis dapat dihubungkan oleh
+lintasan di ruang keseluruhan; lintasan penghubung tidak harus tetap berada dalam lingkungan basis
+itu.
+Tetapkan γ ∈ X I dan suatu lingkungan dasar kompak-terbuka
+
+
+                                   U = Nγ (t1 < · · · < tn ; U0 , . . . , Un ).
+
+Karena X SLSC, kekompakan I, dan Lema 6.1, kita dapat memperhalus partisi menjadi
+
+
+                                       0 = s0 < s1 < · · · < sm = 1
+
+yang memuat semua tj , lalu memilih lingkungan basis SLSC terbuka V1 , . . . , Vm sehingga
+
+
+                                        γ([sk−1 , sk ]) ⊆ Vk ⊆ Uj(k)
+
+dan [sk−1 , sk ] ⊆ [tj(k) , tj(k)+1 ]. Kedua himpunan Vk dan Vk+1 memuat γ(sk ). Pilih lingkungan basis
+SLSC terbuka
+
+
+                           Lk ∋ γ(sk ),           Lk ⊆ Vk ∩ Vk+1      (1 ≤ k < m).
+
+Pilih pula L0 ⊆ V1 dan Lm ⊆ Vm dari basis yang sama pada kedua titik ujung. Definisikan
+
+                                                                           m
+                        V := Nγ (s1 < · · · < sm−1 ; V1 , . . . , Vm ) ∩         ev−1
+                                                                                   sk (Lk ).
+                                                                           \
+
+                                                                           k=0
+
+Himpunan V adalah lingkungan terbuka γ dan termuat dalam U .
+Ambil sembarang η, ζ ∈ V. Karena setiap Lk terhubung lintasan, pilih lintasan
+
+
+                                                  δk : I −→ Lk
+
+dari η(sk ) ke ζ(sk ). Untuk subinterval ke-k, tuliskan ηk dan ζk bagi reparameterisasi pembatasan η
+dan ζ ke [sk−1 , sk ]. Kedua lintasan komposit
+
+
+                                       ηk ∗ δ k      dan       δk−1 ∗ ζk
+
+berada dalam Vk dan mempunyai titik awal serta titik akhir yang sama. Sifat SLSC bagi Vk
+memberikan homotopi di X di antara kedua lintasan itu yang mempertahankan titik ujung. Secara
+ekuivalen, loop batas yang dibentuk oleh ηk , δk , lintasan balik ζk , dan lintasan balik δk−1 mempunyai
+pengisian disk di X. Setelah disk diidentifikasi dengan persegi, kita memperoleh homotopi persegi
+yang sisi bawahnya ηk , sisi atasnya ζk , dan kedua sisi tegaknya δk−1 serta δk .
+Homotopi-homotopi persegi untuk k = 1, . . . , m memiliki sisi tegak yang sama pada setiap batas
+bersama. Lema penempelan karena itu menghasilkan homotopi kontinu
+
+                                                       56
+                                          H : I × I −→ X
+
+dari η ke ζ. Menurut hukum eksponensial, H adalah lintasan di X I dari η ke ζ. Jadi setiap dua
+titik dalam V dapat dihubungkan oleh lintasan dalam X I . Karena lingkungan awal U sembarang,
+lingkungan-lingkungan seperti V membentuk basis SLPC bagi X I .
+Untuk Px X, lakukan konstruksi yang sama di dalam subruang dan pilih δ0 sebagai lintasan konstan
+di x. Homotopi hasil penempelan lalu memenuhi
+
+
+                                            H(s, 0) = x
+
+untuk semua s, sehingga seluruh lintasan di ruang pemetaan tetap berada dalam Px X. Untuk Pxy X,
+pilih juga δm sebagai lintasan konstan di y; dengan demikian
+
+
+                                    H(s, 0) = x,        H(s, 1) = y
+
+untuk semua s. Irisan lingkungan-lingkungan V dengan subruang masing-masing membentuk basis
+relatif yang memenuhi syarat SLPC. Maka Px X dan Pxy X bersifat SLPC, dan mengambil y = x
+memberi hasil untuk Ωx X. □
+
+
+Tentang unit ini
+Unit ini merupakan terjemahan dan adaptasi bahasa Indonesia atas Algebraic Topology
+karya David Michael Roberts (2019), tepatnya Notes.tex baris 1516–1770 pada commit
+b947ad2e9f9e301bfe24590a9db653bc54fa1a53. Rentang itu dimulai dengan penanda Kuliah 7
+dan pertanyaan tentang transpor sepanjang lintasan yang dikonkatenasi, lalu berakhir setelah
+funktorialitas grup fundamental. Baris 1771 memulai Kuliah 8 dan tidak termasuk dalam unit ini.
+Karya sumber tersedia di bawah Creative Commons Attribution 4.0 International.
+Perubahan pada unit ini meliputi penerjemahan, pemformatan ulang agar mudah dibaca, pembe-
+rian pengenal stabil, serta pemindahan tugas dan gambar dari catatan pinggir ke urutan bacaan
+utama. Sepuluh grafik TikZ pinggir diganti dengan rumus eksplisit bagi keenam pemetaan parameter
+ϕ, ψ, α, β, µ, ν; dengan demikian semua informasi matematisnya tetap tersedia dalam bentuk yang
+dapat dibaca perangkat bantu. Koreksi substantif yang diterapkan adalah: notasi serat Zγ(0) diperba-
+iki; label dua grafik asosiativitas diselaraskan dengan rumusnya; homotopi afin yang keliru karena
+mengulang ϕ diperbaiki agar benar-benar menginterpolasi ϕ dan ψ; kata “terhubung” pada contoh
+S 2 diperkuat menjadi “terhubung lintasan,” sesuai hipotesis yang dipakai; dan arah aksi transpor
+dijelaskan secara eksplisit sebagai aksi kanan—atau, setelah membalik loop, sebagai representasi
+kiri—agar urutan komposisi tidak tersamarkan.
+Rentang sumber tidak memberikan bukti bagi lema transpor-konkatenasi, proposisi funktor ruang
+loop, atau akibat funktorialitas π1 . Kekontinuan operasi konkatenasi diserahkan ke Assignment 2,
+dan identifikasi dengan kelas homotopi bertitik S 1 → X diberikan sebagai latihan pinggir. Bagian
+pendamping penguasaan menutup semuanya dengan empat pemeriksaan beserta solusi lengkap dan
+mandiri. Seluruh materi pendamping tersedia di bawah CC BY 4.0. Edisi ini bersifat independen
+dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
+
+
+7     Kuliah 7
+7.1   Konkatenasi dan transpor serat
+Apa yang terjadi pada isomorfisme
+
+
+                                                   57
+                                          γ∗ : Zx −→ Zy
+
+jika lintasan γ : I → X dipecah menjadi dua sublintasan x ⇝ x′ ⇝ y, lalu isomorfisme-isomorfisme
+yang bersesuaian dikomposisikan?
+Misalkan γ, η : I → X memenuhi γ(1) = η(0). Konkatenasi keduanya adalah lintasan γ#η : I → X
+yang didefinisikan oleh
+
+                                                              0 ≤ t ≤ 12 ,
+                                            (
+                                             γ(2t),
+                               (γ#η)(t) =
+                                             η(2t − 1),       2 ≤ t ≤ 1.
+                                                              1
+
+
+
+Kekontinuan mengikuti dari lema penempelan karena kedua rumus bernilai sama pada t = 21 .
+Lema 7.1 (transpor menghormati konkatenasi). Jika γ, η : I → X dan γ(1) = η(0), maka
+
+
+                                (γ#η)∗ = η∗ ◦ γ∗ : Zγ(0) −→ Zη(1) .
+
+Secara khusus, jika γ, η ∈ Ωx X, maka γ#η ∈ Ωx X. Fungsi
+
+
+                                Ωx X −→ Aut(Zx ),             γ 7−→ γ∗ ,
+
+kompatibel dengan konkatenasi dalam urutan yang dinyatakan Lema 7.1. Akan tetapi, konkatenasi
+tidak asosiatif sebagai kesamaan literal lintasan berparameter.
+Contoh 7.1 (kegagalan asosiativitas literal). Ambil X = S 1 dan γ(t) = e2πit . Maka
+
+                                                              0 ≤ t ≤ 12 ,
+                                                (
+                                                    e8πit ,
+                               ((γ#γ)#γ)(t) =
+                                                              2 ≤ t ≤ 1,
+                                                              1
+                                                    e4πit ,
+
+sedangkan
+
+                                                              0 ≤ t ≤ 12 ,
+                                                (
+                                                    e4πit ,
+                               (γ#(γ#γ))(t) =
+                                                              2 ≤ t ≤ 1.
+                                                              1
+                                                    e8πit ,
+
+Keduanya menempuh loop dasar tiga kali, tetapi dengan jadwal yang berbeda. Sebagai contoh, pada
+t = 14 , lintasan pertama bernilai 1, sedangkan lintasan kedua bernilai −1.
+
+7.2   Hukum grup hingga homotopi
+Mari periksa kembali cara lintasan dikonkatenasi. Untuk γ(1) = η(0), terdapat fungsi kontinu alami
+
+
+                                       ⟨γ, η⟩ : [0, 2] −→ X
+
+yang menempuh γ pada [0, 1] dan η pada [1, 2]. Konkatenasi γ#η diperoleh dengan melakukan
+prakomposisi terhadap t 7→ 2t : [0, 1] → [0, 2].
+Jika ditambahkan lintasan ketiga λ dengan λ(0) = η(1), definisikan
+
+
+                                      ⟨γ, η, λ⟩ : [0, 3] −→ X
+
+
+
+
+                                                58
+dengan menempuh ketiga lintasan secara berurutan pada interval satuan berturut-turut. Dua cara
+memasang tanda kurung diperoleh melalui prakomposisi terhadap
+
+                                              4t,           0 ≤ t ≤ 12 ,
+                                             (
+                                    ϕ(t) =
+                                              2t + 1,       2 ≤ t ≤ 1,
+                                                            1
+
+
+dan
+
+                                                 2t,        0 ≤ t ≤ 12 ,
+                                             (
+                                    ψ(t) =
+                                                 4t − 1,    2 ≤ t ≤ 1.
+                                                            1
+
+
+Lebih tepatnya,
+
+
+                       (γ#η)#λ = ⟨γ, η, λ⟩ ◦ ϕ,            γ#(η#λ) = ⟨γ, η, λ⟩ ◦ ψ.
+
+Kedua lintasan ϕ, ψ : I → [0, 3] mempunyai titik ujung yang sama. Homotopi afin
+
+
+                                    h(s, t) = (1 − s)ϕ(t) + sψ(t)
+
+mempertahankan titik ujung dan menghubungkan ϕ dengan ψ. Komposisi
+
+
+                                     (s, t) 7−→ ⟨γ, η, λ⟩(h(s, t))
+
+memberikan homotopi berujung tetap dari (γ#η)#λ ke γ#(η#λ). Jadi konkatenasi lintasan asosiatif
+hingga homotopi.
+Sekarang ambil sembarang lintasan γ : I → X dan definisikan lintasan balik
+
+
+                                           γ̄(t) := γ(1 − t).
+
+Konkatenasi dengan lintasan balik difaktorkan melalui dua pemetaan parameter
+
+                                                               2t,       0 ≤ t ≤ 12 ,
+                                                           (
+                           γ#γ̄ = γ ◦ α,         α(t) =
+                                                               2 − 2t,   2 ≤ t ≤ 1,
+                                                                         1
+
+
+dan
+
+                                                            1 − 2t, 0 ≤ t ≤ 12 ,
+                                                           (
+                           γ̄#γ = γ ◦ β,         β(t) =
+                                                            2t − 1, 12 ≤ t ≤ 1.
+
+Grafik α bergerak dari 0 ke 1 lalu kembali ke 0, sedangkan grafik β bergerak dari 1 ke 0 lalu kembali
+ke 1. Homotopi-homotopi afin
+
+
+                                        a(s, t) = (1 − s)α(t)
+
+dan
+
+
+                                      b(s, t) = (1 − s)β(t) + s
+
+
+                                                     59
+masing-masing menghubungkan α ke fungsi konstan 0 dan β ke fungsi konstan 1, sambil memperta-
+hankan titik ujung. Setelah dikomposisikan dengan γ, kita memperoleh
+
+
+                                    γ#γ̄ ≃ cγ(0) ,        γ̄#γ ≃ cγ(1)
+
+relatif terhadap titik ujung. Jadi lintasan balik merupakan invers hingga homotopi.
+Untuk identitas hingga homotopi, gunakan lintasan konstan
+
+
+                                      cx : I −→ X,         cx (t) = x.
+
+Kita mempunyai faktorisasi
+
+                                                                2t,     0 ≤ t ≤ 12 ,
+                                                               (
+                            γ#cγ(1) = γ ◦ µ,         µ(t) =
+                                                                1,      2 ≤ t ≤ 1,
+                                                                        1
+
+
+dan
+
+                                                              0,          0 ≤ t ≤ 12 ,
+                                                           (
+                          cγ(0) #γ = γ ◦ ν,      ν(t) =
+                                                              2t − 1,     2 ≤ t ≤ 1.
+                                                                          1
+
+
+Masing-masing µ dan ν homotopik relatif titik ujung dengan idI , melalui
+
+
+                       m(s, t) = (1 − s)µ(t) + st,        n(s, t) = (1 − s)ν(t) + st.
+
+Komposisi dengan γ menghasilkan
+
+
+                                    γ#cγ(1) ≃ γ,          cγ(0) #γ ≃ γ
+
+relatif terhadap titik ujung.
+Jika kelima homotopi—satu asosiativitas, dua invers, dan dua identitas—dipandang sebagai lintasan
+dalam X I , maka untuk loop-loop pada x semuanya merupakan lintasan dalam Ωx X. Jadi operasi
+biner
+
+
+                                      # : Ωx X × Ωx X −→ Ωx X
+
+memenuhi hukum grup hingga keberadaan lintasan:
+
+                                        (γ#η)#λ ⇝ γ#(η#λ),
+                                              γ#γ̄ ⇝ cx ,
+                                              γ̄#γ ⇝ cx ,
+                                              γ#cx ⇝ γ,
+                                              cx #γ ⇝ γ.
+
+Lebih banyak koherensi sebenarnya tersedia: homotopi-homotopi tersebut sendiri dapat dirangkai
+secara koheren untuk berbagai pilihan tanda kurung. Misalnya, catatan sumber menyebut keluarga
+bertipe
+
+
+                                  I × Ωx X × Ωx X × Ωx X −→ Ωx X.
+
+                                                     60
+Catatan sumber tidak membuktikan struktur tingkat lebih tinggi itu.
+Proposisi 7.1. Misalkan (X, x) ruang bertitik dan X bersifat SLSC. Himpunan
+
+
+                                               π0 (Ωx X)
+
+mempunyai struktur grup. Perkaliannya diinduksi oleh konkatenasi loop, unsur identitasnya diwakili
+oleh loop konstan cx , dan invers kelas [γ] diwakili oleh γ̄.
+Jika hanya bekerja dengan ruang yang tidak diketahui SLSC, gunakan himpunan komponen lintasan
+[∗, Ωx X] sebagai gantinya.
+Bukti. Operasi konkatenasi
+
+
+                                      # : Ωx X × Ωx X −→ Ωx X
+
+kontinu; inilah tugas yang dirujuk sumber sebagai Assignment 2, dan pembuktiannya diberikan dalam
+Pemeriksaan Penguasaan 7.2. Karena X SLSC, Teorema 6.2 menyatakan bahwa Ωx X SLPC. Maka
+komponen terhubung dan komponen lintasannya berimpit.
+Menerapkan π0 pada # memberi
+
+
+                                   π0 (Ωx X × Ωx X) −→ π0 (Ωx X).
+
+Untuk ruang SLPC M, N , pemetaan kanonik
+
+                                                 ∼
+                                                 =
+                                               → π0 (M ) × π0 (N )
+                                   π0 (M × N ) −
+
+adalah bijeksi. Karena itu diperoleh perkalian
+
+
+                     π0 (Ωx X) × π0 (Ωx X) −→ π0 (Ωx X),       ([γ], [η]) 7−→ [γ#η].
+
+Kelima lintasan dalam Ωx X yang dibangun di atas menunjukkan bahwa perkalian kelas bersifat
+asosiatif, [cx ] merupakan identitas dua sisi, dan [γ̄] merupakan invers dua sisi [γ]. Jadi aksioma grup
+terpenuhi. □
+Definisi 7.1 (grup fundamental). Untuk ruang bertitik (X, x), grup fundamental di x adalah
+
+
+                                         π1 (X, x) := [∗, Ωx X],
+
+yakni himpunan komponen lintasan ruang loop, dengan perkalian yang diinduksi konkatenasi. Jika
+X SLSC, Teorema 6.2 dan Proposisi 4.2 memberikan identifikasi
+
+
+                                         π1 (X, x) ∼
+                                                   = π0 (Ωx X).
+
+Ingat bahwa funktor [∗, −] turun menjadi funktor Ho → Set, sebagaimana dibuktikan dalam
+pendamping Unit 4.
+
+
+
+
+                                                     61
+7.3   Grup fundamental dan serat ruang penutup
+Penalaran sebelumnya memberi aksi transpor pada serat. Menurut Teorema 6.1, pemetaan
+
+
+                                Ωx X × Zx −→ Zx ,          (γ, z) 7−→ γ∗ (z),
+
+kontinu. Homotopi loop berujung tetap adalah lintasan dalam Ωx X, sedangkan Zx diskret. Karena
+itu transpor konstan sepanjang homotopi tersebut dan turun ke kelas dalam π1 (X, x).
+Dengan konvensi perkalian kronologis
+
+
+                                             [γ] [η] := [γ#η]
+
+(menempuh γ lebih dahulu, kemudian η), rumus Lema 7.1 berarti bahwa
+
+
+                                             z · [γ] := γ∗ (z)
+
+adalah aksi kanan π1 (X, x) pada Zx :
+
+
+                                       (z · [γ]) · [η] = z · ([γ][η]).
+
+Jika representasi kiri lebih disukai, definisikan
+
+
+                             ρ : π1 (X, x) −→ Aut(Zx ),          ρ([γ]) = (γ̄)∗ .
+
+Karena γ#η = η̄#γ̄, Lema 7.1 memberikan
+
+
+                                       ρ([γ][η]) = ρ([γ]) ◦ ρ([η]),
+
+sehingga ρ benar-benar homomorfisme grup. Untuk ruang SLPC yang tidak SLSC, konstruksi yang
+sama tetap bekerja dengan kelas homotopi berujung tetap; asumsi SLSC hanya membuat pendekatan
+melalui komponen terhubung ruang fungsi lebih langsung.
+Jika Z terhubung lintasan dan z ∈ Zx dipilih, pemetaan orbit
+
+
+                                  π1 (X, x) −→ Zx ,        [γ] 7−→ γ∗ (z),
+
+surjektif. Jadi kardinalitas serat ruang penutup terhubung lintasan dibatasi dari atas oleh banyaknya
+kelas homotopi loop. Sebaliknya, serat sebuah ruang penutup terhubung lintasan memberi batas
+bawah bagi banyaknya kelas homotopi loop yang berbeda di X.
+Contoh 7.2. Proyeksi
+
+
+                                               S 2 −→ RP2
+
+adalah ruang penutup dengan serat dua titik, dan S 2 terhubung lintasan. Karena itu terdapat
+sedikitnya dua kelas homotopi loop di RP2 pada setiap titik dasar. Salah satunya adalah kelas loop
+konstan, sehingga ada loop di RP2 yang tidak homotopik relatif titik ujung dengan loop konstan.
+Contoh 7.3. Pemetaan penutup
+
+
+                                 exp(2πi−) : R −→ S 1 ,          t 7−→ e2πit ,
+
+                                                     62
+mempunyai serat Z di atas 1 ∈ S 1 . Ruang atas R terhubung lintasan, sehingga terdapat surjeksi
+π1 (S 1 , 1) → Z. Akibatnya, π1 (S 1 , 1) merupakan grup tak hingga.
+
+7.4   Funktorialitas ruang loop dan grup fundamental
+Proposisi 7.2. Konstruksi ruang loop merupakan funktor
+
+
+                                           Ω : Top∗ −→ Top∗ .
+
+Pada objek, Ω(X, x) = (Ωx X, cx ). Pada pemetaan bertitik f : (X, x) → (Y, y), funktor ini bertindak
+melalui pascakomposisi Ωf (γ) = f ◦ γ.
+Akibat 7.1. Grup fundamental merupakan funktor
+
+
+                                    π1 := [∗, −] ◦ Ω : Top∗ −→ Grp.
+
+Pada subkategori penuh ruang-ruang SLSC, funktor ini teridentifikasi secara natural dengan π0 ◦ Ω
+setelah setiap π0 (Ωx X) diberi struktur grup Proposisi 7.1. Selain itu, terdapat isomorfisme natural
+
+
+                                      π1 (X, x) ∼
+                                                = [(S 1 , 1), (X, x)]∗ ,
+
+yang pembuktiannya diberikan dalam Pemeriksaan Penguasaan 7.4.
+Bukti lengkap Proposisi 7.2 dan bagian funktorial Akibat 7.1 juga diberikan dalam Pemeriksaan
+Penguasaan 7.4.
+
+
+Pendamping penguasaan: pemeriksaan dan solusi lengkap
+Bagian ini merupakan materi baru untuk edisi bahasa Indonesia dan tersedia di bawah CC BY 4.0.
+Empat pemeriksaan berikut menutup semua bukti dan tugas yang ditinggalkan sumber pada rentang
+Kuliah 7.
+Pemeriksaan penguasaan 7.1 (bukti Lema 7.1). Buktikan bahwa transpor serat menghormati
+konkatenasi lintasan.
+
+7.5   Solusi Pemeriksaan 7.1
+Ambil z ∈ Zγ(0) dan tuliskan
+
+
+                                            z ′ := γ∗ (z) = γez (1).
+
+Lintasan terangkat
+
+
+                                                   γez #ηez ′
+
+berawal di z. Proyeksinya adalah
+
+
+                               π ◦ (γez #ηez ′ ) = (π ◦ γez )#(π ◦ ηez ′ ) = γ#η.
+
+Jadi lintasan itu merupakan pengangkatan γ#η yang berawal di z. Keunikan pengangkatan membe-
+rikan
+
+
+
+                                                      63
+                                           ^ = γez #ηez ′ .
+                                           (γ#η)z
+
+Evaluasi pada t = 1 menghasilkan
+
+
+                                   (γ#η)∗ (z) = η∗ (z ′ ) = η∗ (γ∗ (z)).
+
+Karena berlaku untuk setiap z, diperoleh (γ#η)∗ = η∗ ◦ γ∗ .
+Pemeriksaan penguasaan 7.2 (kekontinuan konkatenasi). Buktikan bahwa
+
+
+                                      # : Ωx X × Ωx X −→ Ωx X
+
+kontinu untuk topologi kompak-terbuka.
+
+7.6   Solusi Pemeriksaan 7.2
+Definisikan pemetaan tiga variabel (sebelum mengambil adjoinnya)
+
+
+                                    C : (Ωx X × Ωx X) × I −→ X
+
+dengan
+
+                                                                0 ≤ t ≤ 21 ,
+                                               (
+                                                   γ(2t),
+                                C(γ, η, t) =
+                                                   η(2t − 1),   2 ≤ t ≤ 1.
+                                                                1
+
+
+
+Pada dua subruang tertutup (Ωx X × Ωx X) × [0, 12 ] dan (Ωx X × Ωx X) × [ 12 , 1], masing-masing rumus
+kontinu karena merupakan komposisi evaluasi dengan pemetaan parameter kontinu. Pada irisan t = 12 ,
+kedua rumus bernilai x, sebab γ(1) = x = η(0). Lema penempelan menunjukkan bahwa C kontinu.
+Karena I kompak Hausdorff, hukum eksponensial topologi kompak-terbuka menyatakan bahwa
+pemetaan teradjung
+
+
+                        Cb : Ωx X × Ωx X −→ X I ,          C(γ,
+                                                           b    η)(t) = C(γ, η, t),
+
+kontinu. Citra Cb berada dalam subruang Ωx X, dan pemetaan ke subruang itu tepat merupakan #.
+Maka konkatenasi kontinu.
+Pemeriksaan penguasaan 7.3 (komponen dan aksi). Lengkapi dua rincian dalam Proposisi
+7.1: buktikan bahwa komponen suatu produk adalah produk komponen, dan jelaskan mengapa
+homotopi-homotopi pada bagian utama benar-benar memberikan aksioma grup pada kelas. Kemudian
+verifikasi konvensi aksi kanan pada serat.
+
+7.7   Solusi Pemeriksaan 7.3
+Misalkan Cm dan Cn adalah komponen terhubung yang memuat titik m ∈ M dan n ∈ N . Produk
+Cm × Cn terhubung dan memuat (m, n). Sebaliknya, jika A ⊆ M × N terhubung dan memuat (m, n),
+kedua proyeksinya terhubung, sehingga
+
+
+                                 prM (A) ⊆ Cm ,            prN (A) ⊆ Cn .
+
+Jadi A ⊆ Cm × Cn . Maka komponen terhubung yang memuat (m, n) tepat Cm × Cn , dan diperoleh
+bijeksi
+
+                                                      64
+                                     π0 (M × N ) ∼
+                                                 = π0 (M ) × π0 (N ).
+
+Pada Ωx X, setiap homotopi berujung tetap adalah lintasan dalam ruang loop. Karena itu dua sisi
+setiap hukum pada bagian utama berada dalam komponen lintasan yang sama. Setelah mengambil
+kelas, tanda ⇝ berubah menjadi kesamaan. Maka
+
+
+                                         ([γ][η])[λ] = [γ]([η][λ]),
+
+
+                                           [γ][γ̄] = [cx ] = [γ̄][γ],
+
+dan
+
+
+                                          [γ][cx ] = [γ] = [cx ][γ].
+
+Terakhir, dengan z · [γ] = γ∗ (z), Lema 7.1 memberikan
+
+
+                          (z · [γ]) · [η] = η∗ (γ∗ (z)) = (γ#η)∗ (z) = z · ([γ][η]),
+
+dan loop konstan bertindak sebagai identitas. Jadi ini benar-benar aksi kanan.
+Pemeriksaan penguasaan 7.4 (funktorialitas dan model lingkaran). Buktikan Proposisi 7.2
+dan Akibat 7.1. Kemudian bangun secara eksplisit isomorfisme natural
+
+
+                                      π1 (X, x) ∼
+                                                = [(S 1 , 1), (X, x)]∗ .
+
+7.8   Solusi Pemeriksaan 7.4
+Pada objek, definisikan
+
+
+                                          Ω(X, x) := (Ωx X, cx ).
+
+Untuk pemetaan bertitik f : (X, x) → (Y, y), definisikan
+
+
+                               Ωf : Ωx X −→ Ωy Y,           (Ωf )(γ) = f ◦ γ.
+
+Pemetaan ini kontinu menurut Lema 6.2, dan bertitik karena f ◦ cx = cy . Selain itu,
+
+
+                                  Ω(id) = id,        Ω(g ◦ f ) = Ωg ◦ Ωf.
+
+Jadi Ω merupakan funktor Top∗ → Top∗ .
+Funktor [∗, −] mengirim ruang bertitik ke himpunan komponen lintasannya. Pada ruang loop,
+konkatenasi memberi struktur grup pada himpunan ini. Pemetaan Ωf mempertahankan konkatenasi
+secara literal:
+
+
+                                     (Ωf )(γ#η) = (f ◦ γ)#(f ◦ η),
+
+serta mempertahankan loop konstan dan lintasan balik. Karena itu pemetaan terinduksi
+
+
+
+                                                      65
+                          π1 (f ) : π1 (X, x) −→ π1 (Y, y),        [γ] 7−→ [f ◦ γ],
+
+adalah homomorfisme grup. Identitas dan komposisi dipertahankan karena sifat yang sama berlaku
+bagi Ω, sehingga π1 merupakan funktor ke Grp. Jika X SLSC, Teorema 6.2 mengidentifikasi komponen
+lintasan dan komponen terhubung Ωx X secara natural, yang memberi deskripsi π1 ∼= π0 ◦ Ω.
+Sekarang ambil pemetaan hasil bagi
+
+
+                              q : I −→ I/{0 ∼ 1} ∼
+                                                 = S1,             q(t) = e2πit .
+
+Setiap loop γ : I → X pada x mempunyai γ(0) = γ(1), sehingga menurut sifat universal hasil bagi
+terdapat tepat satu pemetaan bertitik kontinu
+
+
+                                         γ ♯ : (S 1 , 1) −→ (X, x)
+
+dengan γ ♯ ◦ q = γ. Sebaliknya, setiap pemetaan bertitik u : (S 1 , 1) → (X, x) menghasilkan loop u ◦ q.
+Kedua konstruksi saling invers.
+Jika H : I × I → X merupakan homotopi loop yang mempertahankan titik ujung, maka H(s, 0) =
+H(s, 1) = x untuk setiap s. Pemetaan
+
+
+                                       idI ×q : I × I −→ I × S 1
+
+adalah pemetaan hasil bagi: ia merupakan surjeksi kontinu dari ruang kompak ke ruang Hausdorff.
+Karena H konstan pada setiap seratnya, sifat universal hasil bagi memberi tepat satu homotopi
+bertitik H ♯ : I × S 1 → X. Sebaliknya, prakomposisi homotopi bertitik dengan idI ×q menghasilkan
+homotopi loop berujung tetap. Jadi bijeksi di atas turun menjadi
+
+                                                ∼
+                                                =
+                                               → [(S 1 , 1), (X, x)]∗ .
+                                     π1 (X, x) −
+
+Faktorisasi melalui q dan pengambilan kembali dengan prakomposisi oleh q bersifat natural. Untuk
+setiap pemetaan bertitik f : (X, x) → (Y, y), pembentukan kelas memenuhi
+
+
+                                            (f ◦ γ)♯ = f ◦ γ ♯ .
+
+Dengan demikian isomorfisme tersebut natural. Untuk memeriksa perkalian, tuliskan ι1 , ι2 : S 1 →
+S 1 ∨ S 1 bagi kedua inklusi dan definisikan pemetaan jepit p : S 1 → S 1 ∨ S 1 melalui
+
+                                             ι1 (q(2t)),       0 ≤ t ≤ 21 ,
+                                            (
+                                p(q(t)) =
+                                             ι2 (q(2t − 1)),   2 ≤ t ≤ 1.
+                                                               1
+
+
+Kedua rumus bertemu di titik baji dan sama pada t = 0, 1, sehingga lema penempelan dan sifat hasil
+bagi q memberi pemetaan bertitik kontinu p. Untuk pemetaan bertitik u, v : S 1 → X, pemetaan baji
+u ∨ v memenuhi
+
+
+                                   (u ∨ v) ◦ p ◦ q = (u ◦ q)#(v ◦ q).
+                                                
+
+
+Jadi perkalian yang diinduksi p tepat bersesuaian dengan konkatenasi loop. Isomorfisme natural di
+atas merupakan isomorfisme grup.
+
+
+
+                                                    66
+

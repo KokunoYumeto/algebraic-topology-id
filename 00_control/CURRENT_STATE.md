@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 
-Status: active production. Source admission is closed. Units 001–004 remain translated, independently rereviewed, built, visually/browser checked, backend-complete, published, and anonymously byte-verified. Unit 005 is fully verified and ready for its cumulative publication transaction. Units 006–007 are translated and independently clean but are not yet built or backend-frozen. Every earlier reader remains byte-frozen. The next source cursor is Lecture 8.
+Status: active production. Source admission is closed. Units 001–004 remain historically published/byte-verified, but GitHub account suspension currently makes the repository API return HTTP 403 and every previously deployed Pages URL return HTTP 404. Units 001–007 are now cumulatively built, backend-complete, structurally and independently reviewed, and visually/browser verified as a local release candidate. Units 008–010 are independently clean source freezes awaiting cumulative reader/backend extension. Every earlier local reader remains byte-frozen. The next source cursor is Lecture 11.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -58,14 +58,30 @@ The 109 stable IDs cover 68 semantic blocks. All 14 exercises have complete solu
 - Backend: 785 canonical records in 11 JSONL files, bundle SHA-256 `c36095ba31dcdbc8db52e327902bfbfd419a65a3c827da41e847aa8dc55bc5e2`.
 - Final browser QA at 1280 x 720 and 390 x 844 found zero document overflow, 17 formula-local scrollers, centered/reflowing content, and no console warning or error. Fresh Poppler rendering and inspection covered all 44 pages; no clipping, overlap, broken glyph, blank object, or orphan continuation page remains. PDF remains secondary and intentionally untagged.
 
-Publication is the immediate remaining action for this boundary.
+Publication was attempted at 2026-08-22T09:00:00+02:00 from local commit `8498730cbe0e382e955dae4543b2875c3c9b827f`, tree `3f7f33482426002b0fa02c8d8264b546ae66bf41`. GitHub rejected the push with HTTP 403 because the only authenticating account is suspended. Of the two user-supplied credential candidates, one reaches that suspended account and the other is invalid or expired; the credential manager exposes no alternate account and no SSH identity is configured. Anonymous follow-up found repository API HTTP 403 and Pages HTTP 404 even for the formerly verified Unit 1–4 surfaces. No token is stored in the receipt. See `PUBLISH_ATTEMPT_UNITS_001_005.json`. The boundary remains locally committed and publication-ready; production continues without falsely claiming a public release.
 
-### Translated and independently reviewed Units 006–007
+### Verified cumulative Units 001–007 local release candidate
+
+- Source span: Roberts `Notes.tex:134–1770` (Lectures 1–7).
+- Cumulative HTML: 899,803 bytes; SHA-256 `55135048eafe0f097c45936add885e008392eefdf475270fea37adf6a2a7b7bb`.
+- Cumulative PDF: 702,470 bytes; 66 A4 pages; SHA-256 `3764b75ecfb9200e25a165db1f0f97a680384378e2a9a22e129aab57dd860d93`.
+- Manifest: 247 bytes; SHA-256 `7b279f0413892f0ddedce636b3a272884bb7bfa01410bf33a6ce34c0c34db2f9`.
+- QA receipt: 7,384 bytes; SHA-256 `2982a9465428eff97e6047bffdadba422b2dc0406e34750f632bfe148ed67617`.
+- Visual/browser receipt: 3,259 bytes; SHA-256 `63a4b4545213a7aec1c556a3852b818ba2f207b10cac7e80c62330709604176f`.
+- Structural closure: 224 stable IDs, 135 semantic blocks, 2,344 native MathML nodes, 89 resolving fragments, all 30 exercise-solution pairs, both question-answer pairs, and the preserved `eg:piS^1_infinite` source alias.
+- Backend: 995 canonical records in 11 JSONL files; bundle SHA-256 `0acf007e732682268d904699b4fbcf12c5f1a757b98938b776a72614b432df64`.
+- Two HTML builds and two PDF builds are byte-identical. Independent reruns of both QA validators passed. Root visual review covered all 66 Poppler-rendered pages, full-size pages 1, 45, 57, and 66, HTML at 1280 x 720 and 390 x 844, 32 formula-local mobile scrollers, zero document overflow, and zero browser warning/error. PDF remains secondary and intentionally untagged.
+- This boundary is locally release-ready but not publicly released; it still needs a narrow local commit and a successful push after GitHub accepts the account again.
+
+### Translated and independently reviewed Units 006–010
 
 - Unit 006: `Notes.tex:1305–1515`; 32,106 bytes; 893 lines; 28 unique stable IDs; SHA-256 `3cb182fdf183bd67e45a898228b995a44d4638e808fdfbe6ea6d6a2a2b889e33`; independent review P1/P2/P3 zero.
-- Unit 007: `Notes.tex:1516–1770`; 22,107 bytes; 749 lines; 23 unique stable IDs; SHA-256 `556cea5445e1b0a51f86f1c0ea0e80c4e00a17d365d95fa530f063cc24856569`; independent review P1/P2/P3 zero.
-- These two sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps. They are source-frozen drafts only: no cumulative reader/backend/publication claim is made yet.
-- Next exact source cursor: `Notes.tex:1771`, the Lecture 8 marker on its opening sentence.
+- Unit 007: `Notes.tex:1516–1770`; 22,107 bytes; 749 lines; 24 unique stable IDs; SHA-256 `556cea5445e1b0a51f86f1c0ea0e80c4e00a17d365d95fa530f063cc24856569`; independent review P1/P2/P3 zero.
+- Unit 008: `Notes.tex:1771–1946`; 28,466 bytes; 930 lines; 26 unique stable IDs; SHA-256 `8369e74c80e391d73575bbcb7844d3bfa62dd771dbca6258eed02360b20529cc`; independent review P1/P2/P3 zero.
+- Unit 009: `Notes.tex:1947–2093`; 25,524 bytes; 939 lines; 30 unique stable IDs; SHA-256 `16da25dea2f8ac5415b02738663046fb619c27e685042a734059e3150ed5ff18`; independent review P1/P2/P3 zero.
+- Unit 010: `Notes.tex:2094–2272`; 26,432 bytes; 934 lines; 26 unique stable IDs; SHA-256 `e1c6ef961ae2266db86baec6d701dd659a1bf78bdd3601cf5b1c6515bc7d0310`; independent review P1/P2/P3 zero.
+- These five sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps. Units 006–007 are frozen in the cumulative reader/backend; Units 008–010 are source-frozen only, so no cumulative Unit 008–010 reader/backend/publication claim is made yet.
+- Next exact source cursor: `Notes.tex:2273`, the Lecture 11 marker.
 
 ### Verified cumulative Units 001–004 boundary
 
@@ -83,8 +99,8 @@ Publication is the immediate remaining action for this boundary.
 - Repository boundary: commit `365dff08d41d6a78a8e712504c9f871b6b386094`, tree `f1284946e6622e80a16c90daaabc210f7d99f6ed`, Pages run `32554998308`, job `96987657938`, deployment `6033695000`, success status `17153629829`.
 - Publication receipt: `PUBLICATION_RECEIPT_UNITS_001_004.json`, 18,957 bytes, SHA-256 `3dc601b8ba540bcafee21127535af879506880d6c8f349738d59b9e1168a2e8a`. Anonymous raw readback matched all 33 files in the release commit; all four Pages readers matched their frozen local bytes.
 
-1. Publish and anonymously byte-verify the frozen cumulative Units 001–005 reader; persist its sanitized receipt.
-2. Build Units 001–007 cumulatively with the same source-ID/backend/QA discipline, then continue contiguously from line 1771.
+1. Create the narrow local Units 001–007 release commit, then push and anonymously byte-verify it when GitHub accepts the account; persist a sanitized receipt.
+2. Extend the reader/backend through Unit 010 and continue contiguously from line 2273.
 3. After the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
 
 ## Non-overlap boundary

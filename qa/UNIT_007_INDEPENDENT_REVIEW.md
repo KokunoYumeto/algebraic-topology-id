@@ -17,4 +17,4 @@ An independent source-and-mathematics review checked exact semantic closure, tra
 
 The review initially found no P1 issue, four P2 gaps, and four P3 issues. The edition now preserves the upstream alias `eg:piS^1_infinite` as `data-source-label` on the stable example ID; uses a clickable frozen-source URI; restores the explicit higher-coherence family type; reserves `bar gamma` for path reversal and uses `gamma^sharp` for the descended circle map; proves homotopy descent through the quotient; gives the pinch map and exact product equality; states the SLSC subcategory scope precisely; and repairs the flagged wording.
 
-The final independent recheck found no remaining P1, P2, or P3 issue. The 23 stable IDs are unique, all 13 semantic fences balance, and 74 display-math pairs balance. Every upstream semantic environment is present; four edition-original mastery checks have complete solutions.
+The final independent recheck found no remaining P1, P2, or P3 issue. The 24 stable IDs are unique, all 13 semantic fences balance, and 74 display-math pairs balance. Every upstream semantic environment is present; four edition-original mastery checks have complete solutions.
