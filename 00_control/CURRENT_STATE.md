@@ -86,6 +86,7 @@ Publication was attempted at 2026-08-22T09:00:00+02:00 from local commit `849873
 - Backend: 1,345 canonical records in 11 JSONL files; 1,131,189 bytes; bundle SHA-256 `ca6ff5b776594f5b3c1408accfc6129b876fbcdc6d029279dbbbbc1d9a40bbdf`.
 - Both HTML builds and both PDF builds are byte-identical. Both validators pass independently. All 99 Poppler-rendered pages were inspected; an independent root sample covered pages 1, 68, 79, 89, 93–95, and 99. Browser readback at 1280 x 720 and 390 x 844 confirms a centered 928 px desktop body, zero document overflow, 37/37 locally scrollable wide formulas, and zero warning/error. PDF is secondary and intentionally untagged.
 - This boundary and the Unit 011 source freeze are preserved in local commit `d27c7b7dd784ec4fbbc33a4490759869a6929f89`, tree `945e13bff783a90068560827f72fe54e05ff66f9`, parent `a3dc793ec3a7f0b1c4c0c4211115ff9caf847be0`. It is ready for a subsequent push when GitHub accepts the account again; no public-release claim is made.
+- A single push of the new boundary was attempted from receipt commit `d4a9143efabf62eebf01a369e1ebe63c5e01046b` on 2026-08-22 at 18:05 +02:00. GitHub again returned authenticated HTTP 403 with the explicit account-suspended response; anonymous repository API, Pages root, and Units 001–010 reader checks each returned HTTP 404. No credential or secret is recorded. See `PUBLISH_ATTEMPT_UNITS_001_010.json`; do not loop retries without a changed access state or a later substantial boundary.
 
 ### Translated and independently reviewed Units 006–010
 

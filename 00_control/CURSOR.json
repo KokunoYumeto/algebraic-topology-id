@@ -23,6 +23,6 @@
   "current_unit": "o012-rbt-l12",
   "translation_state": "units_001_011_complete_reviewed",
   "backend_state": "units_001_010_complete_1345_records_validated_ca6ff5b77659",
-  "publication_state": "units_001_010_and_source_011_local_commit_d27c7b7dd784_ready; prior_push_rejected_github_account_suspended; units_001_004_pages_last_historically_verified",
+  "publication_state": "units_001_010_and_source_011_local_commit_d27c7b7dd784_ready; push_attempt_d4a9143efabf_rejected_account_suspended; anonymous_repo_and_pages_404; units_001_004_pages_last_historically_verified",
   "updated": "2026-08-22"
 }

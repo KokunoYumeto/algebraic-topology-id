@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "attempted_at": "2026-08-22T18:05:11+02:00",
+  "destination": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "local_commit": "d4a9143efabf62eebf01a369e1ebe63c5e01046b",
+  "local_tree": "76f4dc5bbe922171c826f4ee13bf1ea1251348d7",
+  "production_boundary_commit": "d27c7b7dd784ec4fbbc33a4490759869a6929f89",
+  "production_boundary_tree": "945e13bff783a90068560827f72fe54e05ff66f9",
+  "intended_reader": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-010/",
+  "result": "push_rejected",
+  "remote_response": {
+    "http_status": 403,
+    "category": "authenticated_account_suspended",
+    "sanitized_message": "GitHub reports that the authenticating account is suspended."
+  },
+  "secret_material_recorded": false,
+  "publication_complete": false,
+  "anonymous_post_attempt_checks": {
+    "repository_api": "HTTP 404",
+    "pages_root": "HTTP 404",
+    "pages_units_001_010": "HTTP 404"
+  },
+  "artifacts_ready": {
+    "html_sha256": "e228ac1422b2742d873feffd5b236fe9c1329d0bdb5da0e8deffe5e770361088",
+    "pdf_sha256": "d0f739aedf3da5f317cf99a1a0dcace1f89b8c802f1dedc42c7ac0c63375c7c1",
+    "backend_bundle_sha256": "ca6ff5b776594f5b3c1408accfc6129b876fbcdc6d029279dbbbbc1d9a40bbdf"
+  },
+  "next_action": "Do not loop. Push the preserved local commit chain once GitHub restores the existing account or an authorized identity with write access to this same repository becomes available; then verify the workflow, Pages URL, and public bytes and write a successful sanitized publication receipt."
+}
