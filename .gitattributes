@@ -2,5 +2,6 @@
 *.pdf binary
 *.gz binary
 output/**/*.html binary
+release/**/artifacts/* binary
 qa/*-extracted.txt binary
 baseline/**/*.txt binary

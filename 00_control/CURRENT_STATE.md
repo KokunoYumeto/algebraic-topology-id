@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 
-Status: active production. Source admission and composite route selection are closed. Units 001–004 remain historically published/byte-verified, but GitHub account suspension currently makes the repository API return HTTP 403 and every previously deployed Pages URL return HTTP 404. Units 001–010 are cumulatively built, backend-complete, structurally and independently reviewed, and visually/browser verified as a local release candidate. Units 011–015 are independently source-frozen. The Units 001–013 cumulative reader/backend is being finalized as the next preservation checkpoint. Every earlier local reader remains byte-frozen. The next source cursor is Lecture 16. After all 30 Roberts lectures, the selected Fomberg lines 31–4185 and exact original closure follow; see `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. GitHub reinstated the account on 2026-08-22. A bounded `ls-remote` succeeded; remote `main` at `475e2d24acb4d126505b06f9ce3a36d70792ad93` was proven an ancestor of the local lane; one authorized push advanced the existing repository to `2840ff7d1ce9d085dfa2af35eec830927eaaf0ea`; `ls-remote` then matched that commit and anonymous raw Unit 015 readback returned HTTP 200. The Units 001–013 reader/backend is complete, structurally and independently reviewed, deterministic, visually/browser verified, and packaged behind an independently passing eight-file Zenodo gate. Units 014–017 are independently source-frozen. Every earlier local reader remains byte-frozen. The next source cursor is Lecture 18. The immediate preservation boundary is the new Unit 016–017 GitHub commit plus one exact Zenodo concept and one reader-first work-level Figshare item; no Zenodo/Figshare mutation is claimed until public anonymous byte readback is recorded. After all 30 Roberts lectures, the selected Fomberg lines 31–4185 and exact original closure follow; see `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -23,7 +23,7 @@ The 70 stable IDs cover 43 semantic blocks. All nine source exercises have compl
 
 ## Authority and rights
 
-The exact Roberts archive, commit/tree, seven-file manifest, CC BY 4.0 license, and reproducible upstream baseline remain frozen. MIT and Fomberg/Lazarovich are closed benchmarks, not donors. Two later StackExchange-derived code blocks remain quarantined for independent redraw.
+The exact Roberts archive, commit/tree, seven-file manifest, CC BY 4.0 license, and reproducible upstream baseline remain frozen. MIT 18.905 remains a proof-check reference only. Fomberg `algebraic_topology.tex:31–4185` is the selected post-Roberts CC BY-SA 4.0 homology bridge, with admission deferred until its dependency replacement and two-build gate pass; the separate Fomberg problem bank remains excluded. Two later StackExchange-derived code blocks remain quarantined for independent redraw.
 
 ## Frozen public cumulative Units 001–003 boundary
 
@@ -43,6 +43,21 @@ The exact Roberts archive, commit/tree, seven-file manifest, CC BY 4.0 license, 
 The 109 stable IDs cover 68 semantic blocks. All 14 exercises have complete solutions; the source question has an answer; all added checks are supplied. Ten Unit 3 source corrections and four accessibility reflows are disclosed one-to-one in the adverse ledger and backend. HTML is self-contained, centered/reflowing, `lang=id-ID`, and native MathML; all 41 fragments resolve and wide formulas scroll locally at mobile width. All 25 PDF pages and the HTML at 1280 x 720 and 390 x 844 passed visual inspection with no P1/P2/P3 finding. The PDF is secondary and explicitly untagged.
 
 ## Current production
+
+### Verified cumulative Units 001–013 preservation candidate
+
+- Source span: Roberts `Notes.tex:134–3046` (Lectures 1–13).
+- HTML: 1,824,804 bytes; SHA-256 `be1473ab5cb8eff26341e554179661775a12cec5784a8ebf3f9c2f3f0633cb71`.
+- PDF: 1,071,382 bytes; 138 A4 pages; SHA-256 `14775535f773735db5886195980f39e417aaea24998927956a81b55b0ef77c68`.
+- Artifact manifest: 249 bytes; SHA-256 `6b55446a4f0a951329c29ec33b0ca586c749b9301dd4bd8ad4dd94f1c91d74de`.
+- QA receipt: 9,069 bytes; SHA-256 `cb2413e8131743457a0685a57cf519c769e5593e9ec8d904f6160f9e0519983d`.
+- Visual/browser receipt: 2,139 bytes; SHA-256 `78e151b05d3efdce4dbfd346962dece5d7da4a559ab1101ac4bd8e02bff59f48`.
+- Extracted-text witness: 395,766 bytes; SHA-256 `d94869df978e2538c79b8859cb38c8cbf859420cde68326a35546c973c787497`.
+- Structural closure: 426 stable IDs, 261 semantic blocks, 587 unique artifact IDs, eight aliases, 160/160 resolving fragments, and 4,682 native MathML nodes.
+- Backend: 1,762 canonical records in 11 JSONL files, 1,540,725 bytes, validator bundle SHA-256 `bb8512f56a8bbcf1283ae10ab69a9a7ecebb1bd39c425c1c021b5b848a1b2910`.
+- Two direct HTML builds are byte-identical. The frozen builder's two PDF builds compare hashes fail-closed; final recovery did not rebuild or remark the PDF. Both validators pass independently.
+- All 138 PDF pages and the HTML at 1280 x 720 and 390 x 844 passed visual inspection. The desktop body is centered at 928 px; mobile document overflow is zero and all 54 wide formulas scroll locally; browser warnings/errors are zero. All 24 PDF fonts are embedded, subset, and ToUnicode. PDF remains secondary and intentionally untagged.
+- An authenticated exact-title Zenodo check found no existing Algebraic Topology/Topologi Aljabar deposition. The release package now contains exactly eight files and passes its fixed semantic allowlists, decompressed-entry hashes, reader/QA/backend bindings, two-build ZIP byte check, credential/path scans, and atomic promotion verifier. Frozen package hashes: source/backend ZIP `cbc60263dd30d7b392702a7d9463b62f5cc60506d58d3029fbd36d71b8644dd5`; QA/provenance ZIP `a6dd37e925487c9c622e0a02ff051ab0d1b4f5aed4c21364ea72b70273955827`; release manifest `0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc`. No draft or duplicate record has yet been created.
 
 ### Verified cumulative Units 001–005 release candidate
 
@@ -101,8 +116,10 @@ Publication was attempted at 2026-08-22T09:00:00+02:00 from local commit `849873
 - Unit 013: `Notes.tex:2727–3046`; 41,196 bytes; 1,306 lines; 44 unique stable IDs; SHA-256 `0aa68cb4ed31862d32aeff5a7106b4ac29c13cbc202f7dbc8381fc7cd31418c0`; independent review 6,665 bytes/SHA-256 `5903c7da7f57d5db15a2d94807860a816d15e7d3cb7b020a8a3ddcbb0df45c21`; P1/P2/P3 zero after bounded fixes; adverse ledger through `O012-ADV-0187`; terminology ledger through `O012-TERM-0213`.
 - Unit 014: `Notes.tex:3047–3209`; 28,504 bytes; 947 lines; 38 unique stable IDs; SHA-256 `2a14ccb2acbb0a001ea2db2716f077925a90dbf4d18b0dc2b63a2d3e5e7f7c40`; independent review 9,725 bytes/SHA-256 `43a409f8f127fe9425d14bc8279a594e4ea1f604da3db4f99316aa7c17c3969d`; P1/P2/P3 zero.
 - Unit 015: `Notes.tex:3210–3286`; 28,485 bytes; 835 lines; 34 unique stable IDs; SHA-256 `140f1dbc182b5406dbbdadde59bb6dcdf51f86bd6cf4c50c676e0b88d60540f4`; independent review 4,392 bytes/SHA-256 `9776c911f5d4f4cd7027375ac29514ca2722f28877d27e79753fabf61876dc90`; P1/P2/P3 zero; adverse ledger through `O012-ADV-0215`; terminology through `O012-TERM-0233`.
-- These ten sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps available at each source boundary. Units 006–010 are frozen in the cumulative reader/backend; Units 011–015 are source-frozen only until their next cumulative build boundary.
-- Next exact source cursor: `Notes.tex:3287`, the inline Lecture 16 marker.
+- Unit 016: `Notes.tex:3287–3383`; 33,863 bytes; 984 lines; 33 unique stable IDs; SHA-256 `6a89d6e02de654c98294a5f6f092bb76bd63f6d537e358a49bcdac25adb8da55`; independent review 8,485 bytes/SHA-256 `335f8ef19f35ba063ad526850d01eec377dc89eb7b697831b8741659a86444c6`; P1/P2/P3 zero; adverse ledger through `O012-ADV-0227`; terminology through `O012-TERM-0240`.
+- Unit 017: `Notes.tex:3384–3481`; 29,921 bytes; 952 lines; 34 unique stable IDs; SHA-256 `713e8b44b22620d9dd0531e19316932a1f18b1109fea80d7787cad218e4e45f9`; independent review 9,903 bytes/SHA-256 `b4885ed709311275a9ae32fedbefe7bf86c72203caafa92de3b557f17c1fc625`; P1/P2/P3 zero; adverse ledger through `O012-ADV-0239`; terminology through `O012-TERM-0251`.
+- These twelve sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps available at each source boundary. Units 006–010 are frozen in the cumulative reader/backend; Units 011–017 are source-frozen only until their next cumulative build boundary.
+- Next exact source cursor: `Notes.tex:3482`, the Lecture 18 marker.
 
 ### Verified cumulative Units 001–004 boundary
 
@@ -120,9 +137,9 @@ Publication was attempted at 2026-08-22T09:00:00+02:00 from local commit `849873
 - Repository boundary: commit `365dff08d41d6a78a8e712504c9f871b6b386094`, tree `f1284946e6622e80a16c90daaabc210f7d99f6ed`, Pages run `32554998308`, job `96987657938`, deployment `6033695000`, success status `17153629829`.
 - Publication receipt: `PUBLICATION_RECEIPT_UNITS_001_004.json`, 18,957 bytes, SHA-256 `3dc601b8ba540bcafee21127535af879506880d6c8f349738d59b9e1168a2e8a`. Anonymous raw readback matched all 33 files in the release commit; all four Pages readers matched their frozen local bytes.
 
-1. Continue contiguously from line 2727 and extend the next cumulative reader/backend at a coherent boundary.
-2. Push commit `a3dc793ec3a7f0b1c4c0c4211115ff9caf847be0` and its descendants, then anonymously byte-verify the release when GitHub accepts the account; persist a sanitized receipt.
-3. After the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
+1. Complete the verified Units 001–013 Zenodo/Figshare publication transaction and anonymous byte readback, then continue contiguously from line 3482 and extend the next cumulative reader/backend at a coherent boundary.
+2. Commit and push the exact Unit 016–017/release boundary to the restored existing GitHub repository, then anonymously byte-verify its remote commit and release surfaces.
+3. After all 30 Roberts lectures, admit and translate Fomberg `algebraic_topology.tex:31–4185`, then create the exact separately identified proof/mastery/lab/capstone closure and 14-unit route view.
 
 ## Non-overlap boundary
 

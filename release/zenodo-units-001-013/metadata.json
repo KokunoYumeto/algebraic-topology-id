@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–13",
+    "upload_type": "publication",
+    "publication_type": "book",
+    "description": "<p><strong>Status: edisi bertahap, belum lengkap.</strong> Versi 0.13.0 mempertahankan Unit 1–13 edisi Bahasa Indonesia dari catatan <em>Algebraic Topology</em> karya David Michael Roberts. Roberts adalah penulis karya sumber; Floris adalah editor edisi Bahasa Indonesia ini.</p><p>Cakupan saat ini adalah Kuliah 1–13, tepatnya <code>Notes.tex</code> baris 134–3046 pada komit sumber <code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>: tinjauan topologi, homotopi, ruang penutup, monodromi, grup dan grupoid fundamental, teorema Seifert–van Kampen, presentasi grup, dan kompleks presentasi.</p><p>Paket ini menyediakan pembaca HTML mandiri dan dapat digunakan luring sebagai artefak utama, PDF deterministik sebagai artefak sekunder, sumber Markdown Bahasa Indonesia, backend JSONL ber-ID stabil, serta bukti QA dan provenance yang disanitasi. Tidak ada skrip perangkat lunak, program pembangunan, berkas keadaan kerja internal, atau kredensial dalam deposit. PDF belum bertag; struktur semantik dan rumus MathML dipertahankan pada pembaca HTML.</p><p>Perubahan mencakup penerjemahan ke Bahasa Indonesia, reflow aksesibilitas, perbaikan sumber yang didokumentasikan, restrukturisasi semantik, dan materi pendamping penguasaan dengan solusi lengkap. Codex (OpenAI) digunakan sebagai alat bantu penerjemahan dan penyuntingan di bawah arahan Floris; penyebutan ini adalah pengungkapan bantuan alat, bukan kredit kepengarangan atau kontributor formal.</p><p>Edisi ini independen dan tidak disponsori, didukung, disahkan, atau diberi status resmi oleh David Michael Roberts, institusinya, maupun OpenAI. Setiap komponen deposit dan cakupan lisensinya dijelaskan dalam <code>RELEASE_RIGHTS.md</code>; konten berhak cipta yang didistribusikan dalam rilis ini tersedia berdasarkan Creative Commons Attribution 4.0 International.</p>",
+    "creators": [
+      {
+        "name": "Roberts, David Michael"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Floris",
+        "type": "Editor"
+      }
+    ],
+    "access_right": "open",
+    "license": "cc-by-4.0",
+    "language": "ind",
+    "version": "0.13.0",
+    "publication_date": "2026-08-22",
+    "keywords": [
+      "topologi aljabar",
+      "Bahasa Indonesia",
+      "homotopi",
+      "ruang penutup",
+      "grup fundamental",
+      "Seifert–van Kampen",
+      "pendidikan matematika terbuka",
+      "machine-readable textbook"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      }
+    ],
+    "notes": "ID rilis: o012-roberts-id-units-001-013-v0.13.0. Versi ini adalah batas preservasi terpelihara untuk Unit 1–13, bukan klaim penyelesaian edisi penuh. RELEASE_RIGHTS.md menetapkan atribusi dan cakupan CC BY 4.0 per komponen. Deposit tidak memuat skrip perangkat lunak. Versi berikutnya akan memperluas konsep Zenodo yang sama ketika unit tambahan lulus pembangunan dan QA."
+  }
+}

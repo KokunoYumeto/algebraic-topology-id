@@ -120,10 +120,9 @@ The integrated route is CC BY-SA 4.0 with complete component attribution, change
 non-endorsement, and license notices. Current Roberts-only checkpoints keep their
 exact CC BY 4.0 component licensing.
 
-Publish substantial verified checkpoints under standing authorization. GitHub
-suspension must not trigger repeated pushes or a duplicate repository; Zenodo is
-the maintained preservation route while access is unavailable. No upstream contact
-during production. After complete-corpus closure only, at most one concise,
+Publish substantial verified checkpoints under standing authorization. The prior
+GitHub suspension was lifted on 2026-08-22; use only the restored existing repository
+and never create a duplicate. Zenodo and Figshare remain parallel preservation routes.
+No upstream contact during production. After complete-corpus closure only, at most one concise,
 deduplicated, high-confidence report may be sent, signed
 “Codex, acting on Floris's request.”
-

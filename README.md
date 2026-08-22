@@ -1,19 +1,20 @@
 # Topologi Aljabar — edisi Bahasa Indonesia
 
-Edisi Bahasa Indonesia yang sedang diproduksi dari *Algebraic Topology* karya David Michael Roberts. Materi sumber dibekukan pada commit `b947ad2e9f9e301bfe24590a9db653bc54fa1a53` dan tersedia di bawah [CC BY 4.0](LICENSE.md). Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
+Edisi Bahasa Indonesia yang sedang diproduksi dari *Algebraic Topology* karya David Michael Roberts. Materi sumber dibekukan pada commit `b947ad2e9f9e301bfe24590a9db653bc54fa1a53` dan tersedia di bawah [CC BY 4.0](authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/LICENSE.md). Edisi ini bersifat independen dan tidak menyiratkan dukungan atau pengesahan dari penulis sumber.
 
 ## Baca
 
-- [Pembaca HTML kumulatif Unit 1–10](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-010/) — permukaan utama terbaru yang semantik, mandiri, dan memakai MathML asli; URL akan tersedia setelah checkpoint ini dapat didorong dan akses akun GitHub dipulihkan.
-- [PDF kumulatif Unit 1–10](output/pdf/topologi-aljabar-unit-001-010-id.pdf) — permukaan sekunder A4, 99 halaman.
+- [Pembaca HTML kumulatif Unit 1–13](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-013/) — permukaan utama terbaru yang semantik, mandiri, dapat dipakai luring, terpusat/reflow, dan memakai MathML asli; [berkas HTML mandiri](output/html/units-001-013/index.html) juga tersedia langsung di repositori.
+- [PDF kumulatif Unit 1–13](output/pdf/topologi-aljabar-unit-001-013-id.pdf) — permukaan sekunder A4, 138 halaman, dengan font tersemat dan peta Unicode; PDF belum bertag.
+- [Pembaca HTML kumulatif Unit 1–10](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-010/) dan [PDF Unit 1–10](output/pdf/topologi-aljabar-unit-001-010-id.pdf) tetap dipertahankan sebagai batas kesepuluh. Akun GitHub telah dipulihkan pada 22 Agustus 2026; antrean komit lokal melalui Unit 15 sudah didorong ke repositori yang sama, dan Pages sedang disegarkan dari jalur publikasi yang dipulihkan.
 - [Pembaca HTML kumulatif Unit 1–5](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-005/) dan [PDF Unit 1–5](output/pdf/topologi-aljabar-unit-001-005-id.pdf) tetap dipertahankan sebagai batas kelima.
 - [Pembaca HTML kumulatif Unit 1–4](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-004/) dan [PDF Unit 1–4](output/pdf/topologi-aljabar-unit-001-004-id.pdf) tetap dipertahankan sebagai batas publikasi keempat.
 - [Pembaca HTML kumulatif Unit 1–3](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-003/) dan [PDF Unit 1–3](output/pdf/topologi-aljabar-unit-001-003-id.pdf) tetap dipertahankan sebagai batas publikasi ketiga.
 - [Pembaca HTML kumulatif Unit 1–2](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-002/) dan [PDF Unit 1–2](output/pdf/topologi-aljabar-unit-001-002-id.pdf) tetap dipertahankan sebagai batas publikasi kedua.
 - [Pembaca HTML Unit 1](https://kokunoyumeto.github.io/algebraic-topology-id/) dan [PDF Unit 1](output/pdf/topologi-aljabar-unit-001-id.pdf) tetap dipertahankan sebagai batas publikasi pertama.
-- Sumber semantik: [Unit 1](source/id-ID/reader-unit-001.md), [Unit 2](source/id-ID/units/unit-002-lecture-002.md), [Unit 3](source/id-ID/units/unit-003-lecture-003.md), [Unit 4](source/id-ID/units/unit-004-lecture-004.md), [Unit 5](source/id-ID/units/unit-005-lecture-005.md), [Unit 6](source/id-ID/units/unit-006-lecture-006.md), [Unit 7](source/id-ID/units/unit-007-lecture-007.md), [Unit 8](source/id-ID/units/unit-008-lecture-008.md), [Unit 9](source/id-ID/units/unit-009-lecture-009.md), [Unit 10](source/id-ID/units/unit-010-lecture-010.md), [Unit 11](source/id-ID/units/unit-011-lecture-011.md), [Unit 12](source/id-ID/units/unit-012-lecture-012.md), [Unit 13](source/id-ID/units/unit-013-lecture-013.md), [Unit 14](source/id-ID/units/unit-014-lecture-014.md), dan [Unit 15](source/id-ID/units/unit-015-lecture-015.md). Unit 1–10 sudah termasuk dalam pembaca/backend kumulatif; Unit 11–15 sudah ditinjau independen, dan pembaca/backend Unit 1–13 sedang difinalkan sebagai checkpoint preservasi berikutnya.
+- Sumber semantik: [Unit 1](source/id-ID/reader-unit-001.md), [Unit 2](source/id-ID/units/unit-002-lecture-002.md), [Unit 3](source/id-ID/units/unit-003-lecture-003.md), [Unit 4](source/id-ID/units/unit-004-lecture-004.md), [Unit 5](source/id-ID/units/unit-005-lecture-005.md), [Unit 6](source/id-ID/units/unit-006-lecture-006.md), [Unit 7](source/id-ID/units/unit-007-lecture-007.md), [Unit 8](source/id-ID/units/unit-008-lecture-008.md), [Unit 9](source/id-ID/units/unit-009-lecture-009.md), [Unit 10](source/id-ID/units/unit-010-lecture-010.md), [Unit 11](source/id-ID/units/unit-011-lecture-011.md), [Unit 12](source/id-ID/units/unit-012-lecture-012.md), [Unit 13](source/id-ID/units/unit-013-lecture-013.md), [Unit 14](source/id-ID/units/unit-014-lecture-014.md), [Unit 15](source/id-ID/units/unit-015-lecture-015.md), [Unit 16](source/id-ID/units/unit-016-lecture-016.md), dan [Unit 17](source/id-ID/units/unit-017-lecture-017.md). Unit 1–13 sudah termasuk dalam pembaca/backend kumulatif; Unit 14–17 sudah ditinjau independen dan menunggu batas kumulatif berikutnya.
 
-Unit 1–10 mencakup `Notes.tex` baris 134–2272: pengantar topologi aljabar, topologi awal dan akhir, perekatan, keterhubungan, homotopi, kategori homotopi, ruang SLPC, ruang bertitik, ruang penutup, pengangkatan lintasan, ruang loop, grup fundamental, grupoid fundamental, transpor dan monodromi, funktor setia penutup, koset, aksi grup, baji, serta contoh penutup tiga lembar. Keempat puluh lima latihan mempunyai solusi lengkap; kedua pertanyaan sumber juga dijawab. Pendamping penguasaan menutup bukti universal, perekatan, kekompakan, naturalitas, kesetiaan, konvensi aksi kiri/kanan, klasifikasi orbit–stabilisator, sifat universal baji, dan perhitungan monodromi yang dipakai pembaca.
+Unit 1–13 mencakup `Notes.tex` baris 134–3046: pengantar topologi aljabar, topologi awal dan akhir, perekatan, keterhubungan, homotopi, ruang penutup, pengangkatan, monodromi, grup dan grupoid fundamental, teorema Seifert–van Kampen, presentasi grup, dan kompleks presentasi. Pembaca memuat 426 ID stabil dan 4.682 simpul MathML. Semua latihan/pertanyaan sumber dan pemeriksaan penguasaan yang ditambahkan mempunyai solusi atau jawaban lengkap.
 
 ## Backend modular
 
@@ -42,6 +43,9 @@ pwsh -NoProfile -File scripts/build-units-001-007.ps1
 python scripts/qa-units-001-007.py
 pwsh -NoProfile -File scripts/build-units-001-010.ps1
 python scripts/qa-units-001-010.py
+pwsh -NoProfile -File scripts/build-units-001-013.ps1
+python scripts/extend-backend-units-011-013.py
+python scripts/qa-units-001-013.py
 python scripts/validate-backend.py
 ```
 
@@ -75,7 +79,12 @@ Build PDF ganda dengan epoch tetap menghasilkan byte identik. HTML memakai CSS t
 - [Rereview independen Unit 11](qa/UNIT_011_INDEPENDENT_REVIEW.md)
 - [Rereview independen Unit 12](qa/UNIT_012_INDEPENDENT_REVIEW.md)
 - [Rereview independen Unit 13](qa/UNIT_013_INDEPENDENT_REVIEW.md)
+- [QA kumulatif Unit 1–13](qa/UNITS_001_013_QA.json)
+- [QA visual Unit 1–13](qa/UNITS_001_013_VISUAL_QA.md)
 - [Rereview independen Unit 14](qa/UNIT_014_INDEPENDENT_REVIEW.md)
 - [Rereview independen Unit 15](qa/UNIT_015_INDEPENDENT_REVIEW.md)
+- [Rereview independen Unit 16](qa/UNIT_016_INDEPENDENT_REVIEW.md)
+- [Rereview independen Unit 17](qa/UNIT_017_INDEPENDENT_REVIEW.md)
+- [Audit sumber Unit 17](qa/UNIT_017_SOURCE_AUDIT.md)
 
 Pembaca lengkap masih dalam produksi. Inti Roberts akan diterjemahkan secara berurutan; materi homologi/metode seluler dan lapisan penguasaan yang tidak tersedia dalam inti akan ditulis tersendiri dan ditandai sebagai materi edisi.
