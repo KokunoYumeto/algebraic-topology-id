@@ -4,12 +4,13 @@ Edisi Bahasa Indonesia yang sedang diproduksi dari *Algebraic Topology* karya Da
 
 ## Baca
 
-- [Pembaca HTML kumulatif Unit 1–2](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-002/) — permukaan utama terbaru yang semantik, mandiri, dan memakai MathML asli.
-- [PDF kumulatif Unit 1–2](output/pdf/topologi-aljabar-unit-001-002-id.pdf) — permukaan sekunder A4, 15 halaman.
+- [Pembaca HTML kumulatif Unit 1–3](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-003/) — permukaan utama terbaru yang semantik, mandiri, dan memakai MathML asli.
+- [PDF kumulatif Unit 1–3](output/pdf/topologi-aljabar-unit-001-003-id.pdf) — permukaan sekunder A4, 25 halaman.
+- [Pembaca HTML kumulatif Unit 1–2](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-002/) dan [PDF Unit 1–2](output/pdf/topologi-aljabar-unit-001-002-id.pdf) tetap dipertahankan sebagai batas publikasi kedua.
 - [Pembaca HTML Unit 1](https://kokunoyumeto.github.io/algebraic-topology-id/) dan [PDF Unit 1](output/pdf/topologi-aljabar-unit-001-id.pdf) tetap dipertahankan sebagai batas publikasi pertama.
-- Sumber semantik: [Unit 1](source/id-ID/reader-unit-001.md) dan [Unit 2](source/id-ID/units/unit-002-lecture-002.md).
+- Sumber semantik: [Unit 1](source/id-ID/reader-unit-001.md), [Unit 2](source/id-ID/units/unit-002-lecture-002.md), dan [Unit 3](source/id-ID/units/unit-003-lecture-003.md).
 
-Unit 1–2 mencakup `Notes.tex` baris 134–584: pengantar topologi aljabar, ruang topologis, basis lingkungan, kontinuitas, homeomorfisme, topologi awal dan akhir, ruang hasil bagi, gabungan saling lepas, perekatan, homotopi, kontraktibilitas, serta keterhubungan. Kesembilan latihan mempunyai solusi lengkap; pertanyaan sumber juga dijawab. Pendamping penguasaan memuat bukti sifat universal, lema perekatan, contoh penciutan radial, dan pemeriksaan konsep.
+Unit 1–3 mencakup `Notes.tex` baris 134–877: pengantar topologi aljabar, ruang topologis, basis lingkungan, kontinuitas, homeomorfisme, topologi awal dan akhir, ruang hasil bagi, gabungan saling lepas, perekatan, kontraktibilitas, komponen terhubung, homotopi, funktor, dan kategori homotopi. Keempat belas latihan mempunyai solusi lengkap; pertanyaan sumber juga dijawab. Pendamping penguasaan memuat bukti sifat universal, lema perekatan, penciutan radial, funktorialitas, dan pemeriksaan konsep.
 
 ## Backend modular
 
@@ -24,10 +25,12 @@ Backend bukan pengganti pembaca; ia memungkinkan unit yang sama dipilih, diaudit
 ## Bangun dan verifikasi
 
 ```powershell
-powershell -NoProfile -File scripts/build-unit-001.ps1
+pwsh -NoProfile -File scripts/build-unit-001.ps1
 python scripts/qa-unit-001.py
-powershell -NoProfile -File scripts/build-units-001-002.ps1
+pwsh -NoProfile -File scripts/build-units-001-002.ps1
 python scripts/qa-units-001-002.py
+pwsh -NoProfile -File scripts/build-units-001-003.ps1
+python scripts/qa-units-001-003.py
 python scripts/validate-backend.py
 ```
 
@@ -43,5 +46,7 @@ Build PDF ganda dengan epoch tetap menghasilkan byte identik. HTML memakai CSS t
 - [Rereview independen](qa/UNIT_001_INDEPENDENT_REVIEW.md)
 - [QA kumulatif Unit 1–2](qa/UNITS_001_002_QA.json)
 - [Rereview independen Unit 2](qa/UNIT_002_INDEPENDENT_REVIEW.md)
+- [QA kumulatif Unit 1–3](qa/UNITS_001_003_QA.json)
+- [Rereview independen Unit 3](qa/UNIT_003_INDEPENDENT_REVIEW.md)
 
 Pembaca lengkap masih dalam produksi. Inti Roberts akan diterjemahkan secara berurutan; materi homologi/metode seluler dan lapisan penguasaan yang tidak tersedia dalam inti akan ditulis tersendiri dan ditandai sebagai materi edisi.

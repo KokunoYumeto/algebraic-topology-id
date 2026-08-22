@@ -4,16 +4,17 @@
   "course_id": "D60",
   "source_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
   "source_path": "Notes.tex",
-  "completed_through_line": 584,
-  "next_line": 585,
-  "next_marker": "This\\lecturenum{3}",
+  "completed_through_line": 877,
+  "next_line": 878,
+  "next_marker": "\\begin{prop}; The\\lecturenum{4} occurs on line 879",
   "completed_units": [
     "o012-rbt-l01",
-    "o012-rbt-l02"
+    "o012-rbt-l02",
+    "o012-rbt-l03"
   ],
-  "current_unit": "o012-rbt-l03",
-  "translation_state": "units_001_002_admitted",
-  "backend_state": "units_001_002_complete_315_records",
-  "publication_state": "units_001_002_github_pages_verified",
+  "current_unit": "o012-rbt-l04",
+  "translation_state": "units_001_003_complete_reviewed",
+  "backend_state": "units_001_003_complete_496_records_validated",
+  "publication_state": "units_001_002_verified_units_001_003_ready_to_publish",
   "updated": "2026-08-22"
 }

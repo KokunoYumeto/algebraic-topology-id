@@ -1,0 +1,139 @@
+{
+  "artifacts": [
+    {
+      "bytes": 359397,
+      "path": "output/html/units-001-003/index.html",
+      "sha256": "33281cc46faa3d560c968b657526cd914786c991d1475b5563911a265bd316c1"
+    },
+    {
+      "bytes": 460320,
+      "path": "output/pdf/topologi-aljabar-unit-001-003-id.pdf",
+      "sha256": "2c9bf67e74c94bca9aad0238e910816188a957892a6cf811f7f615e221b4066d"
+    }
+  ],
+  "block_counts": {
+    "unit_001": {
+      "definition": 6,
+      "example": 7,
+      "exercise": 2,
+      "lemma": 1,
+      "note": 2,
+      "proof": 1,
+      "proposition": 1
+    },
+    "unit_002": {
+      "definition": 3,
+      "example": 8,
+      "exercise": 7,
+      "lemma": 3,
+      "proof": 1,
+      "question": 1
+    },
+    "unit_003": {
+      "definition": 6,
+      "example": 4,
+      "exercise": 5,
+      "lemma": 2,
+      "proof": 5,
+      "proposition": 3
+    }
+  },
+  "corrections": {
+    "accessibility_reflows": [
+      "O012-ADV-0030",
+      "O012-ADV-0031",
+      "O012-ADV-0032",
+      "O012-ADV-0033"
+    ],
+    "source_corrections": [
+      "O012-ADV-0021",
+      "O012-ADV-0022",
+      "O012-ADV-0023",
+      "O012-ADV-0024",
+      "O012-ADV-0025",
+      "O012-ADV-0026",
+      "O012-ADV-0027",
+      "O012-ADV-0028",
+      "O012-ADV-0029",
+      "O012-ADV-0034"
+    ]
+  },
+  "course_id": "D60",
+  "gates": {
+    "authority_exact": true,
+    "exercise_solution_closure": true,
+    "four_accessibility_reflows_verified": true,
+    "html_fragments_and_ids_valid": true,
+    "html_semantic_native_mathml_offline": true,
+    "pdf_metadata_fonts_text_pages_verified": true,
+    "pdf_reproducible_by_build_script": true,
+    "privacy_secret_scan": true,
+    "source_spans_bound": true,
+    "structure_bound": true,
+    "ten_source_corrections_verified": true,
+    "two_mastery_checks_present": true,
+    "unit_001_artifacts_unchanged": true,
+    "units_001_002_artifacts_and_qa_unchanged": true,
+    "visual_review": "pass_manual_all_25_pages_and_browser_desktop_mobile"
+  },
+  "html": {
+    "html_ids": 152,
+    "mathml_nodes": 1007,
+    "stable_ids": 109
+  },
+  "known_caveat": "PDF is intentionally secondary and untagged; semantic HTML with native MathML is the primary accessibility surface.",
+  "pdf": {
+    "all_fonts_embedded": true,
+    "all_fonts_tounicode": true,
+    "encrypted": false,
+    "extracted_characters": 51266,
+    "fonts": 21,
+    "lang": "id-ID",
+    "pages": 25,
+    "tagged": false
+  },
+  "reader_sources": [
+    {
+      "bytes": 16179,
+      "path": "source/id-ID/reader-unit-001.md",
+      "sha256": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15",
+      "stable_ids": 29
+    },
+    {
+      "bytes": 25090,
+      "path": "source/id-ID/units/unit-002-lecture-002.md",
+      "sha256": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
+      "stable_ids": 41
+    },
+    {
+      "bytes": 25822,
+      "path": "source/id-ID/units/unit-003-lecture-003.md",
+      "sha256": "993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd",
+      "stable_ids": 39
+    }
+  ],
+  "role_id": "O012",
+  "schema_version": "1.0",
+  "source_authority": {
+    "commit_sha1": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_end": 877,
+    "line_start": 134,
+    "next_boundary": "deferred proposition opening followed by Lecture 4 marker on line 879",
+    "next_line": 878,
+    "path": "Notes.tex",
+    "tree_sha1": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5"
+  },
+  "status": "pass",
+  "unit_ids": [
+    "o012-rbt-l01",
+    "o012-rbt-l02",
+    "o012-rbt-l03"
+  ],
+  "witnesses": {
+    "extracted_text_bytes": 71549,
+    "extracted_text_sha256": "2e8eabce2e0b8c3114b49d630187a6a0217e3ae90c466b5441f9eedccb299702",
+    "prior_units_001_002_qa_sha256": "075546f6a856638dc420ed62b23ec78c7a57f839444e4f2101233d6421f776f0",
+    "unit_003_independent_review_sha256": "b2cffbcc2167c3d620f1af53224cc064e8ce34400561868339e69c280845619c",
+    "visual_review_sha256": "4d7d603c2276bd570e3bf47897c67d98bf6507d2bd9ffed2acd10ab1a509130e"
+  }
+}

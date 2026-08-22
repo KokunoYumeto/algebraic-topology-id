@@ -15,7 +15,7 @@ Canonical semantic source: `source/id-ID/reader-unit-001.md`.
 Build command:
 
 ```powershell
-powershell -NoProfile -File scripts/build-unit-001.ps1
+pwsh -NoProfile -File scripts/build-unit-001.ps1
 ```
 
 Pinned builder inputs:
@@ -53,7 +53,7 @@ Canonical semantic sources:
 Build and QA:
 
 ```powershell
-powershell -NoProfile -File scripts/build-units-001-002.ps1
+pwsh -NoProfile -File scripts/build-units-001-002.ps1
 python scripts/qa-units-001-002.py
 python scripts/validate-backend.py
 ```
@@ -70,3 +70,35 @@ Final cumulative artifacts:
 Strict QA binds 70 stable IDs, 43 semantic blocks, all nine exercise–solution pairs, the Unit 2 question–answer pair, seven disclosed source corrections, 621 native MathML nodes, all fragments, offline/privacy properties, PDF metadata/text/fonts, and both cumulative manifest rows. All 15 physical PDF pages were rendered and manually inspected; the HTML was also checked in Chromium at 1280×720 and 390×844 for centering, reflow, local formula scrolling, and page-level overflow. P1/P2/P3 are zero. The frozen Unit 1 HTML and PDF remain byte-identical.
 
 The cumulative locale-neutral backend contains 315 canonical records in 11 JSONL files and validates with bundle SHA-256 `f1999b5d33466ba9a15a32f50a16173fbb7659f1a7b28a3452bc5d2ec3094e6e`. It maps the exact union of all 70 stable IDs one-to-one to units and segments, closes all nine exercise–solution relations plus the Unit 2 question–answer relation, and binds every source, rights, correction, QA, and artifact reference.
+
+## Indonesian cumulative Units 001-003
+
+Canonical semantic sources:
+
+- `source/id-ID/reader-unit-001.md`: 16,179 bytes; SHA-256 `c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15`.
+- `source/id-ID/units/unit-002-lecture-002.md`: 25,090 bytes; SHA-256 `4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01`.
+- `source/id-ID/units/unit-003-lecture-003.md`: 25,822 bytes; SHA-256 `993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd`.
+
+Build and QA:
+
+```powershell
+pwsh -NoProfile -File scripts/build-units-001-003.ps1
+python scripts/qa-units-001-003.py
+python scripts/validate-backend.py
+```
+
+The cumulative builder requires the exact frozen Unit 1, Units 1-2, all three source files, and embedded cumulative CSS before writing only the new Units 1-3 paths. It removes unit YAML headers in a temporary assembly, applies `SOURCE_DATE_EPOCH=1787356800`, builds the PDF twice, requires byte identity, and removes the exact temporary assembly and duplicate PDF.
+
+Final cumulative artifacts and witnesses:
+
+- HTML: 359,397 bytes; SHA-256 `33281cc46faa3d560c968b657526cd914786c991d1475b5563911a265bd316c1`.
+- PDF: 460,320 bytes; 25 A4 pages; SHA-256 `2c9bf67e74c94bca9aad0238e910816188a957892a6cf811f7f615e221b4066d`.
+- Manifest: 247 bytes; SHA-256 `1e211afb4b165435ece5f72a2b4e9b084975db35d111127880255473302f5049`.
+- QA receipt: 3,983 bytes; SHA-256 `fb511086669846b6c8a68a6c1fecc4bd774016a6c95eb27219e3babbd177a873`.
+- Extracted-text witness: 71,549 bytes; SHA-256 `2e8eabce2e0b8c3114b49d630187a6a0217e3ae90c466b5441f9eedccb299702`.
+- Independent Unit 3 review: 2,464 bytes; SHA-256 `b2cffbcc2167c3d620f1af53224cc064e8ce34400561868339e69c280845619c`.
+- Visual/browser receipt: 2,310 bytes; SHA-256 `4d7d603c2276bd570e3bf47897c67d98bf6507d2bd9ffed2acd10ab1a509130e`.
+
+Strict QA binds 109 stable IDs, 68 semantic blocks, all 14 exercise-solution pairs, the Unit 2 question-answer pair, ten Unit 3 source corrections, four Unit 3 accessibility reflows, 1007 native MathML nodes, all fragments, offline/privacy properties, PDF metadata/text/fonts, and both cumulative manifest rows. All 25 physical PDF pages were rendered and inspected. The HTML was checked in the Codex in-app Chromium browser at 1280 x 720 and 390 x 844 for centering, reflow, formula-local scrolling, page-level overflow, fragment closure, and console errors. P1/P2/P3 are zero. Unit 1 and Units 1-2 artifacts remain byte-identical.
+
+The cumulative locale-neutral backend contains 496 canonical records in 11 JSONL files and validates with bundle SHA-256 `0c08bebf7cbac289e94a7de571d3c2bab4d161c8a6a75c35b8a997f07ff6c939`. It maps the exact union of all 109 stable IDs one-to-one to units and segments, closes every exercise-solution and question-answer relation, records all 24 corrections/reflows, and binds every current source, rights, QA, and artifact reference.

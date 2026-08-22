@@ -1,8 +1,8 @@
 # Current state — O012/D60
 
-Updated: 2026-08-21
+Updated: 2026-08-22
 
-Status: active production. Source admission is closed. Units 001–002 are translated, admitted, independently rereviewed, built, visually/browser checked, backend-complete, and publicly verified. Production continues at Lecture 3; Unit 001 remains byte-frozen.
+Status: active production. Source admission is closed. Units 001–002 are publicly verified. Unit 003 and the cumulative Units 001–003 boundary are translated, independently rereviewed, built, visually/browser checked, and backend-complete; publication and anonymous readback are the next gate. Unit 001 and Units 001–002 remain byte-frozen.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -25,11 +25,26 @@ The 70 stable IDs cover 43 semantic blocks. All nine source exercises have compl
 
 The exact Roberts archive, commit/tree, seven-file manifest, CC BY 4.0 license, and reproducible upstream baseline remain frozen. MIT and Fomberg/Lazarovich are closed benchmarks, not donors. Two later StackExchange-derived code blocks remain quarantined for independent redraw.
 
+## Verified local cumulative Units 001–003 boundary
+
+- Source span: Roberts `Notes.tex:134–877` (Lectures 1–3).
+- Unit 003 source: 25,822 bytes, 618 lines, 39 stable IDs, SHA-256 `993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd`.
+- Unit 003 independent review: 2,464 bytes, SHA-256 `b2cffbcc2167c3d620f1af53224cc064e8ce34400561868339e69c280845619c`; P1/P2/P3 are zero.
+- Cumulative HTML: 359,397 bytes, SHA-256 `33281cc46faa3d560c968b657526cd914786c991d1475b5563911a265bd316c1`.
+- Cumulative PDF: 460,320 bytes, 25 A4 pages, SHA-256 `2c9bf67e74c94bca9aad0238e910816188a957892a6cf811f7f615e221b4066d`.
+- Cumulative manifest: 247 bytes, SHA-256 `1e211afb4b165435ece5f72a2b4e9b084975db35d111127880255473302f5049`.
+- Cumulative QA receipt: 3,983 bytes, SHA-256 `fb511086669846b6c8a68a6c1fecc4bd774016a6c95eb27219e3babbd177a873`.
+- Visual/browser receipt: 2,310 bytes, SHA-256 `4d7d603c2276bd570e3bf47897c67d98bf6507d2bd9ffed2acd10ab1a509130e`.
+- Backend: 496 canonical records in 11 JSONL files, bundle SHA-256 `0c08bebf7cbac289e94a7de571d3c2bab4d161c8a6a75c35b8a997f07ff6c939`.
+
+The 109 stable IDs cover 68 semantic blocks. All 14 exercises have complete solutions; the source question has an answer; all added checks are supplied. Ten Unit 3 source corrections and four accessibility reflows are disclosed one-to-one in the adverse ledger and backend. HTML is self-contained, centered/reflowing, `lang=id-ID`, and native MathML; all 41 fragments resolve and wide formulas scroll locally at mobile width. All 25 PDF pages and the HTML at 1280 x 720 and 390 x 844 passed visual inspection with no P1/P2/P3 finding. The PDF is secondary and explicitly untagged.
+
 ## Current production
 
-1. Continue contiguously from `Notes.tex:585`, `This\lecturenum{3}`, into connected components.
-2. Preserve the same source-ID/backend/build/QA/publication discipline for each substantial boundary.
-3. After the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
+1. Push the verified cumulative Units 001–003 boundary, wait for the Pages deployment, then anonymously read back and hash the complete public inventory without changing any earlier public bytes.
+2. Persist the sanitized publication receipt and its commit/deployment identities.
+3. Continue contiguously from line 878, which opens the Lecture 4 proposition whose lecture marker occurs on line 879.
+4. Continue source order with the same source-ID/backend/build/QA/publication discipline; after the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
 
 ## Non-overlap boundary
 

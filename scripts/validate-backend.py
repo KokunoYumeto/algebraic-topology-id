@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Validate the locale-neutral Units 001-002 interoperability backend.
+"""Validate the locale-neutral Units 001-003 interoperability backend.
 
 The validator is deliberately self-contained and offline.  It checks canonical
 JSONL serialization, referential integrity, source-span hashes, artifact hashes,
-both exact artifact manifests, and complete mastery linkage.
+the two historical manifests, a staged Units 001-003 manifest, and complete
+mastery linkage.
 """
 
 from __future__ import annotations
@@ -127,6 +128,7 @@ LIST_REFERENCE_FIELDS = {
     "affected_unit_ids",
     "component_scope",
     "concept_ids",
+    "local_derivative_unit_ids",
     "qa_event_ids",
     "witness_artifact_ids",
 }
@@ -138,22 +140,39 @@ SOURCE_ID_RE = re.compile(r"\{[^}\n]*#([A-Za-z0-9-]+)[^}\n]*\}")
 SOURCE_FILES = {
     "source/id-ID/reader-unit-001.md": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15",
     "source/id-ID/units/unit-002-lecture-002.md": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
+    "source/id-ID/units/unit-003-lecture-003.md": "993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd",
 }
 SOURCE_LINE_COUNTS = {
     "source/id-ID/reader-unit-001.md": 225,
     "source/id-ID/units/unit-002-lecture-002.md": 674,
+    "source/id-ID/units/unit-003-lecture-003.md": 618,
 }
-EXPECTED_SOURCE_ID_COUNT = 70
+EXPECTED_SOURCE_ID_COUNT = 109
 ARTIFACT_MANIFESTS = {
     "output/ARTIFACT_MANIFEST.csv": {
-        "output/html/index.html",
-        "output/pdf/topologi-aljabar-unit-001-id.pdf",
+        "required": True,
+        "outputs": {
+            "output/html/index.html",
+            "output/pdf/topologi-aljabar-unit-001-id.pdf",
+        },
     },
     "output/ARTIFACT_MANIFEST_UNITS_001_002.csv": {
-        "output/html/units-001-002/index.html",
-        "output/pdf/topologi-aljabar-unit-001-002-id.pdf",
+        "required": True,
+        "outputs": {
+            "output/html/units-001-002/index.html",
+            "output/pdf/topologi-aljabar-unit-001-002-id.pdf",
+        },
+    },
+    "output/ARTIFACT_MANIFEST_UNITS_001_003.csv": {
+        "required": True,
+        "outputs": {
+            "output/html/units-001-003/index.html",
+            "output/pdf/topologi-aljabar-unit-001-003-id.pdf",
+        },
     },
 }
+EXPECTED_UNIT3_ADVERSE_IDS = {f"O012-ADV-{number:04d}" for number in range(21, 35)}
+EXPECTED_UNIT3_REFLOW_IDS = {f"O012-ADV-{number:04d}" for number in range(30, 34)}
 
 
 class ValidationError(Exception):
@@ -528,13 +547,61 @@ def validate_hierarchy_and_mastery(records: list[dict[str, Any]], by_id: dict[st
         fail("every answer must answer exactly one formal question")
 
 
+def validate_unit3_boundary(records: list[dict[str, Any]], by_id: dict[str, dict[str, Any]]) -> None:
+    edition = by_id["edition:roberts-at-2019-b947ad2"]
+    expected_roots = {
+        "unit:o012-rbt-u001",
+        "unit:o012-rbt-u002",
+        "unit:o012-rbt-u003",
+    }
+    if edition["source_line_start"] != 134 or edition["source_line_end"] != 877:
+        fail("Roberts edition coverage must be the contiguous admitted range Notes.tex:134-877")
+    derivative_roots = edition.get("local_derivative_unit_ids")
+    if not isinstance(derivative_roots, list) or set(derivative_roots) != expected_roots:
+        fail("Roberts edition must enumerate the three local derivative reader roots")
+
+    expected_source_assets = {
+        "asset:o012-u002-source-markdown": "source/id-ID/units/unit-002-lecture-002.md",
+        "asset:o012-u003-source-markdown": "source/id-ID/units/unit-003-lecture-003.md",
+    }
+    for asset_id, expected_path in expected_source_assets.items():
+        asset = by_id.get(asset_id)
+        if asset is None or asset.get("path") != expected_path or asset.get("role") != "canonical_reader_source":
+            fail(f"{asset_id}: missing or malformed canonical reader-source asset")
+
+    unit3_corrections = [
+        record
+        for record in records
+        if record["entity_type"] == "correction" and record["unit_id"] == "unit:o012-rbt-u003"
+    ]
+    adverse_ids = {record.get("adverse_ledger_id") for record in unit3_corrections}
+    if adverse_ids != EXPECTED_UNIT3_ADVERSE_IDS or len(unit3_corrections) != len(EXPECTED_UNIT3_ADVERSE_IDS):
+        fail("Unit 003 corrections must map one-to-one to O012-ADV-0021 through O012-ADV-0034")
+    reflow_ids = {
+        record["adverse_ledger_id"]
+        for record in unit3_corrections
+        if record["correction_type"] == "structural_adaptation"
+    }
+    if reflow_ids != EXPECTED_UNIT3_REFLOW_IDS:
+        fail("Unit 003 structural reflows must be exactly O012-ADV-0030 through O012-ADV-0033")
+
+
 def validate_artifact_manifests(records: list[dict[str, Any]], lane_root: Path) -> None:
     artifacts = {record["path"]: record for record in records if record["entity_type"] == "artifact"}
-    for manifest_relative, required_outputs in ARTIFACT_MANIFESTS.items():
-        if manifest_relative not in artifacts:
-            fail(f"artifact manifest lacks its own backend artifact record: {manifest_relative}")
-        manifest_artifact = artifacts[manifest_relative]
+    for manifest_relative, specification in ARTIFACT_MANIFESTS.items():
+        required_outputs = specification["outputs"]
+        required = specification["required"]
         manifest_path = safe_path(lane_root, manifest_relative)
+        declared = manifest_relative in artifacts
+        exists = manifest_path.is_file()
+        if not exists and not required and not declared:
+            continue
+        if not exists:
+            fail(f"artifact manifest file is missing: {manifest_relative}")
+        if required and not declared:
+            fail(f"artifact manifest lacks its own backend artifact record: {manifest_relative}")
+        staged_without_backend_record = not declared
+        manifest_artifact = artifacts.get(manifest_relative)
         raw = manifest_path.read_text(encoding="utf-8-sig")
         reader = csv.DictReader(io.StringIO(raw))
         if reader.fieldnames != ["path", "bytes", "sha256"]:
@@ -555,11 +622,13 @@ def validate_artifact_manifests(records: list[dict[str, Any]], lane_root: Path) 
             if path.stat().st_size != expected_bytes or sha256_file(path) != row["sha256"]:
                 fail(f"{manifest_relative}: output mismatch for {relative}")
             if relative not in artifacts:
+                if staged_without_backend_record:
+                    continue
                 fail(f"{manifest_relative}: output lacks backend artifact record: {relative}")
             artifact = artifacts[relative]
             if artifact["bytes"] != expected_bytes or artifact["sha256"] != row["sha256"]:
                 fail(f"backend artifact disagrees with {manifest_relative} for {relative}")
-            if artifact["manifest_artifact_id"] != manifest_artifact["id"]:
+            if manifest_artifact is not None and artifact["manifest_artifact_id"] != manifest_artifact["id"]:
                 fail(f"{relative}: backend artifact points to the wrong manifest")
         if seen != required_outputs:
             fail(
@@ -595,6 +664,7 @@ def main() -> int:
         validate_references(records, by_id)
         validate_files_and_spans(records, by_id, lane_root)
         validate_hierarchy_and_mastery(records, by_id)
+        validate_unit3_boundary(records, by_id)
         validate_artifact_manifests(records, lane_root)
         summarize(records, backend_dir)
     except (OSError, ValidationError) as exc:
