@@ -1,0 +1,182 @@
+{
+  "schema_version": "1.0",
+  "boundary_id": "o012-rbt-units-001-003-github-pages",
+  "recorded_at": "2026-08-22T04:34:03Z",
+  "status": "published_and_anonymously_verified",
+  "scope": {
+    "role_id": "O012",
+    "course_id": "D60",
+    "included_units": [
+      "o012-rbt-l01",
+      "o012-rbt-l02",
+      "o012-rbt-l03"
+    ],
+    "source_span": "Notes.tex:134-877",
+    "next_source_line": 878,
+    "github_release_created": false,
+    "upstream_contacted": false
+  },
+  "repository": {
+    "id": 1341710570,
+    "full_name": "KokunoYumeto/algebraic-topology-id",
+    "url": "https://github.com/KokunoYumeto/algebraic-topology-id",
+    "visibility": "public",
+    "default_branch": "main",
+    "homepage": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+    "pages_enabled": true
+  },
+  "authority": {
+    "repository": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019",
+    "commit_sha": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "tree_sha": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+    "license": "CC BY 4.0"
+  },
+  "repository_history": {
+    "deployed_commit_sha": "9ffa736df82eaaa0c8ea70f2b35942ef4119afcb",
+    "deployed_tree_sha": "b4695fd8e7e38d861dfa295d3bb2ea31b7d41099",
+    "workflow_path": ".github/workflows/pages.yml",
+    "workflow_bytes": 1975,
+    "workflow_sha256": "59b0dc09ca5115546b1c4d276dd9ed54138126ba638ee7edee9c683b18016352"
+  },
+  "pages_workflow": {
+    "run_id": 32551934416,
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32551934416",
+    "run_number": 5,
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 96979992402,
+    "job_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32551934416/job/96979992402",
+    "job_name": "deploy",
+    "all_steps_successful": true
+  },
+  "pages_deployment": {
+    "deployment_id": 6033213187,
+    "deployment_status_id": 17152322493,
+    "state": "success",
+    "environment": "github-pages",
+    "environment_url": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+    "deployed_commit_sha": "9ffa736df82eaaa0c8ea70f2b35942ef4119afcb"
+  },
+  "anonymous_repository_inventory": {
+    "checked_at": "2026-08-22T04:34:03Z",
+    "commit_api_http_status": 200,
+    "tree_api_http_status": 200,
+    "commit_sha": "9ffa736df82eaaa0c8ea70f2b35942ef4119afcb",
+    "tree_sha": "b4695fd8e7e38d861dfa295d3bb2ea31b7d41099",
+    "tree_truncated": false,
+    "tree_entries": 96,
+    "required_boundary_paths_present": true
+  },
+  "anonymous_pages_readback": [
+    {
+      "kind": "preserved_unit_001_pages_root",
+      "url": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+      "http_status": 200,
+      "bytes": 85580,
+      "sha256": "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8",
+      "exact_match": true
+    },
+    {
+      "kind": "preserved_units_001_002_pages_html",
+      "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-002/",
+      "http_status": 200,
+      "bytes": 220035,
+      "sha256": "d3b5cbfaa3511823821ecf9ba26a4eaec7c84d937417927d11bde3f66abc9f54",
+      "exact_match": true
+    },
+    {
+      "kind": "cumulative_units_001_003_pages_html",
+      "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-003/",
+      "http_status": 200,
+      "bytes": 359397,
+      "sha256": "33281cc46faa3d560c968b657526cd914786c991d1475b5563911a265bd316c1",
+      "exact_match": true
+    }
+  ],
+  "anonymous_commit_readback": {
+    "base_url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/9ffa736df82eaaa0c8ea70f2b35942ef4119afcb/",
+    "files_checked": 30,
+    "every_http_status": 200,
+    "every_local_byte_count_and_sha256_exact": true,
+    "changed_files": [
+      {"path": ".github/workflows/pages.yml", "bytes": 1975, "sha256": "59b0dc09ca5115546b1c4d276dd9ed54138126ba638ee7edee9c683b18016352"},
+      {"path": "00_control/ADVERSE_LEDGER.csv", "bytes": 7582, "sha256": "b728ee79e65c617a657dc2b976713d27b4fab1cdf58d5181c9951ea59db9d6da"},
+      {"path": "00_control/BUILD.md", "bytes": 7333, "sha256": "94cb7ac7bee2add5b8f9498d1da5bc09de58c8de38a3e734f6bc488b642f5499"},
+      {"path": "00_control/CURRENT_GOAL_AND_WORKFLOW.md", "bytes": 4958, "sha256": "24f996f88ba6e6d8c3701b3ac1c62f2312ae5d8c80701dcb073882c6d4d3bfff"},
+      {"path": "00_control/CURRENT_STATE.md", "bytes": 6046, "sha256": "6e2dc30f8cb3a95f9cea471de73489aeaa57d8e6e6173b68c54e685120370b19"},
+      {"path": "00_control/CURSOR.json", "bytes": 645, "sha256": "6c1cbc5f53ee5bb0f6c748a8bd07fe2e908a6d73f67ce802fa21c1cd672974de"},
+      {"path": "00_control/TERMINOLOGY.csv", "bytes": 5453, "sha256": "9d5ebe0d5c28c3e83a8497d104f464c2b422349b6de65247853aa39b3135d50b"},
+      {"path": "README.md", "bytes": 3636, "sha256": "553d1caca18e332c952b42ae2217c2a541cc7115ca673b68d806b77b597dc00c"},
+      {"path": "backend/artifacts.jsonl", "bytes": 16333, "sha256": "2ba89a8959e72943c588296244fb2a2d636604d253bd85537269b9f393fd1013"},
+      {"path": "backend/assets.jsonl", "bytes": 2461, "sha256": "69df9ef172853e1c06d164ebb3a1b845d0be39116f01d515a220ecfa475e6b70"},
+      {"path": "backend/authority.jsonl", "bytes": 2384, "sha256": "7216b2bf756d87b04db6201608f28bd672e7b87bc3561a268082f1c858705c23"},
+      {"path": "backend/concepts.jsonl", "bytes": 22500, "sha256": "a59f41423f2a6f74b7f60f245f6c5c8bbe5f5d8cd57cf3445106058e1f302460"},
+      {"path": "backend/corrections.jsonl", "bytes": 23487, "sha256": "3f14dabdde482dc30c34425601f534e222bb54cbc3e458f6a1c6e4b14b40cace"},
+      {"path": "backend/qa.jsonl", "bytes": 10957, "sha256": "aa53a3515125a4eb594184d84a4a93001dfeea6426c7b03f1baf59239cdeba67"},
+      {"path": "backend/relations.jsonl", "bytes": 19223, "sha256": "ad7aae82fcb6ab9786da45b6e2f875503810fc85c48ed4d5ad98c22d6bef56f6"},
+      {"path": "backend/rights.jsonl", "bytes": 7232, "sha256": "5515e80442d2e4de23f4903f02f5c46101275faba4c09205279ad8d567579295"},
+      {"path": "backend/segments.jsonl", "bytes": 121125, "sha256": "fb2722e1ed343d9ec0eeaaa8d006f29b0606eb0e1f56c2513de4a95bae959fc6"},
+      {"path": "backend/terms.jsonl", "bytes": 37224, "sha256": "a324ce3ec6a145f7b09144a93123000a4e90bbaafd1f027b6177baf463e4c64a"},
+      {"path": "backend/units.jsonl", "bytes": 128400, "sha256": "a8cce29be435f49dc5a0cde69d08497ece46355deffc98d31735764b2bd07e0d"},
+      {"path": "output/ARTIFACT_MANIFEST_UNITS_001_003.csv", "bytes": 247, "sha256": "1e211afb4b165435ece5f72a2b4e9b084975db35d111127880255473302f5049"},
+      {"path": "output/html/units-001-003/index.html", "bytes": 359397, "sha256": "33281cc46faa3d560c968b657526cd914786c991d1475b5563911a265bd316c1"},
+      {"path": "output/pdf/topologi-aljabar-unit-001-003-id.pdf", "bytes": 460320, "sha256": "2c9bf67e74c94bca9aad0238e910816188a957892a6cf811f7f615e221b4066d"},
+      {"path": "qa/UNITS_001_003_QA.json", "bytes": 3983, "sha256": "fb511086669846b6c8a68a6c1fecc4bd774016a6c95eb27219e3babbd177a873"},
+      {"path": "qa/UNITS_001_003_VISUAL_QA.md", "bytes": 2310, "sha256": "4d7d603c2276bd570e3bf47897c67d98bf6507d2bd9ffed2acd10ab1a509130e"},
+      {"path": "qa/UNIT_003_INDEPENDENT_REVIEW.md", "bytes": 2464, "sha256": "b2cffbcc2167c3d620f1af53224cc064e8ce34400561868339e69c280845619c"},
+      {"path": "qa/units-001-003-extracted.txt", "bytes": 71549, "sha256": "2e8eabce2e0b8c3114b49d630187a6a0217e3ae90c466b5441f9eedccb299702"},
+      {"path": "scripts/build-units-001-003.ps1", "bytes": 6319, "sha256": "30d6d7134d5ec7cefee1afb44a5e6e540b051482cb29c61d89532232cd41b2d7"},
+      {"path": "scripts/qa-units-001-003.py", "bytes": 30139, "sha256": "e5c0b2e25bf1d312800e75b8bf83b4de4fcf062e6d75cfee8bdd29924762db0d"},
+      {"path": "scripts/validate-backend.py", "bytes": 30765, "sha256": "ff61a7af036c9015b39a3a09aacdc6a0b616ba1f576cffe7357dce1d6ed24c1c"},
+      {"path": "source/id-ID/units/unit-003-lecture-003.md", "bytes": 25822, "sha256": "993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd"}
+    ]
+  },
+  "artifacts": {
+    "unit_003_reader_source": {
+      "path": "source/id-ID/units/unit-003-lecture-003.md",
+      "bytes": 25822,
+      "sha256": "993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd",
+      "stable_ids": 39
+    },
+    "cumulative_html": {
+      "path": "output/html/units-001-003/index.html",
+      "bytes": 359397,
+      "sha256": "33281cc46faa3d560c968b657526cd914786c991d1475b5563911a265bd316c1",
+      "mathml_nodes": 1007
+    },
+    "cumulative_pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-003-id.pdf",
+      "bytes": 460320,
+      "pages": 25,
+      "sha256": "2c9bf67e74c94bca9aad0238e910816188a957892a6cf811f7f615e221b4066d"
+    },
+    "artifact_manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_003.csv",
+      "bytes": 247,
+      "sha256": "1e211afb4b165435ece5f72a2b4e9b084975db35d111127880255473302f5049"
+    }
+  },
+  "backend": {
+    "schema": "curriculum.interop 0.1.0",
+    "jsonl_files": 11,
+    "records": 496,
+    "bundle_sha256": "0c08bebf7cbac289e94a7de571d3c2bab4d161c8a6a75c35b8a997f07ff6c939",
+    "validation": "pass"
+  },
+  "quality": {
+    "qa_receipt_sha256": "fb511086669846b6c8a68a6c1fecc4bd774016a6c95eb27219e3babbd177a873",
+    "independent_review_sha256": "b2cffbcc2167c3d620f1af53224cc064e8ce34400561868339e69c280845619c",
+    "visual_review_sha256": "4d7d603c2276bd570e3bf47897c67d98bf6507d2bd9ffed2acd10ab1a509130e",
+    "independent_findings": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "pdf_pages_reviewed": 25,
+    "browser_viewports_reviewed": [
+      "1280x720",
+      "390x844"
+    ]
+  }
+}

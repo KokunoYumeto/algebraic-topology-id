@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 
-Status: active production. Source admission is closed. Units 001–002 are publicly verified. Unit 003 and the cumulative Units 001–003 boundary are translated, independently rereviewed, built, visually/browser checked, and backend-complete; publication and anonymous readback are the next gate. Unit 001 and Units 001–002 remain byte-frozen.
+Status: active production. Source admission is closed. Units 001–003 are translated, independently rereviewed, built, visually/browser checked, backend-complete, published, and anonymously byte-verified. Unit 001 and Units 001–002 remain byte-frozen. Production continues at Lecture 4.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -25,7 +25,7 @@ The 70 stable IDs cover 43 semantic blocks. All nine source exercises have compl
 
 The exact Roberts archive, commit/tree, seven-file manifest, CC BY 4.0 license, and reproducible upstream baseline remain frozen. MIT and Fomberg/Lazarovich are closed benchmarks, not donors. Two later StackExchange-derived code blocks remain quarantined for independent redraw.
 
-## Verified local cumulative Units 001–003 boundary
+## Frozen public cumulative Units 001–003 boundary
 
 - Source span: Roberts `Notes.tex:134–877` (Lectures 1–3).
 - Unit 003 source: 25,822 bytes, 618 lines, 39 stable IDs, SHA-256 `993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd`.
@@ -36,15 +36,16 @@ The exact Roberts archive, commit/tree, seven-file manifest, CC BY 4.0 license, 
 - Cumulative QA receipt: 3,983 bytes, SHA-256 `fb511086669846b6c8a68a6c1fecc4bd774016a6c95eb27219e3babbd177a873`.
 - Visual/browser receipt: 2,310 bytes, SHA-256 `4d7d603c2276bd570e3bf47897c67d98bf6507d2bd9ffed2acd10ab1a509130e`.
 - Backend: 496 canonical records in 11 JSONL files, bundle SHA-256 `0c08bebf7cbac289e94a7de571d3c2bab4d161c8a6a75c35b8a997f07ff6c939`.
+- Public reader: `https://kokunoyumeto.github.io/algebraic-topology-id/units-001-003/`; anonymous HTTP 200 readback is exactly 359,397 bytes with the frozen HTML SHA-256. The preserved Unit 001 and Units 001–002 Pages readers also remain exact.
+- Repository boundary: commit `9ffa736df82eaaa0c8ea70f2b35942ef4119afcb`, tree `b4695fd8e7e38d861dfa295d3bb2ea31b7d41099`, Pages workflow run `32551934416`, job `96979992402`, deployment `6033213187`, status `17152322493`; all successful.
+- Publication receipt: `PUBLICATION_RECEIPT_UNITS_001_003.json`, 9,579 bytes, SHA-256 `4658845496597e34cee7fc83f641d68faf88acc9b2a62804f89b99c33fbcba07`. Anonymous raw readback covered every one of the 30 changed release files with exact byte count and SHA-256 identity.
 
 The 109 stable IDs cover 68 semantic blocks. All 14 exercises have complete solutions; the source question has an answer; all added checks are supplied. Ten Unit 3 source corrections and four accessibility reflows are disclosed one-to-one in the adverse ledger and backend. HTML is self-contained, centered/reflowing, `lang=id-ID`, and native MathML; all 41 fragments resolve and wide formulas scroll locally at mobile width. All 25 PDF pages and the HTML at 1280 x 720 and 390 x 844 passed visual inspection with no P1/P2/P3 finding. The PDF is secondary and explicitly untagged.
 
 ## Current production
 
-1. Push the verified cumulative Units 001–003 boundary, wait for the Pages deployment, then anonymously read back and hash the complete public inventory without changing any earlier public bytes.
-2. Persist the sanitized publication receipt and its commit/deployment identities.
-3. Continue contiguously from line 878, which opens the Lecture 4 proposition whose lecture marker occurs on line 879.
-4. Continue source order with the same source-ID/backend/build/QA/publication discipline; after the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
+1. Continue contiguously from line 878, which opens the Lecture 4 proposition whose lecture marker occurs on line 879.
+2. Continue source order with the same source-ID/backend/build/QA/publication discipline; after the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
 
 ## Non-overlap boundary
 
