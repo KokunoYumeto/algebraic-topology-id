@@ -2,7 +2,7 @@
 
 Updated: 2026-08-21
 
-Status: active production. Source admission is closed. Units 001–002 are translated, admitted, independently rereviewed, built, visually/browser checked, and backend-complete. The cumulative boundary is ready to push; Unit 001 remains publicly verified and byte-frozen.
+Status: active production. Source admission is closed. Units 001–002 are translated, admitted, independently rereviewed, built, visually/browser checked, backend-complete, and publicly verified. Production continues at Lecture 3; Unit 001 remains byte-frozen.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -15,9 +15,9 @@ Status: active production. Source admission is closed. Units 001–002 are trans
 - Cumulative QA receipt: 2,690 bytes; SHA-256 `075546f6a856638dc420ed62b23ec78c7a57f839444e4f2101233d6421f776f0`.
 - Independent final rereview: P1 = 0, P2 = 0, P3 = 0.
 - Visual scope: all 15 physical pages plus Chromium at 1280×720 and 390×844; no clipping, overlap, page-level overflow, broken formula, missing glyph, blank object, or orphan page.
-- Public reader: `https://kokunoyumeto.github.io/algebraic-topology-id/`; anonymous HTTP 200 readback is exactly 85,580 bytes with the frozen HTML SHA-256.
-- Repository: `https://github.com/KokunoYumeto/algebraic-topology-id`; deployed commit `b4146e31a1473e4aabc6704d223769bdc862c6ec`, workflow run `32475551030`, deployment `6020246064`, all successful.
-- Publication receipt: `PUBLICATION_RECEIPT_UNIT_001.json`, 4,554 bytes, SHA-256 `3b1b46d6ae20239201a8aeea39ec6d72c2c645b0be70d8c5c567ac7362604480`.
+- Public cumulative reader: `https://kokunoyumeto.github.io/algebraic-topology-id/units-001-002/`; anonymous HTTP 200 readback is exactly 220,035 bytes with the frozen cumulative HTML SHA-256. The preserved Unit 001 root remains exactly 85,580 bytes with its frozen SHA-256.
+- Repository: `https://github.com/KokunoYumeto/algebraic-topology-id`; deployed commit `d6cf20708d5f1582a100982b49325c1f3d341763`, tree `966b9749a946cf75f0294ad102d5f2a3afefb90d`, workflow run `32509014519`, job `96855555077`, deployment `6026268020`, all successful.
+- Publication receipt: `PUBLICATION_RECEIPT_UNITS_001_002.json`, 6,236 bytes, SHA-256 `11bcee6697eb2ac34b080f74a13930f623b3657d459f7e8505695397854b22a6`; its anonymous readback binds the Pages HTML, PDF, Unit 2 source, manifest, QA receipt, commit, and complete public tree inventory.
 
 The 70 stable IDs cover 43 semantic blocks. All nine source exercises have complete solutions and the source question has an answer; two added lemma proofs make the main universal-property and perekatan arguments explicit. Eight Unit 2 correction records disclose seven mathematical/source fixes and one marginal-exercise reflow. HTML is offline, self-contained, centered/reflowing, `lang=id-ID`, and native MathML; wide formulas scroll locally on narrow screens. PDF is secondary and explicitly untagged. Unit 001’s original HTML/PDF bytes remain unchanged.
 
@@ -27,10 +27,9 @@ The exact Roberts archive, commit/tree, seven-file manifest, CC BY 4.0 license, 
 
 ## Current production
 
-1. Commit, push, deploy, and anonymously verify the cumulative Units 001–002 boundary; record the exact publication receipt.
-2. Continue contiguously from `Notes.tex:585`, `This\lecturenum{3}`, into connected components.
-3. Preserve the same source-ID/backend/build/QA/publication discipline for each substantial boundary.
-4. After the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
+1. Continue contiguously from `Notes.tex:585`, `This\lecturenum{3}`, into connected components.
+2. Preserve the same source-ID/backend/build/QA/publication discipline for each substantial boundary.
+3. After the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
 
 ## Non-overlap boundary
 

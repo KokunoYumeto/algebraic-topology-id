@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "boundary_id": "o012-rbt-units-001-002-github-pages",
+  "recorded_at": "2026-08-22T03:40:50Z",
+  "status": "published_and_anonymously_verified",
+  "scope": {
+    "role_id": "O012",
+    "course_id": "D60",
+    "included_units": [
+      "o012-rbt-l01",
+      "o012-rbt-l02"
+    ],
+    "source_span": "Notes.tex:134-584",
+    "next_source_line": 585,
+    "github_release_created": false,
+    "upstream_contacted": false
+  },
+  "repository": {
+    "id": 1341710570,
+    "full_name": "KokunoYumeto/algebraic-topology-id",
+    "url": "https://github.com/KokunoYumeto/algebraic-topology-id",
+    "visibility": "public",
+    "default_branch": "main",
+    "homepage": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+    "pages_enabled": true
+  },
+  "authority": {
+    "repository": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019",
+    "commit_sha": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "tree_sha": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+    "license": "CC BY 4.0"
+  },
+  "repository_history": {
+    "deployed_commit_sha": "d6cf20708d5f1582a100982b49325c1f3d341763",
+    "deployed_tree_sha": "966b9749a946cf75f0294ad102d5f2a3afefb90d",
+    "workflow_path": ".github/workflows/pages.yml",
+    "workflow_bytes": 1802,
+    "workflow_sha256": "4f0358bef60cdb61287aed85ca85cb7d0a85412bdce9dc497e2c99281d36536f"
+  },
+  "pages_workflow": {
+    "run_id": 32509014519,
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32509014519",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "job_id": 96855555077,
+    "job_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32509014519/job/96855555077",
+    "job_name": "deploy",
+    "all_steps_successful": true
+  },
+  "pages_deployment": {
+    "deployment_id": 6026268020,
+    "deployment_status_id": 17132744453,
+    "state": "success",
+    "environment": "github-pages",
+    "environment_url": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+    "deployed_commit_sha": "d6cf20708d5f1582a100982b49325c1f3d341763"
+  },
+  "anonymous_repository_inventory": {
+    "checked_at": "2026-08-22T03:40:50Z",
+    "commit_api_http_status": 200,
+    "tree_api_http_status": 200,
+    "commit_sha": "d6cf20708d5f1582a100982b49325c1f3d341763",
+    "tree_sha": "966b9749a946cf75f0294ad102d5f2a3afefb90d",
+    "tree_truncated": false,
+    "tree_entries": 84,
+    "required_boundary_paths_present": true
+  },
+  "anonymous_public_readback": [
+    {
+      "kind": "preserved_unit_001_pages_root",
+      "url": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+      "http_status": 200,
+      "bytes": 85580,
+      "sha256": "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8",
+      "exact_match": true
+    },
+    {
+      "kind": "cumulative_units_001_002_pages_html",
+      "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-002/",
+      "http_status": 200,
+      "bytes": 220035,
+      "sha256": "d3b5cbfaa3511823821ecf9ba26a4eaec7c84d937417927d11bde3f66abc9f54",
+      "exact_match": true
+    },
+    {
+      "kind": "unit_002_reader_source",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/d6cf20708d5f1582a100982b49325c1f3d341763/source/id-ID/units/unit-002-lecture-002.md",
+      "http_status": 200,
+      "bytes": 25090,
+      "sha256": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
+      "exact_match": true
+    },
+    {
+      "kind": "cumulative_units_001_002_pdf",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/d6cf20708d5f1582a100982b49325c1f3d341763/output/pdf/topologi-aljabar-unit-001-002-id.pdf",
+      "http_status": 200,
+      "bytes": 395385,
+      "sha256": "0413c3a3280955cc482a5c0c2d7615b78128dccba3b6b1901dee1bf34d133b8e",
+      "exact_match": true
+    },
+    {
+      "kind": "cumulative_artifact_manifest",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/d6cf20708d5f1582a100982b49325c1f3d341763/output/ARTIFACT_MANIFEST_UNITS_001_002.csv",
+      "http_status": 200,
+      "bytes": 247,
+      "sha256": "93e98f6cbbc60775bb934df5b49141f63d7cd2c76582a26c61d4192ff320d721",
+      "exact_match": true
+    },
+    {
+      "kind": "cumulative_qa_receipt",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/d6cf20708d5f1582a100982b49325c1f3d341763/qa/UNITS_001_002_QA.json",
+      "http_status": 200,
+      "bytes": 2690,
+      "sha256": "075546f6a856638dc420ed62b23ec78c7a57f839444e4f2101233d6421f776f0",
+      "exact_match": true
+    }
+  ],
+  "artifacts": {
+    "unit_002_reader_source": {
+      "path": "source/id-ID/units/unit-002-lecture-002.md",
+      "bytes": 25090,
+      "sha256": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
+      "stable_ids": 41
+    },
+    "cumulative_html": {
+      "path": "output/html/units-001-002/index.html",
+      "bytes": 220035,
+      "sha256": "d3b5cbfaa3511823821ecf9ba26a4eaec7c84d937417927d11bde3f66abc9f54",
+      "mathml_nodes": 621
+    },
+    "cumulative_pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-002-id.pdf",
+      "bytes": 395385,
+      "pages": 15,
+      "sha256": "0413c3a3280955cc482a5c0c2d7615b78128dccba3b6b1901dee1bf34d133b8e"
+    },
+    "artifact_manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_002.csv",
+      "bytes": 247,
+      "sha256": "93e98f6cbbc60775bb934df5b49141f63d7cd2c76582a26c61d4192ff320d721"
+    }
+  },
+  "backend": {
+    "schema": "curriculum.interop 0.1.0",
+    "jsonl_files": 11,
+    "records": 315,
+    "bundle_sha256": "f1999b5d33466ba9a15a32f50a16173fbb7659f1a7b28a3452bc5d2ec3094e6e",
+    "validation": "pass"
+  },
+  "quality": {
+    "qa_receipt_sha256": "075546f6a856638dc420ed62b23ec78c7a57f839444e4f2101233d6421f776f0",
+    "independent_review_sha256": "a2e879546f0b9c6caeae78e8b7babe0ce32da17118d7840d6803e9b89d82d3f5",
+    "visual_review_sha256": "939576c3d3fd9e1a2bbd6ca54080ffbdf0a60fc7aecce1baed90e7e46c3f6ffe",
+    "independent_findings": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "pdf_pages_reviewed": 15,
+    "browser_viewports_reviewed": [
+      "1280x720",
+      "390x844"
+    ]
+  }
+}
