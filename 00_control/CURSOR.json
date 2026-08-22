@@ -4,9 +4,9 @@
   "course_id": "D60",
   "source_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
   "source_path": "Notes.tex",
-  "completed_through_line": 2726,
-  "next_line": 2727,
-  "next_marker": "\\lecturenum{13}",
+  "completed_through_line": 3286,
+  "next_line": 3287,
+  "next_marker": "\\lecturenum{16}",
   "completed_units": [
     "o012-rbt-l01",
     "o012-rbt-l02",
@@ -19,11 +19,14 @@
     "o012-rbt-l09",
     "o012-rbt-l10",
     "o012-rbt-l11",
-    "o012-rbt-l12"
+    "o012-rbt-l12",
+    "o012-rbt-l13",
+    "o012-rbt-l14",
+    "o012-rbt-l15"
   ],
-  "current_unit": "o012-rbt-l13",
-  "translation_state": "units_001_012_complete_reviewed",
+  "current_unit": "o012-rbt-l16",
+  "translation_state": "units_001_015_complete_reviewed",
   "backend_state": "units_001_010_complete_1345_records_validated_ca6ff5b77659",
-  "publication_state": "units_001_010_and_source_011_local_commit_d27c7b7dd784_ready; push_attempt_d4a9143efabf_rejected_account_suspended; anonymous_repo_and_pages_404; units_001_004_pages_last_historically_verified",
+  "publication_state": "units_001_010_and_source_011_local_commit_d27c7b7dd784_ready; source_012_local_commit_b20292177577; sources_013_015_frozen; units_001_013_reader_backend_in_finalization_for_zenodo; push_attempt_d4a9143efabf_rejected_account_suspended_due_account_security_review; anonymous_repo_and_pages_404; support_ticket_filed; do_not_loop_or_duplicate_repo",
   "updated": "2026-08-22"
 }

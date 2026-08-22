@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 
-Status: active production. Source admission is closed. Units 001–004 remain historically published/byte-verified, but GitHub account suspension currently makes the repository API return HTTP 403 and every previously deployed Pages URL return HTTP 404. Units 001–010 are cumulatively built, backend-complete, structurally and independently reviewed, and visually/browser verified as a local release candidate. Units 011–012 are independently source-frozen. Every earlier local reader remains byte-frozen. The next source cursor is Lecture 13.
+Status: active production. Source admission and composite route selection are closed. Units 001–004 remain historically published/byte-verified, but GitHub account suspension currently makes the repository API return HTTP 403 and every previously deployed Pages URL return HTTP 404. Units 001–010 are cumulatively built, backend-complete, structurally and independently reviewed, and visually/browser verified as a local release candidate. Units 011–015 are independently source-frozen. The Units 001–013 cumulative reader/backend is being finalized as the next preservation checkpoint. Every earlier local reader remains byte-frozen. The next source cursor is Lecture 16. After all 30 Roberts lectures, the selected Fomberg lines 31–4185 and exact original closure follow; see `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -97,8 +97,12 @@ Publication was attempted at 2026-08-22T09:00:00+02:00 from local commit `849873
 - Unit 010: `Notes.tex:2094–2272`; 26,432 bytes; 934 lines; 26 unique stable IDs; SHA-256 `e1c6ef961ae2266db86baec6d701dd659a1bf78bdd3601cf5b1c6515bc7d0310`; independent review P1/P2/P3 zero.
 - Unit 011: `Notes.tex:2273–2494`; 28,465 bytes; 959 lines; 39 unique stable IDs; SHA-256 `1cdbe0cae239a4e60a72f25c8814c2e3b5ec26b9119da03624bda7f3ff1ae127`; independent review P1/P2/P3 zero.
 - Unit 012: `Notes.tex:2495–2726`; 32,850 bytes; 1,024 lines; 37 unique stable IDs; SHA-256 `429831df4a5600c59351516915fb787cd73402d8c11c411869210dbf8aaa7ada`; independent review P1/P2/P3 zero.
-- These seven sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps available at each source boundary. Units 006–010 are frozen in the cumulative reader/backend; Units 011–012 are source-frozen only.
-- Next exact source cursor: `Notes.tex:2727`, the Lecture 13 marker.
+- The Unit 012 source, review, and ledger boundary are preserved in local commit `b20292177577ceb91beedb24e64d90f71c41264a`, tree `7281da2df029f4f9936fd8075829e251c75b94be`, parent `1b030e4dd667b4d138bcff9b01942bdea73f35c8`.
+- Unit 013: `Notes.tex:2727–3046`; 41,196 bytes; 1,306 lines; 44 unique stable IDs; SHA-256 `0aa68cb4ed31862d32aeff5a7106b4ac29c13cbc202f7dbc8381fc7cd31418c0`; independent review 6,665 bytes/SHA-256 `5903c7da7f57d5db15a2d94807860a816d15e7d3cb7b020a8a3ddcbb0df45c21`; P1/P2/P3 zero after bounded fixes; adverse ledger through `O012-ADV-0187`; terminology ledger through `O012-TERM-0213`.
+- Unit 014: `Notes.tex:3047–3209`; 28,504 bytes; 947 lines; 38 unique stable IDs; SHA-256 `2a14ccb2acbb0a001ea2db2716f077925a90dbf4d18b0dc2b63a2d3e5e7f7c40`; independent review 9,725 bytes/SHA-256 `43a409f8f127fe9425d14bc8279a594e4ea1f604da3db4f99316aa7c17c3969d`; P1/P2/P3 zero.
+- Unit 015: `Notes.tex:3210–3286`; 28,485 bytes; 835 lines; 34 unique stable IDs; SHA-256 `140f1dbc182b5406dbbdadde59bb6dcdf51f86bd6cf4c50c676e0b88d60540f4`; independent review 4,392 bytes/SHA-256 `9776c911f5d4f4cd7027375ac29514ca2722f28877d27e79753fabf61876dc90`; P1/P2/P3 zero; adverse ledger through `O012-ADV-0215`; terminology through `O012-TERM-0233`.
+- These ten sources preserve all admitted semantic content and marginal diagrams accessibly, and their added mastery material closes the identified proof gaps available at each source boundary. Units 006–010 are frozen in the cumulative reader/backend; Units 011–015 are source-frozen only until their next cumulative build boundary.
+- Next exact source cursor: `Notes.tex:3287`, the inline Lecture 16 marker.
 
 ### Verified cumulative Units 001–004 boundary
 
