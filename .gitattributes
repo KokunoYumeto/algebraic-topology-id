@@ -3,5 +3,7 @@
 *.gz binary
 output/**/*.html binary
 release/**/artifacts/* binary
+release/**/transaction.json binary
+00_control/*PUBLICATION_RECEIPT*.json binary
 qa/*-extracted.txt binary
 baseline/**/*.txt binary

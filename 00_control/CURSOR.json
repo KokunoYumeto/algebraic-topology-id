@@ -29,6 +29,6 @@
   "current_unit": "o012-rbt-l18",
   "translation_state": "units_001_017_complete_reviewed",
   "backend_state": "units_001_013_complete_1762_records_validated_bb8512f56a8b",
-  "publication_state": "units_001_013_reader_backend_qa_complete_clean_zenodo_package_verified_pending_public_transaction_and_figshare_work_item; sources_014_017_frozen; github_account_reinstated_2026_08_22; existing_main_advanced_once_to_2840ff7d1ce9d085dfa2af35eec830927eaaf0ea_and_raw_readback_http_200; unit_016_017_boundary_pending_exact_commit_push; never_duplicate_repo",
+  "publication_state": "units_001_013_public_and_anonymously_byte_verified_on_github_pages_zenodo_10_5281_zenodo_22061490_and_figshare_10_6084_m9_figshare_33314982_v1_collection_v35; github_main_d4694835a6cf6bc12a46973efdbb263fead9182a; sources_014_017_frozen; next_publication_only_at_new_substantial_verified_boundary; never_duplicate_repo",
   "updated": "2026-08-22"
 }

@@ -1,0 +1,79 @@
+{
+  "schema_version": "2.0",
+  "mode": "create_new_in_project",
+  "release_id": "o012-roberts-id-units-001-013-v0.13.0",
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–13",
+  "version": "0.13.0",
+  "project_id": 280296,
+  "collection_id": 8668413,
+  "article_id": 33314982,
+  "zenodo_doi": "10.5281/zenodo.22061490",
+  "metadata_sha256": "02c2e179e8d47da9890df068737116707065c448a3401708bc5025461dfde6a3",
+  "zenodo_receipt_sha256": "8406bab6cfd5b5266a74de0870bfcc6ac7fec0111cc40f7a387a1ad85b892fb8",
+  "release_manifest_sha256": "0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc",
+  "article_body_sha256": "ab5bb5a96f5f254eb611dc990462bfc8d1464614b1456a206b2c31d49c088f7f",
+  "figshare_payload_bytes": 3284144,
+  "payload_files": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.pdf",
+      "bytes": 1071382,
+      "sha256": "14775535f773735db5886195980f39e417aaea24998927956a81b55b0ef77c68",
+      "md5": "c2d14edf73a3e76c037f66876dce8aba"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.html",
+      "bytes": 1824804,
+      "sha256": "be1473ab5cb8eff26341e554179661775a12cec5784a8ebf3f9c2f3f0633cb71",
+      "md5": "7bb31764d4a100b82168bc0a1f4a14d5"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNIT_001_013_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 361986,
+      "sha256": "cbc60263dd30d7b392702a7d9463b62f5cc60506d58d3029fbd36d71b8644dd5",
+      "md5": "c854c35e28f814bdf8b3872910e538b6"
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "bytes": 2880,
+      "sha256": "fc112d99b71ca72e801c97d16faf823c1301cee83f99ee299918c103ceeac3b8",
+      "md5": "701d1e7c4f8c4d700ff3a44087d34040"
+    },
+    {
+      "filename": "release-manifest.json",
+      "bytes": 19383,
+      "sha256": "0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc",
+      "md5": "c2b34d2dd486734120d60529eee67a8d"
+    },
+    {
+      "filename": "SHA256SUMS",
+      "bytes": 724,
+      "sha256": "bf34e926d47902ca75413526ed9ce709fac66076ee14eaafdac00befb6d4d284",
+      "md5": "8c549c72933bc6e075837fc4ade1ab20"
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "bytes": 2985,
+      "sha256": "aebcaf38a2495c48d6cf1b5ed4a0af3803fa75b5cc764f478d54c4d37b871e00",
+      "md5": "f5a76c1ce3010350b0da74e7d3df4d16"
+    }
+  ],
+  "qa_exclusion": {
+    "filename": "TOPOLOGI_ALJABAR_ID_UNIT_001_013_QA_PROVENANCE.zip",
+    "bytes": 19782320,
+    "sha256": "a6dd37e925487c9c622e0a02ff051ab0d1b4f5aed4c21364ea72b70273955827",
+    "reason": "Large QA/provenance archive is intentionally retained only in the verified Zenodo release and is not duplicated in the reader-first Figshare payload."
+  },
+  "create_request": {
+    "method": "POST",
+    "endpoint": "https://api.figshare.com/v2/account/projects/280296/articles",
+    "request_id": "63541cb8aa04448d96b5b98cec614a6e",
+    "article_body_sha256": "ab5bb5a96f5f254eb611dc990462bfc8d1464614b1456a206b2c31d49c088f7f"
+  },
+  "created_at_utc": "2026-08-22T21:32:08.5988803+02:00",
+  "public_collection_version_before": 34,
+  "figshare_doi": "10.6084/m9.figshare.33314982.v1",
+  "collection_doi": "10.6084/m9.figshare.c.8668413.v35",
+  "receipt_sha256": "59b3bb5a204e6df0dc3fd9e7c173d5c176fa0e26b1b1fdf735f2c6dd2f68290f",
+  "state": "published_collected_and_anonymously_verified",
+  "updated_at_utc": "2026-08-22T19:42:49.1146294+00:00"
+}

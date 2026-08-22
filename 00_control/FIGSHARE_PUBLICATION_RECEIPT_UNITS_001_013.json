@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "release_id": "o012-roberts-id-units-001-013-v0.13.0",
+  "published_at_utc": "2026-08-22T19:42:49.0947468+00:00",
+  "article_id": 33314982,
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–13",
+  "version_label": "0.13.0",
+  "doi": "10.6084/m9.figshare.33314982.v1",
+  "public_record_url": "https://figshare.com/articles/book/Topologi_Aljabar_Edisi_Bahasa_Indonesia_Unit_1_13/33314982",
+  "anonymous_api_url": "https://api.figshare.com/v2/articles/33314982",
+  "project_id": 280296,
+  "project_url": "https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296",
+  "collection_id": 8668413,
+  "collection_version": 35,
+  "collection_doi": "10.6084/m9.figshare.c.8668413.v35",
+  "collection_url": "https://doi.org/10.6084/m9.figshare.c.8668413.v35",
+  "zenodo_doi": "10.5281/zenodo.22061490",
+  "zenodo_url": "https://doi.org/10.5281/zenodo.22061490",
+  "zenodo_receipt_sha256": "8406bab6cfd5b5266a74de0870bfcc6ac7fec0111cc40f7a387a1ad85b892fb8",
+  "release_manifest_sha256": "0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc",
+  "license": "CC BY 4.0",
+  "incomplete_checkpoint": true,
+  "figshare_payload_bytes": 3284144,
+  "figshare_payload_order": [
+    "00_TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.pdf",
+    "TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.html",
+    "TOPOLOGI_ALJABAR_ID_UNIT_001_013_EDITABLE_SOURCE_BACKEND.zip",
+    "RELEASE_RIGHTS.md",
+    "release-manifest.json",
+    "SHA256SUMS",
+    "README_RELEASE.md"
+  ],
+  "deliberately_excluded": [
+    "TOPOLOGI_ALJABAR_ID_UNIT_001_013_QA_PROVENANCE.zip"
+  ],
+  "project_total_authenticated_bytes": 212175199,
+  "project_byte_ceiling": 20000000000,
+  "public_file_count": 7,
+  "files": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.pdf",
+      "file_id": 67761294,
+      "bytes": 1071382,
+      "md5": "c2d14edf73a3e76c037f66876dce8aba",
+      "sha256": "14775535f773735db5886195980f39e417aaea24998927956a81b55b0ef77c68",
+      "anonymous_url": "https://ndownloader.figshare.com/files/67761294",
+      "verified": true
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "file_id": 67761327,
+      "bytes": 2985,
+      "md5": "f5a76c1ce3010350b0da74e7d3df4d16",
+      "sha256": "aebcaf38a2495c48d6cf1b5ed4a0af3803fa75b5cc764f478d54c4d37b871e00",
+      "anonymous_url": "https://ndownloader.figshare.com/files/67761327",
+      "verified": true
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "file_id": 67761318,
+      "bytes": 2880,
+      "md5": "701d1e7c4f8c4d700ff3a44087d34040",
+      "sha256": "fc112d99b71ca72e801c97d16faf823c1301cee83f99ee299918c103ceeac3b8",
+      "anonymous_url": "https://ndownloader.figshare.com/files/67761318",
+      "verified": true
+    },
+    {
+      "filename": "release-manifest.json",
+      "file_id": 67761321,
+      "bytes": 19383,
+      "md5": "c2b34d2dd486734120d60529eee67a8d",
+      "sha256": "0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc",
+      "anonymous_url": "https://ndownloader.figshare.com/files/67761321",
+      "verified": true
+    },
+    {
+      "filename": "SHA256SUMS",
+      "file_id": 67761324,
+      "bytes": 724,
+      "md5": "8c549c72933bc6e075837fc4ade1ab20",
+      "sha256": "bf34e926d47902ca75413526ed9ce709fac66076ee14eaafdac00befb6d4d284",
+      "anonymous_url": "https://ndownloader.figshare.com/files/67761324",
+      "verified": true
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNIT_001_013_EDITABLE_SOURCE_BACKEND.zip",
+      "file_id": 67761315,
+      "bytes": 361986,
+      "md5": "c854c35e28f814bdf8b3872910e538b6",
+      "sha256": "cbc60263dd30d7b392702a7d9463b62f5cc60506d58d3029fbd36d71b8644dd5",
+      "anonymous_url": "https://ndownloader.figshare.com/files/67761315",
+      "verified": true
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.html",
+      "file_id": 67761312,
+      "bytes": 1824804,
+      "md5": "7bb31764d4a100b82168bc0a1f4a14d5",
+      "sha256": "be1473ab5cb8eff26341e554179661775a12cec5784a8ebf3f9c2f3f0633cb71",
+      "anonymous_url": "https://ndownloader.figshare.com/files/67761312",
+      "verified": true
+    }
+  ],
+  "verification": {
+    "exact_authenticated_own_search": true,
+    "exact_authenticated_project_search": true,
+    "created_directly_in_project_or_resumed_known_transaction": true,
+    "exact_public_inventory": true,
+    "anonymous_project_membership": true,
+    "anonymous_collection_membership": true,
+    "anonymous_byte_readback": true,
+    "all_sha256_match_local": true,
+    "zenodo_release_binding_verified": true,
+    "credential_material_persisted": false
+  }
+}

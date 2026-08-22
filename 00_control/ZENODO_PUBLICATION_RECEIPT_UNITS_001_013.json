@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "release_id": "o012-roberts-id-units-001-013-v0.13.0",
+  "published_at_utc": "2026-08-22T19:28:28.0350349+00:00",
+  "creation_mode": "new_concept",
+  "deposition_id": "22061490",
+  "record_id": "22061490",
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–13",
+  "version": "0.13.0",
+  "doi": "10.5281/zenodo.22061490",
+  "concept_doi": "10.5281/zenodo.22061489",
+  "public_record_url": "https://zenodo.org/records/22061490",
+  "anonymous_api_url": "https://zenodo.org/api/records/22061490",
+  "metadata_sha256": "02c2e179e8d47da9890df068737116707065c448a3401708bc5025461dfde6a3",
+  "release_manifest_sha256": "0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc",
+  "source_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+  "source_span": "Notes.tex:134-3046",
+  "license": "CC BY 4.0",
+  "incomplete_checkpoint": true,
+  "github_state": "account_reinstated; existing repository active; no Git mutation performed by this Zenodo transaction",
+  "public_file_count": 8,
+  "files": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.pdf",
+      "bytes": 1071382,
+      "sha256": "14775535f773735db5886195980f39e417aaea24998927956a81b55b0ef77c68",
+      "zenodo_checksum": "md5:c2d14edf73a3e76c037f66876dce8aba",
+      "anonymous_url": "https://zenodo.org/api/records/22061490/files/00_TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.pdf/content",
+      "verified": true
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "bytes": 2985,
+      "sha256": "aebcaf38a2495c48d6cf1b5ed4a0af3803fa75b5cc764f478d54c4d37b871e00",
+      "zenodo_checksum": "md5:f5a76c1ce3010350b0da74e7d3df4d16",
+      "anonymous_url": "https://zenodo.org/api/records/22061490/files/README_RELEASE.md/content",
+      "verified": true
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "bytes": 2880,
+      "sha256": "fc112d99b71ca72e801c97d16faf823c1301cee83f99ee299918c103ceeac3b8",
+      "zenodo_checksum": "md5:701d1e7c4f8c4d700ff3a44087d34040",
+      "anonymous_url": "https://zenodo.org/api/records/22061490/files/RELEASE_RIGHTS.md/content",
+      "verified": true
+    },
+    {
+      "filename": "release-manifest.json",
+      "bytes": 19383,
+      "sha256": "0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc",
+      "zenodo_checksum": "md5:c2b34d2dd486734120d60529eee67a8d",
+      "anonymous_url": "https://zenodo.org/api/records/22061490/files/release-manifest.json/content",
+      "verified": true
+    },
+    {
+      "filename": "SHA256SUMS",
+      "bytes": 724,
+      "sha256": "bf34e926d47902ca75413526ed9ce709fac66076ee14eaafdac00befb6d4d284",
+      "zenodo_checksum": "md5:8c549c72933bc6e075837fc4ade1ab20",
+      "anonymous_url": "https://zenodo.org/api/records/22061490/files/SHA256SUMS/content",
+      "verified": true
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNIT_001_013_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 361986,
+      "sha256": "cbc60263dd30d7b392702a7d9463b62f5cc60506d58d3029fbd36d71b8644dd5",
+      "zenodo_checksum": "md5:c854c35e28f814bdf8b3872910e538b6",
+      "anonymous_url": "https://zenodo.org/api/records/22061490/files/TOPOLOGI_ALJABAR_ID_UNIT_001_013_EDITABLE_SOURCE_BACKEND.zip/content",
+      "verified": true
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNIT_001_013_QA_PROVENANCE.zip",
+      "bytes": 19782320,
+      "sha256": "a6dd37e925487c9c622e0a02ff051ab0d1b4f5aed4c21364ea72b70273955827",
+      "zenodo_checksum": "md5:563c1a47100dcd66a2f676126253db40",
+      "anonymous_url": "https://zenodo.org/api/records/22061490/files/TOPOLOGI_ALJABAR_ID_UNIT_001_013_QA_PROVENANCE.zip/content",
+      "verified": true
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.html",
+      "bytes": 1824804,
+      "sha256": "be1473ab5cb8eff26341e554179661775a12cec5784a8ebf3f9c2f3f0633cb71",
+      "zenodo_checksum": "md5:7bb31764d4a100b82168bc0a1f4a14d5",
+      "anonymous_url": "https://zenodo.org/api/records/22061490/files/TOPOLOGI_ALJABAR_ID_UNIT_001_013_READER.html/content",
+      "verified": true
+    }
+  ],
+  "verification": {
+    "exact_authenticated_search": true,
+    "exact_anonymous_search": true,
+    "exact_public_inventory": true,
+    "anonymous_byte_readback": true,
+    "all_sha256_match_local": true,
+    "credential_material_persisted": false
+  }
+}

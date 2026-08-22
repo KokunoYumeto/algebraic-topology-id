@@ -44,6 +44,10 @@ function Get-Md5([string]$Path) {
 
 function Get-PropertyValue([object]$Object, [string]$Name) {
     if ($null -eq $Object) { return $null }
+    if ($Object -is [Collections.IDictionary]) {
+        if ($Object.Contains($Name)) { return $Object[$Name] }
+        return $null
+    }
     $property = $Object.PSObject.Properties[$Name]
     if ($null -eq $property) { return $null }
     return $property.Value
@@ -316,8 +320,8 @@ function Invoke-ZenodoRequest {
     }
     if ($Authenticated) { $arguments.Headers = $headers }
     if ($PSBoundParameters.ContainsKey('JsonBody')) {
-        $arguments.ContentType = 'application/json; charset=utf-8'
-        $arguments.Body = [Text.Encoding]::UTF8.GetBytes($JsonBody)
+        $arguments.ContentType = 'application/json'
+        $arguments.Body = $JsonBody
     }
     if ($PSBoundParameters.ContainsKey('InFile')) {
         $arguments.InFile = $InFile
@@ -405,7 +409,7 @@ function Get-ConceptKey([object]$Object) {
 function Resolve-TransactionIntent {
     param(
         [Parameter(Mandatory = $true)][object]$Transaction,
-        [Parameter(Mandatory = $true)][object[]]$SameWorkDepositions,
+        [Parameter(Mandatory = $true)][AllowEmptyCollection()][object[]]$SameWorkDepositions,
         [bool]$AllowRequest = $false
     )
     $state = [string](Get-PropertyValue $Transaction 'state')
@@ -522,6 +526,13 @@ function Assert-ExactLocalInventory {
     }
 }
 
+function Assert-VerifiedLocalRelease([string]$Label) {
+    $result = @(& $verifyScript -ReleaseDirectory $artifactsDir)
+    if ($result.Count -ne 1 -or [string](Get-PropertyValue $result[0] 'Status') -cne 'PASS') {
+        throw "$Label release verification did not return one PASS result."
+    }
+}
+
 foreach ($path in @($metadataPath, $verifyScript, $secretPath)) {
     if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Missing required release input: $path" }
 }
@@ -529,8 +540,7 @@ if (-not (Test-Path -LiteralPath $artifactsDir -PathType Container)) { throw "Mi
 Assert-ExactLocalInventory
 
 # First independent gate happens before credential access or network mutation.
-& (Get-Command pwsh -ErrorAction Stop).Source -NoProfile -File $verifyScript -ReleaseDirectory $artifactsDir | Out-Host
-if ($LASTEXITCODE -ne 0) { throw 'Preflight release verification failed.' }
+Assert-VerifiedLocalRelease 'Preflight'
 
 $metadataText = [IO.File]::ReadAllText($metadataPath)
 $metadataDocument = $metadataText | ConvertFrom-Json
@@ -566,8 +576,7 @@ try {
     # Re-read every mutable identity under the shared lock. A package swap
     # between the preliminary gate and lock acquisition fails closed.
     Assert-ExactLocalInventory
-    & (Get-Command pwsh -ErrorAction Stop).Source -NoProfile -File $verifyScript -ReleaseDirectory $artifactsDir | Out-Host
-    if ($LASTEXITCODE -ne 0) { throw 'Locked preflight release verification failed.' }
+    Assert-VerifiedLocalRelease 'Locked preflight'
     $lockedMetadataText = [IO.File]::ReadAllText($metadataPath)
     $lockedMetadataHash = Get-Sha256 $metadataPath
     $lockedManifestHash = Get-Sha256 $manifestPath
@@ -790,8 +799,7 @@ try {
             Assert-CriticalMetadata $deposit.metadata 'verified Zenodo draft' $metadataDocument.metadata
 
             Assert-ExactLocalInventory
-            & (Get-Command pwsh -ErrorAction Stop).Source -NoProfile -File $verifyScript -ReleaseDirectory $artifactsDir | Out-Host
-            if ($LASTEXITCODE -ne 0) { throw 'Immediate pre-publish release verification failed.' }
+            Assert-VerifiedLocalRelease 'Immediate pre-publish'
             Assert-TokenAbsentFromArtifacts $token
 
             # Repeat duplicate suppression immediately before the irreversible

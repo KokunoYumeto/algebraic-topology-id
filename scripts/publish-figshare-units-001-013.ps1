@@ -24,7 +24,7 @@ $apiRoot = 'https://api.figshare.com/v2'
 $projectId = 280296
 $collectionId = 8668413
 $expectedProjectTitle = 'Open and Share-Alike Educational Materials — Translations'
-$expectedCollectionTitle = 'Indonesian Open Mathematics Editions'
+$expectedCollectionTitle = 'Indonesian Mathematics — Reader PDFs'
 $releaseId = 'o012-roberts-id-units-001-013-v0.13.0'
 $workTag = 'o012-roberts-id'
 $expectedTitle = 'Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–13'
@@ -95,6 +95,10 @@ function Get-TextSha256([string]$Text) {
 
 function Get-PropertyValue([object]$Object, [string]$Name) {
     if ($null -eq $Object) { return $null }
+    if ($Object -is [Collections.IDictionary]) {
+        if ($Object.Contains($Name)) { return $Object[$Name] }
+        return $null
+    }
     $property = $Object.PSObject.Properties[$Name]
     if ($null -eq $property) { return $null }
     return $property.Value
@@ -246,6 +250,13 @@ function Assert-ExactLocalInventory {
     }
 }
 
+function Assert-VerifiedLocalRelease([string]$Label) {
+    $result = @(& $verifyScript -ReleaseDirectory $artifactsDir)
+    if ($result.Count -ne 1 -or [string](Get-PropertyValue $result[0] 'Status') -cne 'PASS') {
+        throw "$Label release verification did not return one PASS result."
+    }
+}
+
 function Get-ExpectedLocalFiles([array]$Names) {
     return @($Names | ForEach-Object {
         $path = Join-Path $artifactsDir $_
@@ -310,10 +321,10 @@ function Assert-ZenodoReceipt([object]$Receipt, [array]$ExpectedFiles) {
     if ($recordUri.Scheme -cne 'https' -or $recordUri.Host -cne 'zenodo.org') {
         throw 'Zenodo receipt public URL is not an HTTPS zenodo.org record URL.'
     }
-    $receiptFiles = @((Get-PropertyValue $Receipt 'files') | Sort-Object filename)
-    $expectedSorted = @($ExpectedFiles | Sort-Object filename)
-    $receiptNames = (($receiptFiles | ForEach-Object filename) -join "`n")
-    $expectedNames = (($expectedSorted | ForEach-Object filename) -join "`n")
+    $receiptFiles = @((Get-PropertyValue $Receipt 'files') | Sort-Object { [string](Get-PropertyValue $_ 'filename') })
+    $expectedSorted = @($ExpectedFiles | Sort-Object { [string](Get-PropertyValue $_ 'filename') })
+    $receiptNames = (($receiptFiles | ForEach-Object { [string](Get-PropertyValue $_ 'filename') }) -join "`n")
+    $expectedNames = (($expectedSorted | ForEach-Object { [string](Get-PropertyValue $_ 'filename') }) -join "`n")
     if ($receiptNames -cne $expectedNames) {
         throw 'Zenodo receipt file inventory does not match the exact local release.'
     }
@@ -353,6 +364,7 @@ function Invoke-FigshareRequest {
         [Parameter(Mandatory = $true)][string]$Label,
         [bool]$Authenticated = $true,
         [string]$JsonBody,
+        [bool]$ExpectJson = $true,
         [int[]]$AllowedStatus = @(200)
     )
     Assert-TextDoesNotContainToken $Uri 'Figshare request URI'
@@ -373,8 +385,8 @@ function Invoke-FigshareRequest {
     }
     if ($Authenticated) { $arguments.Headers = $script:headers }
     if ($PSBoundParameters.ContainsKey('JsonBody')) {
-        $arguments.ContentType = 'application/json; charset=utf-8'
-        $arguments.Body = [Text.Encoding]::UTF8.GetBytes($JsonBody)
+        $arguments.ContentType = 'application/json'
+        $arguments.Body = $JsonBody
     }
     Wait-RequestSlot
     $response = Invoke-WebRequest @arguments
@@ -383,7 +395,7 @@ function Invoke-FigshareRequest {
     }
     return [pscustomobject]@{
         StatusCode = [int]$response.StatusCode
-        Json = Convert-ResponseJson $response $Label
+        Json = if ($ExpectJson) { Convert-ResponseJson $response $Label } else { $null }
         Headers = $response.Headers
     }
 }
@@ -402,7 +414,8 @@ function Invoke-UploadServiceRequest {
         Assert-BytesDoNotContainToken $Bytes 'Figshare upload-service request bytes'
     }
     $parsed = [uri]$Uri
-    if ($parsed.Scheme -cne 'https' -or $parsed.Host -cne 'uploads.figshare.com') {
+    $allowedUploadHosts = @('uploads.figshare.com','fup-eu-west-1.figshare.com')
+    if ($parsed.Scheme -cne 'https' -or $allowedUploadHosts -cnotcontains $parsed.Host) {
         throw "Refusing unexpected Figshare upload-service URI for $Label."
     }
     $arguments = @{
@@ -422,9 +435,13 @@ function Invoke-UploadServiceRequest {
     if ($AllowedStatus -notcontains [int]$response.StatusCode) {
         throw "Figshare upload request failed for $Label (HTTP $([int]$response.StatusCode))."
     }
+    $responseJson = $null
+    if ($Method -ceq 'GET') {
+        $responseJson = Convert-ResponseJson $response $Label
+    }
     return [pscustomobject]@{
         StatusCode = [int]$response.StatusCode
-        Json = Convert-ResponseJson $response $Label
+        Json = $responseJson
     }
 }
 
@@ -682,13 +699,13 @@ function Assert-ExactArticleMetadata([object]$Article, [string]$ExpectedDescript
 function Assert-ExactRemoteFiles([array]$RemoteFiles, [array]$ExpectedFiles, [string]$Label, [bool]$RequireOrder = $false) {
     $remoteOriginal = @($RemoteFiles)
     if ($RequireOrder -and
-        (($remoteOriginal | ForEach-Object { Get-RemoteFileName $_ }) -join "`n") -cne (($ExpectedFiles | ForEach-Object filename) -join "`n")) {
+        (($remoteOriginal | ForEach-Object { Get-RemoteFileName $_ }) -join "`n") -cne (($ExpectedFiles | ForEach-Object { [string](Get-PropertyValue $_ 'filename') }) -join "`n")) {
         throw "$Label does not preserve the required reader-first file order."
     }
     $remote = @($RemoteFiles | Sort-Object { Get-RemoteFileName $_ })
-    $expectedSorted = @($ExpectedFiles | Sort-Object filename)
+    $expectedSorted = @($ExpectedFiles | Sort-Object { [string](Get-PropertyValue $_ 'filename') })
     $remoteNames = (($remote | ForEach-Object { Get-RemoteFileName $_ }) -join "`n")
-    $expectedNames = (($expectedSorted | ForEach-Object filename) -join "`n")
+    $expectedNames = (($expectedSorted | ForEach-Object { [string](Get-PropertyValue $_ 'filename') }) -join "`n")
     if ($remoteNames -cne $expectedNames) {
         throw "$Label file inventory is not the exact reader-first Figshare allowlist."
     }
@@ -742,14 +759,14 @@ function Send-FileToFigshare([int64]$ArticleId, [object]$ExpectedFile) {
         $stream.Dispose()
     }
 
-    Invoke-FigshareRequest -Method POST -Uri "$apiRoot/account/articles/$ArticleId/files/$fileId" -Label "finalize upload $($ExpectedFile.filename)" -AllowedStatus @(200,201,202) | Out-Null
+    Invoke-FigshareRequest -Method POST -Uri "$apiRoot/account/articles/$ArticleId/files/$fileId" -Label "finalize upload $($ExpectedFile.filename)" -ExpectJson $false -AllowedStatus @(200,201,202) | Out-Null
     $deadline = [DateTimeOffset]::UtcNow.AddSeconds(40)
     do {
         $file = (Invoke-FigshareRequest -Method GET -Uri "$apiRoot/account/articles/$ArticleId/files/$fileId" -Label "poll finalized upload $($ExpectedFile.filename)").Json
         $status = [string](Get-PropertyValue $file 'status')
         if ((Get-RemoteFileBytes $file) -eq [int64]$ExpectedFile.bytes -and
             (Get-RemoteFileMd5 $file) -ceq [string]$ExpectedFile.md5 -and
-            $status -in @('created','available','completed')) {
+            $status -in @('available','completed')) {
             return
         }
     } while ([DateTimeOffset]::UtcNow -lt $deadline)
@@ -933,8 +950,7 @@ try {
     if ($lockedInputSnapshotText -cne $prelockInputSnapshotText) {
         throw 'Release inputs drifted between the pre-lock snapshot and acquisition of the shared release lock.'
     }
-    & (Get-Command pwsh -ErrorAction Stop).Source -NoProfile -File $verifyScript -ReleaseDirectory $artifactsDir | Out-Host
-    if ($LASTEXITCODE -ne 0) { throw 'Locked local eight-file release verification failed.' }
+    Assert-VerifiedLocalRelease 'Locked local eight-file'
 
     $zenodoExpectedFiles = @($lockedInputSnapshot.artifacts)
     $expectedFiles = @($releaseNames | ForEach-Object {
@@ -943,7 +959,10 @@ try {
         if ($match.Count -ne 1) { throw "Unable to bind exact Figshare payload file: $name" }
         $match[0]
     })
-    $payloadBytes = [int64](($expectedFiles | Measure-Object -Property bytes -Sum).Sum)
+    $payloadBytes = [int64]0
+    foreach ($expectedFile in $expectedFiles) {
+        $payloadBytes += [int64](Get-PropertyValue $expectedFile 'bytes')
+    }
     if ($payloadBytes -le 0 -or $payloadBytes -gt $maximumFigsharePayloadBytes) {
         throw 'Reader-first Figshare payload is empty or exceeds the strict 500 MB ceiling.'
     }
@@ -1119,7 +1138,7 @@ try {
 
     $projectCapacityPreflight = Assert-AuthenticatedProjectCapacity $articleId $payloadBytes
     if (-not $alreadyPublic) {
-        Invoke-FigshareRequest -Method PUT -Uri "$apiRoot/account/articles/$articleId" -Label 'set exact O012 metadata' -JsonBody $articleBody -AllowedStatus @(205) | Out-Null
+        Invoke-FigshareRequest -Method PUT -Uri "$apiRoot/account/articles/$articleId" -Label 'set exact O012 metadata' -JsonBody $articleBody -ExpectJson $false -AllowedStatus @(205) | Out-Null
         $privateArticle = (Invoke-FigshareRequest -Method GET -Uri "$apiRoot/account/articles/$articleId" -Label 'verify private O012 metadata').Json
         Assert-ExactArticleMetadata $privateArticle $description $tags 'Private Figshare article'
         $stateAfterMetadata = [string](Get-PropertyValue $transaction 'state')
@@ -1138,11 +1157,11 @@ try {
             $status = [string](Get-PropertyValue $remote 'status')
             $matches = (Get-RemoteFileBytes $remote) -eq [int64]$expected[0].bytes -and
                 (Get-RemoteFileMd5 $remote) -ceq [string]$expected[0].md5 -and
-                $status -in @('created','available','completed')
+                $status -in @('available','completed')
             if (-not $matches) {
                 $fileId = Get-ObjectId $remote
                 if ($fileId -le 0) { throw "Mismatched draft file lacks an ID: $name" }
-                Invoke-FigshareRequest -Method DELETE -Uri "$apiRoot/account/articles/$articleId/files/$fileId" -Label "delete only this lane's incomplete upload $name" -AllowedStatus @(204) | Out-Null
+                Invoke-FigshareRequest -Method DELETE -Uri "$apiRoot/account/articles/$articleId/files/$fileId" -Label "delete only this lane's incomplete upload $name" -ExpectJson $false -AllowedStatus @(204) | Out-Null
             }
         }
 
@@ -1168,8 +1187,7 @@ try {
         if ((Convert-SnapshotToCanonicalText $immediateSnapshot) -cne $lockedInputSnapshotText) {
             throw 'Complete release input snapshot drifted after lock acquisition; refusing publication.'
         }
-        & (Get-Command pwsh -ErrorAction Stop).Source -NoProfile -File $verifyScript -ReleaseDirectory $artifactsDir | Out-Host
-        if ($LASTEXITCODE -ne 0) { throw 'Immediate pre-publish local release verification failed.' }
+        Assert-VerifiedLocalRelease 'Immediate pre-publish local'
         if ((Get-Sha256 $zenodoReceiptPath) -cne $zenodoReceiptHash) { throw 'Zenodo receipt changed during the Figshare transaction.' }
         Assert-ZenodoReceipt ([IO.File]::ReadAllText($zenodoReceiptPath) | ConvertFrom-Json) $zenodoExpectedFiles
         $lockedTransactionText = [IO.File]::ReadAllText($transactionPath)
@@ -1177,7 +1195,7 @@ try {
         $projectCapacityPreflight = Assert-AuthenticatedProjectCapacity $articleId $payloadBytes
 
         Update-TransactionState $transaction 'article_publish_intent'
-        Invoke-FigshareRequest -Method POST -Uri "$apiRoot/account/articles/$articleId/publish" -Label 'publish exact O012 Figshare article' -AllowedStatus @(201) | Out-Null
+        Invoke-FigshareRequest -Method POST -Uri "$apiRoot/account/articles/$articleId/publish" -Label 'publish exact O012 Figshare article' -ExpectJson $false -AllowedStatus @(201) | Out-Null
         $deadline = [DateTimeOffset]::UtcNow.AddSeconds(60)
         $publicArticle = $null
         do {
@@ -1212,7 +1230,7 @@ try {
         }
         $addBody = @{ articles = @($articleId) } | ConvertTo-Json -Compress
         Update-TransactionState $transaction 'collection_append_intent'
-        Invoke-FigshareRequest -Method POST -Uri "$apiRoot/account/collections/$collectionId/articles" -Label 'append O012 article to Indonesian collection' -JsonBody $addBody -AllowedStatus @(201) | Out-Null
+        Invoke-FigshareRequest -Method POST -Uri "$apiRoot/account/collections/$collectionId/articles" -Label 'append O012 article to Indonesian collection' -JsonBody $addBody -ExpectJson $false -AllowedStatus @(201) | Out-Null
         Update-TransactionState $transaction 'collection_membership_appended'
     } else {
         $stateAtAppendRecovery = [string](Get-PropertyValue $transaction 'state')
@@ -1252,7 +1270,7 @@ try {
         } else {
             Set-PropertyValue $transaction 'public_collection_version_before' ([int](Get-PropertyValue $publicCollectionBefore 'version'))
             Update-TransactionState $transaction 'collection_publish_intent'
-            Invoke-FigshareRequest -Method POST -Uri "$apiRoot/account/collections/$collectionId/publish" -Label 'publish appended Indonesian collection version' -AllowedStatus @(201) | Out-Null
+            Invoke-FigshareRequest -Method POST -Uri "$apiRoot/account/collections/$collectionId/publish" -Label 'publish appended Indonesian collection version' -ExpectJson $false -AllowedStatus @(201) | Out-Null
             $deadline = [DateTimeOffset]::UtcNow.AddSeconds(60)
             do {
                 $publicCollectionArticles = @(Get-AllCollectionArticles $false)

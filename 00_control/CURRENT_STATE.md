@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 
-Status: active production. Source admission and composite route selection are closed. GitHub reinstated the account on 2026-08-22. A bounded `ls-remote` succeeded; remote `main` at `475e2d24acb4d126505b06f9ce3a36d70792ad93` was proven an ancestor of the local lane; one authorized push advanced the existing repository to `2840ff7d1ce9d085dfa2af35eec830927eaaf0ea`; `ls-remote` then matched that commit and anonymous raw Unit 015 readback returned HTTP 200. The Units 001–013 reader/backend is complete, structurally and independently reviewed, deterministic, visually/browser verified, and packaged behind an independently passing eight-file Zenodo gate. Units 014–017 are independently source-frozen. Every earlier local reader remains byte-frozen. The next source cursor is Lecture 18. The immediate preservation boundary is the new Unit 016–017 GitHub commit plus one exact Zenodo concept and one reader-first work-level Figshare item; no Zenodo/Figshare mutation is claimed until public anonymous byte readback is recorded. After all 30 Roberts lectures, the selected Fomberg lines 31–4185 and exact original closure follow; see `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. GitHub reinstated the account on 2026-08-22. The exact Unit 016–017/release boundary is public at commit `d4694835a6cf6bc12a46973efdbb263fead9182a`, tree `7156c0bef02846ffc98e70d3caf1db3d79edef86`; anonymous raw Unit 017, release-manifest, Unit 001–013 HTML, and Pages bytes all match local SHA-256 values. The Units 001–013 reader/backend is also published and anonymously byte-verified on Zenodo (`10.5281/zenodo.22061490`, concept `10.5281/zenodo.22061489`, eight files) and Figshare (`10.6084/m9.figshare.33314982.v1`, project `280296`, collection `10.6084/m9.figshare.c.8668413.v35`, seven reader-first files). The PDF is first on Figshare; the bulky QA/provenance ZIP remains on Zenodo only. Units 014–017 are independently source-frozen. Every earlier local reader remains byte-frozen. The next source cursor is Lecture 18. After all 30 Roberts lectures, the selected Fomberg lines 31–4185 and exact original closure follow; see `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -44,7 +44,7 @@ The 109 stable IDs cover 68 semantic blocks. All 14 exercises have complete solu
 
 ## Current production
 
-### Verified cumulative Units 001–013 preservation candidate
+### Published cumulative Units 001–013 preservation boundary
 
 - Source span: Roberts `Notes.tex:134–3046` (Lectures 1–13).
 - HTML: 1,824,804 bytes; SHA-256 `be1473ab5cb8eff26341e554179661775a12cec5784a8ebf3f9c2f3f0633cb71`.
@@ -57,7 +57,7 @@ The 109 stable IDs cover 68 semantic blocks. All 14 exercises have complete solu
 - Backend: 1,762 canonical records in 11 JSONL files, 1,540,725 bytes, validator bundle SHA-256 `bb8512f56a8bbcf1283ae10ab69a9a7ecebb1bd39c425c1c021b5b848a1b2910`.
 - Two direct HTML builds are byte-identical. The frozen builder's two PDF builds compare hashes fail-closed; final recovery did not rebuild or remark the PDF. Both validators pass independently.
 - All 138 PDF pages and the HTML at 1280 x 720 and 390 x 844 passed visual inspection. The desktop body is centered at 928 px; mobile document overflow is zero and all 54 wide formulas scroll locally; browser warnings/errors are zero. All 24 PDF fonts are embedded, subset, and ToUnicode. PDF remains secondary and intentionally untagged.
-- An authenticated exact-title Zenodo check found no existing Algebraic Topology/Topologi Aljabar deposition. The release package now contains exactly eight files and passes its fixed semantic allowlists, decompressed-entry hashes, reader/QA/backend bindings, two-build ZIP byte check, credential/path scans, and atomic promotion verifier. Frozen package hashes: source/backend ZIP `cbc60263dd30d7b392702a7d9463b62f5cc60506d58d3029fbd36d71b8644dd5`; QA/provenance ZIP `a6dd37e925487c9c622e0a02ff051ab0d1b4f5aed4c21364ea72b70273955827`; release manifest `0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc`. No draft or duplicate record has yet been created.
+- The release package contains exactly eight files and passes fixed semantic allowlists, decompressed-entry hashes, reader/QA/backend bindings, two-build ZIP byte comparison, credential/path scans, and atomic promotion verification. Frozen package hashes: source/backend ZIP `cbc60263dd30d7b392702a7d9463b62f5cc60506d58d3029fbd36d71b8644dd5`; QA/provenance ZIP `a6dd37e925487c9c622e0a02ff051ab0d1b4f5aed4c21364ea72b70273955827`; release manifest `0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc`. It is public at Zenodo record `22061490`, DOI `10.5281/zenodo.22061490`, concept DOI `10.5281/zenodo.22061489`; the exact eight public files were anonymously downloaded and SHA-256 verified. Its compact seven-file reader-first mirror is public at Figshare article `33314982`, DOI `10.6084/m9.figshare.33314982.v1`, project `280296`, and Indonesian collection version `10.6084/m9.figshare.c.8668413.v35`; every Figshare file also passed anonymous byte readback.
 
 ### Verified cumulative Units 001–005 release candidate
 
@@ -137,9 +137,8 @@ Publication was attempted at 2026-08-22T09:00:00+02:00 from local commit `849873
 - Repository boundary: commit `365dff08d41d6a78a8e712504c9f871b6b386094`, tree `f1284946e6622e80a16c90daaabc210f7d99f6ed`, Pages run `32554998308`, job `96987657938`, deployment `6033695000`, success status `17153629829`.
 - Publication receipt: `PUBLICATION_RECEIPT_UNITS_001_004.json`, 18,957 bytes, SHA-256 `3dc601b8ba540bcafee21127535af879506880d6c8f349738d59b9e1168a2e8a`. Anonymous raw readback matched all 33 files in the release commit; all four Pages readers matched their frozen local bytes.
 
-1. Complete the verified Units 001–013 Zenodo/Figshare publication transaction and anonymous byte readback, then continue contiguously from line 3482 and extend the next cumulative reader/backend at a coherent boundary.
-2. Commit and push the exact Unit 016–017/release boundary to the restored existing GitHub repository, then anonymously byte-verify its remote commit and release surfaces.
-3. After all 30 Roberts lectures, admit and translate Fomberg `algebraic_topology.tex:31–4185`, then create the exact separately identified proof/mastery/lab/capstone closure and 14-unit route view.
+1. Continue contiguously from `Notes.tex:3482` (Lecture 18) and extend the next cumulative reader/backend at a coherent boundary; do not repeat the closed GitHub/Zenodo/Figshare Unit 001–013 preservation transaction.
+2. After all 30 Roberts lectures, admit and translate Fomberg `algebraic_topology.tex:31–4185`, then create the exact separately identified proof/mastery/lab/capstone closure and 14-unit route view.
 
 ## Non-overlap boundary
 

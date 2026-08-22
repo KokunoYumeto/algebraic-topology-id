@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "verified_at_utc": "2026-08-22T19:21:47.4817345Z",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "commit": "d4694835a6cf6bc12a46973efdbb263fead9182a",
+  "tree": "7156c0bef02846ffc98e70d3caf1db3d79edef86",
+  "remote_head": "d4694835a6cf6bc12a46973efdbb263fead9182a",
+  "source_cursor": "Notes.tex:3482",
+  "translated_source_span": "Notes.tex:134-3481",
+  "translated_units": 17,
+  "cumulative_reader_units": 13,
+  "raw_readback": [
+    {
+      "path": "source/id-ID/units/unit-017-lecture-017.md",
+      "status": 200,
+      "bytes": 29921,
+      "sha256": "713e8b44b22620d9dd0531e19316932a1f18b1109fea80d7787cad218e4e45f9"
+    },
+    {
+      "path": "release/zenodo-units-001-013/artifacts/release-manifest.json",
+      "status": 200,
+      "bytes": 19383,
+      "sha256": "0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc"
+    },
+    {
+      "path": "output/html/units-001-013/index.html",
+      "status": 200,
+      "bytes": 1824804,
+      "sha256": "be1473ab5cb8eff26341e554179661775a12cec5784a8ebf3f9c2f3f0633cb71"
+    }
+  ],
+  "pages": {
+    "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-013/",
+    "status": 200,
+    "bytes": 1824804,
+    "sha256": "be1473ab5cb8eff26341e554179661775a12cec5784a8ebf3f9c2f3f0633cb71",
+    "verified": true
+  },
+  "credential_material_persisted": false
+}

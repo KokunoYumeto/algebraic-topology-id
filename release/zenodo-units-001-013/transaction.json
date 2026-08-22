@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "release_id": "o012-roberts-id-units-001-013-v0.13.0",
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–13",
+  "version": "0.13.0",
+  "metadata_sha256": "02c2e179e8d47da9890df068737116707065c448a3401708bc5025461dfde6a3",
+  "manifest_sha256": "0a927209212615d196d084af825f2c81dc0941fc720c361713ddfa81a97964dc",
+  "deposition_id": "22061490",
+  "concept_key": "22061489",
+  "creation_mode": "new_concept",
+  "state": "published_and_anonymously_verified",
+  "updated_at_utc": "2026-08-22T19:28:28.0409649+00:00",
+  "record_id": "22061490",
+  "doi": "10.5281/zenodo.22061490",
+  "concept_doi": "10.5281/zenodo.22061489",
+  "receipt_sha256": "8406bab6cfd5b5266a74de0870bfcc6ac7fec0111cc40f7a387a1ad85b892fb8"
+}
