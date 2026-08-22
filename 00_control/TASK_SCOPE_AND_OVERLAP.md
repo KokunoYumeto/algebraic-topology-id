@@ -1,6 +1,6 @@
 # Task scope and overlap check
 
-Checked: 2026-08-21 (Europe/Berlin)
+Checked: 2026-08-22 (Europe/Berlin)
 
 Current Codex task: `01a01f48-fcc8-7b22-a40b-17cbbb7ac45e`
 
@@ -20,3 +20,5 @@ The earlier delegation correctly supplied the O012 role and candidate leads, but
 - The curriculum coordinator (`01a01ec1-e685-70d0-b022-211396334723`) may consume frozen read-only handoffs and update the hub, but must not translate, build, mutate, or publish this corpus on this lane’s behalf.
 
 Conclusion: no duplicate O012 production session was found. Continue only in the task-local lane above.
+
+The coordinator still treats final O012 curriculum admission as conditional. That does not create a second corpus owner: this task completes the independent Roberts edition, while the coordinator separately decides whether the curriculum uses Roberts plus the required original companion. Edition progress is not curriculum-selection evidence.

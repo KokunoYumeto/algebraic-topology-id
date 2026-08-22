@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Validate the locale-neutral Units 001-003 interoperability backend.
+"""Validate the locale-neutral Units 001-004 interoperability backend.
 
 The validator is deliberately self-contained and offline.  It checks canonical
 JSONL serialization, referential integrity, source-span hashes, artifact hashes,
-the two historical manifests, a staged Units 001-003 manifest, and complete
+the historical manifests, an optional staged Units 001-004 manifest, and complete
 mastery linkage.
 """
 
@@ -141,13 +141,15 @@ SOURCE_FILES = {
     "source/id-ID/reader-unit-001.md": "c80b51c22a2fa7ea116201028b78d5f8d708ef4d8355d34092ac7a9c88415e15",
     "source/id-ID/units/unit-002-lecture-002.md": "4d2acc43557db9b3c419ee177545d285b9fcf50b2aa2dd3b2c6c44182f3a6a01",
     "source/id-ID/units/unit-003-lecture-003.md": "993e5941895a9b6f4b197b4c236f5a4990f6ae621e2bb7911353b28a5e1abffd",
+    "source/id-ID/units/unit-004-lecture-004.md": "826fcb368275cdad02f72a5cec951fc8466ba68b09ca0139d72c81a4c5591fea",
 }
 SOURCE_LINE_COUNTS = {
     "source/id-ID/reader-unit-001.md": 225,
     "source/id-ID/units/unit-002-lecture-002.md": 674,
     "source/id-ID/units/unit-003-lecture-003.md": 618,
+    "source/id-ID/units/unit-004-lecture-004.md": 632,
 }
-EXPECTED_SOURCE_ID_COUNT = 109
+EXPECTED_SOURCE_ID_COUNT = 142
 ARTIFACT_MANIFESTS = {
     "output/ARTIFACT_MANIFEST.csv": {
         "required": True,
@@ -170,9 +172,18 @@ ARTIFACT_MANIFESTS = {
             "output/pdf/topologi-aljabar-unit-001-003-id.pdf",
         },
     },
+    "output/ARTIFACT_MANIFEST_UNITS_001_004.csv": {
+        "required": True,
+        "outputs": {
+            "output/html/units-001-004/index.html",
+            "output/pdf/topologi-aljabar-unit-001-004-id.pdf",
+        },
+    },
 }
 EXPECTED_UNIT3_ADVERSE_IDS = {f"O012-ADV-{number:04d}" for number in range(21, 35)}
 EXPECTED_UNIT3_REFLOW_IDS = {f"O012-ADV-{number:04d}" for number in range(30, 34)}
+EXPECTED_UNIT4_ADVERSE_IDS = {f"O012-ADV-{number:04d}" for number in range(35, 54)}
+EXPECTED_UNIT4_REFLOW_IDS = {"O012-ADV-0038"}
 
 
 class ValidationError(Exception):
@@ -547,22 +558,25 @@ def validate_hierarchy_and_mastery(records: list[dict[str, Any]], by_id: dict[st
         fail("every answer must answer exactly one formal question")
 
 
-def validate_unit3_boundary(records: list[dict[str, Any]], by_id: dict[str, dict[str, Any]]) -> None:
+def validate_unit4_boundary(records: list[dict[str, Any]], by_id: dict[str, dict[str, Any]]) -> None:
     edition = by_id["edition:roberts-at-2019-b947ad2"]
     expected_roots = {
         "unit:o012-rbt-u001",
         "unit:o012-rbt-u002",
         "unit:o012-rbt-u003",
+        "unit:o012-rbt-u004",
     }
-    if edition["source_line_start"] != 134 or edition["source_line_end"] != 877:
-        fail("Roberts edition coverage must be the contiguous admitted range Notes.tex:134-877")
+    if edition["source_line_start"] != 134 or edition["source_line_end"] != 1131:
+        fail("Roberts edition coverage must be the contiguous admitted range Notes.tex:134-1131")
     derivative_roots = edition.get("local_derivative_unit_ids")
     if not isinstance(derivative_roots, list) or set(derivative_roots) != expected_roots:
-        fail("Roberts edition must enumerate the three local derivative reader roots")
+        fail("Roberts edition must enumerate the four local derivative reader roots")
 
     expected_source_assets = {
+        "asset:o012-u001-source-markdown": "source/id-ID/reader-unit-001.md",
         "asset:o012-u002-source-markdown": "source/id-ID/units/unit-002-lecture-002.md",
         "asset:o012-u003-source-markdown": "source/id-ID/units/unit-003-lecture-003.md",
+        "asset:o012-u004-source-markdown": "source/id-ID/units/unit-004-lecture-004.md",
     }
     for asset_id, expected_path in expected_source_assets.items():
         asset = by_id.get(asset_id)
@@ -584,6 +598,163 @@ def validate_unit3_boundary(records: list[dict[str, Any]], by_id: dict[str, dict
     }
     if reflow_ids != EXPECTED_UNIT3_REFLOW_IDS:
         fail("Unit 003 structural reflows must be exactly O012-ADV-0030 through O012-ADV-0033")
+
+    unit4_corrections = [
+        record
+        for record in records
+        if record["entity_type"] == "correction" and record["unit_id"] == "unit:o012-rbt-u004"
+    ]
+    adverse_ids = {record.get("adverse_ledger_id") for record in unit4_corrections}
+    if adverse_ids != EXPECTED_UNIT4_ADVERSE_IDS or len(unit4_corrections) != len(EXPECTED_UNIT4_ADVERSE_IDS):
+        fail("Unit 004 corrections must map one-to-one to O012-ADV-0035 through O012-ADV-0053")
+    reflow_ids = {
+        record["adverse_ledger_id"]
+        for record in unit4_corrections
+        if record["correction_type"] == "structural_adaptation"
+    }
+    if reflow_ids != EXPECTED_UNIT4_REFLOW_IDS:
+        fail("Unit 004 structural reflow must be exactly O012-ADV-0038")
+
+    unit4_path = "source/id-ID/units/unit-004-lecture-004.md"
+    expected_upstream_locator = {
+        "commit_sha": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+        "line_end": 1131,
+        "line_start": 878,
+        "path": "Notes.tex",
+        "precision": "unit_range_only",
+    }
+    expected_original_locator = {
+        "kind": "edition_original",
+        "path": unit4_path,
+        "precision": "exact_target_span",
+    }
+    unit4_segments = [
+        record
+        for record in records
+        if record["entity_type"] == "segment" and record["target_locator"]["path"] == unit4_path
+    ]
+    if len(unit4_segments) != 33:
+        fail(f"Unit 004 must have 33 stable-id segments; found {len(unit4_segments)}")
+    for segment in unit4_segments:
+        expected = (
+            expected_original_locator
+            if segment["provenance_relation"] == "edition_original"
+            else expected_upstream_locator
+        )
+        if segment["source_locator"] != expected:
+            fail(f"{segment['id']}: malformed Unit 004 source authority locator")
+
+    cumulative_rights_id = "rights:o012-units-001-004-composite-cc-by-4.0"
+    for authority_id in ("program:o012-id", "course:o012-d60"):
+        if by_id[authority_id]["rights_component_id"] != cumulative_rights_id:
+            fail(f"{authority_id}: must point at the cumulative Units 001-004 rights record")
+    cumulative_rights = by_id.get(cumulative_rights_id)
+    if cumulative_rights is None or set(cumulative_rights["component_scope"]) != expected_roots:
+        fail("cumulative Units 001-004 rights scope is missing or incomplete")
+
+    manifest_id = "artifact:o012-units-001-004-manifest"
+    source_qa = "qa:o012-u004-source-integrity"
+    math_qa = "qa:o012-u004-math-review"
+    language_qa = "qa:o012-u004-language-review"
+    build_qa = "qa:o012-units-001-004-build"
+    accessibility_qa = "qa:o012-units-001-004-accessibility"
+    visual_qa = "qa:o012-units-001-004-visual"
+    expected_artifacts = {
+        "artifact:o012-u004-independent-review": {
+            "bytes": 3031,
+            "manifest_artifact_id": None,
+            "path": "qa/UNIT_004_INDEPENDENT_REVIEW.md",
+            "qa_event_ids": {language_qa, math_qa, source_qa},
+            "sha256": "ac993a10e22738197775ae5c3f4e72948983c4e99ff602a52943b40ed417b6f9",
+        },
+        "artifact:o012-units-001-004-html": {
+            "bytes": 494732,
+            "manifest_artifact_id": manifest_id,
+            "path": "output/html/units-001-004/index.html",
+            "qa_event_ids": {accessibility_qa, build_qa, visual_qa},
+            "sha256": "8c8f5e1ad8172a2d97e3931fc3b4f2a3aa7f9e8a709260a27103f7eca0f1357d",
+        },
+        manifest_id: {
+            "bytes": 247,
+            "manifest_artifact_id": None,
+            "path": "output/ARTIFACT_MANIFEST_UNITS_001_004.csv",
+            "qa_event_ids": {build_qa},
+            "sha256": "4c8bf407e426feb8db92308c4b28bdbbc0738416a85a13539ef7915e4c1aad83",
+        },
+        "artifact:o012-units-001-004-pdf": {
+            "bytes": 539006,
+            "manifest_artifact_id": manifest_id,
+            "path": "output/pdf/topologi-aljabar-unit-001-004-id.pdf",
+            "qa_event_ids": {accessibility_qa, build_qa, visual_qa},
+            "sha256": "5e92c4c6ed60bca9f2f4d362d4c48b4f01aa156b330e2adacd1bf88dd7de9e87",
+        },
+        "artifact:o012-units-001-004-qa-receipt": {
+            "bytes": 4478,
+            "manifest_artifact_id": None,
+            "path": "qa/UNITS_001_004_QA.json",
+            "qa_event_ids": {language_qa, math_qa, source_qa, accessibility_qa, build_qa, visual_qa},
+            "sha256": "1670bbe2377712c9f96b9a68cdb75589ae461512f77cea7ad0c9290193724bd5",
+        },
+        "artifact:o012-units-001-004-qa-text": {
+            "bytes": 100684,
+            "manifest_artifact_id": None,
+            "path": "qa/units-001-004-extracted.txt",
+            "qa_event_ids": {math_qa, build_qa},
+            "sha256": "3d27bc1ab5a780bffce12d5951623b60929069238a210961740234502e71bf35",
+        },
+        "artifact:o012-units-001-004-visual-receipt": {
+            "bytes": 2257,
+            "manifest_artifact_id": None,
+            "path": "qa/UNITS_001_004_VISUAL_QA.md",
+            "qa_event_ids": {accessibility_qa, visual_qa},
+            "sha256": "74e609e94ea47b89db223c21e12cae682048f0a60d8780dae96d5b0164f2c5ca",
+        },
+    }
+    unit4_artifact_ids = {
+        record["id"]
+        for record in records
+        if record["entity_type"] == "artifact" and record["unit_id"] == "unit:o012-rbt-u004"
+    }
+    if unit4_artifact_ids != set(expected_artifacts):
+        fail(
+            "Unit 004 final artifact inventory differs: "
+            f"missing={sorted(set(expected_artifacts)-unit4_artifact_ids)}, "
+            f"extra={sorted(unit4_artifact_ids-set(expected_artifacts))}"
+        )
+    for artifact_id, expected in expected_artifacts.items():
+        artifact = by_id[artifact_id]
+        for field in ("bytes", "manifest_artifact_id", "path", "sha256"):
+            if artifact[field] != expected[field]:
+                fail(f"{artifact_id}: final boundary {field} mismatch")
+        if set(artifact["qa_event_ids"]) != expected["qa_event_ids"]:
+            fail(f"{artifact_id}: final boundary QA linkage mismatch")
+        if artifact["rights_component_id"] != cumulative_rights_id:
+            fail(f"{artifact_id}: must use cumulative Units 001-004 rights")
+
+    expected_qa = {
+        source_qa: ("source", {"artifact:o012-u004-independent-review", "artifact:o012-units-001-004-qa-receipt"}),
+        math_qa: ("math", {"artifact:o012-u004-independent-review", "artifact:o012-units-001-004-qa-receipt", "artifact:o012-units-001-004-qa-text"}),
+        language_qa: ("language", {"artifact:o012-u004-independent-review"}),
+        build_qa: ("build", {"artifact:o012-units-001-004-html", manifest_id, "artifact:o012-units-001-004-pdf", "artifact:o012-units-001-004-qa-receipt", "artifact:o012-units-001-004-qa-text"}),
+        accessibility_qa: ("accessibility", {"artifact:o012-units-001-004-html", "artifact:o012-units-001-004-qa-receipt", "artifact:o012-units-001-004-visual-receipt"}),
+        visual_qa: ("visual", {"artifact:o012-units-001-004-html", "artifact:o012-units-001-004-pdf", "artifact:o012-units-001-004-visual-receipt"}),
+    }
+    unit4_qa_ids = {
+        record["id"]
+        for record in records
+        if record["entity_type"] == "qa_event" and record["unit_id"] == "unit:o012-rbt-u004"
+    }
+    if unit4_qa_ids != set(expected_qa):
+        fail(
+            "Unit 004 final QA-event inventory differs: "
+            f"missing={sorted(set(expected_qa)-unit4_qa_ids)}, extra={sorted(unit4_qa_ids-set(expected_qa))}"
+        )
+    for qa_id, (qa_type, witnesses) in expected_qa.items():
+        qa_event = by_id[qa_id]
+        if qa_event["qa_type"] != qa_type or qa_event["result"] != "passed":
+            fail(f"{qa_id}: final QA result/type mismatch")
+        if set(qa_event["witness_artifact_ids"]) != witnesses:
+            fail(f"{qa_id}: final witness inventory mismatch")
 
 
 def validate_artifact_manifests(records: list[dict[str, Any]], lane_root: Path) -> None:
@@ -664,7 +835,7 @@ def main() -> int:
         validate_references(records, by_id)
         validate_files_and_spans(records, by_id, lane_root)
         validate_hierarchy_and_mastery(records, by_id)
-        validate_unit3_boundary(records, by_id)
+        validate_unit4_boundary(records, by_id)
         validate_artifact_manifests(records, lane_root)
         summarize(records, backend_dir)
     except (OSError, ValidationError) as exc:

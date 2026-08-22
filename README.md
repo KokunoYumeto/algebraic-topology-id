@@ -4,13 +4,14 @@ Edisi Bahasa Indonesia yang sedang diproduksi dari *Algebraic Topology* karya Da
 
 ## Baca
 
-- [Pembaca HTML kumulatif Unit 1–3](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-003/) — permukaan utama terbaru yang semantik, mandiri, dan memakai MathML asli.
-- [PDF kumulatif Unit 1–3](output/pdf/topologi-aljabar-unit-001-003-id.pdf) — permukaan sekunder A4, 25 halaman.
+- [Pembaca HTML kumulatif Unit 1–4](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-004/) — permukaan utama terbaru yang semantik, mandiri, dan memakai MathML asli.
+- [PDF kumulatif Unit 1–4](output/pdf/topologi-aljabar-unit-001-004-id.pdf) — permukaan sekunder A4, 35 halaman.
+- [Pembaca HTML kumulatif Unit 1–3](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-003/) dan [PDF Unit 1–3](output/pdf/topologi-aljabar-unit-001-003-id.pdf) tetap dipertahankan sebagai batas publikasi ketiga.
 - [Pembaca HTML kumulatif Unit 1–2](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-002/) dan [PDF Unit 1–2](output/pdf/topologi-aljabar-unit-001-002-id.pdf) tetap dipertahankan sebagai batas publikasi kedua.
 - [Pembaca HTML Unit 1](https://kokunoyumeto.github.io/algebraic-topology-id/) dan [PDF Unit 1](output/pdf/topologi-aljabar-unit-001-id.pdf) tetap dipertahankan sebagai batas publikasi pertama.
-- Sumber semantik: [Unit 1](source/id-ID/reader-unit-001.md), [Unit 2](source/id-ID/units/unit-002-lecture-002.md), dan [Unit 3](source/id-ID/units/unit-003-lecture-003.md).
+- Sumber semantik: [Unit 1](source/id-ID/reader-unit-001.md), [Unit 2](source/id-ID/units/unit-002-lecture-002.md), [Unit 3](source/id-ID/units/unit-003-lecture-003.md), dan [Unit 4](source/id-ID/units/unit-004-lecture-004.md).
 
-Unit 1–3 mencakup `Notes.tex` baris 134–877: pengantar topologi aljabar, ruang topologis, basis lingkungan, kontinuitas, homeomorfisme, topologi awal dan akhir, ruang hasil bagi, gabungan saling lepas, perekatan, kontraktibilitas, komponen terhubung, homotopi, funktor, dan kategori homotopi. Keempat belas latihan mempunyai solusi lengkap; pertanyaan sumber juga dijawab. Pendamping penguasaan memuat bukti sifat universal, lema perekatan, penciutan radial, funktorialitas, dan pemeriksaan konsep.
+Unit 1–4 mencakup `Notes.tex` baris 134–1131: pengantar topologi aljabar, ruang topologis, topologi awal dan akhir, perekatan, keterhubungan, homotopi, funktor dan kategori homotopi, transformasi natural, ruang SLPC, ruang bertitik, serta pengantar ruang penutup. Kedelapan belas latihan mempunyai solusi lengkap; kedua pertanyaan sumber juga dijawab. Pendamping penguasaan memuat bukti sifat universal, lema perekatan, penciutan radial, funktorialitas, argumen kurva sinus topolog, dan komposisi pemetaan penutup.
 
 ## Backend modular
 
@@ -31,6 +32,8 @@ pwsh -NoProfile -File scripts/build-units-001-002.ps1
 python scripts/qa-units-001-002.py
 pwsh -NoProfile -File scripts/build-units-001-003.ps1
 python scripts/qa-units-001-003.py
+pwsh -NoProfile -File scripts/build-units-001-004.ps1
+python scripts/qa-units-001-004.py
 python scripts/validate-backend.py
 ```
 
@@ -48,5 +51,7 @@ Build PDF ganda dengan epoch tetap menghasilkan byte identik. HTML memakai CSS t
 - [Rereview independen Unit 2](qa/UNIT_002_INDEPENDENT_REVIEW.md)
 - [QA kumulatif Unit 1–3](qa/UNITS_001_003_QA.json)
 - [Rereview independen Unit 3](qa/UNIT_003_INDEPENDENT_REVIEW.md)
+- [QA kumulatif Unit 1–4](qa/UNITS_001_004_QA.json)
+- [Rereview independen Unit 4](qa/UNIT_004_INDEPENDENT_REVIEW.md)
 
 Pembaca lengkap masih dalam produksi. Inti Roberts akan diterjemahkan secara berurutan; materi homologi/metode seluler dan lapisan penguasaan yang tidak tersedia dalam inti akan ditulis tersendiri dan ditandai sebagai materi edisi.

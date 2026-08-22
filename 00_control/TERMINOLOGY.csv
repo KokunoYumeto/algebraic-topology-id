@@ -78,3 +78,19 @@ O012-TERM-0076,subcategory inclusion,inklusi subkategori,category_theory,admitte
 O012-TERM-0077,homotopy class,kelas homotopi,global,admitted,
 O012-TERM-0078,homotopy category,kategori homotopi,global,admitted,
 O012-TERM-0079,descends or factors through,memfaktor melalui,category_theory,admitted,"turun melalui is retained in explanatory prose"
+O012-TERM-0080,preserve coproducts,melestarikan koproduk,category_theory,admitted,
+O012-TERM-0081,coproduct summand,suku koproduk,category_theory,admitted,
+O012-TERM-0082,topologist's sine curve,kurva sinus topolog,point_set_topology,admitted,
+O012-TERM-0083,natural transformation,transformasi natural,category_theory,admitted,
+O012-TERM-0084,component of a natural transformation,komponen transformasi natural,category_theory,admitted,"komponen when the context is unambiguous"
+O012-TERM-0085,natural isomorphism,isomorfisme natural,category_theory,admitted,
+O012-TERM-0086,semilocally path connected,terhubung lintasan semilokal,point_set_topology,admitted,"SLPC retained as the source abbreviation"
+O012-TERM-0087,pointed homotopy,homotopi bertitik,homotopy_theory,admitted,
+O012-TERM-0088,covering map,pemetaan penutup,covering_spaces,admitted,
+O012-TERM-0089,evenly covered,tertutup secara merata,covering_spaces,admitted,
+O012-TERM-0090,fibre,serat,covering_spaces,admitted,"use British-source fibre and Indonesian serat consistently"
+O012-TERM-0091,base space,ruang dasar,covering_spaces,admitted,
+O012-TERM-0092,wedge,baji,point_set_topology,admitted,"write S^1 vee S^1 explicitly where useful"
+O012-TERM-0093,quotient map,pemetaan hasil bagi,point_set_topology,admitted,
+O012-TERM-0094,branch cut,potongan cabang,complex_analysis,admitted,
+O012-TERM-0095,locally convex topological vector space,ruang vektor topologis yang konveks lokal,functional_analysis,admitted,

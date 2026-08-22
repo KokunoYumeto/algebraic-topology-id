@@ -38,6 +38,7 @@ jobs:
               "output/html/index.html": (85580, "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8"),
               "output/html/units-001-002/index.html": (220035, "d3b5cbfaa3511823821ecf9ba26a4eaec7c84d937417927d11bde3f66abc9f54"),
               "output/html/units-001-003/index.html": (359397, "33281cc46faa3d560c968b657526cd914786c991d1475b5563911a265bd316c1"),
+              "output/html/units-001-004/index.html": (494732, "8c8f5e1ad8172a2d97e3931fc3b4f2a3aa7f9e8a709260a27103f7eca0f1357d"),
           }
           for name, (size, digest) in expected.items():
               path = Path(name)
@@ -45,8 +46,8 @@ jobs:
               assert len(data) == size, (name, len(data), size)
               assert sha256(data).hexdigest() == digest, name
           actual = sorted(path.relative_to(Path("output/html")).as_posix() for path in Path("output/html").rglob("*") if path.is_file())
-          assert actual == ["index.html", "units-001-002/index.html", "units-001-003/index.html"], actual
-          print("Frozen Unit 1 and cumulative Unit 1-2 and Unit 1-3 HTML verified")
+          assert actual == ["index.html", "units-001-002/index.html", "units-001-003/index.html", "units-001-004/index.html"], actual
+          print("Frozen Unit 1 and cumulative Unit 1-2, Unit 1-3, and Unit 1-4 HTML verified")
           PY
 
       - name: Configure Pages
