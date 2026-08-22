@@ -2,7 +2,7 @@
 
 Updated: 2026-08-22
 
-Status: active production. Source admission is closed. Units 001–003 remain published and anonymously byte-verified. Unit 004 is translated, independently rereviewed, built, visually/browser checked, and backend-complete; its verified publication/readback transaction is the current boundary. Every earlier reader remains byte-frozen. Production continues at Lecture 5 after publication.
+Status: active production. Source admission is closed. Units 001–004 are translated, independently rereviewed, built, visually/browser checked, backend-complete, published, and anonymously byte-verified. Every earlier reader remains byte-frozen. Production continues at Lecture 5.
 
 ## Frozen cumulative Units 001–002 boundary
 
@@ -56,10 +56,12 @@ The 109 stable IDs cover 68 semantic blocks. All 14 exercises have complete solu
 - Visual/browser receipt: 2,257 bytes, SHA-256 `74e609e94ea47b89db223c21e12cae682048f0a60d8780dae96d5b0164f2c5ca`.
 - Structural closure: 142 stable IDs, 88 fenced semantic blocks, 18 exercise-solution pairs, two question-answer pairs, 1,384 native MathML nodes, and 54 resolving local fragment links.
 - Backend: 638 canonical records in 11 JSONL files; bundle SHA-256 `590d28189a06cb46b47151de5359b245914a0a51f172e5e0cba6595f29712589`.
+- Public reader: `https://kokunoyumeto.github.io/algebraic-topology-id/units-001-004/`; anonymous HTTP readback is exactly 494,732 bytes with the frozen HTML SHA-256. The preserved Unit 1, Units 1–2, and Units 1–3 readers also remain exact.
+- Repository boundary: commit `365dff08d41d6a78a8e712504c9f871b6b386094`, tree `f1284946e6622e80a16c90daaabc210f7d99f6ed`, Pages run `32554998308`, job `96987657938`, deployment `6033695000`, success status `17153629829`.
+- Publication receipt: `PUBLICATION_RECEIPT_UNITS_001_004.json`, 18,957 bytes, SHA-256 `3dc601b8ba540bcafee21127535af879506880d6c8f349738d59b9e1168a2e8a`. Anonymous raw readback matched all 33 files in the release commit; all four Pages readers matched their frozen local bytes.
 
-1. Publish and anonymously verify the cumulative Units 001–004 boundary without altering the three earlier readers.
-2. Continue contiguously from line 1132, the Lecture 5 marker; the proof of Proposition 4.3 begins at line 1134.
-3. Continue source order with the same source-ID/backend/build/QA/publication discipline; after the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
+1. Continue contiguously from line 1132, the Lecture 5 marker; the proof of Proposition 4.3 begins at line 1134.
+2. Continue source order with the same source-ID/backend/build/QA/publication discipline; after the Roberts core, write the separately identified homology/cellular bridge and solved mastery layer.
 
 ## Non-overlap boundary
 

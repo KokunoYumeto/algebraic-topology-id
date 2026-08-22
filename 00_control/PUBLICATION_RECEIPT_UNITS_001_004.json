@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0",
+  "status": "pass",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "release_commit": "365dff08d41d6a78a8e712504c9f871b6b386094",
+  "release_tree": "f1284946e6622e80a16c90daaabc210f7d99f6ed",
+  "parent_commit": "f93df9307de6aacc4d7ac4346e5176ea5d9762ba",
+  "remote_main": "365dff08d41d6a78a8e712504c9f871b6b386094",
+  "workflow": {
+    "run_id": 32554998308,
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32554998308",
+    "conclusion": "success",
+    "job_id": 96987657938,
+    "job_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32554998308/job/96987657938",
+    "deployment_id": 6033695000,
+    "deployment_status_id": 17153629829,
+    "deployment_state": "success"
+  },
+  "source_boundary": {
+    "authority_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "source_path": "Notes.tex",
+    "line_start": 134,
+    "line_end": 1131,
+    "next_line": 1132,
+    "stable_ids": 142
+  },
+  "backend": {
+    "records": 638,
+    "jsonl_files": 11,
+    "bundle_sha256": "590d28189a06cb46b47151de5359b245914a0a51f172e5e0cba6595f29712589"
+  },
+  "raw_changed_files": {
+    "count": 33,
+    "all_match": true,
+    "files": [
+      {
+        "path": ".github/workflows/pages.yml",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/.github/workflows/pages.yml",
+        "bytes": 2146,
+        "sha256": "9bada33fc54dd84b03156ad3fda9161b4c15763d947de426bf2109424007917e",
+        "public_bytes": 2146,
+        "public_sha256": "9bada33fc54dd84b03156ad3fda9161b4c15763d947de426bf2109424007917e",
+        "match": true
+      },
+      {
+        "path": "00_control/ADVERSE_LEDGER.csv",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/00_control/ADVERSE_LEDGER.csv",
+        "bytes": 12413,
+        "sha256": "e5643bbf35542a605dbbd5735b2c4a83f492d81574a31bfe3f5d283b9f8900f6",
+        "public_bytes": 12413,
+        "public_sha256": "e5643bbf35542a605dbbd5735b2c4a83f492d81574a31bfe3f5d283b9f8900f6",
+        "match": true
+      },
+      {
+        "path": "00_control/BUILD.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/00_control/BUILD.md",
+        "bytes": 10007,
+        "sha256": "07d9da5e157a2af5b522664b7a2d859e71f9b3434640b7590ebd7b8d297a0eea",
+        "public_bytes": 10007,
+        "public_sha256": "07d9da5e157a2af5b522664b7a2d859e71f9b3434640b7590ebd7b8d297a0eea",
+        "match": true
+      },
+      {
+        "path": "00_control/CURRENT_GOAL_AND_WORKFLOW.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/00_control/CURRENT_GOAL_AND_WORKFLOW.md",
+        "bytes": 4956,
+        "sha256": "51bfe686bf34cc848b9cb43b4d8bdd2d32f6589a40b199c7d7bc5d969bb145f4",
+        "public_bytes": 4956,
+        "public_sha256": "51bfe686bf34cc848b9cb43b4d8bdd2d32f6589a40b199c7d7bc5d969bb145f4",
+        "match": true
+      },
+      {
+        "path": "00_control/CURRENT_STATE.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/00_control/CURRENT_STATE.md",
+        "bytes": 7957,
+        "sha256": "c921e3d6f3acf1f31498801f60f58ca528e9e5b46f91bcfc42a0cf6284ef406e",
+        "public_bytes": 7957,
+        "public_sha256": "c921e3d6f3acf1f31498801f60f58ca528e9e5b46f91bcfc42a0cf6284ef406e",
+        "match": true
+      },
+      {
+        "path": "00_control/CURSOR.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/00_control/CURSOR.json",
+        "bytes": 672,
+        "sha256": "071bc1c65f4eb5b00d2a83a6298d8facfff20b19a40187d979484d0e7e5fb300",
+        "public_bytes": 672,
+        "public_sha256": "071bc1c65f4eb5b00d2a83a6298d8facfff20b19a40187d979484d0e7e5fb300",
+        "match": true
+      },
+      {
+        "path": "00_control/SOURCE_DECISION.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/00_control/SOURCE_DECISION.md",
+        "bytes": 4781,
+        "sha256": "9db88c672c1b503ce25af37d5224309cfb2818b938669c5cce7459133b763133",
+        "public_bytes": 4781,
+        "public_sha256": "9db88c672c1b503ce25af37d5224309cfb2818b938669c5cce7459133b763133",
+        "match": true
+      },
+      {
+        "path": "00_control/TASK_SCOPE_AND_OVERLAP.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/00_control/TASK_SCOPE_AND_OVERLAP.md",
+        "bytes": 2283,
+        "sha256": "f68bc057ff709ff3e9eda16bb08749ea4729010bef93ded981b6613d1bc7c327",
+        "public_bytes": 2283,
+        "public_sha256": "f68bc057ff709ff3e9eda16bb08749ea4729010bef93ded981b6613d1bc7c327",
+        "match": true
+      },
+      {
+        "path": "00_control/TERMINOLOGY.csv",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/00_control/TERMINOLOGY.csv",
+        "bytes": 6930,
+        "sha256": "bb4d00b0185488bf1d182abb09941bdc53f3ba0cd9e55bca5065ef0e0505a462",
+        "public_bytes": 6930,
+        "public_sha256": "bb4d00b0185488bf1d182abb09941bdc53f3ba0cd9e55bca5065ef0e0505a462",
+        "match": true
+      },
+      {
+        "path": "README.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/README.md",
+        "bytes": 4144,
+        "sha256": "04a581297076a8029d1780c1694d7e0aa9bf3cd884d39f0d4a2d9293aa87091e",
+        "public_bytes": 4144,
+        "public_sha256": "04a581297076a8029d1780c1694d7e0aa9bf3cd884d39f0d4a2d9293aa87091e",
+        "match": true
+      },
+      {
+        "path": "backend/artifacts.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/artifacts.jsonl",
+        "bytes": 21949,
+        "sha256": "917f49ad87128b737344035b1e9b411dc0a19a503e07594aaf9206cd3636c3a8",
+        "public_bytes": 21949,
+        "public_sha256": "917f49ad87128b737344035b1e9b411dc0a19a503e07594aaf9206cd3636c3a8",
+        "match": true
+      },
+      {
+        "path": "backend/assets.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/assets.jsonl",
+        "bytes": 3077,
+        "sha256": "b05b7d25aa9f11f9393d522dfcffc06ba3f8857b056e16a911521fdea5a1899e",
+        "public_bytes": 3077,
+        "public_sha256": "b05b7d25aa9f11f9393d522dfcffc06ba3f8857b056e16a911521fdea5a1899e",
+        "match": true
+      },
+      {
+        "path": "backend/authority.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/authority.jsonl",
+        "bytes": 2406,
+        "sha256": "d1cccd0f73169296da9ef4ec78df832431517ddea2c51aa03362f3e6e7a101bf",
+        "public_bytes": 2406,
+        "public_sha256": "d1cccd0f73169296da9ef4ec78df832431517ddea2c51aa03362f3e6e7a101bf",
+        "match": true
+      },
+      {
+        "path": "backend/concepts.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/concepts.jsonl",
+        "bytes": 26970,
+        "sha256": "3f37cb8589809cd249e956534a062a727cc2bbc1821767172cd4983bb3275c5b",
+        "public_bytes": 26970,
+        "public_sha256": "3f37cb8589809cd249e956534a062a727cc2bbc1821767172cd4983bb3275c5b",
+        "match": true
+      },
+      {
+        "path": "backend/corrections.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/corrections.jsonl",
+        "bytes": 40896,
+        "sha256": "7c157c81eb7de5cb19dfe5433ea97e479a4af66018722ce896415212b95e6700",
+        "public_bytes": 40896,
+        "public_sha256": "7c157c81eb7de5cb19dfe5433ea97e479a4af66018722ce896415212b95e6700",
+        "match": true
+      },
+      {
+        "path": "backend/qa.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/qa.jsonl",
+        "bytes": 14999,
+        "sha256": "95633d5c9c04433e25e853e87cbc9084e37046727c714ea03a30e9abc134ac1f",
+        "public_bytes": 14999,
+        "public_sha256": "95633d5c9c04433e25e853e87cbc9084e37046727c714ea03a30e9abc134ac1f",
+        "match": true
+      },
+      {
+        "path": "backend/relations.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/relations.jsonl",
+        "bytes": 23623,
+        "sha256": "cc87fe387e74e87247720ef01b833150666f7ba41e65a12c7d7b8702211e486b",
+        "public_bytes": 23623,
+        "public_sha256": "cc87fe387e74e87247720ef01b833150666f7ba41e65a12c7d7b8702211e486b",
+        "match": true
+      },
+      {
+        "path": "backend/rights.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/rights.jsonl",
+        "bytes": 9651,
+        "sha256": "906c544fa2c354a0bed1abd1b7473895ab3c995526e1ec8de15808ed80f43fcf",
+        "public_bytes": 9651,
+        "public_sha256": "906c544fa2c354a0bed1abd1b7473895ab3c995526e1ec8de15808ed80f43fcf",
+        "match": true
+      },
+      {
+        "path": "backend/segments.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/segments.jsonl",
+        "bytes": 158924,
+        "sha256": "4bee1d37a8feac325223d6a05535c86042b7cb9eab2d67a985412e9c88e4ad09",
+        "public_bytes": 158924,
+        "public_sha256": "4bee1d37a8feac325223d6a05535c86042b7cb9eab2d67a985412e9c88e4ad09",
+        "match": true
+      },
+      {
+        "path": "backend/terms.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/terms.jsonl",
+        "bytes": 44475,
+        "sha256": "5217df3e3ab0f4c83878a9f7ad63918375460cddb19094d0e07391af6486455c",
+        "public_bytes": 44475,
+        "public_sha256": "5217df3e3ab0f4c83878a9f7ad63918375460cddb19094d0e07391af6486455c",
+        "match": true
+      },
+      {
+        "path": "backend/units.jsonl",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/backend/units.jsonl",
+        "bytes": 168614,
+        "sha256": "62924c8b7823c9a6b61eaf80398a19abb1160d2468aa194755c27d3fb6df1205",
+        "public_bytes": 168614,
+        "public_sha256": "62924c8b7823c9a6b61eaf80398a19abb1160d2468aa194755c27d3fb6df1205",
+        "match": true
+      },
+      {
+        "path": "output/ARTIFACT_MANIFEST_UNITS_001_004.csv",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/output/ARTIFACT_MANIFEST_UNITS_001_004.csv",
+        "bytes": 247,
+        "sha256": "4c8bf407e426feb8db92308c4b28bdbbc0738416a85a13539ef7915e4c1aad83",
+        "public_bytes": 247,
+        "public_sha256": "4c8bf407e426feb8db92308c4b28bdbbc0738416a85a13539ef7915e4c1aad83",
+        "match": true
+      },
+      {
+        "path": "output/html/units-001-004/index.html",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/output/html/units-001-004/index.html",
+        "bytes": 494732,
+        "sha256": "8c8f5e1ad8172a2d97e3931fc3b4f2a3aa7f9e8a709260a27103f7eca0f1357d",
+        "public_bytes": 494732,
+        "public_sha256": "8c8f5e1ad8172a2d97e3931fc3b4f2a3aa7f9e8a709260a27103f7eca0f1357d",
+        "match": true
+      },
+      {
+        "path": "output/pdf/topologi-aljabar-unit-001-004-id.pdf",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/output/pdf/topologi-aljabar-unit-001-004-id.pdf",
+        "bytes": 539006,
+        "sha256": "5e92c4c6ed60bca9f2f4d362d4c48b4f01aa156b330e2adacd1bf88dd7de9e87",
+        "public_bytes": 539006,
+        "public_sha256": "5e92c4c6ed60bca9f2f4d362d4c48b4f01aa156b330e2adacd1bf88dd7de9e87",
+        "match": true
+      },
+      {
+        "path": "qa/UNITS_001_004_QA.json",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/qa/UNITS_001_004_QA.json",
+        "bytes": 4478,
+        "sha256": "1670bbe2377712c9f96b9a68cdb75589ae461512f77cea7ad0c9290193724bd5",
+        "public_bytes": 4478,
+        "public_sha256": "1670bbe2377712c9f96b9a68cdb75589ae461512f77cea7ad0c9290193724bd5",
+        "match": true
+      },
+      {
+        "path": "qa/UNITS_001_004_VISUAL_QA.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/qa/UNITS_001_004_VISUAL_QA.md",
+        "bytes": 2257,
+        "sha256": "74e609e94ea47b89db223c21e12cae682048f0a60d8780dae96d5b0164f2c5ca",
+        "public_bytes": 2257,
+        "public_sha256": "74e609e94ea47b89db223c21e12cae682048f0a60d8780dae96d5b0164f2c5ca",
+        "match": true
+      },
+      {
+        "path": "qa/UNIT_004_INDEPENDENT_REVIEW.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/qa/UNIT_004_INDEPENDENT_REVIEW.md",
+        "bytes": 3031,
+        "sha256": "ac993a10e22738197775ae5c3f4e72948983c4e99ff602a52943b40ed417b6f9",
+        "public_bytes": 3031,
+        "public_sha256": "ac993a10e22738197775ae5c3f4e72948983c4e99ff602a52943b40ed417b6f9",
+        "match": true
+      },
+      {
+        "path": "qa/units-001-004-extracted.txt",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/qa/units-001-004-extracted.txt",
+        "bytes": 100684,
+        "sha256": "3d27bc1ab5a780bffce12d5951623b60929069238a210961740234502e71bf35",
+        "public_bytes": 100684,
+        "public_sha256": "3d27bc1ab5a780bffce12d5951623b60929069238a210961740234502e71bf35",
+        "match": true
+      },
+      {
+        "path": "scripts/build-units-001-004.ps1",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/scripts/build-units-001-004.ps1",
+        "bytes": 7511,
+        "sha256": "b3e7797c9d42ca5c040e6bce0e43528306d7ba21abe88ae0975449ad5095bd79",
+        "public_bytes": 7511,
+        "public_sha256": "b3e7797c9d42ca5c040e6bce0e43528306d7ba21abe88ae0975449ad5095bd79",
+        "match": true
+      },
+      {
+        "path": "scripts/extend-backend-unit-004.py",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/scripts/extend-backend-unit-004.py",
+        "bytes": 34866,
+        "sha256": "fd39d24513640216846faa57bb990a58a28a5bbdcc1785bd06ba4a1271701363",
+        "public_bytes": 34866,
+        "public_sha256": "fd39d24513640216846faa57bb990a58a28a5bbdcc1785bd06ba4a1271701363",
+        "match": true
+      },
+      {
+        "path": "scripts/qa-units-001-004.py",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/scripts/qa-units-001-004.py",
+        "bytes": 28775,
+        "sha256": "bd07f13adfb71800a0f7f4ca817a924be316eaffdaa59abff2e25aab11f4b4b1",
+        "public_bytes": 28775,
+        "public_sha256": "bd07f13adfb71800a0f7f4ca817a924be316eaffdaa59abff2e25aab11f4b4b1",
+        "match": true
+      },
+      {
+        "path": "scripts/validate-backend.py",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/scripts/validate-backend.py",
+        "bytes": 39343,
+        "sha256": "f5c7db52e4ebfbf7ff492eb46178d8a8d65e073a116128a16f853e0933a957a9",
+        "public_bytes": 39343,
+        "public_sha256": "f5c7db52e4ebfbf7ff492eb46178d8a8d65e073a116128a16f853e0933a957a9",
+        "match": true
+      },
+      {
+        "path": "source/id-ID/units/unit-004-lecture-004.md",
+        "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/365dff08d41d6a78a8e712504c9f871b6b386094/source/id-ID/units/unit-004-lecture-004.md",
+        "bytes": 24582,
+        "sha256": "826fcb368275cdad02f72a5cec951fc8466ba68b09ca0139d72c81a4c5591fea",
+        "public_bytes": 24582,
+        "public_sha256": "826fcb368275cdad02f72a5cec951fc8466ba68b09ca0139d72c81a4c5591fea",
+        "match": true
+      }
+    ]
+  },
+  "pages": {
+    "count": 4,
+    "all_match": true,
+    "readers": [
+      {
+        "path": "output/html/index.html",
+        "url": "https://kokunoyumeto.github.io/algebraic-topology-id/",
+        "bytes": 85580,
+        "sha256": "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8",
+        "public_bytes": 85580,
+        "public_sha256": "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8",
+        "match": true
+      },
+      {
+        "path": "output/html/units-001-002/index.html",
+        "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-002/",
+        "bytes": 220035,
+        "sha256": "d3b5cbfaa3511823821ecf9ba26a4eaec7c84d937417927d11bde3f66abc9f54",
+        "public_bytes": 220035,
+        "public_sha256": "d3b5cbfaa3511823821ecf9ba26a4eaec7c84d937417927d11bde3f66abc9f54",
+        "match": true
+      },
+      {
+        "path": "output/html/units-001-003/index.html",
+        "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-003/",
+        "bytes": 359397,
+        "sha256": "33281cc46faa3d560c968b657526cd914786c991d1475b5563911a265bd316c1",
+        "public_bytes": 359397,
+        "public_sha256": "33281cc46faa3d560c968b657526cd914786c991d1475b5563911a265bd316c1",
+        "match": true
+      },
+      {
+        "path": "output/html/units-001-004/index.html",
+        "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-004/",
+        "bytes": 494732,
+        "sha256": "8c8f5e1ad8172a2d97e3931fc3b4f2a3aa7f9e8a709260a27103f7eca0f1357d",
+        "public_bytes": 494732,
+        "public_sha256": "8c8f5e1ad8172a2d97e3931fc3b4f2a3aa7f9e8a709260a27103f7eca0f1357d",
+        "match": true
+      }
+    ]
+  },
+  "qa": {
+    "receipt_path": "qa/UNITS_001_004_QA.json",
+    "receipt_bytes": 4478,
+    "receipt_sha256": "1670bbe2377712c9f96b9a68cdb75589ae461512f77cea7ad0c9290193724bd5",
+    "pdf_pages": 35,
+    "p1": 0,
+    "p2": 0,
+    "p3": 0
+  },
+  "verified_at_utc": "2026-08-22T05:43:30.9187967Z"
+}
