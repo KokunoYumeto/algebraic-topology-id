@@ -1,0 +1,423 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-GITHUB-PUBLICATION-UNITS-001-022",
+  "status": "pushed_deployed_and_anonymously_byte_verified",
+  "verified_at": "2026-08-23T22:44:12+02:00",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "content_commit": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+  "tree": "4ac0e8d9988663e6379cbb72e90bbb3d01ace12e",
+  "remote_ref_at_verification": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+  "remote_ref_descends_from_content_commit": true,
+  "comparison_status": "identical",
+  "content_commit_files": 36,
+  "content_commit_manifest_sha256": "17d046f349cf3218b784f9f17622d720b220d0564c6dc3743b4528c691306bc9",
+  "changed_inventory_source": "https://api.github.com/repos/KokunoYumeto/algebraic-topology-id/commits/e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+  "tree_inventory_source": "https://api.github.com/repos/KokunoYumeto/algebraic-topology-id/git/trees/4ac0e8d9988663e6379cbb72e90bbb3d01ace12e?recursive=1",
+  "files": [
+    {
+      "path": ".github/workflows/pages.yml",
+      "status": "modified",
+      "blob_sha1": "005b804d66b6863c3ae45033282c29521f8a8cb1",
+      "bytes": 3426,
+      "sha256": "758a080c2025b0c256c76b7ff733e229a4b71b978ecafa8a06a97ac7049e9a3c",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "00_control/ADVERSE_LEDGER.csv",
+      "status": "modified",
+      "blob_sha1": "32322c8932a5cd5629c9698ee3646fd350d06bc3",
+      "bytes": 94927,
+      "sha256": "bb11a990feee150fc04b4a9e858c1df257d2ec6e1d14f2ad29967374eb311ffc",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "00_control/CURRENT_GOAL_AND_WORKFLOW.md",
+      "status": "modified",
+      "blob_sha1": "a586ae6edcb992aceb6f0df4f8c4a8a372e18296",
+      "bytes": 4930,
+      "sha256": "7c7f8b9322d60a0f6db76b6272768bcdbcc17b6a31d72769bd997f3fb9f45dd1",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "00_control/CURRENT_STATE.md",
+      "status": "modified",
+      "blob_sha1": "4f8b5f7bcded8d2b3d64ae3f26fc2a469b717958",
+      "bytes": 43765,
+      "sha256": "2e0075937ddfd85c3531ee4dbb4a2d507ebed96cf5409b88e8a6fede5b0c1531",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "00_control/CURSOR.json",
+      "status": "modified",
+      "blob_sha1": "bc19ddef3bfe02e03df0c21481350da90e2a6f9f",
+      "bytes": 4295,
+      "sha256": "62b0bcbaca51cf0e1228cf3b438e892d4bdf123822a1b0c1163e3b1a58cde672",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "00_control/TERMINOLOGY.csv",
+      "status": "modified",
+      "blob_sha1": "bc3818f34e43aceb30df43d179a9b8186e67c720",
+      "bytes": 30798,
+      "sha256": "4a750c4a70126e060def77839b0f869182fb26854563accf52698b101b380850",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/artifacts.jsonl",
+      "status": "modified",
+      "blob_sha1": "8185da8803e17ea56de0db367f191224db2a7fa8",
+      "bytes": 91395,
+      "sha256": "05a9525a470df9a106ad785a026b45f8913c1dfc40d363eff12df5cea3d0a58e",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/assets.jsonl",
+      "status": "modified",
+      "blob_sha1": "7b64ac0373559ccbc09ce663b3d4086ada520865",
+      "bytes": 14831,
+      "sha256": "69020caaf45628941c57ee5cf58f3c11a31505c3416ec9d65c9ac82b47ba97aa",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/concepts.jsonl",
+      "status": "modified",
+      "blob_sha1": "d1cc0603647498c9de4f3c612737483b7d3d3217",
+      "bytes": 93358,
+      "sha256": "2e8f93bfa8b7622960716b8a6bd33811c630c877696c5cbf031cb14eadfa110b",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/corrections.jsonl",
+      "status": "modified",
+      "blob_sha1": "4327909922199541186d8ed1617f940fa869f9fc",
+      "bytes": 295241,
+      "sha256": "718a14732930b546a3c38bf2e131d23066b2f90f09d4dd80a781294296f5cbc6",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/qa.jsonl",
+      "status": "modified",
+      "blob_sha1": "8f5d5bc3d2a9a0d60e7f0c909194b8561e0474eb",
+      "bytes": 59176,
+      "sha256": "b8c439539b4bd566bb3b46423e19ab925f2cbcb8075a77b5df6a76ba7b9cf516",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/relations.jsonl",
+      "status": "modified",
+      "blob_sha1": "26bb6bf0601485f1be9762dc0b06af27c6dd036a",
+      "bytes": 124723,
+      "sha256": "2d58a794206f07915c18c98c220e143354429c57d14bc93f27eb1806a2277ab6",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/rights.jsonl",
+      "status": "modified",
+      "blob_sha1": "55b130754d9f179a419ce9ab7061e67bbb2d0b92",
+      "bytes": 53720,
+      "sha256": "f734f3649cc4e8a40ec7d63bd92843c1d04cf835d46f9fcef9224168a9142bd2",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/segments.jsonl",
+      "status": "modified",
+      "blob_sha1": "559cf5f6bb6a1371c568be6521807d87b204f3a7",
+      "bytes": 1094552,
+      "sha256": "491b68e826f0221353d7a7782515be769fc8048e468bba5937c797ca0390bb8c",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/terms.jsonl",
+      "status": "modified",
+      "blob_sha1": "2b428686d31a8810db5fdeb3fe4b6a38a18160f4",
+      "bytes": 177339,
+      "sha256": "bf1c79fc4bbaf0a9bd71545f4d69d9dc36dcb728f23710ad33a9bf9791421695",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/units.jsonl",
+      "status": "modified",
+      "blob_sha1": "6bc7331b7ac6cfc5b6b8ebffb0c9f15f74db9888",
+      "bytes": 1169478,
+      "sha256": "56fdf925d6e547b4a936d4ac7fb483cdbd9d845ac292989a7162efae108fcf8f",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_022.csv",
+      "status": "added",
+      "blob_sha1": "870be46752f97d7a4767f3fe4a8fd090f17cc1f2",
+      "bytes": 249,
+      "sha256": "3a79a520d0281504edd2449fdfd13c5a874ec675f8187a9e6cb516a760ef35c8",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "output/html/units-001-022/index.html",
+      "status": "added",
+      "blob_sha1": "7b4a10e55fbe33b467145ed9d67864f76e340c30",
+      "bytes": 3520527,
+      "sha256": "15938aac7515e4ad7de66f8cf2d825744f9eb08b654165b835bfeace31aef8f4",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "output/pdf/topologi-aljabar-unit-001-022-id.pdf",
+      "status": "added",
+      "blob_sha1": "d1f3115d70de5b129eaab91ec981337190147de1",
+      "bytes": 1728316,
+      "sha256": "5dabcbdc98fdc7203ca2fe4f42aff86b9e3cb761136f676e0dd43b350768fb77",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_022_CUMULATIVE_RECEIPT.json",
+      "status": "added",
+      "blob_sha1": "36618d7302c544207d922159725bb8691ab19f2e",
+      "bytes": 6539,
+      "sha256": "d0caab27696fb48ce4137f1f62b2258d4f7daa551b543daac2aabbfee48fad7d",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_022_CUMULATIVE_RECEIPT.md",
+      "status": "added",
+      "blob_sha1": "5c582884dde7e9b904866ef6696072b19182d1f0",
+      "bytes": 4186,
+      "sha256": "1bf9169d1b5769bfbd17312c0dff20368d2e85156680d1fcac0383d51092e981",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_022_RECEIPT.json",
+      "status": "added",
+      "blob_sha1": "0c8840466333f24cc2c4275228688c12d8453036",
+      "bytes": 5703,
+      "sha256": "1ab81c3d1f79fb2e6ca4231014eb0473ced50b5e136444cc3d59138eef5f6e06",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_022_RECEIPT.md",
+      "status": "added",
+      "blob_sha1": "41e4d9233c52baa00b98329365a8e0bb17800d66",
+      "bytes": 3518,
+      "sha256": "1d722546edc13675159554bc602c6732fa1df5eb2431830500d37679f2a5e556",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNITS_001_022_BUILD_RECEIPT.json",
+      "status": "added",
+      "blob_sha1": "14dbf9e5ec29b8bafd83981545fc41bb79dbe0ba",
+      "bytes": 5315,
+      "sha256": "347569120a698d2738472fb6d194fa6109f8b638b9e16b08c473fc9e793312b5",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNITS_001_022_VISUAL_QA.md",
+      "status": "added",
+      "blob_sha1": "3264b922d371ea7435b4edd7482cc5fc8880881a",
+      "bytes": 4747,
+      "sha256": "35a5b00b6bdda6b77041ff568f14c91702818be3f939d9e3df36829ae168251b",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNIT_022_INDEPENDENT_REVIEW.md",
+      "status": "added",
+      "blob_sha1": "3478af6cd7a246ceb3394f647321ac57bb340663",
+      "bytes": 2893,
+      "sha256": "6632c22c2aa9339c169382111c0c28750e91a61bbb7ed40d47fe4734cefc7004",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNIT_022_QA.json",
+      "status": "added",
+      "blob_sha1": "821930a9263ce9224abe543db74411b5a8f13b8c",
+      "bytes": 4167,
+      "sha256": "4b9e62ca0912eb3cd989130a643fc07b9634ffa421f989d92ec3d8676eea8fe7",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNIT_022_SOURCE_AUDIT.md",
+      "status": "added",
+      "blob_sha1": "5abe8796fc515aa58faaa415e3fa751b23438aac",
+      "bytes": 4519,
+      "sha256": "50e0c9268f19c1fc3d6a9f865b6c338940e0edb1c336386566030a7595695801",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNIT_022_TRANSLATION_HANDOFF.md",
+      "status": "added",
+      "blob_sha1": "95df61c00b7d381ac7aa8fe0807674beb50c38fd",
+      "bytes": 2045,
+      "sha256": "9804d4372f4dc80c963bd6dca86ab5f8e79c6959f334526adc4f02e92507ccbf",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/append-cumulative-unit-022-artifacts.py",
+      "status": "added",
+      "blob_sha1": "5f2d98ccdbf136bb4136fce0e8ca095639f512f4",
+      "bytes": 15610,
+      "sha256": "5724ad79fd24e0b00e617e456d98928d57e1f2c4551e5892135335c349847176",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/build-units-001-022.ps1",
+      "status": "added",
+      "blob_sha1": "36cba2b85b295929b7246204eb1ade4ac842b404",
+      "bytes": 18956,
+      "sha256": "6d3ada82dbc5afbcec8b394c64694e392ceae55db165a8363d88b8c57b1464b7",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/extend-backend-unit-022.py",
+      "status": "added",
+      "blob_sha1": "879b2a68940dcc31eb04cd1524da6cc8610fc553",
+      "bytes": 33107,
+      "sha256": "f0950038713c4ed9bbfeb08588ec5a237f561237f446efa04cdf8c3785cf7a2e",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/qa-unit-022.py",
+      "status": "added",
+      "blob_sha1": "36fe6415a28790250161e6e3b845893a8382a671",
+      "bytes": 21025,
+      "sha256": "7f7d9be18b882843327ca25f3a42baa9f59b336a929e727ebc5f07cb1697f14f",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/validate-backend-append-only-unit-022-cumulative.py",
+      "status": "added",
+      "blob_sha1": "2553208cc48efb278a3cacf8d7b9f0b62510a08b",
+      "bytes": 13799,
+      "sha256": "c3b4c65205e4743693f4f8b9f6120b6df0a1cf14ec95a2ad60fee4eaa7726c1e",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/validate-backend-append-only-unit-022.py",
+      "status": "added",
+      "blob_sha1": "7a44939c8c67068ac240f0076260ca92983c4d01",
+      "bytes": 17313,
+      "sha256": "3ca78febd9181e0d8a83c6e3d1616bbf73312e823c38128d46b2b4e2148d0761",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    },
+    {
+      "path": "source/id-ID/units/unit-022-lecture-022.md",
+      "status": "added",
+      "blob_sha1": "98199acc47a9789ede740a9114c202d09a064350",
+      "bytes": 44066,
+      "sha256": "0857e51568d77c811d5d79255ac75bfddc87a04b27356ae457d4e66eeffb7d0d",
+      "tree_entry_exact": true,
+      "raw_commit_pinned": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+      "remote_exact": true
+    }
+  ],
+  "pages": {
+    "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-022/",
+    "bytes": 3520527,
+    "sha256": "15938aac7515e4ad7de66f8cf2d825744f9eb08b654165b835bfeace31aef8f4",
+    "remote_exact": true,
+    "source_commit": "e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+    "source_path": "output/html/units-001-022/index.html",
+    "workflow_run_id": 32665215550,
+    "workflow_id": 339307301,
+    "check_suite_id": 88503222802,
+    "workflow_run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32665215550",
+    "job_id": 97257447080,
+    "job_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32665215550/job/97257447080",
+    "deployment_id": 6052521271,
+    "deployment_status_id": 17202625006,
+    "conclusion": "success"
+  },
+  "official_api_evidence": {
+    "commit": "https://api.github.com/repos/KokunoYumeto/algebraic-topology-id/commits/e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2",
+    "tree": "https://api.github.com/repos/KokunoYumeto/algebraic-topology-id/git/trees/4ac0e8d9988663e6379cbb72e90bbb3d01ace12e?recursive=1",
+    "main_ref": "https://api.github.com/repos/KokunoYumeto/algebraic-topology-id/git/ref/heads/main",
+    "comparison": null,
+    "workflow_run": "https://api.github.com/repos/KokunoYumeto/algebraic-topology-id/actions/runs/32665215550",
+    "jobs": "https://api.github.com/repos/KokunoYumeto/algebraic-topology-id/actions/runs/32665215550/jobs?per_page=100",
+    "deployments": "https://api.github.com/repos/KokunoYumeto/algebraic-topology-id/deployments?sha=e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2&environment=github-pages&per_page=100",
+    "deployment_statuses": "https://api.github.com/repos/KokunoYumeto/algebraic-topology-id/deployments/6052521271/statuses"
+  },
+  "backend": {
+    "records": 3337,
+    "bytes": 3176534,
+    "bundle_sha256": "38b98ca6258133036ded9e3cb72894f4181d4b6faa46af9e96a2128ab25c9df2"
+  },
+  "verification_method": {
+    "authentication": "anonymous",
+    "local_git_used": false,
+    "commit_raw_urls_pinned": true,
+    "git_blob_sha1_checked": true,
+    "commit_tree_entries_checked": true,
+    "credentials_recorded": false
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "source_and_human_credit_preserved": true,
+  "upstream_contacted": false,
+  "unit_022_included": true
+}
