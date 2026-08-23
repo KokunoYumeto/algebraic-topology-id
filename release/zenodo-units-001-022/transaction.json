@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "release_id": "o012-roberts-id-units-001-022-v0.22.0",
+  "deposition_id": 22072347,
+  "parent_record_id": 22071667,
+  "concept_key": "22061489",
+  "metadata_sha256": "fcd74eebfe6964e4a6a98adc0e923c85efb00dc5b0f215afdc5bf095b6cb8f8c",
+  "manifest_sha256": "70421917c3c16eed956f57b8fd9705e3ce4e0d46642aa66327168d05878b975d",
+  "state": "published_and_anonymously_verified",
+  "record_id": 22072347,
+  "doi": "10.5281/zenodo.22072347",
+  "concept_doi": "10.5281/zenodo.22061489",
+  "anonymous_readback_reproduced": true
+}
