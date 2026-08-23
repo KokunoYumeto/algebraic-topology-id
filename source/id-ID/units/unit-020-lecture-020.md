@@ -1074,7 +1074,7 @@ $$
 \Phi(y)=\sum_{e\in C}\varepsilon_e y_e.
 $$
 
-Untuk $y=\delta f$, suku-suku pada siklus bertelescop karena setiap simpul
+Untuk $y=\delta f$, suku-suku pada siklus berteleskop karena setiap simpul
 muncul sekali sebagai target dan sekali sebagai sumber; jadi
 $\Phi(\delta f)=0$. Sebaliknya, ambil $y$ dengan $\Phi(y)=0$. Akarilah $T$
 di satu simpul $r$ dan tetapkan $f(r)=0$. Berjalan menjauh dari akar,

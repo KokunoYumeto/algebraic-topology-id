@@ -18,7 +18,7 @@
     "path": "source/id-ID/units/unit-020-lecture-020.md",
     "bytes": 45780,
     "lines": 1425,
-    "sha256": "d57f803830678c2a509240dea9986a2e8e19314f5f209195322678608b7cecc1",
+    "sha256": "b2592d9dd11d1e805ff2995f96604de35c5454bf2a1e5008163ec5a266d7ea50",
     "stable_ids": 73
   },
   "checks": [
@@ -45,7 +45,7 @@
     {
       "check": "unit_identity_encoding",
       "status": "PASS",
-      "detail": "45,780 bytes/1,425 LF lines; SHA-256 d57f803830678c2a509240dea9986a2e8e19314f5f209195322678608b7cecc1"
+      "detail": "45,780 bytes/1,425 LF lines; SHA-256 b2592d9dd11d1e805ff2995f96604de35c5454bf2a1e5008163ec5a266d7ea50"
     },
     {
       "check": "provenance_and_terminology",

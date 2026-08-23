@@ -15,7 +15,7 @@ Pandoc structural parsing.
 ## Final snapshot and verdict
 
 Final snapshot: **45,780 bytes, 1,425 LF lines, SHA-256
-`d57f803830678c2a509240dea9986a2e8e19314f5f209195322678608b7cecc1`**.
+`b2592d9dd11d1e805ff2995f96604de35c5454bf2a1e5008163ec5a266d7ea50`**.
 
 - P1: 0
 - P2: 0
@@ -31,6 +31,8 @@ Final snapshot: **45,780 bytes, 1,425 LF lines, SHA-256
 - The same-field terminology QA is applied: `fungtor`, `morfisma`,
   `homomorfisma`, `isomorfisma`, `lembaran`, and `tertutup rata`; no
   `isomorfisme` spelling remains in reader-facing text.
+- The final language pass corrected the isolated nonstandard spelling
+  `bertelescop` to `berteleskop` without changing mathematics or identifiers.
 - Pandoc 3.9.0.2 `--to=html5 --mathjax` exits 0 without warnings, and all
   structural IDs survive the parse.
 

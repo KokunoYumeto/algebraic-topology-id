@@ -20,7 +20,7 @@ upstream action was performed.
 `source/id-ID/units/unit-020-lecture-020.md`
 
 - 45,780 UTF-8 bytes, 1,425 lines, SHA-256
-  `d57f803830678c2a509240dea9986a2e8e19314f5f209195322678608b7cecc1`.
+  `b2592d9dd11d1e805ff2995f96604de35c5454bf2a1e5008163ec5a266d7ea50`.
 - Stable ID namespace: `o012-rbt-l20-*`.
 - Census from the active source: 8 examples; 4 source exercise environments
   (5 prompts); 2 definitions; 2 lemmas; 2 proofs (the second marked as the

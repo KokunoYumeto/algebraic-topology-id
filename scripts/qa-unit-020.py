@@ -45,7 +45,7 @@ RAW_SHA256 = "6af488776f936d7a3ef17a30a8af94e6955df91e3a3057b92b048e1b38ca1917"
 # applied and remained stable across an independent second read.
 UNIT_BYTES = 45_780
 UNIT_LINES = 1_425
-UNIT_SHA256 = "d57f803830678c2a509240dea9986a2e8e19314f5f209195322678608b7cecc1"
+UNIT_SHA256 = "b2592d9dd11d1e805ff2995f96604de35c5454bf2a1e5008163ec5a266d7ea50"
 
 
 def digest(data: bytes) -> str:
