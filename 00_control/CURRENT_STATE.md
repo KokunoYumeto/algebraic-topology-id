@@ -20,6 +20,12 @@ Status: active production. Source admission and composite route selection are cl
 - Local Zenodo release package is `release/zenodo-units-001-019/artifacts/`; reader PDF is 1,506,471 bytes/SHA-256 `291e4206b9e58ee8a49108e55b6b894b9cd3362c7701a50cb83a7d79714b7a86`, reader HTML is 2,962,478 bytes/SHA-256 `ea5481b14dc1772408bd1c3e384b94a18eed9f2be3c9b9379fe4f8dd499253e0`, source/backend ZIP is 507,727 bytes/SHA-256 `6c8a62d69375f66ff614938973a2a0d7a623b678ff18b4ce148c241fd9ea2082`, and QA/provenance ZIP is 282,239 bytes/SHA-256 `8f6df16c1429d7d061e1e428a6bdae241635d7b8c02943d98104c8bced01609c`.
 - Figshare was not mutated: four bounded read-only/API checks returned authenticated `403 InactiveAccount`, public article `404`, and empty public project/collection article lists. No duplicate item was created; the prepared ≤5,000,000-byte reader-first payload and exact blocker are recorded in `00_control/FIGSHARE_PUBLICATION_RECEIPT_UNITS_001_019.json` (2,444 bytes, SHA-256 `3a3dee2f5bcabda5d2ab019db478fe39e2838561c632dadd9d330229db9056f`).
 
+## Same-field terminology QA refresh (2026-08-23)
+
+- Official arXiv searches for `topologi aljabar` and `Bahasa Indonesia topology` returned no results; no suitable Indonesian algebraic-topology TeX source was found in this bounded check.
+- Direct PDF fallback: Risali–Wijayanti, DOI `10.22146/jmt.56529`, 13 pages/373,016 bytes, SHA-256 `e520234d557737b7c7c64e4f76871875e3d72681b3a2acd7c7254bf088278b7f`; local witness and decisions are recorded in `qa/INDONESIAN_TERMINOLOGY_QA_2026-08-23.{md,json}`.
+- Same-field forms confirm `fungtor`, `morfisma`, `homomorfisma`, `isomorfisma`, `lembaran`, and `tertutup rata`; glossary controls `O012-TERM-0288` and `O012-TERM-0289` were added. Completed Units 001–019 require no change; three `isomorfisme` occurrences in the still-unadmitted Unit 020 draft are queued for normalization before admission. QA Markdown is 3,378 bytes/SHA-256 `f90f7d8372a20bcebce5a37967cda23d62cde81975fa72f1b2494f2b700d925d`; JSON is 3,196 bytes/SHA-256 `2f19a98dc12f5886e9a4e719b2ecfeff83ef7adbe7312e5041b07e66098873cb`.
+
 ## Frozen cumulative Units 001–002 boundary
 
 - Source span: Roberts `Notes.tex:134–584` (Lectures 1–2).

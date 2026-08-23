@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-ID-TERMINOLOGY-QA-2026-08-23",
+  "date": "2026-08-23",
+  "status": "passed_source_selection_with_unit20_propagation_queued",
+  "scope": "bounded same-field Indonesian terminology check before Unit 20 admission",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "arxiv_search": {
+    "official_base": "https://arxiv.org/search/",
+    "queries": [
+      {
+        "url": "https://arxiv.org/search/?query=topologi+aljabar&searchtype=all",
+        "result": "no_results"
+      },
+      {
+        "url": "https://arxiv.org/search/?query=Bahasa+Indonesia+topology&searchtype=all",
+        "result": "no_results"
+      }
+    ],
+    "qualification": "bounded no-hit; no claim of nonexistence",
+    "editable_indonesian_tex_found": false
+  },
+  "fallback_source": {
+    "title": "Sifat-Sifat Morfisma di dalam Kategori Ruang Penutup Ruang Topologis yang Terhubung Lintasan",
+    "authors": ["Valentino Risali", "Indah Emilia Wijayanti"],
+    "journal": "Jurnal Matematika Thales",
+    "volume_issue_year_pages": "2(1), 2020, 23-35",
+    "doi": "10.22146/jmt.56529",
+    "article_url": "https://journal.ugm.ac.id/jmt/article/view/56529",
+    "pdf_url": "https://journal.ugm.ac.id/jmt/article/download/56529/28321",
+    "local_witness": "tmp/pdfs/terminology-qa/Risali_Wijayanti_2020_JMT_56529.pdf",
+    "language": "Bahasa Indonesia main text; English secondary abstract",
+    "format": "PDF; editable TeX not exposed",
+    "license": "CC BY-SA 4.0 (journal page)",
+    "bytes": 373016,
+    "pages": 13,
+    "sha256": "e520234d557737b7c7c64e4f76871875e3d72681b3a2acd7c7254bf088278b7f"
+  },
+  "observed_terms": [
+    "fungtor", "morfisma", "homomorfisma", "isomorfisma",
+    "ruang topologis", "ruang penutup", "grup fundamental", "aksi kanan",
+    "pemetaan penutup", "pengangkatan", "tertutup rata", "lembaran",
+    "persekitaran", "obyek"
+  ],
+  "decisions": [
+    {"concept": "isomorphism", "preferred": "isomorfisma", "variant": "isomorfisme", "action": "added_control_and_queue_unit20_normalization"},
+    {"concept": "homomorphism", "preferred": "homomorfisma", "variant": "homomorfisme", "action": "added_control"},
+    {"concept": "neighbourhood", "preferred": "lingkungan", "variant": "persekitaran", "action": "retain_existing_reader_choice"},
+    {"concept": "object", "preferred": "objek", "variant": "obyek", "action": "retain_modern_spelling"},
+    {"concept": "functor", "preferred": "fungtor", "variant": "funktor", "action": "confirmed_existing_choice"},
+    {"concept": "covering_sheet", "preferred": "lembaran", "variant": "lembar", "action": "confirmed_existing_choice"},
+    {"concept": "evenly_covered", "preferred": "tertutup rata", "variant": "diliputi secara merata", "action": "confirmed_existing_choice"}
+  ],
+  "control_changes": [
+    {"path": "00_control/TERMINOLOGY.csv", "id": "O012-TERM-0288", "preferred": "isomorfisma"},
+    {"path": "00_control/TERMINOLOGY.csv", "id": "O012-TERM-0289", "preferred": "homomorfisma"}
+  ],
+  "propagation": {
+    "completed_units_001_019_changed": false,
+    "unit20_draft_occurrences_queued_for_normalization": 3,
+    "stable_ids_changed": false,
+    "formula_changes": false
+  }
+}

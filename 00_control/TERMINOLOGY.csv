@@ -286,3 +286,5 @@ O012-TERM-0114,critical value,nilai kritis,complex_analysis,admitted,
 "O012-TERM-0285","divergence","divergensi","vector_calculus","admitted",""
 "O012-TERM-0286","coboundary","kobatas","homological_algebra","admitted","the graph differential raises degree and uses target minus source"
 "O012-TERM-0287","cokernel","kokernel","algebra","admitted","retain operatorname coker in formulas"
+"O012-TERM-0288","isomorphism","isomorfisma","global","admitted","same-field Indonesian topology usage uses isomorfisma; isomorfisme is retained only as a recognized variant"
+"O012-TERM-0289","homomorphism","homomorfisma","algebra","admitted","same-field Indonesian topology usage uses homomorfisma; preserve the -morfisma family consistently"
