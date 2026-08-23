@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L20-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 3948,
+    "line_end": 4345,
+    "bytes": 331447,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_bytes": 17645,
+    "span_sha256": "1fa7d0ea4ecd567ae8975da5b9b41495a1757913942102f223d1234168366e88",
+    "raw_pre_marker_bytes": 17657,
+    "raw_pre_marker_sha256": "6af488776f936d7a3ef17a30a8af94e6955df91e3a3057b92b048e1b38ca1917"
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-020-lecture-020.md",
+    "bytes": 45780,
+    "lines": 1425,
+    "sha256": "d57f803830678c2a509240dea9986a2e8e19314f5f209195322678608b7cecc1",
+    "stable_ids": 73
+  },
+  "checks": [
+    {
+      "check": "required_files",
+      "status": "PASS",
+      "detail": "all bounded Unit 20 inputs exist"
+    },
+    {
+      "check": "source_identity",
+      "status": "PASS",
+      "detail": "Notes.tex 331,447 bytes/6,368 lines; SHA-256 cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:3948-4345; deferred line 4346; span SHA-256 1fa7d0ea4ecd567ae8975da5b9b41495a1757913942102f223d1234168366e88"
+    },
+    {
+      "check": "source_census",
+      "status": "PASS",
+      "detail": "{\"align\": 1, \"align_star\": 2, \"cases\": 3, \"definition\": 2, \"display\": 8, \"example\": 8, \"exercise\": 4, \"label\": 6, \"lemma\": 2, \"margin\": 11, \"proof\": 2, \"remark\": 4, \"tikz\": 7}"
+    },
+    {
+      "check": "unit_identity_encoding",
+      "status": "PASS",
+      "detail": "45,780 bytes/1,425 LF lines; SHA-256 d57f803830678c2a509240dea9986a2e8e19314f5f209195322678608b7cecc1"
+    },
+    {
+      "check": "provenance_and_terminology",
+      "status": "PASS",
+      "detail": "source range, author, license, non-endorsement, model, and glossary forms present"
+    },
+    {
+      "check": "privacy",
+      "status": "PASS",
+      "detail": "no credential/path markers"
+    },
+    {
+      "check": "stable_ids",
+      "status": "PASS",
+      "detail": "73 unique IDs"
+    },
+    {
+      "check": "structural_inventory",
+      "status": "PASS",
+      "detail": "{\"boundary\": 1, \"definition\": 2, \"example\": 8, \"exercise\": 10, \"figure\": 7, \"hint\": 6, \"lemma\": 2, \"proof\": 2, \"remark\": 4, \"solution\": 6, \"source-audit\": 8, \"source-margin\": 11}"
+    },
+    {
+      "check": "accessibility_reflow",
+      "status": "PASS",
+      "detail": "seven centered semantic figures; no raw positional source commands"
+    },
+    {
+      "check": "pandoc_structural_ids",
+      "status": "PASS",
+      "detail": "all 73 IDs survive Pandoc; exit 0; no warnings"
+    },
+    {
+      "check": "mastery_closure",
+      "status": "PASS",
+      "detail": "six problem/hint/full-solution triples"
+    },
+    {
+      "check": "mathematical_and_language_repairs",
+      "status": "PASS",
+      "detail": "matrix signs, Klein Smith form, TeX, terminology, and source corrections present"
+    },
+    {
+      "check": "source_review_handoff_binding",
+      "status": "PASS",
+      "detail": "audit, independent review, and handoff bind the final Unit 20 hash"
+    },
+    {
+      "check": "terminology_and_ledger",
+      "status": "PASS",
+      "detail": "TERM tail=289; ADV tail=278; new controls present"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}
