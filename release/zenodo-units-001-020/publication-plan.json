@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "state": "prepared_not_published",
+  "release_id": "o012-roberts-id-units-001-020-v0.20.0",
+  "version": "0.20.0",
+  "existing_concept_doi": "10.5281/zenodo.22061489",
+  "latest_published_record_id": 22070794,
+  "latest_published_doi": "10.5281/zenodo.22070794",
+  "publication_route": "create a new version from the latest record inside the existing concept lineage",
+  "new_concept_allowed": false,
+  "new_deposition_created": false,
+  "credentials_used": false,
+  "payload_directory": "artifacts",
+  "reader_first_filename": "00_TOPOLOGI_ALJABAR_ID_UNITS_001_020_READER.pdf",
+  "metadata_payload": "metadata.json"
+}

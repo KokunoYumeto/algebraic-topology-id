@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–20",
+    "upload_type": "publication",
+    "publication_type": "book",
+    "description": "<p><strong>Status: checkpoint parsial, belum lengkap.</strong> Versi 0.20.0 memuat terjemahan Bahasa Indonesia Kuliah 1–20 dari <em>Algebraic Topology</em> karya David Michael Roberts.</p><p>Cakupan sumber adalah <code>Notes.tex</code> baris 134–4345 pada komit <code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>. Baris 4346 ditunda utuh ke Unit 21; Kuliah 21–30, jembatan homologi Fomberg, dan closure orisinal belum termasuk.</p><p>PDF A4 237 halaman adalah berkas pembaca pertama; HTML mandiri/offline menyediakan reflow dan MathML asli. Sumber Markdown, backend JSONL ber-ID stabil, manifest, checksum, QA, dan provenance ringkas turut disertakan.</p><p>Lisensi komponen adalah CC BY 4.0 dengan atribusi dan perubahan seperti dalam <code>RELEASE_RIGHTS.md</code>. Produksi menggunakan <strong>OpenAI Codex gpt-5.6-sol, Ultra</strong> atas arahan pengguna; ini bukan kredit kepengarangan atau endorsement. Edisi ini independen dan tidak disponsori atau disahkan oleh penulis maupun institusinya.</p>",
+    "creators": [
+      {
+        "name": "Roberts, David Michael"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Editor edisi Bahasa Indonesia",
+        "type": "Editor"
+      }
+    ],
+    "access_right": "open",
+    "license": "cc-by-4.0",
+    "language": "ind",
+    "version": "0.20.0",
+    "publication_date": "2026-08-23",
+    "keywords": [
+      "topologi aljabar",
+      "Bahasa Indonesia",
+      "homotopi",
+      "ruang penutup",
+      "grup fundamental",
+      "kohomologi",
+      "MathML",
+      "machine-readable textbook"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.5281/zenodo.22061489",
+        "relation": "isVersionOf",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.22070794",
+        "relation": "isNewVersionOf",
+        "scheme": "doi"
+      }
+    ],
+    "notes": "ID rilis: o012-roberts-id-units-001-020-v0.20.0. Versi ini berada dalam konsep Zenodo 10.5281/zenodo.22061489 dan tidak membuat konsep pesaing."
+  }
+}
