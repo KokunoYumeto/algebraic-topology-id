@@ -28,6 +28,9 @@ Final snapshot: **45,780 bytes, 1,425 LF lines, SHA-256
   `delta_1 delta_0=0` proof, tetrahedron cohomology, and Klein-bottle Smith
   form were recomputed. In particular, the Klein cokernel is `Z/2`, not a
   free-plus-torsion group.
+- The face-identity proof is retained as the complete Unit 20 lemma; the
+  mastery set tests its consequences through the torus, tetrahedron, and
+  functoriality checks rather than duplicating that proof as a seventh item.
 - The same-field terminology QA is applied: `fungtor`, `morfisma`,
   `homomorfisma`, `isomorfisma`, `lembaran`, and `tertutup rata`; no
   `isomorfisme` spelling remains in reader-facing text.
