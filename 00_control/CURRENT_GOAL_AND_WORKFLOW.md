@@ -37,10 +37,15 @@ prompt and add only the missing separately marked mastery layer; independently
 review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–019 now cover
 `Notes.tex:134–3947`; Unit 19 is 57,277 bytes/1,865 lines/SHA-256
 `ba34773d63e4dc70fccdf4fa19fbdc8a397062a4bc359978f3261a70ff64f98c`.
-The cumulative Units 001–019 reader/backend boundary is locally verified,
-with public push/readback and existing Zenodo/Figshare lineage updates next.
-Next translation cursor: Lecture 20, `Notes.tex:3948` onward; then continue
-through Roberts Lecture 30 before the bounded Fomberg bridge and closure.
+The cumulative Units 001–019 reader/backend boundary is locally verified and
+publicly preserved. GitHub Pages and raw artifacts were anonymously read back;
+the existing Zenodo concept now has version `0.19.0` at
+`10.5281/zenodo.22070794` with eight exact files. A bounded Figshare update
+attempt is recorded as blocked by an authenticated `InactiveAccount` response;
+no duplicate item was created. See the two publication receipts in
+`00_control/`. Next translation cursor: Lecture 20, `Notes.tex:3948` onward;
+then continue through Roberts Lecture 30 before the bounded Fomberg bridge and
+closure.
 
 ## Backend, QA, and publication gates
 
@@ -56,8 +61,10 @@ Push verified boundaries narrowly to the existing repository; never broad-scan
 Git or create a duplicate. At coherent reader boundaries update the existing
 Zenodo and Figshare lineages, preserve inherited files, label partial scope,
 and anonymously verify public bytes/hashes. The immutable Units 001–013 reader
-is on Pages, Zenodo `10.5281/zenodo.22061490`, and Figshare
-`10.6084/m9.figshare.33314982.v1`; do not republish it for source-only work.
+remains historically preserved on Pages and Zenodo `10.5281/zenodo.22061490`;
+the current Zenodo version is `10.5281/zenodo.22070794`. Figshare remains
+pending credential/account recovery, with the failed bounded attempt recorded
+without claiming publication. Do not republish a source-only duplicate.
 Record `OpenAI Codex gpt-5.6-sol, Ultra`; never publish the directing user’s
 personal name. The umbrella label stays out of titles/leads and may appear once
 only as linked organization metadata. No author conversation. After full
