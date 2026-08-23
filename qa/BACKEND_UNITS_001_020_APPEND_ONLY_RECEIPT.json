@@ -4,7 +4,7 @@
   "status": "PASS",
   "validator": {
     "path": "scripts/validate-backend-append-only-unit-020.py",
-    "sha256": "19ac667e9e1675e30c5adae90b72446c3e8b0617db8dada097059c7b35349123",
+    "sha256": "b91a73aaafcc3762b7015d6acd680f4f3a1bbe2c202ee8a0bae4393258bd0e79",
     "result": "append-only Unit 020 backend validation: PASS",
     "generic_shapes_references_manifests": "PASS"
   },
@@ -67,7 +67,7 @@
   "human_receipt": {
     "path": "qa/BACKEND_APPEND_ONLY_UNIT_020_FINAL_RECEIPT.md",
     "bytes": 2113,
-    "sha256": "537ec2aa33f28985540c0adb7a0a9c623968e53a82e1f06adc2230d78fd39c04"
+    "sha256": "6f64eebb653fadb1dd34f0d802f1bda55d482ce9ac47df2c8a88715a100c26c9"
   },
   "rights_component": "rights:o012-units-001-020-composite-cc-by-4.0-final-ed086",
   "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
