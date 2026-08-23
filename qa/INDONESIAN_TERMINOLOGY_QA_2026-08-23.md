@@ -1,6 +1,7 @@
 # Indonesian same-field terminology QA — 2026-08-23
 
-Status: **passed for source selection; one queued draft propagation**. This is
+Status: **passed; the queued draft propagation was completed before Unit 20
+admission**. This is
 a bounded language check requested before scaling the next reader unit. It
 does not change the Roberts source cursor or the selected O012 corpus.
 
@@ -64,11 +65,14 @@ Two missing control rows were added to `00_control/TERMINOLOGY.csv`:
    `isomorfisme` only as a variant).
 2. `O012-TERM-0289`: *homomorphism* → `homomorfisma`.
 
-Completed Units 001–019 contain no `isomorfisme` spelling requiring a
-retroactive rewrite. The current Lecture 20 draft contains three such
-occurrences; they are queued for normalization to `isomorfisma` before the
-unit is admitted, built, or added to the backend. No source formula or stable
-identifier changes are implied.
+Completed Units 001–019 contained no `isomorfisme` spelling requiring a
+retroactive rewrite. Three occurrences in the then-unadmitted Lecture 20 draft
+were normalized before admission. The admitted Unit 20 contains no
+`isomorfisme` or `homomorfisme`; its QA script enforces those forms as forbidden
+variants. The exact admitted source is 45,786 bytes, SHA-256
+`ed086dfe2f26951d4a1d1c398ade0224ffbf4bd1a20a985d267ecd97bbd228d3`,
+and the correction is recorded as `O012-ADV-0287`. No source formula or stable
+identifier changed.
 
 ## Provenance
 

@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L21-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 4346,
+    "line_end": 4500,
+    "bytes": 331447,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_bytes": 7267,
+    "span_sha256": "281ba27f0f52f35fd9842954c223546e84ce1a0909ee84c14b2081c38c11f150",
+    "raw_through_next_marker_bytes": 7359,
+    "raw_through_next_marker_sha256": "8a3ab990ae87087dd259340b08cdb7ddb95068a5b9859de66f7e002115307e6f"
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-021-lecture-021.md",
+    "bytes": 26237,
+    "lines": 786,
+    "sha256": "47fa3994dc59370fc464e9d150d62512a4602a3cffa5996f1027f93a427e0eec",
+    "stable_ids": 47
+  },
+  "checks": [
+    {
+      "check": "required_files",
+      "status": "PASS",
+      "detail": "all bounded Unit 21 inputs exist"
+    },
+    {
+      "check": "source_identity",
+      "status": "PASS",
+      "detail": "Notes.tex 331,447 bytes/6,368 lines; SHA-256 cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:4346-4500; next marker line 4501; span SHA-256 281ba27f0f52f35fd9842954c223546e84ce1a0909ee84c14b2081c38c11f150"
+    },
+    {
+      "check": "source_census",
+      "status": "PASS",
+      "detail": "{\"align\": 0, \"align_star\": 1, \"cases\": 2, \"construction\": 2, \"definition\": 3, \"display\": 5, \"enumerate\": 1, \"example\": 4, \"exercise\": 0, \"label\": 1, \"lemma\": 0, \"margin\": 4, \"proof\": 0, \"remark\": 1, \"tikz\": 2}"
+    },
+    {
+      "check": "unit_identity_encoding",
+      "status": "PASS",
+      "detail": "26,237 bytes/786 LF lines; SHA-256 47fa3994dc59370fc464e9d150d62512a4602a3cffa5996f1027f93a427e0eec"
+    },
+    {
+      "check": "math_portability",
+      "status": "PASS",
+      "detail": "no bare proof closure, malformed qquad, or literal Unicode Greek inside math"
+    },
+    {
+      "check": "provenance_and_terminology",
+      "status": "PASS",
+      "detail": "source range, author, license, non-endorsement, model, and admitted terms present"
+    },
+    {
+      "check": "privacy",
+      "status": "PASS",
+      "detail": "no credential or local-user-path markers"
+    },
+    {
+      "check": "stable_ids",
+      "status": "PASS",
+      "detail": "47 unique IDs"
+    },
+    {
+      "check": "structural_inventory",
+      "status": "PASS",
+      "detail": "{\"boundary\": 1, \"construction\": 2, \"definition\": 3, \"example\": 4, \"exercise\": 6, \"figure\": 2, \"hint\": 6, \"remark\": 1, \"solution\": 6, \"source-audit\": 5, \"source-margin\": 4}"
+    },
+    {
+      "check": "source_label",
+      "status": "PASS",
+      "detail": "the one active source label is preserved exactly"
+    },
+    {
+      "check": "accessibility_reflow",
+      "status": "PASS",
+      "detail": "two centered semantic TikZ replacements and four reading-order margins"
+    },
+    {
+      "check": "pandoc_structural_ids",
+      "status": "PASS",
+      "detail": "all 47 IDs survive Pandoc; exit 0; no warnings"
+    },
+    {
+      "check": "mastery_closure",
+      "status": "PASS",
+      "detail": "six edition-original problem/hint/full-solution triples"
+    },
+    {
+      "check": "mathematical_and_language_repairs",
+      "status": "PASS",
+      "detail": "degree range, typed quotients, simplex boundary, black boxes, and language repairs present"
+    },
+    {
+      "check": "source_review_handoff_binding",
+      "status": "PASS",
+      "detail": "audit, review, and handoff bind the final Unit 21 hash"
+    },
+    {
+      "check": "terminology_and_ledger",
+      "status": "PASS",
+      "detail": "TERM tail=292; ADV tail=297; Unit 21 controls present"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

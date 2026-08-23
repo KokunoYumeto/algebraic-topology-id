@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-UNITS-001-021-BUILD",
+  "status": "PASS",
+  "scope": "Roberts Indonesian reader Units 001-021",
+  "source_authority": {
+    "repository": "DavidMichaelRoberts/AlgebraicTopology2019",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "source_file": "Notes.tex",
+    "unit_021_span": "4346-4500",
+    "unit_021_bytes": 26237,
+    "unit_021_lines": 786,
+    "unit_021_sha256": "47fa3994dc59370fc464e9d150d62512a4602a3cffa5996f1027f93a427e0eec"
+  },
+  "frozen_baseline": {
+    "builder": "scripts/build-units-001-020.ps1",
+    "builder_sha256": "612da350190652bf78ad373d907b6562333452e6b3feac035b7d62b48ac43be7",
+    "html_sha256": "59cb765f2291fc835ca629c774505303745983baacf5379efc97c49da6205c03",
+    "pdf_sha256": "30fdde6ddfc937df3e93bb59d58e72e593c87262d6a2535214113e5ebab64457",
+    "manifest_sha256": "d69c37838da4174ebb7dc4576392e813040d7f6ebbe1a13fe1c922e1271672da",
+    "verified_without_rewrite": true
+  },
+  "toolchain": {
+    "builder": "scripts/build-units-001-021.ps1",
+    "builder_bytes": 17129,
+    "builder_sha256": "f0678ae5af4d08059747106a9711a3a63139dc3782a36de28d2041643e075eec",
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_engine": "MiKTeX pdfTeX-1.40.29",
+    "source_date_epoch": 1787443200,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "reproducibility": {
+    "html_two_builds_byte_identical": true,
+    "pdf_two_builds_byte_identical": true,
+    "source_and_baseline_inputs_fail_closed": true
+  },
+  "artifacts": {
+    "html": {
+      "path": "output/html/units-001-021/index.html",
+      "bytes": 3306661,
+      "sha256": "aec7e94d3697a7feeae87134da983c59faaf29dc8d961bca28b6bfa9c53cdfa6"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-021-id.pdf",
+      "bytes": 1645350,
+      "sha256": "aee3f74109bafd1614d01d6593b8b2edbcbfdbf3b841b6beee878a01d7ddec16",
+      "pages": 246,
+      "page_size": "A4",
+      "page_rotation": 0,
+      "fonts": 25,
+      "all_fonts_embedded_subset_tounicode": true,
+      "catalog_lang": "id-ID",
+      "tagged": false,
+      "encrypted": false,
+      "forms": false,
+      "javascript": false
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_021.csv",
+      "bytes": 249,
+      "sha256": "40386b62066854272e8902c1f2c886a78de2c98f0dce845cbf6179c845bf1498"
+    }
+  },
+  "html_checks": {
+    "unique_dom_ids": 1084,
+    "duplicate_dom_ids": 0,
+    "fragment_links": 256,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 8208,
+    "semantic_figures": 50,
+    "unit_021_ids": 47,
+    "missing_unit_021_ids": 0,
+    "runtime_external_scripts_or_stylesheets": 0,
+    "lang": "id-ID",
+    "model_provenance_present_after_text_normalization": true
+  },
+  "privacy_checks": {
+    "html_forbidden_markers": 0,
+    "pdf_extracted_text_forbidden_markers": 0,
+    "credentials_recorded": false,
+    "absolute_local_user_paths_recorded": false
+  },
+  "visual_checks": {
+    "receipt": "qa/UNITS_001_021_VISUAL_QA.md",
+    "pages": [1, 123, 237, 238, 240, 243, 246],
+    "result": "PASS after the recorded PDF-only multiline-link preprocessing repair"
+  },
+  "defect_resolution": {
+    "scope": "new cumulative builder only",
+    "initial_candidate_pdf_sha256": "abeec1de6f12b4ff78b4accaa75363780f3b9e2291f0ea32eb69ad3e60a19309",
+    "defect": "The inherited bracket safeguard rendered a literal empty TeX group before the multiline Unit 21 Notes.tex Markdown link on page 237.",
+    "repair": "Restrict bracket-led PDF protection to lines inside dollar-delimited display-math blocks.",
+    "source_changed": false,
+    "final_candidate_pdf_sha256": "aee3f74109bafd1614d01d6593b8b2edbcbfdbf3b841b6beee878a01d7ddec16"
+  },
+  "rights": {
+    "license": "CC BY 4.0",
+    "attribution": "David Michael Roberts, Algebraic Topology (2019)",
+    "non_endorsement": true
+  }
+}

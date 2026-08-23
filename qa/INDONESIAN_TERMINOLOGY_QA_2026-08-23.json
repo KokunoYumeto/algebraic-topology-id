@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "qa_id": "O012-ID-TERMINOLOGY-QA-2026-08-23",
   "date": "2026-08-23",
-  "status": "passed_source_selection_with_unit20_propagation_queued",
+  "status": "passed_with_unit20_propagation_completed",
   "scope": "bounded same-field Indonesian terminology check before Unit 20 admission",
   "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
   "arxiv_search": {
@@ -63,7 +63,11 @@
   ],
   "propagation": {
     "completed_units_001_019_changed": false,
-    "unit20_draft_occurrences_queued_for_normalization": 3,
+    "unit20_draft_occurrences_normalized_before_admission": 3,
+    "unit20_forbidden_variant_occurrences_after_admission": 0,
+    "unit20_reader_bytes": 45786,
+    "unit20_reader_sha256": "ed086dfe2f26951d4a1d1c398ade0224ffbf4bd1a20a985d267ecd97bbd228d3",
+    "adverse_ledger_id": "O012-ADV-0287",
     "stable_ids_changed": false,
     "formula_changes": false
   }

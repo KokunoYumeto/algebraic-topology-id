@@ -288,3 +288,6 @@ O012-TERM-0114,critical value,nilai kritis,complex_analysis,admitted,
 "O012-TERM-0287","cokernel","kokernel","algebra","admitted","retain operatorname coker in formulas"
 "O012-TERM-0288","isomorphism","isomorfisma","global","admitted","same-field Indonesian topology usage uses isomorfisma; isomorfisme is retained only as a recognized variant"
 "O012-TERM-0289","homomorphism","homomorfisma","algebra","admitted","same-field Indonesian topology usage uses homomorfisma; preserve the -morfisma family consistently"
+"O012-TERM-0290","geometric realisation","realisasi geometrik","algebraic_topology","admitted","use for the quotient space obtained by replacing each combinatorial n-face with a standard n-simplex and gluing its faces"
+"O012-TERM-0291","standard n-simplex","simpleks-n standar","simplicial_topology","admitted","retain Delta superscript n notation and the nonnegative-coordinate affine definition"
+"O012-TERM-0292","triangulation","triangulasi","surface_topology","admitted","means combinatorial surface data equipped with a homeomorphism from the topological surface to its geometric realisation"

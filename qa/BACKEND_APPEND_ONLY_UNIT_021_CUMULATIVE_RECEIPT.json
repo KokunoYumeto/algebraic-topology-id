@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-BACKEND-UNITS-001-021-CUMULATIVE-APPEND-ONLY",
+  "status": "PASS",
+  "date": "2026-08-23",
+  "scope": "Cumulative Units 001-021 deterministic build artifacts and QA only",
+  "supersedes_as_current_boundary": [
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_021_RECEIPT.json",
+      "bytes": 5319,
+      "sha256": "f9eb74a96bbea0f419694511c4759ef03660667719871c094e281c16ad082997"
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_021_RECEIPT.md",
+      "bytes": 3003,
+      "sha256": "5d5e413930bc1b3d8c338b849a55cc75cd7becf042eccd2e636a3ee5d9d725e0"
+    }
+  ],
+  "immutability": {
+    "prefix_records": 3096,
+    "prefix_bytes": 2886546,
+    "prefix_bundle_sha256": "84920281207fc4088aa4f1f812d78333fd530e9f157eeebaa3b09cbfb53b431d",
+    "prefix_preserved_byte_for_byte": true,
+    "prefix_record_counts": {
+      "artifacts.jsonl": 100,
+      "assets.jsonl": 23,
+      "authority.jsonl": 4,
+      "concepts.jsonl": 289,
+      "corrections.jsonl": 288,
+      "qa.jsonl": 97,
+      "relations.jsonl": 278,
+      "rights.jsonl": 54,
+      "segments.jsonl": 830,
+      "terms.jsonl": 282,
+      "units.jsonl": 851
+    }
+  },
+  "append": {
+    "records_added": 15,
+    "records_by_file": {
+      "artifacts.jsonl": 6,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 0,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 2,
+      "relations.jsonl": 6,
+      "rights.jsonl": 1,
+      "segments.jsonl": 0,
+      "terms.jsonl": 0,
+      "units.jsonl": 0
+    },
+    "canonical_jsonl": true,
+    "suffix_sorted_within_transaction": true,
+    "rights_component_id": "rights:o012-units-001-021-composite-cc-by-4.0-final-47fa"
+  },
+  "current": {
+    "total_records": 3111,
+    "total_bytes": 2896429,
+    "bundle_sha256": "cf5acacf3ad2351869297dd8d3827787377422fa30c8c1385e60833b23913db9",
+    "files": {
+      "artifacts.jsonl": {"records": 106, "bytes": 83103, "sha256": "1708f7276cb28e295d578c8e4411618291c7294c8faee863c89461c63378a978"},
+      "assets.jsonl": {"records": 23, "bytes": 14215, "sha256": "623f8d7948504405fb8f57379987136e5f89297f0152f3eb9408cab6a3ed153c"},
+      "authority.jsonl": {"records": 4, "bytes": 2721, "sha256": "f21af26912520ab34b38dff0e927ed46a546dbe5d318da0dc133e58330d0e368"},
+      "concepts.jsonl": {"records": 289, "bytes": 90816, "sha256": "b05d4ec9646338ea76991eb08d5a260a087699a76d51fde507b0c5583b5921bb"},
+      "corrections.jsonl": {"records": 288, "bytes": 280684, "sha256": "7c06a04c7072051d28879297291d37bccca70c132339c8226e889701dc1de835"},
+      "qa.jsonl": {"records": 99, "bytes": 56340, "sha256": "249c2f6110269d1daef7fff472e4fb17c2f7060b8cd39f662884fd8bba0f0145"},
+      "relations.jsonl": {"records": 284, "bytes": 114295, "sha256": "3a1b930dbe14992819fcaeca39edb96e915641e62247a2e7ea879809a998c2e9"},
+      "rights.jsonl": {"records": 55, "bytes": 49832, "sha256": "1dca76e63699015d393009a8ed263ea4f1adb4e9be3a9668aae8e19bdcf55524"},
+      "segments.jsonl": {"records": 830, "bytes": 982695, "sha256": "e3fc479798493bad011f36e302cd4da7b0daa48f45252d7095dc10adc50b3530"},
+      "terms.jsonl": {"records": 282, "bytes": 171661, "sha256": "f6bb58da10c5970087c4ff2074b25163a3a3bd6e0f820f9df0782a4e00490deb"},
+      "units.jsonl": {"records": 851, "bytes": 1050067, "sha256": "7851c5a529337802a6eb62f7aa51d107c38e18ecf8299fcfc86d6dc5b87c46a6"}
+    }
+  },
+  "artifacts": {
+    "builder": {
+      "path": "scripts/build-units-001-021.ps1",
+      "bytes": 17129,
+      "sha256": "f0678ae5af4d08059747106a9711a3a63139dc3782a36de28d2041643e075eec",
+      "backend_id": "artifact:o012-units-001-021-build-script"
+    },
+    "html": {
+      "path": "output/html/units-001-021/index.html",
+      "bytes": 3306661,
+      "sha256": "aec7e94d3697a7feeae87134da983c59faaf29dc8d961bca28b6bfa9c53cdfa6",
+      "backend_id": "artifact:o012-units-001-021-html"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-021-id.pdf",
+      "bytes": 1645350,
+      "sha256": "aee3f74109bafd1614d01d6593b8b2edbcbfdbf3b841b6beee878a01d7ddec16",
+      "pages": 246,
+      "backend_id": "artifact:o012-units-001-021-pdf"
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_021.csv",
+      "bytes": 249,
+      "sha256": "40386b62066854272e8902c1f2c886a78de2c98f0dce845cbf6179c845bf1498",
+      "backend_id": "artifact:o012-units-001-021-manifest"
+    },
+    "build_receipt": {
+      "path": "qa/UNITS_001_021_BUILD_RECEIPT.json",
+      "bytes": 3850,
+      "sha256": "e3afdb61c3787eac1b84601609a89eadb34e9eee5b9c5481ba18c5e441a51032",
+      "backend_id": "artifact:o012-units-001-021-build-receipt"
+    },
+    "visual_receipt": {
+      "path": "qa/UNITS_001_021_VISUAL_QA.md",
+      "bytes": 3350,
+      "sha256": "f42bc668ab68a3f05993ac4d56a565160f4a94a417f656dd3f29f1e12475c6fa",
+      "backend_id": "artifact:o012-units-001-021-visual-receipt"
+    }
+  },
+  "qa": {
+    "cumulative_build_event": "qa:o012-units-001-021-build",
+    "cumulative_visual_event": "qa:o012-units-001-021-visual",
+    "deterministic_html": "PASS",
+    "deterministic_pdf": "PASS",
+    "representative_visual": "PASS",
+    "unit_021_qa_json": {
+      "path": "qa/UNIT_021_QA.json",
+      "bytes": 3967,
+      "sha256": "8f3f11a101ea09c0321989594a4a505ba44f92b8bde732d9c493d3de66a423ca",
+      "status": "PASS"
+    },
+    "hardened_unit_021_validator": {
+      "path": "scripts/qa-unit-021.py",
+      "bytes": 19783,
+      "lines": 599,
+      "sha256": "6039f254104d713c31f95650b627135154e08541a7d596643118977447002837",
+      "status": "PASS"
+    }
+  },
+  "transaction_scripts": {
+    "producer": {
+      "path": "scripts/append-cumulative-unit-021-artifacts.py",
+      "bytes": 15298,
+      "lines": 309,
+      "sha256": "45ffb6543fe84114a6c1f3f9eff342e3d41941cd57332893230c4fd2f2c7c656"
+    },
+    "validator": {
+      "path": "scripts/validate-backend-append-only-unit-021-cumulative.py",
+      "bytes": 13903,
+      "lines": 279,
+      "sha256": "f7e8d3f76e8f09b576594d5cb212819447c75431b04fd44b6daa9547b8ef104a",
+      "status": "PASS"
+    }
+  },
+  "human_receipt": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_021_CUMULATIVE_RECEIPT.md",
+    "bytes": 4218,
+    "sha256": "0f4f7e5bf1bfdabfbe34c253a48b34bc190c72dbc7046b078332302ba8da4d8e"
+  },
+  "write_boundary": [
+    "backend/artifacts.jsonl",
+    "backend/qa.jsonl",
+    "backend/relations.jsonl",
+    "backend/rights.jsonl",
+    "scripts/append-cumulative-unit-021-artifacts.py",
+    "scripts/validate-backend-append-only-unit-021-cumulative.py",
+    "qa/BACKEND_APPEND_ONLY_UNIT_021_CUMULATIVE_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_UNIT_021_CUMULATIVE_RECEIPT.md"
+  ],
+  "source_changed": false,
+  "controls_or_ledgers_changed": false,
+  "git_or_release_changed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

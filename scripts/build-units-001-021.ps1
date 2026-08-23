@@ -1,0 +1,266 @@
+[CmdletBinding()]
+param()
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = 'Stop'
+
+$lane = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..'))
+$baselineBuilder = Join-Path $PSScriptRoot 'build-units-001-020.ps1'
+$unit021 = Join-Path $lane 'source\id-ID\units\unit-021-lecture-021.md'
+$unit021Qa = Join-Path $lane 'qa\UNIT_021_QA.json'
+$unit021Review = Join-Path $lane 'qa\UNIT_021_INDEPENDENT_REVIEW.md'
+$unit021Audit = Join-Path $lane 'qa\UNIT_021_SOURCE_AUDIT.md'
+$baseCss = Join-Path $lane 'source\id-ID\styles\reader.css'
+$cumulativeCss = Join-Path $lane 'source\id-ID\styles\reader-cumulative.css'
+
+$htmlDir = Join-Path $lane 'output\html\units-001-021'
+$pdfDir = Join-Path $lane 'output\pdf'
+$checkDir = Join-Path $lane 'tmp\pdfs\units-001-021-build'
+$html = Join-Path $htmlDir 'index.html'
+$pdf = Join-Path $pdfDir 'topologi-aljabar-unit-001-021-id.pdf'
+$manifestPath = Join-Path $lane 'output\ARTIFACT_MANIFEST_UNITS_001_021.csv'
+
+# Frozen Units 001-020 baseline.  The earlier builder and artifacts are read
+# and verified, never invoked or rewritten by this boundary.
+$baselineFrozen = @{
+    $baselineBuilder = @(12635, '612da350190652bf78ad373d907b6562333452e6b3feac035b7d62b48ac43be7')
+    (Join-Path $lane 'output\html\units-001-020\index.html') = @(3190086, '59cb765f2291fc835ca629c774505303745983baacf5379efc97c49da6205c03')
+    (Join-Path $lane 'output\pdf\topologi-aljabar-unit-001-020-id.pdf') = @(1598235, '30fdde6ddfc937df3e93bb59d58e72e593c87262d6a2535214113e5ebab64457')
+    (Join-Path $lane 'output\ARTIFACT_MANIFEST_UNITS_001_020.csv') = @(249, 'd69c37838da4174ebb7dc4576392e813040d7f6ebbe1a13fe1c922e1271672da')
+    (Join-Path $lane 'qa\UNITS_001_020_BUILD_RECEIPT.json') = @(2812, '3c39b5546b2aced0a443c753e69824807c8e2f8c91903fe4eb3cca04741ecef1')
+    (Join-Path $lane 'qa\UNITS_001_020_VISUAL_QA.md') = @(1392, '6a8b4d8e31c4adf38fcf51606542f59366f6c5f58d878df65e49677376bf58f9')
+    $baseCss = @(1297, 'e5184827600116bc54e28df6822c5a98691d5edf88b7b102443b56024733cbe5')
+    $cumulativeCss = @(203, 'b0012d9f93e603997d48d49705ec9ccae2d3cd2d062b8b9f8717e908df1f5344')
+}
+foreach ($path in $baselineFrozen.Keys) {
+    if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Missing frozen Units 001-020 baseline input: $path" }
+    $want = $baselineFrozen[$path]
+    $item = Get-Item -LiteralPath $path
+    $digest = (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($item.Length -ne $want[0] -or $digest -ne $want[1]) { throw "Frozen Units 001-020 baseline mismatch: $path" }
+}
+
+$sources = @((Join-Path $lane 'source\id-ID\reader-unit-001.md')) + @(
+    2..21 | ForEach-Object { Join-Path $lane ("source\id-ID\units\unit-{0:000}-lecture-{0:000}.md" -f $_) }
+)
+$sourceExpected = @(
+    @(16179, 225, 'dccc7b727695d26d0b425c0eae22db1697cea93e295391fa7685fbca2d011dc7'),
+    @(25090, 674, '9aa5063c167cc0b2bc8a5edbc81cb36995606d5073a1afe22db608609ad29377'),
+    @(25822, 618, 'f757bc58ea6f0d0dbe37ebdb2e44da7d3814b32052d8e23a39331d66d1f025b2'),
+    @(24546, 632, '35aa8adfec6f7652f9a9f21f2c6b6656347309f866689a0939d6f0c517974ea3'),
+    @(22662, 663, '9d25dc7cd89c0c9f69841850b03489e742e8dc50c2e68ca405aff593ec128f90'),
+    @(32116, 893, '2276a34177100bc14e3e9f96461f6a7ab3bf27a25f652af4cc2d27493f420c8e'),
+    @(22107, 749, 'f93659dd290272ad3d526b74565f7bdc7316c366c09f1efaac599abde4cbc59d'),
+    @(28468, 930, '4b5c579a1891a99ddff89c458f9d653ec03973e0aaa32839c87be5896ab653a8'),
+    @(25524, 939, 'c6076a71d38ab54553a0bf5ed42289063044ebcbeb29689df220081e5621a8a1'),
+    @(26448, 934, 'ef76aedb378cb8a3d18a20f672082ee976561a877270082968e7df0a1514a8d5'),
+    @(28465, 959, '7acb205dd9f760631f7548208d77470e22cd208849439e2ad2a8eb4b2465b0f8'),
+    @(32850, 1024, 'b7ba7cad3d12605628693d57d50a41e06f40a6b7da1109752fe05d870b4b28f0'),
+    @(41196, 1306, 'f3827dc052a70930ad31cc6f9b1a745bf8a17bac31b4f9249cd178b06ac302b6'),
+    @(28488, 947, 'da6f18b455d76adafd8b9b648ed7c277958eca95c0b7d76a8bd9895d79ec6677'),
+    @(27725, 835, 'e9ab0565ae460236a69c77389b76d32405873156fc451be9cf95c3749e7fe9d1'),
+    @(33919, 984, '31dfc4c3647f7d6a1d398d2123efe1faa82348428df0180eee2a2358572f9054'),
+    @(29933, 952, '47576d7c26a436ba915c276b692e2bc0ead6fae038295fee3a82a50426ed9a96'),
+    @(44415, 1663, '9d0564f6a074441332e42755d46d9a0e858189a5ff4d8b5be52b1def12532598'),
+    @(57277, 1865, 'ba34773d63e4dc70fccdf4fa19fbdc8a397062a4bc359978f3261a70ff64f98c'),
+    @(45786, 1425, 'ed086dfe2f26951d4a1d1c398ade0224ffbf4bd1a20a985d267ecd97bbd228d3'),
+    @(26237, 786, '47fa3994dc59370fc464e9d150d62512a4602a3cffa5996f1027f93a427e0eec')
+)
+
+function Get-MarkdownBody([string]$path) {
+    $bytes = [IO.File]::ReadAllBytes($path)
+    if ($bytes -contains 13) { throw "CR byte in LF-frozen source: $path" }
+    $text = [Text.Encoding]::UTF8.GetString($bytes)
+    if (-not $text.StartsWith("---`n")) { throw "Missing YAML front matter: $path" }
+    $end = $text.IndexOf("`n---`n", 4, [StringComparison]::Ordinal)
+    if ($end -lt 0) { throw "Unclosed YAML front matter: $path" }
+    return $text.Substring($end + 5).TrimStart("`n")
+}
+
+for ($index = 0; $index -lt $sources.Count; $index++) {
+    $path = $sources[$index]
+    if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Missing cumulative source: $path" }
+    $bytes = [IO.File]::ReadAllBytes($path)
+    $text = [Text.Encoding]::UTF8.GetString($bytes)
+    $want = $sourceExpected[$index]
+    $digest = (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant()
+    if ($bytes.Length -ne $want[0] -or ([regex]::Matches($text, "`n")).Count -ne $want[1] -or $digest -ne $want[2]) {
+        throw "Cumulative source identity mismatch: $path"
+    }
+    if (-not $text.EndsWith("`n")) { throw "Missing final LF: $path" }
+    [void](Get-MarkdownBody $path)
+}
+
+# Unit 021 final-review gate and structural/privacy checks.
+$unit021Frozen = @{
+    $unit021Qa = @(3967, '8f3f11a101ea09c0321989594a4a505ba44f92b8bde732d9c493d3de66a423ca')
+    $unit021Review = @(2678, '44975beb96e04717fc92a9f2743a5fc73997f1d7139c75285743766fecfa9bfb')
+    $unit021Audit = @(3331, '38ba068dcf96a58dd76e951b8250cec33798e6aac744244fb1cf0e6db18ea650')
+}
+foreach ($path in $unit021Frozen.Keys) {
+    if (-not (Test-Path -LiteralPath $path -PathType Leaf)) { throw "Missing Unit 021 gate input: $path" }
+    $want = $unit021Frozen[$path]
+    if ((Get-Item -LiteralPath $path).Length -ne $want[0] -or (Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant() -ne $want[1]) {
+        throw "Unit 021 gate identity mismatch: $path"
+    }
+}
+$reviewText = [IO.File]::ReadAllText($unit021Review)
+if ($reviewText -notmatch '(?m)^- P1: 0\s*$' -or $reviewText -notmatch '(?m)^- P2: 0\s*$' -or $reviewText -notmatch '(?m)^- P3: 0\s*$' -or
+    $reviewText -notmatch '26,237 bytes, 786 LF lines') { throw 'Unit 021 independent review is not a zero-finding final snapshot.' }
+$qaText = [IO.File]::ReadAllText($unit021Qa)
+if ($qaText -notmatch '"status"\s*:\s*"PASS"' -or $qaText -notmatch '"model_provenance"\s*:\s*"OpenAI Codex gpt-5\.6-sol, Ultra"') {
+    throw 'Unit 021 QA is not a passing, model-attributed receipt.'
+}
+$unit021Text = [IO.File]::ReadAllText($unit021)
+foreach ($marker in @('TODO', 'TBD', 'FILL_AFTER', 'C:\Users\', 'C:/Users/', 'github_pat_', 'ghp_', 'sk-proj_', 'access_token')) {
+    if ($unit021Text.Contains($marker)) { throw "Private or placeholder marker in Unit 021: $marker" }
+}
+if (([regex]::Matches($unit021Text, '(?m)^::: \{')).Count -ne ([regex]::Matches($unit021Text, '(?m)^:::\s*$')).Count) { throw 'Unit 021 has unbalanced fenced divs.' }
+if (([regex]::Matches($unit021Text, '\$\$')).Count % 2 -ne 0) { throw 'Unit 021 has unbalanced display math.' }
+$unit021Ids = [regex]::Matches($unit021Text, '#(o012-[a-z0-9-]+)(?=[}\s])') | ForEach-Object { $_.Groups[1].Value }
+if ($unit021Ids.Count -ne 47 -or @($unit021Ids | Sort-Object -Unique).Count -ne 47) { throw 'Unit 021 stable-ID census mismatch.' }
+$blockKinds = 'boundary|construction|corollary|definition|example|exercise|fact|figure|lemma|note|proof|proposition|question|remark|theorem'
+$counts = @{}
+foreach ($match in [regex]::Matches($unit021Text, "(?m)^::: \{\.(?<kind>$blockKinds)\s+#o012-")) {
+    $kind = $match.Groups['kind'].Value
+    if ($counts.ContainsKey($kind)) { $counts[$kind] += 1 } else { $counts[$kind] = 1 }
+}
+$signature = (($counts.GetEnumerator() | Sort-Object Name | ForEach-Object { "$($_.Name)=$($_.Value)" }) -join ',')
+if ($signature -ne 'boundary=1,construction=2,definition=3,example=4,exercise=6,figure=2,remark=1') { throw "Unit 021 semantic-block mismatch: $signature" }
+
+$pandoc = (Get-Command pandoc -ErrorAction Stop).Source
+$versionLine = (& $pandoc --version | Select-Object -First 1)
+if ($versionLine -ne 'pandoc 3.9.0.2') { throw "Expected pandoc 3.9.0.2; found: $versionLine" }
+foreach ($dir in @($htmlDir, $pdfDir, $checkDir)) { New-Item -ItemType Directory -Path $dir -Force | Out-Null }
+
+$assembled = Join-Path $checkDir 'reader-units-001-021.md'
+$header = @'
+---
+title: "Topologi Aljabar - Unit 1-21"
+subtitle: "Homotopi, Ruang Penutup, Grup Fundamental, Kohomologi, Realisasi Geometrik, dan Triangulasi"
+author:
+  - "David Michael Roberts (materi sumber)"
+  - "Edisi Bahasa Indonesia dengan pendamping penguasaan"
+date: "23 Agustus 2026"
+lang: id-ID
+rights: "Materi adaptasi dan materi pendamping: CC BY 4.0; lihat atribusi pada setiap unit."
+provenance: "OpenAI Codex gpt-5.6-sol, Ultra; atas arahan pengguna; kredit penulis sumber dan kontributor manusia dipertahankan."
+source_authority: "DavidMichaelRoberts/AlgebraicTopology2019@b947ad2e9f9e301bfe24590a9db653bc54fa1a53"
+---
+
+'@
+$parts = foreach ($source in $sources) { (Get-MarkdownBody $source).TrimEnd("`n") }
+$payload = $header.Replace("`r`n", "`n") + ($parts -join "`n`n") + "`n"
+[IO.File]::WriteAllText($assembled, $payload, [Text.UTF8Encoding]::new($false))
+
+$semanticCss = Join-Path $checkDir 'semantic-cumulative.css'
+$semanticRules = @'
+*, *::before, *::after { box-sizing: border-box; }
+a, code { overflow-wrap: anywhere; }
+.theorem, .corollary, .fact { margin: 1.25rem 0; padding: .8rem 1rem; border-left: .3rem solid #315f8c; background: #f3f7fc; }
+.remark { margin: 1.25rem 0; padding: .8rem 1rem; border-left: .3rem solid #8a6a2f; background: #fffaf0; }
+.figure { margin: 1.25rem 0; padding: .8rem 1rem; border-left: .3rem solid #5d477a; background: #f8f5fc; }
+.boundary { margin: 1.25rem 0; padding: .8rem 1rem; border: .12rem solid #8a6a2f; background: #fffdf7; }
+@media (prefers-color-scheme: dark) { .theorem, .corollary, .fact, .remark, .figure, .boundary { background: #20242a; } }
+'@
+[IO.File]::WriteAllText($semanticCss, $semanticRules.Replace("`r`n", "`n"), [Text.UTF8Encoding]::new($false))
+
+$env:SOURCE_DATE_EPOCH = '1787443200'
+$env:FORCE_SOURCE_DATE = '1'
+$common = @(
+    $assembled,
+    '--from=markdown+fenced_divs+tex_math_dollars', '--standalone', '--toc', '--number-sections',
+    '--metadata=lang:id-ID', '--metadata=pagetitle:Topologi Aljabar - Unit 1-21',
+    '--metadata=provenance:OpenAI Codex gpt-5.6-sol, Ultra',
+    '--metadata=source-authority:DavidMichaelRoberts/AlgebraicTopology2019@b947ad2e9f9e301bfe24590a9db653bc54fa1a53',
+    '--strip-comments'
+)
+
+$htmlA = Join-Path $checkDir 'units-001-021-a.html'
+$htmlB = Join-Path $checkDir 'units-001-021-b.html'
+$htmlArgs = @('--to=html5', '--mathml', '--section-divs', "--css=$baseCss", "--css=$cumulativeCss", "--css=$semanticCss", '--embed-resources')
+& $pandoc @common @htmlArgs "--output=$htmlA"
+if ($LASTEXITCODE -ne 0) { throw "Pandoc HTML build A failed with exit $LASTEXITCODE" }
+& $pandoc @common @htmlArgs "--output=$htmlB"
+if ($LASTEXITCODE -ne 0) { throw "Pandoc HTML build B failed with exit $LASTEXITCODE" }
+$htmlHashA = (Get-FileHash -LiteralPath $htmlA -Algorithm SHA256).Hash.ToLowerInvariant()
+$htmlHashB = (Get-FileHash -LiteralPath $htmlB -Algorithm SHA256).Hash.ToLowerInvariant()
+if ($htmlHashA -ne $htmlHashB) { throw "HTML reproducibility failure: $htmlHashA != $htmlHashB" }
+
+$htmlText = [IO.File]::ReadAllText($htmlA)
+$domIds = [regex]::Matches($htmlText, '\bid="(?<id>[^"]+)"') | ForEach-Object { $_.Groups['id'].Value }
+$duplicateIds = @($domIds | Group-Object | Where-Object Count -gt 1)
+if ($duplicateIds.Count -ne 0) { throw "Duplicate HTML IDs: $($duplicateIds.Name -join ', ')" }
+$domIdSet = [Collections.Generic.HashSet[string]]::new([string[]]@($domIds))
+$fragmentLinks = [regex]::Matches($htmlText, '\bhref="#(?<id>[^"]+)"') | ForEach-Object { [Uri]::UnescapeDataString($_.Groups['id'].Value) }
+$missingFragments = @($fragmentLinks | Sort-Object -Unique | Where-Object { -not $domIdSet.Contains($_) })
+if ($missingFragments.Count -ne 0) { throw "Unresolved HTML fragment targets: $($missingFragments -join ', ')" }
+$missingUnit021Ids = @($unit021Ids | Where-Object { -not $domIdSet.Contains($_) })
+if ($missingUnit021Ids.Count -ne 0) { throw "Unit 021 IDs missing from HTML: $($missingUnit021Ids -join ', ')" }
+$htmlPlain = [Net.WebUtility]::HtmlDecode([regex]::Replace($htmlText, '(?s)<[^>]+>', ' '))
+$htmlNormalized = [regex]::Replace($htmlPlain, '\s+', ' ').Trim()
+if ($htmlText -notmatch '<html[^>]+lang="id-ID"' -or -not $htmlNormalized.Contains('OpenAI Codex gpt-5.6-sol, Ultra')) { throw 'HTML language or model provenance is missing.' }
+if ($htmlText -match '(?is)<script\b[^>]*\bsrc\s*=' -or $htmlText -match '(?is)<link\b[^>]*\bhref\s*=') { throw 'HTML has a runtime external script or stylesheet dependency.' }
+foreach ($marker in @('C:\Users\', 'C:/Users/', 'github_pat_', 'ghp_', 'sk-proj_', 'access_token', 'FILL_AFTER')) {
+    if ($htmlText.Contains($marker)) { throw "Private or placeholder marker in HTML: $marker" }
+}
+$mathmlNodes = ([regex]::Matches($htmlText, '<math\b')).Count
+$semanticFigures = ([regex]::Matches($htmlText, 'class="[^"]*\bfigure\b[^"]*"')).Count
+if ($mathmlNodes -le 0 -or $semanticFigures -le 0) { throw 'HTML lost MathML or semantic figures.' }
+Copy-Item -LiteralPath $htmlA -Destination $html -Force
+
+$pdfAssembled = Join-Path $checkDir 'reader-units-001-021-pdf.md'
+$inDisplayMath = $false
+$pdfLines = foreach ($line in ($payload -split "`n", 0, 'SimpleMatch')) {
+    if ($line.StartsWith('[') -and $inDisplayMath) { '{}'+$line } else { $line }
+    if (([regex]::Matches($line, '\$\$')).Count % 2 -eq 1) { $inDisplayMath = -not $inDisplayMath }
+}
+if ($inDisplayMath) { throw 'PDF transient assembly ended inside an unclosed display-math block.' }
+[IO.File]::WriteAllText($pdfAssembled, (($pdfLines -join "`n").TrimEnd("`n") + "`n"), [Text.UTF8Encoding]::new($false))
+$pdfCommon = @($common)
+$pdfCommon[0] = $pdfAssembled
+$pdfA = Join-Path $checkDir 'units-001-021-a.pdf'
+$pdfB = Join-Path $checkDir 'units-001-021-b.pdf'
+$pdfHeader = Join-Path $checkDir 'reader-units-001-021-header.tex'
+[IO.File]::WriteAllText($pdfHeader, "\providecommand{\sslash}{/\mkern-6mu/}`n", [Text.UTF8Encoding]::new($false))
+$pdfArgs = @('--pdf-engine=pdflatex', "--include-in-header=$pdfHeader", '--variable=papersize:a4', '--variable=geometry:margin=21mm', '--variable=fontsize:11pt', '--variable=colorlinks:true', '--variable=linkcolor:blue')
+& $pandoc @pdfCommon @pdfArgs "--output=$pdfA"
+if ($LASTEXITCODE -ne 0) { throw "Pandoc PDF build A failed with exit $LASTEXITCODE" }
+& $pandoc @pdfCommon @pdfArgs "--output=$pdfB"
+if ($LASTEXITCODE -ne 0) { throw "Pandoc PDF build B failed with exit $LASTEXITCODE" }
+$pdfHashA = (Get-FileHash -LiteralPath $pdfA -Algorithm SHA256).Hash.ToLowerInvariant()
+$pdfHashB = (Get-FileHash -LiteralPath $pdfB -Algorithm SHA256).Hash.ToLowerInvariant()
+if ($pdfHashA -ne $pdfHashB) { throw "PDF reproducibility failure: $pdfHashA != $pdfHashB" }
+Copy-Item -LiteralPath $pdfA -Destination $pdf -Force
+
+$rows = foreach ($artifact in @($html, $pdf)) {
+    $item = Get-Item -LiteralPath $artifact
+    $relative = [IO.Path]::GetRelativePath($lane, $item.FullName).Replace('\', '/')
+    $digest = (Get-FileHash -LiteralPath $item.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
+    "$relative,$($item.Length),$digest"
+}
+[IO.File]::WriteAllText($manifestPath, "path,bytes,sha256`n" + (($rows | Sort-Object) -join "`n") + "`n", [Text.UTF8Encoding]::new($false))
+
+Remove-Item -LiteralPath $htmlA, $htmlB, $pdfA, $pdfB, $assembled, $pdfAssembled, $semanticCss, $pdfHeader -Force
+Remove-Item -LiteralPath $checkDir -Force
+
+[pscustomobject]@{
+    status = 'PASS'
+    html = $html
+    html_bytes = (Get-Item -LiteralPath $html).Length
+    html_sha256 = $htmlHashA
+    html_unique_ids = @($domIds | Sort-Object -Unique).Count
+    html_fragment_links = $fragmentLinks.Count
+    html_mathml_nodes = $mathmlNodes
+    html_semantic_figures = $semanticFigures
+    unit_021_ids = $unit021Ids.Count
+    pdf = $pdf
+    pdf_bytes = (Get-Item -LiteralPath $pdf).Length
+    pdf_sha256 = $pdfHashA
+    manifest = $manifestPath
+    manifest_sha256 = (Get-FileHash -LiteralPath $manifestPath -Algorithm SHA256).Hash.ToLowerInvariant()
+    pandoc = $versionLine
+    source_date_epoch = $env:SOURCE_DATE_EPOCH
+    model_provenance = 'OpenAI Codex gpt-5.6-sol, Ultra'
+    source_authority = 'DavidMichaelRoberts/AlgebraicTopology2019@b947ad2e9f9e301bfe24590a9db653bc54fa1a53'
+}
