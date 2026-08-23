@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "status": "pass",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "commit": "3a9db22813fc93e9cbd7f65a418ba634a24af959",
+  "tree": "56df67af20c581a5ab277350ba597c149b242407",
+  "pushed_from": "3c8d997fead432cc2c9f23c03f3bcbaf47f17f6b",
+  "raw_readback": [
+    {"path": "source/id-ID/units/unit-019-lecture-019.md", "status": 200, "bytes": 57277, "sha256": "ba34773d63e4dc70fccdf4fa19fbdc8a397062a4bc359978f3261a70ff64f98c"},
+    {"path": "output/html/units-001-019/index.html", "status": 200, "bytes": 2962478, "sha256": "ea5481b14dc1772408bd1c3e384b94a18eed9f2be3c9b9379fe4f8dd499253e0"},
+    {"path": "output/pdf/topologi-aljabar-unit-001-019-id.pdf", "status": 200, "bytes": 1506471, "sha256": "291e4206b9e58ee8a49108e55b6b894b9cd3362c7701a50cb83a7d79714b7a86"},
+    {"path": "qa/UNITS_001_019_QA.json", "status": 200, "bytes": 12097, "sha256": "38f8f3084f6031fe3670667e7e9a11f2b526a07eb69d32772194c3ff0ffeb02d"},
+    {"path": "backend/units.jsonl", "status": 200, "bytes": 879865, "sha256": "e88c8dfca31e77a115e6251db21f4e485d569beec8d9f1909dafa9ad0a485cf3"},
+    {"path": "00_control/CURSOR.json", "status": 200, "bytes": 2790, "sha256": "911306bbc240c1ff436a0e2d971b25f480a6cb498ae592776dd40d8d95c2c8fc"},
+    {"path": ".github/workflows/pages.yml", "status": 200, "bytes": 2943, "sha256": "6efb9a107dbcbc2dfe44505e20f2e4ae41e7515111fb3d202ee6469d7ab4f1e3"}
+  ],
+  "pages_readback": {
+    "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-019/",
+    "status": 200,
+    "bytes": 2962478,
+    "sha256": "ea5481b14dc1772408bd1c3e384b94a18eed9f2be3c9b9379fe4f8dd499253e0"
+  },
+  "workflow": "pages.yml allowlist and byte check passed for the new cumulative HTML; old frozen reader paths remain included.",
+  "anonymous": true,
+  "credentials_recorded": false,
+  "provenance": "Published by Codex at the user's direction; source author and human direction remain credited in ATTRIBUTION.md.",
+  "non_endorsement": "Independent Indonesian edition; no source-author or institutional endorsement is implied."
+}
