@@ -37,11 +37,13 @@ prompt and add only the missing separately marked mastery layer; independently
 review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–021 now cover
 `Notes.tex:134–4500`; Unit 21 is 26,237 bytes/786 LF lines/47 stable IDs and
 SHA-256 `47fa3994dc59370fc464e9d150d62512a4602a3cffa5996f1027f93a427e0eec`.
-Its cumulative HTML/PDF and append-only backend boundary are locally verified;
-publish that coherent GitHub boundary and anonymously read it back. Unit 22's
+Its cumulative HTML/PDF and append-only backend boundary are public on GitHub
+at commit `dced81432b21edd7bffeae33a25e0c678de4d896`; all 38 files and the
+Pages reader were anonymously read back exactly. Unit 22's
 source translation is safely frozen at `Notes.tex:4501–4938`, 44,066 bytes,
 SHA-256 `0857e51568d77c811d5d79255ac75bfddc87a04b27356ae457d4e66eeffb7d0d`,
-but remains outside the Unit 21 commit until its own backend/build admission.
+remained outside the Unit 21 commit and is now the immediate backend/build
+admission target.
 The next intact upstream marker is Lecture 23 at line 4939. Zenodo is publicly
 current through version `0.20.0`, DOI `10.5281/zenodo.22071667`; do not create a
 duplicate or spam a one-unit DOI update. Figshare remains blocked by the

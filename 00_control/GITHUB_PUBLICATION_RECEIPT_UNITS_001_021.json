@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-GITHUB-PUBLICATION-UNITS-001-021",
+  "status": "pushed_deployed_and_anonymously_byte_verified",
+  "verified_at": "2026-08-23T21:51:15+02:00",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "content_commit": "dced81432b21edd7bffeae33a25e0c678de4d896",
+  "tree": "758121e256ae28da17f0968dbffc2fbafd2ecdc6",
+  "remote_ref_at_verification": "dced81432b21edd7bffeae33a25e0c678de4d896",
+  "content_commit_files": 38,
+  "content_commit_manifest_sha256": "f9c38dc87e9a69a1c6ea6b005c07eb3ac0328707921b863306bfbc558d4d984b",
+  "files": [
+    {
+      "path": ".github/workflows/pages.yml",
+      "bytes": 3265,
+      "sha256": "c149238cb0e847e9f8eef9f8f3c24b632f0524106d61fc5594c20daefb19c870",
+      "remote_exact": true
+    },
+    {
+      "path": "00_control/ADVERSE_LEDGER.csv",
+      "bytes": 89705,
+      "sha256": "5b744284cc4e0951c9ea1ce9120a75663c26dab0ecad27eca66a1282bc382ed2",
+      "remote_exact": true
+    },
+    {
+      "path": "00_control/CURRENT_GOAL_AND_WORKFLOW.md",
+      "bytes": 5087,
+      "sha256": "51442552c2c41db9227f01f511308ad9cfe5820c6d8b5f9ed78c78244875d94e",
+      "remote_exact": true
+    },
+    {
+      "path": "00_control/CURRENT_STATE.md",
+      "bytes": 40021,
+      "sha256": "5044f90fdc18cf158f091d95b420fd1c888a9d3b43e2f1489402778ceb0ab859",
+      "remote_exact": true
+    },
+    {
+      "path": "00_control/CURSOR.json",
+      "bytes": 4192,
+      "sha256": "1e585386e4759d6448b4f9ebd0ac7068fc400f00856711cc8f0c901df2f0ebf4",
+      "remote_exact": true
+    },
+    {
+      "path": "00_control/TERMINOLOGY.csv",
+      "bytes": 29474,
+      "sha256": "a1a4d192a4fda2cc137cae51eb992a3e00c8edcedb1eddf811f6bb818097b857",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/artifacts.jsonl",
+      "bytes": 83103,
+      "sha256": "1708f7276cb28e295d578c8e4411618291c7294c8faee863c89461c63378a978",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/assets.jsonl",
+      "bytes": 14215,
+      "sha256": "623f8d7948504405fb8f57379987136e5f89297f0152f3eb9408cab6a3ed153c",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/concepts.jsonl",
+      "bytes": 90816,
+      "sha256": "b05d4ec9646338ea76991eb08d5a260a087699a76d51fde507b0c5583b5921bb",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/corrections.jsonl",
+      "bytes": 280684,
+      "sha256": "7c06a04c7072051d28879297291d37bccca70c132339c8226e889701dc1de835",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/qa.jsonl",
+      "bytes": 56340,
+      "sha256": "249c2f6110269d1daef7fff472e4fb17c2f7060b8cd39f662884fd8bba0f0145",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/relations.jsonl",
+      "bytes": 114295,
+      "sha256": "3a1b930dbe14992819fcaeca39edb96e915641e62247a2e7ea879809a998c2e9",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/rights.jsonl",
+      "bytes": 49832,
+      "sha256": "1dca76e63699015d393009a8ed263ea4f1adb4e9be3a9668aae8e19bdcf55524",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/segments.jsonl",
+      "bytes": 982695,
+      "sha256": "e3fc479798493bad011f36e302cd4da7b0daa48f45252d7095dc10adc50b3530",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/terms.jsonl",
+      "bytes": 171661,
+      "sha256": "f6bb58da10c5970087c4ff2074b25163a3a3bd6e0f820f9df0782a4e00490deb",
+      "remote_exact": true
+    },
+    {
+      "path": "backend/units.jsonl",
+      "bytes": 1050067,
+      "sha256": "7851c5a529337802a6eb62f7aa51d107c38e18ecf8299fcfc86d6dc5b87c46a6",
+      "remote_exact": true
+    },
+    {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_021.csv",
+      "bytes": 249,
+      "sha256": "40386b62066854272e8902c1f2c886a78de2c98f0dce845cbf6179c845bf1498",
+      "remote_exact": true
+    },
+    {
+      "path": "output/html/units-001-021/index.html",
+      "bytes": 3306661,
+      "sha256": "aec7e94d3697a7feeae87134da983c59faaf29dc8d961bca28b6bfa9c53cdfa6",
+      "remote_exact": true
+    },
+    {
+      "path": "output/pdf/topologi-aljabar-unit-001-021-id.pdf",
+      "bytes": 1645350,
+      "sha256": "aee3f74109bafd1614d01d6593b8b2edbcbfdbf3b841b6beee878a01d7ddec16",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_021_CUMULATIVE_RECEIPT.json",
+      "bytes": 6803,
+      "sha256": "b6411739c9a13090f45c3db276af443e8a0f7ff61f9a6b2f0611c2ce77b09437",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_021_CUMULATIVE_RECEIPT.md",
+      "bytes": 4218,
+      "sha256": "0f4f7e5bf1bfdabfbe34c253a48b34bc190c72dbc7046b078332302ba8da4d8e",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_021_RECEIPT.json",
+      "bytes": 5319,
+      "sha256": "f9eb74a96bbea0f419694511c4759ef03660667719871c094e281c16ad082997",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_021_RECEIPT.md",
+      "bytes": 3003,
+      "sha256": "5d5e413930bc1b3d8c338b849a55cc75cd7becf042eccd2e636a3ee5d9d725e0",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/INDONESIAN_TERMINOLOGY_QA_2026-08-23.json",
+      "bytes": 3802,
+      "sha256": "52cc8b4da52bccb9db9e7f492412d8235c53e62faaf286e5c65372e0eee54592",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/INDONESIAN_TERMINOLOGY_QA_2026-08-23.md",
+      "bytes": 3956,
+      "sha256": "00af36c1eea14c5fc56203c76825a198e06ca3b49038b13dec77fc71cdba18c6",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNITS_001_021_BUILD_RECEIPT.json",
+      "bytes": 3850,
+      "sha256": "e3afdb61c3787eac1b84601609a89eadb34e9eee5b9c5481ba18c5e441a51032",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNITS_001_021_VISUAL_QA.md",
+      "bytes": 3350,
+      "sha256": "f42bc668ab68a3f05993ac4d56a565160f4a94a417f656dd3f29f1e12475c6fa",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNIT_021_INDEPENDENT_REVIEW.md",
+      "bytes": 2678,
+      "sha256": "44975beb96e04717fc92a9f2743a5fc73997f1d7139c75285743766fecfa9bfb",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNIT_021_QA.json",
+      "bytes": 3967,
+      "sha256": "8f3f11a101ea09c0321989594a4a505ba44f92b8bde732d9c493d3de66a423ca",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNIT_021_SOURCE_AUDIT.md",
+      "bytes": 3331,
+      "sha256": "38ba068dcf96a58dd76e951b8250cec33798e6aac744244fb1cf0e6db18ea650",
+      "remote_exact": true
+    },
+    {
+      "path": "qa/UNIT_021_TRANSLATION_HANDOFF.md",
+      "bytes": 1935,
+      "sha256": "9fa065b56a70abec8c54112515cf3425407a8bb32823c40f1d745a7705e5d466",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/append-cumulative-unit-021-artifacts.py",
+      "bytes": 15298,
+      "sha256": "45ffb6543fe84114a6c1f3f9eff342e3d41941cd57332893230c4fd2f2c7c656",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/build-units-001-021.ps1",
+      "bytes": 17129,
+      "sha256": "f0678ae5af4d08059747106a9711a3a63139dc3782a36de28d2041643e075eec",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/extend-backend-unit-021.py",
+      "bytes": 32664,
+      "sha256": "f7cf705cca20e8ccfe940ee37a5358fe353c41ad7f0e6bcd11194cfd5e42a6a9",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/qa-unit-021.py",
+      "bytes": 19783,
+      "sha256": "6039f254104d713c31f95650b627135154e08541a7d596643118977447002837",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/validate-backend-append-only-unit-021-cumulative.py",
+      "bytes": 13903,
+      "sha256": "f7e8d3f76e8f09b576594d5cb212819447c75431b04fd44b6daa9547b8ef104a",
+      "remote_exact": true
+    },
+    {
+      "path": "scripts/validate-backend-append-only-unit-021.py",
+      "bytes": 14677,
+      "sha256": "7584360b5c3fc706bf7436c8de594ee9c21695cbb5a41ccbcad3502510b8b533",
+      "remote_exact": true
+    },
+    {
+      "path": "source/id-ID/units/unit-021-lecture-021.md",
+      "bytes": 26237,
+      "sha256": "47fa3994dc59370fc464e9d150d62512a4602a3cffa5996f1027f93a427e0eec",
+      "remote_exact": true
+    }
+  ],
+  "pages": {
+    "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-021/",
+    "bytes": 3306661,
+    "sha256": "aec7e94d3697a7feeae87134da983c59faaf29dc8d961bca28b6bfa9c53cdfa6",
+    "remote_exact": true,
+    "workflow_run_id": 32662474151,
+    "workflow_run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32662474151",
+    "job_id": 97250635604,
+    "deployment_id": 6052011091,
+    "deployment_status_id": 17201415972,
+    "conclusion": "success"
+  },
+  "backend": {
+    "records": 3111,
+    "bytes": 2896429,
+    "bundle_sha256": "cf5acacf3ad2351869297dd8d3827787377422fa30c8c1385e60833b23913db9"
+  },
+  "zenodo_state": {
+    "public_through_unit": 20,
+    "record_id": 22071667,
+    "doi": "10.5281/zenodo.22071667",
+    "concept_doi": "10.5281/zenodo.22061489",
+    "unit_021_update_deliberately_deferred": "one-unit delta is not a substantial DOI boundary"
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "source_and_human_credit_preserved": true,
+  "upstream_contacted": false,
+  "unit_022_included": false
+}
