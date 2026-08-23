@@ -34,20 +34,16 @@ For each lecture: freeze span/census; translate everything in order; reflow
 margins/diagrams accessibly; log only independently verified corrections in
 `ADVERSE_LEDGER.csv`; assign stable IDs; update `TERMINOLOGY.csv`; solve every
 prompt and add only the missing separately marked mastery layer; independently
-review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–021 now cover
-`Notes.tex:134–4500`; Unit 21 is 26,237 bytes/786 LF lines/47 stable IDs and
-SHA-256 `47fa3994dc59370fc464e9d150d62512a4602a3cffa5996f1027f93a427e0eec`.
-Its cumulative HTML/PDF and append-only backend boundary are public on GitHub
-at commit `dced81432b21edd7bffeae33a25e0c678de4d896`; all 38 files and the
-Pages reader were anonymously read back exactly. Unit 22's
-source translation is safely frozen at `Notes.tex:4501–4938`, 44,066 bytes,
-SHA-256 `0857e51568d77c811d5d79255ac75bfddc87a04b27356ae457d4e66eeffb7d0d`,
-remained outside the Unit 21 commit and is now the immediate backend/build
-admission target.
-The next intact upstream marker is Lecture 23 at line 4939. Zenodo is publicly
-current through version `0.20.0`, DOI `10.5281/zenodo.22071667`; do not create a
-duplicate or spam a one-unit DOI update. Figshare remains blocked by the
-recorded `InactiveAccount` response. Continue through Roberts Lecture 30,
+review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–022 now cover
+`Notes.tex:134–4938`. Unit 22 is 44,066 bytes/1,349 LF lines/75 stable IDs,
+SHA-256 `0857e51568d77c811d5d79255ac75bfddc87a04b27356ae457d4e66eeffb7d0d`.
+Its cumulative 261-page PDF, self-contained HTML, and 3,337-record append-only
+backend are verified locally; publish this coherent boundary to the existing
+GitHub and Zenodo lineages, anonymously read back every claimed byte, then
+continue at Lecture 23, `Notes.tex:4939`. Zenodo is currently public through
+version `0.20.0`, DOI `10.5281/zenodo.22071667`, so the Unit 22 release is a
+two-lecture substantial update, not a duplicate. Figshare remains blocked by
+the recorded `InactiveAccount` response. Continue through Roberts Lecture 30,
 then the bounded Fomberg bridge and closure.
 
 ## Backend, QA, and publication gates

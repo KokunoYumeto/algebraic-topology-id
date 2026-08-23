@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L22-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 4501,
+    "line_end": 4938,
+    "bytes": 331447,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_bytes": 20585,
+    "span_sha256": "86275c590cfcdf8519d3ce8d077fc48619bb94c3fdf039ca805ae4b7df995b7f",
+    "raw_through_next_marker_bytes": 20668,
+    "raw_through_next_marker_sha256": "de8b63537d295d5a6d85591be81863ae4416a14323b13b1517153465f0cb9a12"
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-022-lecture-022.md",
+    "bytes": 44066,
+    "lines": 1349,
+    "sha256": "0857e51568d77c811d5d79255ac75bfddc87a04b27356ae457d4e66eeffb7d0d",
+    "stable_ids": 75
+  },
+  "checks": [
+    {
+      "check": "required_files",
+      "status": "PASS",
+      "detail": "all bounded Unit 22 inputs exist"
+    },
+    {
+      "check": "source_identity",
+      "status": "PASS",
+      "detail": "Notes.tex 331,447 bytes/6,368 lines; SHA-256 cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:4501-4938; next marker line 4939; span SHA-256 86275c590cfcdf8519d3ce8d077fc48619bb94c3fdf039ca805ae4b7df995b7f"
+    },
+    {
+      "check": "source_census",
+      "status": "PASS",
+      "detail": "{\"align\": 0, \"align_star\": 4, \"cases\": 1, \"center\": 1, \"construction\": 0, \"definition\": 6, \"display\": 8, \"enumerate\": 0, \"example\": 11, \"exercise\": 0, \"label\": 2, \"lemma\": 5, \"margin\": 5, \"proof\": 3, \"ref\": 1, \"remark\": 3, \"tikz\": 2, \"xypic\": 3}"
+    },
+    {
+      "check": "unit_identity_encoding",
+      "status": "PASS",
+      "detail": "44,066 bytes/1,349 LF lines; SHA-256 0857e51568d77c811d5d79255ac75bfddc87a04b27356ae457d4e66eeffb7d0d"
+    },
+    {
+      "check": "math_portability",
+      "status": "PASS",
+      "detail": "all dollar delimiters are line-local; no bare proof closure, malformed qquad, or literal Unicode Greek in math"
+    },
+    {
+      "check": "provenance_and_terminology",
+      "status": "PASS",
+      "detail": "source range, author, rights, non-endorsement, model, and admitted terms present"
+    },
+    {
+      "check": "privacy",
+      "status": "PASS",
+      "detail": "no credential or local-user-path markers"
+    },
+    {
+      "check": "stable_ids",
+      "status": "PASS",
+      "detail": "75 unique IDs"
+    },
+    {
+      "check": "structural_inventory",
+      "status": "PASS",
+      "detail": "{\"boundary\": 1, \"definition\": 6, \"example\": 11, \"exercise\": 6, \"figure\": 5, \"hint\": 6, \"lemma\": 5, \"proof\": 3, \"remark\": 3, \"solution\": 6, \"source-audit\": 10, \"source-margin\": 5}"
+    },
+    {
+      "check": "source_labels_and_reference",
+      "status": "PASS",
+      "detail": "both source labels and the active cylinder reference are preserved"
+    },
+    {
+      "check": "accessibility_reflow",
+      "status": "PASS",
+      "detail": "two TikZ and three Xy-pic relationships are semantic figures; five margins are in reading order"
+    },
+    {
+      "check": "pandoc_structural_ids",
+      "status": "PASS",
+      "detail": "all 75 IDs survive Pandoc; exit 0; no warnings"
+    },
+    {
+      "check": "mastery_closure",
+      "status": "PASS",
+      "detail": "six edition-original problem/hint/full-solution triples"
+    },
+    {
+      "check": "mathematical_and_language_repairs",
+      "status": "PASS",
+      "detail": "simplex names, typed relations, all-face differential, Noetherian/product semantics, coefficient qualifications, and source corrections present"
+    },
+    {
+      "check": "source_review_handoff_binding",
+      "status": "PASS",
+      "detail": "audit, review, and handoff bind the final Unit 22 hash"
+    },
+    {
+      "check": "terminology_and_ledger",
+      "status": "PASS",
+      "detail": "TERM tail=300; ADV tail=311; Unit 22 controls present"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

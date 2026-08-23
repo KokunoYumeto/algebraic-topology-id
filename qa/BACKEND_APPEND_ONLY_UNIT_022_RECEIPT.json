@@ -1,0 +1,138 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-BACKEND-UNIT-022-APPEND-ONLY",
+  "status": "PASS",
+  "date": "2026-08-23",
+  "scope": "Frozen Unit 22 semantic/source/rights/QA admission only; no cumulative build artifacts",
+  "immutability": {
+    "prefix_records": 3111,
+    "prefix_bytes": 2896429,
+    "prefix_bundle_sha256": "cf5acacf3ad2351869297dd8d3827787377422fa30c8c1385e60833b23913db9",
+    "prefix_preserved_byte_for_byte": true,
+    "prefix_record_counts": {
+      "artifacts.jsonl": 106,
+      "assets.jsonl": 23,
+      "authority.jsonl": 4,
+      "concepts.jsonl": 289,
+      "corrections.jsonl": 288,
+      "qa.jsonl": 99,
+      "relations.jsonl": 284,
+      "rights.jsonl": 55,
+      "segments.jsonl": 830,
+      "terms.jsonl": 282,
+      "units.jsonl": 851
+    }
+  },
+  "append": {
+    "records_added": 211,
+    "records_by_file": {
+      "artifacts.jsonl": 4,
+      "assets.jsonl": 1,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 8,
+      "corrections.jsonl": 14,
+      "qa.jsonl": 3,
+      "relations.jsonl": 19,
+      "rights.jsonl": 3,
+      "segments.jsonl": 75,
+      "terms.jsonl": 8,
+      "units.jsonl": 76
+    },
+    "canonical_jsonl": true,
+    "suffix_sorted_within_transaction": true,
+    "cumulative_build_artifacts_added": 0,
+    "rights_component_id": "rights:o012-units-001-022-composite-cc-by-4.0"
+  },
+  "current": {
+    "total_records": 3322,
+    "total_bytes": 3166412,
+    "bundle_sha256": "2329606117578210ce927123ec01639390f2e493fcc995899606eaa38996f2bc",
+    "files": {
+      "artifacts.jsonl": {"records": 110, "bytes": 86473, "sha256": "5d16598495a6df0a0855f6c413cc78def50cf653d30c6699bcef5b5455cb72ea"},
+      "assets.jsonl": {"records": 24, "bytes": 14831, "sha256": "69020caaf45628941c57ee5cf58f3c11a31505c3416ec9d65c9ac82b47ba97aa"},
+      "authority.jsonl": {"records": 4, "bytes": 2721, "sha256": "f21af26912520ab34b38dff0e927ed46a546dbe5d318da0dc133e58330d0e368"},
+      "concepts.jsonl": {"records": 297, "bytes": 93358, "sha256": "2e8f93bfa8b7622960716b8a6bd33811c630c877696c5cbf031cb14eadfa110b"},
+      "corrections.jsonl": {"records": 302, "bytes": 295241, "sha256": "718a14732930b546a3c38bf2e131d23066b2f90f09d4dd80a781294296f5cbc6"},
+      "qa.jsonl": {"records": 102, "bytes": 57849, "sha256": "86591e4710dcf61a1cc29c1ad94187b5d4bd362f4df8d9e7d63ac14bbb88dfaf"},
+      "relations.jsonl": {"records": 303, "bytes": 122094, "sha256": "8c28ab28cfbe752f32c95746355dde648fa7b005d0f1d4550c3933e1d804fa28"},
+      "rights.jsonl": {"records": 58, "bytes": 52476, "sha256": "2aaf92fd5c0853ddaea495ca7e3a20caba6de445193d9f5888e38523bc359434"},
+      "segments.jsonl": {"records": 905, "bytes": 1094552, "sha256": "491b68e826f0221353d7a7782515be769fc8048e468bba5937c797ca0390bb8c"},
+      "terms.jsonl": {"records": 290, "bytes": 177339, "sha256": "bf1c79fc4bbaf0a9bd71545f4d69d9dc36dcb728f23710ad33a9bf9791421695"},
+      "units.jsonl": {"records": 927, "bytes": 1169478, "sha256": "56fdf925d6e547b4a936d4ac7fb483cdbd9d845ac292989a7162efae108fcf8f"}
+    }
+  },
+  "source": {
+    "path": "source/id-ID/units/unit-022-lecture-022.md",
+    "bytes": 44066,
+    "lines": 1349,
+    "sha256": "0857e51568d77c811d5d79255ac75bfddc87a04b27356ae457d4e66eeffb7d0d",
+    "stable_ids": 75,
+    "authority_path": "Notes.tex",
+    "authority_line_start": 4501,
+    "authority_line_end": 4938,
+    "authority_span_bytes": 20585,
+    "authority_span_sha256": "86275c590cfcdf8519d3ce8d077fc48619bb94c3fdf039ca805ae4b7df995b7f",
+    "raw_through_next_marker_sha256": "de8b63537d295d5a6d85591be81863ae4416a14323b13b1517153465f0cb9a12"
+  },
+  "control_closure": {
+    "terminology": "O012-TERM-0293..0300",
+    "adverse": "O012-ADV-0298..0311",
+    "mastery_problem_hint_solution_triples": 6,
+    "source_exercise_proof_completed": "unit:o012-rbt-l22-proof-002",
+    "source_exercise_proof_rights": "rights:o012-u022-companion-cc-by-4.0"
+  },
+  "qa": {
+    "generic_schema": "PASS",
+    "referential_integrity": "PASS",
+    "artifact_manifest_integrity": "PASS",
+    "prefix_immutability": "PASS",
+    "canonical_suffix_order": "PASS",
+    "stable_id_and_locator_closure": "PASS",
+    "hierarchy_and_sibling_order": "PASS",
+    "terminology_and_adverse_closure": "PASS",
+    "proof_and_mastery_closure": "PASS",
+    "rights_and_provenance": "PASS"
+  },
+  "transaction_scripts": {
+    "producer": {
+      "path": "scripts/extend-backend-unit-022.py",
+      "bytes": 33107,
+      "lines": 616,
+      "sha256": "f0950038713c4ed9bbfeb08588ec5a237f561237f446efa04cdf8c3785cf7a2e"
+    },
+    "validator": {
+      "path": "scripts/validate-backend-append-only-unit-022.py",
+      "bytes": 17313,
+      "lines": 316,
+      "sha256": "3ca78febd9181e0d8a83c6e3d1616bbf73312e823c38128d46b2b4e2148d0761",
+      "status": "PASS"
+    }
+  },
+  "human_receipt": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_022_RECEIPT.md",
+    "bytes": 3518,
+    "lines": 70,
+    "sha256": "1d722546edc13675159554bc602c6732fa1df5eb2431830500d37679f2a5e556"
+  },
+  "write_boundary": [
+    "backend/artifacts.jsonl",
+    "backend/assets.jsonl",
+    "backend/concepts.jsonl",
+    "backend/corrections.jsonl",
+    "backend/qa.jsonl",
+    "backend/relations.jsonl",
+    "backend/rights.jsonl",
+    "backend/segments.jsonl",
+    "backend/terms.jsonl",
+    "backend/units.jsonl",
+    "scripts/extend-backend-unit-022.py",
+    "scripts/validate-backend-append-only-unit-022.py",
+    "qa/BACKEND_APPEND_ONLY_UNIT_022_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_UNIT_022_RECEIPT.md"
+  ],
+  "source_changed": false,
+  "controls_or_ledgers_changed": false,
+  "current_state_or_cursor_changed": false,
+  "git_output_release_or_publication_changed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

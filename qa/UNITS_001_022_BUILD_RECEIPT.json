@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-UNITS-001-022-BUILD",
+  "status": "PASS",
+  "scope": "Roberts Indonesian reader Units 001-022",
+  "source_authority": {
+    "repository": "DavidMichaelRoberts/AlgebraicTopology2019",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "source_file": "Notes.tex",
+    "unit_022_span": "4501-4938",
+    "unit_022_span_bytes": 20585,
+    "unit_022_span_sha256": "86275c590cfcdf8519d3ce8d077fc48619bb94c3fdf039ca805ae4b7df995b7f",
+    "unit_022_bytes": 44066,
+    "unit_022_lines": 1349,
+    "unit_022_sha256": "0857e51568d77c811d5d79255ac75bfddc87a04b27356ae457d4e66eeffb7d0d"
+  },
+  "frozen_baseline": {
+    "scope": "Units 001-021",
+    "builder": "scripts/build-units-001-021.ps1",
+    "builder_sha256": "f0678ae5af4d08059747106a9711a3a63139dc3782a36de28d2041643e075eec",
+    "html_sha256": "aec7e94d3697a7feeae87134da983c59faaf29dc8d961bca28b6bfa9c53cdfa6",
+    "pdf_sha256": "aee3f74109bafd1614d01d6593b8b2edbcbfdbf3b841b6beee878a01d7ddec16",
+    "manifest_sha256": "40386b62066854272e8902c1f2c886a78de2c98f0dce845cbf6179c845bf1498",
+    "build_receipt_sha256": "e3afdb61c3787eac1b84601609a89eadb34e9eee5b9c5481ba18c5e441a51032",
+    "visual_receipt_sha256": "f42bc668ab68a3f05993ac4d56a565160f4a94a417f656dd3f29f1e12475c6fa",
+    "verified_without_rewrite": true
+  },
+  "toolchain": {
+    "builder": "scripts/build-units-001-022.ps1",
+    "builder_bytes": 18956,
+    "builder_sha256": "6d3ada82dbc5afbcec8b394c64694e392ceae55db165a8363d88b8c57b1464b7",
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_engine": "MiKTeX pdfTeX-1.40.29",
+    "source_date_epoch": 1787443200,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "reproducibility": {
+    "html_two_builds_byte_identical": true,
+    "pdf_two_builds_byte_identical": true,
+    "source_and_baseline_inputs_fail_closed": true,
+    "pandoc_html_warnings_are_fatal": true
+  },
+  "artifacts": {
+    "html": {
+      "path": "output/html/units-001-022/index.html",
+      "bytes": 3520527,
+      "sha256": "15938aac7515e4ad7de66f8cf2d825744f9eb08b654165b835bfeace31aef8f4"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-022-id.pdf",
+      "bytes": 1728316,
+      "sha256": "5dabcbdc98fdc7203ca2fe4f42aff86b9e3cb761136f676e0dd43b350768fb77",
+      "pages": 261,
+      "page_size": "A4",
+      "page_rotation": 0,
+      "fonts": 25,
+      "all_fonts_embedded_subset_tounicode": true,
+      "catalog_lang": "id-ID",
+      "tagged": false,
+      "encrypted": false,
+      "forms": false,
+      "widget_annotations": 0,
+      "javascript": false,
+      "suspects": false
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_022.csv",
+      "bytes": 249,
+      "sha256": "3a79a520d0281504edd2449fdfd13c5a874ec675f8187a9e6cb516a760ef35c8"
+    }
+  },
+  "html_checks": {
+    "unique_dom_ids": 1167,
+    "duplicate_dom_ids": 0,
+    "fragment_links": 264,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 8701,
+    "raw_tex_math_fallbacks": 0,
+    "semantic_figures": 55,
+    "unit_022_ids": 75,
+    "missing_unit_022_ids": 0,
+    "runtime_external_scripts_or_stylesheets": 0,
+    "lang": "id-ID",
+    "model_provenance_present_after_text_normalization": true,
+    "centered_reader_width": "min(100%, 72rem)",
+    "responsive_mobile_reflow": true,
+    "responsive_overflow_for_math_tables_and_links": true
+  },
+  "privacy_checks": {
+    "html_forbidden_markers": 0,
+    "pdf_unit_022_pages_scanned": "247-261",
+    "pdf_unit_022_forbidden_markers": 0,
+    "pdf_model_provenance_present": true,
+    "pdf_terminal_boundary_present": true,
+    "credentials_recorded": false,
+    "absolute_local_user_paths_recorded": false
+  },
+  "visual_checks": {
+    "receipt": "qa/UNITS_001_022_VISUAL_QA.md",
+    "pages": [1, 123, 246, 247, 249, 250, 253, 258, 260, 261],
+    "render_dpi": 120,
+    "result": "PASS after the recorded HTML-only semantic-diagram MathML repair"
+  },
+  "defect_resolution": {
+    "scope": "new cumulative builder only",
+    "identity_guard": {
+      "defect": "The first builder draft mistyped one character in the frozen Unit 17 SHA-256 literal.",
+      "effect": "The fail-closed source identity gate stopped before emitting any candidate artifact.",
+      "repair": "Correct the literal to the already frozen Unit 17 SHA-256; no source or prior artifact changed."
+    },
+    "html_mathml": {
+      "initial_candidate_html_bytes": 3516753,
+      "initial_candidate_html_sha256": "a7d3b832c0135398a5711eb1335d67bc90c465f32c657e637a8aca69129439f7",
+      "initial_raw_tex_math_fallbacks": 3,
+      "defect": "Pandoc could not convert three Unit 22 semantic arrays containing big-down-arrow and composite hooked-arrow presentation macros, leaving literal TeX in HTML.",
+      "repair": "Normalize those two presentation-only arrow macros to equivalent supported arrows in the transient HTML assembly, require fail-if-warnings, and fail if any raw-TeX math fallback remains.",
+      "source_changed": false,
+      "pdf_changed": false,
+      "final_candidate_html_sha256": "15938aac7515e4ad7de66f8cf2d825744f9eb08b654165b835bfeace31aef8f4",
+      "final_raw_tex_math_fallbacks": 0
+    }
+  },
+  "rights": {
+    "license": "CC BY 4.0",
+    "attribution": "David Michael Roberts, Algebraic Topology (2019)",
+    "non_endorsement": true
+  }
+}
