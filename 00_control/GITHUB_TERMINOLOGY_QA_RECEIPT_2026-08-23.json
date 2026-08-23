@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-GITHUB-TERMINOLOGY-QA-2026-08-23",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "content_commit": "1f029861a7e330dbb2f708b18e66e580a28fd6f3",
+  "verified_at": "2026-08-23T19:48:00+02:00",
+  "verification": "anonymous raw GitHub byte readback",
+  "status": "pushed_and_anonymously_byte_verified",
+  "files": [
+    {"path":"00_control/TERMINOLOGY.csv","bytes":28876,"sha256":"f5f9749704e02713b3e6748356359760dc71d533f8dd0193708769cd8ecbf107","remote_exact":true},
+    {"path":"00_control/CURRENT_STATE.md","bytes":32312,"sha256":"6a49771541a2a8ec52eafb70eab1bb0dd4b9f00e836876f5574170d78f325bd2","remote_exact":true},
+    {"path":"qa/INDONESIAN_TERMINOLOGY_QA_2026-08-23.md","bytes":3736,"sha256":"de83cb11b8d3c900b7b05fd308fbe34296e26aad6516f145992017e48b2fc1d6","remote_exact":true},
+    {"path":"qa/INDONESIAN_TERMINOLOGY_QA_2026-08-23.json","bytes":3578,"sha256":"81ab53773519158e1f177944623de17b79da3b037f7a2432eb905ac7e6893204","remote_exact":true}
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "source_and_human_credit_preserved": true
+}

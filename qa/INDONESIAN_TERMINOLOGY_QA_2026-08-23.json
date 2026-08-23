@@ -17,6 +17,12 @@
         "result": "no_results"
       }
     ],
+    "api_queries": [
+      {"url":"https://export.arxiv.org/api/query?search_query=all:%22topologi%20aljabar%22&start=0&max_results=20","totalResults":0},
+      {"query":"all:%22bahasa%20Indonesia%22%20AND%20all:topologi","totalResults":0},
+      {"query":"all:%22topologi%20kombinatorik%22","totalResults":0},
+      {"query":"all:%22aljabar%20topologi%22","totalResults":0}
+    ],
     "qualification": "bounded no-hit; no claim of nonexistence",
     "editable_indonesian_tex_found": false
   },

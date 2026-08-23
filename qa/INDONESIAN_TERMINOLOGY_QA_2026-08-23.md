@@ -16,6 +16,12 @@ results:
 
 <https://arxiv.org/search/?query=Bahasa+Indonesia+topology&searchtype=all>
 
+The official arXiv API independently returned an Atom feed with
+`totalResults=0` for the exact phrase query
+<https://export.arxiv.org/api/query?search_query=all:%22topologi%20aljabar%22&start=0&max_results=20>.
+Additional bounded API queries for `bahasa Indonesia` plus `topologi`,
+`topologi kombinatorik`, and `aljabar topologi` also returned zero results.
+
 No Indonesian-language algebraic-topology item with a downloadable TeX
 source was therefore found on arXiv. This is a bounded no-hit, not a claim
 that no such work exists.
@@ -70,4 +76,3 @@ This check was performed with **OpenAI Codex gpt-5.6-sol, Ultra**, at the
 user’s direction. The note does not replace or diminish the Roberts source
 authorship, the Risali–Wijayanti authorship, or any human contributor and
 license notice. The comparison PDF is not redistributed by this QA note.
-
