@@ -34,11 +34,13 @@ For each lecture: freeze span/census; translate everything in order; reflow
 margins/diagrams accessibly; log only independently verified corrections in
 `ADVERSE_LEDGER.csv`; assign stable IDs; update `TERMINOLOGY.csv`; solve every
 prompt and add only the missing separately marked mastery layer; independently
-review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–018 cover
-`Notes.tex:134–3677`; Unit 18 is 44,415 bytes/1,663 lines/SHA-256
-`9d0564f6a074441332e42755d46d9a0e858189a5ff4d8b5be52b1def12532598`.
-Next: translate/review Lecture 19, lines 3678–3947, then build the coherent
-route-R07 cumulative Units 001–019 reader/backend boundary.
+review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–019 now cover
+`Notes.tex:134–3947`; Unit 19 is 57,277 bytes/1,865 lines/SHA-256
+`ba34773d63e4dc70fccdf4fa19fbdc8a397062a4bc359978f3261a70ff64f98c`.
+The cumulative Units 001–019 reader/backend boundary is locally verified,
+with public push/readback and existing Zenodo/Figshare lineage updates next.
+Next translation cursor: Lecture 20, `Notes.tex:3948` onward; then continue
+through Roberts Lecture 30 before the bounded Fomberg bridge and closure.
 
 ## Backend, QA, and publication gates
 

@@ -4,9 +4,9 @@
   "course_id": "D60",
   "source_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
   "source_path": "Notes.tex",
-  "completed_through_line": 3677,
-  "next_line": 3678,
-  "next_marker": "\\lecturenum{19}",
+  "completed_through_line": 3947,
+  "next_line": 3948,
+  "next_marker": "\\lecturenum{20}",
   "completed_units": [
     "o012-rbt-l01",
     "o012-rbt-l02",
@@ -25,22 +25,27 @@
     "o012-rbt-l15",
     "o012-rbt-l16",
     "o012-rbt-l17",
-    "o012-rbt-l18"
+    "o012-rbt-l18",
+    "o012-rbt-l19"
   ],
-  "current_unit": "o012-rbt-l19",
-  "translation_state": "units_001_018_complete_reviewed_p1_p2_p3_zero_and_same_field_indonesian_terminology_qa_passed",
-  "backend_state": "units_001_013_complete_1762_records_validated_c5ac458a7f47_after_terminology_qa; frozen_public_release_snapshot_remains_bb8512f56a8b",
-  "publication_state": "units_001_013_public_and_anonymously_byte_verified_on_github_pages_zenodo_10_5281_zenodo_22061490_and_figshare_10_6084_m9_figshare_33314982_v1_collection_v35; live_unit_018_source_boundary_public_at_commit_9d127b5d7b640578ab182eaf49175e11354b13a8_tree_7bb01c64571d9593aee979989ec4ea4489c1d829_with_17_of_17_anonymous_file_readbacks_passed_in_00_control_GITHUB_PUBLICATION_RECEIPT_UNIT_018_json; frozen_reader_bytes_unchanged; next_reader_publication_at_new_coherent_verified_boundary; never_duplicate_repo",
+  "current_unit": "o012-rbt-l20",
+  "translation_state": "units_001_019_complete_reviewed_p1_p2_p3_zero_and_same_field_indonesian_terminology_qa_passed; next_unit_020_not_started",
+  "backend_state": "units_001_019_complete_2726_records_validated_backend_bundle_fe590ceefd18081e9a2dad3510946e97a29375a0a82e2a8e26cd78b871d33b14; 710_stable_source_ids; 91_new_adverse_records; cumulative_artifacts_bound",
+  "publication_state": "units_001_013_public_and_anonymously_byte_verified_on_github_pages_zenodo_10_5281_zenodo_22061490_and_figshare_10_6084_m9_figshare_33314982_v1_collection_v35; units_001_019_cumulative_reader_and_backend_are_locally_verified_and_ready_for_narrow_push_and_existing_zenodo_figshare_lineage_update; github_reinstated; no_duplicate_repo; public_readback_pending",
   "latest_unit": {
-    "unit_id": "o012-rbt-l18",
-    "source_span": "Notes.tex:3482-3677",
-    "path": "source/id-ID/units/unit-018-lecture-018.md",
-    "bytes": 44415,
-    "lines": 1663,
-    "sha256": "9d0564f6a074441332e42755d46d9a0e858189a5ff4d8b5be52b1def12532598",
-    "stable_ids": 67,
+    "unit_id": "o012-rbt-l19",
+    "source_span": "Notes.tex:3678-3947",
+    "path": "source/id-ID/units/unit-019-lecture-019.md",
+    "bytes": 57277,
+    "lines": 1865,
+    "sha256": "ba34773d63e4dc70fccdf4fa19fbdc8a397062a4bc359978f3261a70ff64f98c",
+    "stable_ids": 78,
     "independent_review": "P1=0; P2=0; P3=0",
-    "qa_receipt": "qa/UNIT_018_QA.json"
+    "qa_receipt": "qa/UNIT_019_QA.json",
+    "cumulative_qa_receipt": "qa/UNITS_001_019_QA.json",
+    "cumulative_reader_html": "output/html/units-001-019/index.html",
+    "cumulative_reader_pdf": "output/pdf/topologi-aljabar-unit-001-019-id.pdf",
+    "cumulative_backend_bundle_sha256": "fe590ceefd18081e9a2dad3510946e97a29375a0a82e2a8e26cd78b871d33b14"
   },
   "terminology_qa": {
     "qa_id": "O012-ID-TERMINOLOGY-QA-2026-08-22",
@@ -52,5 +57,5 @@
     "backend_bundle_sha256": "c5ac458a7f4723460ccebccaf3e5738544883c685a54c9a3cfbef854f2db83c5",
     "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
   },
-  "updated": "2026-08-22"
+  "updated": "2026-08-23"
 }

@@ -51,7 +51,8 @@
 - A map of complexes must preserve degree and commute with the differentials. The source margin says `chain map`, but the displayed grading raises degree.
 - A directed edge points from `d_1(e)` to `d_0(e)`, while the graph coboundary is `delta(f)(e)=f(d_0(e))-f(d_1(e))`, target minus source. The example intentionally writes `(d_1,d_0)` although the definition tests injectivity of `(d_0,d_1)`.
 - `R^S` means all functions `S -> R`, hence a product for infinite `S`; it is not the finite-support free module.
-- `G/H` uses right cosets and right multiplication.
+- `G/H` consists of left cosets `gH`, obtained as the orbits of right
+  multiplication by `H`. Do not call `gH` a right coset.
 - The sign of a connecting homomorphism depends on generator and orientation conventions.
 - Preserve the course's distinction between path components `[pt,X]` and connected components `pi_0(X)`.
 - Here SLPC means the course-defined semilocally path-connected condition. Do not conflate it with SLSC or ordinary local path-connectedness.

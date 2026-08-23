@@ -229,3 +229,39 @@ Final cumulative artifacts and witnesses:
 Strict QA binds 306 unique stable IDs, 183 semantic blocks, all 45 exercise-solution pairs and both question-answer pairs, the complete Unit 8-10 correction/reflow ledger, 3,411 native MathML nodes, all 123 fragment links, five retained source-label aliases, offline/privacy properties, PDF metadata/fonts/text/pages, and both manifest rows. Both validators pass independently. All 99 PDF pages were rendered and inspected, with full-size checks at the Unit 8-10 boundaries and final page. HTML passed at 1280 x 720 with a centered 928 px body and at 390 x 844 with zero page overflow and 37/37 formula-local scrollers; browser warnings/errors are zero. P1/P2/P3 are zero, and every earlier boundary remains byte-identical.
 
 The cumulative locale-neutral backend contains 1,345 canonical records in 11 JSONL files, totaling 1,131,189 bytes, and validates with bundle SHA-256 `ca6ff5b776594f5b3c1408accfc6129b876fbcdc6d029279dbbbbc1d9a40bbdf`.
+
+## Indonesian cumulative Units 001-013
+
+Canonical added sources:
+
+- Unit 011: `Notes.tex:2273-2494`; 28,465 bytes; SHA-256 `1cdbe0cae239a4e60a72f25c8814c2e3b5ec26b9119da03624bda7f3ff1ae127`.
+- Unit 012: `Notes.tex:2495-2726`; 32,850 bytes; SHA-256 `429831df4a5600c59351516915fb787cd73402d8c11c411869210dbf8aaa7ada`.
+- Unit 013: `Notes.tex:2727-3046`; 41,196 bytes; SHA-256 `0aa68cb4ed31862d32aeff5a7106b4ac29c13cbc202f7dbc8381fc7cd31418c0`.
+- Exact cumulative authority span: frozen `Notes.tex:134-3046`; line 3047 begins Lecture 14 and is outside this reader boundary.
+
+Build, backend extension, and QA:
+
+```powershell
+pwsh -NoProfile -File scripts/build-units-001-013.ps1
+python scripts/extend-backend-units-011-013.py
+python scripts/validate-backend.py
+python scripts/qa-units-001-013.py
+```
+
+The builder uses Pandoc 3.9.0.2, MiKTeX pdfTeX 1.40.29, and fixed `SOURCE_DATE_EPOCH=1787356800`. Two HTML builds and two PDF builds must be byte-identical before the final artifacts are copied. During final recovery QA the already marked PDF was not rebuilt and its marker was not rerun; the builder's original two-build fail-closed evidence and bytes remained frozen.
+
+Final cumulative artifacts and witnesses:
+
+- HTML: 1,824,804 bytes; SHA-256 `be1473ab5cb8eff26341e554179661775a12cec5784a8ebf3f9c2f3f0633cb71`.
+- PDF: 1,071,382 bytes; 138 A4 pages; SHA-256 `14775535f773735db5886195980f39e417aaea24998927956a81b55b0ef77c68`.
+- Artifact manifest: 249 bytes; SHA-256 `6b55446a4f0a951329c29ec33b0ca586c749b9301dd4bd8ad4dd94f1c91d74de`.
+- QA receipt: 9,069 bytes; SHA-256 `cb2413e8131743457a0685a57cf519c769e5593e9ec8d904f6160f9e0519983d`.
+- Visual/browser receipt: 2,139 bytes; SHA-256 `78e151b05d3efdce4dbfd346962dece5d7da4a559ab1101ac4bd8e02bff59f48`.
+- Render inventory: 16,336 bytes; SHA-256 `71168ca32a0be0828c5d8b0b94328410c1f842913d4aab0ad833b4315bffd4ef`.
+- Extracted-text witness: 395,766 bytes; SHA-256 `d94869df978e2538c79b8859cb38c8cbf859420cde68326a35546c973c787497`.
+
+Strict QA binds 426 stable IDs, 261 semantic blocks, 587 unique artifact IDs, eight aliases, all 160 local fragment links, 4,682 native MathML nodes, and the complete prompt-solution closure. HTML is self-contained, centered at a 928 px desktop body, has zero document overflow at 390 x 844, and gives all 54 wide mobile formulas local scrolling. Browser warnings/errors are zero.
+
+The PDF is unencrypted, uses A4, carries `id-ID`, has 24/24 fonts embedded, subset, and mapped through ToUnicode, and yields 269,310 extracted characters. It remains intentionally untagged, so semantic HTML is the primary accessibility surface. Fresh Poppler renders of all 138 pages and desktop/mobile browser inspection found no clipping, overlap, broken glyph, unintended blank page, or black box.
+
+The cumulative locale-neutral backend contains 1,762 canonical records across 11 JSONL files, totaling 1,540,725 bytes. The extension is idempotent, both the extension and independent root rerun validate, and the validator-defined bundle SHA-256 is `bb8512f56a8bbcf1283ae10ab69a9a7ecebb1bd39c425c1c021b5b848a1b2910`.

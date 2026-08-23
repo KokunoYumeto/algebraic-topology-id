@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "status": "pass",
+  "role_id": "O012",
+  "course_id": "D60",
+  "boundary": {
+    "source_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "source_path": "Notes.tex",
+    "source_line_start": 134,
+    "source_line_end": 3947,
+    "next_line": 3948,
+    "stable_source_ids": 710,
+    "new_adverse_records": 91,
+    "terminology_controls": 80
+  },
+  "backend": {
+    "schema": "curriculum.interop",
+    "schema_version": "0.1.0",
+    "jsonl_files": 11,
+    "records": 2726,
+    "bytes": 2480537,
+    "bundle_sha256": "fe590ceefd18081e9a2dad3510946e97a29375a0a82e2a8e26cd78b871d33b14",
+    "files": {
+      "artifacts.jsonl": {"bytes": 64645, "sha256": "c0b0624b523e285b1a4c88143b44a06e28a80a9d38dd49ad4026ab80687517f0"},
+      "assets.jsonl": {"bytes": 12317, "sha256": "756e93660931a20be8a8ea2048126e6f963184f3ac6fbb18c615fd58dbe385ae"},
+      "authority.jsonl": {"bytes": 2721, "sha256": "f21af26912520ab34b38dff0e927ed46a546dbe5d318da0dc133e58330d0e368"},
+      "concepts.jsonl": {"bytes": 89269, "sha256": "b3afa6260276c68fe0d0bd8cbccaf55196caa05fa41acc4f1c58ea62001c1295"},
+      "corrections.jsonl": {"bytes": 259451, "sha256": "769d7f611b07396465791d0d9a2319a18ce76da111ffbe10717f11b2c22f9512"},
+      "qa.jsonl": {"bytes": 49428, "sha256": "e7c13ac6bb006b4adb20dca233fb528a0b140226799d32606f7539f4c6c9826f"},
+      "relations.jsonl": {"bytes": 87238, "sha256": "d8756f6d556d40986c3c8212a2e8f378950f2de1cb184463df5eb183e82bfbb5"},
+      "rights.jsonl": {"bytes": 42349, "sha256": "db374a45045aa674e68d9d104c736d55d874adbd9fa87bd0a7d5189e07e6f21c"},
+      "segments.jsonl": {"bytes": 825283, "sha256": "ad3f8b3c45a2235e72af5fcfaa78cc639d601a0f6256df65e8d66cf83774025a"},
+      "terms.jsonl": {"bytes": 167971, "sha256": "6111794432f311984a3b4f2fbe4250d78873968f696ff66da867868fbc73b2ec"},
+      "units.jsonl": {"bytes": 879865, "sha256": "e88c8dfca31e77a115e6251db21f4e485d569beec8d9f1909dafa9ad0a485cf3"}
+    }
+  },
+  "validator": {
+    "path": "scripts/validate-backend-units-001-019.py",
+    "sha256": "d64cc71ba18bfb3a290ca9020c2ce82f7e55e38848a96a0af4c5973b39c4a9e4",
+    "result": "PASS"
+  },
+  "provenance": "OpenAI Codex gpt-5.6-sol, Ultra; source author and human direction remain credited in ATTRIBUTION.md.",
+  "non_endorsement": "Independent Indonesian edition; no source-author or institutional endorsement is implied."
+}

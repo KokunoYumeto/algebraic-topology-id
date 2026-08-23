@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L19-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 3678,
+    "line_end": 3947,
+    "bytes": 331447,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7"
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-019-lecture-019.md",
+    "bytes": 57277,
+    "lines": 1865,
+    "sha256": "ba34773d63e4dc70fccdf4fa19fbdc8a397062a4bc359978f3261a70ff64f98c",
+    "stable_ids": 78
+  },
+  "checks": [
+    {
+      "check": "required_files",
+      "status": "PASS",
+      "detail": "all six bounded inputs exist"
+    },
+    {
+      "check": "source_identity",
+      "status": "PASS",
+      "detail": "Notes.tex 331,447 bytes/6,368 lines; SHA-256 cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:3678-3947; next Lecture 20 at 3948; span SHA-256 15feb1cca535c90df280e232ce23cb44719a4cf863c6ee17f8c29da5c4f462ab"
+    },
+    {
+      "check": "source_census",
+      "status": "PASS",
+      "detail": "{\"align\": 1, \"definition\": 6, \"display\": 15, \"example\": 12, \"label\": 2, \"lemma\": 2, \"margin\": 13, \"proof\": 1, \"remark\": 1, \"tikz\": 2, \"xymatrix\": 4}"
+    },
+    {
+      "check": "unit_identity_encoding",
+      "status": "PASS",
+      "detail": "57,277 bytes/1,865 lines; UTF-8 LF; SHA-256 ba34773d63e4dc70fccdf4fa19fbdc8a397062a4bc359978f3261a70ff64f98c"
+    },
+    {
+      "check": "provenance_header",
+      "status": "PASS",
+      "detail": "source range, commit, author, CC BY 4.0, non-endorsement, and model disclosed"
+    },
+    {
+      "check": "privacy",
+      "status": "PASS",
+      "detail": "no local-user path, personal credential, or token marker"
+    },
+    {
+      "check": "stable_ids",
+      "status": "PASS",
+      "detail": "78 unique IDs; complete frozen Unit 019 inventory"
+    },
+    {
+      "check": "structural_inventory",
+      "status": "PASS",
+      "detail": "{\"definition\": 6, \"example\": 12, \"exercise\": 6, \"figure\": 6, \"hint\": 6, \"lemma\": 2, \"proof\": 1, \"remark\": 1, \"solution\": 6, \"source-audit\": 9, \"source-margin\": 13}"
+    },
+    {
+      "check": "accessibility_reflow",
+      "status": "PASS",
+      "detail": "six centered semantic figures (4 Xy-pic/2 TikZ), two source labels, no positional commands"
+    },
+    {
+      "check": "pandoc_structural_ids",
+      "status": "PASS",
+      "detail": "all 78 IDs survive Pandoc; exit 0; no warnings"
+    },
+    {
+      "check": "mastery_closure",
+      "status": "PASS",
+      "detail": "six edition-original exercise/hint/complete-solution triples"
+    },
+    {
+      "check": "required_repairs",
+      "status": "PASS",
+      "detail": "handedness, correction, grading, scope, and accessibility wording present"
+    },
+    {
+      "check": "source_audit_binding",
+      "status": "PASS",
+      "detail": "source audit records the frozen span and complete census"
+    },
+    {
+      "check": "independent_review_binding",
+      "status": "PASS",
+      "detail": "final review binds SHA-256 ba34773d63e4dc70fccdf4fa19fbdc8a397062a4bc359978f3261a70ff64f98c; P1/P2/P3 zero"
+    },
+    {
+      "check": "ledger_contiguity",
+      "status": "PASS",
+      "detail": "TERMINOLOGY.csv through TERM0287; ADVERSE_LEDGER.csv through ADV0278"
+    }
+  ]
+}
