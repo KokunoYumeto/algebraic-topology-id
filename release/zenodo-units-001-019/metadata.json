@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–19",
+    "upload_type": "publication",
+    "publication_type": "book",
+    "description": "<p><strong>Status: checkpoint parsial, belum lengkap.</strong> Versi 0.19.0 memuat terjemahan Bahasa Indonesia Kuliah 1–19 dari <em>Algebraic Topology</em> karya David Michael Roberts.</p><p>Cakupan sumber adalah <code>Notes.tex</code> baris 134–3947 pada komit sumber <code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>. Kuliah 20–30, jembatan homologi Fomberg, dan closure orisinal belum termasuk.</p><p>HTML mandiri/offline adalah pembaca utama; PDF A4 sekunder. Sumber Markdown, backend JSONL ber-ID stabil, manifest, checksum, QA, dan provenance yang disanitasi turut disertakan.</p><p>Lisensi komponen adalah CC BY 4.0 dengan atribusi dan perubahan seperti dalam <code>RELEASE_RIGHTS.md</code>. Produksi menggunakan <strong>OpenAI Codex gpt-5.6-sol, Ultra</strong> atas arahan pengguna; ini bukan kredit kepengarangan atau endorsement. Edisi ini independen dan tidak disponsori atau disahkan oleh penulis maupun institusinya.</p>",
+    "creators": [
+      {
+        "name": "Roberts, David Michael"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Editor edisi Bahasa Indonesia",
+        "type": "Editor"
+      }
+    ],
+    "access_right": "open",
+    "license": "cc-by-4.0",
+    "language": "ind",
+    "version": "0.19.0",
+    "publication_date": "2026-08-23",
+    "keywords": [
+      "topologi aljabar",
+      "Bahasa Indonesia",
+      "homotopi",
+      "ruang penutup",
+      "grup fundamental",
+      "MathML",
+      "machine-readable textbook"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.5281/zenodo.22061489",
+        "relation": "isVersionOf",
+        "scheme": "doi"
+      }
+    ],
+    "notes": "ID rilis: o012-roberts-id-units-001-019-v0.19.0. Checkpoint terpelihara untuk Unit 1–19; versi berikutnya akan memperluas konsep Zenodo yang sama."
+  }
+}

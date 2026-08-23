@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "status": "BLOCKED_AUTHENTICATION",
+  "release_id": "o012-roberts-id-units-001-019-v0.19.0",
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–19",
+  "scope": "Roberts Notes.tex lines 134-3947, lectures 1-19 of 30; Fomberg bridge and original closure pending",
+  "target_project": "https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296",
+  "target_collection": "https://doi.org/10.6084/m9.figshare.c.8668413.v1",
+  "prior_lineage": {
+    "article_id": 33314982,
+    "doi": "10.6084/m9.figshare.33314982.v1",
+    "collection_doi": "10.6084/m9.figshare.c.8668413.v35"
+  },
+  "bounded_attempts": [
+    {
+      "method": "GET",
+      "url": "https://api.figshare.com/v2/account/articles/33314982",
+      "status": 403,
+      "response_code": "InactiveAccount",
+      "response_summary": "Inactive/disabled account"
+    },
+    {
+      "method": "GET",
+      "url": "https://api.figshare.com/v2/articles/33314982",
+      "status": 404,
+      "response_summary": "Public article endpoint did not resolve"
+    },
+    {
+      "method": "GET",
+      "url": "https://api.figshare.com/v2/projects/280296/articles?page=1&page_size=100",
+      "status": 200,
+      "response_summary": "No public articles returned"
+    },
+    {
+      "method": "GET",
+      "url": "https://api.figshare.com/v2/collections/8668413/articles?page=1&page_size=100",
+      "status": 200,
+      "response_summary": "No public articles returned"
+    }
+  ],
+  "payload_prepared_locally": {
+    "pdf_bytes": 1506471,
+    "pdf_sha256": "291e4206b9e58ee8a49108e55b6b894b9cd3362c7701a50cb83a7d79714b7a86",
+    "html_bytes": 2962478,
+    "html_sha256": "ea5481b14dc1772408bd1c3e384b94a18eed9f2be3c9b9379fe4f8dd499253e0",
+    "source_backend_zip_bytes": 507727,
+    "source_backend_zip_sha256": "6c8a62d69375f66ff614938973a2a0d7a623b678ff18b4ce148c241fd9ea2082",
+    "rights_bytes": 1662,
+    "rights_sha256": "5bd2412310ae18af655ae77583007c202d28c1f71d35f359f9bec8bd3eb93193",
+    "manifest_bytes": 17919,
+    "manifest_sha256": "233e275f9a2aee3a055e9a4cb9ff07b999866bc84fcc339f27cbd0e7873bc0b8",
+    "payload_bytes_if_published": 4998961
+  },
+  "published": false,
+  "duplicate_created": false,
+  "credential_material_persisted": false,
+  "next_action": "Retry the existing article/collection lineage only after a working Figshare credential or account is restored; do not create a competing item."
+}

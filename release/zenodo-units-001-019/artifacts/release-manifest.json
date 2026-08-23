@@ -1,0 +1,487 @@
+{
+  "schema_version": "1.0",
+  "release_id": "o012-roberts-id-units-001-019-v0.19.0",
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–19",
+  "version": "0.19.0",
+  "status": "maintained_incomplete_checkpoint",
+  "scope_truth": "Roberts Notes.tex lines 134-3947, lectures 1-19 of 30; Fomberg bridge and original closure pending",
+  "metadata_sha256": "131bdee450a87be4b4cf5554995ebcfa4d9237edf43058e100f8d3506882303b",
+  "source": {
+    "author": "David Michael Roberts",
+    "repository": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "tree": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+    "path": "Notes.tex",
+    "line_start": 134,
+    "line_end": 3947,
+    "units": 19,
+    "license": "CC BY 4.0"
+  },
+  "reader_qa": {
+    "status": "pass",
+    "receipt_sha256": "38f8f3084f6031fe3670667e7e9a11f2b526a07eb69d32772194c3ff0ffeb02d",
+    "html_stable_ids": 710,
+    "html_ids": 951,
+    "html_mathml_nodes": 7451,
+    "pdf_pages": 221,
+    "pdf_tagged": false,
+    "visual_review": "pass_all_221_pages_plus_browser_desktop_mobile"
+  },
+  "archives": [
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_019_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 507727,
+      "sha256": "6c8a62d69375f66ff614938973a2a0d7a623b678ff18b4ce148c241fd9ea2082",
+      "entry_count": 40,
+      "entries": [
+        {
+          "path": "ATTRIBUTION.md",
+          "bytes": 1498,
+          "sha256": "1e4cdbfe1639ac28d47a06b0d054cfc806477ba7173d935b2a52a9b531e87b71"
+        },
+        {
+          "path": "README_RELEASE.md",
+          "bytes": 1976,
+          "sha256": "4989d96828bd1cd8207cd4a887f8c314f7a5cced7697fad316e1c897fa49e163"
+        },
+        {
+          "path": "RELEASE_RIGHTS.md",
+          "bytes": 1662,
+          "sha256": "5bd2412310ae18af655ae77583007c202d28c1f71d35f359f9bec8bd3eb93193"
+        },
+        {
+          "path": "backend/artifacts.jsonl",
+          "bytes": 64645,
+          "sha256": "c0b0624b523e285b1a4c88143b44a06e28a80a9d38dd49ad4026ab80687517f0"
+        },
+        {
+          "path": "backend/assets.jsonl",
+          "bytes": 12317,
+          "sha256": "756e93660931a20be8a8ea2048126e6f963184f3ac6fbb18c615fd58dbe385ae"
+        },
+        {
+          "path": "backend/authority.jsonl",
+          "bytes": 2721,
+          "sha256": "f21af26912520ab34b38dff0e927ed46a546dbe5d318da0dc133e58330d0e368"
+        },
+        {
+          "path": "backend/concepts.jsonl",
+          "bytes": 89269,
+          "sha256": "b3afa6260276c68fe0d0bd8cbccaf55196caa05fa41acc4f1c58ea62001c1295"
+        },
+        {
+          "path": "backend/corrections.jsonl",
+          "bytes": 259451,
+          "sha256": "769d7f611b07396465791d0d9a2319a18ce76da111ffbe10717f11b2c22f9512"
+        },
+        {
+          "path": "backend/qa.jsonl",
+          "bytes": 49428,
+          "sha256": "e7c13ac6bb006b4adb20dca233fb528a0b140226799d32606f7539f4c6c9826f"
+        },
+        {
+          "path": "backend/relations.jsonl",
+          "bytes": 87238,
+          "sha256": "d8756f6d556d40986c3c8212a2e8f378950f2de1cb184463df5eb183e82bfbb5"
+        },
+        {
+          "path": "backend/rights.jsonl",
+          "bytes": 42349,
+          "sha256": "db374a45045aa674e68d9d104c736d55d874adbd9fa87bd0a7d5189e07e6f21c"
+        },
+        {
+          "path": "backend/segments.jsonl",
+          "bytes": 825283,
+          "sha256": "ad3f8b3c45a2235e72af5fcfaa78cc639d601a0f6256df65e8d66cf83774025a"
+        },
+        {
+          "path": "backend/terms.jsonl",
+          "bytes": 167971,
+          "sha256": "6111794432f311984a3b4f2fbe4250d78873968f696ff66da867868fbc73b2ec"
+        },
+        {
+          "path": "backend/units.jsonl",
+          "bytes": 879865,
+          "sha256": "e88c8dfca31e77a115e6251db21f4e485d569beec8d9f1909dafa9ad0a485cf3"
+        },
+        {
+          "path": "provenance/AUTHORITY.json",
+          "bytes": 1806,
+          "sha256": "26762fcd01115450fe2ad650b91af69736af0996a322b38fc1c57e0275351158"
+        },
+        {
+          "path": "provenance/UPSTREAM_FILE_MANIFEST.csv",
+          "bytes": 613,
+          "sha256": "3a88ce28e8d0d1062f2c32ff77506fb53fa590eec90b4fbf80fc3d70fa64e1af"
+        },
+        {
+          "path": "source/id-ID/reader-unit-001.md",
+          "bytes": 16179,
+          "sha256": "dccc7b727695d26d0b425c0eae22db1697cea93e295391fa7685fbca2d011dc7"
+        },
+        {
+          "path": "source/id-ID/styles/reader-cumulative.css",
+          "bytes": 203,
+          "sha256": "b0012d9f93e603997d48d49705ec9ccae2d3cd2d062b8b9f8717e908df1f5344"
+        },
+        {
+          "path": "source/id-ID/styles/reader.css",
+          "bytes": 1297,
+          "sha256": "e5184827600116bc54e28df6822c5a98691d5edf88b7b102443b56024733cbe5"
+        },
+        {
+          "path": "source/id-ID/units/unit-002-lecture-002.md",
+          "bytes": 25090,
+          "sha256": "9aa5063c167cc0b2bc8a5edbc81cb36995606d5073a1afe22db608609ad29377"
+        },
+        {
+          "path": "source/id-ID/units/unit-003-lecture-003.md",
+          "bytes": 25822,
+          "sha256": "f757bc58ea6f0d0dbe37ebdb2e44da7d3814b32052d8e23a39331d66d1f025b2"
+        },
+        {
+          "path": "source/id-ID/units/unit-004-lecture-004.md",
+          "bytes": 24546,
+          "sha256": "35aa8adfec6f7652f9a9f21f2c6b6656347309f866689a0939d6f0c517974ea3"
+        },
+        {
+          "path": "source/id-ID/units/unit-005-lecture-005.md",
+          "bytes": 22662,
+          "sha256": "9d25dc7cd89c0c9f69841850b03489e742e8dc50c2e68ca405aff593ec128f90"
+        },
+        {
+          "path": "source/id-ID/units/unit-006-lecture-006.md",
+          "bytes": 32116,
+          "sha256": "2276a34177100bc14e3e9f96461f6a7ab3bf27a25f652af4cc2d27493f420c8e"
+        },
+        {
+          "path": "source/id-ID/units/unit-007-lecture-007.md",
+          "bytes": 22107,
+          "sha256": "f93659dd290272ad3d526b74565f7bdc7316c366c09f1efaac599abde4cbc59d"
+        },
+        {
+          "path": "source/id-ID/units/unit-008-lecture-008.md",
+          "bytes": 28468,
+          "sha256": "4b5c579a1891a99ddff89c458f9d653ec03973e0aaa32839c87be5896ab653a8"
+        },
+        {
+          "path": "source/id-ID/units/unit-009-lecture-009.md",
+          "bytes": 25524,
+          "sha256": "c6076a71d38ab54553a0bf5ed42289063044ebcbeb29689df220081e5621a8a1"
+        },
+        {
+          "path": "source/id-ID/units/unit-010-lecture-010.md",
+          "bytes": 26448,
+          "sha256": "ef76aedb378cb8a3d18a20f672082ee976561a877270082968e7df0a1514a8d5"
+        },
+        {
+          "path": "source/id-ID/units/unit-011-lecture-011.md",
+          "bytes": 28465,
+          "sha256": "7acb205dd9f760631f7548208d77470e22cd208849439e2ad2a8eb4b2465b0f8"
+        },
+        {
+          "path": "source/id-ID/units/unit-012-lecture-012.md",
+          "bytes": 32850,
+          "sha256": "b7ba7cad3d12605628693d57d50a41e06f40a6b7da1109752fe05d870b4b28f0"
+        },
+        {
+          "path": "source/id-ID/units/unit-013-lecture-013.md",
+          "bytes": 41196,
+          "sha256": "f3827dc052a70930ad31cc6f9b1a745bf8a17bac31b4f9249cd178b06ac302b6"
+        },
+        {
+          "path": "source/id-ID/units/unit-014-lecture-014.md",
+          "bytes": 28488,
+          "sha256": "da6f18b455d76adafd8b9b648ed7c277958eca95c0b7d76a8bd9895d79ec6677"
+        },
+        {
+          "path": "source/id-ID/units/unit-015-lecture-015.md",
+          "bytes": 27725,
+          "sha256": "e9ab0565ae460236a69c77389b76d32405873156fc451be9cf95c3749e7fe9d1"
+        },
+        {
+          "path": "source/id-ID/units/unit-016-lecture-016.md",
+          "bytes": 33919,
+          "sha256": "31dfc4c3647f7d6a1d398d2123efe1faa82348428df0180eee2a2358572f9054"
+        },
+        {
+          "path": "source/id-ID/units/unit-017-lecture-017.md",
+          "bytes": 29933,
+          "sha256": "47576d7c26a436ba915c276b692e2bc0ead6fae038295fee3a82a50426ed9a96"
+        },
+        {
+          "path": "source/id-ID/units/unit-018-lecture-018.md",
+          "bytes": 44415,
+          "sha256": "9d0564f6a074441332e42755d46d9a0e858189a5ff4d8b5be52b1def12532598"
+        },
+        {
+          "path": "source/id-ID/units/unit-019-lecture-019.md",
+          "bytes": 57277,
+          "sha256": "ba34773d63e4dc70fccdf4fa19fbdc8a397062a4bc359978f3261a70ff64f98c"
+        },
+        {
+          "path": "upstream/Roberts/LICENSE.md",
+          "bytes": 18696,
+          "sha256": "2ecfbc56ead071b6a93908f50b59c4186db6d139c8b7d0c56156bb0ad5fad3f5"
+        },
+        {
+          "path": "upstream/Roberts/Notes.tex",
+          "bytes": 331447,
+          "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7"
+        },
+        {
+          "path": "upstream/Roberts/README.md",
+          "bytes": 696,
+          "sha256": "56f1aab6ad14c6b2f3bba4f16471183c8e43c66c40678d80a2f78efc196f5726"
+        }
+      ],
+      "verified": true
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_019_QA_PROVENANCE.zip",
+      "bytes": 282239,
+      "sha256": "8f6df16c1429d7d061e1e428a6bdae241635d7b8c02943d98104c8bced01609c",
+      "entry_count": 41,
+      "entries": [
+        {
+          "path": "README_RELEASE.md",
+          "bytes": 1976,
+          "sha256": "4989d96828bd1cd8207cd4a887f8c314f7a5cced7697fad316e1c897fa49e163"
+        },
+        {
+          "path": "RELEASE_RIGHTS.md",
+          "bytes": 1662,
+          "sha256": "5bd2412310ae18af655ae77583007c202d28c1f71d35f359f9bec8bd3eb93193"
+        },
+        {
+          "path": "metadata.json",
+          "bytes": 2200,
+          "sha256": "131bdee450a87be4b4cf5554995ebcfa4d9237edf43058e100f8d3506882303b"
+        },
+        {
+          "path": "output/ARTIFACT_MANIFEST_UNITS_001_019.csv",
+          "bytes": 249,
+          "sha256": "d5bd6b71b19c9644a33999483c56699f1489aa4270c75a7b58fe2cf4e231ff74"
+        },
+        {
+          "path": "provenance/ADVERSE_LEDGER.csv",
+          "bytes": 82969,
+          "sha256": "2e8c9f3dc393a0f9cb440091f8ccb6009847102775a335b6f04b0dab5011df3b"
+        },
+        {
+          "path": "provenance/AUTHORITY.json",
+          "bytes": 1806,
+          "sha256": "26762fcd01115450fe2ad650b91af69736af0996a322b38fc1c57e0275351158"
+        },
+        {
+          "path": "provenance/TERMINOLOGY.csv",
+          "bytes": 28532,
+          "sha256": "e11999cffa48b1fa64b06c9c269a0c6da93a9b83421dee086c236e13a04f2d76"
+        },
+        {
+          "path": "provenance/UPSTREAM_FILE_MANIFEST.csv",
+          "bytes": 613,
+          "sha256": "3a88ce28e8d0d1062f2c32ff77506fb53fa590eec90b4fbf80fc3d70fa64e1af"
+        },
+        {
+          "path": "qa/BACKEND_UNITS_001_019_RECEIPT.json",
+          "bytes": 2377,
+          "sha256": "b7733961574b0db40904687d0eb6ff04c51bb3dd813fce15694b7646fa6d2b59"
+        },
+        {
+          "path": "qa/INDONESIAN_TERMINOLOGY_QA_2026-08-22.json",
+          "bytes": 18244,
+          "sha256": "54317e2c8591af9e3f668aa873281ae2c08275c7dc0dc2f1b66a6e314f7152a3"
+        },
+        {
+          "path": "qa/INDONESIAN_TERMINOLOGY_QA_2026-08-22.md",
+          "bytes": 4852,
+          "sha256": "62bdf56464647d1d9d9f76c9a8245ecf243968b92962ef45a86462f255f39299"
+        },
+        {
+          "path": "qa/UNITS_001_019_QA.json",
+          "bytes": 12097,
+          "sha256": "38f8f3084f6031fe3670667e7e9a11f2b526a07eb69d32772194c3ff0ffeb02d"
+        },
+        {
+          "path": "qa/UNITS_001_019_RENDER_INVENTORY.csv",
+          "bytes": 26213,
+          "sha256": "017f151a1bd06a4e2649b37ad551c973789d502897b358967bd216cd74c61783"
+        },
+        {
+          "path": "qa/UNITS_001_019_VISUAL_QA.md",
+          "bytes": 1780,
+          "sha256": "29d69abe6399976a206ef28c96d01df5fdb3f9f2c8510db95fe73f2b35b0b064"
+        },
+        {
+          "path": "qa/UNIT_001_INDEPENDENT_REVIEW.md",
+          "bytes": 2061,
+          "sha256": "efb9858eda0dcc6f90e60ce7218b80ed6218ca5775d1c5a49d51ac0629d04c24"
+        },
+        {
+          "path": "qa/UNIT_001_QA.json",
+          "bytes": 1827,
+          "sha256": "194c231b57e044fefeefc109d96850791101948584c0ebded4d338b30ff332b3"
+        },
+        {
+          "path": "qa/UNIT_002_INDEPENDENT_REVIEW.md",
+          "bytes": 1616,
+          "sha256": "a2e879546f0b9c6caeae78e8b7babe0ce32da17118d7840d6803e9b89d82d3f5"
+        },
+        {
+          "path": "qa/UNIT_003_INDEPENDENT_REVIEW.md",
+          "bytes": 2464,
+          "sha256": "b2cffbcc2167c3d620f1af53224cc064e8ce34400561868339e69c280845619c"
+        },
+        {
+          "path": "qa/UNIT_004_INDEPENDENT_REVIEW.md",
+          "bytes": 3031,
+          "sha256": "ac993a10e22738197775ae5c3f4e72948983c4e99ff602a52943b40ed417b6f9"
+        },
+        {
+          "path": "qa/UNIT_005_INDEPENDENT_REVIEW.md",
+          "bytes": 1592,
+          "sha256": "399b81a06ac5701eca6604406c40acaa76f100291ee57f8efeb5344e7d7c8de0"
+        },
+        {
+          "path": "qa/UNIT_006_INDEPENDENT_REVIEW.md",
+          "bytes": 1783,
+          "sha256": "5dd3868192a85e3e60562f42ec7d7b792e0e58811719ecc97207ed2bdc5de4bf"
+        },
+        {
+          "path": "qa/UNIT_007_INDEPENDENT_REVIEW.md",
+          "bytes": 1761,
+          "sha256": "87c5129cd7d367893860b150c72948de1d196d7cbefe04d53f7a4efecf921f87"
+        },
+        {
+          "path": "qa/UNIT_008_INDEPENDENT_REVIEW.md",
+          "bytes": 2191,
+          "sha256": "6960e19949642723dcbfd6ff5bfe105fe4e2789f5989787c041c7f41bdfdac3f"
+        },
+        {
+          "path": "qa/UNIT_009_INDEPENDENT_REVIEW.md",
+          "bytes": 2147,
+          "sha256": "af91c517608c454466d6371db479385ddb1b4c65ecba2f05ca9ec7b26b49cbe6"
+        },
+        {
+          "path": "qa/UNIT_010_INDEPENDENT_REVIEW.md",
+          "bytes": 2683,
+          "sha256": "236123c6c1ad15773a1da7f36887a2ebed93298f019db80f79dfa9bcdac100fd"
+        },
+        {
+          "path": "qa/UNIT_011_INDEPENDENT_REVIEW.md",
+          "bytes": 3351,
+          "sha256": "de0766d41ba901405881d8078830d74420f2b1012ef24ace8d3f481135cd5b25"
+        },
+        {
+          "path": "qa/UNIT_012_INDEPENDENT_REVIEW.md",
+          "bytes": 3374,
+          "sha256": "6ea34c30edfa208cc7e37a17f43ef4bf62b21ff4db222e534c97e027232e0ce7"
+        },
+        {
+          "path": "qa/UNIT_013_INDEPENDENT_REVIEW.md",
+          "bytes": 6665,
+          "sha256": "5903c7da7f57d5db15a2d94807860a816d15e7d3cb7b020a8a3ddcbb0df45c21"
+        },
+        {
+          "path": "qa/UNIT_014_INDEPENDENT_REVIEW.md",
+          "bytes": 9725,
+          "sha256": "43a409f8f127fe9425d14bc8279a594e4ea1f604da3db4f99316aa7c17c3969d"
+        },
+        {
+          "path": "qa/UNIT_015_INDEPENDENT_REVIEW.md",
+          "bytes": 4392,
+          "sha256": "9776c911f5d4f4cd7027375ac29514ca2722f28877d27e79753fabf61876dc90"
+        },
+        {
+          "path": "qa/UNIT_016_INDEPENDENT_REVIEW.md",
+          "bytes": 8485,
+          "sha256": "335f8ef19f35ba063ad526850d01eec377dc89eb7b697831b8741659a86444c6"
+        },
+        {
+          "path": "qa/UNIT_016_SOURCE_AUDIT.md",
+          "bytes": 5898,
+          "sha256": "52476eb5e239fa4d752b8a9f533c8bc00b442fe27e5b5fe48925dc9b6eb3a288"
+        },
+        {
+          "path": "qa/UNIT_017_INDEPENDENT_REVIEW.md",
+          "bytes": 9903,
+          "sha256": "b4885ed709311275a9ae32fedbefe7bf86c72203caafa92de3b557f17c1fc625"
+        },
+        {
+          "path": "qa/UNIT_017_SOURCE_AUDIT.md",
+          "bytes": 12303,
+          "sha256": "31d984a617844f664bb7ddf35037d6b7f33041f08230c29cbcd301680e9566ce"
+        },
+        {
+          "path": "qa/UNIT_018_INDEPENDENT_REVIEW.md",
+          "bytes": 3054,
+          "sha256": "146a011168c49ef922b71e8278b1631d430aa3b2134d150219d2fef0a5437cf2"
+        },
+        {
+          "path": "qa/UNIT_018_QA.json",
+          "bytes": 2729,
+          "sha256": "60141327de56501fdb1ff06bf754256f527eb58749acf32c7e3f8fc1cf22dcfb"
+        },
+        {
+          "path": "qa/UNIT_018_SOURCE_AUDIT.md",
+          "bytes": 8630,
+          "sha256": "66dbc4a480481edf8d89559b1ea4395d9d787e96ce03e9e348a5de50d4cca1ac"
+        },
+        {
+          "path": "qa/UNIT_019_INDEPENDENT_REVIEW.md",
+          "bytes": 2707,
+          "sha256": "d360a17a8a7a5008a80873c4413d92bd9354b6c44275365809be33258c0673a5"
+        },
+        {
+          "path": "qa/UNIT_019_QA.json",
+          "bytes": 3519,
+          "sha256": "a2ecc5dcc539c6434d2cb937ad7bb768c6ed434947b4cedcd313ce1bcfe8d1c3"
+        },
+        {
+          "path": "qa/UNIT_019_SOURCE_AUDIT.md",
+          "bytes": 8956,
+          "sha256": "9ff651aa4a98f17f9ae67ce154cc531147bf212b2be03e53c3aced3994066f36"
+        },
+        {
+          "path": "qa/units-001-019-extracted.txt",
+          "bytes": 644062,
+          "sha256": "51e4102823bff9a55abd48b605897f91bda54fc2dbdfe1740bd38f173cf05a2d"
+        }
+      ],
+      "verified": true
+    }
+  ],
+  "artifacts": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_UNITS_001_019_READER.pdf",
+      "bytes": 1506471,
+      "sha256": "291e4206b9e58ee8a49108e55b6b894b9cd3362c7701a50cb83a7d79714b7a86"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_019_READER.html",
+      "bytes": 2962478,
+      "sha256": "ea5481b14dc1772408bd1c3e384b94a18eed9f2be3c9b9379fe4f8dd499253e0"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_019_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 507727,
+      "sha256": "6c8a62d69375f66ff614938973a2a0d7a623b678ff18b4ce148c241fd9ea2082"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_019_QA_PROVENANCE.zip",
+      "bytes": 282239,
+      "sha256": "8f6df16c1429d7d061e1e428a6bdae241635d7b8c02943d98104c8bced01609c"
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "bytes": 1976,
+      "sha256": "4989d96828bd1cd8207cd4a887f8c314f7a5cced7697fad316e1c897fa49e163"
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "bytes": 1662,
+      "sha256": "5bd2412310ae18af655ae77583007c202d28c1f71d35f359f9bec8bd3eb93193"
+    }
+  ]
+}
