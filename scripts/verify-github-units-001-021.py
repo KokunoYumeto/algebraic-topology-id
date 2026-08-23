@@ -81,8 +81,14 @@ def main() -> int:
         raise RuntimeError("public commit/tree identity mismatch")
 
     remote_ref = fetch_json(f"{api_base}/git/ref/heads/main")
-    if remote_ref.get("object", {}).get("sha") != COMMIT:
-        raise RuntimeError("public main ref does not point to the content commit")
+    remote_sha = remote_ref.get("object", {}).get("sha")
+    if remote_sha != COMMIT:
+        comparison = fetch_json(f"{api_base}/compare/{COMMIT}...{remote_sha}")
+        if (
+            comparison.get("status") not in {"ahead", "identical"}
+            or comparison.get("merge_base_commit", {}).get("sha") != COMMIT
+        ):
+            raise RuntimeError("public main no longer descends from the content commit")
 
     run = fetch_json(f"{api_base}/actions/runs/{RUN_ID}")
     if (
