@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-UNITS-001-020-BUILD",
+  "status": "PASS",
+  "scope": "Roberts Indonesian reader Units 001-020",
+  "source_authority": {
+    "repository": "DavidMichaelRoberts/AlgebraicTopology2019",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "source_file": "Notes.tex",
+    "unit_020_span": "3948-4345",
+    "unit_020_sha256": "ed086dfe2f26951d4a1d1c398ade0224ffbf4bd1a20a985d267ecd97bbd228d3"
+  },
+  "toolchain": {
+    "builder": "scripts/build-units-001-020.ps1",
+    "builder_sha256": "612da350190652bf78ad373d907b6562333452e6b3feac035b7d62b48ac43be7",
+    "pandoc": "pandoc 3.9.0.2",
+    "source_date_epoch": 1787443200,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "reproducibility": {
+    "html_two_builds_byte_identical": true,
+    "pdf_two_builds_byte_identical": true,
+    "baseline_builder": "scripts/build-units-001-019.ps1 (invoked unchanged)"
+  },
+  "artifacts": {
+    "html": {
+      "path": "output/html/units-001-020/index.html",
+      "bytes": 3190086,
+      "sha256": "59cb765f2291fc835ca629c774505303745983baacf5379efc97c49da6205c03"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-020-id.pdf",
+      "bytes": 1598235,
+      "sha256": "30fdde6ddfc937df3e93bb59d58e72e593c87262d6a2535214113e5ebab64457",
+      "pages": 237,
+      "page_size": "A4",
+      "fonts": 25
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_020.csv",
+      "bytes": 249,
+      "sha256": "d69c37838da4174ebb7dc4576392e813040d7f6ebbe1a13fe1c922e1271672da"
+    }
+  },
+  "html_checks": {
+    "unique_dom_ids": 1030,
+    "duplicate_dom_ids": 0,
+    "mathml_nodes": 7944,
+    "semantic_figures": 48,
+    "toc_links": 245,
+    "unit_020_ids": 73,
+    "provenance_text_present_after_whitespace_normalization": true
+  },
+  "visual_checks": {
+    "method": "pdftoppm 120 dpi representative-page inspection",
+    "pages": [1, 119, 222, 224, 227, 230, 237],
+    "result": "PASS; no clipping, overlap, unreadable glyphs, or positional figure dependence observed",
+    "render_hashes": {
+      "1": "1ce44df8d170183914db195bf7cabeb2425a98ff172b960752c710184244470e",
+      "119": "e5bcd5d9b4e4af6bca2e5c86f941c750d8e7ee1ea1a5d549cc00c4f4aa60be53",
+      "222": "cbca58c8609691d2e77e9942a2bc317c54aa9240f7b44fa6cc4f27311c6994d4",
+      "224": "81c9eaab5cca134a2ad5ff4bed5ee98d467df319f2f94e96dd8a73400403c70b",
+      "227": "75b5fef7a0046abe307ada34090ce478235e63061ce001f71a3d6ee734cb9002",
+      "230": "9cadfaf720e54e71594f5b595d41fbc09a365602d3575de858d422e4029d24fd",
+      "237": "4574de7311bb1601f2ba5063ca059d7bfafde9216e1e68b133538eaa40172adf"
+    }
+  },
+  "rights": {
+    "license": "CC BY 4.0",
+    "attribution": "David Michael Roberts, Algebraic Topology (2019)",
+    "non_endorsement": true
+  }
+}

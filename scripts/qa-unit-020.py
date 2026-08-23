@@ -43,9 +43,9 @@ RAW_SHA256 = "6af488776f936d7a3ef17a30a8af94e6955df91e3a3057b92b048e1b38ca1917"
 
 # This identity was captured after the terminology and TeX repairs were
 # applied and remained stable across an independent second read.
-UNIT_BYTES = 45_780
+UNIT_BYTES = 45_786
 UNIT_LINES = 1_425
-UNIT_SHA256 = "b2592d9dd11d1e805ff2995f96604de35c5454bf2a1e5008163ec5a266d7ea50"
+UNIT_SHA256 = "ed086dfe2f26951d4a1d1c398ade0224ffbf4bd1a20a985d267ecd97bbd228d3"
 
 
 def digest(data: bytes) -> str:
@@ -180,6 +180,15 @@ def check_unit(checks: list[dict[str, str]], raw: bytes, text: str) -> list[str]
     identity = len(raw) == UNIT_BYTES and len(lines) == UNIT_LINES and digest(raw) == UNIT_SHA256 and b"\r" not in raw and raw.endswith(b"\n")
     add(checks, "unit_identity_encoding", "PASS" if identity else "FAIL",
         f"{len(raw):,} bytes/{len(lines):,} LF lines; SHA-256 {digest(raw)}")
+
+    # A bare ``\\square$`` can pass Pandoc's HTML reader while failing the
+    # pdflatex path with ``Missing $ inserted``.  Catch it at the source-unit
+    # gate so the two publication surfaces cannot silently diverge.
+    bare_square = [index for index, line in enumerate(lines, start=1)
+                   if re.search(r"(?<!\$)\\\\square\$", line)]
+    add(checks, "math_delimiter_sanity", "PASS" if not bare_square else "FAIL",
+        "proof-end math delimiters are balanced" if not bare_square
+        else f"bare \\square$ at lines {bare_square}")
 
     required = (
         "Unit 20:", UPSTREAM_COMMIT, "Notes.tex baris 3948--4346", "baris 4347",

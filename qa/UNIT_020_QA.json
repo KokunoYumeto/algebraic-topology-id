@@ -16,9 +16,9 @@
   },
   "unit": {
     "path": "source/id-ID/units/unit-020-lecture-020.md",
-    "bytes": 45780,
+    "bytes": 45786,
     "lines": 1425,
-    "sha256": "b2592d9dd11d1e805ff2995f96604de35c5454bf2a1e5008163ec5a266d7ea50",
+    "sha256": "ed086dfe2f26951d4a1d1c398ade0224ffbf4bd1a20a985d267ecd97bbd228d3",
     "stable_ids": 73
   },
   "checks": [
@@ -45,7 +45,12 @@
     {
       "check": "unit_identity_encoding",
       "status": "PASS",
-      "detail": "45,780 bytes/1,425 LF lines; SHA-256 b2592d9dd11d1e805ff2995f96604de35c5454bf2a1e5008163ec5a266d7ea50"
+      "detail": "45,786 bytes/1,425 LF lines; SHA-256 ed086dfe2f26951d4a1d1c398ade0224ffbf4bd1a20a985d267ecd97bbd228d3"
+    },
+    {
+      "check": "math_delimiter_sanity",
+      "status": "PASS",
+      "detail": "proof-end math delimiters are balanced"
     },
     {
       "check": "provenance_and_terminology",
@@ -95,7 +100,7 @@
     {
       "check": "terminology_and_ledger",
       "status": "PASS",
-      "detail": "TERM tail=289; ADV tail=278; new controls present"
+      "detail": "TERM tail=289; ADV tail=289; new controls present"
     }
   ],
   "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"

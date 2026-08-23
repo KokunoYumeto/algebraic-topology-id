@@ -14,8 +14,8 @@ Pandoc structural parsing.
 
 ## Final snapshot and verdict
 
-Final snapshot: **45,780 bytes, 1,425 LF lines, SHA-256
-`b2592d9dd11d1e805ff2995f96604de35c5454bf2a1e5008163ec5a266d7ea50`**.
+Final snapshot: **45,786 bytes, 1,425 LF lines, SHA-256
+`ed086dfe2f26951d4a1d1c398ade0224ffbf4bd1a20a985d267ecd97bbd228d3`**.
 
 - P1: 0
 - P2: 0
@@ -38,6 +38,11 @@ Final snapshot: **45,780 bytes, 1,425 LF lines, SHA-256
   `bertelescop` to `berteleskop` without changing mathematics or identifiers.
 - Pandoc 3.9.0.2 `--to=html5 --mathjax` exits 0 without warnings, and all
   structural IDs survive the parse.
+- The two proof closures at source-derived lines 737 and 923 are explicitly
+  delimited as `$\\square$`, eliminating the stray-math-delimiter failure
+  found by the cumulative PDF gate.
+- The mastery hint at line 976 uses LaTeX `\\delta` rather than a literal
+  Unicode Greek character, keeping the source portable to pdflatex.
 
 ## Attribution and process transparency
 

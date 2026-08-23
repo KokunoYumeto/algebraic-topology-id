@@ -734,7 +734,7 @@ Enam suku saling berpasangan dengan tanda berlawanan, sehingga
 $\delta_1\circ\delta_0=0$. Ekspansi sumber mengulang satu komposisi dan
 menghilangkan komposisi lain; rumus di atas adalah pembetulan bertipe yang
 tetap membuktikan klaim yang dimaksud.
-\square$
+$\square$
 :::
 
 Karakteristik Euler torus kombinatorik adalah
@@ -920,7 +920,7 @@ H^n(g\circ f)([a])=[g_nf_n(a)]
 $$
 
 Maka $H^n(g\circ f)=H^n(g)\circ H^n(f)$ dan $H^n$ adalah fungtor.
-\square$
+$\square$
 :::
 
 ## Dari ruang ke kompleks: gagasan besar dan batas unit {#o012-rbt-l20-s04}
@@ -973,7 +973,7 @@ konstan memang menghasilkan elemen kernel.
 
 ::: {.hint #o012-rbt-l20-hint-001 data-origin="edition-original"}
 **Petunjuk.** Untuk himpunan saling lepas, fungsi pada gabungan adalah pasangan
-fungsi pada kedua komponen. Tulis $δ$ sebagai matriks blok diagonal. Ingat
+fungsi pada kedua komponen. Tulis $\delta$ sebagai matriks blok diagonal. Ingat
 bahwa $R^S$ berarti **semua** fungsi $S\to R$, yakni produk; produk dan jumlah
 langsung berimpit untuk banyak komponen hingga (atau bila dipilih konvensi
 dukungan hingga).

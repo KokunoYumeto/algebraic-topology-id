@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-BACKEND-UNITS-001-020-APPEND-ONLY",
+  "status": "PASS",
+  "validator": {
+    "path": "scripts/validate-backend-append-only-unit-020.py",
+    "sha256": "19ac667e9e1675e30c5adae90b72446c3e8b0617db8dada097059c7b35349123",
+    "result": "append-only Unit 020 backend validation: PASS",
+    "generic_shapes_references_manifests": "PASS"
+  },
+  "immutability": {
+    "baseline_prefixes_preserved": true,
+    "baseline_record_counts": {
+      "artifacts.jsonl": 82,
+      "assets.jsonl": 20,
+      "authority.jsonl": 4,
+      "concepts.jsonl": 284,
+      "corrections.jsonl": 268,
+      "qa.jsonl": 86,
+      "relations.jsonl": 219,
+      "rights.jsonl": 47,
+      "segments.jsonl": 710,
+      "terms.jsonl": 277,
+      "units.jsonl": 729
+    }
+  },
+  "current": {
+    "total_records": 2959,
+    "total_bytes": 2738760,
+    "bundle_sha256": "7abd10e468c5f8b75853a67fcfb67d09f0470720fa88efcc84f5c3647cbb1fe5",
+    "record_counts": {
+      "artifacts.jsonl": 96,
+      "assets.jsonl": 22,
+      "authority.jsonl": 4,
+      "concepts.jsonl": 286,
+      "corrections.jsonl": 280,
+      "qa.jsonl": 94,
+      "relations.jsonl": 261,
+      "rights.jsonl": 51,
+      "segments.jsonl": 783,
+      "terms.jsonl": 279,
+      "units.jsonl": 803
+    },
+    "final_source_sha256": "ed086dfe2f26951d4a1d1c398ade0224ffbf4bd1a20a985d267ecd97bbd228d3",
+    "final_unit_020_qa_sha256": "4638ac3e2a01c1f212c2b60133f78f1fdd4a1f9c21a9a4cb12e32ff10ba8653e"
+  },
+  "append_transactions": [
+    {
+      "script": "scripts/append-unit-020-adverse-0288-0289.py",
+      "sha256": "d5f0bf40ce39032b775dfed378209a8e7377c8e56e62fe7a6fb4fa36a2039eb1",
+      "records_added": 2,
+      "purpose": "record the two cumulative PDF portability repairs"
+    },
+    {
+      "script": "scripts/append-cumulative-unit-020-artifacts.py",
+      "sha256": "61fa1b1119215a90adb031dd76dc5f8874dbcdc12aa9fda5d7342ae874885fad",
+      "records_added": 12,
+      "purpose": "bind cumulative HTML/PDF/manifest/build and representative visual receipts"
+    },
+    {
+      "script": "scripts/append-unit-020-final-qa-4638.py",
+      "sha256": "d4d698f7faaae7b0e1ebd84626f6a363cfe7a82ce884f1378b735b25fe69a8eb",
+      "records_added": 4,
+      "purpose": "supersede the pre-ledger-tail QA witness after ADV-0288/0289 closure"
+    }
+  ],
+  "human_receipt": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_020_FINAL_RECEIPT.md",
+    "bytes": 2113,
+    "sha256": "537ec2aa33f28985540c0adb7a0a9c623968e53a82e1f06adc2230d78fd39c04"
+  },
+  "rights_component": "rights:o012-units-001-020-composite-cc-by-4.0-final-ed086",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}
