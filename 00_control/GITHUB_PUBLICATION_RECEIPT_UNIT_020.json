@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-GITHUB-UNIT-020-2026-08-23",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "content_commit": "962b6b54cd846f1f8d2acd810dd122baf42395bc",
+  "verified_at": "2026-08-23T19:59:00+02:00",
+  "verification": "anonymous raw GitHub byte readback",
+  "status": "unit_source_and_qa_pushed_and_anonymously_byte_verified",
+  "source_span": {
+    "authority_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "notes_tex_lines": "3948-4345",
+    "span_sha256": "1fa7d0ea4ecd567ae8975da5b9b41495a1757913942102f223d1234168366e88",
+    "next_line": 4346
+  },
+  "files": [
+    {"path":"source/id-ID/units/unit-020-lecture-020.md","bytes":45780,"sha256":"b2592d9dd11d1e805ff2995f96604de35c5454bf2a1e5008163ec5a266d7ea50","remote_exact":true},
+    {"path":"qa/UNIT_020_QA.json","bytes":3583,"sha256":"805c684d2921ab97ff4e4f76d054724dc3b2e01e9b2a827b7a4ae554b77dd920","remote_exact":true},
+    {"path":"qa/UNIT_020_SOURCE_AUDIT.md","bytes":3099,"sha256":"da7b9b7d8129d43d4d264bf3a040b1c7da851ca1bf6a83512c884e76cf35276d","remote_exact":true},
+    {"path":"qa/UNIT_020_INDEPENDENT_REVIEW.md","bytes":2335,"sha256":"204bda0a60892898d28917505568e01d4218dac85858bf0d5c1ffa4c4cc78fef","remote_exact":true},
+    {"path":"qa/UNIT_020_TRANSLATION_HANDOFF.md","bytes":1767,"sha256":"09b4adcf0192efed3a1f8c5a68fdabd663847ce280496aec30a1acc04507cea5","remote_exact":true},
+    {"path":"scripts/qa-unit-020.py","bytes":16782,"sha256":"2e97775a894e8a0e5dc986f17cba878dc7f42c3c8332935026c12b2ecdd380f3","remote_exact":true}
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "upstream_contact": "none"
+}
