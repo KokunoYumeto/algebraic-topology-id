@@ -34,21 +34,24 @@ For each lecture: freeze span/census; translate everything in order; reflow
 margins/diagrams accessibly; log only independently verified corrections in
 `ADVERSE_LEDGER.csv`; assign stable IDs; update `TERMINOLOGY.csv`; solve every
 prompt and add only the missing separately marked mastery layer; independently
-review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–024 now cover
-`Notes.tex:134–5369`. Unit 24 is 43,085 bytes/1,156 LF lines/60 stable IDs,
-SHA-256 `993ad0c3493caff6bd15ab2bcf435f6cbb1f49ed9a1e11bc1009d649ae2d3647`.
-Its cumulative 286-page PDF and self-contained HTML are deterministic and
-visually verified; the final append-only backend has 3,723 records/3,726,427
+review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–025 now cover
+`Notes.tex:134–5611`. Unit 25 is 36,578 bytes/1,104 LF lines/59 stable IDs,
+SHA-256 `df72add4e57236b51ff7d2a0c99af4b65299365874163cb334be5d0988c0f769`.
+Its cumulative 298-page PDF and self-contained HTML are deterministic and
+visually verified; the final append-only backend has 3,913 records/4,007,903
 bytes, bundle SHA-256
-`ffa8c7cb45b6d8170d7bc83df24ec487fd0c2777297b55eff2d5e7b3ae63fe25`.
+`8b50629f25c5fcbedb6d5547f8f7151c622aa90e04f71583008bd176058a4f78`.
 GitHub/Pages is public and anonymously byte-exact through Unit 24 at commit
 `8d3484aa2a3f8f611d90d1efa45bb454bcd03676`. Zenodo is public and twice
 anonymously byte-exact through Unit 24
-at DOI `10.5281/zenodo.22074233` in concept `10.5281/zenodo.22061489`. Unit 25,
-`Notes.tex:5370–5611`, is translated and independently reviewed at P1/P2/P3
-zero; backend/build admission remains. Figshare remains blocked by
-the recorded `InactiveAccount` response. Continue through Roberts Lecture 30,
-then the bounded Fomberg bridge and closure.
+at DOI `10.5281/zenodo.22074233` in concept `10.5281/zenodo.22061489`. The
+verified Unit 25 checkpoint is ready for the next narrow GitHub/Pages push;
+Zenodo need not churn for a one-unit increment because the clean Unit 24
+reader remains preserved there. Unit 26 is translated and is undergoing
+independent admission review; Units 27–29 are later unadmitted production
+drafts or reviewed drafts and must not enter the cursor out of order. Figshare
+remains blocked by the recorded `InactiveAccount` response. Continue through
+Roberts Lecture 30, then the bounded Fomberg bridge and closure.
 
 ## Backend, QA, and publication gates
 
@@ -65,7 +68,7 @@ Git or create a duplicate. At coherent reader boundaries update the existing
 Zenodo and Figshare lineages, preserve inherited files, label partial scope,
 and anonymously verify public bytes/hashes. The immutable Units 001–013 reader
 remains historically preserved on Pages and Zenodo `10.5281/zenodo.22061490`;
-the current Zenodo version is `10.5281/zenodo.22072347`. Figshare remains
+the current Zenodo version is `10.5281/zenodo.22074233`. Figshare remains
 pending credential/account recovery, with the failed bounded attempt recorded
 without claiming publication. Do not republish a source-only duplicate.
 Record `OpenAI Codex gpt-5.6-sol, Ultra`; never publish the directing user’s

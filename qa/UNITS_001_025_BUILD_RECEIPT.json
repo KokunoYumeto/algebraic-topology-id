@@ -1,0 +1,209 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-UNITS-001-025-BUILD",
+  "status": "PASS",
+  "scope": "Roberts Indonesian reader Units 001-025",
+  "source_authority": {
+    "repository": "DavidMichaelRoberts/AlgebraicTopology2019",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "tree": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+    "source_file": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "source_bytes": 331447,
+    "source_lines": 6368,
+    "source_sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "cumulative_source_span": "134-5611",
+    "cumulative_span_lines": 5478,
+    "cumulative_span_bytes": 283555,
+    "cumulative_span_sha256": "2bb15364d4f03264797bfd93bfecb69861b55f4b5075d11441921bd677f3e2b1",
+    "next_source_line": 5612,
+    "unit_025_span": "5370-5611",
+    "unit_025_span_lines": 242,
+    "unit_025_span_bytes": 12732,
+    "unit_025_span_sha256": "d05781ae58b1b6fd6174d030e52ca9ee6a08048be96f7c103e5be8de473b60b0",
+    "unit_025_reader": "source/id-ID/units/unit-025-lecture-025.md",
+    "unit_025_bytes": 36578,
+    "unit_025_lines": 1104,
+    "unit_025_sha256": "df72add4e57236b51ff7d2a0c99af4b65299365874163cb334be5d0988c0f769"
+  },
+  "frozen_baseline": {
+    "scope": "Units 001-024",
+    "builder": {
+      "path": "scripts/build-units-001-024.ps1",
+      "bytes": 21976,
+      "sha256": "8e62da597b783f56e0a9174a7822ee453de6de8be01fc5493cb2ab93c41a3c44"
+    },
+    "html": {
+      "path": "output/html/units-001-024/index.html",
+      "bytes": 3927104,
+      "sha256": "28a84406de9e196070965920a7f7937177197977f9ddf118f0f8b07d464cbf0f"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-024-id.pdf",
+      "bytes": 1907368,
+      "sha256": "5189b04f2f28d7e8192c16e8ef070e23bbf98085d150d1f2124d15c071ccf9b8"
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_024.csv",
+      "bytes": 249,
+      "sha256": "23d2b33dd8eb08ba82bb020e3607abbf24925d79e774ca177be228656800a0ff"
+    },
+    "build_receipt": {
+      "path": "qa/UNITS_001_024_BUILD_RECEIPT.json",
+      "bytes": 7560,
+      "sha256": "a050b3d282d43033ccdd7565bc6ee301eee6c30014ef6d8b84c5ec490406129a"
+    },
+    "visual_receipt_sha256": "7aff942b47ec489a56923879aee189fc3911e0eded232a511de66aff8ee01a27",
+    "render_inventory_sha256": "1d9554d98de7d4751fc7ee2d1b5a6cb45edb580e62226b030aea389dff9de683",
+    "verified_without_rewrite": true
+  },
+  "unit_025_gate": {
+    "qa": {
+      "path": "qa/UNIT_025_QA.json",
+      "bytes": 6224,
+      "sha256": "b884ca922191c1ec08a05788e9ae37a8bd05fb475f743f5340815f3a10225b15",
+      "status": "PASS"
+    },
+    "source_audit": {
+      "path": "qa/UNIT_025_SOURCE_AUDIT.md",
+      "bytes": 6386,
+      "sha256": "f252e9f15e0980ed2a2c15dfbd1c22fd6fd99990333e2de9a9372f695523e903"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_025_INDEPENDENT_REVIEW.md",
+      "bytes": 6933,
+      "sha256": "c7be12ea116b76ea2789b9e1d81cca973ea4d108e97f821eaeba4491ddcb7c08",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    },
+    "verifier": {
+      "path": "scripts/qa-unit-025.py",
+      "bytes": 20860,
+      "sha256": "921bb25f5f48deab30bab767b8bad3b9e7f80a38f2eb641f5c1a53fc0ad75569"
+    }
+  },
+  "toolchain": {
+    "builder": "scripts/build-units-001-025.ps1",
+    "builder_bytes": 21986,
+    "builder_sha256": "d346b18845f8fc9314ae588fc7877d38275110ab23c60f10b7bad649bc3371c2",
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_engine": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "poppler": "24.04.0",
+    "source_date_epoch": 1787529600,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "reproducibility": {
+    "html_two_builds_byte_identical": true,
+    "pdf_two_builds_byte_identical": true,
+    "source_baseline_authority_and_unit_025_evidence_fail_closed": true,
+    "pandoc_html_warnings_are_fatal": true,
+    "transient_html_macro_normalization_does_not_modify_sources": true
+  },
+  "artifacts": {
+    "html": {
+      "path": "output/html/units-001-025/index.html",
+      "bytes": 4112563,
+      "sha256": "38cd8437f3b4235ac6269f4e3365123fa06485269d35a424ad4f5ddd589025c1"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-025-id.pdf",
+      "bytes": 1972209,
+      "sha256": "581d62162633a6624687517c5cf1595f5fc02a2701c2222b279711e0520b9a3f",
+      "pages": 298,
+      "unit_025_pages": "287-298",
+      "transition_page": 286,
+      "page_size": "A4",
+      "page_rotation": 0,
+      "fonts": 27,
+      "all_fonts_embedded_subset_tounicode": true,
+      "catalog_lang": "id-ID",
+      "tagged": false,
+      "encrypted": false,
+      "forms": false,
+      "annotations": 409,
+      "annotation_subtypes": {"Link": 409},
+      "widget_annotations": 0,
+      "javascript": false,
+      "additional_actions": false,
+      "suspects": false
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_025.csv",
+      "bytes": 249,
+      "sha256": "37175a8d7023bf394c50c4809122b1f3244b5d0b1b95a3b724bdb2ff184ab142"
+    }
+  },
+  "html_checks": {
+    "unique_dom_ids": 1361,
+    "duplicate_dom_ids": 0,
+    "fragment_links": 296,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 10118,
+    "raw_tex_math_fallbacks": 0,
+    "semantic_figures": 62,
+    "unit_025_ids": 59,
+    "missing_unit_025_ids": 0,
+    "runtime_external_dependencies": 0,
+    "lang": "id-ID",
+    "centered_reader_width": "min(100%, 72rem)",
+    "responsive_mobile_reflow": true
+  },
+  "browser_checks": {
+    "desktop": {
+      "requested_viewport": "1425x1000",
+      "effective_document_width_px": 1410,
+      "body_width_px": 1152,
+      "left_margin_px": 129.111,
+      "right_margin_px": 128.889,
+      "center_delta_px": 0.222,
+      "root_horizontal_overflow_px": 0,
+      "uncontained_overflow_elements": 0
+    },
+    "mobile": {
+      "requested_viewport": "390x844",
+      "effective_content_width_px": 375,
+      "body_width_px": 375.111,
+      "body_side_padding_px": 17.6,
+      "root_horizontal_overflow_px": 0,
+      "crossing_descendant_boxes": 1661,
+      "locally_contained_crossing_boxes": 1661,
+      "uncontained_overflow_elements": 0,
+      "wide_display_mathml_local_scrollers": 199,
+      "wide_inline_mathml_local_scrollers": 2,
+      "wide_mathml_local_scrollers_total": 201
+    },
+    "final_result": "PASS"
+  },
+  "visual_checks": {
+    "receipt": "qa/UNITS_001_025_VISUAL_QA.md",
+    "receipt_bytes": 4804,
+    "receipt_sha256": "ae49496b676472f6c69a3468cc76c323c45905ce7ed86a048ce11556079137a3",
+    "render_inventory": "qa/UNITS_001_025_RENDER_INVENTORY.csv",
+    "render_inventory_bytes": 2731,
+    "render_inventory_sha256": "a55ff205e621fbc750baaf086fa18883c72dba5bdfe1f66e4554247d22fdc12f",
+    "pages": [1, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298],
+    "render_dpi": 144,
+    "render_dimensions_px": "1191x1684",
+    "result": "PASS; every Unit 25 page plus title and transition inspected"
+  },
+  "privacy_and_provenance": {
+    "pdf_unit_025_pages_scanned": "286-298",
+    "forbidden_markers": 0,
+    "model_provenance_present": true,
+    "source_credit_present": true,
+    "terminal_boundary_and_cursor_present": true,
+    "credentials_recorded": false,
+    "absolute_local_user_paths_recorded": false
+  },
+  "accessibility": {
+    "primary_accessible_surface": "self-contained reflowable HTML5 with native MathML and semantic figures",
+    "pdf_limitation": "PDF is untagged; disclosed without overstating accessibility"
+  },
+  "rights": {
+    "license": "CC BY 4.0",
+    "attribution": "David Michael Roberts, Algebraic Topology (2019)",
+    "changes_and_process_disclosed": true,
+    "human_contributor_credit_preserved": true,
+    "non_endorsement": true
+  }
+}

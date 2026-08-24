@@ -1,0 +1,15 @@
+pdf_page,coverage,render_name,dpi,width_px,height_px,render_bytes,render_sha256
+1,"title, expanded subtitle, authorship, and opening contents",title-001.png,144,1191,1684,182707,2eed436f08f84821bdfdbf6fcc276047566e297f931108b16eea29b93a5710a1
+286,"late Unit 24 mastery solution, boundary to Unit 25, and Unit 25 provenance opening",transition-286.png,144,1191,1684,348530,721ad266996db12650f4df6dfd8fafd91902581374fa78310345fa79da2b4b2b
+287,"Unit 25 provenance close, lecture opening, relative cohomology, and top-skeleton example",unit25-287.png,144,1191,1684,280741,b80891296e43cc5d42d528d37fd2a1e9a8ab775c97790b38b38f336c77786d1a
+288,"top-skeleton calculation, skeleton lemma proof, relative long exact sequence, and semantic data",unit25-288.png,144,1191,1684,319446,71317e533f21a6bf36b0abfeb55218aa9a77eda93a1f09853aa4515fd3ce119b
+289,"connecting morphism construction and exactness, source audit, and simplex-boundary example",unit25-289.png,144,1191,1684,307452,a92283fc4b0f5a29f93e2f2d754e7d96db81aac55b4a578ae0ef9bea1cf7a346
+290,"simplex commentary, typed two-point restriction, reduced cohomology, and fat-point complex",unit25-290.png,144,1191,1684,310375,33f8c44c03d966bbf080e5c06ea0504e952598de24a67cfe073ee2a83d338fc4
+291,"fat-point calculation, quasi-isomorphism, and Five Lemma statement with semantic rows",unit25-291.png,144,1191,1684,262611,874043aa343c6417443f55951d3e5df21665b004a6351e9a2393a46c75055407
+292,"Five Lemma semantic commutativity data and complete surjectivity-injectivity proof",unit25-292.png,144,1191,1684,220070,f43d945a84f78271b800115bd1ca2130f009c7b621beb5a49b58963f47750352
+293,"Five Lemma audit, Euler-characteristic definitions, and infinite-line recursion opening",unit25-293.png,144,1191,1684,261701,a3b085fe520ee43a69b78e8291c07d739d781f16b1de2d02027265764a435e14
+294,"infinite-line recursion close and repaired rank-nullity Euler proof",unit25-294.png,144,1191,1684,157009,0629c39c4c830cacb3c8fddc4732f759a96d682e7f3e8a913993a1a4dafe7819
+295,"Euler cancellation, source repairs, bounded-complex identity, and mastery opening",unit25-295.png,144,1191,1684,272790,6db1196768e8778a0240e4a45c5f6417118b23fb7113758a5de6d0d252ffd6f2
+296,"mastery checks 25.1-25.3 with hints and complete solutions",unit25-296.png,144,1191,1684,294984,d9a13abbd00b0bce1fc1ccc5383c2064e7a6f2332074ac7bfedc390eac140e6f
+297,"mastery check 25.3 close, quasi-isomorphism solution, and Five Lemma injectivity chase",unit25-297.png,144,1191,1684,296836,2cc4a5f7db79eee7f1e8e5904773ec6bd6e51241a1269ac167a3fb9b5c26753b
+298,"Five Lemma chase close, infinite-line and Euler mastery solution, and boundary to Unit 26",unit25-298.png,144,1191,1684,272732,0f48d8dc0510d6aba993fe56ca317830864506118e1541bc2ca5d3d53e3f8219

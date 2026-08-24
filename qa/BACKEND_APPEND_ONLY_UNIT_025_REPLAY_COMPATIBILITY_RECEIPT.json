@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-BACKEND-UNIT-025-SEMANTIC-VALIDATOR-REPLAY-COMPATIBILITY",
+  "status": "PASS",
+  "date": "2026-08-24",
+  "reason": "The historical semantic validator correctly stopped at the 3896-record semantic boundary and therefore rejected the later separately admitted 17-record cumulative suffix during replay.",
+  "validator_change": {
+    "path": "scripts/validate-backend-append-only-unit-025.py",
+    "prior_bytes": 19589,
+    "prior_lines": 359,
+    "prior_sha256": "aacd0f797989cb10ea664d27af8c16e854a22ee90990e5b00b8b038eaebf2664",
+    "current_bytes": 25281,
+    "current_lines": 442,
+    "current_sha256": "49b21e6a66ddd3606b324f50e3bf11d44b8d762736178cbe859b2bee41188bab",
+    "semantic_checks_weakened": false
+  },
+  "validated_boundaries": {
+    "unit_024_cumulative_prefix": {
+      "records": 3723,
+      "bytes": 3726427,
+      "bundle_sha256": "ffa8c7cb45b6d8170d7bc83df24ec487fd0c2777297b55eff2d5e7b3ae63fe25",
+      "preserved_byte_for_byte": true
+    },
+    "unit_025_semantic_slice": {
+      "records_added": 173,
+      "records": 3896,
+      "bytes": 3996359,
+      "bundle_sha256": "55372b9c2853fa479e731c73c407b234ad2f1219e07efbedbad2a99f1e2abf47",
+      "preserved_byte_for_byte": true
+    },
+    "permitted_cumulative_suffix": {
+      "records_added": 17,
+      "records_by_type": {
+        "artifact": 7,
+        "qa_event": 2,
+        "relation": 7,
+        "rights": 1
+      },
+      "receipt_path": "qa/BACKEND_APPEND_ONLY_UNIT_025_CUMULATIVE_RECEIPT.json",
+      "receipt_bytes": 7562,
+      "receipt_sha256": "eacee8cad8ffe460af5f50a9be16f5c02b0671a686209e7d0073e10b2a98a2c1"
+    },
+    "live_cumulative_backend": {
+      "records": 3913,
+      "bytes": 4007903,
+      "bundle_sha256": "8b50629f25c5fcbedb6d5547f8f7151c622aa90e04f71583008bd176058a4f78"
+    }
+  },
+  "replay": {
+    "semantic_validator": "PASS",
+    "cumulative_validator": "PASS",
+    "stable_ids": 59,
+    "proof_closures": 4,
+    "mastery_triples": 6,
+    "resolved_terminology_finding": "UNIT025-TERM-P3-001",
+    "next_source_line": 5612
+  },
+  "historical_receipts_preserved": {
+    "json": {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_RECEIPT.json",
+      "bytes": 6957,
+      "sha256": "7814c3586ab5e25989ddbed45ab8569d8406fb9022c5fa52e74e5b8b1aef37aa"
+    },
+    "markdown": {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_RECEIPT.md",
+      "bytes": 2961,
+      "sha256": "43f11a856d9c169884853b8e64fc9adc2c461694d8b795d2a47789d1a0d32af9"
+    },
+    "reason_not_rewritten": "The cumulative validator cryptographically pins the original semantic transaction receipt; an additive compatibility receipt preserves both historical and current replay evidence."
+  },
+  "human_receipt": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_REPLAY_COMPATIBILITY_RECEIPT.md",
+    "bytes": 2556,
+    "lines": 54,
+    "sha256": "50b7ecaaf38998c0e9f9c20130a27f4d94b838cf2da230edcaa715beab5bce9c"
+  },
+  "write_boundary": [
+    "scripts/validate-backend-append-only-unit-025.py",
+    "qa/BACKEND_APPEND_ONLY_UNIT_025_REPLAY_COMPATIBILITY_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_UNIT_025_REPLAY_COMPATIBILITY_RECEIPT.md"
+  ],
+  "backend_controls_sources_readers_outputs_git_publication_or_later_units_changed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

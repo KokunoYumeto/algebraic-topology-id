@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L25-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 5370,
+    "line_end": 5611,
+    "bytes": 331447,
+    "lines": 6368,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_bytes": 12732,
+    "span_sha256": "d05781ae58b1b6fd6174d030e52ca9ee6a08048be96f7c103e5be8de473b60b0",
+    "source_census": {
+      "lecture": 1,
+      "definition": 3,
+      "lemma": 2,
+      "proposition": 2,
+      "example": 6,
+      "proof": 2,
+      "enumerate": 1,
+      "enumerate_item": 2,
+      "margin": 8,
+      "xypic": 2,
+      "label": 1,
+      "reference": 1,
+      "display": 15,
+      "exercise": 0,
+      "question": 0,
+      "citation": 0,
+      "external_graphic": 0,
+      "input": 0,
+      "include": 0
+    },
+    "next_line": 5612
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-025-lecture-025.md",
+    "bytes": 36578,
+    "lines": 1104,
+    "sha256": "df72add4e57236b51ff7d2a0c99af4b65299365874163cb334be5d0988c0f769",
+    "stable_ids": 59,
+    "fenced_semantic_objects": 52,
+    "block_census": {
+      "aside": 7,
+      "boundary": 1,
+      "definition": 3,
+      "example": 6,
+      "exercise": 6,
+      "figure": 2,
+      "hint": 6,
+      "lemma": 2,
+      "proof": 4,
+      "proposition": 2,
+      "remark": 1,
+      "solution": 6,
+      "source-audit": 6
+    }
+  },
+  "controls": {
+    "source_audit": {
+      "path": "qa/UNIT_025_SOURCE_AUDIT.md",
+      "bytes": 6386,
+      "sha256": "f252e9f15e0980ed2a2c15dfbd1c22fd6fd99990333e2de9a9372f695523e903"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_025_INDEPENDENT_REVIEW.md",
+      "bytes": 6933,
+      "sha256": "c7be12ea116b76ea2789b9e1d81cca973ea4d108e97f821eaeba4491ddcb7c08",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    }
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "finding_id": "UNIT025-TERM-P3-001",
+      "severity": "P3",
+      "path": "source/id-ID/units/unit-025-lecture-025.md",
+      "line": 56,
+      "initial_observation": "reader used 'kompleks korantai simplicial relatif' instead of the admitted lane term",
+      "resolution": "owning task replaced only 'simplicial' with 'simpleksial' before admission and QA was rebound",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    }
+  ],
+  "corrections": {
+    "restored_degree_zero_relative_cochain": true,
+    "typed_two_point_restriction": true,
+    "typed_five_lemma_b_prime": true,
+    "repaired_euler_rank_nullity": true,
+    "restored_closing_bounded_complex_formula": true,
+    "admitted_simpleksial_terminology": true
+  },
+  "proof_closure": {
+    "skeleton_stability": true,
+    "relative_long_exact_sequence": true,
+    "five_lemma_surjectivity": true,
+    "five_lemma_injectivity": true,
+    "euler_characteristic": true,
+    "mastery_solution_triples": 6
+  },
+  "rendering": {
+    "pandoc": "pandoc 3.9.0.2",
+    "target": "HTML5 native MathML",
+    "mathml_nodes": 449,
+    "runtime_fallback": false,
+    "same_file_fragment": "o012-rbt-l25-exa-001"
+  },
+  "verifier": {
+    "path": "scripts/qa-unit-025.py",
+    "sha256": "921bb25f5f48deab30bab767b8bad3b9e7f80a38f2eb641f5c1a53fc0ad75569"
+  },
+  "checks": [
+    {
+      "check": "required_files_and_identities",
+      "status": "PASS",
+      "detail": "authority, corrected reader, audit, and final independent review match frozen bytes"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:5370-5611 is 12,732 LF bytes; next cursor 5612 is intact"
+    },
+    {
+      "check": "source_census",
+      "status": "PASS",
+      "detail": "{\"citation\": 0, \"definition\": 3, \"display\": 15, \"enumerate\": 1, \"enumerate_item\": 2, \"example\": 6, \"exercise\": 0, \"external_graphic\": 0, \"include\": 0, \"input\": 0, \"label\": 1, \"lecture\": 1, \"lemma\": 2, \"margin\": 8, \"proof\": 2, \"proposition\": 2, \"question\": 0, \"reference\": 1, \"xypic\": 2}"
+    },
+    {
+      "check": "rights_provenance_privacy",
+      "status": "PASS",
+      "detail": "CC BY 4.0, source credit, non-endorsement, human credit, exact model; no private marker"
+    },
+    {
+      "check": "stable_ids",
+      "status": "PASS",
+      "detail": "59 occurrences, 59 unique IDs, exact expected set; 7 identified headings"
+    },
+    {
+      "check": "balanced_structure",
+      "status": "PASS",
+      "detail": "52 balanced fenced objects; {\"aside\": 7, \"boundary\": 1, \"definition\": 3, \"example\": 6, \"exercise\": 6, \"figure\": 2, \"hint\": 6, \"lemma\": 2, \"proof\": 4, \"proposition\": 2, \"remark\": 1, \"solution\": 6, \"source-audit\": 6}; math delimiters balanced"
+    },
+    {
+      "check": "semantic_attributes_and_alias",
+      "status": "PASS",
+      "detail": "one source alias/reference, four proof origins, and 18 mastery origins exact"
+    },
+    {
+      "check": "source_order",
+      "status": "PASS",
+      "detail": "all source objects, edition proof closures, mastery, and terminal boundary occur in intended order"
+    },
+    {
+      "check": "mathematical_fidelity",
+      "status": "PASS",
+      "detail": "skeleton proof, relative LES, Five Lemma completion, infinite-line recursion, Euler correction, and closing identity exact"
+    },
+    {
+      "check": "accessible_semantic_reflow",
+      "status": "PASS",
+      "detail": "2 Xy-pic surfaces replaced semantically; all 8 source margins are in reading order; no raw layout command"
+    },
+    {
+      "check": "language_and_mastery",
+      "status": "PASS",
+      "detail": "admitted id-ID terminology; six exact problem/hint/full-solution triples"
+    },
+    {
+      "check": "audit_and_review",
+      "status": "PASS",
+      "detail": "source audit is exact; final review records P1=0, P2=0, P3=0 and the resolved terminology finding"
+    },
+    {
+      "check": "pandoc_html5_mathml",
+      "status": "PASS",
+      "detail": "pandoc 3.9.0.2; exit 0; warnings fatal; 449 MathML nodes; all IDs and same-file fragment resolve"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

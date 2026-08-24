@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-BACKEND-UNITS-001-025-CUMULATIVE-APPEND-ONLY",
+  "status": "PASS",
+  "date": "2026-08-24",
+  "scope": "Exact cumulative Units 001-025 build artifacts, QA, relations, and final built-rights pointer only",
+  "supersedes_as_current_boundary": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_RECEIPT.json",
+    "bytes": 6957,
+    "sha256": "7814c3586ab5e25989ddbed45ab8569d8406fb9022c5fa52e74e5b8b1aef37aa"
+  },
+  "nested_immutability": {
+    "unit_024_cumulative": {
+      "records": 3723,
+      "bytes": 3726427,
+      "bundle_sha256": "ffa8c7cb45b6d8170d7bc83df24ec487fd0c2777297b55eff2d5e7b3ae63fe25",
+      "preserved_byte_for_byte": true
+    },
+    "unit_025_semantic": {
+      "records": 3896,
+      "bytes": 3996359,
+      "bundle_sha256": "55372b9c2853fa479e731c73c407b234ad2f1219e07efbedbad2a99f1e2abf47",
+      "preserved_byte_for_byte": true,
+      "record_counts": {
+        "artifacts.jsonl": 138,
+        "assets.jsonl": 27,
+        "authority.jsonl": 4,
+        "concepts.jsonl": 325,
+        "corrections.jsonl": 332,
+        "qa.jsonl": 117,
+        "relations.jsonl": 390,
+        "rights.jsonl": 70,
+        "segments.jsonl": 1075,
+        "terms.jsonl": 318,
+        "units.jsonl": 1100
+      }
+    }
+  },
+  "append": {
+    "records_added": 17,
+    "records_by_file": {
+      "artifacts.jsonl": 7,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 0,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 2,
+      "relations.jsonl": 7,
+      "rights.jsonl": 1,
+      "segments.jsonl": 0,
+      "terms.jsonl": 0,
+      "units.jsonl": 0
+    },
+    "canonical_jsonl": true,
+    "suffix_sorted_within_transaction": true,
+    "final_rights_component_id": "rights:o012-units-001-025-composite-cc-by-4.0-final-df72"
+  },
+  "current": {
+    "total_records": 3913,
+    "total_bytes": 4007903,
+    "bundle_sha256": "8b50629f25c5fcbedb6d5547f8f7151c622aa90e04f71583008bd176058a4f78",
+    "files": {
+      "artifacts.jsonl": {"records": 145, "bytes": 115514, "sha256": "ac0633eb616f2d0bd412bfb076a482d6ef6a402683d35da67bf6c1ed290ea40e"},
+      "assets.jsonl": {"records": 27, "bytes": 16679, "sha256": "aa569a900426a9e2cfd56777f3e52f07b35a1a72f211847bafd71ec638043462"},
+      "authority.jsonl": {"records": 4, "bytes": 2721, "sha256": "f21af26912520ab34b38dff0e927ed46a546dbe5d318da0dc133e58330d0e368"},
+      "concepts.jsonl": {"records": 325, "bytes": 102250, "sha256": "0ce28594cd511c1a20aff74053b7c74c6c4c6a0505c7c8c5804dd7acd2dae77d"},
+      "corrections.jsonl": {"records": 332, "bytes": 327054, "sha256": "40791f1db8da9ba81083bad0bb4ac183094c3151b9007bb34e5fc637a1790893"},
+      "qa.jsonl": {"records": 119, "bytes": 67471, "sha256": "7b90c07af1561b6356a3249f396a97aaf10265989f4d7ba2b1493f87bac60b93"},
+      "relations.jsonl": {"records": 397, "bytes": 162048, "sha256": "62f67c2ede76bcd24e9ad87db7968dd92649aba6e284c4829042941dd7ea8a50"},
+      "rights.jsonl": {"records": 71, "bytes": 65630, "sha256": "7e54a0f51dd951aecadbc3767173308dc02c12ada6c121b9703c9ec2fb7f2ac7"},
+      "segments.jsonl": {"records": 1075, "bytes": 1428116, "sha256": "d47404ea94dfa7347fbf6f6e0e0e8c5f4fb60e2634c066b87967a4468fff644a"},
+      "terms.jsonl": {"records": 318, "bytes": 197648, "sha256": "dda9013d863bc39ec81f9936167ad24d0cfa2ebba6de0aa2c768743dc09b8503"},
+      "units.jsonl": {"records": 1100, "bytes": 1522772, "sha256": "7fe9d4abfae9389db7cb99240b553d62b66144086c3f2097e9f64d5b2fe14318"}
+    }
+  },
+  "artifacts": {
+    "builder": {"path": "scripts/build-units-001-025.ps1", "bytes": 21986, "sha256": "d346b18845f8fc9314ae588fc7877d38275110ab23c60f10b7bad649bc3371c2", "backend_id": "artifact:o012-units-001-025-build-script"},
+    "html": {"path": "output/html/units-001-025/index.html", "bytes": 4112563, "sha256": "38cd8437f3b4235ac6269f4e3365123fa06485269d35a424ad4f5ddd589025c1", "backend_id": "artifact:o012-units-001-025-html"},
+    "pdf": {"path": "output/pdf/topologi-aljabar-unit-001-025-id.pdf", "bytes": 1972209, "sha256": "581d62162633a6624687517c5cf1595f5fc02a2701c2222b279711e0520b9a3f", "pages": 298, "backend_id": "artifact:o012-units-001-025-pdf"},
+    "manifest": {"path": "output/ARTIFACT_MANIFEST_UNITS_001_025.csv", "bytes": 249, "sha256": "37175a8d7023bf394c50c4809122b1f3244b5d0b1b95a3b724bdb2ff184ab142", "backend_id": "artifact:o012-units-001-025-manifest"},
+    "build_receipt": {"path": "qa/UNITS_001_025_BUILD_RECEIPT.json", "bytes": 7729, "sha256": "dd2fa5b52ed84ac939c33cfa5b9f68be4b904b014321abcb54c2ae664d0f9727", "backend_id": "artifact:o012-units-001-025-build-receipt"},
+    "visual_receipt": {"path": "qa/UNITS_001_025_VISUAL_QA.md", "bytes": 4804, "sha256": "ae49496b676472f6c69a3468cc76c323c45905ce7ed86a048ce11556079137a3", "backend_id": "artifact:o012-units-001-025-visual-receipt"},
+    "render_inventory": {"path": "qa/UNITS_001_025_RENDER_INVENTORY.csv", "bytes": 2731, "sha256": "a55ff205e621fbc750baaf086fa18883c72dba5bdfe1f66e4554247d22fdc12f", "rows": 14, "backend_id": "artifact:o012-units-001-025-render-inventory"}
+  },
+  "manifest_path_correction": {
+    "supplied_path": "output/units-001-025-manifest.sha256",
+    "supplied_path_exists": false,
+    "bound_live_path": "output/ARTIFACT_MANIFEST_UNITS_001_025.csv",
+    "reason": "The live build receipt and exact 249-byte primary witness identify the CSV path."
+  },
+  "qa": {
+    "cumulative_build_event": "qa:o012-units-001-025-build",
+    "cumulative_visual_event": "qa:o012-units-001-025-visual",
+    "deterministic_html": "PASS",
+    "deterministic_pdf": "PASS",
+    "manifest_closure": "PASS",
+    "html_unique_ids": 1361,
+    "html_fragment_links": 296,
+    "html_mathml_nodes": 10118,
+    "html_semantic_figures": 62,
+    "unit_025_html_ids": 59,
+    "raw_tex_math_fallbacks": 0,
+    "unresolved_fragment_links": 0,
+    "runtime_external_dependencies": 0,
+    "responsive_desktop_overflow": "PASS",
+    "responsive_mobile_reflow": "PASS",
+    "pdf_pages": 298,
+    "unit_025_pages_inspected": "287-298",
+    "representative_title_transition_pages": [1, 286],
+    "render_inventory_rows": 14,
+    "pdf_page_size": "A4",
+    "pdf_catalog_lang": "id-ID",
+    "pdf_fonts_embedded_subset_unicode": true,
+    "pdf_tagged": false,
+    "accessible_primary_surface": "self-contained reflowable HTML5 with native MathML and semantic figures"
+  },
+  "transaction_scripts": {
+    "producer": {"path": "scripts/append-cumulative-unit-025-artifacts.py", "bytes": 19321, "lines": 357, "sha256": "b7572851e6798591abbc4e119573f3ded4050d827dd6c749eea50c33f599bbbf", "status": "PASS"},
+    "validator": {"path": "scripts/validate-backend-append-only-unit-025-cumulative.py", "bytes": 18551, "lines": 316, "sha256": "1ef5f15a91f662abc61540007813039fe14b29dc92e224d47dea1249241f4c27", "status": "PASS"}
+  },
+  "human_receipt": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_CUMULATIVE_RECEIPT.md",
+    "bytes": 3814,
+    "lines": 85,
+    "sha256": "dc986ac4884e48784b61af1f00025e3e71f27caf9a31d2e3abd2b58680cafb98"
+  },
+  "write_boundary": [
+    "backend/artifacts.jsonl",
+    "backend/qa.jsonl",
+    "backend/relations.jsonl",
+    "backend/rights.jsonl",
+    "scripts/append-cumulative-unit-025-artifacts.py",
+    "scripts/validate-backend-append-only-unit-025-cumulative.py",
+    "qa/BACKEND_APPEND_ONLY_UNIT_025_CUMULATIVE_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_UNIT_025_CUMULATIVE_RECEIPT.md"
+  ],
+  "source_reader_semantic_ledgers_controls_outputs_cursor_state_git_publication_or_upstream_changed_by_this_transaction": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}
