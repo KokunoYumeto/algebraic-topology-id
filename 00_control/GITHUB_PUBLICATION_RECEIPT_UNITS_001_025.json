@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-GITHUB-PUBLICATION-UNITS-001-025",
+  "status": "pushed_deployed_and_anonymously_byte_verified",
+  "verified_at": "2026-08-24T05:02:02+02:00",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "previous_public_commit": "884a03e88775967c3e77747c242566c0910776ef",
+  "content_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+  "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+  "release_tree": "aad55b5d0c47b60f77d0517b09c47efbd1ebda91",
+  "anonymous_main_ref": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+  "release_delta_files": 38,
+  "release_delta_manifest_sha256": "1d4680573cc060b8c7939393f1b4e0699e4a0262ef95f59f79158b1892845738",
+  "files": [
+    {
+      "path": ".github/workflows/pages.yml",
+      "status": "modified",
+      "bytes": 3909,
+      "sha256": "c1e97bbb4f101bd7c19ad8855d4ce81000c976ba706480c863898c3c431b3b02",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "00_control/ADVERSE_LEDGER.csv",
+      "status": "modified",
+      "bytes": 106400,
+      "sha256": "2452625edb80ca51c69ebdb3d4aa0af09d65a45625bc20e62bdd1ee039043c19",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "00_control/CURRENT_GOAL_AND_WORKFLOW.md",
+      "status": "modified",
+      "bytes": 5365,
+      "sha256": "43fcf39f319228a780f1fa20f3721e088fe077da1281388b2e42aca38c7da577",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "00_control/CURRENT_STATE.md",
+      "status": "modified",
+      "bytes": 55195,
+      "sha256": "3cc63f34c62207d69a1d89df360e0a30df0f5d09c5f6060c8841a255cfe68a06",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "00_control/CURSOR.json",
+      "status": "modified",
+      "bytes": 5753,
+      "sha256": "f4efefd56f39189312b6c8318a69f90581a12b3ff59ec1647103ce13b5e4fb94",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "00_control/TERMINOLOGY.csv",
+      "status": "modified",
+      "bytes": 35857,
+      "sha256": "c87373237cd5558041b8443b51e1161671cc92a3209878f8e5e38e1a05f42107",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "backend/artifacts.jsonl",
+      "status": "modified",
+      "bytes": 115514,
+      "sha256": "ac0633eb616f2d0bd412bfb076a482d6ef6a402683d35da67bf6c1ed290ea40e",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "backend/assets.jsonl",
+      "status": "modified",
+      "bytes": 16679,
+      "sha256": "aa569a900426a9e2cfd56777f3e52f07b35a1a72f211847bafd71ec638043462",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "backend/concepts.jsonl",
+      "status": "modified",
+      "bytes": 102250,
+      "sha256": "0ce28594cd511c1a20aff74053b7c74c6c4c6a0505c7c8c5804dd7acd2dae77d",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "backend/corrections.jsonl",
+      "status": "modified",
+      "bytes": 327054,
+      "sha256": "40791f1db8da9ba81083bad0bb4ac183094c3151b9007bb34e5fc637a1790893",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "backend/qa.jsonl",
+      "status": "modified",
+      "bytes": 67471,
+      "sha256": "7b90c07af1561b6356a3249f396a97aaf10265989f4d7ba2b1493f87bac60b93",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "backend/relations.jsonl",
+      "status": "modified",
+      "bytes": 162048,
+      "sha256": "62f67c2ede76bcd24e9ad87db7968dd92649aba6e284c4829042941dd7ea8a50",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "backend/rights.jsonl",
+      "status": "modified",
+      "bytes": 65630,
+      "sha256": "7e54a0f51dd951aecadbc3767173308dc02c12ada6c121b9703c9ec2fb7f2ac7",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "backend/segments.jsonl",
+      "status": "modified",
+      "bytes": 1428116,
+      "sha256": "d47404ea94dfa7347fbf6f6e0e0e8c5f4fb60e2634c066b87967a4468fff644a",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "backend/terms.jsonl",
+      "status": "modified",
+      "bytes": 197648,
+      "sha256": "dda9013d863bc39ec81f9936167ad24d0cfa2ebba6de0aa2c768743dc09b8503",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "backend/units.jsonl",
+      "status": "modified",
+      "bytes": 1522772,
+      "sha256": "7fe9d4abfae9389db7cb99240b553d62b66144086c3f2097e9f64d5b2fe14318",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_025.csv",
+      "status": "added",
+      "bytes": 249,
+      "sha256": "37175a8d7023bf394c50c4809122b1f3244b5d0b1b95a3b724bdb2ff184ab142",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "output/html/units-001-025/index.html",
+      "status": "added",
+      "bytes": 4112563,
+      "sha256": "38cd8437f3b4235ac6269f4e3365123fa06485269d35a424ad4f5ddd589025c1",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "output/pdf/topologi-aljabar-unit-001-025-id.pdf",
+      "status": "added",
+      "bytes": 1972209,
+      "sha256": "581d62162633a6624687517c5cf1595f5fc02a2701c2222b279711e0520b9a3f",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_CUMULATIVE_RECEIPT.json",
+      "status": "added",
+      "bytes": 7562,
+      "sha256": "eacee8cad8ffe460af5f50a9be16f5c02b0671a686209e7d0073e10b2a98a2c1",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_CUMULATIVE_RECEIPT.md",
+      "status": "added",
+      "bytes": 3814,
+      "sha256": "dc986ac4884e48784b61af1f00025e3e71f27caf9a31d2e3abd2b58680cafb98",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_RECEIPT.json",
+      "status": "added",
+      "bytes": 6957,
+      "sha256": "7814c3586ab5e25989ddbed45ab8569d8406fb9022c5fa52e74e5b8b1aef37aa",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_RECEIPT.md",
+      "status": "added",
+      "bytes": 2961,
+      "sha256": "43f11a856d9c169884853b8e64fc9adc2c461694d8b795d2a47789d1a0d32af9",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_REPLAY_COMPATIBILITY_RECEIPT.json",
+      "status": "added",
+      "bytes": 3312,
+      "sha256": "6b4ef92a4c3ad4ec2190d7f1bedac6c118ff9033a1bb6257bd96d48f86dae1f2",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_025_REPLAY_COMPATIBILITY_RECEIPT.md",
+      "status": "added",
+      "bytes": 2556,
+      "sha256": "50b7ecaaf38998c0e9f9c20130a27f4d94b838cf2da230edcaa715beab5bce9c",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/UNITS_001_025_BUILD_RECEIPT.json",
+      "status": "added",
+      "bytes": 7729,
+      "sha256": "dd2fa5b52ed84ac939c33cfa5b9f68be4b904b014321abcb54c2ae664d0f9727",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/UNITS_001_025_RENDER_INVENTORY.csv",
+      "status": "added",
+      "bytes": 2731,
+      "sha256": "a55ff205e621fbc750baaf086fa18883c72dba5bdfe1f66e4554247d22fdc12f",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/UNITS_001_025_VISUAL_QA.md",
+      "status": "added",
+      "bytes": 4804,
+      "sha256": "ae49496b676472f6c69a3468cc76c323c45905ce7ed86a048ce11556079137a3",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/UNIT_025_INDEPENDENT_REVIEW.md",
+      "status": "added",
+      "bytes": 6933,
+      "sha256": "c7be12ea116b76ea2789b9e1d81cca973ea4d108e97f821eaeba4491ddcb7c08",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/UNIT_025_QA.json",
+      "status": "added",
+      "bytes": 6224,
+      "sha256": "b884ca922191c1ec08a05788e9ae37a8bd05fb475f743f5340815f3a10225b15",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "qa/UNIT_025_SOURCE_AUDIT.md",
+      "status": "added",
+      "bytes": 6386,
+      "sha256": "f252e9f15e0980ed2a2c15dfbd1c22fd6fd99990333e2de9a9372f695523e903",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "scripts/append-cumulative-unit-025-artifacts.py",
+      "status": "added",
+      "bytes": 19321,
+      "sha256": "b7572851e6798591abbc4e119573f3ded4050d827dd6c749eea50c33f599bbbf",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "scripts/build-units-001-025.ps1",
+      "status": "added",
+      "bytes": 21986,
+      "sha256": "d346b18845f8fc9314ae588fc7877d38275110ab23c60f10b7bad649bc3371c2",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "scripts/extend-backend-unit-025.py",
+      "status": "added",
+      "bytes": 37829,
+      "sha256": "8eec9cc135c96df1c2ea403edea22ccf13e38810f7b4acff46c6a6ba28905230",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "scripts/qa-unit-025.py",
+      "status": "added",
+      "bytes": 20860,
+      "sha256": "921bb25f5f48deab30bab767b8bad3b9e7f80a38f2eb641f5c1a53fc0ad75569",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "scripts/validate-backend-append-only-unit-025-cumulative.py",
+      "status": "added",
+      "bytes": 18551,
+      "sha256": "1ef5f15a91f662abc61540007813039fe14b29dc92e224d47dea1249241f4c27",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "scripts/validate-backend-append-only-unit-025.py",
+      "status": "added",
+      "bytes": 25281,
+      "sha256": "49b21e6a66ddd3606b324f50e3bf11d44b8d762736178cbe859b2bee41188bab",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    },
+    {
+      "path": "source/id-ID/units/unit-025-lecture-025.md",
+      "status": "added",
+      "bytes": 36578,
+      "sha256": "df72add4e57236b51ff7d2a0c99af4b65299365874163cb334be5d0988c0f769",
+      "release_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "anonymous_codeload_exact": true
+    }
+  ],
+  "anonymous_archives": {
+    "base": {
+      "url": "https://codeload.github.com/KokunoYumeto/algebraic-topology-id/zip/884a03e88775967c3e77747c242566c0910776ef",
+      "bytes": 49618905,
+      "sha256": "1cb82ec6cfc7b06783b89baab6e42d21bdb47234b376ac713ad4468a3d3edb7e"
+    },
+    "release": {
+      "url": "https://codeload.github.com/KokunoYumeto/algebraic-topology-id/zip/24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+      "bytes": 51703526,
+      "sha256": "35cf3a08e9c9696503773fadf485f0d923673dbd2716acbc29bc7986a319e8ba"
+    },
+    "zip_integrity": "PASS",
+    "removed_paths": 0
+  },
+  "pages": {
+    "url": "https://kokunoyumeto.github.io/algebraic-topology-id/units-001-025/",
+    "bytes": 4112563,
+    "sha256": "38cd8437f3b4235ac6269f4e3365123fa06485269d35a424ad4f5ddd589025c1",
+    "raw_url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/24aee490d52d44e5b56d6fc4a9b337dcf3573ae5/output/html/units-001-025/index.html",
+    "raw_bytes": 4112563,
+    "raw_sha256": "38cd8437f3b4235ac6269f4e3365123fa06485269d35a424ad4f5ddd589025c1",
+    "remote_exact": true,
+    "source_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
+    "source_path": "output/html/units-001-025/index.html",
+    "workflow_run_id": 32684818822,
+    "workflow_id": 339307301,
+    "check_suite_id": 88548768333,
+    "job_id": 97307868869,
+    "deployment_id": 6055747095,
+    "deployment_status_id": 17211657786,
+    "conclusion": "success"
+  },
+  "backend": {
+    "records": 3913,
+    "bytes": 4007903,
+    "bundle_sha256": "8b50629f25c5fcbedb6d5547f8f7151c622aa90e04f71583008bd176058a4f78"
+  },
+  "verification_method": {
+    "artifact_inventory_and_bytes": "anonymous commit-pinned codeload ZIP plus raw and Pages readback",
+    "branch_ref": "anonymous git-upload-pack ls-remote with credential helper disabled",
+    "workflow_metadata": "authenticated GitHub API through configured CLI; credential value never read or recorded",
+    "local_worktree_used_for_public_bytes": false,
+    "credentials_recorded": false
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "source_and_human_credit_preserved": true,
+  "upstream_contacted": false,
+  "unit_025_included": true
+}

@@ -41,15 +41,18 @@ Its cumulative 298-page PDF and self-contained HTML are deterministic and
 visually verified; the final append-only backend has 3,913 records/4,007,903
 bytes, bundle SHA-256
 `8b50629f25c5fcbedb6d5547f8f7151c622aa90e04f71583008bd176058a4f78`.
-GitHub/Pages is public and anonymously byte-exact through Unit 24 at commit
-`8d3484aa2a3f8f611d90d1efa45bb454bcd03676`. Zenodo is public and twice
+GitHub/Pages is public and anonymously byte-exact through Unit 25 at commit
+`24aee490d52d44e5b56d6fc4a9b337dcf3573ae5` and Pages run
+`32684818822`. Zenodo is public and twice
 anonymously byte-exact through Unit 24
 at DOI `10.5281/zenodo.22074233` in concept `10.5281/zenodo.22061489`. The
-verified Unit 25 checkpoint is ready for the next narrow GitHub/Pages push;
-Zenodo need not churn for a one-unit increment because the clean Unit 24
-reader remains preserved there. Unit 26 is translated and is undergoing
-independent admission review; Units 27–29 are later unadmitted production
-drafts or reviewed drafts and must not enter the cursor out of order. Figshare
+Unit 25 public receipt independently reconstructed its exact 38-file delta and
+matched raw and deployed HTML byte-for-byte. Zenodo need not churn for a
+one-unit increment because the clean Unit 24 reader remains preserved there.
+Unit 26 is translated, independently reviewed at P1/P2/P3 zero, and undergoing
+its append-only backend extension. Units 27–29 are independently reviewed but
+unadmitted drafts and must not enter the cursor out of order; Unit 30 is in
+translation. Figshare
 remains blocked by the recorded `InactiveAccount` response. Continue through
 Roberts Lecture 30, then the bounded Fomberg bridge and closure.
 
