@@ -41,11 +41,11 @@ Its cumulative 273-page PDF and self-contained HTML are deterministic and
 visually verified; the final append-only backend has 3,528 records/3,434,879
 bytes, bundle SHA-256
 `0c8b27890f8423fc3224c89f2bcf60ed6cbcb9d93fabef7b53c399784f0aaaef`.
-The public boundary remains Unit 22 at GitHub commit
-`e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2` and Zenodo DOI
-`10.5281/zenodo.22072347` in concept `10.5281/zenodo.22061489`; Unit 23 is the
-next verified publication transaction. Unit 24, `Notes.tex:5113–5369`, is
-translated and in independent admission review. Figshare remains blocked by
+GitHub/Pages is public and anonymously byte-exact through Unit 23 at release
+commit `d4cc478aa569d112c5fd69a0534f3e9c6870b51a`; Zenodo remains at Unit 22,
+DOI `10.5281/zenodo.22072347` in concept `10.5281/zenodo.22061489`, and its
+Unit 23 update is next. Unit 24, `Notes.tex:5113–5369`, is translated and has
+passed independent review. Figshare remains blocked by
 the recorded `InactiveAccount` response. Continue through Roberts Lecture 30,
 then the bounded Fomberg bridge and closure.
 
