@@ -1,5 +1,34 @@
 # Build record
 
+## Roberts 001–030 plus Fomberg 001–002 — current boundary
+
+Builder: `scripts/build-roberts-001-030-fomberg-001-002.ps1`. It binds the
+complete Roberts component and Fomberg `algebraic_topology.tex:31–1290`, runs
+two clean HTML builds and two clean PDF builds per invocation, and fails on
+identity, source-cursor, link, MathML, accessibility, rights, or privacy drift.
+The final QA invocation repeated this complete process, so four clean builds of
+each reader were byte-identical.
+
+- HTML: `output/html/roberts-001-030-fomberg-001-002/index.html`, 5,254,038
+  bytes, SHA-256
+  `1f7618003e3ff273a4f1e2d97b5a81fd320f76640c475cae845ed38793fbeccd`.
+- PDF: `output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-002-id.pdf`,
+  2,399,760 bytes, 376 A4 pages, SHA-256
+  `7dc8ac1db0b03ed1d9d94fe2c3491b631d3fb8bcec869997889d67d70236ef82`.
+- Manifest: 286 bytes, SHA-256
+  `f8d0d5444f443b731519f91e0eb51baee40d7954b9cf6560b8df391113dc45c2`.
+- Receipt: `qa/ROBERTS_001_030_FOMBERG_001_002_BUILD_RECEIPT.json`, 7,955
+  bytes, SHA-256
+  `2339089281ebf3be33592cb484e7e0951a87ec66d458d8c278870202897f2f0c`.
+
+HTML contains 1,849 unique IDs, 368 resolved fragments, 12,720 native MathML
+nodes, and 89 semantic figures, with no runtime external asset, raw-TeX
+fallback, duplicate ID, unresolved fragment, or exposed mobile page overflow.
+The PDF embeds/subsets all 27 font records with ToUnicode; its untagged
+limitation remains explicitly disclosed. Browser, every-new-page visual,
+component-rights, package, and anonymous public-byte gates pass. Next build
+extends from Fomberg line 1291; this boundary is immutable.
+
 ## Frozen upstream baseline
 
 Input: exact `Notes.tex` at SHA-256 `cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7`.

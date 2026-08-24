@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "status": "PUSHED_DEPLOYED_AND_ANONYMOUSLY_BYTE_VERIFIED",
+  "date": "2026-08-24",
+  "scope": "Roberts 30/30 complete plus Fomberg O012-FOM-001 and O012-FOM-002, algebraic_topology.tex lines 31-1290, Sections 1.1-1.4; composite course partial; next source line 1291",
+  "repository": {
+    "url": "https://github.com/KokunoYumeto/algebraic-topology-id",
+    "branch": "main",
+    "commit": "085934c001a5acde8b3279de5bea6a69803e2c95",
+    "tree": "4dd6e21cfafd582c7362c1448d85c414f2dcf59b",
+    "parent": "0b5d0d3ddf10b5f048ef627772d2051ca18c9ffa",
+    "remote_main_readback": "085934c001a5acde8b3279de5bea6a69803e2c95"
+  },
+  "pages": {
+    "reader_url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-002/",
+    "workflow_run_id": 32781982738,
+    "workflow_job_id": 97605825173,
+    "deployment_id": 6072165217,
+    "conclusion": "success",
+    "bytes": 5254038,
+    "sha256": "1f7618003e3ff273a4f1e2d97b5a81fd320f76640c475cae845ed38793fbeccd",
+    "anonymous_exact_byte_readback": true
+  },
+  "commit_pinned_readback": {
+    "release_artifact_files": 9,
+    "release_artifact_total_bytes": 8919412,
+    "all_release_artifacts_exact": true,
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-002-id.pdf",
+      "bytes": 2399760,
+      "sha256": "7dc8ac1db0b03ed1d9d94fe2c3491b631d3fb8bcec869997889d67d70236ef82",
+      "exact": true
+    },
+    "translated_unit": {
+      "path": "source/id-ID/fomberg/units/fomberg-unit-002-singular-homology-homotopy-invariance.md",
+      "bytes": 44407,
+      "sha256": "0851ab7d9f5ded1e836a0e73aa055fbd28b82998208d8136ec0cf4757747435c",
+      "exact": true
+    }
+  },
+  "safety": {
+    "narrow_git_operations_only": true,
+    "new_repository_created": false,
+    "upstream_contacted": false,
+    "credential_material_recorded": false,
+    "public_personal_name_recorded": false
+  }
+}

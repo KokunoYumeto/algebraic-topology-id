@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-002-v0.30.2",
+  "parent_record_id": 22084021,
+  "concept_key": "22061489",
+  "metadata_sha256": "944ea83f50f4f2cf0ae2619f1a6d8ebfbd9609d5dfb7d2a1721a18c61f41803d",
+  "manifest_sha256": "c0f6a406e70a670103501fb8c05aaa82abaed43d4ba13257e58d7fb6809bbfa9",
+  "state": "published_and_anonymously_verified",
+  "intent_created_at": "2026-08-24T21:55:01.077659+00:00",
+  "deposition_id": 22087423,
+  "record_id": 22087423,
+  "doi": "10.5281/zenodo.22087423",
+  "concept_doi": "10.5281/zenodo.22061489"
+}
