@@ -41,8 +41,9 @@ Its cumulative 286-page PDF and self-contained HTML are deterministic and
 visually verified; the final append-only backend has 3,723 records/3,726,427
 bytes, bundle SHA-256
 `ffa8c7cb45b6d8170d7bc83df24ec487fd0c2777297b55eff2d5e7b3ae63fe25`.
-GitHub/Pages is public and anonymously byte-exact through Unit 23; the Unit 24
-push is next. Zenodo is public and twice anonymously byte-exact through Unit 24
+GitHub/Pages is public and anonymously byte-exact through Unit 24 at commit
+`8d3484aa2a3f8f611d90d1efa45bb454bcd03676`. Zenodo is public and twice
+anonymously byte-exact through Unit 24
 at DOI `10.5281/zenodo.22074233` in concept `10.5281/zenodo.22061489`. Unit 25,
 `Notes.tex:5370–5611`, is translated and independently reviewed at P1/P2/P3
 zero; backend/build admission remains. Figshare remains blocked by
