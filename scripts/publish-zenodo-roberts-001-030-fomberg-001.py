@@ -110,7 +110,11 @@ def assert_organization_rule(metadata: dict) -> None:
     occurrences = sum(
         1 for row in contributors if row.get("name") == ORGANIZATION_NAME
     )
-    if occurrences != 1 or contributors != EXPECTED_CONTRIBUTORS:
+    semantic_contributors = [
+        {"name": row.get("name"), "type": row.get("type")}
+        for row in contributors
+    ]
+    if occurrences != 1 or semantic_contributors != EXPECTED_CONTRIBUTORS:
         raise RuntimeError("organization must appear exactly once as the exact contributor")
 
 

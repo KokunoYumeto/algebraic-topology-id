@@ -405,6 +405,14 @@ def publish_main() -> None:
         public, rows = verify_public(latest_id, metadata_payload, local)
         if base.TRANSACTION.exists():
             transaction = base.load_json(base.TRANSACTION)
+            transaction.update(
+                {
+                    "state": "published_and_anonymously_verified",
+                    "record_id": latest_id,
+                    "doi": public.get("doi"),
+                    "concept_doi": public.get("conceptdoi"),
+                }
+            )
             transaction["anonymous_readback_reproduced"] = True
             base.save_json(base.TRANSACTION, transaction)
         receipt = make_receipt(public, rows, metadata_payload, local)

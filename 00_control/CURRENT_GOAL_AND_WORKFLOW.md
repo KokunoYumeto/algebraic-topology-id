@@ -51,10 +51,12 @@ the deterministic PDF is 2,322,978 bytes/SHA-256
 `fb81f2b2c0f73c17c4e3be4eaae164eaeaeb0c4ff0661580acfc7aa9b6d5f749`,
 362 A4 pages. Two builds, the repaired first-notice Markdown boundary, live
 centered desktop and zero-page-overflow mobile geometry, every new PDF page,
-explicit component license scope, rights, privacy, and replay gates pass. Publish
-this coherent Roberts-30/30-plus-Fomberg-001 checkpoint to the existing
-GitHub/Pages and Zenodo lineages, verify public bytes, then continue at Fomberg
-line 615 through Sections 1.3–1.4. Figshare remains blocked by the recorded
+explicit component license scope, rights, privacy, and replay gates pass. This
+coherent Roberts-30/30-plus-Fomberg-001 checkpoint is public on the existing
+GitHub/Pages and Zenodo lineages. GitHub commit
+`3371ae5b169c8face819b366aff2be4f198d73ec`, Pages run `32748430067`, and
+Zenodo DOI `10.5281/zenodo.22084021` all passed anonymous exact-byte readback.
+Continue at Fomberg line 615 through Sections 1.3–1.4. Figshare remains blocked by the recorded
 `InactiveAccount` response and must not trigger a duplicate or retry loop.
 
 ## Backend, QA, and publication gates
@@ -72,7 +74,7 @@ Git or create a duplicate. At coherent reader boundaries update the existing
 Zenodo and Figshare lineages, preserve inherited files, label partial scope,
 and anonymously verify public bytes/hashes. The immutable Units 001–013 reader
 remains historically preserved on Pages and Zenodo `10.5281/zenodo.22061490`;
-the current Zenodo version is `10.5281/zenodo.22077025`. Figshare remains
+the current Zenodo version is `10.5281/zenodo.22084021`. Figshare remains
 pending credential/account recovery, with the failed bounded attempt recorded
 without claiming publication. Do not republish a source-only duplicate.
 Record `OpenAI Codex gpt-5.6-sol, Ultra`; never publish the directing user’s

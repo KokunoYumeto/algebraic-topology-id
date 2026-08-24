@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "status": "PUSHED_DEPLOYED_AND_ANONYMOUSLY_BYTE_VERIFIED",
+  "verified_at": "2026-08-24T18:06:30+02:00",
+  "scope": "Roberts lectures 1-30 complete plus Fomberg O012-FOM-001, algebraic_topology.tex lines 31-614; composite course partial; next source line 615",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "commit": "3371ae5b169c8face819b366aff2be4f198d73ec",
+  "tree": "e003fc2efb5945486ef09655a80b4eea5c76e32f",
+  "parent": "f99834fadac2e50bd1a9083d424ee58196990ac3",
+  "pages_workflow": {
+    "run_id": 32748430067,
+    "job_id": 97499382336,
+    "head_commit_verified": true,
+    "conclusion": "success",
+    "url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32748430067"
+  },
+  "pages_reader": {
+    "url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001/",
+    "status": 200,
+    "bytes": 5029788,
+    "sha256": "2b64e8bec1dd5e1689ef6569360fec896ef87a683c7ba291a3780e27084a7390"
+  },
+  "release_files": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_READER.pdf",
+      "status": 200,
+      "bytes": 2322978,
+      "sha256": "fb81f2b2c0f73c17c4e3be4eaae164eaeaeb0c4ff0661580acfc7aa9b6d5f749"
+    },
+    {
+      "filename": "LICENSE.md",
+      "status": 200,
+      "bytes": 1543,
+      "sha256": "d521f4a05dd3a054056c206c4dce04341a50cc452eda6315e117b4e47faffbcd"
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "status": 200,
+      "bytes": 3497,
+      "sha256": "1a74cd0a6adc2156fad8c6044a5c0a13c53db6b9cb33c48548995b33e8a0dae9"
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "status": 200,
+      "bytes": 3376,
+      "sha256": "b322ae6f7c2f4c55fa44da2bb94b87ce02c486c640b4e882451bfa01c1bcd2c6"
+    },
+    {
+      "filename": "release-manifest.json",
+      "status": 200,
+      "bytes": 30845,
+      "sha256": "67670d6174d0d5e5f4286616aed1fd17267ab8525aa9ad109ff42a61e799331d"
+    },
+    {
+      "filename": "SHA256SUMS",
+      "status": 200,
+      "bytes": 861,
+      "sha256": "3ad96e078f8d648158a6158208a8bf8b1de04a6fe638ef1391cb0d15c1f0c3fe"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_EDITABLE_SOURCE_BACKEND.zip",
+      "status": 200,
+      "bytes": 1016522,
+      "sha256": "b3b8dc8bc3ef736667b2d1bca0e25caf96f87be08521364ca3ddc42d16932c89"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_QA_PROVENANCE.zip",
+      "status": 200,
+      "bytes": 70450,
+      "sha256": "fbeb09ccfe16f7f2a5c512ac2eb446cd4aaca261765ce732dcc250f656737e16"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_READER.html",
+      "status": 200,
+      "bytes": 5029788,
+      "sha256": "2b64e8bec1dd5e1689ef6569360fec896ef87a683c7ba291a3780e27084a7390"
+    }
+  ],
+  "verification": {
+    "remote_main_equals_commit": true,
+    "workflow_completed_successfully": true,
+    "pages_reader_exact": true,
+    "all_nine_commit_pinned_raw_files_exact": true,
+    "total_release_files": 9,
+    "total_release_bytes": 8479860,
+    "credentials_recorded": false,
+    "absolute_local_paths_recorded": false,
+    "directing_user_personal_name_recorded": false
+  }
+}

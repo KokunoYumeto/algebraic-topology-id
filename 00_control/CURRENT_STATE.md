@@ -2,7 +2,7 @@
 
 Updated: 2026-08-24
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. This Roberts-complete/composite-course-partial boundary passes every semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, and hash gate and is now public and anonymously byte-exact on GitHub/Pages and Zenodo. GitHub content commit is `dd46acdeb222a4cb4b8879af05e7c929111372ff`; Pages run `32699844696` succeeded. Zenodo version `0.30.0` is record `22077025`, DOI `10.5281/zenodo.22077025`, in existing concept `10.5281/zenodo.22061489`; all nine files passed two anonymous HTTP 200 size/SHA-256 readbacks. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. Fomberg Unit 001 is now locally closed through line 614; publish that verified checkpoint, then continue at line 615 under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Fomberg Unit 001 translates `algebraic_topology.tex:31–614` contiguously with independent P1/P2/P3-zero review. This Roberts-complete/composite-course-partial boundary passes every semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, and hash gate and is public and anonymously byte-exact on GitHub/Pages and Zenodo. GitHub content commit is `3371ae5b169c8face819b366aff2be4f198d73ec`; Pages run `32748430067` succeeded. Zenodo version `0.30.1` is record `22084021`, DOI `10.5281/zenodo.22084021`, in existing concept `10.5281/zenodo.22061489`; all nine files passed anonymous HTTP 200 size/SHA-256 readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. Continue at Fomberg line 615 under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
 ### Live recovery note — Fomberg Unit 001 local closure, 2026-08-24
 
@@ -46,9 +46,22 @@ Desktop centering, links, native MathML, offline closure, PDF title/transition
 and every Fomberg page, fonts/ToUnicode, rights, privacy, and disclosed PDF
 tagging limitation pass. Build receipt SHA-256 is
 `a830567918c16d12bebaef3da8f8ad1a05f79f28c332d57f101a5b0d7f79bde9`.
-This local boundary is ready but not yet public; next execute the existing
-GitHub/Pages and Zenodo publication lineages with anonymous byte readback, then
-translate Fomberg lines 615–1290.
+This boundary is public on GitHub commit
+`3371ae5b169c8face819b366aff2be4f198d73ec`, tree
+`e003fc2efb5945486ef09655a80b4eea5c76e32f`, and successful Pages run
+`32748430067`; the deployed reader and all nine commit-pinned release files
+match local bytes and hashes. GitHub receipt
+`00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001.json` is
+3,230 bytes/SHA-256
+`86674fc0bff2d05cbc714ac396fdfb803838c85813275fc00282808fedc55363`.
+Zenodo version `0.30.1` is public as record `22084021`, DOI
+`10.5281/zenodo.22084021`, in the existing concept DOI
+`10.5281/zenodo.22061489`; all nine files passed anonymous exact-byte readback.
+Zenodo receipt
+`release/zenodo-roberts-001-030-fomberg-001/publication-receipt.json` is 4,877
+bytes/SHA-256
+`32b616b6f2f2932d21299cee1ec9cd663d5c29447a068d416510a702e3e91c97`.
+The next executable action is translating Fomberg lines 615–1290.
 
 ### Live recovery note — Roberts local closure, 2026-08-24
 

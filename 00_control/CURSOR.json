@@ -132,7 +132,20 @@
     "zenodo_publication_receipt_sha256": "30f8c191eaf6a75cf5a96a0d301357959a2f53089a2f30af6b0ad65cdd025187",
     "figshare": "blocked_by_InactiveAccount; no_duplicate_item",
     "composite_local_through_fomberg_unit": 1,
-    "composite_local_release_state": "verified_and_ready_for_existing_lineage_publication; not_yet_public"
+    "composite_public_through_fomberg_unit": 1,
+    "composite_github_commit": "3371ae5b169c8face819b366aff2be4f198d73ec",
+    "composite_github_tree": "e003fc2efb5945486ef09655a80b4eea5c76e32f",
+    "composite_pages_run_id": 32748430067,
+    "composite_pages_job_id": 97499382336,
+    "composite_pages_reader": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001/",
+    "composite_github_publication_receipt": "00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001.json",
+    "composite_github_publication_receipt_sha256": "86674fc0bff2d05cbc714ac396fdfb803838c85813275fc00282808fedc55363",
+    "composite_zenodo_record_id": 22084021,
+    "composite_zenodo_doi": "10.5281/zenodo.22084021",
+    "composite_zenodo_version": "0.30.1",
+    "composite_zenodo_publication_receipt": "release/zenodo-roberts-001-030-fomberg-001/publication-receipt.json",
+    "composite_zenodo_publication_receipt_sha256": "32b616b6f2f2932d21299cee1ec9cd663d5c29447a068d416510a702e3e91c97",
+    "composite_local_release_state": "pushed_deployed_published_and_anonymously_byte_verified_on_existing_lineages"
   },
   "fomberg_next": {
     "official_repository": "https://git.sr.ht/~yp/math-notes",
@@ -156,7 +169,7 @@
     "build_gate_receipt_sha256": "110ae5058f254f780812fa12e51e73cc6d1f1e6e03a319dbdfb18ecedf79fe71",
     "problem_bank_selected": false
   },
-  "next_action": "publish_the_verified_roberts_001_030_plus_fomberg_001_checkpoint_to_the_existing_github_pages_and_zenodo_lineages_with_anonymous_byte_readback_then_translate_fomberg_lines_615_1290_contiguously",
+  "next_action": "translate_fomberg_lines_615_1290_contiguously_as_the_next_coherent_component_unit_then_extend_backend_readers_qa_and_existing_publication_lineages",
   "terminology_qa": {
     "status": "PASS",
     "fallback_doi": "10.22146/jmt.56529",
