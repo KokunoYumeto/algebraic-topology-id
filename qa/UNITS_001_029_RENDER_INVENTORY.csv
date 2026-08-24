@@ -1,0 +1,12 @@
+pdf_page,coverage,render_name,dpi,width_px,height_px,render_bytes,render_sha256
+1,"title, expanded Unit 1-29 subtitle, authorship, date, and opening contents",title-001.png,144,1191,1684,191827,7cf168f0e649ae6bee6bb4d787b3daf7231f707cf31fef6f5c60610df909b933
+334,"Unit 28 comparison-map close, exact boundary to Unit 29, and complete Unit 29 provenance",transition-unit29-334.png,144,1191,1684,391704,8f862523892c7343d935a1ab0f2fd9eddf5e9040449ada391494ceb79a29cf39
+335,"Unit 29 lecture opening, comparison naturality, complete relative diagrams, and five-term rows",unit29-335.png,144,1191,1684,221554,a0fdc4cb3fdd9ce8fb853916c783183bce6c2d8a9de534cf6612f1fbe349b721
+336,"relative comparison isomorphism and proof plus the finite-dimensional comparison theorem",unit29-336.png,144,1191,1684,261464,7c6b34942a81d416bfc169c7b04773362c6aa6b415e5371fc0ada87c860aac0d
+337,"Five Lemma close, all-Delta-set comparison, Milnor stabilization, consequences, and CW opening",unit29-337.png,144,1191,1684,316323,58c60f42d574c24b679e5881e06eda181579b2c2507e697be1675ed804b0f053
+338,"CW filtration and pushout definition, attachment semantic figure, and realization example",unit29-338.png,144,1191,1684,246849,be1a75fd44263866c9c1bbd27ab5273f5de44a588e804553a12f8ce1177523a5
+339,"realization functor, manifold scope, CW pairs and homotopy categories, and Eilenberg-Steenrod opening",unit29-339.png,144,1191,1684,309549,983bd60f24d4f775aa8833c2f8896f7537bbd10f71618186972fabfd597166a3
+340,"all four Eilenberg-Steenrod clauses, typed excision audit, and mastery section opening",unit29-340.png,144,1191,1684,261087,9297f78e2981751e53afc15a43b8905b677111e6bd95104a1f16676e40237c36
+341,"mastery checks 29.1-29.4 through the cell-attachment indexing prompt",unit29-341.png,144,1191,1684,307800,509dd820d2b775d81e0669ce363265f4481770ad43b0120517e8e8b2b44c8330
+342,"cell-indexing solution, disk-sphere pair calculation, and axiom-recognition solution opening",unit29-342.png,144,1191,1684,279034,9abc58ad48900e2a27459a01d1d36d2f1b09b604308dc1ae8d3ec32cfd552eb1
+343,"axiom-recognition solution close and exact boundary to Unit 30 at source cursor 6271",unit29-343.png,144,1191,1684,79946,41a325017abd27e227aacbc767c982ce496fbf2349df70b68327447ac139d14d

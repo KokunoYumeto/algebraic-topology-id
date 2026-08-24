@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-BACKEND-UNITS-001-028-CUMULATIVE-SEMANTIC",
+  "status": "PASS",
+  "date": "2026-08-24",
+  "scope": "Replayable cumulative Units 001-028 source/semantic backend boundary; no Unit 028 HTML, PDF, build-QA, visual-QA, Git, or publication claim",
+  "semantic_transaction": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_028_RECEIPT.json",
+    "bytes": 7168,
+    "sha256": "175c8781189c94f026f9a793aaebcc70de2ac43cef0bb53e14e338b9e2cf84a0",
+    "status": "PASS"
+  },
+  "nested_immutability": {
+    "units_001_027_prefix": {
+      "records": 4264,
+      "bytes": 4532994,
+      "bundle_sha256": "09aa16e8d9387171445c4d465d00a5399e39517a210cb347e30d2d285c703f8c",
+      "preserved_byte_for_byte": true
+    },
+    "unit_028_semantic_suffix": {
+      "records": 161,
+      "canonical_jsonl": true,
+      "sorted_within_transaction": true,
+      "records_by_file": {
+        "artifacts.jsonl": 3,
+        "assets.jsonl": 1,
+        "authority.jsonl": 0,
+        "concepts.jsonl": 6,
+        "corrections.jsonl": 17,
+        "qa.jsonl": 3,
+        "relations.jsonl": 27,
+        "rights.jsonl": 3,
+        "segments.jsonl": 47,
+        "terms.jsonl": 6,
+        "units.jsonl": 48
+      }
+    }
+  },
+  "current": {
+    "total_records": 4425,
+    "total_bytes": 4765453,
+    "bundle_sha256": "3a7492ee9755c85e89139bd6af84121747caa85f1f6421c7ec2e133b010a0b9f",
+    "cumulative_source_rights_id": "rights:o012-units-001-028-composite-cc-by-4.0",
+    "stable_ids_in_unit_028": 47,
+    "proof_objects_in_unit_028": 4,
+    "mastery_solution_triples_in_unit_028": 6,
+    "source_aliases_in_unit_028": 1,
+    "resolved_findings_in_unit_028": 6,
+    "next_source_line": 6053
+  },
+  "validators": {
+    "semantic": {
+      "path": "scripts/validate-backend-append-only-unit-028.py",
+      "bytes": 22577,
+      "lines": 395,
+      "sha256": "b433a22502644c01b959cb1ad69ae22f0f9977fef83eee3882c66dc3a3f7aa29",
+      "live_replay": "PASS"
+    },
+    "cumulative": {
+      "path": "scripts/validate-backend-append-only-unit-028-cumulative.py",
+      "bytes": 10405,
+      "lines": 196,
+      "sha256": "eb4e8660fd33747d2332e364a22ccb056de2750905312dbd6dfd3fa930076c06",
+      "live_replay": "PASS"
+    }
+  },
+  "file_manifest": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_028_FILE_MANIFEST.csv",
+    "bytes": 2103,
+    "lines": 12,
+    "sha256": "92dfb7100b71c3a1c4f1f010406f32e8b27a4ce0f05c228293ecc649238b470f",
+    "rows": 11,
+    "prefix_and_final_identities_verified": true
+  },
+  "build_boundary": {
+    "unit_028_html_record": false,
+    "unit_028_pdf_record": false,
+    "unit_028_build_qa_record": false,
+    "unit_028_visual_qa_record": false,
+    "reason": "Cumulative HTML/PDF production and build/visual QA were outside this transaction; the validator rejects an unverified claim while retaining prior build records unchanged."
+  },
+  "human_receipt": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_028_CUMULATIVE_RECEIPT.md",
+    "bytes": 1083,
+    "lines": 23,
+    "sha256": "2c8ed486291520bde6c3cfa4b3a7b663f35b9ec31431f7526e7eaa8d0c5d65bf"
+  },
+  "write_boundary": [
+    "scripts/validate-backend-append-only-unit-028-cumulative.py",
+    "qa/BACKEND_APPEND_ONLY_UNIT_028_CUMULATIVE_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_UNIT_028_CUMULATIVE_RECEIPT.md"
+  ],
+  "control_reader_audit_review_qa_html_pdf_git_publication_other_units_or_upstream_changed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

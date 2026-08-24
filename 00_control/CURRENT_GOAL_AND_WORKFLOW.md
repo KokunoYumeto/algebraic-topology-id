@@ -30,31 +30,25 @@ and non-endorsement distinct.
 
 ## Production sequence and current cursor
 
-For each lecture: freeze span/census; translate everything in order; reflow
+For each source unit: freeze span/census; translate everything in order; reflow
 margins/diagrams accessibly; log only independently verified corrections in
 `ADVERSE_LEDGER.csv`; assign stable IDs; update `TERMINOLOGY.csv`; solve every
 prompt and add only the missing separately marked mastery layer; independently
-review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–025 now cover
-`Notes.tex:134–5611`. Unit 25 is 36,578 bytes/1,104 LF lines/59 stable IDs,
-SHA-256 `df72add4e57236b51ff7d2a0c99af4b65299365874163cb334be5d0988c0f769`.
-Its cumulative 298-page PDF and self-contained HTML are deterministic and
-visually verified; the final append-only backend has 3,913 records/4,007,903
-bytes, bundle SHA-256
-`8b50629f25c5fcbedb6d5547f8f7151c622aa90e04f71583008bd176058a4f78`.
-GitHub/Pages is public and anonymously byte-exact through Unit 25 at commit
-`24aee490d52d44e5b56d6fc4a9b337dcf3573ae5` and Pages run
-`32684818822`. Zenodo is public and twice
-anonymously byte-exact through Unit 24
-at DOI `10.5281/zenodo.22074233` in concept `10.5281/zenodo.22061489`. The
-Unit 25 public receipt independently reconstructed its exact 38-file delta and
-matched raw and deployed HTML byte-for-byte. Zenodo need not churn for a
-one-unit increment because the clean Unit 24 reader remains preserved there.
-Unit 26 is translated, independently reviewed at P1/P2/P3 zero, and undergoing
-its append-only backend extension. Units 27–29 are independently reviewed but
-unadmitted drafts and must not enter the cursor out of order; Unit 30 is in
-translation. Figshare
-remains blocked by the recorded `InactiveAccount` response. Continue through
-Roberts Lecture 30, then the bounded Fomberg bridge and closure.
+review; advance `CURSOR.json` only at P1/P2/P3 zero. Roberts Units 001–030 are
+now complete through `Notes.tex:134–6368` and source EOF. Every unit has final
+P1/P2/P3-zero review. The cumulative backend is append-only and replayable at
+4,761 records/5,213,679 bytes, bundle SHA-256
+`51b8c7f611560b9b5e88e97b3a943b54e0eb687c703f0cd34c1a3d164e4fb920`.
+The self-contained HTML is 4,861,791 bytes/SHA-256
+`ed9da5653b3eacf7418d6e08760fcd2ecff4d75799c47f08689b940798099891`;
+the deterministic PDF is 2,257,988 bytes/SHA-256
+`b9d37776c64541123345c7b28fd26df161b878e8c105c16670455fd532dc08a4`,
+351 A4 pages. Build, browser, visual, accessibility, rights, privacy, and
+backend gates pass. Publish this Roberts-complete/composite-partial boundary to
+the existing GitHub and Zenodo lineages, anonymously read it back, then begin
+Fomberg `algebraic_topology.tex:31–4185` contiguously. The Fomberg build gate is
+already closed at 55/55 PASS. Figshare remains blocked by the recorded
+`InactiveAccount` response and must not trigger a duplicate or retry loop.
 
 ## Backend, QA, and publication gates
 

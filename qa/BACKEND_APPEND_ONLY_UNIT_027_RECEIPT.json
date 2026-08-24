@@ -1,0 +1,158 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-BACKEND-UNIT-027-SEMANTIC-APPEND-ONLY",
+  "status": "PASS",
+  "date": "2026-08-24",
+  "scope": "Unit 027 semantic source, stable structure, terminology attestations, corrections, rights, QA, dependency, proof and solution closure, source aliases, Xy-pic semantic reflow, and terminal cursor; no cumulative HTML/PDF or publication artifact",
+  "immutability": {
+    "prefix_records": 4105,
+    "prefix_bytes": 4305218,
+    "prefix_bundle_sha256": "89556c5fa2224820837fc8956b1a48797929f28bef013baf9a613e73e6cf28eb",
+    "prefix_preserved_byte_for_byte": true,
+    "prefix_boundary": "verified Units 001-026 cumulative semantic backend",
+    "prefix_record_counts": {
+      "artifacts.jsonl": 148,
+      "assets.jsonl": 28,
+      "authority.jsonl": 4,
+      "concepts.jsonl": 333,
+      "corrections.jsonl": 345,
+      "qa.jsonl": 122,
+      "relations.jsonl": 425,
+      "rights.jsonl": 74,
+      "segments.jsonl": 1137,
+      "terms.jsonl": 326,
+      "units.jsonl": 1163
+    }
+  },
+  "append": {
+    "records_added": 159,
+    "records_by_file": {
+      "artifacts.jsonl": 3,
+      "assets.jsonl": 1,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 8,
+      "corrections.jsonl": 16,
+      "qa.jsonl": 3,
+      "relations.jsonl": 24,
+      "rights.jsonl": 3,
+      "segments.jsonl": 46,
+      "terms.jsonl": 8,
+      "units.jsonl": 47
+    },
+    "canonical_jsonl": true,
+    "suffix_sorted_within_transaction": true,
+    "prior_prefix_rewritten_or_reordered": false,
+    "cumulative_html_pdf_records_added": 0
+  },
+  "current": {
+    "total_records": 4264,
+    "total_bytes": 4532994,
+    "bundle_sha256": "09aa16e8d9387171445c4d465d00a5399e39517a210cb347e30d2d285c703f8c",
+    "files": {
+      "artifacts.jsonl": {"records": 151, "bytes": 120648, "sha256": "c16f1deaa3844a19ece5c112a4a556b6a31c1fe6a8065f1773aa123bdd0f5311"},
+      "assets.jsonl": {"records": 29, "bytes": 17911, "sha256": "260fbded514ca70a5b54866bfc2b26cc770612876984cc81aae47516b8592449"},
+      "authority.jsonl": {"records": 4, "bytes": 2721, "sha256": "f21af26912520ab34b38dff0e927ed46a546dbe5d318da0dc133e58330d0e368"},
+      "concepts.jsonl": {"records": 341, "bytes": 107533, "sha256": "bf5b7bd06811e74e9d5139dfec4903e8f3429a98939fa106e45a3def519db473"},
+      "corrections.jsonl": {"records": 361, "bytes": 354746, "sha256": "ffa733a7ac19745aa9d4ef67c98911e011a2ebc51e4353fa40fc1b337b9c0023"},
+      "qa.jsonl": {"records": 125, "bytes": 70471, "sha256": "fc02b08c7ec19dba9654db5aa9d2bd2cfe9b855a222d5764a06fc93bffc2d319"},
+      "relations.jsonl": {"records": 449, "bytes": 183555, "sha256": "e8a0831badaebbe47523f92ac1949f2266f544ad3baede0f35967d1764e959bf"},
+      "rights.jsonl": {"records": 77, "bytes": 71149, "sha256": "5f4a0f6de1866c04f0d56d7f7ed508f4c41364c9626d357e94e6f4a135002767"},
+      "segments.jsonl": {"records": 1183, "bytes": 1643547, "sha256": "2c0dacca32d6e92257c43b2d5c270ede72e257ff5d1dfde8b54e5858e9ac4602"},
+      "terms.jsonl": {"records": 334, "bytes": 209753, "sha256": "c25a3834bed5b9a57624aae9c1d546a24ad08b4ae397e92e8a8e5f6b3d357735"},
+      "units.jsonl": {"records": 1210, "bytes": 1750960, "sha256": "936f41c32c69ba73881038e39b9e33bb4baab39ac9dd5ad56409c370309eeda0"}
+    }
+  },
+  "source": {
+    "authority_path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "authority_commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 5824,
+    "line_end": 5923,
+    "span_bytes": 7012,
+    "span_sha256": "65d2c393ddf29183f36d6e9ab65c65f8030110334f89c7f68ba88461fc30afa1",
+    "reader_path": "source/id-ID/units/unit-027-lecture-027.md",
+    "reader_bytes": 35879,
+    "reader_lines": 1175,
+    "reader_sha256": "a3238bbc429e4c3689bce3b3bb78c5514e0fae74f276c9efebe694730b2df2a0",
+    "stable_ids": 46,
+    "fenced_semantic_objects": 39,
+    "course_route_unit_id": "D60-R13",
+    "next_source_line": 5924
+  },
+  "closure": {
+    "unit_segment_bijection": true,
+    "proof_objects": 3,
+    "proof_relations": 3,
+    "mastery_triples": 6,
+    "preserved_source_exercise_solved": true,
+    "source_aliases": {
+      "eg:reduced_cohom_S0": "unit:o012-rbt-l27-exa-002",
+      "eq:restr_to_intersection": "unit:o012-rbt-l27-eq-001",
+      "thm:mayer-vietoris": "unit:o012-rbt-l27-thm-001",
+      "eq:sphere_cohomol_reduction": "unit:o012-rbt-l27-eq-002"
+    },
+    "xypic_semantic_reflow": "unit:o012-rbt-l27-fig-001",
+    "new_locale_neutral_concepts": 8,
+    "new_unit_attested_terms": 8,
+    "source_and_edition_corrections": 16,
+    "resolved_pre_admission_findings": [
+      "UNIT027-MATH-P2-001",
+      "UNIT027-A11Y-P2-002",
+      "UNIT027-PROOF-P2-003",
+      "UNIT027-TERM-P3-001",
+      "UNIT027-TERM-P3-002"
+    ],
+    "upstream_contact": false
+  },
+  "rights": {
+    "source": "CC-BY-4.0",
+    "edition_original": "CC-BY-4.0",
+    "unit_component_rights_id": "rights:o012-u027-composite-cc-by-4.0",
+    "cumulative_source_rights_id": "rights:o012-units-001-027-composite-cc-by-4.0",
+    "cumulative_supersedes": "rights:o012-units-001-026-composite-cc-by-4.0",
+    "non_endorsement_preserved": true,
+    "component_distinguishable": true
+  },
+  "evidence": {
+    "source_audit": {"path": "qa/UNIT_027_SOURCE_AUDIT.md", "bytes": 7369, "sha256": "67621ce38a69fe4e6afd24fa6572dfa6e9499a3e77db03e3943ce045dfa30138"},
+    "independent_review": {"path": "qa/UNIT_027_INDEPENDENT_REVIEW.md", "bytes": 8560, "sha256": "d464310e42fea0c199b49a6a9670d97cf8704b3c37b7cc79023fece21cb734b5", "p1": 0, "p2": 0, "p3": 0},
+    "qa": {"path": "qa/UNIT_027_QA.json", "bytes": 8152, "sha256": "1db997b0ddf1dee05583c8c8c482e68f59a9add7677b34fded034088f55e491f", "status": "PASS"},
+    "terminology_control_live_witness_not_modified_by_this_transaction": {"path": "00_control/TERMINOLOGY.csv", "bytes": 37224, "sha256": "85fe4f14e7c45af6402b8a83da1ea25abbc7b6e9a96752d4395c3e1ddb926dc2"},
+    "adverse_ledger_live_witness_not_modified_by_this_transaction": {"path": "00_control/ADVERSE_LEDGER.csv", "bytes": 110934, "sha256": "4670ffa8f24b92cbfcf502a61bb41ff59a955820c90581807cf0d93862155945"}
+  },
+  "transaction_scripts": {
+    "producer": {"path": "scripts/extend-backend-unit-027.py", "bytes": 45032, "lines": 813, "sha256": "5f3bfcb579d78680148f43d445f94ffe262d76b85d9f62aecaa570bb74520704", "status": "PASS"},
+    "semantic_validator": {"path": "scripts/validate-backend-append-only-unit-027.py", "bytes": 19658, "lines": 348, "sha256": "179a24ecf31372e0968ed8331d3e014189797ea6bb91f9d4a63a249c836a975b", "status": "PASS"}
+  },
+  "file_manifest": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_027_FILE_MANIFEST.csv",
+    "bytes": 2103,
+    "lines": 12,
+    "sha256": "ebb8ab35f6ea673b3865c834cf3d1c806deb58daf5cf6a702a8a7a9c77cc93e2",
+    "backend_rows": 11
+  },
+  "human_receipt": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_027_RECEIPT.md",
+    "bytes": 1980,
+    "lines": 43,
+    "sha256": "0c95c1c012d093a22a7d1226bbd66b04e7ac5f7672877ea82be99f79b6d8fafe"
+  },
+  "write_boundary": [
+    "backend/artifacts.jsonl",
+    "backend/assets.jsonl",
+    "backend/concepts.jsonl",
+    "backend/corrections.jsonl",
+    "backend/qa.jsonl",
+    "backend/relations.jsonl",
+    "backend/rights.jsonl",
+    "backend/segments.jsonl",
+    "backend/terms.jsonl",
+    "backend/units.jsonl",
+    "scripts/extend-backend-unit-027.py",
+    "scripts/validate-backend-append-only-unit-027.py",
+    "qa/BACKEND_APPEND_ONLY_UNIT_027_FILE_MANIFEST.csv",
+    "qa/BACKEND_APPEND_ONLY_UNIT_027_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_UNIT_027_RECEIPT.md"
+  ],
+  "control_reader_audit_review_qa_html_pdf_git_publication_other_units_or_upstream_changed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

@@ -2,15 +2,69 @@
 
 Updated: 2026-08-24
 
-Status: active production. Source admission and composite route selection are closed. Units 001–025 translate Roberts `Notes.tex:134–5611` contiguously; every admitted unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Unit 25 is public and anonymously byte-verified on GitHub/Pages; Unit 24 remains the clean current Zenodo boundary. Unit 26 is translated and independently reviewed at P1/P2/P3 zero, with its append-only backend extension in progress. Units 27–29 are independently reviewed but unadmitted drafts and do not advance the cursor out of order; Unit 30 translation is in progress. Zenodo version `0.24.0` is record `22074233`, DOI `10.5281/zenodo.22074233`, in the existing concept `10.5281/zenodo.22061489`. The same-field Indonesian terminology QA and its Unit 20 propagation are closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. After all 30 Roberts lectures, the selected Fomberg lines 31–4185 and exact original closure follow; see `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 now translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. The Roberts-complete/composite-course-partial local boundary passes all semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, and hash gates. Unit 25 remains the current anonymously verified GitHub/Pages boundary and Unit 24 the current Zenodo boundary only until the prepared 30/30 publication transaction completes. Zenodo version `0.24.0` is record `22074233`, DOI `10.5281/zenodo.22074233`, in existing concept `10.5281/zenodo.22061489`. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. After publishing and anonymously reading back this Roberts-complete boundary, continue with selected Fomberg lines 31–4185 and the exact original closure in `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
-## Current verified Units 001–025 boundary (2026-08-24)
+### Live recovery note — Roberts local closure, 2026-08-24
+
+Do not translate any Roberts span again. Units 26–30 are admitted in order and
+the Roberts cursor is at EOF after `Notes.tex:6368`; nominal next line is 6369.
+Final append-only backend: 4,761 records, 5,213,679 bytes, bundle SHA-256
+`51b8c7f611560b9b5e88e97b3a943b54e0eb687c703f0cd34c1a3d164e4fb920`.
+Its semantic and cumulative validators both replay PASS; controlling receipt
+`qa/BACKEND_APPEND_ONLY_UNIT_030_CUMULATIVE_RECEIPT.json` is 3,976 bytes,
+SHA-256
+`d4f7c7310ae22b8fc53d354b72beefad637ac353be418b9fbc56ddd8cd0a65f7`.
+Final reader HTML is 4,861,791 bytes/SHA-256
+`ed9da5653b3eacf7418d6e08760fcd2ecff4d75799c47f08689b940798099891`;
+PDF is 2,257,988 bytes/SHA-256
+`b9d37776c64541123345c7b28fd26df161b878e8c105c16670455fd532dc08a4`,
+351 A4 pages. Two clean builds are byte-identical. Desktop and mobile browser
+geometry, every Unit 30 page, links, IDs, assets, MathML, PDF fonts, rights,
+privacy, and disclosed PDF tagging limitation pass. Build receipt
+`qa/UNITS_001_030_BUILD_RECEIPT.json` is 12,488 bytes/SHA-256
+`15ce778ae5b85934424b3da22dcbec99f15df30746bb01630aaa4494cb3eace7`.
+The next executable action is the existing-lineage GitHub/Pages and Zenodo
+publication plus anonymous byte readback; after that begin Fomberg line 31.
+
+The task-local cleanup requested on 2026-08-24 is complete and independently
+reverified. Archive
+`<workspace>/old stuff/algebraic-topology-id_disposable-render-readback-caches_20260824T0630_CEST.zip`
+is 135,697,838 bytes/SHA-256
+`ddd9d608b630bea5596c53935ee93f2f100018fca910cac15d1697fe8e5b7906`.
+It contains 522 disposable source entries plus its manifest; all entry paths,
+sizes, and SHA-256 values match. All 20 archived loose roots are absent, while
+canonical sources, authorities, backend, controls, receipts, current readers,
+and publication artifacts remain. Exact details are in
+`CLEANUP_RECEIPT_2026-08-24.json`.
+
+The Fomberg authority/build gate is now genuinely closed at 55/55 PASS. The
+old PASS was rejected because the provisional CC0 `commath` shim printed
+literal optional-size syntax for `\del[4]` and `\del[1]` on pages 10 and 35.
+The repaired 1,346-byte overlay supports every enumerated manual size 1–4;
+two independent clean three-pass builds are byte-identical at 664,609 bytes,
+SHA-256
+`f0f8f815423dbdc3b368b48a5972bfc62be87ae8b5c4bfcd1b7a74b8871417ff`.
+Final passes have zero tracked warnings/errors, the malformed literals are
+absent, and official-versus-rebuilt pages 1, 3, 10, 20, 30, 35, 39, 40, and
+57 pass visual comparison. Exact gate receipt:
+`qa/FOMBERG_AUTHORITY_BUILD_GATE_QA.json`, 3,402 bytes/SHA-256
+`933d1a0158d3c1c0aecd94483b1e3dcd1a7f40cac761f25d19d272eb439d9b01`.
+The selected translation witness remains exactly lines 31–4185, Sections
+1.1–1.13, physical pages 1–39; Section 1.14 begins on page 40.
+
+## Current verified Roberts Units 001–030 local boundary (2026-08-24)
+
+- Units 26–30 cover `Notes.tex:5612–6368`; the cumulative Roberts edition covers lines 134–6368 and ends at `\end{document}`. Final Unit 30 reader `source/id-ID/units/unit-030-lecture-030.md` is 23,008 bytes/729 LF lines/47 stable IDs, SHA-256 `88da8cf71d0f81328bdd65b0dea7d54c48655ed8836e230eaed821796b61b08d`. Its audit is SHA-256 `177c4306e5db636e0294e85278904c186099d069f209474a472d2615b0d5a4cf`; independent review is SHA-256 `58db70bbd6538961e8bfc0c809d00b7b539115147b2826dc46d97e5b77ba712e`; final `qa/UNIT_030_QA.json` is P1/P2/P3 zero at 8,378 bytes/SHA-256 `bef6fe6704084ac02386bb477b7b0082e02921d3d722955e1366e7d0b9247753`.
+- Append-only replay preserves the immutable Unit 29 prefix at 4,596 records/5,001,266 bytes/bundle `49c599010ebee2223225f643cd09a53bea882b8064024d5189e6e15f648195d8`, appends exactly 165 canonical Unit 30 records, and finishes at 4,761 records/5,213,679 bytes/bundle `51b8c7f611560b9b5e88e97b3a943b54e0eb687c703f0cd34c1a3d164e4fb920`. Both live validators and producer replay pass; 4,761 IDs are globally unique and 50,822 reference edges resolve.
+- Cumulative HTML `output/html/units-001-030/index.html` is 4,861,791 bytes/SHA-256 `ed9da5653b3eacf7418d6e08760fcd2ecff4d75799c47f08689b940798099891`: 1,651 unique DOM IDs, 337 resolved fragment links, 11,787 native MathML nodes, 65 semantic figures, no runtime external assets or raw-TeX fallback, centered desktop geometry, and zero page-level mobile overflow. PDF `output/pdf/topologi-aljabar-unit-001-030-id.pdf` is 2,257,988 bytes/SHA-256 `b9d37776c64541123345c7b28fd26df161b878e8c105c16670455fd532dc08a4`, 351 A4 pages, `/Lang=id-ID`, all 27 font objects embedded/subset/ToUnicode, with its untagged limitation disclosed. Two clean builds are byte-identical; title and pages 343–351 pass original-resolution visual QA.
+- The local release is prepared for one new version in existing Zenodo concept `10.5281/zenodo.22061489`, frozen predecessor record `22074233`; it truthfully labels Roberts 30/30 complete and the composite course partial. No duplicate concept or publication claim exists yet. GitHub remote access is healthy and the reader-first README plus exact Pages inventory are ready.
+
+## Preserved Units 001–025 boundary (2026-08-24)
 
 - Unit 25 covers Roberts `Notes.tex:5370–5611`; the 12,732-byte LF-normalized source span has SHA-256 `d05781ae58b1b6fd6174d030e52ca9ee6a08048be96f7c103e5be8de473b60b0`. Reader `source/id-ID/units/unit-025-lecture-025.md` is 36,578 bytes/1,104 LF lines/59 stable IDs, SHA-256 `df72add4e57236b51ff7d2a0c99af4b65299365874163cb334be5d0988c0f769`. The sole independent finding was a terminology P3, resolved before admission; final review and `qa/UNIT_025_QA.json` are P1/P2/P3 zero.
 - Cumulative HTML `output/html/units-001-025/index.html` is 4,112,563 bytes/SHA-256 `38cd8437f3b4235ac6269f4e3365123fa06485269d35a424ad4f5ddd589025c1`: 1,361 unique IDs, 296 resolving fragments, 10,118 native MathML nodes, 62 semantic figures, no raw fallback or external runtime dependency, centered desktop layout, and zero page-level mobile overflow with 201 wide MathML objects contained in local scrollers. PDF `output/pdf/topologi-aljabar-unit-001-025-id.pdf` is 1,972,209 bytes/SHA-256 `581d62162633a6624687517c5cf1595f5fc02a2701c2222b279711e0520b9a3f`, 298 A4 pages, `/Lang=id-ID`, all 27 font rows embedded/subset/ToUnicode, with its untagged limitation disclosed. Two builds are byte-identical; every Unit 25 page plus title/transition passed visual inspection, and root independently inspected pages 287, 292, and 298.
 - Final append-only backend validation passes with three nested immutable boundaries: Unit 24 cumulative 3,723 records/3,726,427 bytes/bundle `ffa8c7cb45b6d8170d7bc83df24ec487fd0c2777297b55eff2d5e7b3ae63fe25`; Unit 25 semantic 3,896 records/3,996,359 bytes/bundle `55372b9c2853fa479e731c73c407b234ad2f1219e07efbedbad2a99f1e2abf47`; and Unit 25 cumulative 3,913 records/4,007,903 bytes/bundle `8b50629f25c5fcbedb6d5547f8f7151c622aa90e04f71583008bd176058a4f78`. The final receipt is `qa/BACKEND_APPEND_ONLY_UNIT_025_CUMULATIVE_RECEIPT.json`, 7,562 bytes/SHA-256 `eacee8cad8ffe460af5f50a9be16f5c02b0671a686209e7d0073e10b2a98a2c1`; the replay-compatibility receipt is SHA-256 `6b4ef92a4c3ad4ec2190d7f1bedac6c118ff9033a1bb6257bd96d48f86dae1f2`. Both semantic and cumulative validators pass on the live final tree. The build receipt is `qa/UNITS_001_025_BUILD_RECEIPT.json`, 7,729 bytes/SHA-256 `dd2fa5b52ed84ac939c33cfa5b9f68be4b904b014321abcb54c2ae664d0f9727`.
 - GitHub commit `24aee490d52d44e5b56d6fc4a9b337dcf3573ae5`, tree `aad55b5d0c47b60f77d0517b09c47efbd1ebda91`, is public. Pages run `32684818822`, job `97307868869`, deployment `6055747095`, and status `17211657786` succeeded. The 38-file release delta was anonymously reconstructed from commit-pinned codeload archives under manifest SHA-256 `1d4680573cc060b8c7939393f1b4e0699e4a0262ef95f59f79158b1892845738`; raw and deployed HTML both match 4,112,563 bytes/SHA-256 `38cd8437f3b4235ac6269f4e3365123fa06485269d35a424ad4f5ddd589025c1`. Receipt `00_control/GITHUB_PUBLICATION_RECEIPT_UNITS_001_025.json` is 14,515 bytes/SHA-256 `b23867e93ebeba1e101f285f1d9bf47f2fd6e7f08af105c930810eb16d88f70f`. Zenodo remains clean through Unit 24 at DOI `10.5281/zenodo.22074233`; no duplicate concept or unnecessary one-unit version has been created.
-- Unit 26 reader `source/id-ID/units/unit-026-lecture-026.md` covers `Notes.tex:5612–5823` and is final at 38,537 bytes/1,201 LF lines/62 IDs/SHA-256 `7a2cf4ea31546b8258e3e91c819d3ad516973c8f861249fccc7334b9ade9d835`. Independent review resolved one P2 Stokes-regularity issue and one P3 terminology family before admission; open P1/P2/P3 are zero, and `qa/UNIT_026_QA.json` is 7,310 bytes/SHA-256 `3a25fc42dfa4353e8ba50a5f619684196a73fcb350e39a9d539568c0542bf835`. Its append-only backend extension is in progress. Units 27–29 are independently reviewed P1/P2/P3-zero drafts; Unit 30 translation is in progress. None advances the cursor before Unit 26's backend and cumulative readers pass.
 
 ## Preserved Units 001–024 and Zenodo boundary (2026-08-24)
 

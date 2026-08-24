@@ -51,10 +51,21 @@ Fomberg authority selected for the later bridge:
   1.14 starts on physical page 40; license CC BY-SA 4.0.
 
 The earlier claim that the official archive lacks `header.tex` or `LICENSE` is
-false. Both are frozen and blob-verified. Admission still requires a reproducible
-two-build baseline: the current source expects an unfrozen TeX Live environment
-and local building stopped at missing `commath.sty`, which must be lawfully vendored
-or replaced. Selected-file diagrams are inline TikZ/TikZ-CD with no external figures.
+false. Both are frozen and blob-verified. The Fomberg authority/build gate is now
+closed at 55/55 PASS. The first provisional `commath` replacement was rejected
+because it rendered literal optional-size syntax for `\del[4]` and `\del[1]` on
+pages 10 and 35. The corrected, separately identified CC0 overlay is 1,346 bytes,
+SHA-256
+`524c17aef50ed58686c9ed0b0b274e7f2ccdb35380869fef9c66ce3a120a6d19`;
+two independent clean three-pass builds are byte-identical at 664,609 bytes,
+SHA-256
+`f0f8f815423dbdc3b368b48a5972bfc62be87ae8b5c4bfcd1b7a74b8871417ff`.
+The final passes have no tracked warning/error, and pages 1, 3, 10, 20, 30, 35,
+39, 40, and 57 passed visual comparison. The controlling receipt is
+`qa/FOMBERG_AUTHORITY_BUILD_GATE_QA.json`, SHA-256
+`933d1a0158d3c1c0aecd94483b1e3dcd1a7f40cac761f25d19d272eb439d9b01`.
+Selected-file diagrams are inline TikZ/TikZ-CD with no external figures; the
+selected source may proceed after the Roberts-complete publication boundary.
 
 MIT OCW 18.905 is a CC BY-NC-SA 4.0 proof-check comparator only. It is not the
 selected bridge, because it lacks the needed simplicial development and its current

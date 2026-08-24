@@ -1,0 +1,288 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L29-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "tree": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+    "line_start": 6053,
+    "line_end": 6270,
+    "bytes": 331447,
+    "lines": 6368,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_bytes": 11447,
+    "span_lines": 218,
+    "span_sha256": "33c6b7bfe3216d271c6b1f9d0cb952e6ef02a5e27a57f686936e764bfc4a9233",
+    "source_census": {
+      "lecture": 1,
+      "definition": 2,
+      "lemma": 1,
+      "fact": 1,
+      "theorem": 2,
+      "corollary": 1,
+      "example": 3,
+      "remark": 2,
+      "proof": 2,
+      "margin": 4,
+      "xypic": 4,
+      "tikz": 1,
+      "label": 1,
+      "reference": 1,
+      "display_math": 8,
+      "enumerate": 2,
+      "itemize": 1,
+      "exercise": 0,
+      "question": 0,
+      "cite_command": 0,
+      "external_graphic": 0,
+      "input": 0,
+      "include": 0
+    },
+    "next_line": 6271
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-029-lecture-029.md",
+    "bytes": 27687,
+    "lines": 805,
+    "sha256": "cfb8fa5c49593a187bed5df1d4173cc952100b18e5faa009cb8d57036c5726c4",
+    "stable_ids": 49,
+    "identified_headings": 9,
+    "fenced_semantic_objects": 40,
+    "block_census": {
+      "boundary": 1,
+      "corollary": 1,
+      "definition": 2,
+      "example": 3,
+      "exercise": 6,
+      "fact": 1,
+      "figure": 1,
+      "hint": 6,
+      "lemma": 1,
+      "proof": 4,
+      "solution": 6,
+      "source-audit": 6,
+      "theorem": 2
+    }
+  },
+  "controls": {
+    "source_audit": {
+      "path": "qa/UNIT_029_SOURCE_AUDIT.md",
+      "bytes": 5738,
+      "lines": 101,
+      "sha256": "6b3e96ca5a7d24a4f8182c46f02e99194c9538ca534b4b550ea23b666ad89afb"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_029_INDEPENDENT_REVIEW.md",
+      "bytes": 8535,
+      "lines": 154,
+      "sha256": "873c21354acc83050e13f7236b361f29523b91d4907d9b0046ee061f7723547c",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    }
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "finding_id": "UNIT029-MATH-P2-001",
+      "severity": "P2",
+      "paths": [
+        "source/id-ID/units/unit-029-lecture-029.md"
+      ],
+      "initial_observation": "the relative comparison explanation used unreduced H^n(S^n;R) for its sphere factor, which fails to express the required factor correctly in dimension zero",
+      "resolution": "replaced it by reduced cohomology and identified the factor map explicitly as the pullback of the quotient map of pairs",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT029-MATH-P2-002",
+      "severity": "P2",
+      "paths": [
+        "qa/UNIT_029_SOURCE_AUDIT.md",
+        "source/id-ID/units/unit-029-lecture-029.md"
+      ],
+      "initial_observation": "the infinite-dimensional argument asserted that degree-k stabilization alone removed the derived-limit obstruction",
+      "resolution": "recorded stabilization in both degrees k and k-1 and the resulting vanishing of the Milnor lim^1 term",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT029-TYPE-P2-003",
+      "severity": "P2",
+      "paths": [
+        "qa/UNIT_029_SOURCE_AUDIT.md",
+        "source/id-ID/units/unit-029-lecture-029.md"
+      ],
+      "initial_observation": "the excision clause permitted an unspecified CW replacement and therefore did not determine objects and morphisms in the stated homotopy category",
+      "resolution": "restricted complement excision to actual CW pairs and stated strong quotient excision through a fully typed map of CW pairs",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT029-REFLOW-P3-001",
+      "severity": "P3",
+      "paths": [
+        "qa/UNIT_029_SOURCE_AUDIT.md",
+        "source/id-ID/units/unit-029-lecture-029.md"
+      ],
+      "initial_observation": "the first reader draft displayed only three of the five terms in the source long-exact-sequence diagram",
+      "resolution": "reflowed both complete five-term rows and described all five vertical comparison maps; recorded all four Xy-pic diagrams and the TikZ semantic reflow",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT029-CW-P3-002",
+      "severity": "P3",
+      "paths": [
+        "source/id-ID/units/unit-029-lecture-029.md"
+      ],
+      "initial_observation": "two CW-definition margin notes were not explicit and the disk-sphere CW-pair example did not distinguish the S^0 boundary case",
+      "resolution": "restored the disk/simplex and filtration-colimit explanations and separated n=1 from n>=2 in the CW-pair example",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT029-LANG-P3-003",
+      "severity": "P3",
+      "paths": [
+        "qa/UNIT_029_SOURCE_AUDIT.md",
+        "source/id-ID/units/unit-029-lecture-029.md"
+      ],
+      "initial_observation": "the reader used nonpreferred glossary variants funktor, funktorial, naturalitas, and bujur sangkar",
+      "resolution": "normalized the unit to fungtor, fungtorial, kealamian, and persegi, and normalized the Indonesian spelling aditivitas",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT029-TERM-P3-004",
+      "severity": "P3",
+      "paths": [
+        "qa/UNIT_029_SOURCE_AUDIT.md"
+      ],
+      "initial_observation": "the corrected source audit still used bola for S^n and perpanjangan for extension",
+      "resolution": "normalized the control prose to the admitted preferred forms sfera and perluasan without changing the reader or source boundary",
+      "reader_affected": false,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT029-QA-P3-005",
+      "severity": "P3",
+      "paths": [
+        "qa/UNIT_029_INDEPENDENT_REVIEW.md",
+        "qa/UNIT_029_QA.json"
+      ],
+      "initial_observation": "the initial stable-ID census omitted the root lecture ID o012-rbt-l29 and therefore reported 48 IDs and eight identified headings",
+      "resolution": "counted the root ID and recorded 49 unique IDs and nine identified headings; Pandoc preserves all 49 without duplication",
+      "reader_affected": false,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    }
+  ],
+  "corrections": {
+    "singular_to_simplicial_direction_uniform": true,
+    "comparison_naturality_closed": true,
+    "relative_factor_reduced_and_contravariant": true,
+    "five_lemma_induction_closed": true,
+    "infinite_skeleton_stabilization_closed": true,
+    "milnor_lim1_vanishing_stated": true,
+    "all_four_xypic_diagrams_semantically_reflowed": true,
+    "tikz_attachment_figure_semantically_reflowed": true,
+    "cw_cell_indexing_starts_at_zero": true,
+    "cw_margin_notes_preserved": true,
+    "manifold_claim_qualified": true,
+    "cw_pair_and_homotopy_category_typed": true,
+    "eilenberg_steenrod_domain_and_excision_typed": true,
+    "preferred_glossary_terms_used": true,
+    "audit_preferred_sphere_and_extension_terms": true,
+    "root_lecture_id_included_in_census": true
+  },
+  "proof_closure": {
+    "comparison_naturality": true,
+    "relative_wedge_factor": true,
+    "finite_dimensional_five_lemma": true,
+    "infinite_dimensional_extension": true,
+    "cw_attachment_and_pair_examples": true,
+    "eilenberg_steenrod_axiom_reconstruction": true,
+    "mastery_solution_triples": 6
+  },
+  "rendering": {
+    "pandoc": "pandoc 3.9.0.2",
+    "target": "HTML5 native MathML",
+    "exit_code": 0,
+    "warnings_fatal": true,
+    "temporary_html_bytes": 129591,
+    "mathml_nodes": 258,
+    "rendered_stable_ids": 49,
+    "missing_stable_ids": 0,
+    "runtime_fallback": false,
+    "temporary_artifact_removed": true
+  },
+  "checks": [
+    {
+      "check": "required_files_and_identities",
+      "status": "PASS",
+      "detail": "authority, corrected reader, final source audit, and final independent review match the recorded byte and SHA-256 identities"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:6053-6270 is exactly 218 LF lines and 11,447 bytes; line 6271 begins Lecture 30"
+    },
+    {
+      "check": "source_census_and_semantic_closure",
+      "status": "PASS",
+      "detail": "every source object, four margins, four Xy-pic diagrams, TikZ figure, displayed formula, and cross-reference is represented in reading order"
+    },
+    {
+      "check": "comparison_direction_and_naturality",
+      "status": "PASS",
+      "detail": "every induced comparison runs from singular to Delta-set cochains or cohomology and satisfies rho_X |f|* = f* rho_Y"
+    },
+    {
+      "check": "relative_comparison_and_five_lemma",
+      "status": "PASS",
+      "detail": "the sphere factor is reduced and contravariant, and the complete five-term diagram supplies four surrounding isomorphisms for the Five Lemma"
+    },
+    {
+      "check": "infinite_dimensional_extension",
+      "status": "PASS",
+      "detail": "skeletal systems stabilize in degrees k and k-1, eliminating the Milnor lim^1 term before applying finite-dimensional comparison"
+    },
+    {
+      "check": "cw_complex_and_manifold_scope",
+      "status": "PASS",
+      "detail": "cell indexing begins at n=0, CW semantic graphics and margin notes are complete, and manifold claims distinguish CW structure from CW homotopy type"
+    },
+    {
+      "check": "cw_pair_homotopy_category_and_axioms",
+      "status": "PASS",
+      "detail": "pair morphisms, homotopy classes, opposite-category variance, complement excision, and quotient excision are all evaluated on typed CW-pair objects"
+    },
+    {
+      "check": "language_and_terminology",
+      "status": "PASS",
+      "detail": "natural id-ID prose and controls use the admitted preferred forms fungtor, fungtorial, kealamian, persegi, sfera, perluasan, and other established topology vocabulary"
+    },
+    {
+      "check": "stable_ids_and_balanced_structure",
+      "status": "PASS",
+      "detail": "49 ID occurrences including the root lecture ID are unique; 40 fenced semantic objects are balanced and render with all 49 IDs"
+    },
+    {
+      "check": "mastery_closure",
+      "status": "PASS",
+      "detail": "six exact exercise/hint/full-solution triples cover comparison, skeleton induction, CW structure, pairs, and the axioms"
+    },
+    {
+      "check": "rights_provenance_and_privacy",
+      "status": "PASS",
+      "detail": "Roberts attribution, CC BY 4.0, non-endorsement, human credit, and exact model provenance are present; no private marker appears"
+    },
+    {
+      "check": "pandoc_html5_mathml",
+      "status": "PASS",
+      "detail": "pandoc 3.9.0.2 exited 0 with warnings fatal; 258 MathML nodes and all 49 stable IDs rendered without runtime fallback"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

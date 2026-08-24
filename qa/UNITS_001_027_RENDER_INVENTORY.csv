@@ -1,0 +1,16 @@
+pdf_page,coverage,render_name,dpi,width_px,height_px,render_bytes,render_sha256
+1,"title, expanded subtitle, authorship, date, and opening contents",title-001.png,144,1191,1684,185970,3110841513e9899d077e412e4194e941f461de2a93ac3c509f61890370374006
+312,"Unit 26 prism close, exact boundary to Unit 27, and Unit 27 provenance opening",transition-unit27-312.png,144,1191,1684,328691,628d1517e1332d1975626d04f1bad71bda23a2e802ffd6af6b5128ec3d6b9391
+313,"Unit 27 provenance close, lecture opening, canonical degree-zero map, and source exercise",unit27-313.png,144,1191,1684,274945,33170c2751803430b0cb4eb46531518b35d3b7f34504c9f629c544ae0cf026b3
+314,"degree-zero source-exercise solution, typed evaluation repair, and splitting definition",unit27-314.png,144,1191,1684,256909,a5dbac545d5adb129234d5ef0dc4ed96a87719bed330c2e03046ce6cf9311b1f
+315,"splitting lemma and proof, canonical quotient, and reflowed source margin",unit27-315.png,144,1191,1684,210819,dfbf941cee0dd03383dbb85f84ade1a671e2dc9a21a6359ed7766b6ae031aa6a
+316,"canonical reduced cohomology, connected and zero-sphere examples, and semantic pushout",unit27-316.png,144,1191,1684,219001,ae50309c692b1ca5bd0322c839308e1f69ff0f9838437323f15908c4c5168ec1
+317,"small-cochain exact sequence, comparison-direction repair, and theorem statement",unit27-317.png,144,1191,1684,299013,8f371b16c41cc20d0f9af257d49b342a3bcd3021e3336d32b2f0e7c87d44bc5a
+318,"small-chain theorem proof through the inductive retraction and homotopy construction",unit27-318.png,144,1191,1684,225624,671ae76ced8e9476ca42174f27b9da44263c1200c4470f0ac983b4be779ec577
+319,"small-chain theorem proof close and Mayer--Vietoris theorem opening",unit27-319.png,144,1191,1684,242676,e88b9ed76cdcb73d41d06a6b56d182e05d5046f34604b6d43dcdfbcd97440534
+320,"Mayer--Vietoris connector, complete exactness proof, and reduced-sequence audit",unit27-320.png,144,1191,1684,329172,eeb9c59bef168fe3eb22855d085b87a957fc76ed4687170d3007693c36966b39
+321,"hemisphere cover, suspension recurrence, and complete cohomology of spheres",unit27-321.png,144,1191,1684,204332,c58325f89759ed6fea6c6f755ed2f506a833f731ba40a42a2a4aebac7723d76e
+322,"mastery check 27.2 with solution and start of the path-component calculation",unit27-322.png,144,1191,1684,276687,6648e626cc9b69dab68bc915120d20472d709da6cd2aa21c79658ee25a3ba10b
+323,"path-component solution and extension-by-zero counterexample with solution",unit27-323.png,144,1191,1684,229670,ccad79233edbd1657005b4bcf616a6732574f3eb782af4a6f2d054b6316fd1dc
+324,"counterexample close, Mayer--Vietoris generator of H1(S1), and sphere mastery prompt",unit27-324.png,144,1191,1684,272473,519dcc8bf215999d4f222d807570f495ef203d4b7730d878f4fd74264f285c09
+325,"sphere-cohomology solution, noncontractibility conclusion, and exact boundary to Unit 28",unit27-325.png,144,1191,1684,204903,c0e55d24f23919b04df7c670970b4ce2bd398775dac0ae097b928f46583c6ae3

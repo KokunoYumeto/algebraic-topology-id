@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–30",
+    "upload_type": "publication",
+    "publication_type": "book",
+    "description": "<p><strong>Status: checkpoint parsial kursus komposit; korpus Roberts lengkap 30/30.</strong> Versi 0.30.0 memuat terjemahan Bahasa Indonesia seluruh Kuliah 1–30 dari <em>Algebraic Topology</em> karya David Michael Roberts.</p><p>Cakupan sumber Roberts adalah <code>Notes.tex</code> baris 134–6368 pada komit <code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>, berakhir pada <code>\\end{document}</code>. Tidak ada Kuliah 31 dalam sumber beku. Kursus komposit tetap belum lengkap: jembatan homologi Fomberg dan penutupan pembuktian, penguasaan, laboratorium, serta capstone orisinal masih menunggu.</p><p>PDF A4 adalah berkas pembaca pertama. HTML mandiri/offline menyediakan permukaan utama yang reflowable dengan MathML asli. Sumber Markdown, backend JSONL ber-ID stabil, manifest, checksum, QA, dan provenance ringkas turut disertakan.</p><p>Seluruh komponen checkpoint Roberts ini tersedia di bawah <strong>CC BY 4.0</strong>, dengan atribusi dan penandaan perubahan sebagaimana dijelaskan dalam <code>RELEASE_RIGHTS.md</code>. Produksi menggunakan <strong>OpenAI Codex gpt-5.6-sol, Ultra</strong> atas arahan pengguna; ini bukan kredit kepengarangan atau endorsement. Edisi ini independen dan tidak disponsori atau disahkan oleh penulis maupun institusinya.</p>",
+    "creators": [
+      {
+        "name": "Roberts, David Michael"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Editor edisi Bahasa Indonesia",
+        "type": "Editor"
+      }
+    ],
+    "access_right": "open",
+    "license": "cc-by-4.0",
+    "language": "ind",
+    "version": "0.30.0",
+    "publication_date": "2026-08-24",
+    "keywords": [
+      "topologi aljabar",
+      "Bahasa Indonesia",
+      "homotopi",
+      "ruang penutup",
+      "grup fundamental",
+      "kohomologi",
+      "derajat",
+      "MathML",
+      "machine-readable textbook"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.5281/zenodo.22061489",
+        "relation": "isVersionOf",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.22074233",
+        "relation": "isNewVersionOf",
+        "scheme": "doi"
+      }
+    ],
+    "notes": "ID rilis: o012-roberts-id-units-001-030-v0.30.0. Korpus Roberts lengkap 30/30; kursus komposit tetap parsial. Versi ini berada dalam konsep Zenodo 10.5281/zenodo.22061489 dan tidak membuat konsep pesaing."
+  }
+}

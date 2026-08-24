@@ -1,0 +1,12 @@
+pdf_page,coverage,render_name,dpi,width_px,height_px,render_bytes,render_sha256
+1,"title, expanded Unit 1-28 subtitle, authorship, date, and opening contents",title-001.png,144,1191,1684,184403,991655416fc609f9c82fe6ea2cd28d32636091ec77a1a0aefbb61088837bbef7
+325,"Unit 27 sphere-cohomology close, exact boundary to Unit 28, and Unit 28 provenance opening",transition-unit28-325.png,144,1191,1684,354922,2ad1ed396e2fd3e8f13c0cbe5d498cf3d28e0da913d037c8eeaa03df56476e3f
+326,"Unit 28 provenance close, lecture opening, sphere-cohomology completion, and high/low degree reductions",unit28-326.png,144,1191,1684,327643,7f35e9b335bb1e7a7bb1b684131f25cceba00ffe712c9088bd87f9dc49e6a736
+327,"reduced sphere cohomology, Euclidean dimension invariance, and excision theorem opening",unit28-327.png,144,1191,1684,265004,58a7b448bd64367c8180b67307d6efe9a2ba698c6029ddba4d20d43db63b0c5d
+328,"contravariant excision and quotient arrows plus the self-contained quotient-cohomology proof",unit28-328.png,144,1191,1684,222052,39150d60c36a32c0d70fa211f4f31921c83f895e1e952cf7b7b61691b0e4e145
+329,"quotient proof close, long exact corollary, Hatcher neighborhood note, and skeleton quotient chain",unit28-329.png,144,1191,1684,249852,7d5886551782966289e5a1c374d56f9073bf838d2b79a63055a68019cf3ca10e
+330,"wedge definition and audit, skeleton relative term, infinite-wedge proposition and proof",unit28-330.png,144,1191,1684,281117,f818fbdc9b26eae0a241da1c75a8b55b8bd0d8c4ec89448d334fd03c9bd9d45f
+331,"wedge-of-spheres calculation, corrected singular-to-simplicial restriction map, and mastery opening",unit28-331.png,144,1191,1684,203040,47e30e3fa332cf1325178132ff97c5fecc9f50252f0c31d6d2f1292037704476
+332,"mastery checks 28.1-28.4 through the quotient-theorem reconstruction prompt",unit28-332.png,144,1191,1684,315819,886cf06e075e76028dae8bf70a212f52a597f7de79620daadc4aa47d10db7912
+333,"quotient reconstruction, finite wedge calculation, and comparison-map mastery prompt",unit28-333.png,144,1191,1684,261969,378a51affba6f1622fd45f415c67bd98ed5d312c0140d1013fef3691aea4f580
+334,"comparison-map solution and exact boundary to Unit 29 at source cursor 6053",unit28-334.png,144,1191,1684,151841,288fa880bc01d9a8d3c963876c0b44a7be2d626c6fb19cf4da85d3ce97855511

@@ -50,6 +50,11 @@ jobs:
               "output/html/units-001-023/index.html": (3707037, "536fbe19e295424d12198bf1b221be3e2f0170f87fa810a9125bcca9f742264b"),
               "output/html/units-001-024/index.html": (3927104, "28a84406de9e196070965920a7f7937177197977f9ddf118f0f8b07d464cbf0f"),
               "output/html/units-001-025/index.html": (4112563, "38cd8437f3b4235ac6269f4e3365123fa06485269d35a424ad4f5ddd589025c1"),
+              "output/html/units-001-026/index.html": (4306392, "a9e4bea73cab5e90136822fbb94a11a1006f7e81ffcdf0a5740da52e335b4e3b"),
+              "output/html/units-001-027/index.html": (4504569, "d98c2c29344e1e3cc3e81863e426fbf775ca6b70c0a5534d888d80ad2269486d"),
+              "output/html/units-001-028/index.html": (4624723, "30f4821960a310bfb6f457f05838b6d8355e2a6df5c35b3a3dcdd9c1afa0a13e"),
+              "output/html/units-001-029/index.html": (4751974, "67e5dd915cbbdf9b1961368efb1538b9ce0da8a4596d7ade11a4af051a189167"),
+              "output/html/units-001-030/index.html": (4861791, "ed9da5653b3eacf7418d6e08760fcd2ecff4d75799c47f08689b940798099891"),
           }
           for name, (size, digest) in expected.items():
               path = Path(name)
@@ -57,8 +62,8 @@ jobs:
               assert len(data) == size, (name, len(data), size)
               assert sha256(data).hexdigest() == digest, name
           actual = sorted(path.relative_to(Path("output/html")).as_posix() for path in Path("output/html").rglob("*") if path.is_file())
-          assert actual == ["index.html", "units-001-002/index.html", "units-001-003/index.html", "units-001-004/index.html", "units-001-005/index.html", "units-001-007/index.html", "units-001-010/index.html", "units-001-013/index.html", "units-001-019/index.html", "units-001-020/index.html", "units-001-021/index.html", "units-001-022/index.html", "units-001-023/index.html", "units-001-024/index.html", "units-001-025/index.html"], actual
-          print("Frozen Unit 1 and cumulative Unit 1-2 through Unit 1-25 HTML verified")
+          assert actual == ["index.html", "units-001-002/index.html", "units-001-003/index.html", "units-001-004/index.html", "units-001-005/index.html", "units-001-007/index.html", "units-001-010/index.html", "units-001-013/index.html", "units-001-019/index.html", "units-001-020/index.html", "units-001-021/index.html", "units-001-022/index.html", "units-001-023/index.html", "units-001-024/index.html", "units-001-025/index.html", "units-001-026/index.html", "units-001-027/index.html", "units-001-028/index.html", "units-001-029/index.html", "units-001-030/index.html"], actual
+          print("Frozen Unit 1 and cumulative Unit 1-2 through Unit 1-30 HTML verified")
           PY
 
       - name: Configure Pages

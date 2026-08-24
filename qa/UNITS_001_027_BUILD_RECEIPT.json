@@ -1,0 +1,304 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-UNITS-001-027-BUILD",
+  "status": "PASS",
+  "scope": "Roberts Indonesian reader Units 001-027",
+  "source_authority": {
+    "repository": "DavidMichaelRoberts/AlgebraicTopology2019",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "tree": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+    "source_file": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "source_bytes": 331447,
+    "source_lines": 6368,
+    "source_sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "cumulative_source_span": "134-5923",
+    "cumulative_span_lines": 5790,
+    "cumulative_span_bytes": 300330,
+    "cumulative_span_sha256": "4fd010c0cff49009ab26761990be513078ed0107f2980880a8919734459be733",
+    "next_source_line": 5924,
+    "unit_027_span": "5824-5923",
+    "unit_027_span_lines": 100,
+    "unit_027_span_bytes": 7012,
+    "unit_027_span_sha256": "65d2c393ddf29183f36d6e9ab65c65f8030110334f89c7f68ba88461fc30afa1",
+    "unit_027_reader": "source/id-ID/units/unit-027-lecture-027.md",
+    "unit_027_bytes": 35879,
+    "unit_027_lines": 1175,
+    "unit_027_sha256": "a3238bbc429e4c3689bce3b3bb78c5514e0fae74f276c9efebe694730b2df2a0"
+  },
+  "frozen_baseline": {
+    "scope": "Units 001-026",
+    "builder": {
+      "path": "scripts/build-units-001-026.ps1",
+      "bytes": 22117,
+      "sha256": "fe75e28e13418df0854355ef5ba37bfd93976c70382faa8dc497a9d65ce6015a"
+    },
+    "html": {
+      "path": "output/html/units-001-026/index.html",
+      "bytes": 4306392,
+      "sha256": "a9e4bea73cab5e90136822fbb94a11a1006f7e81ffcdf0a5740da52e335b4e3b"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-026-id.pdf",
+      "bytes": 2042637,
+      "sha256": "27a5a6f2635328dbd3576a92900d110ae627f48da8c514c40f0d94f2d153f19d"
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_026.csv",
+      "bytes": 249,
+      "sha256": "2c4d00fae0543ce7e0b8f58896d9435e46364f1fed4bae2dc81dddc9a96cfd51"
+    },
+    "build_receipt": {
+      "path": "qa/UNITS_001_026_BUILD_RECEIPT.json",
+      "bytes": 10284,
+      "sha256": "51d6329fe481f207509249a68eed5879df96d399fa39bbb8f23c29a56d4b1ccb"
+    },
+    "visual_receipt": {
+      "path": "qa/UNITS_001_026_VISUAL_QA.md",
+      "bytes": 4903,
+      "sha256": "b768eb101761e87dba6bf936d0d0d6a2ddb1bc8d4a978fc66baeb78562253c0f"
+    },
+    "render_inventory": {
+      "path": "qa/UNITS_001_026_RENDER_INVENTORY.csv",
+      "bytes": 2880,
+      "sha256": "90bc6d15c91ce36fd266ad752e374449ab54956278b4fc79b6735214b8200d5f"
+    },
+    "base_css": {
+      "path": "source/id-ID/styles/reader.css",
+      "bytes": 1297,
+      "sha256": "e5184827600116bc54e28df6822c5a98691d5edf88b7b102443b56024733cbe5"
+    },
+    "cumulative_css": {
+      "path": "source/id-ID/styles/reader-cumulative.css",
+      "bytes": 203,
+      "sha256": "b0012d9f93e603997d48d49705ec9ccae2d3cd2d062b8b9f8717e908df1f5344"
+    },
+    "verified_without_rewrite": true
+  },
+  "unit_027_gate": {
+    "qa": {
+      "path": "qa/UNIT_027_QA.json",
+      "bytes": 8152,
+      "lines": 233,
+      "sha256": "1db997b0ddf1dee05583c8c8c482e68f59a9add7677b34fded034088f55e491f",
+      "status": "PASS"
+    },
+    "source_audit": {
+      "path": "qa/UNIT_027_SOURCE_AUDIT.md",
+      "bytes": 7369,
+      "lines": 126,
+      "sha256": "67621ce38a69fe4e6afd24fa6572dfa6e9499a3e77db03e3943ce045dfa30138"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_027_INDEPENDENT_REVIEW.md",
+      "bytes": 8560,
+      "lines": 148,
+      "sha256": "d464310e42fea0c199b49a6a9670d97cf8704b3c37b7cc79023fece21cb734b5",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    },
+    "stable_ids": 46,
+    "semantic_fenced_blocks": 39,
+    "semantic_block_counts": {
+      "boundary": 1,
+      "definition": 2,
+      "equation": 2,
+      "example": 3,
+      "exercise": 6,
+      "figure": 1,
+      "hint": 6,
+      "lemma": 1,
+      "proof": 3,
+      "proposition": 1,
+      "solution": 6,
+      "source-audit": 5,
+      "source-margin": 1,
+      "theorem": 1
+    },
+    "exercise_hint_solution_triples": 6
+  },
+  "toolchain": {
+    "builder": "scripts/build-units-001-027.ps1",
+    "builder_bytes": 22221,
+    "builder_lines": 327,
+    "builder_sha256": "6fa8ca886e502ed64cb5bdb01460edf182c80ae3dc42c56a93a788d230087355",
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_engine": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "poppler": "24.04.0",
+    "source_date_epoch": 1787529600,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "reproducibility": {
+    "html_clean_builds": 2,
+    "html_two_builds_byte_identical": true,
+    "pdf_clean_builds": 2,
+    "pdf_two_builds_byte_identical": true,
+    "build_scratch_removed": true,
+    "source_baseline_authority_and_unit_027_evidence_fail_closed": true,
+    "pandoc_html_warnings_are_fatal": true,
+    "transient_html_macro_normalization_does_not_modify_sources": true
+  },
+  "artifacts": {
+    "html": {
+      "path": "output/html/units-001-027/index.html",
+      "bytes": 4504569,
+      "lines": 37834,
+      "sha256": "d98c2c29344e1e3cc3e81863e426fbf775ca6b70c0a5534d888d80ad2269486d"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-027-id.pdf",
+      "bytes": 2108928,
+      "sha256": "c001b170d7f3bf3554e507350ef2c29652d265c0661c8cdcf407113f843705d7",
+      "title": "Topologi Aljabar - Unit 1-27",
+      "pages": 325,
+      "unit_027_pages": "312-325",
+      "transition_page": 312,
+      "page_size": "A4",
+      "page_size_points": "595.276x841.890",
+      "page_rotation": 0,
+      "fonts": 27,
+      "all_fonts_embedded_subset_tounicode": true,
+      "catalog_lang": "id-ID",
+      "tagged": false,
+      "encrypted": false,
+      "forms": false,
+      "annotations": 434,
+      "annotation_subtypes": {
+        "Link": 434
+      },
+      "widget_annotations": 0,
+      "javascript": false,
+      "additional_actions": false,
+      "suspects": false,
+      "catalog_open_action": "ordinary GoTo/Fit destination to opening page; no executable code"
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_027.csv",
+      "bytes": 249,
+      "sha256": "c843505221122e756db1fd091172e5cbf8b2cb5fdef247f879d3196ae4070beb",
+      "entries": 2
+    }
+  },
+  "html_checks": {
+    "dom_ids": 1484,
+    "unique_dom_ids": 1484,
+    "duplicate_dom_ids": 0,
+    "fragment_links": 313,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 11000,
+    "display_mathml_nodes": 1907,
+    "inline_mathml_nodes": 9093,
+    "raw_tex_math_fallbacks": 0,
+    "semantic_figures": 63,
+    "unit_027_ids": 46,
+    "missing_unit_027_ids": 0,
+    "runtime_external_dependencies": 0,
+    "lang": "id-ID",
+    "self_contained": true
+  },
+  "responsive_static_checks": {
+    "status": "PASS",
+    "centered_desktop_rule": "body width min(100%, 72rem), max-width 72rem, margin-inline auto",
+    "mobile_rule": "below 700px body width 100%, zero margin, bounded side padding",
+    "global_border_box": true,
+    "responsive_media": true,
+    "display_mathml_local_horizontal_scrolling": true,
+    "inline_mathml_local_horizontal_scrolling": true
+  },
+  "browser_checks": {
+    "status": "PASS",
+    "surface": "in-app Browser against local HTTP final reader",
+    "desktop": {
+      "requested_viewport": "1440x900",
+      "root_client_width_px": 1425,
+      "root_scroll_width_px": 1425,
+      "root_horizontal_overflow_px": 0,
+      "body_width_px": 1152,
+      "body_left_margin_px": 136.444,
+      "body_right_margin_px": 136.556,
+      "outside_viewport_elements": 0
+    },
+    "mobile": {
+      "requested_viewport": "390x844",
+      "root_client_width_px": 375,
+      "root_scroll_width_px": 375,
+      "root_horizontal_overflow_px": 0,
+      "body_width_px": 375.111,
+      "body_side_padding_px": 17.6,
+      "wide_mathml_nodes": 228,
+      "wide_display_mathml_nodes": 226,
+      "wide_inline_mathml_nodes": 2,
+      "wide_mathml_local_scrollers": 228,
+      "outside_descendant_boxes": 1826,
+      "outside_descendants_contained_by_local_scroller": 1826,
+      "uncontained_overflow_elements": 0,
+      "responsive_media_overflow": 0
+    },
+    "temporary_viewport_override_reset": true
+  },
+  "visual_checks": {
+    "receipt": "qa/UNITS_001_027_VISUAL_QA.md",
+    "receipt_bytes": 5250,
+    "receipt_sha256": "9e4df75df439777c157ae12f269e331a6c6e1b3d111d0a722654a33c690d992c",
+    "render_inventory": "qa/UNITS_001_027_RENDER_INVENTORY.csv",
+    "render_inventory_bytes": 2892,
+    "render_inventory_sha256": "f57b3d4e775b9c2314897e9d60d96294be01c6a3b24cb9e8721b971568b314ee",
+    "pages": [
+      1,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325
+    ],
+    "render_count": 15,
+    "render_total_bytes": 3760885,
+    "render_dpi": 144,
+    "render_dimensions_px": "1191x1684",
+    "inventory_verified_against_render_bytes_dimensions_and_sha256": true,
+    "temporary_render_witnesses_removed_after_verification": true,
+    "result": "PASS; title, Unit 26-to-27 transition, and every Unit 27 page inspected at original render resolution with zero visual defects"
+  },
+  "privacy_and_provenance": {
+    "pdf_pages_scanned": "312-325",
+    "normalized_model_provenance_occurrences": 1,
+    "source_author_credit_occurrences": 3,
+    "unit_027_heading_occurrences": 2,
+    "unit_028_boundary_occurrences": 1,
+    "source_cursor_5924_occurrences": 3,
+    "forbidden_credential_markers": 0,
+    "placeholder_markers": 0,
+    "absolute_local_user_paths": 0,
+    "credentials_recorded": false
+  },
+  "accessibility": {
+    "primary_accessible_surface": "self-contained reflowable HTML5 with native MathML, stable headings and IDs, resolved internal links, semantic figures, and measured local overflow containment",
+    "pdf_fonts": "all 27 font objects embedded, subset, and mapped with ToUnicode",
+    "pdf_limitation": "PDF is untagged (/Marked=false and no /StructTreeRoot); disclosed without overstating accessibility"
+  },
+  "rights": {
+    "license": "CC BY 4.0",
+    "attribution": "David Michael Roberts, Algebraic Topology (2019)",
+    "changes_and_process_disclosed": true,
+    "human_contributor_credit_preserved": true,
+    "non_endorsement": true
+  },
+  "changed_files": [
+    "scripts/build-units-001-027.ps1",
+    "output/html/units-001-027/index.html",
+    "output/pdf/topologi-aljabar-unit-001-027-id.pdf",
+    "output/ARTIFACT_MANIFEST_UNITS_001_027.csv",
+    "qa/UNITS_001_027_RENDER_INVENTORY.csv",
+    "qa/UNITS_001_027_VISUAL_QA.md",
+    "qa/UNITS_001_027_BUILD_RECEIPT.json"
+  ]
+}

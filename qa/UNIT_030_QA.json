@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L30-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "tree": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+    "line_start": 6271,
+    "line_end": 6368,
+    "bytes": 331447,
+    "lines": 6368,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_lines": 98,
+    "span_bytes": 8290,
+    "span_sha256": "c522b5ec0ba7d4c938be6588a070be648263d841e1db4f9905c9b388619b64b1",
+    "source_census": {
+      "lecture": 1,
+      "theorem": 3,
+      "formal_definition": 1,
+      "inline_definition": 1,
+      "lemma": 1,
+      "corollary": 1,
+      "remark": 1,
+      "proof": 3,
+      "enumeration": 1,
+      "margin": 6,
+      "side_note": 1,
+      "tikz": 1,
+      "label": 1,
+      "reference": 1,
+      "textual_hatcher_reference": 2,
+      "display_math_environment": 3,
+      "exercise": 0,
+      "question": 0,
+      "xypic": 0,
+      "external_graphic": 0,
+      "citation": 0,
+      "input": 0,
+      "include": 0
+    },
+    "terminal_eof": true,
+    "next_nominal_line": 6369
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-030-lecture-030.md",
+    "bytes": 23008,
+    "lines": 729,
+    "sha256": "88da8cf71d0f81328bdd65b0dea7d54c48655ed8836e230eaed821796b61b08d",
+    "stable_ids": 47,
+    "identified_headings": 7,
+    "fenced_semantic_objects": 40,
+    "block_census": {
+      "aside": 4,
+      "boundary": 1,
+      "corollary": 1,
+      "definition": 2,
+      "exercise": 6,
+      "figure": 1,
+      "hint": 6,
+      "lemma": 1,
+      "proof": 4,
+      "proposition": 1,
+      "remark": 1,
+      "solution": 6,
+      "source-audit": 3,
+      "theorem": 3
+    }
+  },
+  "controls": {
+    "source_audit": {
+      "path": "qa/UNIT_030_SOURCE_AUDIT.md",
+      "bytes": 7214,
+      "lines": 128,
+      "sha256": "177c4306e5db636e0294e85278904c186099d069f209474a472d2615b0d5a4cf"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_030_INDEPENDENT_REVIEW.md",
+      "bytes": 8406,
+      "lines": 148,
+      "sha256": "58db70bbd6538961e8bfc0c809d00b7b539115147b2826dc46d97e5b77ba712e",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    }
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "finding_id": "UNIT030-ED-P2-001",
+      "severity": "P2",
+      "path": "source/id-ID/units/unit-030-lecture-030.md",
+      "final_line": 639,
+      "initial_observation": "the degree-multiplicativity solution wrote the scalar action on the generator as ed,u, leaving an ambiguous comma inside the formula",
+      "resolution": "rewrote the same scalar action as (ed)u, preserving contravariant order and the stated product of degrees",
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT030-QA-P3-002",
+      "severity": "P3",
+      "path": "qa/UNIT_030_INDEPENDENT_REVIEW.md and qa/UNIT_030_QA.json",
+      "initial_observation": "the initial census omitted the unnumbered notice heading and the lecture-root heading, reporting 46 IDs and five headings although the immutable reader has 47 explicit unique IDs across seven headings and 40 fenced objects",
+      "resolution": "recounted every explicit o012 identifier, bound all 47 unique IDs and seven identified headings, updated the embedded independent-review identity, and verified that Pandoc preserves all 47 without duplication",
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    }
+  ],
+  "corrections": {
+    "fixed_point_example_identity_region": true,
+    "free_map_contradiction_hypothesis": true,
+    "explicit_continuous_brouwer_retraction": true,
+    "reduced_cohomology_brouwer_n1": true,
+    "contravariant_brouwer_arrows": true,
+    "direct_brouwer_n0_case": true,
+    "real_closed_field_characterization": true,
+    "quantitative_polynomial_homotopy": true,
+    "ambient_tangent_field_target": true,
+    "reduced_degree_n0": true,
+    "odd_coordinate_terminal_index": true,
+    "odd_field_dot_product_and_norm": true,
+    "degree_solution_scalar_notation": true,
+    "stable_id_and_heading_census": true
+  },
+  "proof_closure": {
+    "brouwer_retraction_and_contradiction": true,
+    "fundamental_theorem_of_algebra": true,
+    "antipodal_corollary": true,
+    "hairy_sphere_both_directions": true,
+    "source_reflection_lemma_preserved_as_externally_proved": true,
+    "mastery_solution_triples": 6
+  },
+  "rendering": {
+    "pandoc": "pandoc 3.9.0.2",
+    "target": "HTML5 native MathML",
+    "warnings_fatal": true,
+    "mathml_nodes": 268,
+    "reader_ids_preserved": 47,
+    "missing_reader_ids": 0,
+    "duplicate_dom_ids": 0,
+    "raw_tex_ast_nodes": 0,
+    "runtime_fallback": false,
+    "runtime_scripts": 0,
+    "external_stylesheets": 0
+  },
+  "links": {
+    "checked_on": "2026-08-24",
+    "pinned_source_http_status": 200,
+    "official_repository_http_status": 200,
+    "cc_by_4_deed_http_status": 200
+  },
+  "checks": [
+    {
+      "check": "required_files_and_identities",
+      "status": "PASS",
+      "detail": "authority, corrected reader, source audit, and final independent review match the frozen identities"
+    },
+    {
+      "check": "terminal_source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:6271-6368 is 8,290 LF bytes and ends at end{document}; no later source line exists"
+    },
+    {
+      "check": "source_census_and_closure",
+      "status": "PASS",
+      "detail": "all source objects, six margins, side note, TikZ figure, label, reference, and both textual Hatcher references are represented"
+    },
+    {
+      "check": "stable_ids",
+      "status": "PASS",
+      "detail": "47 occurrences, 47 unique IDs across seven identified headings and 40 fenced semantic objects, all preserved by HTML conversion"
+    },
+    {
+      "check": "balanced_structure",
+      "status": "PASS",
+      "detail": "40 balanced fenced semantic objects and syntactically valid Markdown/TeX math"
+    },
+    {
+      "check": "brouwer_proof",
+      "status": "PASS",
+      "detail": "free-map hypothesis, continuous outward retraction, contravariant arrows, reduced cohomology, and n=0/n=1 cases are correct"
+    },
+    {
+      "check": "fundamental_theorem_of_algebra",
+      "status": "PASS",
+      "detail": "leading-term bound, nonzero straight-line homotopy, winding obstruction, and radial null-homotopy have correct domains and endpoints"
+    },
+    {
+      "check": "degree_and_hairy_sphere",
+      "status": "PASS",
+      "detail": "degree directions and products, antipodal sign, ambient-sphere tangent target, n=0 obstruction, and odd-dimensional construction are correct"
+    },
+    {
+      "check": "proof_and_mastery_closure",
+      "status": "PASS",
+      "detail": "the source's deliberate external reflection-lemma proof boundary is explicit; all other unit arguments and six mastery triples are complete"
+    },
+    {
+      "check": "terminology",
+      "status": "PASS",
+      "detail": "natural id-ID and admitted sfera, fungsi, fungtor terminology are consistent; no rejected source-language variant remains"
+    },
+    {
+      "check": "accessible_semantic_reflow",
+      "status": "PASS",
+      "detail": "the fixed-canvas TikZ figure and source notes are represented in reading order with complete semantic descriptions"
+    },
+    {
+      "check": "language_and_mastery",
+      "status": "PASS",
+      "detail": "natural Indonesian reader prose and six exact exercise/hint/full-solution triples"
+    },
+    {
+      "check": "rights_provenance_privacy",
+      "status": "PASS",
+      "detail": "CC BY 4.0, source credit, non-endorsement, human credit, and exact model note are present; no private marker or official-status claim"
+    },
+    {
+      "check": "pandoc_html5_mathml",
+      "status": "PASS",
+      "detail": "pandoc 3.9.0.2; exit 0; warnings fatal; 268 MathML nodes; all reader IDs preserved; no raw-TeX AST or runtime dependency"
+    },
+    {
+      "check": "public_links",
+      "status": "PASS",
+      "detail": "the exact pinned source, official repository, and CC BY 4.0 deed each returned HTTP 200"
+    },
+    {
+      "check": "terminal_cursor",
+      "status": "PASS",
+      "detail": "boundary identifies EOF after Notes.tex line 6368 and makes no admission or publication claim"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

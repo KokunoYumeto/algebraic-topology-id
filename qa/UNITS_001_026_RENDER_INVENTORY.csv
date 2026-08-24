@@ -1,0 +1,16 @@
+pdf_page,coverage,render_name,dpi,width_px,height_px,render_bytes,render_sha256
+1,"title, expanded subtitle, authorship, date, and opening contents",title-001.png,144,1191,1684,185463,f94a511f73aca06dd92ba0ecdd32e7b6e678500019510fd779620fb4ca6441c5
+298,"Unit 25 mastery close, boundary to Unit 26, and exact source cursor 5612",transition-298.png,144,1191,1684,272732,0f48d8dc0510d6aba993fe56ca317830864506118e1541bc2ca5d3d53e3f8219
+299,"Unit 26 provenance, lecture opening, geometric realisation, and differential-form motivation",unit26-299.png,144,1191,1684,358190,6342fdff043787f8f849cbe65ad8fcb84a6e107c774f9df27e706c8b37dd1671
+300,"boundary regularity, Stokes identity, source audit, and singular-cochain definition",unit26-300.png,144,1191,1684,269476,373207db8588d078811994bac23b87aaf52f9cdbb80aa68b1168d06509ef84a9
+301,"square-zero proof, contravariant naturality, size example, and one-point calculation",unit26-301.png,144,1191,1684,269838,b83d39801eb30fba254e0687efa9d0eb92b32f21e2a77f682e1fd4597209ca53
+302,"relative cohomology, complete long exact sequence, connecting map, and reduced opening",unit26-302.png,144,1191,1684,271746,5f109bfba241b9a204d33fdde0cae074be2e2eefddcc31cbdc7fbce01514657e
+303,"degree-one reduced repair, pointed discrete example, and pointed functoriality",unit26-303.png,144,1191,1684,281707,345b5956c3a06dc0e038129704e0db1a45d4b783815cb30f74f3145003e8f4e3
+304,"source-margin closure and finite-coproduct proposition, proof, and audit",unit26-304.png,144,1191,1684,280228,2964a7927fd7d6da8de27fec2a7340a92ea00af83643b90849f84ca09fb649ed
+305,"homotopy-invariance theorem and equivalence, contractible, and basepoint corollaries",unit26-305.png,144,1191,1684,264215,4a812a8e0f3997e09bdc6e530216b4452ea8f53b4cead8b433405e261a17c4e1
+306,"basepoint proof, cochain-homotopy definition and lemma, and theorem opening",unit26-306.png,144,1191,1684,239074,49201c088eb0b1cc06266adede52cdda863f51147fd54e84f398bc10956c3bac
+307,"signed prism construction, face cancellation, dualisation, and homotopy proof close",unit26-307.png,144,1191,1684,276955,8ddae5b7bb91fd535f396f9ba2c3bb252f15a7903f5cd7a3bcfe31ce2dadd184
+308,"prism source audit and mastery checks 26.1-26.2 with square-zero solution",unit26-308.png,144,1191,1684,317967,b010aba219e1395ba50e0e96866e7bbc4e7ffef915032468fc427142742ea2d0
+309,"interval and relative-pair mastery solutions plus pointed discrete-space mastery",unit26-309.png,144,1191,1684,278034,04751f4cdb37bc78061368c4f0bda59799865602db7171e944e02491639c5497
+310,"pointed-map solution, coproduct mastery, and prism-operator mastery prompt",unit26-310.png,144,1191,1684,286643,2640a0ac2b527e6ddbe0e5cb882dd10d7f1f6214cb1ecc1b50fa690a6a1f46d8
+311,"complete low-degree prism solution and exact boundary to Unit 27 at cursor 5824",unit26-311.png,144,1191,1684,216145,2409f3a7b3693eb9d78580109eb39f0ef0d131e4c6c917ad6a9ecf74aac177b7

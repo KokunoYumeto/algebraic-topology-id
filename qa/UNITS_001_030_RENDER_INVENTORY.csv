@@ -1,0 +1,11 @@
+pdf_page,coverage,render_name,dpi,width_px,height_px,render_bytes,render_sha256
+1,"title, expanded Unit 1-30 subtitle, authorship, date, and opening contents",title-001.png,144,1191,1684,190371,9ecc3323cd11fd6310a916e0d09fa4b1662a5c4f94e95460a296e7381acdc4c3
+343,"Unit 29 close, exact boundary to Unit 30, complete Unit 30 provenance, lecture heading, and Brouwer opening",transition-unit30-343.png,144,1191,1684,375176,a5af9c2880b275788c1971fc91adefa63fe2a76ffe2e860fa13f282388cd35fe
+344,"Brouwer setup, free-map definition, theorem, explicit continuous retraction, and semantic figure",unit30-344.png,144,1191,1684,262102,98ad83013592193d091ff267f133832352758d34cc91fe9d9c7a493a5b711dae
+345,"reduced-cohomology contradiction, Brouwer source audit and note, and algebra theorem opening",unit30-345.png,144,1191,1684,274453,969da032d6f5c75a82fc03e228c081b638a3a8983009594a8ae2c6467aa5ac85
+346,"quantitative polynomial homotopy proof, source audit, and hairy-sphere theorem opening",unit30-346.png,144,1191,1684,233198,c515f75d817b066883fd8c51656f1f762171855613bba804bf760852141cdfd3
+347,"ambient tangent-field formulation, degree definition and proposition, reflection lemma, and antipodal corollary",unit30-347.png,144,1191,1684,251536,c87a32eeac3f2384e83bdb1809ee498f65ae9f4df3d68db90e8e00464d73cb57
+348,"antipodal proof, both directions of the hairy-sphere theorem, and exact source audit",unit30-348.png,144,1191,1684,202695,f49fc2b9bcc1a7c7a1613e10a4286d8a6392c8c4c1090821fd04624650a100e0
+349,"mastery checks 30.1 and 30.2 plus check 30.3 through its solution opening",unit30-349.png,144,1191,1684,283763,2eb915e24255a4e9f4b3329a638894ed3f37512e32516450af3e7531febd3e36
+350,"check 30.3 close, checks 30.4 and 30.5, and check 30.6 through its solution opening",unit30-350.png,144,1191,1684,280273,027fd381211c54dc47702512e946e788728d61c00bb382099bbdf7227bee5ad8
+351,"check 30.6 close and terminal Roberts source boundary at EOF after Notes.tex line 6368",unit30-351.png,144,1191,1684,82221,32d787ed57fd7ec00650eee344670f6b2c464f8b2eea68fd0d4d54ebb2b36670

@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L26-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 5612,
+    "line_end": 5823,
+    "bytes": 331447,
+    "lines": 6368,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_bytes": 9763,
+    "span_lines": 212,
+    "span_sha256": "52663b3e60d5d6f3041b8ede449c52a04700ee670c201ef5674c4aa3973203a9",
+    "source_census": {
+      "lecture": 1,
+      "definition": 3,
+      "proposition": 2,
+      "theorem": 2,
+      "lemma": 1,
+      "corollary": 3,
+      "remark": 1,
+      "example": 2,
+      "proof": 3,
+      "margin": 3,
+      "label": 2,
+      "reference": 2,
+      "exercise": 0,
+      "question": 0,
+      "xypic": 0,
+      "tikz": 0,
+      "external_graphic": 0,
+      "citation": 0,
+      "input": 0,
+      "include": 0
+    },
+    "next_line": 5824
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-026-lecture-026.md",
+    "bytes": 38537,
+    "lines": 1201,
+    "sha256": "7a2cf4ea31546b8258e3e91c819d3ad516973c8f861249fccc7334b9ade9d835",
+    "stable_ids": 62,
+    "identified_headings": 8,
+    "fenced_semantic_objects": 54,
+    "block_census": {
+      "aside": 3,
+      "boundary": 1,
+      "corollary": 3,
+      "definition": 3,
+      "example": 2,
+      "exercise": 6,
+      "hint": 6,
+      "lemma": 1,
+      "proof": 9,
+      "proposition": 4,
+      "remark": 1,
+      "solution": 6,
+      "source-audit": 7,
+      "theorem": 2
+    }
+  },
+  "controls": {
+    "source_audit": {
+      "path": "qa/UNIT_026_SOURCE_AUDIT.md",
+      "bytes": 7693,
+      "lines": 130,
+      "sha256": "658a2586c58fd4149cf4959bc9b405d67896984f61621b1533f873836a9c8bb5"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_026_INDEPENDENT_REVIEW.md",
+      "bytes": 7718,
+      "lines": 136,
+      "sha256": "b00eb4de7d29e9833539d0086ebc12e5d7339137ebc2b74874d9cfc72c4e3111",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    }
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "finding_id": "UNIT026-MATH-P2-001",
+      "severity": "P2",
+      "paths": [
+        "source/id-ID/units/unit-026-lecture-026.md",
+        "qa/UNIT_026_SOURCE_AUDIT.md"
+      ],
+      "initial_observation": "the draft invoked Stokes after repeating a source-margin convention of interior smoothness plus mere continuous boundary extension",
+      "resolution": "the reader and audit now require smoothness up to the boundary for the displayed Stokes identity and distinguish that hypothesis from the weaker source convention",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT026-TERM-P3-001",
+      "severity": "P3",
+      "path": "source/id-ID/units/unit-026-lecture-026.md",
+      "initial_observation": "twelve occurrences used funktor/funktorialitas instead of the admitted fungtor/fungtorialitas forms",
+      "resolution": "all twelve occurrences were normalized; no deprecated occurrence remains",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    }
+  ],
+  "corrections": {
+    "stokes_regularity_typed": true,
+    "singular_coboundary_square_zero_proved": true,
+    "contravariant_cochain_map_typed": true,
+    "relative_long_exact_sequence_completed": true,
+    "reduced_degree_one_repaired": true,
+    "pointed_functoriality_closed": true,
+    "coproduct_connectedness_explicit": true,
+    "contractible_degree_repaired": true,
+    "cochain_homotopy_variable_repaired": true,
+    "prism_operator_proof_completed": true,
+    "admitted_fungtor_terminology": true
+  },
+  "proof_closure": {
+    "delta_squared_zero": true,
+    "relative_long_exact_sequence": true,
+    "reduced_cohomology_degree_one": true,
+    "pointed_functoriality": true,
+    "coproduct_decomposition": true,
+    "homotopy_invariance_corollaries": 3,
+    "cochain_homotopy_lemma": true,
+    "signed_prism_operator": true,
+    "mastery_solution_triples": 6
+  },
+  "rendering": {
+    "pandoc": "pandoc 3.9.0.2",
+    "target": "standalone HTML5 native MathML",
+    "exit_code": 0,
+    "warnings_fatal": true,
+    "mathml_nodes": 423,
+    "dom_ids": 63,
+    "unique_dom_ids": 63,
+    "same_unit_fragments": 1,
+    "resolved_same_unit_fragments": 1,
+    "cross_unit_fragments": 1,
+    "cross_unit_target_verified": "o012-rbt-l24-thm-001",
+    "runtime_scripts": 0,
+    "external_stylesheets": 0
+  },
+  "checks": [
+    {
+      "check": "required_files_and_identities",
+      "status": "PASS",
+      "detail": "authority, corrected reader, source audit, and independent review match the frozen identities recorded here"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:5612-5823 is 9,763 LF bytes; next cursor 5824 begins Lecture 27 intact"
+    },
+    {
+      "check": "source_census_and_order",
+      "status": "PASS",
+      "detail": "all definitions, propositions, theorems, lemma, corollaries, remark, examples, proofs, margins, labels, and references are represented in source order"
+    },
+    {
+      "check": "singular_relative_reduced_cohomology",
+      "status": "PASS",
+      "detail": "variance, square-zero differential, extension by zero, connecting map, degree-one repair, and pointed functoriality are mathematically closed"
+    },
+    {
+      "check": "coproduct_connectedness",
+      "status": "PASS",
+      "detail": "connectedness of standard simplices is explicit and the finite direct-sum statement is correctly typed"
+    },
+    {
+      "check": "homotopy_invariance_and_prism",
+      "status": "PASS",
+      "detail": "contravariant composition, cochain-homotopy degree, prism orientation, boundary cancellation, and dual sign are consistent"
+    },
+    {
+      "check": "language_and_terminology",
+      "status": "PASS",
+      "detail": "natural id-ID prose follows admitted terminology, including fungtor/fungtorialitas, isomorfisma, korantai, kosiklus, and kobatas"
+    },
+    {
+      "check": "stable_structure",
+      "status": "PASS",
+      "detail": "62 unique stable IDs, eight identified headings, and 54 balanced fenced objects"
+    },
+    {
+      "check": "source_edition_labeling",
+      "status": "PASS",
+      "detail": "source labels are preserved; edition proof closures, repairs, audits, and mastery objects are explicitly distinguished"
+    },
+    {
+      "check": "mastery_closure",
+      "status": "PASS",
+      "detail": "six exact exercise/hint/full-solution triples with correct formulas and no omitted requested step"
+    },
+    {
+      "check": "rights_provenance_privacy",
+      "status": "PASS",
+      "detail": "CC BY 4.0, Roberts credit, changes, non-endorsement, human credit, and exact model note are present; no private marker"
+    },
+    {
+      "check": "pandoc_html5_mathml",
+      "status": "PASS",
+      "detail": "Pandoc 3.9.0.2 exits zero with warnings fatal, 423 MathML nodes, unique DOM IDs, and the same-unit fragment resolved"
+    },
+    {
+      "check": "independent_review",
+      "status": "PASS",
+      "detail": "resolved pre-admission P2/P3 findings are recorded; final open counts are P1=0, P2=0, P3=0"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

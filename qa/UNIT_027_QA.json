@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L27-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 5824,
+    "line_end": 5923,
+    "bytes": 331447,
+    "lines": 6368,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_bytes": 7012,
+    "span_sha256": "65d2c393ddf29183f36d6e9ab65c65f8030110334f89c7f68ba88461fc30afa1",
+    "source_census": {
+      "lecture": 1,
+      "definition": 1,
+      "lemma": 1,
+      "proposition": 1,
+      "theorem": 1,
+      "exercise": 1,
+      "example": 3,
+      "proof": 1,
+      "margin": 1,
+      "xypic": 1,
+      "label": 4,
+      "reference": 2,
+      "display": 11,
+      "tikz": 0,
+      "external_graphic": 0,
+      "citation": 0,
+      "input": 0,
+      "include": 0
+    },
+    "next_line": 5924
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-027-lecture-027.md",
+    "bytes": 35879,
+    "lines": 1175,
+    "sha256": "a3238bbc429e4c3689bce3b3bb78c5514e0fae74f276c9efebe694730b2df2a0",
+    "stable_ids": 46,
+    "identified_headings": 7,
+    "fenced_semantic_objects": 39,
+    "block_census": {
+      "boundary": 1,
+      "definition": 2,
+      "equation": 2,
+      "example": 3,
+      "exercise": 6,
+      "figure": 1,
+      "hint": 6,
+      "lemma": 1,
+      "proof": 3,
+      "proposition": 1,
+      "solution": 6,
+      "source-audit": 5,
+      "source-margin": 1,
+      "theorem": 1
+    }
+  },
+  "controls": {
+    "source_audit": {
+      "path": "qa/UNIT_027_SOURCE_AUDIT.md",
+      "bytes": 7369,
+      "lines": 126,
+      "sha256": "67621ce38a69fe4e6afd24fa6572dfa6e9499a3e77db03e3943ce045dfa30138"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_027_INDEPENDENT_REVIEW.md",
+      "bytes": 8560,
+      "lines": 148,
+      "sha256": "d464310e42fea0c199b49a6a9670d97cf8704b3c37b7cc79023fece21cb734b5",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    }
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "finding_id": "UNIT027-MATH-P2-001",
+      "severity": "P2",
+      "path": "source/id-ID/units/unit-027-lecture-027.md",
+      "final_line": 481,
+      "initial_observation": "the cochain-comparison formula omitted the backslash before longrightarrow",
+      "resolution": "restored the mathematical arrow without changing map direction, objects, or source scope",
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT027-A11Y-P2-002",
+      "severity": "P2",
+      "path": "source/id-ID/units/unit-027-lecture-027.md",
+      "final_line_start": 369,
+      "final_line_end": 373,
+      "initial_observation": "the pushout arrow syntax failed Pandoc native-MathML conversion under fatal warnings",
+      "resolution": "replaced only the positional TeX arrow syntax with an equivalent MathML-convertible semantic array",
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT027-PROOF-P2-003",
+      "severity": "P2",
+      "path": "source/id-ID/units/unit-027-lecture-027.md",
+      "final_line_start": 693,
+      "final_line_end": 715,
+      "initial_observation": "the connector was constructed but exactness at the three recurring term types was only asserted",
+      "resolution": "added the explicit lift and adjustment arguments proving image equals kernel at every term type",
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT027-TERM-P3-001",
+      "severity": "P3",
+      "path": "source/id-ID/units/unit-027-lecture-027.md",
+      "final_lines": [38, 407, 410, 455, 973, 1050, 1086],
+      "initial_observation": "extension-by-zero prose used variants based on perpanjangan rather than admitted term O012-TERM-0314",
+      "resolution": "normalized the noun to perluasan dengan nol and the corresponding verb forms",
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT027-TERM-P3-002",
+      "severity": "P3",
+      "path": "source/id-ID/units/unit-027-lecture-027.md",
+      "final_lines": [60, 317],
+      "initial_observation": "the reader used the recognized but nonpreferred variant funktorial",
+      "resolution": "normalized both occurrences to the admitted preferred fungtorial form derived from O012-TERM-0004 and O012-TERM-0072",
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    }
+  ],
+  "corrections": {
+    "typed_constant_evaluation_composition": true,
+    "degree_zero_reduced_statement": true,
+    "small_cochain_model_and_direction": true,
+    "small_chain_comparison_proof": true,
+    "mayer_vietoris_exactness_proof": true,
+    "reduced_intersection_hypothesis": true,
+    "open_hemisphere_description": true,
+    "native_mathml_pushout": true,
+    "admitted_extension_by_zero_terminology": true,
+    "preferred_functor_terminology": true
+  },
+  "proof_closure": {
+    "source_exercise_h0": true,
+    "left_splitting_lemma": true,
+    "small_chain_theorem": true,
+    "mayer_vietoris_connector_and_exactness": true,
+    "sphere_cohomology_induction": true,
+    "mastery_solution_triples": 6
+  },
+  "rendering": {
+    "pandoc": "pandoc 3.9.0.2",
+    "target": "HTML5 native MathML",
+    "warnings_fatal": true,
+    "mathml_nodes": 459,
+    "reader_ids_preserved": 46,
+    "duplicate_dom_ids": 0,
+    "runtime_fallback": false,
+    "runtime_scripts": 0,
+    "external_stylesheets": 0
+  },
+  "checks": [
+    {
+      "check": "required_files_and_identities",
+      "status": "PASS",
+      "detail": "authority, corrected reader, source audit, and final independent review match the frozen identities"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:5824-5923 is 7,012 LF bytes; complete Lecture 28 marker at line 5924 remains excluded"
+    },
+    {
+      "check": "source_census_and_closure",
+      "status": "PASS",
+      "detail": "all source objects, four labels, two references, one margin, and one Xy-pic surface are represented in source order"
+    },
+    {
+      "check": "stable_ids",
+      "status": "PASS",
+      "detail": "46 occurrences, 46 unique IDs, all preserved by the HTML conversion"
+    },
+    {
+      "check": "balanced_structure",
+      "status": "PASS",
+      "detail": "39 balanced fenced semantic objects and balanced display-math delimiters"
+    },
+    {
+      "check": "source_labels_and_references",
+      "status": "PASS",
+      "detail": "four source labels are preserved as aliases and both references resolve semantically"
+    },
+    {
+      "check": "mathematical_fidelity",
+      "status": "PASS",
+      "detail": "typed degree-zero maps, splitting, small-chain comparison, Mayer--Vietoris, and sphere recurrence are correct"
+    },
+    {
+      "check": "proof_closure",
+      "status": "PASS",
+      "detail": "all omitted or abbreviated proofs needed by the unit and its six mastery solutions are complete"
+    },
+    {
+      "check": "terminology",
+      "status": "PASS",
+      "detail": "admitted id-ID forms are consistent, including preferred fungtor/fungtorial forms and O012-TERM-0314 and O012-TERM-0324/0326"
+    },
+    {
+      "check": "accessible_semantic_reflow",
+      "status": "PASS",
+      "detail": "Xy-pic and margin placement are replaced by reading-order semantics with no raw layout command"
+    },
+    {
+      "check": "language_and_mastery",
+      "status": "PASS",
+      "detail": "natural id-ID reader prose and six exact exercise/hint/full-solution triples"
+    },
+    {
+      "check": "rights_provenance_privacy",
+      "status": "PASS",
+      "detail": "CC BY 4.0, source credit, non-endorsement, human credit, exact model note; no private marker or official-status claim"
+    },
+    {
+      "check": "pandoc_html5_mathml",
+      "status": "PASS",
+      "detail": "pandoc 3.9.0.2; exit 0; warnings fatal; 459 MathML nodes; no fallback or runtime dependency"
+    },
+    {
+      "check": "terminal_cursor",
+      "status": "PASS",
+      "detail": "boundary names Notes.tex line 5924 exactly and makes no admission or publication claim"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

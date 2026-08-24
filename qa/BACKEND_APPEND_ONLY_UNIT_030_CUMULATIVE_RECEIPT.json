@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-BACKEND-UNITS-001-030-CUMULATIVE-SEMANTIC",
+  "status": "PASS",
+  "date": "2026-08-24",
+  "scope": "Replayable final cumulative Units 001-030 source/semantic backend boundary; no Unit 030 HTML, PDF, build-QA, visual-QA, Git, or publication claim",
+  "semantic_transaction": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_030_RECEIPT.json",
+    "bytes": 7808,
+    "sha256": "407811c2483c3b5e5dfeda13436029394bbb086ab8337841eda3a476e22387f4",
+    "status": "PASS"
+  },
+  "nested_immutability": {
+    "units_001_029_prefix": {
+      "records": 4596,
+      "bytes": 5001266,
+      "bundle_sha256": "49c599010ebee2223225f643cd09a53bea882b8064024d5189e6e15f648195d8",
+      "preserved_byte_for_byte": true
+    },
+    "unit_030_semantic_suffix": {
+      "records": 165,
+      "canonical_jsonl": true,
+      "sorted_within_transaction": true,
+      "records_by_file": {
+        "artifacts.jsonl": 3,
+        "assets.jsonl": 2,
+        "authority.jsonl": 0,
+        "concepts.jsonl": 10,
+        "corrections.jsonl": 10,
+        "qa.jsonl": 3,
+        "relations.jsonl": 29,
+        "rights.jsonl": 3,
+        "segments.jsonl": 47,
+        "terms.jsonl": 10,
+        "units.jsonl": 48
+      }
+    }
+  },
+  "current": {
+    "total_records": 4761,
+    "total_bytes": 5213679,
+    "bundle_sha256": "51b8c7f611560b9b5e88e97b3a943b54e0eb687c703f0cd34c1a3d164e4fb920",
+    "cumulative_source_rights_id": "rights:o012-units-001-030-composite-cc-by-4.0",
+    "stable_ids_in_unit_030": 47,
+    "proof_objects_in_unit_030": 4,
+    "mastery_solution_triples_in_unit_030": 6,
+    "source_aliases_in_unit_030": 1,
+    "source_diagrams_in_unit_030": 1,
+    "resolved_findings_in_unit_030": 2,
+    "terminal_source_eof": true,
+    "next_source_line": 6369
+  },
+  "evidence": {
+    "qa": {
+      "path": "qa/UNIT_030_QA.json",
+      "bytes": 8378,
+      "sha256": "bef6fe6704084ac02386bb477b7b0082e02921d3d722955e1366e7d0b9247753",
+      "status": "PASS"
+    }
+  },
+  "validators": {
+    "producer": {
+      "path": "scripts/extend-backend-unit-030.py",
+      "bytes": 46866,
+      "lines": 713,
+      "sha256": "c9a0e2fee2616cab1f34e881ca69e40802dbf354128eed652dc99dc8cfddcb3c",
+      "deterministic_replay": "PASS"
+    },
+    "semantic": {
+      "path": "scripts/validate-backend-append-only-unit-030.py",
+      "bytes": 27928,
+      "lines": 486,
+      "sha256": "1e4244e4765cf0f5c248b14d88dfcc7d5b63d73858ef833a3f17c77d4c76e4b0",
+      "live_replay": "PASS"
+    },
+    "cumulative": {
+      "path": "scripts/validate-backend-append-only-unit-030-cumulative.py",
+      "bytes": 13998,
+      "lines": 260,
+      "sha256": "262073c43b9513ccb726ab5a0e8cf2938d416e2b2a4c793c370e4d66c1027ce2",
+      "live_replay": "PASS"
+    }
+  },
+  "file_manifest": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_030_FILE_MANIFEST.csv",
+    "bytes": 2105,
+    "lines": 12,
+    "sha256": "c6cdf74c7a63d3cb399b527f28c5e6fa4822bb207a96c5d1584e8314e3f912b8",
+    "rows": 11,
+    "prefix_and_final_identities_verified": true
+  },
+  "build_boundary": {
+    "unit_030_html_record": false,
+    "unit_030_pdf_record": false,
+    "unit_030_build_qa_record": false,
+    "unit_030_visual_qa_record": false,
+    "reason": "Cumulative HTML/PDF production and build/visual QA were outside this transaction; the validator rejects an unverified claim while retaining prior build records unchanged."
+  },
+  "human_receipt": {
+    "path": "qa/BACKEND_APPEND_ONLY_UNIT_030_CUMULATIVE_RECEIPT.md",
+    "bytes": 1323,
+    "lines": 25,
+    "sha256": "de5a6d0456fa5c43a3171b362f9b01e6ed4464414527cc3f0c55264899f18c5d"
+  },
+  "write_boundary": [
+    "scripts/validate-backend-append-only-unit-030-cumulative.py",
+    "qa/BACKEND_APPEND_ONLY_UNIT_030_CUMULATIVE_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_UNIT_030_CUMULATIVE_RECEIPT.md"
+  ],
+  "control_reader_audit_review_qa_html_pdf_git_publication_other_units_or_upstream_changed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

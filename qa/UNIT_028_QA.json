@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L28-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "tree": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+    "line_start": 5924,
+    "line_end": 6052,
+    "bytes": 331447,
+    "lines": 6368,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_bytes": 8257,
+    "span_lines": 129,
+    "span_sha256": "f3e4a526fa2e504a449a606150c399520c255a98a91d60c934737f87497b4b51",
+    "source_census": {
+      "lecture": 1,
+      "definition": 1,
+      "proposition": 3,
+      "theorem": 2,
+      "corollary": 1,
+      "new_example": 1,
+      "continued_example_close": 1,
+      "remark": 1,
+      "proof": 3,
+      "margin": 5,
+      "label": 1,
+      "reference": 5,
+      "display_math": 10,
+      "align": 1,
+      "exercise": 0,
+      "question": 0,
+      "cite_command": 0,
+      "textual_hatcher_reference": 2,
+      "xypic_or_tikz": 0,
+      "external_graphic": 0,
+      "input": 0,
+      "include": 0
+    },
+    "next_line": 6053
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-028-lecture-028.md",
+    "bytes": 26072,
+    "lines": 814,
+    "sha256": "b69036f5a0a8151942288f04197a9dc69c81d2902fe8a15a0e73601978fefe67",
+    "stable_ids": 47,
+    "identified_headings": 8,
+    "fenced_semantic_objects": 39,
+    "block_census": {
+      "aside": 3,
+      "boundary": 1,
+      "corollary": 1,
+      "definition": 1,
+      "example": 1,
+      "exercise": 6,
+      "hint": 6,
+      "proof": 4,
+      "proposition": 3,
+      "solution": 6,
+      "source-audit": 5,
+      "theorem": 2
+    }
+  },
+  "controls": {
+    "source_audit": {
+      "path": "qa/UNIT_028_SOURCE_AUDIT.md",
+      "bytes": 5660,
+      "lines": 96,
+      "sha256": "2b181bcd12c95210395b3aec8b866b69093d6636b89773d08d93cec41870fa4a"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_028_INDEPENDENT_REVIEW.md",
+      "bytes": 6807,
+      "lines": 123,
+      "sha256": "92d81718580eded1daac0593fe2e13d7797c9ed2d8507e70fe5f7dd522fde505",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    }
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "finding_id": "UNIT028-MATH-P2-001",
+      "severity": "P2",
+      "paths": [
+        "qa/UNIT_028_SOURCE_AUDIT.md",
+        "source/id-ID/units/unit-028-lecture-028.md"
+      ],
+      "initial_observation": "the infinite-wedge statement did not require a nonempty index set or closed basepoints, so the quotient theorem invoked by its proof did not have all of its stated hypotheses",
+      "resolution": "required J to be nonempty and each basepoint to be closed and a deformation retract of an open neighborhood; rewrote the proof through the quotient of the coproduct pair",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT028-AUDIT-P3-001",
+      "severity": "P3",
+      "paths": [
+        "qa/UNIT_028_SOURCE_AUDIT.md",
+        "source/id-ID/units/unit-028-lecture-028.md"
+      ],
+      "initial_observation": "the reader corrected the source's impossible X\\setminus emptyset convention to the quotient X/emptyset, but the semantic correction was not recorded",
+      "resolution": "recorded the exact source defect and quotient-space repair in both audit surfaces",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT028-PROV-P3-002",
+      "severity": "P3",
+      "paths": [
+        "qa/UNIT_028_SOURCE_AUDIT.md",
+        "source/id-ID/units/unit-028-lecture-028.md"
+      ],
+      "initial_observation": "the audit conflated zero TeX cite commands with zero bibliographic references, and the reader did not explicitly preserve the source's textual reference to Hatcher Proposition A.4",
+      "resolution": "distinguished the two textual Hatcher references from cite-command count and restored the A.4 reference in reading order",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT028-MATH-P3-003",
+      "severity": "P3",
+      "paths": [
+        "qa/UNIT_028_SOURCE_AUDIT.md",
+        "source/id-ID/units/unit-028-lecture-028.md"
+      ],
+      "initial_observation": "the claim that cohomology distinguishes spheres of different dimensions preceded an explicit nonzero-coefficient choice, although the zero ring cannot detect the distinction",
+      "resolution": "distinguished validity of the sphere formula for arbitrary R from every detection argument, which now explicitly chooses R nonzero",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT028-TERM-P3-004",
+      "severity": "P3",
+      "paths": [
+        "qa/UNIT_028_SOURCE_AUDIT.md",
+        "source/id-ID/units/unit-028-lecture-028.md"
+      ],
+      "initial_observation": "sphere-referent prose used bola for S^n although the admitted lane convention distinguishes sfera (sphere) from bola (open ball)",
+      "resolution": "normalized every S^n prose referent in the Unit 28 reader and source audit to sfera without changing any genuine ball or disk meaning",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    },
+    {
+      "finding_id": "UNIT028-TERM-P3-005",
+      "severity": "P3",
+      "paths": [
+        "source/id-ID/units/unit-028-lecture-028.md"
+      ],
+      "initial_observation": "one sentence retained the recognized but nonpreferred funktor variant",
+      "resolution": "normalized it to the admitted preferred form fungtor under O012-TERM-0004",
+      "reader_affected": true,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    }
+  ],
+  "corrections": {
+    "nonzero_coefficient_for_detection_arguments": true,
+    "dimension_zero_case_closed": true,
+    "excision_arrow_contravariant": true,
+    "quotient_arrow_contravariant": true,
+    "quotient_theorem_proof_closed": true,
+    "empty_subspace_quotient_notation_repaired": true,
+    "join_repaired_to_wedge": true,
+    "infinite_wedge_hypotheses_closed": true,
+    "wedge_coefficient_restored": true,
+    "singular_to_simplicial_cochain_direction_repaired": true,
+    "hatcher_textual_references_preserved": true,
+    "sphere_term_normalized_to_sfera": true,
+    "preferred_functor_terminology": true
+  },
+  "proof_closure": {
+    "sphere_cohomology": true,
+    "euclidean_dimension_invariance": true,
+    "excision_direction": true,
+    "quotient_pair_isomorphism": true,
+    "infinite_wedge_cohomology": true,
+    "comparison_cochain_map": true,
+    "mastery_solution_triples": 6
+  },
+  "rendering": {
+    "pandoc": "pandoc 3.9.0.2",
+    "target": "HTML5 native MathML",
+    "exit_code": 0,
+    "warnings_fatal": true,
+    "temporary_html_bytes": 122657,
+    "mathml_nodes": 261,
+    "rendered_stable_ids": 47,
+    "missing_stable_ids": 0,
+    "runtime_fallback": false,
+    "temporary_artifact_removed": true
+  },
+  "checks": [
+    {
+      "check": "required_files_and_identities",
+      "status": "PASS",
+      "detail": "authority, corrected reader, final source audit, and final independent review match the recorded byte and SHA-256 identities"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:5924-6052 is exactly 129 LF lines and 8,257 bytes; line 6053 begins Lecture 29"
+    },
+    {
+      "check": "source_census_and_semantic_closure",
+      "status": "PASS",
+      "detail": "every source object, margin, displayed formula, cross-reference, and both textual Hatcher references are represented in reading order"
+    },
+    {
+      "check": "cohomology_contravariance",
+      "status": "PASS",
+      "detail": "excision j* and quotient q* arrows have the correct space-to-cohomology reversal; inverse arrows are labeled only as inverses"
+    },
+    {
+      "check": "quotient_excision_proof",
+      "status": "PASS",
+      "detail": "closedness, open neighborhood, two excisions, complement homeomorphism, U/A contraction, reduced LES, and naturality are all explicit"
+    },
+    {
+      "check": "infinite_wedge",
+      "status": "PASS",
+      "detail": "nonempty J and closed well-pointed factors justify the coproduct-pair quotient; product cochains and product cohomology are derived correctly"
+    },
+    {
+      "check": "singular_simplicial_comparison",
+      "status": "PASS",
+      "detail": "restriction runs from singular to Delta-set cochains and commutes with the differential by the characteristic-face identity"
+    },
+    {
+      "check": "language_and_terminology",
+      "status": "PASS",
+      "detail": "natural id-ID terms are consistent; sfera denotes S^n while bola remains reserved for open balls; fungtor is preferred over its recognized variant; wedge is not mistranslated as join; no residual source prose remains"
+    },
+    {
+      "check": "stable_ids_and_balanced_structure",
+      "status": "PASS",
+      "detail": "47 ID occurrences are unique; 39 fenced semantic objects are balanced and render to the same 47 IDs"
+    },
+    {
+      "check": "mastery_closure",
+      "status": "PASS",
+      "detail": "six exact exercise/hint/full-solution triples cover all major competencies in the unit"
+    },
+    {
+      "check": "rights_provenance_and_privacy",
+      "status": "PASS",
+      "detail": "Roberts attribution, CC BY 4.0, non-endorsement, human credit, and exact model provenance are present; no private marker appears"
+    },
+    {
+      "check": "pandoc_html5_mathml",
+      "status": "PASS",
+      "detail": "pandoc 3.9.0.2 exited 0 with warnings fatal; 261 MathML nodes and all 47 stable IDs rendered without runtime fallback"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

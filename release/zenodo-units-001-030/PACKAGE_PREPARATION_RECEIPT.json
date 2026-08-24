@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "receipt_id": "O012-ROBERTS-ID-UNITS-001-030-PACKAGE",
+  "date": "2026-08-24",
+  "status": "PASS_PREPARED_NOT_PUBLISHED",
+  "scope": "Roberts Indonesian reader Units 001-030 complete through Notes.tex:6368; composite algebraic-topology course remains partial pending the selected Fomberg bridge and original closure.",
+  "packager": {
+    "path": "scripts/package-release-units-001-030.py",
+    "bytes": 34258,
+    "sha256": "2d23a90e0696a0f39565158c8829ab93000efc55c42b50d64aa2ccf1fc90ad7b"
+  },
+  "frozen_input_ledger": {
+    "path": "release/zenodo-units-001-030/frozen-inputs.json",
+    "bytes": 13901,
+    "sha256": "e79f810d2106b95f4496471d0d3578e7f22571a579241e74d7f684add2f65fe6",
+    "entries": 77,
+    "unique_paths": 77,
+    "all_live_identities_reverified": true,
+    "final_boundary_paths": [
+      "output/html/units-001-030/index.html",
+      "output/pdf/topologi-aljabar-unit-001-030-id.pdf",
+      "qa/BACKEND_APPEND_ONLY_UNIT_030_CUMULATIVE_RECEIPT.json",
+      "qa/BACKEND_APPEND_ONLY_UNIT_030_CUMULATIVE_RECEIPT.md",
+      "qa/UNITS_001_030_BUILD_RECEIPT.json"
+    ]
+  },
+  "final_seals": {
+    "build_receipt": {
+      "path": "qa/UNITS_001_030_BUILD_RECEIPT.json",
+      "bytes": 12488,
+      "sha256": "15ce778ae5b85934424b3da22dcbec99f15df30746bb01630aaa4494cb3eace7",
+      "status": "PASS"
+    },
+    "backend_cumulative_receipt": {
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_030_CUMULATIVE_RECEIPT.json",
+      "bytes": 3976,
+      "sha256": "d4f7c7310ae22b8fc53d354b72beefad637ac353be418b9fbc56ddd8cd0a65f7",
+      "status": "PASS"
+    }
+  },
+  "deterministic_package_runs": {
+    "runs": 2,
+    "run_1_artifact_identity_set_sha256": "83919f0dcd3875e394578677d858f74e80c51489f23de355f53dfcbe8d4108a0",
+    "run_2_artifact_identity_set_sha256": "83919f0dcd3875e394578677d858f74e80c51489f23de355f53dfcbe8d4108a0",
+    "byte_identical": true,
+    "zip_entries_use_fixed_timestamp_and_canonical_order": true
+  },
+  "payload": {
+    "directory": "release/zenodo-units-001-030/artifacts",
+    "artifact_count": 9,
+    "total_bytes": 8060582,
+    "maximum_bytes": 500000000,
+    "within_size_cap": true,
+    "reader_first_filename": "00_TOPOLOGI_ALJABAR_ID_UNITS_001_030_READER.pdf",
+    "release_manifest": {
+      "path": "release/zenodo-units-001-030/artifacts/release-manifest.json",
+      "bytes": 21875,
+      "sha256": "b51fbeff69757c3a3acadda1524449dd1ddd833ecd7c462b3f369a29cf2a4500"
+    },
+    "checksums": {
+      "path": "release/zenodo-units-001-030/artifacts/SHA256SUMS",
+      "bytes": 805,
+      "sha256": "3953c2b4c31a165241bd298c996ed93443524ee2194925486b1b7aa07aae9b6e",
+      "verified": true
+    },
+    "files": [
+      {
+        "filename": "00_TOPOLOGI_ALJABAR_ID_UNITS_001_030_READER.pdf",
+        "bytes": 2257988,
+        "sha256": "b9d37776c64541123345c7b28fd26df161b878e8c105c16670455fd532dc08a4"
+      },
+      {
+        "filename": "LICENSE.md",
+        "bytes": 18696,
+        "sha256": "2ecfbc56ead071b6a93908f50b59c4186db6d139c8b7d0c56156bb0ad5fad3f5"
+      },
+      {
+        "filename": "README_RELEASE.md",
+        "bytes": 2987,
+        "sha256": "f09a744f48830014e76788d849f9152b171ce3f118a6a9e1c86557941e96b00f"
+      },
+      {
+        "filename": "RELEASE_RIGHTS.md",
+        "bytes": 2325,
+        "sha256": "7d5b3b1d47ceeeb8be2c13fdceb48be21ed14c3ba5e8036d69e5fa679479bae0"
+      },
+      {
+        "filename": "SHA256SUMS",
+        "bytes": 805,
+        "sha256": "3953c2b4c31a165241bd298c996ed93443524ee2194925486b1b7aa07aae9b6e"
+      },
+      {
+        "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_030_EDITABLE_SOURCE_BACKEND.zip",
+        "bytes": 845589,
+        "sha256": "89ea4e1d8f80196a1e284f7ef42c64c69cd84692be0adbb2e94b94d590a587e2"
+      },
+      {
+        "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_030_QA_PROVENANCE.zip",
+        "bytes": 48526,
+        "sha256": "a186e8117fa9dae65556d78516a7b253ffacc097b8df734509a3b5c445707561"
+      },
+      {
+        "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_030_READER.html",
+        "bytes": 4861791,
+        "sha256": "ed9da5653b3eacf7418d6e08760fcd2ecff4d75799c47f08689b940798099891"
+      },
+      {
+        "filename": "release-manifest.json",
+        "bytes": 21875,
+        "sha256": "b51fbeff69757c3a3acadda1524449dd1ddd833ecd7c462b3f369a29cf2a4500"
+      }
+    ]
+  },
+  "archives": [
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_030_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 845589,
+      "sha256": "89ea4e1d8f80196a1e284f7ef42c64c69cd84692be0adbb2e94b94d590a587e2",
+      "entry_count": 54,
+      "uncompressed_bytes": 6683007,
+      "crc": "PASS",
+      "inventory_order": "PASS",
+      "entry_sizes_and_sha256": "PASS",
+      "byte_deterministic_rebuild": "PASS"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_030_QA_PROVENANCE.zip",
+      "bytes": 48526,
+      "sha256": "a186e8117fa9dae65556d78516a7b253ffacc097b8df734509a3b5c445707561",
+      "entry_count": 18,
+      "uncompressed_bytes": 109223,
+      "crc": "PASS",
+      "inventory_order": "PASS",
+      "entry_sizes_and_sha256": "PASS",
+      "byte_deterministic_rebuild": "PASS"
+    }
+  ],
+  "independent_validation": {
+    "json_documents_parsed": 12,
+    "csv_documents_parsed": 5,
+    "csv_data_rows_parsed": 395,
+    "jsonl_records_parsed": 4761,
+    "payload_inventory": "PASS",
+    "manifest_bindings": "PASS",
+    "checksum_bindings": "PASS",
+    "privacy_scan": "PASS",
+    "rights_and_attribution": "PASS",
+    "scope_truth": "PASS",
+    "reader_first_order": "PASS",
+    "pdf_pages": 351,
+    "pdf_title": "Topologi Aljabar - Unit 1-30",
+    "pdf_local_path_scan": "PASS",
+    "pdf_local_account_name_scan": "PASS",
+    "pdf_secret_shape_scan": "PASS",
+    "pdf_author_credit": "PASS",
+    "pdf_model_provenance": "PASS",
+    "pdf_license_notice": "PASS"
+  },
+  "license": "CC BY 4.0",
+  "author_credit_preserved": true,
+  "nonendorsement_preserved": true,
+  "publication_lineage": "new version in existing concept 10.5281/zenodo.22061489",
+  "network_actions": 0,
+  "credentials_used": false,
+  "published": false,
+  "ready_for_publication_transaction": true
+}
