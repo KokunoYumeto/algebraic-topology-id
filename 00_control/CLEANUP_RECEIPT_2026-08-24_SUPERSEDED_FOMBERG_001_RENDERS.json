@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS_ARCHIVED_VERIFIED_AND_EXACT_ORIGINALS_DELETED",
+  "date": "2026-08-24",
+  "scope": "task-local superseded Fomberg Unit 001 visual-render intermediates only",
+  "archive": {
+    "path": "old stuff/algebraic-topology-id_superseded-fomberg-001-renders_01a01f48-fcc8-7b22-a40b-17cbbb7ac45e_20260824-234537.zip",
+    "bytes": 10341554,
+    "sha256": "150d4c9d81078dad5acfe675ce196631f25cc90d943b371c84555ccd0194b297",
+    "file_entries": 29,
+    "verified_uncompressed_bytes": 10932554,
+    "verification": "ZIP opened successfully; every expected entry name, byte count, and SHA-256 matched its loose source before deletion"
+  },
+  "archived_and_deleted_roots": [
+    "tmp/pdfs/roberts-001-030-fomberg-001-repaired",
+    "tmp/pdfs/roberts-001-030-fomberg-001-visual"
+  ],
+  "deletion_verification": "both exact roots absent after successful archive verification",
+  "deliberately_retained": [
+    "qa/renders/fomberg-unit-002-final",
+    "tmp/pdfs/terminology-qa",
+    "all authority/source inputs",
+    "all current readers and backend files",
+    "all release lineages and publication receipts",
+    "all durable controls and QA evidence"
+  ],
+  "safety": {
+    "broad_scan_used": false,
+    "git_used": false,
+    "other_task_files_touched": false,
+    "credential_files_touched": false
+  }
+}

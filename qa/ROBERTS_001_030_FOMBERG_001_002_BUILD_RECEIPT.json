@@ -1,0 +1,201 @@
+{
+  "artifacts": {
+    "html": {
+      "bytes": 5254038,
+      "path": "output/html/roberts-001-030-fomberg-001-002/index.html",
+      "sha256": "1f7618003e3ff273a4f1e2d97b5a81fd320f76640c475cae845ed38793fbeccd"
+    },
+    "manifest": {
+      "all_entries_match_live_artifact_bytes_and_hashes": true,
+      "bytes": 286,
+      "entries": 2,
+      "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_002.csv",
+      "sha256": "f8d0d5444f443b731519f91e0eb51baee40d7954b9cf6560b8df391113dc45c2"
+    },
+    "pdf": {
+      "all_fonts_embedded_subset_tounicode": true,
+      "bytes": 2399760,
+      "encrypted": false,
+      "fonts": 27,
+      "forms": false,
+      "javascript": false,
+      "page_rotation": 0,
+      "page_size": "A4",
+      "page_size_points": "595.276x841.890",
+      "pages": 376,
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-002-id.pdf",
+      "sha256": "7dc8ac1db0b03ed1d9d94fe2c3491b631d3fb8bcec869997889d67d70236ef82",
+      "suspects": false,
+      "tagged": false,
+      "title": "Topologi Aljabar - Roberts 30/30 dan Fomberg 1.1-1.4"
+    }
+  },
+  "authorities": {
+    "fomberg": {
+      "commit": "563194fae879178b9a6871b249513bfc27968975",
+      "license": "CC BY-SA 4.0",
+      "license_file_bytes": 20140,
+      "license_file_sha256": "0b7fc2608b6d990314e908569407a6058b4a29175167c6d91ca0070c946661be",
+      "next_source_line": 1291,
+      "repository": "https://git.sr.ht/~yp/math-notes",
+      "selected_source_span": "31-1290",
+      "selected_span_bytes": 44799,
+      "selected_span_lines": 1260,
+      "selected_span_sha256": "221ce40c44cefa4e9aa3a0c3f1ae1f806036a6f7f9708a59f5db59c12ad51c55",
+      "source_bytes": 223886,
+      "source_file": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "source_sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483",
+      "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b"
+    },
+    "roberts": {
+      "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+      "license": "CC BY 4.0",
+      "license_file_bytes": 18696,
+      "license_file_sha256": "2ecfbc56ead071b6a93908f50b59c4186db6d139c8b7d0c56156bb0ad5fad3f5",
+      "repository": "DavidMichaelRoberts/AlgebraicTopology2019",
+      "source_bytes": 331447,
+      "source_file": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+      "source_sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+      "tree": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5"
+    }
+  },
+  "backend_boundary": {
+    "bundle_sha256": "83d98f1b271c5e62334a072354f1be1c4a1535ed26c8a403223e89773bb1eba1",
+    "bytes": 6040123,
+    "next_source_line": 1291,
+    "records": 5342,
+    "receipt": {
+      "bytes": 5125,
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_002_CUMULATIVE_RECEIPT.json",
+      "sha256": "6c821ced04e7ba57f396089939994344522b26817f43c195d1fc8c4a365dbcc1"
+    }
+  },
+  "browser_checks": {
+    "desktop": {
+      "body_left_margin_px": 56.4444,
+      "body_right_margin_px": 56.4444,
+      "body_width_px": 1152,
+      "document_client_width_px": 1265,
+      "document_scroll_width_px": 1265,
+      "viewport": "1280x720"
+    },
+    "live_desktop_geometry_pass_claimed": true,
+    "live_mobile_geometry_pass_claimed": true,
+    "mobile": {
+      "document_client_width_px": 360,
+      "document_scroll_width_px": 360,
+      "exposed_overflow_elements": 0,
+      "locally_contained_outside_descendants": 2832,
+      "local_horizontal_scrollers": 345,
+      "page_level_horizontal_overflow": false,
+      "viewport": "375x812"
+    },
+    "runtime_warning_or_error_logs": 0,
+    "status": "PASS",
+    "surface": "exact task-local HTML in Codex in-app browser",
+    "temporary_viewport_reset": true,
+    "test_tab_closed": true
+  },
+  "component_numbering": {
+    "course_route_unit_ids": ["D60-R08", "D60-R09"],
+    "fomberg_component_ids": ["O012-FOM-001", "O012-FOM-002"],
+    "fomberg_is_not_roberts_units_031_032": true,
+    "roberts_edition_units": "001-030"
+  },
+  "date": "2026-08-24",
+  "html_checks": {
+    "dom_ids": 1849,
+    "duplicate_dom_ids": 0,
+    "fomberg_stable_ids": 182,
+    "fragment_links": 368,
+    "lang": "id-ID",
+    "mathml_nodes": 12720,
+    "missing_fomberg_stable_ids": 0,
+    "raw_tex_math_fallbacks": 0,
+    "runtime_external_asset_references": 0,
+    "self_contained": true,
+    "semantic_figures": 89,
+    "status": "PASS",
+    "title": "Topologi Aljabar - Roberts 30/30 dan Fomberg 1.1-1.4",
+    "unique_dom_ids": 1849,
+    "unresolved_fragment_links": 0
+  },
+  "limitations": [
+    "The composite course remains partial after Fomberg Sections 1.1-1.4.",
+    "The PDF is not structurally tagged; the self-contained HTML is the primary accessible and reflowable surface.",
+    "No formal accessibility-tree conformance claim is made."
+  ],
+  "qa_id": "O012-RBT-001-030-FOM-001-002-COMPOSITE-BUILD",
+  "reproducibility": {
+    "build_scratch_removed": true,
+    "frozen_inputs_fail_closed": true,
+    "html_build_a_sha256": "1f7618003e3ff273a4f1e2d97b5a81fd320f76640c475cae845ed38793fbeccd",
+    "html_build_b_sha256": "1f7618003e3ff273a4f1e2d97b5a81fd320f76640c475cae845ed38793fbeccd",
+    "html_clean_builds": 4,
+    "html_two_builds_byte_identical": true,
+    "pdf_build_a_sha256": "7dc8ac1db0b03ed1d9d94fe2c3491b631d3fb8bcec869997889d67d70236ef82",
+    "pdf_build_b_sha256": "7dc8ac1db0b03ed1d9d94fe2c3491b631d3fb8bcec869997889d67d70236ef82",
+    "pdf_clean_builds": 4,
+    "pdf_two_builds_byte_identical": true,
+    "protected_prior_composite_unchanged": true,
+    "reader_and_backend_unchanged": true
+  },
+  "responsive_static_checks": {
+    "body_overflow_wrap": "anywhere",
+    "centered_desktop_rule": "body width min(100%, 72rem), max-width 72rem, margin-inline auto",
+    "display_mathml_local_horizontal_scrolling": true,
+    "global_border_box": true,
+    "mobile_rule": "below 700px body width 100%, zero margin, bounded side padding",
+    "status": "PASS",
+    "tables_local_horizontal_scrolling": true
+  },
+  "rights_and_provenance": {
+    "changes_disclosed": true,
+    "component_attribution_preserved": true,
+    "fomberg_component_license": "CC BY-SA 4.0",
+    "html_primary_accessible_surface": true,
+    "independent_edition_disclosed": true,
+    "integrated_reader_license": "CC BY-SA 4.0",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "non_endorsement_disclosed": true,
+    "pdf_untagged_limitation_disclosed": true,
+    "roberts_component_license": "CC BY 4.0"
+  },
+  "schema_version": "1.0",
+  "scope": "Roberts 30/30 complete; Fomberg Sections 1.1-1.4 through source line 1290; composite course partial",
+  "status": "PASS",
+  "toolchain": {
+    "builder": "scripts/build-roberts-001-030-fomberg-001-002.ps1",
+    "builder_bytes": 32732,
+    "builder_sha256": "2f3083f6c77cf8c6213347c555c06e738b7094438047a888994052ced9848310",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_engine": "MiKTeX pdfTeX-1.40.29",
+    "source_date_epoch": 1787529600
+  },
+  "visual_checks": {
+    "broken_or_unreadable_glyphs": 0,
+    "clipping": 0,
+    "inspection_detail": "contact sheet plus original-resolution representative pages",
+    "inspected_pdf_pages": "1,362-376",
+    "margin_collisions": 0,
+    "new_fomberg_pdf_pages": "363-376",
+    "orphaned_headings": 0,
+    "overlap": 0,
+    "render_count": 16,
+    "render_dpi": 120,
+    "render_inventory": {
+      "bytes": 2662,
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_002_RENDER_INVENTORY.csv",
+      "sha256": "2ba582ff75564e04c4cf83776dda0cd457b42feb7ea516fb21b1e6e4b7215bdf"
+    },
+    "render_total_bytes": 3254055,
+    "status": "PASS",
+    "unreadable_math": 0,
+    "visual_receipt": {
+      "bytes": 2665,
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_002_VISUAL_QA.md",
+      "sha256": "3b829048beb88b30815fa68d9c03e77e2a86bfb107dd13c0e311d6ff2c10b7ae"
+    }
+  }
+}
