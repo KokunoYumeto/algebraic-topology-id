@@ -98,14 +98,21 @@
     "build_receipt_sha256": "15ce778ae5b85934424b3da22dcbec99f15df30746bb01630aaa4494cb3eace7"
   },
   "publication_state": {
-    "github_public_through_unit": 25,
-    "github_current_commit": "24aee490d52d44e5b56d6fc4a9b337dcf3573ae5",
-    "github_units_001_030": "verified_local_release_ready_for_narrow_push_and_pages_readback",
-    "zenodo_public_through_unit": 24,
-    "zenodo_current_record_id": 22074233,
-    "zenodo_current_doi": "10.5281/zenodo.22074233",
+    "github_public_through_unit": 30,
+    "github_content_commit": "dd46acdeb222a4cb4b8879af05e7c929111372ff",
+    "github_content_tree": "465e6d7daf67f2bdadf3474d120deb3d834e82ae",
+    "github_pages_run_id": 32699844696,
+    "github_pages_job_id": 97348985094,
+    "github_units_001_030": "pushed_deployed_and_anonymously_byte_verified",
+    "github_publication_receipt": "00_control/GITHUB_PUBLICATION_RECEIPT_UNITS_001_030.json",
+    "github_publication_receipt_sha256": "d9cc893df5206fe82b3ec70ce74e702320a8016597e24e1ab7ccd316be4e2e67",
+    "zenodo_public_through_unit": 30,
+    "zenodo_current_record_id": 22077025,
+    "zenodo_current_doi": "10.5281/zenodo.22077025",
     "zenodo_concept_doi": "10.5281/zenodo.22061489",
-    "zenodo_units_001_030": "prepared_as_exactly_one_new_version_in_existing_concept; publish_and_anonymously_read_back",
+    "zenodo_units_001_030": "published_as_exactly_one_new_version_in_existing_concept_and_twice_anonymously_byte_verified",
+    "zenodo_publication_receipt": "release/zenodo-units-001-030/publication-receipt.json",
+    "zenodo_publication_receipt_sha256": "30f8c191eaf6a75cf5a96a0d301357959a2f53089a2f30af6b0ad65cdd025187",
     "figshare": "blocked_by_InactiveAccount; no_duplicate_item"
   },
   "fomberg_next": {
@@ -126,7 +133,7 @@
     "build_gate_receipt_sha256": "933d1a0158d3c1c0aecd94483b1e3dcd1a7f40cac761f25d19d272eb439d9b01",
     "problem_bank_selected": false
   },
-  "next_action": "publish_and_anonymously_verify_the_roberts_30_of_30_boundary_on_existing_github_pages_and_zenodo_lineages; then_translate_fomberg_lines_31_614_contiguously_with_new_component_ids_rights_and_backend",
+  "next_action": "translate_fomberg_lines_31_614_contiguously_as_the_first_cc_by_sa_4_0_component_unit_with_new_component_ids_route_mapping_proof_census_mastery_and_append_only_backend",
   "terminology_qa": {
     "status": "PASS",
     "fallback_doi": "10.22146/jmt.56529",

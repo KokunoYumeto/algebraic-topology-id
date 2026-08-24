@@ -44,10 +44,12 @@ The self-contained HTML is 4,861,791 bytes/SHA-256
 the deterministic PDF is 2,257,988 bytes/SHA-256
 `b9d37776c64541123345c7b28fd26df161b878e8c105c16670455fd532dc08a4`,
 351 A4 pages. Build, browser, visual, accessibility, rights, privacy, and
-backend gates pass. Publish this Roberts-complete/composite-partial boundary to
-the existing GitHub and Zenodo lineages, anonymously read it back, then begin
-Fomberg `algebraic_topology.tex:31–4185` contiguously. The Fomberg build gate is
-already closed at 55/55 PASS. Figshare remains blocked by the recorded
+backend gates pass. This Roberts-complete/composite-partial boundary is public
+and anonymously byte-exact on GitHub/Pages at content commit
+`dd46acdeb222a4cb4b8879af05e7c929111372ff` and on Zenodo at DOI
+`10.5281/zenodo.22077025` within concept `10.5281/zenodo.22061489`. Begin
+Fomberg `algebraic_topology.tex:31–4185` contiguously at line 31. Its build gate
+is closed at 55/55 PASS. Figshare remains blocked by the recorded
 `InactiveAccount` response and must not trigger a duplicate or retry loop.
 
 ## Backend, QA, and publication gates

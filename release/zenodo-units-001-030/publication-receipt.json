@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "status": "PUBLISHED_AND_ANONYMOUSLY_VERIFIED",
+  "release_id": "o012-roberts-id-units-001-030-v0.30.0",
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–30",
+  "version": "0.30.0",
+  "license": "cc-by-4.0",
+  "roberts_complete": true,
+  "composite_course_complete": false,
+  "scope": "Roberts Notes.tex lines 134-6368, lectures 1-30 of 30 through end{document}; Fomberg bridge and original proof/mastery/lab/capstone course closure pending",
+  "record_id": 22077025,
+  "doi": "10.5281/zenodo.22077025",
+  "concept_doi": "10.5281/zenodo.22061489",
+  "public_record_url": "https://zenodo.org/records/22077025",
+  "metadata_sha256": "aa62af9be153ca3d6ac138ed57a32a799d5729ed4bdcb56462ea3d22832d9fb3",
+  "manifest_sha256": "b51fbeff69757c3a3acadda1524449dd1ddd833ecd7c462b3f369a29cf2a4500",
+  "files": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_UNITS_001_030_READER.pdf",
+      "status": 200,
+      "bytes": 2257988,
+      "sha256": "b9d37776c64541123345c7b28fd26df161b878e8c105c16670455fd532dc08a4",
+      "url": "https://zenodo.org/api/records/22077025/files/00_TOPOLOGI_ALJABAR_ID_UNITS_001_030_READER.pdf/content"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_030_READER.html",
+      "status": 200,
+      "bytes": 4861791,
+      "sha256": "ed9da5653b3eacf7418d6e08760fcd2ecff4d75799c47f08689b940798099891",
+      "url": "https://zenodo.org/api/records/22077025/files/TOPOLOGI_ALJABAR_ID_UNITS_001_030_READER.html/content"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_030_EDITABLE_SOURCE_BACKEND.zip",
+      "status": 200,
+      "bytes": 845589,
+      "sha256": "89ea4e1d8f80196a1e284f7ef42c64c69cd84692be0adbb2e94b94d590a587e2",
+      "url": "https://zenodo.org/api/records/22077025/files/TOPOLOGI_ALJABAR_ID_UNITS_001_030_EDITABLE_SOURCE_BACKEND.zip/content"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_030_QA_PROVENANCE.zip",
+      "status": 200,
+      "bytes": 48526,
+      "sha256": "a186e8117fa9dae65556d78516a7b253ffacc097b8df734509a3b5c445707561",
+      "url": "https://zenodo.org/api/records/22077025/files/TOPOLOGI_ALJABAR_ID_UNITS_001_030_QA_PROVENANCE.zip/content"
+    },
+    {
+      "filename": "LICENSE.md",
+      "status": 200,
+      "bytes": 18696,
+      "sha256": "2ecfbc56ead071b6a93908f50b59c4186db6d139c8b7d0c56156bb0ad5fad3f5",
+      "url": "https://zenodo.org/api/records/22077025/files/LICENSE.md/content"
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "status": 200,
+      "bytes": 2987,
+      "sha256": "f09a744f48830014e76788d849f9152b171ce3f118a6a9e1c86557941e96b00f",
+      "url": "https://zenodo.org/api/records/22077025/files/README_RELEASE.md/content"
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "status": 200,
+      "bytes": 2325,
+      "sha256": "7d5b3b1d47ceeeb8be2c13fdceb48be21ed14c3ba5e8036d69e5fa679479bae0",
+      "url": "https://zenodo.org/api/records/22077025/files/RELEASE_RIGHTS.md/content"
+    },
+    {
+      "filename": "release-manifest.json",
+      "status": 200,
+      "bytes": 21875,
+      "sha256": "b51fbeff69757c3a3acadda1524449dd1ddd833ecd7c462b3f369a29cf2a4500",
+      "url": "https://zenodo.org/api/records/22077025/files/release-manifest.json/content"
+    },
+    {
+      "filename": "SHA256SUMS",
+      "status": 200,
+      "bytes": 805,
+      "sha256": "3953c2b4c31a165241bd298c996ed93443524ee2194925486b1b7aa07aae9b6e",
+      "url": "https://zenodo.org/api/records/22077025/files/SHA256SUMS/content"
+    }
+  ],
+  "verification": {
+    "exact_public_inventory": true,
+    "reader_first_by_filename": true,
+    "pdf_uploaded_first": true,
+    "anonymous_byte_readback": true,
+    "all_sha256_match_local": true,
+    "credentials_recorded": false,
+    "user_personal_name_recorded": false
+  },
+  "provenance": "Published by Codex at the user's direction; production note: OpenAI Codex gpt-5.6-sol, Ultra; source author and human direction remain credited.",
+  "non_endorsement": "Independent Indonesian edition; no source-author or institutional endorsement is implied."
+}

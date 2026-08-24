@@ -377,9 +377,14 @@ def assert_draft_files(draft: dict, local: dict) -> None:
         if remote_size != local_row["bytes"]:
             raise RuntimeError(f"Zenodo draft size mismatch: {name}")
         checksum = str(remote.get("checksum", ""))
-        if ":" not in checksum:
-            raise RuntimeError(f"Zenodo draft has no typed checksum: {name}")
-        algorithm, expected_digest = checksum.lower().split(":", 1)
+        if base.re.fullmatch(r"[0-9a-fA-F]{32}", checksum):
+            # Legacy deposition responses expose a bare MD5; public record
+            # responses may expose the same value as ``md5:<digest>``.
+            algorithm, expected_digest = "md5", checksum.lower()
+        elif ":" in checksum:
+            algorithm, expected_digest = checksum.lower().split(":", 1)
+        else:
+            raise RuntimeError(f"Zenodo draft has no recognized checksum: {name}")
         if algorithm not in {"md5", "sha256"}:
             raise RuntimeError(f"unsupported Zenodo draft checksum type: {algorithm}")
         local_path = base.ARTIFACTS / name
