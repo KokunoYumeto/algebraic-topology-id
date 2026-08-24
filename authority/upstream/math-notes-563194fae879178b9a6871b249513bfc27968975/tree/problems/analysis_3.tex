@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2025}
+\def\nterm {Winter}
+\def\nlecturer {}
+\def\ncourse {Analysis 3 - Problems}
+
+\input{../header.tex}
+
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Topology in Euclidean spaces}
+\begin{exercise}
+  Prove that a continuous function $f\colon A\to B$ has 
+  a maximum in a compact space
+\end{exercise}
+\begin{solution}
+  By the completeness axiom for the real numbers we know that the set
+  $f(A)$ has a supremum which we will denote $S$. By the definition
+  of the supremum it is possible to construct a sequence that converges
+  to it which we shall denote $f(x^n)$. We don't know whether $x^n$
+  converges or not but we know it has a subsequence that converges so:
+  \[
+    \lim_{k\to\infty}{x^{n_k}} = x \quad \text{and} \quad 
+    \lim_{k\to\infty}{f(x^{n_k})} = S
+  \]
+  Since $f$ is close we get $x\in A$ and since it is continuous $f(x) = S$
+  which shows that it is continuous and also has a maximum.
+\end{solution}
+
+\begin{exercise}
+  Prove that a set $E$ is closed if and only if it's complement
+  $E^c$ is open
+\end{exercise}
+\begin{solution}
+  First suppose that $E$ is closed, and $E^c$ is not open. Then exists
+  $x\notin E$ such that for all $r > 0$ we get $B_r(x) \cap E \neq 
+  \emptyset$ which means we can construct a sequence in $E$ that converges
+  to $x$ but $x\notin E$ in contradiction to the assumption that $E$ is 
+  close.
+
+  Suppose next that $E^c$ is open and $E$ is not closed, then exists a sequence
+  $(x^n)_{n=1}^{\infty}$ that converges to some $x \in E^c$ which means
+  that for every $r > 0$ that $B_r(x) \cap E \neq \emptyset$ in 
+  contradiction to $E^c$ being open.
+\end{solution}
+
+\end{document}

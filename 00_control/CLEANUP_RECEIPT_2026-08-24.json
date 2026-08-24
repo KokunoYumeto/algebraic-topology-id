@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "cleanup_id": "O012-TASK-LOCAL-CLEANUP-2026-08-24T0630-CEST",
+  "status": "PASS",
+  "scope": "Only disposable artifacts created inside the algebraic-topology-id lane",
+  "archive": {
+    "path": "<LOCAL_ACCOUNT_ROOT>/Documents/interlanguage/old stuff/algebraic-topology-id_disposable-render-readback-caches_20260824T0630_CEST.zip",
+    "bytes": 135697838,
+    "sha256": "ddd9d608b630bea5596c53935ee93f2f100018fca910cac15d1697fe8e5b7906",
+    "entries": 523,
+    "source_file_entries": 522,
+    "manifest_entry": "_ARCHIVE_MANIFEST.json",
+    "uncompressed_source_bytes": 144812813,
+    "net_content_bytes_reduced": 9114975,
+    "no_overwrite": true
+  },
+  "verification": {
+    "zip_reopened": true,
+    "manifest_parsed": true,
+    "manifest_file_count_matched": true,
+    "manifest_byte_total_matched": true,
+    "every_entry_path_size_and_sha256_matched": true,
+    "verification_failures": 0,
+    "every_deleted_target_confirmed_absent": true
+  },
+  "archived_and_deleted_targets": [
+    {"path": "--", "kind": "file", "files": 1, "bytes": 108215},
+    {"path": "scripts/__pycache__", "kind": "directory", "files": 22, "bytes": 534432},
+    {"path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/__pycache__", "kind": "directory", "files": 1, "bytes": 9693},
+    {"path": "tmp/pdfs/unit-002-smoke", "kind": "directory", "files": 3, "bytes": 849962},
+    {"path": "tmp/pdfs/units-001-002-render", "kind": "directory", "files": 21, "bytes": 8768958},
+    {"path": "tmp/pdfs/units-001-005-root-review", "kind": "directory", "files": 48, "bytes": 12965048},
+    {"path": "tmp/pdfs/units-001-013-visual", "kind": "directory", "files": 150, "bytes": 46989382},
+    {"path": "tmp/pdfs/units-001-019-visual", "kind": "directory", "files": 227, "bytes": 67499947},
+    {"path": "tmp/pdfs/units-001-020-visual", "kind": "directory", "files": 7, "bytes": 1549058},
+    {"path": "tmp/pdfs/units-001-027-visual", "kind": "directory", "files": 15, "bytes": 3760885},
+    {"path": "tmp/pdfs/units-001-019-text.txt", "kind": "file", "files": 1, "bytes": 644062},
+    {"path": "tmp/pdfs/units-001-020-text.txt", "kind": "file", "files": 1, "bytes": 696944},
+    {"path": "tmp/terminology-qa", "kind": "directory", "files": 9, "bytes": 137383},
+    {"path": "tmp/unit20-readback", "kind": "directory", "files": 10, "bytes": 126508},
+    {"path": "tmp/qa-unit-020-run-after-ledger.txt", "kind": "file", "files": 1, "bytes": 3824},
+    {"path": "tmp/qa-unit-020-run-final.txt", "kind": "file", "files": 1, "bytes": 3824},
+    {"path": "tmp/qa-unit-020-run.txt", "kind": "file", "files": 1, "bytes": 3824},
+    {"path": "tmp/unit20-pandoc-mathjax.html", "kind": "file", "files": 1, "bytes": 70064},
+    {"path": "tmp/unit20-pandoc.err", "kind": "file", "files": 1, "bytes": 0},
+    {"path": "tmp/unit20-parse.html", "kind": "file", "files": 1, "bytes": 90800}
+  ],
+  "deliberately_retained": [
+    "tmp/pdfs/terminology-qa",
+    "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/archive",
+    "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/official",
+    "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree",
+    "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/build-overlay",
+    "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/build-baseline",
+    "all canonical sources and translated readers",
+    "all backend records and manifests",
+    "all authority, rights, QA, build, and publication receipts",
+    "all release artifacts and durable controls"
+  ],
+  "safety": {
+    "broad_scan_used": false,
+    "git_command_used": false,
+    "shared_or_other_lane_files_touched": false,
+    "credential_bearing_files_touched": false,
+    "deletion_occurred_only_after_archive_verification": true
+  }
+}

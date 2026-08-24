@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS_ARCHIVED_VERIFIED_DELETED",
+  "timestamp_local": "2026-08-24T16:30:00+02:00",
+  "scope": "Four task-local Python bytecode files recreated by bounded validation/prepublication auditing after the earlier cleanup.",
+  "source": {
+    "path": "scripts/__pycache__",
+    "file_count": 4,
+    "bytes": 191380
+  },
+  "archive": {
+    "path": "<LOCAL_ACCOUNT_ROOT>\\Documents\\interlanguage\\old stuff\\algebraic-topology-id_recreated-python-cache_final-prepublication_20260824T1630_CEST.zip",
+    "bytes": 92644,
+    "sha256": "a1e6d08a0fd73132dd0eea832bb77ee6f849a9b2045b2c59bd708063983d15aa",
+    "entry_count": 4,
+    "verification": "ZIP reopened; every entry name, uncompressed byte count, and SHA-256 matched before deletion."
+  },
+  "entries": [
+    {"name": "extend-backend-fomberg-unit-001.cpython-312.pyc", "bytes": 13855, "sha256": "c15421b29c5d2e09780df47bfaae746c5d95478bcd42b5128e292c25a9c3591b"},
+    {"name": "fomberg-unit-001-common.cpython-312.pyc", "bytes": 46616, "sha256": "fb899094e6cbd6660d99f2f03869e8b5c691818a2abf19da52ab704d2acd1fb1"},
+    {"name": "package-release-roberts-001-030-fomberg-001.cpython-313.pyc", "bytes": 52919, "sha256": "60105217f20a1633a4914a14825ac0b9aaa132fa946b722e8135b5c19aeb2aa6"},
+    {"name": "validate-backend.cpython-312.pyc", "bytes": 77990, "sha256": "cb1c2c92b1d3dc102f21827f954b3145cdb656277b671577a6e6aa5a120a1afd"}
+  ],
+  "deleted": true,
+  "preserved": "All canonical source, readers, backend, controls, authority witnesses, QA evidence, release payloads, and credentials."
+}

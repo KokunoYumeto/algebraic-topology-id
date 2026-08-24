@@ -5,307 +5,307 @@ entering extended mode
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
 
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tufte-latex\tufte-hand
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/tufte-latex\tufte-hand
 out.cls
 Document Class: tufte-handout 2015/06/21 v3.5.2 Tufte-handout class
 
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tufte-latex\tufte-comm
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/tufte-latex\tufte-comm
 on.def
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyval.tex))
-)) (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/xifthen\xifthen.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/ifmtarg\ifmtarg.sty))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hardwrap\hardwrap.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.
-sty (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\keyval.tex))
+)) (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/xifthen\xifthen.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/ifmtarg\ifmtarg.sty))
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hardwrap\hardwrap.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/ifplatform\ifplatform.
+sty (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc.sty
 )
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmd
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmd
 s.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.
-sty) (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.
+sty) (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 )
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty)
 )
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\catchfile.
 sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.st
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.st
 y))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifluatex.sty)
 
 Package ifplatform Warning: 
     shell escape is disabled, so I can only detect \ifwindows.
 
-) (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty)
-) (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+) (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty)
+) (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty)
- (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo))
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty)
+ (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty
 )
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.st
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.st
 y)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefin
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefin
 ekeys.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.
 sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty)
 
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\getti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\getti
 tlestring.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.st
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.st
 y)))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty)
 
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.
 sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcal
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcal
 c.sty)))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfi
 lecheck.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\unique
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\unique
 counter.sty)))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty)
- (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty)
+ (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
 )
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.
 sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/paralist\paralist.sty)
- (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/textcase\textcase.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/paralist\paralist.sty)
+ (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/textcase\textcase.sty
 )
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/microtype\letterspace.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/microtype\letterspace.
 sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
- (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty)
+ (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
 )
 
 Package xcolor Warning: Package option `usenames' is obsolete and ignored on in
 put line 265.
 
 
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.de
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.de
 f)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx
 ))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def)
- (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\svgnam.def)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/natbib\bibentry.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvipsnam.def)
+ (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\svgnam.def)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/natbib\bibentry.sty)
 No file Notes.bbl.
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/sauerj\optparams.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathpazo.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/bera\beramono.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pplj.fd))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty)))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/sauerj\optparams.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\mathpazo.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\helvet.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/bera\beramono.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pplj.fd))
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty)))
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
 For additional information on amsmath, use the `?' option.
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\stmaryrd.sty)
- (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty)
-) (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
- (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\stmaryrd.sty)
+ (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty)
+) (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty)
+ (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz
 .sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
 
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.s
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.s
 ty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
 l-common.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfuti
 l-latex.def)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs
 .code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex
 )))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore
 .sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.
 cfg)))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys
 .sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
 ys.code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
 s.code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
 slibraryfiltered.code.tex))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.
 cfg)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
 ys-pdftex.def
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
 ys-common-pdf.def)))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
 yssoftpath.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfs
 ysprotocol.code.tex))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 re.code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
 e.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil
 .code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpars
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathpars
 er.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
 tions.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
 tions.basic.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
 tions.trigonometric.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
 tions.random.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
 tions.comparison.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
 tions.base.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
 tions.round.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
 tions.misc.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunc
 tions.integerarithmetics.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc
 .code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloa
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloa
 t.code.tex))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code
 .tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 repoints.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 repathconstruct.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 repathusage.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 rescopes.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 regraphicstate.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 retransformations.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 requick.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 reobjects.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 repathprocessing.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 rearrows.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 reshade.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 reimage.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 reexternal.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 relayers.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 retransparency.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 repatterns.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfco
 rerdf.code.tex)))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
 eshapes.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
 eplot.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
 omp-version-0-65.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfc
 omp-version-1-18.sty))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.s
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.s
 ty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.
 sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkey
 s.code.tex))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.cod
 e.tex))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor
 .code.tex))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz\tikz.code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
 raryplothandlers.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
 ematrix.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibrarytopaths.code.tex)))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibrarydecorations.markings.code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibrarydecorations.code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodul
 edecorations.code.tex))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decora
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/decora
 tions\pgflibrarydecorations.markings.code.tex))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibraryintersections.code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
 raryintersections.code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
 raryfpu.code.tex)))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hobby\tikzlibraryhobby
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hobby\tikzlibraryhobby
 .code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hobby\pgflibraryhobby.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hobby\pgflibraryhobby.
 code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hobby\hobby.code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/hobby\pml3array.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hobby\hobby.code.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/hobby\pml3array.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
 ftex.def))))))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikz-cd.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikzlibrarycd.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikz-cd.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/tikz-cd\tikzlibrarycd.
 code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibrarymatrix.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibraryquotes.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
 raryarrows.meta.code.tex)))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibrarycalc.code.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/ti
 kz/libraries\tikzlibraryarrows.code.tex
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflib
 raryarrows.code.tex))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\stackrel.sty)
- (C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/oberdiek\stackrel.sty)
+ (<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.sty
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xy.tex
 Bootstrap'ing: catcodes, docmode,
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrecat.tex)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyidioms.tex)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrecat.tex)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyidioms.tex)
 
  Xy-pic version 3.8.9 <2013/10/06>
  Copyright (c) 1991-2013 by Kristoffer H. Rose <krisrose@tug.org> and others
@@ -315,59 +315,59 @@ Loading kernel: messages; fonts; allocations: state, direction,
 utility macros; pictures: \xy, positions, objects, decorations;
 kernel objects: directionals, circles, text; options; algorithms: directions,
 edges, connections;  Xy-pic loaded)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycmtip.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycmtip.tex
  Xy-pic option: Computer Modern tip extension v.3.7
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xytips.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xytips.tex
  Xy-pic option: More Tips extension v.3.11 loaded) loaded)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyall.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyall.tex
  Xy-pic option: All features v.3.8
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycurve.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycurve.tex
  Xy-pic option: Curve and Spline extension v.3.12 curve, circles, loaded)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyframe.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyframe.tex
  Xy-pic option: Frame and Bracket extension v.3.14 loaded)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyline.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyline.tex
  Xy-pic option: Line styles extension v.3.10 loaded)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrotate.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyrotate.tex
  Xy-pic option: Rotate and Scale extension v.3.8 loaded)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycolor.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xycolor.tex
  Xy-pic option: Colour extension v.3.11 loaded)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xymatrix.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xymatrix.tex
  Xy-pic option: Matrix feature v.3.14 loaded)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyarrow.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xyarrow.tex
  Xy-pic option: Arrow and Path feature v.3.9 path, \ar, loaded)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xygraph.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xygraph.tex
  Xy-pic option: Graph feature v.3.11 loaded) loaded)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf.tex
  Xy-pic option: PDF driver v.1.7 Xy-pic pdf driver: `color' extension support
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-co.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-co.tex
 loaded) Xy-pic pdf driver: `curve' extension support
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-cu.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-cu.tex
 loaded) Xy-pic pdf driver: `frame' extension support
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-fr.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-fr.tex
 loaded) Xy-pic pdf driver: `line' extension support
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-li.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-li.tex
 loaded) Xy-pic pdf driver: `rotate' extension support
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-ro.tex
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/generic/xypic\xypdf-ro.tex
 loaded) loaded)) (Notes.aux) (Notes.out) (Notes.out)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
 kii
 [Loading MPS to PDF converter (version 2006.09.02).]
 )
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
 base.sty
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.
 cfg))
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pplx.fd)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/bera\t1fvm.fd)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pplx.fd)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/stmaryrd\ustmry.fd)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/bera\t1fvm.fd)
 Underfull \hbox (badness 1152) in paragraph at lines 128--128
 \T1/pplj/m/n/8 un-der a CC-By li-cense: 
 
@@ -382,15 +382,14 @@ LaTeX Warning: Marginpar on page 1 moved.
 
 LaTeX Warning: Marginpar on page 1 moved.
 
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd)
 
 LaTeX Warning: Marginpar on page 1 moved.
 
 
 LaTeX Warning: Marginpar on page 1 moved.
 
-[1{C:/Users/Floris/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/F
-loris/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+[1{<LOCAL_ACCOUNT_ROOT>/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 
 LaTeX Warning: Marginpar on page 2 moved.
 
@@ -489,7 +488,7 @@ LaTeX Warning: Marginpar on page 11 moved.
 
 LaTeX Warning: Marginpar on page 12 moved.
 
-(C:\Users\Floris\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pplj.fd)
+(<LOCAL_ACCOUNT_ROOT>\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pplj.fd)
 
 LaTeX Warning: Marginpar on page 12 moved.
 
@@ -1629,27 +1628,23 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.43996pt have occurred.
 
  )
-(see the transcript file for additional information)<C:/Users/Floris/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Floris/
-AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Use
-rs/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public/f
-pl/fplbj8a.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/mathpazo/fplmbb.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/mathpazo/fplmr.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/font
-s/type1/public/mathpazo/fplmri.pfb><C:/Users/Floris/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/fpl/fplrc8a.pfb><C:/Users/Floris/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/fpl/fplrij8a.pfb><C:/Users/Floris/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/bera/fvmr8a.pfb><C:/Users/Floris/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Floris/AppData/L
-ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/F
-loris/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Use
-rs/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:
-/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pf
-b><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic/xycma
-t10.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic
-/xycmbt10.pfb><C:/Users/Floris/AppData/Local/Programs/MiKTeX/fonts/type1/public
+(see the transcript file for additional information)<<LOCAL_ACCOUNT_ROOT>/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><<LOCAL_ACCOUNT_ROOT>/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pf
+b><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/f
+pl/fplbj8a.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/mathpazo/fplmbb.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/mathpazo/fplmr.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/font
+s/type1/public/mathpazo/fplmri.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/fpl/fplrc8a.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/fpl/fplrij8a.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/bera/fvmr8a.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pf
+b><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic/xycma
+t10.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public/xypic
+/xycmbt10.pfb><<LOCAL_ACCOUNT_ROOT>/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /xypic/xydash10.pfb>
 Output written on Notes.pdf (119 pages, 759694 bytes).
 Transcript written on Notes.log.

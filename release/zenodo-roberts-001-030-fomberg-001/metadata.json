@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Roberts 1–30 dan Jembatan Homologi §1.1–1.2",
+    "upload_type": "publication",
+    "publication_type": "book",
+    "description": "<p><strong>Status: checkpoint parsial kursus komposit; korpus Roberts lengkap 30/30 dan komponen Fomberg O012-FOM-001 lengkap untuk Bagian 1.1–1.2.</strong> Versi 0.30.1 memuat terjemahan Bahasa Indonesia seluruh Kuliah 1–30 dari <em>Algebraic Topology</em> karya David Michael Roberts serta jembatan kompleks Δ dan homologi simpleks dari catatan <em>Algebraic Topology</em> karya Yeheli Fomberg, berdasarkan kuliah Nir Lazarovich.</p><p>Cakupan Roberts adalah <code>Notes.tex</code> baris 134–6368 pada komit <code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>. Cakupan Fomberg adalah <code>algebraic_topology.tex</code> baris 31–614, Bagian 1.1–1.2, pada komit <code>563194fae879178b9a6871b249513bfc27968975</code>; kursor berikutnya ialah baris 615. Fomberg O012-FOM-001 bukan Kuliah Roberts 31. Kursus komposit masih parsial: jembatan Fomberg berikutnya dan lapisan pembuktian, penguasaan, laboratorium, serta capstone lintas-rute belum lengkap.</p><p>PDF A4 adalah berkas pembaca pertama. HTML mandiri/offline adalah permukaan utama yang reflowable dan memakai MathML asli. Sumber Markdown, backend JSONL ber-ID stabil, lisensi komponen, manifest, checksum, QA, dan provenance ringkas turut disertakan.</p><p>Pembaca dan paket terpadu dirilis di bawah <strong>CC BY-SA 4.0</strong>. Komponen Roberts tetap diidentifikasi sebagai CC BY 4.0 dan komponen Fomberg sebagai CC BY-SA 4.0; atribusi, penandaan perubahan, share-alike, dan non-endorsement dijelaskan dalam <code>RELEASE_RIGHTS.md</code>. Produksi menggunakan <strong>OpenAI Codex gpt-5.6-sol, Ultra</strong> atas arahan pengguna; ini bukan kredit kepengarangan atau endorsement. Edisi ini independen dan tidak disponsori atau disahkan oleh penulis, dosen asal, maupun institusi mereka.</p>",
+    "creators": [
+      {
+        "name": "Roberts, David Michael"
+      },
+      {
+        "name": "Fomberg, Yeheli"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Lazarovich, Nir",
+        "type": "Other"
+      },
+      {
+        "name": "Editor edisi Bahasa Indonesia",
+        "type": "Editor"
+      },
+      {
+        "name": "Translation and Transcription Project",
+        "type": "Other"
+      }
+    ],
+    "access_right": "open",
+    "license": "cc-by-sa-4.0",
+    "language": "ind",
+    "version": "0.30.1",
+    "publication_date": "2026-08-24",
+    "keywords": [
+      "topologi aljabar",
+      "Bahasa Indonesia",
+      "homotopi",
+      "ruang penutup",
+      "grup fundamental",
+      "kompleks delta",
+      "kompleks simpleks",
+      "homologi simpleks",
+      "MathML",
+      "machine-readable textbook"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://git.sr.ht/~yp/math-notes/tree/563194fae879178b9a6871b249513bfc27968975",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.5281/zenodo.22061489",
+        "relation": "isVersionOf",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.22077025",
+        "relation": "isNewVersionOf",
+        "scheme": "doi"
+      }
+    ],
+    "notes": "ID rilis: o012-composite-id-roberts-001-030-fomberg-001-v0.30.1. Roberts lengkap 30/30; Fomberg O012-FOM-001 lengkap untuk Bagian 1.1–1.2; kursus komposit tetap parsial. Versi ini melanjutkan konsep Zenodo 10.5281/zenodo.22061489 dan tidak membuat konsep pesaing."
+  }
+}

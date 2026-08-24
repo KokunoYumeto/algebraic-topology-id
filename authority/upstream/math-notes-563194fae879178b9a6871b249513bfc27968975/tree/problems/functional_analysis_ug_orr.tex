@@ -1,0 +1,388 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\ncourse {A First Course in Functional Analysis}
+\def\ntype {problems}
+
+\input{../header.tex}
+
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction and the Stone--Weierstrass theorem}
+
+\begin{exercise}
+  A Hamel basis for $C_{\R}([a, b])$ must be uncountable.
+\end{exercise}
+\begin{solution}
+  One way to see this is to realize that the cardinality of the
+  Hamel basis must be at least the cardinality of the biggest set of
+  linearly independent vectors,
+  and to see that $\set{x^r}_{r \in (0,1)}$ is an uncountable set of
+  linearly independent vectors.
+
+  Here is a more formal way of showing this.
+  Assume, by way of contradiction, that $\set{v_1,v_2,\dots}$ is a Hamel
+  basis for $C_{\R}([a,b])$.
+  Then we have that
+  \[
+    X = \bigcup_{n=1}^{\infty} \vspan\set{v_1,v_2,\dots,v_n}.
+  \]
+  However, each set $\set{v_1,v_2,\dots,v_n}$ is nowhere
+  dense in $X$ (a finite union of nowhere dense sets is nowhere dense
+  and it is clear why each $\set{v_i}$ is nowhere dense).
+  This implies that $X$ is a set of the first category.
+  Since $C_{\R}([a,b])$ is a complete metric space,
+  and $X$ is a set of the first category from Baire's theorem we
+  get that $\Int(X) = \emptyset$ but this is a contradiction.
+\end{solution}
+
+\begin{exercise}
+  Let $A \subseteq C_{\R}(X)$ be a subalgebra,
+  and let $\overline A$ be its closure.
+  Then $\overline A$ is also a subalgebra.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Prove that the Stone--Weierstrass theorem is equivalent to
+  the following statement:
+  ``If $A$ is a subalgebra of $C_{\R}(X)$ which contains the constant
+  functions and separates points, then $\overline A = C_{\R}(X)$''.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Let $A \subseteq C_{\R}(X)$ be a closed subalgebra which contains the
+  constant functions, and seperates points.
+  For every pair of distinct points $x, y \in X$,
+  and every $a, b \in \R$,
+  there exists a function $g \in A$ such that $g(x) = a$ and $g(y) = b$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Did we use the assumption that $X$ is Hausdorff? Explain.
+\end{exercise}
+\begin{solution}
+  
+\end{solution}
+
+\begin{exercise}
+  Prove that $C(X) = \set{u +iv \mid u,v \in C_{\R}(X)}$
+  where $C(X)$ is the algebra of continuous complex=valued functions on $X$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Is the space $C[x,y]$ of two variable complex polynomials dense in
+  $C(\overline \D)$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Let $f \in C_{\R}([-1, 1])$ such that $f(0) = 0$.
+  Prove that $f$ can be approximated in uniform norm by
+  polynomials with zero constant coefficient.
+\end{exercise}
+\begin{solution}
+
+\end{solution}Prove that if A is a closed subalgebra of CH(X)
+that separates points and contains all the constant H-valued functions, then A = CH(X).
+
+\begin{exercise}
+  Let $C_0(\R)$ be the algebra of all continuous functions that vanish
+  at infinity, that is
+  \[
+    C_0(\R) = \set{f \in C(\R) \mid
+        \lim_{x \to \infty} f(x) = \lim_{x \to \ninfty} f(x) = 0}.
+  \]
+  Let $A$ be a self-adjoint subalgebra of $C_0(\R)$ that separates points,
+  and assume that for all $x \in \R$,
+  there exists $f \in A$ such that $f(x) \neq 0$.
+  Prove that $A = C_0(\R)$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Determine which of the following statements are true.
+  \begin{enumerate}
+  \item[(1)] For every $f \in C_{\R}([a, b])$,
+    all $x_1, x_2, \dots, x_n \in [a,b]$,
+    and every $\epsilon > 0$,
+    there exists a polynomial $p$ such that
+    $\sup_{x \in [a,b]} |p(x)-f(x)| < \epsilon$
+    and $p(x_i) = f(x_i)$ for $i = 1,2,\dots,n$.
+    \item[(2)] For every $f \in C_{\R}([a, b])$
+    which has $n$ continuous derivatives on $[a,b]$,
+    and every $\epsilon > 0$,
+    there exists a polynomial $p$ such that
+    $\sup_{x \in [a,b]} |p(x)-f(x)| < \epsilon$
+    and $p^{(k)}(x_i) = f^{(k)}(x_i)$ for $k = 0,1,\dots,n$.
+  \end{enumerate}
+  Determine when happens in the case we replace the word ``polynomial'' with
+  ``trigonometric polynomial''.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Let $f$ be a continuous real-valued function on $[a,b]$
+      such that $\int_{a}^{b} f(x) x^n \dx = 0$
+      for all $n = 0,1,2,\dots$.
+      Prove that $f \equiv 0$.
+    \item[(2)] Let $f$ be a continuous real-valued function on $[-1,1]$
+      such that $\int_{-1}^{1} f(x) x^n \dx = 0$
+      for all odd $n$. What can you say about $f$?
+  \end{enumerate}
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  A $\Z^k$-periodic function is a function $f \colon \R^k \to \R$
+  such that $f(x + n) = f(x)$ for all $x \in \R^k$ and $n \in \Z^k$.
+  A trigonometric polynomial on $\R^k$ is a function $q$ of the form
+  \[
+    q(x) = \sum_{n} a_n \cos(2\pi n \cdot x) + b_n \sin(2\pi n \cdot x)
+  \]
+  where the sum is finite and $n \cdot x$ is the scalar product
+  of $x \in \R^k$ and $n \in \Z^k$.
+  Prove the trigonometric approximation theorem
+  in the multidimensional case.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[Holladay]
+  Let $X$ be a compact Hausdorff space and let $C_{\H}(X)$ denote the
+  algebra of continuous functions taking quaternionic values.
+  Here, $\H$ denotes the quaternions, that is,
+  the four-dimensional real vector space
+  \[
+    \H = \set{a + bi + cj + dk \mid a,b,c,d \in \R}
+  \]
+  with a basis consisting of $1 \in \R$
+  and three additional elements $i$, $j$, $k$, and with multiplication
+  determined by the multiplication of the reals and by the identities
+  \[
+    i^2 = j^2 = k^2 = ijk = -1.
+  \]
+  We let the topology of $\H$ to be the one given by identifying it with $\R^4$.
+  Prove that if $A$ is a closed subalgebra of $C_{\H}(X)$
+  that separates points and contains all the constant $\H$-valued functions,
+  then $A = C_{\H}(X)$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\newpage
+
+\section{Hilbert spaces}
+
+\begin{exercise}
+  Prove the following polariztion identities.
+  \begin{enumerate}
+    \item[(1)] If $G$ is a real inner product space, then for all $f,g \in G$,
+      \[
+        \ip{f}{g} = \frac{1}{4} \del{\norm{f + g}^2 - \norm{f - g}^2}.
+      \]
+    \item[(1)] If $G$ is a complex inner product space,
+      then for all $f,g \in G$,
+      \[
+        \ip{f}{g} = \frac{1}{4} \del{\norm{f + g}^2 - \norm{f - g}^2
+          + i \norm{f + ig}^2 - i \norm{f - ig}^2}.
+      \]
+  \end{enumerate}
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Let $G$ be an inner product space, let $g \in G$,
+  and let $F$ be a dense subset of $G$.
+  Show that if $\ip{f}{g} = 0$ for all $f \in F$, then $g = 0$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Show that for every $f \in PC[a, b]$,
+  there is at most one $g \in C([a, b])$ in its equivalence class.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Show that with respect to the inner product
+  \[
+    \ip{f}{g} = \int_{a}^{b} f(t) \overline{g(t)} \dt
+  \]
+  that $PC[a, b]$ is not complete.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Prove that a function in $C([a,b])$ is completely determined by the values of
+  its integrals over sub-intervals of $[a,b]$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Show that a function in $L^2([a,b])$
+  is completely determined by the values of
+  its integrals over sub-intervals of $[a,b]$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}[tricky]
+  Try to justify the statement: ``for every $r < 1/2$,
+  the function given by $f(x) = x^{-r}$ for $x \in (0, 1]$
+  (and undefined for $x = 0$) is in $L^2[0,1]$.''
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+% additional exercises
+
+\newpage
+
+\section{Orthogonality, projections, and bases}
+
+\begin{exercise}
+  Prove that for any set $S$, $S^{\perp}$ is a closed subspace,
+  and that $S \cap S^{\perp} \subseteq \set{0}$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Prove that for any set $S$, $S^{\perp}$ is a closed subspace,
+  and that $S \cap S^{\perp} \subseteq \set{0}$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Prove that a finite dimensional subspace of an inner product space is
+  closed.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Prove that in an inner product space $G$,
+  a series $\sum_{i \in I} v_i$ converges to $g \in G$ if
+  and only if there exists a countable set $J$ contained in $I$ such that
+  \begin{enumerate}
+    \item[(a)] $v_i = 0$ if $i \in I \setminus J$;
+    \item[(b)] for any enumeration $J = \set{j_1,j_2,\dots}$ of the elements
+      of $J$, the limit $\lim_{N \to \infty} \sum_{n=1}^{N} v_{j_n} = g$
+      exists in $G$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Suppose that $a_i \geq 0$ for all $i$.
+  Prove that $\sum_{i \in I} a_i$ converges and is bounded
+  by $M$ if and only if the set of all finite sums
+  \[
+    \set{\sum_{i \in F} a_i \colon F \subset I \text{ finite}}
+  \]
+  is bounded by $M$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Deduce the Cauchy--Schwarz inequality from Bessel's inequality
+  (this should be one line).
+  Did this involve circular reasoning?
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+% idk
+
+\begin{exercise}
+  Two Hilbert spaces are isomorphic if and only if they have the same di-
+mension.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Prove that a Hilbert space is separable if and only if its dimension is less
+than or equal to $\alpha_0$
+(recall that a metric space is said to be separable if it contains a countable
+dense subset).
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Prove that any Hilbert space is isomorphic to $\ell^2(I)$ for some set $I$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+\begin{exercise}
+  Let $G$ be the linear span of all functinos of the form
+  $\sum_{k=1}^{n} a_k e^{i \lambda_k t}$, where $\lambda_k \in \R$.
+  On $G$, we define a form
+  \[
+    \ip{f}{g} =
+    \lim_{T \to \infty} \frac{1}{2T} \int_{-T}^{T} f(t) \overline{g(t)} \dt.
+  \]
+  Prove that $G$ is an inner product space.
+  Let $H$ be the completion of $G$.
+  Prove that H is not separable.
+  Find an orthonormal basis for $H$.
+\end{exercise}
+\begin{solution}
+
+\end{solution}
+
+
+\end{document}

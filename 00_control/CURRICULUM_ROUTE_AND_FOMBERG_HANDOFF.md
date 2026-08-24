@@ -63,7 +63,7 @@ SHA-256
 The final passes have no tracked warning/error, and pages 1, 3, 10, 20, 30, 35,
 39, 40, and 57 passed visual comparison. The controlling receipt is
 `qa/FOMBERG_AUTHORITY_BUILD_GATE_QA.json`, SHA-256
-`933d1a0158d3c1c0aecd94483b1e3dcd1a7f40cac761f25d19d272eb439d9b01`.
+`110ae5058f254f780812fa12e51e73cc6d1f1e6e03a319dbdfb18ecedf79fe71`.
 Selected-file diagrams are inline TikZ/TikZ-CD with no external figures; the
 selected source may proceed after the Roberts-complete publication boundary.
 

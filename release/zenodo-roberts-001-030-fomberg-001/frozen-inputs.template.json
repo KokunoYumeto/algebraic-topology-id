@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-v0.30.1",
+  "state": "template_unsealed_do_not_package",
+  "instructions": "After the final build, backend, browser/static, visual, and control gates are mutually consistent, use scripts/package-release-roberts-001-030-fomberg-001.py --list-required-inputs to obtain the exact path inventory. Create frozen-inputs.json with one path/bytes/sha256 row per required input, change state to final_inputs_sealed_local_only, then bind its SHA-256 in the packager with apply_patch. Never infer or copy stale artifact identities.",
+  "final_boundary_paths": [
+    "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-id.pdf",
+    "output/html/roberts-001-030-fomberg-001/index.html",
+    "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001.csv",
+    "qa/ROBERTS_001_030_FOMBERG_001_BUILD_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_001_CUMULATIVE_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_001_CUMULATIVE_RECEIPT.md"
+  ],
+  "entries": []
+}

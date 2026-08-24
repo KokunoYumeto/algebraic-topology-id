@@ -1,0 +1,1162 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nlecturer {}
+\def\ncourse {Analysis 2}
+\def\ntype{problems}
+
+\input{header.tex}
+
+\begin{document}
+  \maketitle
+  % Insert cool image here
+
+  \newpage
+  \tableofcontents
+	\newpage
+
+  \section{Proper Integrals}
+  \begin{definition}[Riemann integrability]
+    A function $f \colon \R \to \R$ is said to be Riemann integrable on the 
+    interval $[a,b]$ if there exists $I \in \R$ such that for all 
+    $\varepsilon > 0$ there exists a $\delta > 0$ such that 
+    for any partition $X = (x_0,x_1,\dots,x_n)$ with $\lambda(X) < \delta$, 
+    any sequence $(c_1,c_2,\ldots,c_n)$ such that $c_i \in[x_{i-1},x_i]$ for
+    all $1 \le i \le n$ also satisfies:
+    \[
+      \abs{\sum_{i=1}^{n}{f(c_i)\Delta X_i} - I} < \varepsilon.
+	  \]
+    We also denote $I = \int_{a}^{b} f(x)\dx$.
+  \end{definition}
+  \begin{proposition}
+	  Suppose $f$ is a Riemann integrable function,
+    then $f^2$ is also Riemann integrable.
+  \end{proposition}
+  \begin{proof}
+    We can notice that
+    \begin{align*}
+      &U(f,P) - D(f,P) < \varepsilon \\
+      \Rightarrow\, &U(f,P) < D(f,P) + \varepsilon \\
+      \Rightarrow\, &U(f,P)^2<D(f,P)^2 + 2\varepsilon D(f,P) + \varepsilon^2 \\
+      \Rightarrow\, &U(f,P)^2 - D(f,P)^2 < \varepsilon (2D(f,P) + \varepsilon)
+    \end{align*}	
+    Since $f$ is integrable we know $2D(f,P) + \varepsilon$ is bounded.
+    Denote the bound $M$.
+    Let $\varepsilon > 0$.
+    Choose the $\delta$ that matches 
+    $\varepsilon_{\delta} = \min(\frac{\varepsilon}{2M+1},1)$ 
+    under $f$'s integrability.
+    We get:
+      \begin{align*}
+        &U(f,P) - D(f,P) < \varepsilon_{\delta} \\
+        \Rightarrow\, &U(f,P)^2 - D(f,P)^2 <
+          \varepsilon_{\delta} (2D(f,P) + \varepsilon_{\delta}) \\
+        \Rightarrow\, &U(f,P)^2 - D(f,P)^2 <
+          \frac{\varepsilon}{2M+1} (2M + 1) = \varepsilon \\
+        \Rightarrow\, &U(f^2,P) - D(f^2,P) < \varepsilon
+      \end{align*}	
+    This shows that $f^2$ is Darboux integrable, which implies
+    it is Riemann integrable, which completes the proof.
+  \end{proof}
+
+  \begin{definition}
+    If $f$ is continuous, then $f$ is integrable.
+  \end{definition}
+  \begin{proof}
+    Let $f$ be continuous on $[a,b]$.
+    By the Cantor--Heine theorem it is uniformally continuous.
+    We have
+    \[
+      U(f,P) - L(f,P) =
+      \sum_{i=1}^{n}(M_i-m_i)\Delta X_i <^{*}
+      \sum_{i=1}^n\varepsilon\Delta X_i = \varepsilon(b-a)
+    \]
+    $(*)$ This is becuase by definition we have that for all $\varepsilon > 0$
+    there exists $\delta > 0$ such that $d(x,y) < \delta$. 
+    This implies that $d(f(x),f(y)) < \varepsilon$
+    and that delta is exactly what we wanted, which completes the proof.
+  \end{proof}
+
+  \begin{proposition}[Intermediate Value Theorem for Integrals]
+    Let $f$ be a continuous funtion on $[a,b]$ then exists $x_0 \in [a,b]$
+    such that: 
+    \[
+      \int_a^b f(x)\dx = f(x_0)(b - a).
+    \]
+  \end{proposition}
+  \begin{proof}
+    Since $f$ is continuous it is Riemann integrable. 
+    From Weierstrass's theorem $f$ has a minimum and maximum in $[a,b]$ 
+    which we will denote $m$ and $M$.
+    We know have
+    \[
+      m (b - a) \le \int_a^b f(x)\dx \le M (b - a).
+    \]
+    From this follows that
+    \[
+      m \le \frac{\int_{a}^{b} f(x)\dx}{b - a} \le M.
+    \]
+    Denote $c := \frac{\int_{a}^{b} f(x)\dx}{b - a}$.
+    By the intermediate value theorem we know that exists $x_0 \in (a,b)$
+    such that $f(x_0) = c$ and thus:
+    \[
+      \int_{a}^{b} f(x)\dx = f(x_0)(b - a)
+    \]
+  \end{proof}
+
+  \newpage
+
+  \subsection{The fundamental theorem of calculus}
+  \begin{theorem}\tt{Fundamental theorem of calculus, part one}
+    Let $f$ be a continuous real-valued function
+    defined on a closed interval $[a, b]$. 
+    Let $F$ be the function defined as:
+    \[
+      F(x) = \int_{a}^{x} f(t)\,dt
+    \]
+    for all $x \in [a, b]$.
+    Then $F$ is uniformly continuous on $[a, b]$ and 
+    differentiable on the open interval $(a, b)$, and
+    \[
+      F'(x) = f(x) \quad \forall x \in (a, b).
+    \]
+  \end{theorem}
+  \begin{theorem}\tt{Fundamental theorem of calculus, part two}
+    Under the conditions of part one, if $f$ is Riemann integrable on $[a,b]$.
+    Then:
+    \[
+      \int_{a}^{b} f(x)\dx = F(b) - F(a).
+    \]
+  \end{theorem}
+  \begin{proof}
+  \textbf{Part One}
+  For any $x_1, x_1+\Delta x\in [a,b]$ we get:
+  \[
+    F(x_1 + \Delta x) - F(x_1) = 
+    \int_{a}^{x_1 + \Delta x}{f(t)\,dt} - \int_{a}^{x_1}{f(t)\,dt} = 
+    \int_{x_1}^{x_1 + \Delta x}{f(t)\,dt}
+  \]
+  According to the mean value theorem for integration 
+  we get that for $c \in [x_1, x_1+\Delta x]$:
+  \begin{align*}
+    &\int_{x_1}^{x_1 + \Delta x}{f(t)\,dt} = f(c)\Delta x \\
+    &\lim_{\Delta x\to 0}{\frac{F(x_1+\Delta x) - F(x_1)}{\Delta x}}
+    = \lim_{\Delta x\to 0}{f(c)}
+    = f(x_1)
+  \end{align*}
+  And thus from the squeeze theorem and $f$'s continuity 
+  we get $F'(x_1) = f(x_1)$.
+  \end{proof}
+  \begin{proof}
+  \textbf{Part Two}
+  Let $P = (x_0, x_1, \ldots, x_n)$ be a partition of $[a,b]$ such 
+  that $(x_0,x_n) = (a,b)$.
+  Then we have:
+  \begin{align*}
+    F(b) - F(a) &= F(x_n) + \left[F(x_{n-1})-F(x_{n-1})\right] 
+    + \cdots + \left[F(x_{1})-F(x_{1})\right] - F(x_0) \\
+    &= \left[F(x_n)-F(x_{n-1})\right] + \left[F(x_{n-1})-F(x_{n-2})\right] 
+    + \cdots + \left[F(x_1)-F(x_{0})\right] \\
+    &= \sum_{i=1}^n{\left[F(x_{i})-F(x_{i-1})\right]}.
+  \end{align*}
+  Because $F$ is continuous on $[a,b]$ and differentiable on $(a,b)$, we can
+  use Lagrange's theorem on $[x_i,x_{i-1}]$.
+  Thus, there exists $c_i \in [x_i,x_{i-1}]$ such that
+  \[
+    \sum_{i=1}^n{\left[F(x_{i})-F(x_{i-1})\right]} 
+    = \sum_{i=1}^n{\left[F'(c_i)(x_i-x_{i-1})\right]}.
+  \]
+  
+  According to part one we get that $F'(c_i) = f(c_i)$ and so
+  \begin{align*}
+    F(b) - F(a) &= \sum_{i=1}^{n}{\left[f(c_i)(\Delta x_i)\right]} \\
+    &\iff \\
+    \lim_{\|\Delta x_i\|\to 0}{\left(F(b)-F(a)\right)} &= 
+    \lim_{\|\Delta x_i\|\to 0}
+    {\left(\sum_{i=1}^n{\left[f(c_i)(\Delta x_i)\right]}\right)} \\
+    &\iff \\
+    F(b)-F(a) &= \int_{a}^{b} f(x)\dx.
+  \end{align*}
+  \end{proof}
+  
+  \subsection{Length of a curve}
+  Using integrals, we can actually find a formula for the length of a 
+  continuous graph.
+  Approximating the length of a graph using the pythagorian theorem for 
+  partition $X = (x_0,x_1,\dots,x_n)$ we get:
+  \[
+    \sum_{i=1}^{n}{\sqrt{d(x_{i-1}, x_i)^2 + d(f(x_{i-1}), f(x)_i)^2}}.
+  \]
+  Assuming $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$ 
+  from Lagrange's theorem we get:
+  \begin{align*}
+    \sum_{i=1}^{n}{\sqrt{d(x_{i-1}, x_i)^2 + d(f(x_{i-1}), f(x)_i)^2}}
+    &= \sum_{i=1}^{n}{\sqrt{(x_i - x_{i-1})^2 + (f'(c_i)(x_{i} - x_{i-1}))^2}}\\
+    &= \sum_{i=1}^{n}{\sqrt{(x_i - x_{i-1})^2(1 + (f'(c_i))^2)}} \\
+    &= \sum_{i=1}^{n}{\sqrt{1 + (f'(c_i))^2} \Delta X_i}.
+  \end{align*}
+  We can see that this summation is matching the integral
+  \[
+    \lim_{\norm{\Delta x_i} \to 0}{\sum_{i=1}^{n}
+    {\sqrt{1 + (f'(c_i))^2}\Delta X_i}} = 
+    \int_a^b{\sqrt{1 + (f'(x))^2}\dx}
+  \]
+  The result of this integral will give us the length of any continuous graph.
+
+	\newpage
+	
+  \subsection{The limit comparison test}
+
+  \begin{proposition}[Limit comparison test]
+    Let $f$, $g$ be two integrable positive functions on $[a,M]$ for any 
+    $M \in \R$. Suppose that
+    \[
+      \lim_{x\to\infty} \frac{f(x)}{g(x)} = c.
+    \]
+    Then
+    \begin{itemize}
+      \item If $c \in (0,\infty)$ then either both series converge or both 
+        series diverge.
+      \item If $c = 0$ the converganve of $f$ implies the convergance of $g$.
+      \item If $c = \infty$ the converganve of $g$ implies the convergance 
+        of $f$.
+    \end{itemize}
+  \end{proposition}
+  \begin{proof}
+    Assume $c \in (0,\infty)$.
+    Let $\varepsilon > 0$ we know that exists $x_0 \in \R$ such that for all 
+    $x_0 < x$ we have:
+    \[
+      g(x)(c - \varepsilon) < f(x) < g(x)(c + \varepsilon).
+    \]
+    If $g(x)$ converges then $f(x)$ converges by the squeeze theorem.
+    Similarly if $g$ diverges we know that
+    \[
+      g(x)(c - \varepsilon) < f(x),
+    \]
+    So from a certain point onwards $f$ will meet the requirments of the 
+    direct comparison test and will diverge which completes the proof.
+  \end{proof}
+  
+  Here is some practise of the limit comparison test.
+
+  \begin{exercise}
+    Find the value of
+    \[
+      \lim_{n\to\infty}
+      \left(\frac 1{n+1} + \frac 1{n+2} + \cdots + \frac {1}{2n}\right).
+    \]
+  \end{exercise}
+  \begin{solution}
+    By direct calculation we have:
+    \begin{align*}
+    \lim_{n\to\infty}
+    {\left(\frac {1}{n+1} + \frac {1}{n+2} + \cdots + \frac {1}{2n}\right)} 
+    &= \lim_{n\to\infty}
+    {\sum_{k=1}^{n}{\frac {1}{n+k}}} 
+    \\
+    &= \lim_{n\to\infty}
+    {\sum_{k=1}^{n}{\frac {1}{1 + \frac {k}{n}}\frac {1}{n}}} 
+    \\
+    &= \lim_{n\to\infty}
+    {\sum_{k=1}^{n} {f(\frac {k}{n})\frac {1}{n}}} 
+    \\
+    &= \int_{0}^{1}{\frac{1}{1+x}}
+    \end{align*}
+  \end{solution}
+	
+  \begin{exercise}
+    Check if the following integral converges or diverges:
+    \[
+      \int_{\frac{1}{2}}^{1} \frac{1}{x \sqrt{1-x}} \dx.
+    \]
+  \end{exercise}
+  \begin{solution}
+    This function seems to behave like $\frac{1}{\sqrt{1-x}}$ near $1$
+    so let's compare them using the limit comparison test:
+    \[
+      \lim_{x\to 1^-} \frac{\frac{1}{x\sqrt{1-x}}}{\frac{1}{\sqrt{1-x}}}
+      = \lim_{x\to 1^-}{\frac{1}{x}} = 1.
+    \]
+    By the limit comparison test we get that the integral converges.
+  \end{solution}
+	
+	\newpage
+
+  \section{Improper Integrals}
+  \begin{definition}[Improper integral]
+    Let $f \colon [a,\infty) \to \R$ be a function that is integrable on
+    $[a,M]$ for all $M > a$. Define the improper integral
+    \[
+      \int_{a}^{\infty} f(x) \dx :=
+      \lim_{M \to \infty} \int_{a}^{M} f(x) \dx.
+    \]
+    If the limit exists we say that the integral converges.
+  \end{definition}
+  
+  \begin{definition}[Absolute convergence]
+    An improper integral of a function $f$ is said to converge absolutely 
+    if the integral of the absolute value of the integrand is finite---that is,
+    if $\int_a^\infty \abs{f(x)}\dx = L$ for some finite $L \in \R$.
+  \end{definition}
+  \begin{remark}
+    An improper integral of a function $f$ that converges, but does not
+    converge absolutely, is said to converge conditionally.
+  \end{remark}
+
+  \begin{proposition}
+    Let $\int_a^\infty f(x)\dx$ be an improper integral that 
+    converge absolutely, then it also converges.
+    In other words:
+    \[
+      \int_a^\infty \abs{f(x)}\dx \quad\mathrm{converges}\quad
+      \implies
+      \int_a^\infty {f(x)}\dx \quad\mathrm{converges}.
+    \]
+  \end{proposition}
+  \begin{proof}
+    Suppose $f$ converges absolutely. Consider:
+    \begin{align*}
+      f^+&=
+      \begin{cases}
+          f(x),  & f(x) > 0 \\
+          0,  & f(x) \le 0
+      \end{cases} \\
+      f^-&=
+      \begin{cases}
+          -f(x),  & f(x) < 0 \\
+          0,  & f(x) \ge 0
+      \end{cases}
+    \end{align*}
+    We know that $\abs{f} = f^+ + f^-$ convereges and so by the direct 
+    comparison test we get that  $\int_{a}^{\infty} f^+$ and 
+    $\int_{a}^{\infty} f^-$ converge.
+    Since $f = f^+ - f^-$ we also get that $\int_{a}^{\infty} f$ converges 
+    as well which completes the proof.
+  \end{proof}
+
+  \begin{proposition}[Dirichlet's Test]
+    If $a_n$ is a monotonic sequence and $\lim_{n\to\infty} a_n = 0$ and 
+    $\sum b_n$ is bounded by $M$ then
+    \[
+      \sum_{n=1}^{\infty} a_n b_n \quad\mathrm{ converges}.
+    \]
+  \end{proposition}
+  \begin{proof}
+		Denote $B_{n} = \sum_{k=1}^{n}{b_{n}}$ and by summation by parts we see that
+		\[
+			\sum_{k=1}^{n}{a_{n}b_{n}} =
+      a_{n}B_{n} - \sum_{k=1}^{n-1}{(a_{k+1}-a_{k})B_k}.
+		\]
+		Since $a_{n}$ converges to $0$ and $B_{n}$ is bounded 
+		$\lim_{n\to\infty}{a_nB_n}$ exists.
+		WLOG assume $a_n$ is increasing, we can also see that
+		\[
+    \sum_{k=1}^{n-1} \abs{(a_{k+1}-a_{k})B_k} \le
+    \sum_{k=1}^{n-1} M\abs{(a_{k+1}-a_{k})} \le
+			M \sum_{k=1}^{n-1}{(a_{k+1}-a_{k})}
+		\] 
+		And
+		\[
+			M \sum_{k=1}^{n-1}{(a_{k+1}-a_{k})} = M(a_{n}-a_{1})
+		\]
+		Which converges to $-Ma_1$ since $\lim_{n\to\infty}{a_n}=0$.
+		That means that this sequence is bounded. Which means that
+		$\sum_{k=1}^{n-1}{|(a_{k+1}-a_{k})B_k|}$ is also bounded.
+		It is also monotonic which means it converges. And if
+		$\sum_{k=1}^{n-1}{(a_{k+1}-a_{k})B_k}$ converges absolutly it also
+		converges conditionally which means $\sum_{k=1}^{n-1}{(a_{k+1}-a_{k})B_k}$
+		converges. And by additivity of limits we know 
+		$\lim_{n\to\infty}\sum_{k=1}^{n}{a_{n}b_{n}}$ exists so 
+		$\sum_{n=1}^\infty a_nb_n$ converges.
+  \end{proof}
+	
+  \begin{proposition}[Abel's test]
+	Suppose $\sum_{1}^{\infty}{a_n}$ converges, and $b_n$ is monotone and bounded.
+    Then $\sum_{1}^{\infty}{a_nb_n}$ also converges.
+  \end{proposition}
+	\begin{proof}
+		We know $b_n$ is monotone and bounded so it has a limit $\lim_{n\to\infty}{b_n}=b$
+		This implies $\lim_{n\to\infty}{b_n-b}=0$. 
+		Since $b_n-b$ is also monotonic we know by Dirichle's test that 
+		$\sum_{1}^{\infty}{a_n(b_n-b)}$ converges. And by homogenity of series we know that
+		 $\sum_{n=1}^{\infty}{a_n b}$ converges as well.
+		That means $\sum_{n=1}^{\infty}{(a_n b)+a_n(b_n-b)}$ converges.
+		So $\sum_{n=1}^{\infty}{(a_n b)+a_n(b_n-b)} = \sum_{n=1}^{\infty}{a_nb_n}$
+    converges.
+	\end{proof}
+
+  \begin{proposition}[Root test]
+    Suppose that we have the series $\sum_{n=1}{\infty} a_n$.
+    Define
+    \[
+      L :=
+      \lim_{n \to \infty} \sqrt[n]{\abs{a_n}} =
+      \lim_{n \to \infty} \abs{a_n}^{\frac{1}{n}}.
+    \]
+    Then for,
+    \begin{itemize}
+      \item $L < 1$ the series is absolutely convergent (thus also convergent);
+      \item $L > 1$ the series is divergent;
+      \item $L = 1$ the series may be divergent, conditionally convergent,
+        or absolutely convergent.
+    \end{itemize}
+  \end{proposition}
+  
+  \begin{proposition}[Ratio test]
+    Suppose that we have the series $\sum_{n=1}{\infty} a_n$.
+    Define
+    \[
+      L :=
+      \lim_{n \to \infty} \abs{\frac{a_{n+1}}{a_{n}}}.
+    \]
+    Then for,
+    \begin{itemize}
+      \item $L < 1$ the series is absolutely convergent (thus also convergent);
+      \item $L > 1$ the series is divergent;
+      \item $L = 1$ the series may be divergent, conditionally convergent,
+        or absolutely convergent.
+    \end{itemize}
+  \end{proposition}
+
+  In case the ratio test doesn't work, there does exist a stronger
+  test which we can use.
+  
+  \begin{proposition}[Rabbe's test]
+    Let $a_n$ be a positive sequence, then if
+    \[
+      \lim_{n\to\infty} \left(n\left(1-\frac{a_n+1}{a_n}\right)\right) = q,
+    \]
+    then for,
+    \begin{itemize}
+      \item $q > 1$ the series is convergent;
+      \item $q < 1$ the series is divergent;
+      \item $q = 1$ the series may be divergent, conditionally convergent,
+        or absolutely convergent.
+    \end{itemize}
+  \end{proposition}
+	
+	\newpage
+	
+  \begin{proposition}[Integral test for series]
+    Let $f(x)$ be a positive monotone decreasing function on $[1,\infty]$. 
+    Define $a_n = f(n)$. Then
+    \[
+      \sum_{n=1}^{\infty}{a_n} \quad \text{converges } \iff 
+      \int_{1}^{\infty}{f(x)dx} \quad\text{converges}.
+    \]
+  \end{proposition}
+  \begin{proof}
+    Suppose the series converges then we get:
+    \[
+      \abs{\sum_{n=1}^{\infty} a_n} < M,
+    \]
+    but we also know that:
+    \[
+      0 \le
+      \sum_{n=2}^{\infty} a_n \le 
+      \int_{1}^{N+1} f(x)dx \le
+      \sum_{n=1}^{\infty} a_n.
+    \]
+    This means that the integral is increasing and bounded so it's converging. 
+    Suppose the integral was converging, to prove the series is also converging 
+    we could show similarly it's "bounded" by the integral's bound.
+  \end{proof}
+	
+	\newpage
+	
+  \begin{proposition}[Cauchy condensation test]
+    Let $a_n$ be a non-increasing sequence of non-negative number.
+    Then
+    \[
+       \sum_{n=1}^\infty {f(n)} \le 
+       \sum_{n=0}^\infty {2^n f(2^n)} \le
+      2\sum_{n=1}^\infty {f(n)}.
+    \]
+  \end{proposition}
+  \begin{proof}
+    This follows from a simple rearrangement of the series:
+    \begin{align*}
+      \sum_{n=1}^\infty{f(n)} 
+      & = f(1) +  f(2) + f(3)  +  f(4) + f(5) + f(6) + f(7)  +\cdots \\
+      & = f(1) + (f(2) + f(3)) + (f(4) + f(5) + f(6) + f(7)) +\cdots \\
+       &\le f(1) + (f(2) + f(2)) + (f(4) + f(4) + f(4) + f(4)) +\cdots  \\
+      & =  \sum_{n=0}^\infty{2^nf(2^n)} \\
+      & = f(1) + (f(2) + f(2)) + (f(4) + f(4) + f(4) + f(4)) +\cdots \\
+      & \le  (f(1)+f(1))+(f(2)+f(2))+(f(3)+f(3))+(f(4)+f(4)) \cdots \\
+      & = 2\sum_{n=1}^\infty {f(n)}.
+    \end{align*}
+  \end{proof}
+	
+	\newpage
+	
+  \begin{proposition}[Leibniz's Test]
+    Let $a_n$ be a monotone decreasing positive sequence such that
+    \[
+      \lim_{n\to\infty} a_n = 0.
+    \]
+    Then
+    \[
+      \sum_{n=1}^{\infty}(-1)^{\infty}{a_n} \quad \text{ converges}.
+    \]
+  \end{proposition}
+  \begin{proof}
+    Since $a_n$ is monotonically decreasing then we can say that
+    \begin{align*}
+      S_{2(m+1)} &= S_{2m} + (a_{2m+1} - a_{2m}) \ge S_{2m} \\
+      S_{2(m+1)+1} &= S_{2m + 1} - (a_{2m+2} + a_{2m+3}) \le S_{2m + 1}
+    \end{align*}
+    Or in other words $S_{2m}$ monotonically increases and 
+    $S_{2m+1}$  monotonically decreases. 
+    But we also know that
+    \[
+      S_{2m+1} - S_{2m} =  a_{2m + 1} \ge 0
+    \]
+    And that means that
+    \[
+      a_1 - a_2 = S_2 \le S_{2m} \le S_{2m+1} \le S_1 = a_1
+    \]
+    In other words our monotone sequences are bounded and so they converge. 
+    Recall as $m\to\infty$
+    \[
+      S_{2m + 1} - S_{2m} =  a_{2m + 1} \to 0
+    \]
+    So by Cantor's lemma $S_{2m+1}$, $S_{2m}$ converge to the same limit $L$.
+    Moreover,
+    \[
+      S_{2m} \le L \le S_{2m + 1}
+    \]
+    And also
+    \[
+      \abs{S_k - L} \le a_{k + 1}
+    \]
+  \end{proof}
+	
+  \begin{definition}[Permutation]
+    A permutation is defined as a bijection from a set to itself.
+  \end{definition}
+
+  \begin{definition}[Absolute convergence]
+    A series $\sum_{n=1}^{\infty} a_n$ is said to converge absolutely 
+    if $\sum_{n=1}^{\infty} \abs{a_n} = L$ for some finite $L \in \R$.
+  \end{definition}
+  \begin{remark}
+    A series that converges, but does not converges absolutely, is said
+    to be conditionally convergent.
+  \end{remark}
+  \begin{remark}
+    If a series converges absolutely, it converges.
+  \end{remark}
+
+  \begin{theorem}\tt{Riemann series theorem}
+    Suppose that $(a_{1}, a_{2}, a_{3}, \ldots)$ is a sequence of real numbers, 
+    and that $\sum_{n=1}^{\infty} a_n$ is conditionally convergent. 
+    Let $M \in \R \cup \{\infty,-\infty\}$.
+    Then there exists a permutation $\sigma$ such that:
+    \[
+      \sum_{n=1}^{\infty} a_{\sigma(n)} = M.
+    \] 
+    There also exists a bijection $\pi$ such that
+    $\sum_{n=1}^{\infty} a_{\pi(n)}$ diverges.
+  \end{theorem}
+  \begin{remark}
+    If $\sum_{n=1}^{\infty} a_n$ is converges absolutely to 
+    $M \in \R \cup \{\infty, -\infty\}$,
+    then for any bijection $\sigma$, the series
+    $\sum_{n=1}^{\infty} a_{\sigma(n)}$ will also converge to $M$.
+  \end{remark}
+  \begin{remark}
+    If a series is converging then putting parentheses will not change the
+    value to which it converges.
+  \end{remark}
+
+  \newpage
+  
+  \section{Function Sequences}
+  \begin{definition}[Pointwise convergece]
+    A function sequence $\{f_n\}_{n=1}^{\infty}$ is said to converge
+    pointwise to a given function $f$, if for all $x \in \R$ we have
+    \[
+      \lim _{n \to \infty } f_{n}(x) = f(x).
+    \]
+    The function $f$ is said to be the pointwise limit of
+    $\{f_n\}_{n=1}^{\infty}$.
+  \end{definition}
+
+  \begin{definition}[Uniform convergece]
+    A function sequence $\{f_n\}_{n=1}^{\infty}$ is said to converge
+    uniformly to a given function $f$, if for all $\varepsilon > 0$ there
+    exists $N \in \N$ such that for all $n > N$ and $x \in \R$ we have
+    \[
+      \abs{f_{n}(x) - f(x)} < \epsilon.
+    \]
+    Equivalently, the sequence $\{f_n\}_{n=1}^{\infty}$ uniformly converges
+    to $f$ if
+    \[
+      \lim_{n \to \infty }
+      \sup\{\,\abs{f_{n}(x) - f(x)}:x\in \R\} = 0.
+    \]
+  \end{definition}
+
+  \begin{theorem}\tt{Dini's theorem}
+    Let $f_n(x)\to f(x)$ converge pointwise in $D = [a,b]$.
+    If for all $x \in D$ the sequence $f_n(x)$ is monotonic,
+    and $f$, $\{f_n\}_{n \geq 1}$ are continuous,
+    then $f_n(x)$ converges to $f(x)$ uniformally.
+  \end{theorem}
+
+  Here are some important examples to why all the conditions in Dini's theorem
+  are necessary.
+
+  \begin{example}
+    Consider the function sequence $f_n = x^n$ on the interval $(0,1)$.
+    The seuqence converges pointwise to the constant function $f(x) = 0$.
+    For all $x \in (0,1)$ the sequence $f_n(x)$ is monotonic.
+    The function $f$, $\{f_n\}_{n \geq 1}$ are continuous.
+    But since the interval is open and not closed, the conditions of
+    Dini's theorem are not fulfilled, and indeed the function sequence
+    does not converge uniformly on $(0,1)$.
+  \end{example}
+
+  \begin{example}
+    The function sequence $f_n = \frac{n x}{1 + n^2 x^2}$ satisfies all
+    the conditions exepct that it is not pointwise monotonic, and it
+    does not converge unifromly on $\R$.
+  \end{example}
+
+  \subsection{Properties of Uniformally Converging Function Sequences}
+  \begin{proposition}
+    Suppose $f_n$ converges to $f$ uniformally, and that $f_n$ is
+    continuous for any natural$n$. Then $f$ is continuous.
+  \end{proposition}
+
+
+  \begin{proposition}
+    Suppose $f_n$ converges to $f$ uniformally on $[a,b]$,
+    and that $f_n$ is integrable for any natural $n$.
+    Then $f$ is integrable, and we have
+    \[
+      \int_{a}^{b} \int f_n \xrightarrow{n \to \infty}
+      \int_{a}^{b} \int f.
+    \]
+  \end{proposition}
+
+  \begin{proposition}
+    Suppose $f_n$ is continuous differentiable on $I$ for any natural $n$
+    such that:
+    \begin{itemize}
+      \item  $f_n'$ converges  uniformly on $I$;
+      \item There exists $x_0 \in I$ such that $f_n(x_0)$ converges;
+    \end{itemize}
+    then $f_n$ uniformally converge on $I$ to the function $f$ and
+    $f_n'\to f'$.
+  \end{proposition}
+
+  \begin{proposition}[Weierstrass $M$-test]
+    Let $\sum_{n=1}^{\infty}{f_n(x)}$ be a function series. 
+    Suppose exists a sequence $M_n$ such that:
+    \begin{itemize}
+        \item For any natural $n$ we have $|f_n(x)| \le M_n$;
+        \item The series $\sum_{n=1}^{\infty}{M_n}$ converges.
+    \end{itemize}
+    Then $\sum_{n=1}^\infty f_n(x)$ converges uniformally.
+  \end{proposition}
+  \begin{proof}
+    Since $M_n$ converges we can use Cauchy's criterion for the convegence 
+    of a series get that for all $\varepsilon > 0$ there exists $N \in \N$
+    such that for all $n > N$ and $p \in \N$ we have
+    \[
+      \abs{\sum_{k=1}^{n+p} M_k - \sum_{k=1}^{n} M_k} < \varepsilon.
+    \]
+    Since $0 \le M_n$ we get
+    \[
+      \sum_{k=n+1}^{n+p} M_k < \varepsilon,
+    \]
+    and finally, we have
+    \[
+      \abs{\sum_{k=n+1}^{n+p} f_k(x)}   \le 
+      \sum_{k=n+1}^{n+p} \abs{f_k(x)} \le 
+      \sum_{k=n+1}^{n+p} M_n < \varepsilon.
+    \]
+    which completes the proof.
+  \end{proof}
+		
+	\newpage
+	
+	\section{Power Series Theorems}
+	Suppose $\sum_{n=0}^\infty a_nx^n$ converges for some $x_0$, 
+	then it absolutely converges for any $x$ such that $|x|<|x_0|$.
+	Since the power series converges $\lim_{n\to\infty}{a_nx_0^n}=0$ 
+	and so the sequence is bounded 
+	and we denote that bound $M$.
+	\[
+		0 \le |a_nx^n| 
+		= |a_nx_0^n|\left|\frac{x^n}{x_0^n}\right| 
+		< M\left|\frac{x}{x_0}\right|^n
+	\]
+	And this sequence's sum is a geometric series so it converges and so does 
+	$\sum_{n=1}^\infty|a_nx^n|$. 
+	We also know that $|a_nx^n| < |a_nx_0^n|$ for all $n\in\N$ so according to 
+	Weierstrass's M test $\sum_{n=1}^\infty|a_nx^n|$ uniformally converges. 
+	Let
+	\[
+    X = \set{x \in \R}{\sum_{n=1}^\infty{a_n x^n}\text{ converges}}
+	\]
+	We claim that exists $R = \sup X$ - the radius of convergance - 
+	and that the series converges if $|x|<|R|$ and diverges fo $|x|>|R|$. 
+	For any $x>R$ the series diverges by definition of $R$. 
+	If $x < -R$ we know that exists $x_1$ such that $R < x_1 < |x|$ such that 
+	the series converges, in contradiction to $R$'s defintion. 
+	if $|x|<|R|$ than there exists $x_2$ such that $|x|<|x_2|<|R|$ 
+	for which the series converges and then it converges for $x$ as well.
+	
+  \begin{exercise}
+    We know the series converges uniformally for any close intervel 
+    properly inside $[-R,R]$.
+    If it converges uniformally on $[0,R]$ then it is converging in $R$ as well.
+  \end{exercise}
+  \begin{exercise}
+    Let a function series converge uniformally to $f$. 
+    Prove $f$ is continuous on $(a,b)$.
+  \end{exercise}
+	
+	\newpage
+	
+	\section{Cauchy--Hadamard + D'alembert Theorem}
+  \begin{proposition}[Cauchy--Hadamard]
+    Let $\sum_{n=0}^{\infty} a_n x^n$ be a series and 
+    let $R$ be the radius of convergence of the series.
+    Then:
+    \[
+      R = \frac{1}{\limsup_{n\to\infty}{\sqrt[n]{|a_n|}}}.
+    \]
+  \end{proposition}
+
+  \begin{proof}
+    Let
+    \begin{align*}
+      &\lim_{n\to\infty}{\sqrt[n]{|a_n|}} = L
+      \\ &\Rightarrow
+      \sqrt[n]{|a_nx^n|}=\sqrt[n]{|a_n|}|x|\to L|x|
+      \\ &\Rightarrow
+      \begin{cases}
+      |x| < \frac{1}{L} = R & \text{The series converges} \\
+      |x| > \frac{1}{L} = R & \text{The series diverges} \\
+      \end{cases}
+    \end{align*}
+    This proves the series converges or diverges absolutely according to 
+    the root test. 
+    If it converges absolutly this implies it converges in the usual sense. 
+    Suppose it diverges - by the root test we know that 
+    if the series diverges the partial sums don't converge to $0$ 
+    so the series must diverge as well.
+  \end{proof}
+
+  \begin{proposition}[D'alembert]
+    Let $\sum_{n=0}^{\infty} a_n x^n$ be a series and 
+    let $R$ be the radius of convergence of the series.
+    Then:
+    \[
+      R = \frac{1}{\lim_{n\to\infty}{\left|\frac{a_{n+1}}
+        {a_n}\right|}}.
+    \]
+  \end{proposition}
+
+  \begin{proof}
+    Let
+    \begin{align*}
+      &\lim_{n\to\infty}{\left|\frac{a_{n+1}}{a_n}\right|} = L \\
+      &\Rightarrow
+      \frac{|a_{n+1}x^{n+1}|}{|a_nx^n|} = 
+      \frac{|a_{n+1}|}{|a_n|}|x|\to L|x| \\
+      &\Rightarrow
+      \begin{cases}
+      |x|<\frac{1}{L} = R & \text{The series converges} \\
+      |x|>\frac{1}{L} = R & \text{The series diverges} \\
+      \end{cases}
+    \end{align*}
+    If the series converges absolutly we can be sure yet again that it converges. 
+    If it diverges - than by the quotient test the partial sums 
+    diverge and so the series must also diverge, 
+    and the series will diverge as we claimed.
+  \end{proof}
+
+	\newpage
+	
+	\section{A Note on the Taylor Series}
+	If $f$ is smooth on $(-R,R)$ then $f$ can be the limit of a power series 
+  if and only if:
+	\begin{align*}
+		&\forall x\in(-R,R) \\
+		&\lim_{n\to\infty}{R_n(x) = 
+		 \lim_{n\to\infty}{\sum_{n=N+1}^\infty}{a_nx^n} = 0} \\
+	\end{align*}
+	This is because the following are equivalent:
+	\begin{align*}
+	    &\text{$f$ can be the limit of a power series} \\
+		&\lim_{n\to\infty}{S_n(x)=f(x), \forall x\in(-R,R)} \\
+		&\lim_{n\to\infty}{R_n(x)} = 
+		\lim_{n\to\infty}{f(x)-S_n(x)=0, \quad \forall x\in(-R,R)} \\
+	\end{align*}
+
+	\newpage
+	
+	\section{Continuous Partial Derivatives imply Differentiability}
+	\subsection{Semi-Proof}
+	We want to find the tangetial plane to $f$ for $(x_0,y_0)$ 
+	assuming that the partial derivatives are continuous at that point. 
+	Let's denote
+	\[
+		z_o=f(x_0,y_0)\quad\mathrm{and}\quad A = 
+		\frac{\partial f}{\partial x}(x_0,y_0) \quad
+		\mathrm{and} \quad B = \frac{\partial f}{\partial y}(x_0,y_0)
+	\]
+	Now the tangential lines that intersect at $z_0$ and are parallel 
+	to the axes (and in turn are perpendicular to one another) 
+	are (since the derivatives are continuous)
+	\begin{align*} 
+		z &=  B(y-y_0)+z_0 \\ 
+		z &=  A(x-x_0)+z_0
+	\end{align*}
+	Their directional vectors are in turn
+	\begin{align*} 
+		\vec{\beta} &=  (0,1,B) \\ 
+		\vec{\alpha} &=  (1,0,A)
+	\end{align*}
+	And the normal vector to their spanning plane is
+	\[
+	\vec{N} = \begin{vmatrix}
+		\hat{i} & \hat{j} & \hat{k}\\
+		0 & 1 & B\\
+		1 & 0 & A\\
+	\end{vmatrix}
+	 = (A,B,-1)
+	\]
+	And so the plane equation is
+  \[
+		A(x-x_0) + B(y-y_0) - (z-z_0) = 0
+  \]
+  Which means that
+  \[
+		z =
+    z_0 +
+    \frac{\partial f}{\partial x}(x - x_0) +
+    \frac{\partial f}{\partial y}(x_0,y_0)(y - y_0).
+  \]
+	We have shown that if continuous partial derivatives exists at $(x_0,y_0)$ 
+	then $f$ has a tangential plane at $(x_0,y_0)$ which is equivalent to 
+	being differentiable at $(x_0,y_0)$
+	
+	\subsection{Note on Diffferentiability}
+	We say that $f$ is differentiable at $(x_0,y_0)$ if exist $A$, $B$ such that
+	\[
+		f(x_0+h,y_0+k)-f(x_0,y_0) 
+		= Ah + Bk + \alpha(h,k)\sqrt{h^2+k^2}
+		= Ah + Bj + \alpha(h,k)h + \beta(h,k)k
+	\]
+	where $\lim_{(h,k)\to(0,0)}{\alpha(h,k)}=0$ and 
+  $\lim_{(h,k)\to (0,0)}{\beta(h,k)}=0$.
+  This is equivalent to
+	\[
+		\lim_{(x,y)\to(x_0,y_0)}
+    \cfrac{f(x,y) - f(x_0,y_0) - 
+     \cfrac{\partial f}{\partial x}(x_0,y_0) - \cfrac{\partial f}
+    {\partial y}(x_0,y_0)}{\sqrt{(y - y_0)^2 + (y - y_0)^2}} = 0
+	\]
+
+	\newpage
+	
+	\section{Leibniz integral rule}
+  \begin{theorem}\label{thm:leibniz-integral-rule}\tt{Leibniz integral rule}
+    Let $f(x,y)$ be continuous on a rectangle $[a,b] \times [c,d]$ 
+    and suppose $\frac{\partial f}{\partial y}(x,y)$ exists and is continuous 
+    on $[a,b] \times [c,d]$. 
+    Define $F(y) = \int_a^b{f(x,y)}\dx$.
+    Then $F$ is differentiable on $[c,d]$ and
+    \[
+      F'(y) =
+      \frac{d}{dy}\int_a^b{f(x,y)}\dx =
+      \int_{a}^{b}{\frac{\partial f}{\partial y}(x,y)\, dx}
+    \]
+  \end{theorem}
+  
+  In order to prove this theorem, we first need to prove a lemma.
+  \begin{lemma}
+    Let $f(x,y)$ be continuous on $[a,b] \times [c,d]$.
+    Then $F(y) = \int_{a}^{b} f(x,y)\dx$ is uniforamlly contiuous on $[c,d]$.
+  \end{lemma}
+  \begin{proof}
+    We know $f$ is contiuous on a compact space so it is uniformally continuous 
+    there. This means that for any $\varepsilon > 0$ there exists $\delta > 0$
+    such that for any $p_1 = (x_1,y_2)$, $p_2 = (x_2,y_2)$ such that 
+    $d(p_1,p_2) < \delta$ we have
+    \[
+      \abs{f(p_1) - f(p_2)} < \varepsilon.
+    \]
+    Now consider $y_1, y_2 \in[c,d]$ such that $d(y_1,y_2) < \delta$.
+    We know that for all $x \in [a,b]$ that $d((x,y_1),(x,y_2)) > \delta$
+    and then we can see that
+    \begin{align*}
+      |F(y_1)-F(y_2)| 
+      = \abs{\int_{a}^{b} f(x,y_1)\dx - \int_a^b{f(x,y_2)\dx}}
+      = \abs{\int_{a}^{b} (f(x,y_1) - f(x,y_2))\dx} \\
+      \le \int_{a}^{b} \abs{(f(x,y_1) - f(x,y_2))}\dx < \varepsilon(b - a)
+    \end{align*}
+  \end{proof}
+
+  We can now go back to prove \autoref{thm:leibniz-integral-rule}.
+  \begin{proof}
+    Now denote $G(y) := \int_a^b{\frac{\partial f}{\partial y}(x,y)}\dx$,
+    by the previous lemma $G$ is continuous. Thus,
+    \[
+      \Delta F =
+      F(y + \Delta y) - F(y) =
+      \int_a^b{f(x,y + \Delta y)\dx} - \int_a^b{f(x,y)}\dx =
+      \int_a^b{(f(x,y + \Delta y) - f(x,y))\dx}.
+    \]
+    We know by Lagrange's theorem that exists $t \in (0,1)$ such that
+    \begin{align*}
+      &\frac{f(x,y + \Delta y) - f(x,y)}{\Delta y} =
+      \frac{\partial f}{\partial y}(x,y + \Delta y) \\
+      &\Rightarrow \int_a^b{(f(x,y + \Delta y) - f(x,y))\dx} =
+      \int_a^b{\left(\frac{\partial f}{\partial y}
+      (x,y + t\Delta y)\Delta y\right)}\dx \\
+      &\Rightarrow \frac{\Delta F}{\Delta y} =
+      \int_a^b{\left(\frac{\partial f}{\partial y}(x, y + t\Delta y)\right)}\dx
+      =
+      \footnote[2]{Since $G$ is continuous as $\Delta y\to 0$}
+      G(y + t\Delta y) \to G(y)
+    \end{align*}
+    which completes the proof.
+  \end{proof}
+
+  \newpage
+
+  We can generalize this rule further to get the generalized Leibniz integral
+  rule.
+  \begin{theorem}\tt{Generalized Leibniz integral theorem}
+    Let $f(x,y)$ be a continuously differentiable function on 
+    $[a,b] \times [c,d]$.
+    Suppose that $\frac{\partial f}{\partial y}(x,y)$ exists and is continuous
+    on $[a,b] \times [c,d]$,
+    and that $\alpha(y)$, $\beta(y)$ are differentiable on $[c,d]$.
+    Define $F(y) := \int_{\alpha(y)}^{\beta(y)}{f(x,y)}\dx$.
+    Then $F$ is differentiable on $[c,d]$ and
+    \[
+      F'(y) =
+      \int_{\alpha(y)}^{\beta(y)}{\frac{\partial f}{\partial y}(x,y)\, dx} + 
+      f(\beta(y),y)\beta'(y) - f(\alpha(y),y)\alpha'(y).
+    \]
+  \end{theorem}
+  \begin{proof}
+    Denote $\Phi(s,t,y) := \int_s^t{f(x,y)\dx}$. Then
+    \[
+      F(y) = \Phi(\alpha(y),\beta(y),y) = \int_s^t{f(x,y)\dx}.
+    \]
+    And now
+    \[
+      F'(y) = \frac{\partial\Phi}{\partial s}\frac{ds}{dy}
+      +\frac{\partial\Phi}{\partial t}\frac{dt}{dy}
+      +\frac{\partial\Phi}{\partial y}\frac{dy}{dy}.
+    \]
+    By \autoref{thm:leibniz-integral-rule} and the fundamental theorem
+    we get
+    \[
+      F'(y) = -f(\alpha(y),y) \alpha'(y) + f(\beta(y),y)\beta'(y)
+      +\int_{\alpha(y)}^{\beta(y)}{\frac{\partial f}{\partial y}(x,y)\dx},
+    \]
+    which completes the proof.
+  \end{proof}
+
+  \newpage
+
+  \section{Fubini's Theorem}
+  \begin{theorem}[Fubini's theorem]
+    Let $f(x,y)$ be a continuous function on $[a,b] \times [c,d]$.
+    Then
+    \[
+      \int_a^b\left(\int_c^d{f(x,y)\, dy}\right)\dx
+    = \int_c^d\left(\int_a^b{f(x,y)\, dx}\right)\,dy.
+    \]
+  \end{theorem}
+  \begin{proof}
+    Denote
+    \begin{align*}
+      &\varphi(t) := \int_c^t\left(\int_a^b{f(x,y)\, dx}\right)\,dy \\
+      &\Psi(t) := \int_a^b\left(\int_c^t{f(x,y)\, dy}\right)\dx.
+    \end{align*}
+    Since $f(x,y)$ is continuous we get that $F(y) = \int_a^b{f(x,y)\dx}$ is 
+    also continuous. Thus, by the fundemetal theorem,
+    \[
+      \varphi'(t) = \frac{d}{dt} \int_{c}^{t} F(y)\,dy =
+      F(t) = \int_{a}^{b} f(x,t)\dx.
+    \]
+    Denote $G(x,t) := \int_c^t{f(x,y)\,dy}$.
+    Then, by the fundemental theorem again we get
+    \[
+      \frac{\partial G}{\partial t} = f(x,t).
+    \]
+    And thus by the generalized Leibniz Integral Rule
+    \[
+      \Psi'(t) = \frac{d}{dt}\int_a^b{G(x,t)\dx} = \int_a^b{f(x,t)\dx}.
+    \]
+    We concluded that $\varphi$, $\Psi$ have the same derivative.
+    That means that they at most differ by a constant $L$.
+    However, since $\varphi(c) = \Psi(c) = 0$ we get that $L = 0$ and thus
+    \[
+      \varphi = \Psi,
+    \]
+    and more specifically $\varphi(d) = \Psi(d)$.
+    This means that
+    \[
+      \int_a^b\left(\int_c^d{f(x,y)\, dy}\right)\dx
+    = \int_c^d\left(\int_a^b{f(x,y)\, dx}\right)\,dy
+    \]
+    which completes the proof.
+  \end{proof}
+
+  \newpage
+  
+  \section{The Chain Rule}
+  \begin{proposition}[The chain rule]
+    Let $f(x,y)$ have continuous partial derivatives on domain $D$.
+    Let $x(t)$, $y(t)$ be differentiable on the interval $I$ such that
+    for all $t \in I$ we have $(x(t),y(t) \in D)$.
+    Denote $F(t) := f(x(t),y(t))$.
+    Then,
+    \[
+      F'(t) = 
+      \frac{\partial f}{\partial x}\biggr|_{(x(t),y(t))}\frac{dx}{dt} + 
+      \frac{\partial f}{\partial y}\biggr|_{(x(t),y(t))}\frac{dy}{dt}
+    \]
+  \end{proposition}
+  \begin{proof}
+    \[
+      \frac{dF}{dt} =
+      \lim_{\Delta t\to 0}{\frac{F(t+\Delta t)-F(t)}{\Delta t}} =
+      \lim_{\Delta t\to 0}
+      {\frac{f(x(t+\Delta t),y(t+\Delta t))-f(x(t),y(t))}{\Delta t}} 
+    \]
+    Denote
+    $$\begin{cases}
+      \Delta x = x(t+\Delta t) - x(t) \\
+      \Delta y = y(t+\Delta t) - y(t) 
+    \end{cases}$$
+    \[
+      = \lim_{\Delta t\to 0}
+      {\frac{f(x(t) + \Delta x,y(t)+\Delta y)-f(x(t),y(t))}{\Delta t}} 
+      = \lim_{\Delta t\to 0}{\frac{\Delta f}{\Delta t}}.
+    \]
+    Since $f$ is differentiable
+    \[
+      \Delta f =
+      \frac{\partial f}{\partial x}\Delta x + 
+      \frac{\partial f}{\partial y}\Delta y + 
+      \alpha(\Delta x,\Delta y)\Delta x + \beta(\Delta x,\Delta y)\Delta y
+    \]
+    where $\alpha,\beta\to 0 $ so:
+    \[
+      F'(t) =
+      \lim_{\Delta t\to 0}{\frac{\Delta f}{\Delta t}} =
+      \lim_{\Delta t\to 0}{\frac{\frac{\partial f}{\partial x}\Delta x + 
+      \frac{\partial f}{\partial y}\Delta y +
+      \alpha(\Delta x,\Delta y)\Delta x + 
+      \beta(\Delta x,\Delta y)\Delta y}{\Delta t}}.
+    \]
+    \[
+      = \frac{\partial f}{\partial x}\biggr|_{(x(t),y(t))}\frac{dx}{dt} + 
+        \frac{\partial f}{\partial y}\biggr|_{(x(t),y(t))}\frac{dy}{dt}
+    \]
+    which completes the proof.
+  \end{proof}
+
+  \begin{corollary}
+    suppose $F(u,v) = f(x(u,v),y(u,v))$ then we see that
+    \[
+      \frac{\partial f}{\partial u} =
+      \frac{\partial f}{\partial x}
+      \frac{\partial x}{\partial u} +
+      \frac{\partial f}{\partial y}
+      \frac{\partial y}{\partial u}
+    \tand
+      \frac{\partial f}{\partial v} =
+      \frac{\partial f}{\partial x}
+      \frac{\partial x}{\partial v} +
+      \frac{\partial f}{\partial y}
+      \frac{\partial y}{\partial v}.
+    \]
+  \end{corollary}
+
+
+	\newpage
+	\section{Substitution For Multiple Variables}
+	Let $f$ be integrable over Domain $D$.
+  Let $x(u,v)$ and $y(u,v)$ be in $C_1$\footnote{continuously differentiable},
+  and let them define an invertible transformation $\varphi:D\to E$ 
+  where $D$ is defined on an $xy$ plane and $E$ on an $uv$ plane.
+  Now suppose
+	\[
+		\mathbb{J} =\frac{\partial(x,y)}{\partial(u,v)} = 
+	  \begin{bmatrix}
+      \frac{\partial x}{\partial u} & 
+      \frac{\partial x}{\partial v} & \\[1ex]
+      \frac{\partial y}{\partial u} & 
+      \frac{\partial y}{\partial v}
+	  \end{bmatrix} \neq 0 \;\;\;\forall (u,v)\in E
+	\]
+	$(*)$ It can be equal to $0$ in the domain if the measure of the set of
+  those points is $0$.
+
+	Then
+	\[
+		\iint_D f(x,y) \, dx \, dy =
+    \iint_E f(x(u,v),y(u,v)) |\mathbb{J}| \, du \, dv.
+	\]
+
+
+	\newpage
+  \begin{exercise}[the Gaussian integral]
+    Calculate the value of the following integral:
+    \[
+      \iint_{-\infty}^{\infty} e^{-x^2}.
+    \]
+  \end{exercise}
+  \begin{solution}
+    First notice that
+    \[
+      \left(\int_{-\infty}^\infty{e^{-x^2}}\, dx\right)^2 = 
+      \left(\int_{-\infty}^\infty{e^{-x^2}}\, dx\right) 
+      \left(\int_{-\infty}^\infty{e^{-y^2}}\, dy\right) = 
+      \int_{-\infty}^\infty\int_{-\infty}^\infty{e^{-(x^2+y^2)}}\, dx\, dy.
+    \]
+
+    Now consider the integral in polar coordinates.
+
+    \begin{align*}
+      \int_{-\infty}^{\infty}
+      \int_{-\infty}^{\infty} e^{-(x^2+y^2)} \, dx\, dy &=
+      \int_{0}^{\infty} \int_{0}^{2\pi} e^{-r^2}r\, d\theta\, dr = 
+      \int_{0}^{\infty} \int_{0}^{2\pi} r e^{-r^2}\, d\theta\, dr \\ &=
+      \int_{0}^{\infty} \theta r e^{-r^2} 
+      \biggr\vert^{\theta = 2\pi}_{\theta = 0}\, dr =
+      2 \pi \int_{0}^{\infty} r e^{-r^2}\, dr \\ &=
+      2 \pi \int_{0}^{\infty} r e^{-r^2}\, dr.
+    \end{align*}
+    Finally we get 
+    \begin{align*}
+      2 \pi \int_{0}^{\infty} r e^{-r^2}\, dr &= 
+      2 \pi \lim_{M\to\infty} -\frac 12{e^{-r^2}}\biggr\vert^M_0 \\ &=
+      2 \pi \lim_{M\to\infty} -\frac 12   (e^{-M^2} - e^{-0^2}) =
+      2 \pi (- \frac 12(0-1)) = \pi. \\
+    \end{align*}
+    Going back to the original integral we get
+    \[
+      \int_{-\infty}^\infty{e^{-x^2}}\, dx =
+      \sqrt{\left(\int_{-\infty}^\infty{e^{-x^2}}\, dx\right)^2} =
+      \sqrt{\pi}.
+    \]
+  \end{solution}
+  
+
+
+
+\end{document}

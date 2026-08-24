@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0.0",
+  "audit_date": "2026-08-24",
+  "status": "PASS",
+  "scope": "Fomberg authority, exact overlay, full-source deterministic baseline, and selected-witness admission gate; no translation performed",
+  "official_authority": {
+    "notes_page": "https://yp.srht.site/notes/",
+    "repository": "https://git.sr.ht/~yp/math-notes",
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+    "tracked_files": 63,
+    "live_verification": {
+      "official_commit": "563194fae879178b9a6871b249513bfc27968975",
+      "official_commit_tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+      "official_leading_tree_object": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+      "local_archive_tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+      "tracked_files": "63",
+      "depth_one_response_bytes": "2201837",
+      "depth_one_response_sha256": "6fe4d9262139f9ca9f529541bc6becd1beae36cdce070190d198ce7051b90665",
+      "authority_verification": "PASS"
+    },
+    "notes_page_http_status": 200,
+    "notes_page_bytes": 8307,
+    "notes_page_sha256": "713c1991d2cfd0ab833250d30a3c206d102bb9fcbcfd5865895179ba224aa33d"
+  },
+  "frozen_files": [
+    {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/archive/math-notes-563194fae879178b9a6871b249513bfc27968975.tar.gz",
+      "bytes": 2236609,
+      "sha256": "423c2c34b62a1b443e63be72e80a5c35d5cd6daf4e5b3be8e48dad1d1f897443"
+    },
+    {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "bytes": 223886,
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/header.tex",
+      "bytes": 14097,
+      "sha256": "7c4c5cbe901c1b6c7ae8d6053d42cd28110ece34dd90bc60c5bcb7423e45e28e"
+    },
+    {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/LICENSE",
+      "bytes": 20140,
+      "sha256": "0b7fc2608b6d990314e908569407a6058b4a29175167c6d91ca0070c946661be"
+    },
+    {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/official/algebraic_topology.pdf",
+      "bytes": 383089,
+      "sha256": "148aba71473e3201993e562c5e5d0f05f1a0417f4bcbd4593bead5ab236e43cd"
+    }
+  ],
+  "archive": {
+    "file_members": 63,
+    "mismatches_against_extracted_tree": [],
+    "tree_manifest": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/AUTHORITY_TREE_MANIFEST.csv",
+    "tree_manifest_sha256": "4674035139313e2b07631325eb5ed4eaf7ac0aee542f048f7f959715af8f75a4"
+  },
+  "selected_witness": {
+    "source_lines": "31-4185 inclusive",
+    "source_line_count": 4155,
+    "bytes_preserving_lf": 161848,
+    "sha256_preserving_lf": "4b96191b5e3cf5006d82175d609a4be8bba567458f7ee1c9f01cfe53490a645c",
+    "subsections": "1.1-1.13",
+    "physical_pdf_pages": "1-39",
+    "next_source_line": 4186,
+    "next_pdf_page": 40,
+    "next_heading": "1.14 Extras before cohomology",
+    "inline_tikzpicture_count": 19,
+    "inline_tikzcd_count": 69,
+    "external_file_commands": 0
+  },
+  "rights_and_credits": {
+    "license": "CC BY-SA 4.0",
+    "notes_author": "Yeheli Fomberg",
+    "based_on_lectures_by": "Nir Lazarovich",
+    "nonendorsement_notice_present": true,
+    "problem_bank_selected": false,
+    "component_assets": "No external figures/files are referenced; selected diagrams are inline licensed TeX.",
+    "overlay_license": "CC0-1.0"
+  },
+  "dependency_overlay": {
+    "selected_commath_usage": {
+      "set": {
+        "count": 147,
+        "optional_arguments": [],
+        "optional_lines": []
+      },
+      "del": {
+        "count": 60,
+        "optional_arguments": [
+          "4",
+          "4",
+          "4",
+          "1"
+        ],
+        "optional_lines": [
+          {
+            "line": 762,
+            "value": "4"
+          },
+          {
+            "line": 782,
+            "value": "4"
+          },
+          {
+            "line": 794,
+            "value": "4"
+          },
+          {
+            "line": 3500,
+            "value": "1"
+          }
+        ]
+      },
+      "norm": {
+        "count": 2,
+        "optional_arguments": [],
+        "optional_lines": []
+      },
+      "abs": {
+        "count": 2,
+        "optional_arguments": [],
+        "optional_lines": []
+      }
+    },
+    "full_commath_usage": {
+      "set": {
+        "count": 174,
+        "optional_arguments": [],
+        "optional_lines": []
+      },
+      "del": {
+        "count": 107,
+        "optional_arguments": [
+          "4",
+          "4",
+          "4",
+          "1"
+        ],
+        "optional_lines": [
+          {
+            "line": 792,
+            "value": "4"
+          },
+          {
+            "line": 812,
+            "value": "4"
+          },
+          {
+            "line": 824,
+            "value": "4"
+          },
+          {
+            "line": 3530,
+            "value": "1"
+          }
+        ]
+      },
+      "norm": {
+        "count": 2,
+        "optional_arguments": [],
+        "optional_lines": []
+      },
+      "abs": {
+        "count": 2,
+        "optional_arguments": [],
+        "optional_lines": []
+      }
+    },
+    "commath_overlay": {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/build-overlay/commath.sty",
+      "bytes": 1346,
+      "sha256": "524c17aef50ed58686c9ed0b0b274e7f2ccdb35380869fef9c66ce3a120a6d19"
+    },
+    "disposable_header_omissions": [
+      "esvect",
+      "esdiff",
+      "witharrows",
+      "quiver"
+    ],
+    "frozen_header_edited": false
+  },
+  "build": {
+    "schema_version": "1.0.0",
+    "status": "PASS",
+    "authority_commit": "563194fae879178b9a6871b249513bfc27968975",
+    "authority_tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+    "source_date_epoch": 1735689600,
+    "engine_path": "<LOCAL_ACCOUNT_ROOT>\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe",
+    "engine_version": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "clean_build_count": 2,
+    "passes_per_build": 3,
+    "byte_identical": true,
+    "pdf_bytes": 664609,
+    "pdf_sha256": "f0f8f815423dbdc3b368b48a5972bfc62be87ae8b5c4bfcd1b7a74b8871417ff",
+    "package_input_count": 106,
+    "output_pdf": "<TASK_ROOT>\\authority\\upstream\\math-notes-563194fae879178b9a6871b249513bfc27968975\\build-baseline\\algebraic_topology-baseline.pdf",
+    "pdfinfo": "Title:           \nSubject:         \nKeywords:        \nAuthor:          \nCreator:         LaTeX with hyperref\nProducer:        MiKTeX pdfTeX-1.40.29\nCreationDate:    Wed Jan  1 01:00:00 2025 W. Europe Standard Time\nModDate:         Wed Jan  1 01:00:00 2025 W. Europe Standard Time\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           57\nEncrypted:       no\nPage size:       595.276 x 841.89 pts (A4)\nPage rot:        0\nFile size:       664609 bytes\nOptimized:       no\nPDF version:     1.5",
+    "path_sanitization": {
+      "applied": true,
+      "task_root_placeholder": "<TASK_ROOT>",
+      "local_account_root_placeholder": "<LOCAL_ACCOUNT_ROOT>",
+      "wrapped_account_segment_placeholder": "<LOCAL_ACCOUNT>",
+      "mathematical_and_build_diagnostic_text_changed": false
+    },
+    "baseline_pdf": {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/build-baseline/algebraic_topology-baseline.pdf",
+      "bytes": 664609,
+      "sha256": "f0f8f815423dbdc3b368b48a5972bfc62be87ae8b5c4bfcd1b7a74b8871417ff"
+    },
+    "package_manifest": {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/build-baseline/tex-input-manifest.csv",
+      "bytes": 17061,
+      "sha256": "3572ef63bf01d6907e94f6e319e5e8d5f369f6147292ee675032c521b19e2b0f"
+    },
+    "pass_warning_counts": {
+      "1": {
+        "latex_warning": 52,
+        "package_warning": 0,
+        "overfull": 1,
+        "underfull": 0,
+        "undefined_control": 0,
+        "latex_error": 0,
+        "fatal": 0
+      },
+      "2": {
+        "latex_warning": 0,
+        "package_warning": 0,
+        "overfull": 0,
+        "underfull": 0,
+        "undefined_control": 0,
+        "latex_error": 0,
+        "fatal": 0
+      },
+      "3": {
+        "latex_warning": 0,
+        "package_warning": 0,
+        "overfull": 0,
+        "underfull": 0,
+        "undefined_control": 0,
+        "latex_error": 0,
+        "fatal": 0
+      }
+    },
+    "malformed_delimiter_literal_counts": {
+      "([) 4]": 0,
+      "([) 1]": 0
+    },
+    "official_pdfinfo": {
+      "Creator": "LaTeX with hyperref",
+      "Producer": "xdvipdfmx (20250205)",
+      "CreationDate": "Thu May 21 18:22:22 2026 W. Europe Daylight Time",
+      "Custom Metadata": "no",
+      "Metadata Stream": "no",
+      "Tagged": "no",
+      "UserProperties": "no",
+      "Suspects": "no",
+      "Form": "none",
+      "JavaScript": "no",
+      "Pages": "57",
+      "Encrypted": "no",
+      "Page size": "595.28 x 841.89 pts (A4)",
+      "Page rot": "0",
+      "File size": "383089 bytes",
+      "Optimized": "no",
+      "PDF version": "1.5"
+    },
+    "baseline_pdfinfo": {
+      "Title": "",
+      "Subject": "",
+      "Keywords": "",
+      "Author": "",
+      "Creator": "LaTeX with hyperref",
+      "Producer": "MiKTeX pdfTeX-1.40.29",
+      "CreationDate": "Wed Jan  1 01:00:00 2025 W. Europe Standard Time",
+      "ModDate": "Wed Jan  1 01:00:00 2025 W. Europe Standard Time",
+      "Custom Metadata": "yes",
+      "Metadata Stream": "no",
+      "Tagged": "no",
+      "UserProperties": "no",
+      "Suspects": "no",
+      "Form": "none",
+      "JavaScript": "no",
+      "Pages": "57",
+      "Encrypted": "no",
+      "Page size": "595.276 x 841.89 pts (A4)",
+      "Page rot": "0",
+      "File size": "664609 bytes",
+      "Optimized": "no",
+      "PDF version": "1.5"
+    },
+    "font_rows": 23,
+    "type3_font_rows": 1,
+    "accessibility_limit": "PDF is untagged; one embedded BBM Type 3 font has no Unicode map."
+  },
+  "visual_qa": {
+    "receipt": {
+      "path": "qa/FOMBERG_AUTHORITY_BUILD_GATE_VISUAL_QA.md",
+      "bytes": 2698,
+      "sha256": "bdc4609eedb03aa30fc1841f2f65415e034189cbae8f4e022615b59d2b34ccb7"
+    },
+    "rendered_pages": [
+      1,
+      3,
+      10,
+      20,
+      30,
+      35,
+      39,
+      40,
+      57
+    ],
+    "repaired_affected_pages": [
+      10,
+      35
+    ]
+  },
+  "admission": {
+    "status": "PASS",
+    "selected_source_lines": "31-4185 inclusive",
+    "selected_pdf_pages": "1-39",
+    "translation_performed": false
+  },
+  "checks": {
+    "identity:math-notes-563194fae879178b9a6871b249513bfc27968975.tar.gz": true,
+    "identity:algebraic_topology.tex": true,
+    "identity:header.tex": true,
+    "identity:LICENSE": true,
+    "identity:algebraic_topology.pdf": true,
+    "identity:commath.sty": true,
+    "identity:algebraic_topology-baseline.pdf": true,
+    "authority_tree_id": true,
+    "authority_tracked_file_count": true,
+    "archive_member_count": true,
+    "archive_matches_extracted_tree": true,
+    "live_official_commit": true,
+    "live_official_commit_tree": true,
+    "live_official_leading_tree": true,
+    "live_authority_verification": true,
+    "official_notes_page_http_200": true,
+    "official_notes_page_license": true,
+    "official_notes_page_tex_link": true,
+    "official_notes_page_pdf_link": true,
+    "source_line_count": true,
+    "selected_line_span": true,
+    "selected_span_hash": true,
+    "selected_sections_1_1_through_1_13": true,
+    "selected_no_external_file_commands": true,
+    "full_only_header_input": true,
+    "full_no_external_figures": true,
+    "selected_commath_usage_is_bounded": true,
+    "full_commath_usage_is_bounded": true,
+    "unused_removed_package_commands": true,
+    "license_cc_by_sa_4": true,
+    "author_credit_present": true,
+    "lecture_credit_present": true,
+    "nonendorsement_present": true,
+    "overlay_cc0_marker": true,
+    "two_clean_builds": true,
+    "three_passes_each": true,
+    "byte_identical_builds": true,
+    "baseline_pdf_matches_result": true,
+    "first_pass_has_convergence_only": true,
+    "second_pass_clean": true,
+    "final_pass_clean": true,
+    "official_pdf_57_a4_pages": true,
+    "baseline_pdf_57_a4_pages": true,
+    "selected_pdf_boundary_official": true,
+    "selected_pdf_boundary_baseline": true,
+    "no_leaked_commath_optional_tokens": true,
+    "all_fonts_embedded": true,
+    "known_type3_font_count": true,
+    "baseline_untagged_disclosed": true,
+    "package_input_count": true,
+    "package_inputs_hash_complete": true,
+    "no_frozen_asset_loaded": true,
+    "visual_qa_receipt_present": true,
+    "visual_qa_page_inventory": true,
+    "visual_qa_repaired_pages": true
+  }
+}

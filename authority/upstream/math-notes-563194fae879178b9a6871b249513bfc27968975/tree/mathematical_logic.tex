@@ -1,0 +1,1540 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2025}
+\def\nterm {Winter}
+\def\nlecturer {Shay Moran}
+\def\ncourse {Mathematical Logic}
+
+\input{header.tex}
+
+\let\oldmodels\models
+
+% Redefine \models
+\DeclareRobustCommand{\models}{%
+  \mathrel{\vDash}%
+}
+
+% Define custom \nmodels
+\DeclareRobustCommand{\nmodels}{%
+  \mathrel{\text{\ooalign{$\vDash$\cr\hss\raisebox{0.2ex}{\scalebox{0.8}{$/$}}\hss}}}%
+}
+
+\renewcommand{\implies}{\rightarrow}
+% \usepackage{MnSymbol}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+\section{Propositional Logic}
+\subsection{Preliminaries}
+Before talking about propositional logic, let us review the basic
+connectives.
+
+\begin{center}
+  \begin{tabular}{|l|l|l|}
+    \hline
+    Name        & Notation   & Meaning        \\ \hline
+    Negation    & $\neg$     & not            \\ \hline
+    Conjunction & $\land$    & and            \\ \hline
+    Disjunction & $\lor$     & or             \\ \hline
+    Implication & $\implies$ & if, ..., then  \\ \hline
+    Equivalence & $\equiv$   & if and only if \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{definition}[Set of atomic propositions]
+  Given an arbitrary finite or countable set $AP = \{p_1,p_2,\dots\}$
+  which we call the set of atomic propositions.
+  The elements in the set describe our propositions.
+\end{definition}
+
+We will later see why this set is defined to be finite or countable.
+
+\begin{definition}[Propositions of depth $n$]
+  Given a set $AP$ of atomic propositions, write $P_0 = AP$, and call
+  the set $P_0$ the set of propositions of depth $0$.
+  For any $n \geq 1$ define recursivly the set $P_n$ as the
+  set of any element $A$ of one of the following forms:
+  \begin{enumerate}
+    \item[(1)] $A = \neg B$ for some $B \in P_{n-1}$.
+    \item[(2)] $A = B * C$ for some propositions $B$ and $C$ of depth
+      less than $n$, with at least one of them of depth $n-1$ and
+      some connective $* \in \{\land, \lor, \implies, \equiv\}$.
+  \end{enumerate}
+  The set $P_n$ is called the set of propositions of depth $n$.
+\end{definition}
+
+\begin{definition}[Set of propositions]
+  Given a set $AP$ of atomic propositions, the set of all propositions
+  is denoted $P$ as defined as the unions of all propositions of all
+  depths:
+  \[
+    P := \bigcup_{n=0}^{\infty} P_n.
+  \]
+\end{definition}
+
+\begin{remark}
+  Notice that by our construction, there does not exist a proposition
+  with an infinite number of atomic propositions. Thus, the set of
+  atomic proposition needs to contain at most a countable amount
+  of atomic propositions, and that is why we defined it to be
+  countable in the first place.
+\end{remark}
+
+\begin{definition}[Assignment]
+  An assignment is a function $M \colon AP \to \{T,F\}$.
+\end{definition}
+
+Let $A$ be a proposition in $P$.
+We say that a certain assignment $M$ models $P$ if the truth
+value of $P$ under that assignment is $T$, and we denote $M \models P$.
+A rigorous definition for when a truth value of a proposition is $T$ 
+can be defined by using structural induction.
+
+\begin{definition}[Tautology]
+  A proposition $A \in P$ is called a tautology if for any assignment
+  $M$ we have $M \models A$.
+\end{definition}
+
+\begin{definition}[Contradiction]
+  A proposition $A \in P$ is called a contradiction if for any assignment
+  $M$ we have $M \nmodels A$.
+\end{definition}
+
+\begin{definition}[Logical equivalence]
+  We say that two propositions $A,B \in P$ are logically equivalent
+  if for any assignment $M$ we either have $M \models A$ and
+  $M \models B$ or $M \nmodels A$ and $M \nmodels B$.
+\end{definition}
+
+\begin{remark}
+  Logical equivalence is an equivalence relation.
+\end{remark}
+
+\begin{proposition}
+  For every proposition $A \in P$, the propositions $A$ and
+  $\neg(\neg A)$ are logically equivalent.
+\end{proposition}
+\begin{proof}
+  Let $M$ be an assinment such that $M \models A$.
+  Then by definition we have that $M \nmodels \neg A$.
+  Finally, by definition we have that $M \models \neg(\neg A)$.
+
+  Otherwise we have $M \nmodels A$.
+  Then by definition we have that $M \models \neg A$.
+  Finally, by definition we have that $M \nmodels \neg(\neg A)$.
+\end{proof}
+
+\begin{definition}[Opposite assignment]
+  For each assignment $M \colon Ap \to \{T, F\}$ 
+  define $\overline M \colon AP \to \{T, F\}$ as:
+  \[
+    \overline M(p) =
+    \begin{cases}
+      T, &M(p) = T \\
+      F, &M(p) = F
+    \end{cases}.
+  \]
+  The assignment $\overline M$ is called the opposite assignment
+  of $M$.
+\end{definition}
+
+Informally, for any proposition $P$ we define $\overline P$ the
+propoisition such that any appearance of $p \in AP$ in $P$ is
+replaced by $\neg p$.
+
+\begin{proposition}
+  For any assignment $M$ and proposition $P$ we have
+  \[
+    M \models P \iff \overline M \models \overline P.
+  \]
+\end{proposition}
+
+\begin{definition}[$n$-ary truth function]
+  An $n$-ary truth function is a function
+  $f \colon \{T, F\}^n \to \{T, F\}$.
+\end{definition}
+
+\begin{definition}[Truth function representation]
+  Let $A$ be a proposition comprised of $n$ atomic variables
+  $\{p_i\}_{i=1}^{n}$, and let $f$ be an $n$-ary truth function.
+  We say that $A$ represents $f$ if for every assignment
+  $M$ we have
+  \[
+    M \models A \iff
+    f(M(p_1),\dots,M(p_n)) = T.
+  \]
+\end{definition}
+
+\begin{example}
+  The proposition $A = p_1 \land \neg p_2$ represents the following
+  truth function:
+  \[
+    f(x,y) = T \iff x = F \tand y = F.
+  \]
+\end{example}
+
+\begin{definition}[Complete set of connectives]
+  A set of connectives $K$ is called complete if any $n$-ary truth
+  function can be represented using propositions that use connectives from 
+  $K$ alone.
+\end{definition}
+
+\begin{proposition}
+  The following sets of connectives are complete:
+  \begin{enumerate}
+    \item[(1)] $\{\neg, \land, \lor\}$.
+    \item[(2)] $\{\neg, \lor\}$.
+    \item[(3)] $\{\neg, \land\}$.
+    \item[(4)] $\{\neg, \implies\}$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{definition}[Literal]
+  A literal is an atomic formula or its negation.
+\end{definition}
+
+\begin{definition}[Disjunctive normal form]
+  A logical formula is considered to be in DNF if it is a disjunction of 
+  one or more conjunctions of one or more literals.
+\end{definition}
+
+\begin{remark}
+  A DNF formula is in full disjunctive normal form if each of its 
+  variables appears exactly once in every conjunction and each 
+  conjunction appears at most once (up to the order of variables).
+\end{remark}
+
+\begin{proposition}
+  For every natural $n$ and for any $n$-ary truth function $f$,
+  there exists a proposition $A$ in DNF form representing $f$.
+\end{proposition}
+
+\begin{proposition}
+  The set $\{\neg\}$ is not complete.
+\end{proposition}
+
+\begin{proposition}
+  The set $\{\land, \lor\}$ is not complete.
+\end{proposition}
+
+\begin{definition}[Monotonic truth function]
+  An $n$-ary truth function is called monotonic if there exists
+  $\alpha \in \{T, F\}^n$ such that $f(\alpha) = T$ and $f(\beta) = T$
+  if and only if for every $1 \le i \le n$ such that $\alpha_i = T$
+  we have $\beta_i = T$.
+\end{definition}
+
+\begin{remark}
+  The last definition is intuitive because we can change the order of
+  coordinates of $\alpha$ such that all the $T$ coordinates are an
+  initial segment of $\alpha$, and thus $f(\beta) = T$ if in that binary
+  sense $\beta > \alpha$.
+\end{remark}
+
+\begin{proposition}
+  A $n$-ary truth function can be represented using propositions that use
+  connectives from $\{\land, \lor\}$ alone if and only if it is monotonic.
+\end{proposition}
+
+\subsection{Propositional proof system}
+From now on we will assume all propositions are written using only 
+the connectives $\{\neg, \implies\}$.
+
+\begin{definition}[Propositional proof system]
+  A propositional proof system is comprised of
+  \begin{enumerate}
+    \item[(1)] A set of propositions called axioms.
+    \item[(2)] A set of rules of inference that allow us to deduce
+      propositions from previous propositions.
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}[Proof]
+  Given a set of propositions $\Sigma$ which we call the hypotheses,
+  and a proposition $A$, we say that $A$ is provable from $\Sigma$,
+  and denote $\Sigma \vdash A$
+  if there exists a finite sequence of propoisitions $B_1,\dots,B_n$
+  such that $B_n = A$ and for each $1 \le i \le n$, one of the
+  following holds:
+
+  \begin{itemize}
+    \item $B_i$ is an axiom.
+    \item $B_i \in \Sigma$ ($B_i$ is a hypothesis).
+    \item $B_i$ is deducible from the propositions preceding it in the 
+      sequence according to the rules of inference.
+  \end{itemize}
+
+  We call the sequence $\{B_i\}_{i=1}^{n}$ a proof for $A$.
+\end{definition}
+\begin{remark}
+  In the case $\Sigma = \emptyset$ we denote $\vdash A$.
+\end{remark}
+
+The following standard proof system is the standard proof system we
+use, and is sometimes called a Hilbert system.
+
+\begin{definition}[Standard propositional proof system]
+  The standard propositional proof system is comprised of the
+  following three axiom schemes:
+  \begin{enumerate}
+    \item[(1)] $p\to (q\to p)$
+    \item[(2)] $(p\to (q\to r))\to ((p\to q)\to (p\to r))$
+    \item[(3)] $(\neg p\to \neg q)\to (q\to p)$
+  \end{enumerate}
+  Where $p,q,r$ are propositions,
+  and the following rule of inference
+  \[
+    \begin{array}{c@{\,}l@{}}
+                & p         \\
+                & p \to q   \\ \cline{2-2}
+    \therefore  & q
+    \end{array}
+  \]
+  which is called Modus Ponens (MP).
+\end{definition}
+\begin{remark}
+  Notice that we wrote three axioms schemes in the system, but we
+  actually have infinitely many axioms.
+\end{remark}
+\begin{remark}
+  All axioms are tautologies.
+\end{remark}
+
+\begin{proposition}
+  For every proposition $A$ we have $\vdash A \implies A$.
+\end{proposition}
+
+\begin{definition}[Weak soundness]
+  A propositoinal system is called sound if every provable proposition
+  is a tautology. This can be written as
+  \[
+    \vdash A \quad\Rightarrow\quad \models A.
+  \]
+\end{definition}
+
+\begin{definition}[Weak completeness]
+  A propositoinal system is called complete if every tautology is
+  provable. This can be written as
+  \[
+    \models A \quad\Rightarrow\quad \vdash A.
+  \]
+\end{definition}
+
+\begin{theorem}\label{thm:weak-soundness}\tt{Weak Soundness Theorem}
+  The standrad proof system is sound.
+\end{theorem}
+\begin{proof}
+  To be added.
+\end{proof}
+
+\begin{theorem}\label{thm:weak-completeness}\tt{Weak Completeness Theorem}
+  The standrad proof system is complete.
+\end{theorem}
+
+In order to prove the completeness theorem we first have to prove
+some other theorems.
+
+\begin{theorem}\tt{Propositional Deduction Theorem}
+  Let $\Sigma$ be a set of propositions, let $A$ and $B$ be propositions.
+  Then the following are equivalent
+  \begin{itemize}
+    \item[(1)] $\Sigma \cup \{A\} \vdash B$.
+    \item[(2)] $\Sigma \vdash A \implies B$.
+  \end{itemize}
+\end{theorem}
+\begin{proof}
+  To be added.
+\end{proof}
+
+\begin{remark}
+  By the deduction theorem, it suffices to prove that $A \vdash A$
+  (which is trivial) to prove that $\vdash A \to A$ which was less
+  trivial.
+\end{remark}
+
+\begin{proposition}
+  Let $A$ and $B$ be propositions.
+  \begin{enumerate}
+    \item[(1)] $\vdash \neg A \implies (A \implies B)$.
+    \item[(2)] $\vdash (\neg A \implies A) \implies A$.
+    \item[(3)] $\vdash A \implies \neg \neg A$.
+    \item[(4)] $\vdash (A \implies B) \implies 
+      ((\neg A \implies B) \implies B)$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{proposition}[Principle of explosion]
+  Let $A$ and $B$ be propositions. Then
+  \[ A \implies (\neg A \implies B). \]
+\end{proposition}
+
+\begin{definition}[Consistency]
+  A set of propositions $\Sigma$ is called consistent if there does
+  not exist a proposition $A$ such that $\Sigma \vdash A$ and 
+  $\Sigma \vdash \neg A$. If $\Sigma$ is not consistent it is said
+  to be inconsistent.
+\end{definition}
+\begin{proposition}
+  Let $\Sigma$ be a set of propositions. Then the following are equivalent:
+  \begin{enumerate}
+    \item[(1)] $\Sigma$ is inconsistent.
+    \item[(2)] every proposition $A$ is provable from $\Sigma$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{definition}[Completeness of a set of propostions]
+  A set of propositions $\Sigma$ is said to be complete for for every
+  proposition $A$ we have
+  \[
+    \Sigma \vdash A \tor \Sigma \vdash \neg A.
+  \]
+\end{definition}
+
+We can conclude that if $\Sigma$ is consistent and complete then
+for every proposition $A$ exactly one of the following is true:
+\begin{enumerate}
+  \item[(1)] $\Sigma \vdash A$.
+  \item[(2)] $\Sigma \vdash \neg A$.
+\end{enumerate}
+
+\begin{theorem}\tt{The expansion theorem}
+  Let $\Sigma$ be a consistent set of propositions.
+  Then there exists a consistent set of propositions $\Sigma'$ such
+  that $\Sigma \subset \Sigma'$.
+\end{theorem}
+\begin{lemma}
+  Let $A$ be a proposition, let $\Sigma$ be a set of propositions such
+  that $\Sigma \nvdash A$. Then $\Sigma \cup \{\neg A\}$ is consisnent.
+\end{lemma}
+\begin{remark}
+  Notice that if $\Sigma$ were inconsistent, then from the principle
+  if inclusion and the deduction theorem we get that $\Sigma \vdash A$.
+  That is the reason why $\Sigma$ is not required to be consistent.
+\end{remark}
+
+\begin{proof}
+  Two proofs needed here.
+\end{proof}
+
+\begin{lemma}
+  Let $\Sigma$ be a complete and consistent set of propositions.
+  Then there exists an assignment $V$ such that for any proposition
+  $A$ we have
+  \[
+    \Sigma \vdash A \iff
+    V \models A
+  \]
+\end{lemma}
+\begin{proof}
+  Define the assignment $A \colon AP \to \{T,F\}$ as such:
+  \[
+    V(p) :=
+    \begin{cases}
+      T, &\Sigma \vdash p \\
+      F, &\Sigma \vdash \neg p
+    \end{cases}.
+  \]
+  It is well defined since $\Sigma$ is complete and consistent.
+  The proof this is the correct assignment follows from structural
+  induction.
+\end{proof}
+
+We can now proceed to prove \autoref{thm:weak-completeness}.
+\begin{proof}
+  To be added.
+\end{proof}
+
+\begin{definition}[Semantic consequence]
+  Let $\Sigma$ be a set of propositions, let $A$ be a proposition.
+  We denote $\Sigma \models A$ if for each assignment $V$ that satisfies
+  each $P \in \Sigma$ we have $V \models A$. We also say that $A$ is
+  a semantic consequence of $\Sigma$.
+\end{definition}
+\begin{remark}
+  Notice that in particular $\emptyset \models A$ if and only if $A$
+  is a tautology.
+\end{remark}
+
+\begin{theorem}\label{thm:strong-soundness}\tt{Strong Soundness Theorem}
+  Let $\Sigma$ be a set of propositions, let $A$ be a proposition.
+  Then
+  \[
+    \Sigma \vdash A \quad\Rightarrow\quad \Sigma \models A.
+  \]
+\end{theorem}
+
+\begin{theorem}\label{thm:strong-completeness}
+  \tt{Strong Completeness Theorem}
+  Let $\Sigma$ be a set of propositions, let $A$ be a proposition.
+  Then
+  \[
+    \Sigma \vdash A \quad\Rightarrow\quad \Sigma \models A.
+  \]
+\end{theorem}
+
+\begin{definition}[Model]
+  Let $\Sigma$ be a set of propositions, let $M$ be an assignment.
+  Then $M$ is said to be a model of $\Sigma$ if $M \models A$ 
+  for all $A \in \Sigma$.
+\end{definition}
+
+The following is a corollary from \autoref{thm:strong-soundness}
+and \autoref{thm:strong-completeness}.
+\begin{corollary}
+  Let $\Sigma$ be a set of propositions.
+  Then $\Sigma$ is consistent if and only if there exists a model to it.
+\end{corollary}
+\begin{proof}
+  $(\Rightarrow)$ Assume by contradiction that $\Sigma$ has no model.
+  Then by definition we have vacuously that $\Sigma \models B$ for
+  any proposition $B$. Then by the strong completeness theorem we have
+  that $\Sigma \vdash B$ for any $B$. In particular for an arbitraty
+  proposition $A$ we have $\Sigma \vdash A$ and $\Sigma \vdash \neg A$
+  which shows that $\Sigma$ is inconsistent. This contradiction completes
+  the proof of this direction.
+
+  $(\Leftarrow)$ Assume by contradiction that $\Sigma$ is inconsistent.
+  Then there exists some proposition $A$ such that $\Sigma \vdash A$
+  and $\Sigma \vdash \neg A$. Then by the strong soundness theorem
+  we have that $\Sigma \models A$ and $\Sigma \models \neg A$.
+  Since there does not exist an assignment $V$ such that $V \models A$
+  and $V \models \neg A$ we have that there does not exist a model
+  for $\Sigma$.
+\end{proof}
+
+\begin{theorem}\tt{Compactness theorem}
+  Let $\Sigma$ be a set of propositions.
+  Then there exists a model for $\Sigma$ if and only if
+  there exists a model for any finite subset of $\Sigma$.
+\end{theorem}
+\begin{proof}
+  $(\Rightarrow)$ Let $M$ be a model for $\Sigma$.
+  Then in particular $M$ is a model for any finite subset of $\Sigma$.
+
+  $(\Leftarrow)$ Now suppose that there does not exist a model for $\Sigma$.
+  From the above corollary that means that $\Sigma$ is inconsistent.
+  Thus exists a proposition $A$ such that
+  $\Sigma \vdash A$ and $\Sigma \vdash \neg A$.
+  Let $\Sigma' \subset \Sigma$ be the set of all propositions from
+  the proofs of $A$ and $\neg A$.
+  Then $\Sigma'$ is finite since all proofs are finite by definition,
+  and $\Sigma'$ is inconsistent because it can prove both $A$ and $\neg A$.
+  Thus, from the corollary above, there exists no model to $\Sigma'$.
+\end{proof}
+
+\begin{theorem}[De Bruijn–Erd\"os theorem]
+  Let $G = (V, E)$ be a countable graph.
+  Then the following are equivalent:
+  \begin{enumerate}
+    \item[(1)] $G$ is $k$-colorable.
+    \item[(2)] every finite subgraph of $G$ is $k$-colorable.
+  \end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+  Every planar graph is $4$-colorable.
+\end{corollary}
+
+Talk about Ramsey + Find the Ramsey theorem tex.
+
+\begin{definition}
+  Let $\Sigma$ be a set of propositions. Define
+  \[
+    \mu(\Sigma) := \set{M \mid M \models \Sigma}.
+  \]
+\end{definition}
+
+\subsection{Definability}
+
+\begin{definition}[Definability]
+  A set of assignments $\mathcal M$ is said to be definable if there
+  exists a proposition set $\Sigma$ such that $\mu(\Sigma) = \mathcal M$.
+  If $\mathcal M$ is definable by a finite proposition set $\Sigma$ it is
+  said to be finitely definable.
+\end{definition}
+
+\begin{example}
+  The set of all assignments $\mathcal M = \{F, T\}^{n}$ is definable
+  by any set of tautologies since all assignments satisfy all tautologies.
+\end{example}
+\begin{example}
+  The set $\mathcal M = \emptyset$ is definable by the proposition
+  $A = p \implies \neg p$ since there does not exist an assignment
+  that satisfies $A$.
+\end{example}
+
+\begin{proposition}
+  Must sets of assignments are undefinable.
+\end{proposition}
+\begin{proof}
+  It is clear that the cardinality of the set of all definable sets of 
+  assignments is smaller than the cardinality of the set of all
+  sets of proposition. Therefore there are at most $2^{\aleph_0}$
+  propositions.
+
+  Since the cardinality of the set of sets of assignments is
+  $2^{2^{\alpha_0}}$ the proposition follows.
+\end{proof}
+
+\begin{proposition}
+  For every assignment $V$ the set $\{V\}$ is definable.
+\end{proposition}
+\begin{proof}
+  Define
+  \[
+    \Sigma :=
+    \set{p \in AP \mid V(p) = T} \cup
+    \set{\neg p \in AP \mid V(p) = F}.
+  \]
+  We have that $\mu(\Sigma) = \{V\}$ which completes the proof.
+\end{proof}
+
+\begin{proposition}
+  The set $\mathcal M = \set{M \mid M \text{ is monotonic}}$ is definable.
+  In this question $M$ is monotonic if for all $i < j$ we have
+  $M(p_i) \Rightarrow M(p_j)$.
+\end{proposition}
+
+\begin{proposition}[Properties of definable sets]
+  \begin{enumerate}
+    \item[(1)] if $\Sigma_1 \subset \Sigma_2$ then
+      $\mu(\Sigma_1) > \mu(\Sigma_2)$.
+    \item[(2)] let $\{\mathcal M_i\}_{i \in I}$ be a set of definable sets.
+      Then $\cap_{i \in I} \mathcal M_i$ is definable.
+    \item[(3)] a finite union of definable sets is definable.
+    \item[(4)] any finitely definable set is definable by a single
+      proposition.
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+  \begin{enumerate}
+    \item[(1)] trivial.
+    \item[(2)] for any $\mathcal M_i$ there exists a set of propositions
+      $\Sigma_i$ such that $\mu(\Sigma_i) = \mathcal M_i$.
+      We will show that
+      \[
+        \bigcap_{i \in I} \mathcal M_i =
+        \mu\left(\bigcup_{i \in I} \Sigma_i\right).
+      \]
+      We have that
+      \[
+        V \in \mu\left(\bigcup_{i \in I} \Sigma_i\right) \iff
+        \forall i \in I \colon V \models \Sigma_i \iff
+        \forall i \in I \colon V \in \mu(\Sigma_i) = \mathcal M_i \iff
+        V \in \bigcap_{i \in I} \mathcal M_i.
+      \]
+    \item[(3)] it suffices to prove that if $\mathcal M_1$ and
+      $\mathcal M_2$ are definable then $\mathcal M_1 \cup \mathcal M_2$
+      is definable. Define
+      \[
+        \Sigma := \set{A_1 \lor A_2 \mid A_1 \in \Sigma_1 \land A_2 \in \Sigma_2}.
+      \]
+      We will show that $\mu(\Sigma) = \mathcal M_1 \cup \mathcal M_2$.
+      It is clear that $\mathcal M_1 \cup \mathcal M_2 \subset \mu(\Sigma)$.
+      Let $V \in \mu(\Sigma)$, and assume by contradiction that
+      $V \notin \mathcal M_1 \cup \mathcal M_2$.
+      Then there exist $A \in \Sigma_1$ and $B \in \Sigma_2$ such that
+      $V \nmodels A$ and $V \nmodels B$.
+      Since we have $A \lor B \in \Sigma$ we get that $V \notin \mu(\Sigma)$.
+      This contradiction shows that
+      $\mu(\Sigma) \subset \mathcal M_1 \cup \mathcal M_2$
+      which completes the proof.
+    \item[(4)] let $\mathcal M$ be finitely definable, let 
+      $\mathcal M = \mu(\Sigma)$ such that $\Sigma$ is finite.
+      Define
+      \[
+        \Sigma' := \set{\bigwedge_{i=1}^{n} A_i \mid A_i \in \Sigma}.
+      \]
+      It is clear that $\mu(\Sigma') = \mathcal M$ which completes the
+      proof.
+  \end{enumerate}
+\end{proof}
+
+Consider the space of all assignment $S := \{F, T\}^{AP}$.
+\begin{definition}[Convergence of assignments]
+  Let $\{M_i\}_{i=1}^{\infty} \subset S$.
+  We say that $\{M_i\}_{i=1}^{\infty}$ converges if for every $p \in AP$
+  the sequence $\{M_n(p)\}_{n=1}^{\infty}$ stablizes eventually.
+  If $\{M_i\}_{i=1}^{\infty}$ converges, we say that its limit is
+  the assignment $M$ such that $M(p)$ is the value to which
+  $\{M_n(p)\}_{n=1}^{\infty}$ stablizes.
+\end{definition}
+
+\begin{definition}[Closed set of assignments]
+  Let $\mathcal M$ be a set of assignments.
+  We say that $\mathcal M$ is closed if the limit of any convergent sequence
+  $\{M_n\}_{n=1}^{\infty} \subset \mathcal M$ is in $\mathcal M$.
+\end{definition}
+
+\begin{example}
+  The set $\mathcal M = \set{M \mid M \text{ is monotonic}} \setminus \{m_0\}$
+  such that $m_0(p) = T$ for any $p \in AP$ is not closed.
+  Choose the sequence $\{M_n\}_{n=1}^{\infty}$ such that
+  \[
+    M_n :=
+    \begin{cases}
+      T, &i \le n \\
+      F, &i > n
+    \end{cases}.
+  \]
+  The sequence $\{M_n\}_{n=1}^{\infty}$ converges to $m_0$ but 
+  $m \notin \mathcal M$.
+\end{example}
+
+\begin{proposition}
+  Let $\mathcal M$ be a set of assignment. Then
+  \[
+    \mathcal M \text{ is closed} \iff
+    \mathcal M \text{ is definable}.
+  \]
+\end{proposition}
+\begin{proof}
+  To be added.
+\end{proof}
+
+\begin{proposition}
+  Let $\mathcal M$ be a set of assignments. Then the following are equivalent:
+  \begin{enumerate}
+    \item[(1)] $\mathcal M$ is finitely definable.
+    \item[(2)] $\mathcal M$ is definable by a single proposition.
+    \item[(3)] $\mathcal M$ is definable and $\mathcal M^c$ is definable.
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+  We proved direction $(1) \to (2)$ before.
+  \begin{enumerate}
+    \item[$(2) \to (3)$] let $\mathcal M = \mu(\{A\})$.
+      Then $\mathcal M = \mu(\{\neg A\})$.
+    \item[$(3) \to (1)$] to be added.
+  \end{enumerate}
+\end{proof}
+
+\section{Structures}
+\subsection{Definitions}
+\begin{definition}[Strcture]
+  A structure $\M$ is composed of
+  \begin{itemize}
+    \item A nonempty set $U^\M$ called the universe of $\M$;
+    \item Constants, which are distinguished elemenets of $U^\M$;
+    \item Functions of the form $f \colon (U^\M)^n \to U^\M$;
+    \item Relations of the form $R \subseteq (U^\M)^n$.
+  \end{itemize}
+\end{definition}
+
+\begin{example}\label{example:group-structure}
+  The structure of the integers as an additive group would be defined
+  as such:
+  \begin{itemize}
+    \item $U^\M = \Z$;
+    \item $e^\M = 0$ as the zero element (a constant);
+    \item $f^\M$ a binary function defined as $f(z_1,z_2) = z_1 + z_2$ 
+      (addition function);
+    \item $g^\N$ a unary function defined as $g(z) = -z$ (inverse function);
+    \item No relations except the equality relation.
+  \end{itemize}
+\end{example}
+
+\begin{definition}[Language]
+  A Language $\L$ is composed of
+  \begin{itemize}
+    \item Constant symbols ($c$, $d$, \dots);
+    \item Function symbols ($f$, $g$, \dots), each one with a given arity;
+    \item Relation symbols ($R$, $P$, \dots), each one with a given arity;
+    \item Binary equality symbol $=$ (optional);
+    \item Connectives ($\land$, $\lor$, $\neg$, $\implies$, $\equiv$);
+    \item Variables ($x$, $y$, $z$);
+    \item Quantifiers ($\exists$, $\forall$).
+  \end{itemize}
+\end{definition}
+
+\begin{definition}[A Language for a model]
+  We say that $\L$ is a model for a model $\M$ if
+  \begin{itemize}
+    \item For each constant symbol $c \in \mathcal L$ there exists a constant
+      $c^\M \in \M$.
+    \item For each $n$-ary function symbol $f \in \mathcal L$ there exists 
+      a $n$-ary function $f^\M \in \M$.
+    \item For each $n$-ary relation symbol $R \in \mathcal L$ there exists 
+      a $n$-ary relation $R^\M \in \M$.
+  \end{itemize}
+\end{definition}
+
+\begin{example}[Language of groups]
+  The language of groups $\L_G$ contains
+  \begin{itemize}
+    \item A single constant symbol called $e$ (the unit);
+    \item A single binary function symbol $f$ (the group operation);
+    \item A single unary function symbol $g$ (the inverse operation);
+    \item The equatility symbol $=$ (for comparing elements).
+  \end{itemize}
+  We can see that the language $\L_G$ is a language for the structure
+  from Example \ref{example:group-structure}.
+\end{example}
+\begin{remark}
+  Notice that the language $\L_G$ is not specific for the model from
+  Example \ref{example:group-structure}, and it is a language for
+  all models of a groups.
+\end{remark}
+
+\begin{definition}[Atomic term]
+  An atomic term is a constant symbol, or a variable.
+\end{definition}
+
+\begin{definition}[Term]
+  Denote $T_0$ the set of atomic terms.
+  Recursively define the set $T_n$, assuming that the sets $T_k$ for $k < n$
+  are all defined. Define
+  \begin{small}
+  \[
+    T_n := \set{f(x_1,\dots,x_k) \mid
+    x_1,\dots,x_k \in \bigcup_{k < n} T_n \text{ and $f$ is a $k$-ary 
+    function symbol and } \exists i \st x_i \in T_{n-1}}
+  \]
+  \end{small}
+  and then the set $T$ defined as
+  \[
+    T := \bigcup_{n=0}^{\infty} T_n
+  \]
+  is called the set of terms, and a term is an element of $T$.
+\end{definition}
+
+Let $\L$ be a language. We can now define formulas in $\L$.
+
+\begin{definition}[Atomic formula]
+  An atomic formula is an expression of the form $R(t_1,\dots,t_k)$ such
+  that $R$ is a $k$-ary relation symbol in $\L$ and $t_1,\dots,t_k$ are
+  terms.
+
+
+
+  
+
+
+
+\end{definition}
+
+\begin{definition}[Formula]
+  Denote $F_0$ the set of atomic formulas.
+  Recursively define the set $F_n$, assuming that the sets $F_k$ for $k < n$
+  are all defined.
+  An element of $F_n$ (a formula of depth $n$) is one of the following:
+  \begin{itemize}
+    \item $\neg (\beta)$ such that $\beta \in F_{n-1}$;
+    \item $\alpha * \beta$ for $* \in \{\land, \lor, \implies\}$,
+      $\alpha,\beta \in \bigcup_{k < n} F_k$ and at least one of 
+      $\alpha,\beta$ is of depth $n-1$;
+    \item $\exists x(\beta)$ such that $\beta \in F_{n-1}$ and $x$ is
+      a variable;
+    \item $\forall x(\beta)$ such that $\beta \in F_{n-1}$ and $x$ is
+      a variable.
+  \end{itemize}
+  The set of formulas is defined as
+  \[
+    F := \bigcup_{n=0}^{\infty} F_n
+  \]
+  and a formula is an element of $F$.
+\end{definition}
+
+\begin{remark}
+  The range in a formula where a quantifier is engaged in is called the
+  \emph{scope} of the quantifier.
+\end{remark}
+
+\begin{example}[Formulas of group theory]
+  Recall the language of group theory $\L_G$.
+  The formulas of group theory are
+  \begin{itemize}
+    \item $(\forall x)((f(x,e) = x) \land (f(e,x) = x))$ (Unit element);
+    \item $(\forall x)((f(x,g(x)) = e) \land (f(g(x),x) = e))$
+      (Group operation is commutative);
+    \item $(\forall x)(\forall y)(\forall z)
+      (f(f(x,y),z) = f(x,f(x,y)))$ (Associativity);
+  \end{itemize}
+\end{example}
+
+\begin{definition}[Substitution]
+  Let $\M$ be a model and let $\L$ be a language for $\M$.
+  Denote $V$ the set of variables in $L$.
+  A substitution is a function $S \colon V \to W^\M$.
+\end{definition}
+
+We can actually naturally expand a substitution $S$ to a function of
+the form $S^* \colon T \to W^\M$.
+We define $S^*$ inductively on the depth of the term $t \in T$.
+\begin{itemize}
+  \item if $t$ is a variable we define $S^*(t) = S(t)$;
+  \item if $t$ is a constant symbol we define $S^*(t) = c^\M$.
+\end{itemize}
+Now since we defined $S^*$ on terms of depth $0$ we can assume that $S^*$
+is defined on all terms of depth $k < n$ and define it for terms of depth
+$n$.
+
+Let $t \in T_n$. Then $t$ is of the form $f(t_1,\dots,t_k)$ for
+$t_1,\dots,t_k$ for which the function $S^*$ is already defined.
+We define
+\[
+  S^*(t) := f^M(S^*(t_1),\dots,S^*(t_k)).
+\]
+This completes the expansion we wanted.
+
+\begin{definition}[Satisfiability in a model]
+  Let $\M$ be a model and let $\L$ be a language for $\M$.
+  We will define when $\M$ satisfies a formula $\alpha$ under a
+  substitution $S$. In this case we denote $\M \models_S \alpha$.
+
+  In the case of formulas of depth $0$ we have that 
+  $\alpha = R(t_1,\dots,t_k)$ for some $t_1,\dots,t_k \in T$.
+  We define
+  \[
+    \M \models_S \alpha \iff (S^*(t_1),\dots,S^*(t_k)) \in R^\M.
+  \]
+
+  Inductively, for formulas of greater depthes we define
+  \begin{itemize}
+    \item if $\alpha = \neg \beta$ then $\M \models_S \alpha$ if and only
+      if $M \nmodels_S \beta$.
+    \item if $\alpha = \beta \lor \gamma$ then $\M \models_S \alpha$ if and 
+      only if $\M \nmodels_S \beta$ or $\M \nmodels_S \gamma$.
+    \item if $\alpha = \beta \land \gamma$ then $\M \models_S \alpha$ if and 
+      only if $\M \nmodels_S \beta$ and $\M \nmodels_S \gamma$.
+    \item if $\alpha = \beta \implies \gamma$ then $\M \nmodels_S \alpha$ 
+      if and only if $\M \models_S \beta$ and $\M \nmodels_S \gamma$.
+    \item if $\alpha = \beta \equiv \gamma$ then $\M \models_S \alpha$ 
+      if and only if $\M \models_S \beta$ and $\M \models_S \gamma$ or
+      $\M \nmodels_S \beta$ and $\M \nmodels_S \gamma$.
+    \item if $\alpha = \exists x(\beta)$ then $\M \models_S \alpha$ if
+      and only if exists a substitution $S'$ that agrees with $S$ on all
+      variables except possibly for $x$ we have $\M \models_{S'} \beta$.
+    \item if $\alpha = \forall x(\beta)$ then $\M \models_S \alpha$ if
+      and only if for all substitutions $S'$ that agrees with $S$ on all
+      variables except possibly for $x$ we have $\M \models_{S'} \beta$.
+  \end{itemize}
+\end{definition}
+
+\begin{definition}[Formula true in a model]
+  Let $\M$ be a model, let $\L$ be a language for $\M$, 
+  and let $\alpha$ language $\L$.
+  We say that $\alpha$ is true in $\M$ if $\M \models_S \alpha$ for any
+  substitution $S$.
+  In this case, we write $\M \models \alpha$.
+\end{definition}
+
+\begin{definition}[Formula true in a language]
+  Let $\M$ be a model, let $\L$ be a language for $\M$, 
+  and let $\alpha$ language $\L$.
+  We say that $\alpha$ is true if $\M \models \alpha$ for all
+  structures $\M$.
+  In this case, we write $\models \alpha$.
+\end{definition}
+
+\begin{example}
+  In the language of group theory, the formula
+  \[
+    \alpha = (\forall x)(\forall y)(f(x,y) = f(y,x))
+  \]
+  is true in all models of abelian groups, but is not true in the language
+  of group theory in general.
+\end{example}
+
+\begin{definition}[Bound and free instances of varaibles]
+  For a formula $\alpha$, and instance of a variable $x$ in $\alpha$
+  is called bound if it is inside the scope of a quantifier, and it is called
+  free otherwise.
+\end{definition}
+
+\begin{example}
+  \[
+    \alpha = (\forall x)(R(\underbrace{x}_{\mathclap{
+    \substack{\text{bound} \\ \text{instance}}}})) 
+    \land Q(\underbrace{x}_{\mathclap{
+    \substack{\text{free} \\ \text{instance}}}},y)
+  \]
+\end{example}
+
+\begin{definition}[Free variables]
+  We say that a variable $x$ is free in $\alpha$ if it has at least one 
+  free instance in $\alpha$.
+\end{definition}
+\begin{remark}
+  We denote by $FV(\alpha)$ the set of free variables in $\alpha$.
+\end{remark}
+
+\begin{definition}[Sentence]
+  Let $\alpha$ be a formula.
+  If $FV(\alpha) = \emptyset$, then $\alpha$ is called a sentence.
+\end{definition}
+
+\begin{proposition}
+  Let $\alpha$ be a formula.
+  Suppose that $S_1$ and $S_2$ are substitutions such that $S_1(x) = S_2(x)$
+  for all $x \in FV(\alpha)$.
+  Then
+  \[
+    \M \models_{S_1} \alpha \iff
+    \M \models_{S_2} \alpha.
+  \]
+\end{proposition}
+
+\begin{remark}
+  We notice that for any model $\M$, substitution $S$, and formula $\beta$
+  we have that
+  \[
+    \M \models_S (\forall x)(\exists x) \beta \iff
+    \M \models_S (\exists x) \beta
+  \]
+\end{remark}
+
+\begin{corollary}
+  If $\alpha$ is a sentence then $\M \models \alpha$ or 
+  $\M \models \neg \alpha$.
+\end{corollary}
+
+\begin{remark}
+  Let $S$ be a substitution, let $x$ be a variable, let $w \in W^\M$.
+  From now on we denote $S^{x \gets a}$ the substitution that agrees
+  with $S$ on all variables execpt for $x$, and $S^{x \gets a}(x) = a$.
+\end{remark}
+
+% Some more stuff may be here
+
+\begin{definition}[Theory]
+  A collection of sentences in predicate logic is called a theory.
+\end{definition}
+
+\begin{definition}[Structure of a theory]
+  A structure $\M$ is a structure in a theory $\Sigma$ if for all
+  $\alpha \in \Sigma$ we have $\M \models \alpha$.
+\end{definition}
+
+\begin{remark}
+  We denote $\MOD(\Sigma)$ to be the collection of all structures that
+  satisfy $\Sigma$.
+\end{remark}
+
+\begin{remark}
+  We denote $\Theory(\M)$ to be the collection of all formulas $\alpha$
+  such that $\M \models \alpha$.
+\end{remark}
+
+\begin{definition}[Elementary equivalence]
+  We say that two structures $\M_1$, $\M_2$ are said to be elementary 
+  equivalent if $\Theory(\M_1) = \Theory(\M_2)$.
+\end{definition}
+
+\begin{definition}[Isomorphism of structures]
+  We say that two structures $\M_1$, $\M_2$ are isomorphic
+  if exists a bijection $f \colon W^{\M_1} \to W^{\M_2}$ that preserves
+  all functions and relations between the models and also
+  for all constants $c^{\M_1}$ we have $f(c^{\M_1}) = c^{\M_2}$.
+\end{definition}
+
+\begin{proposition}
+  Models that are isomorphic are elementarily equivalent.
+\end{proposition}
+\begin{remark}
+  Not all elementarily equivalent models are isomorphic.
+\end{remark}
+
+\begin{example}[Peano theory]
+  The language $\L_P$ has the constant symbol $0$, the function symbols
+  $+$ and $*$, the unary increment function symbol $S$, and the relation
+  symbol $<$. The axioms (sentences) in the theory are:
+  \begin{enumerate}
+    \item [(1)] $(\forall x)(\neg (S(x) = 0))$;
+    \item [(2)] $(\forall x)(\forall y)(S(x) = S(y) \implies x =y)$;
+    \item [(3)] $(\forall x)(x + 0 = x)$;
+    \item [(4)] $(\forall x)(\forall y)(x + S(y) = S(x + y))$;
+    \item [(5)] $(\forall x)(x * 0 = 0)$;
+    \item [(6)] $(\forall x)(\forall y)(S(x) * y = x * y + x)$;
+    \item [(7)] $(\forall x)(\neg (x < 0))$;
+    \item [(8)] $(\forall x)(\forall y)
+      (x < S(y) \implies (x < y) \lor (x=y))$;
+    \item [(9)] $(\forall x)(\forall y)(x < y \lor y < x \lor x = y)$;
+    \item [(10)] For every $\varphi$ such that $x$ is a free variable 
+      we have $\varphi_x(0) \implies \left(\left[(\forall x)
+      (\varphi \implies \varphi_x(S(x)))\right] \implies \varphi \right)$.
+  \end{enumerate}
+\end{example}
+
+Similarly, we can define the theory of ZFC (set theory), field theory,
+group theory, and all other theories we have encountered so far.
+
+\begin{definition}[Free substitution]
+  Given a formula $\alpha$, a variable $x$, and a term $t$,
+  a free substitution of $t$ for $x$ is a substitution of every
+  free instance of $x$ in $\alpha$ by $t$.
+\end{definition}
+
+\begin{definition}[Partial free substitution]
+  Given a formula $\alpha$, a variable $x$, and a term $t$,
+  a partial free substitution of $t$ for $x$ is a substitution of some
+  free instances of $x$ in $\alpha$ by $t$.
+\end{definition}
+
+\begin{definition}[Collision-free substitution]
+  A free substitution of $t$ for $x$ in $\alpha$ is said to collide 
+  if there exists a variable $y$ such that:
+  \begin{enumerate}
+    \item [(1)] $y$ appears in $t$;
+    \item [(2)] there exists a free instance of inside the scope of
+      quantifiers of $y$ like $\forall y$ or $\exists y$.
+  \end{enumerate}
+  The variable $y$ is said to be captured by $\alpha$.
+  If there are no collisions, the substitution is said to be 
+  collision-free.
+\end{definition}
+
+\begin{remark}
+  We can see that a subtitution is not collision-free if there exists
+  a variable $y$ in $\alpha$ such that after the substitution the number
+  of bound instances of $y$ increases.
+\end{remark}
+
+\begin{example}
+  The substitution of $x$ to $y$ in $\alpha$ where $\alpha$ is defined
+  as
+  \[
+    \alpha := (\exists y)(\neg (x = \underbrace{y}_{\mathclap{
+    \substack{\text{bound} \\ \text{instance}}}}))
+  \]
+  is not collision-free since $y$ is captured by $\alpha$.
+  After the substitution we get
+  \[
+    \alpha := (\exists y)(\neg (y = y))
+  \]
+  which has two bound instances of $y$.
+\end{example}
+
+\begin{proposition}
+  Let $\alpha$ be a formula, $x$ a variable, and $t$ a term.
+  Let $\alpha(t)$ be the free substitution of $t$ for $x$.
+  Then if the substitution is collision-free,
+  then $\models (\forall x) \alpha \implies \alpha(t)$.
+\end{proposition}
+
+This proposition is pretty much like saying ``if the formula is true
+for the free variable $x$, we can change all instances of $x$ for
+any term $t$ and it will still be true.''
+
+Now let $\alpha$ be a formula, and denote $\alpha(t)$ the formula after
+partially substituting $x$ for $t$ without collisions.
+Is $\forall(x) \alpha \implies \alpha(t)$ true?
+
+It turns out that the answer is no.
+Let $\alpha$ be the formula $x = x$.
+We can substitute $x$ for $y$ in the first instance such that
+$\alpha(t)$ is the formula $y = x$ and now it is clear that
+$\forall(x) x = x \implies y=x$ is not true,
+because it is not true in any model with more than one element,
+and any substitution such that $S(x) \neq S(y)$.
+
+Notice that just like we saw earlier that any proposition in
+propositional logic is logically equivlent to a proposition that
+only uses the connectives $\{\implies, \neg\}$,
+from the definition of logical equivallency above, we have that
+$\exists \alpha$ is logically equivalent to $\neg \forall \neg \alpha$.
+Thus, we can reduce all formulas formulas using $\{\implies, \neg\}$
+and the quantifier $\forall$.
+
+We can now talk about the proof system for predicate logic.
+
+\subsection{Predicate logic proof system}
+\begin{definition}[Predicate logic proof system]
+  A predicate logic system is comprised of
+  \begin{enumerate}
+    \item[(1)] A set of formulas called axioms.
+    \item[(2)] A set of rules of inference that allow us to deduce
+      formulas from previous formulas.
+  \end{enumerate}
+\end{definition}
+
+The definition for a proof in predicate logic is very similar to a
+proof in propositional logic, and we denote $\vdash \alpha$ and
+$\Sigma \vdash \alpha$ correspondingly.
+
+\begin{definition}[Standard predicate logic proof system]
+  The standrad predicate logic proof system is comprised of the
+  following three connective axiom schemes:
+  \begin{enumerate}
+    \item[(1)] $p\to (q\to p)$;
+    \item[(2)] $(p\to (q\to r))\to ((p\to q)\to (p\to r))$;
+    \item[(3)] $(\neg p\to \neg q)\to (q\to p)$;
+  \end{enumerate}
+  where $p,q,r$ are formulas.
+  The following two quantifier axiom schemes:
+  \begin{enumerate}
+    \item[(4)] $((\forall x) \alpha) \implies a(t)$ (where $\alpha(t)$
+      is a collision-free substitution of $x$ for $t$ in $\alpha$);
+    \item[(5)] $(\forall x)(\alpha \implies \beta) \implies
+      (\alpha \implies (\forall x)\beta)$ (for $x \notin FV(\alpha)$);
+  \end{enumerate}
+  The following two equality axioms:
+  \begin{enumerate}
+    \item[(6)] $(\forall x)(x = x)$;
+    \item[(7)] $(x = y) \implies (\alpha \implies \alpha(y))$ (where
+      $\alpha(y)$ is a partiall collision-free substitution of $x$
+      for $y$ in $\alpha$);
+  \end{enumerate}
+  and the following two rules of inference
+  \[
+    \begin{array}{c@{\,}l@{}}
+                & \alpha         \\
+                & \alpha \to \beta   \\ \cline{2-2}
+    \therefore  & \beta
+    \end{array} \tand
+    \begin{array}{c@{\,}l@{}}
+                & \\
+                & \alpha         \\ \cline{2-2}
+    \therefore  & (\forall x)\alpha
+    \end{array}
+  \]
+  which are called Modus Ponens (MP) and Universal Introduction (GEN)
+  correspondingly.
+\end{definition}
+
+\begin{remark}
+  Notice that the axioms are true in any language.
+\end{remark}
+
+Here are some examples for proofs in predicate logic.
+
+\begin{proposition}
+  $(\forall x)(\forall y) \alpha \vdash (\forall y)(\forall x) \alpha$.
+\end{proposition}
+\begin{proof}
+  \begin{enumerate}
+    \item $(\forall x)(\forall y) \alpha \implies (\forall y) \alpha$ 
+      ($A_4$)
+    \item $(\forall x)(\forall y) \alpha$ (hypothesis)
+    \item $(\forall y) \alpha$ (MP)
+    \item $(\forall y) \alpha \implies \alpha$ ($A_4$)
+    \item $\alpha$ (MP)
+    \item $(\forall x) \alpha$ (GEN)
+    \item $(\forall y)(\forall x) \alpha$ (GEN)
+  \end{enumerate}
+\end{proof}
+
+\begin{definition}[Weak soundness]
+  A proof system of predicate logic is called sound if every provable 
+  formula is true.
+\end{definition}
+
+\begin{definition}[Strong soundness]
+  A proof system of predicate logic is called strongly sound if every 
+  set of formulas $\Sigma$, if $\Sigma \vdash \alpha$ then
+  $\alpha$ is true in every model of $\Sigma$.
+\end{definition}
+
+\begin{definition}[Weak completeness]
+  A proof system is called complete if every true formula is provable.
+\end{definition}
+
+\begin{definition}[Weak completeness]
+  A proof system is called complete if for every $\Sigma$, any formula 
+  $\alpha$ that is true in every model of $\Sigma$, then 
+  $\Sigma \vdash \alpha$.
+\end{definition}
+
+
+\begin{theorem}\tt{Weak Soundness Theorem}
+  The standrad proof system is strongly sound.
+\end{theorem}
+\begin{proof}
+  To be added.
+\end{proof}
+
+\begin{theorem}\tt{Strong Completeness Theorem}
+  The standrad proof system is strongly complete.
+\end{theorem}
+
+\begin{theorem}\tt{Compactness theorem}
+  Let $\Sigma$ be a set of formulas.
+  Then there exists a model for $\Sigma$ if and only if
+  there exists a model for any finite subset of $\Sigma$.
+\end{theorem}
+
+The previous theorems were almost identical in propositional logic,
+however, we can see by example that the deduction theorem is not
+true in predicate logic.
+
+\begin{example}
+  We notice that $\{\alpha\} \vdash (\forall x) \alpha$ immediately
+  from the inference rule GEN.
+  Next assume that $\vdash \alpha \implies (\forall x) \alpha$.
+  From soundness, we have that $\alpha \implies (\forall x) \alpha$
+  must be a tautology.
+  However, for a model $\M$ with $U^\M = \{0,1\}$ and 
+  $\alpha \colon x = y$ and a substitution $S(x) = 0 = S(y)$ we get
+  $\M \nmodels_S (x = y) \implies (\forall x)(x = y)$.
+  This contradiction serves as a counterexample for the deduction theorem
+  in predicate logic.
+\end{example}
+
+\begin{definition}[Consistency of formulas]
+  A collection of formulas $\Sigma$ is called inconsistent if there 
+  exists a formula $\alpha$ such that $\Sigma \vdash \alpha$ and
+  $\Sigma \vdash \neg \alpha$.
+  A collection of formulas is called consistent if it is not inconsistent.
+\end{definition}
+
+\begin{proposition}
+  A set of formulas $\Sigma$ is inconsistent if and only if for every 
+  formula $\alpha$, we have $\Sigma \vdash \alpha$.
+\end{proposition}
+
+\begin{proposition}
+  Let $\Sigma$ be a collection of formulas.
+  Then $\Sigma$ has a model if and only if $\Sigma$ is consistent.
+\end{proposition}
+
+\begin{theorem}\label{thm:finite-infinite}
+  Let $\Sigma$ be a set of formulas in the language $\L$.
+  Suppose that for each natural $n$ there exists a model $\M_n$ of 
+  $\Sigma$ such that $|\M_n| \geq n$, 
+  then for any infinite cardinal $\kappa$, there exists a model 
+  $\M$ of $\Sigma$ such that $|W^\M| \geq \kappa$.
+\end{theorem}
+\begin{proof}
+  To be added.
+\end{proof}
+
+\subsection{Infinitesimals}
+Consider the set of real number $\R$.
+We define a language $\L$ that comprises of the following:
+\begin{itemize}
+  \item for each $r \in \R$ we define a constant symbol $c_r$ to
+    represent it.
+  \item for each real valued function $g \colon \R^k \to \R$ we define
+    a function symbol $f_g$ to represent it.
+  \item for each order relation $\Q \subset \R^k$ we define a relation
+    symbol $R_Q$ to represent it.
+\end{itemize}
+
+In this way, we constructed a language that contains all the information
+on $\R$ that can be encoded using first order logic.
+
+It is clear that $\L$ is a language for the structure $\R$.
+
+Now we can consider $\Theory(\R)$ which is the set of all formulas
+which are true in $\R$.
+
+We now extend the language $\L$ to a new language $\L'$ be adding
+a constant symbol $c_\infty$. We also extend $\Theory(\R)$ be adding
+all the formulas $\{c_\infty > c_n\}_{n \in \N}$. We denote this
+new theory by $\Theory_\infty(\R)$. We will try showing that 
+$\Theory_\infty(\R)$ has a model.
+
+Suppose $\Theory_\infty(\R)$ had a model, then that model must contain
+a subset that is isomorphic to $\R$.
+It must also have an interpretation for $c_\infty$ which will denote 
+as $\infty$.
+This makes $\frac{1}{\infty}$ an infinitesimal.
+
+We will show that $\Theory_\infty(\R)$ has a model using the compactness
+theorem.
+Let $T \subset \Theory_\infty(\R)$ be finite.
+We see that $\R$ is a model for $T$ since $T$ finite,
+and therefore there must exist a finite $A \subset \N$ such that
+$T = \{c_\infty > c_n\}_{n \in A} \cup T'$ such that 
+$T' \subset \Theory(\R)$.
+We can interpret $c_\infty$ as $r := 1 + \max A$, and now it is
+clear that $\R$ is a model for $T$.
+From compactness it follows that $\Theory_\infty(\R)$ has a model
+as wanted.
+
+\subsection{Definablility}
+Recall that two structures $\M_1$, $\M_2$ are said to be elementary 
+equivalent if $\Theory(\M_1) = \Theory(\M_2)$.
+
+\begin{definition}[Equivalency of theoreies]
+  Two theories $\Sigma_1$, $\Sigma_2$ are said to be equivalent if
+  $\MOD(\Sigma_1) = \MOD(\Sigma_2)$.
+\end{definition}
+
+\begin{definition}[Definability of structures]
+  A collection of structures $\mathfrak M$ is said to be definable
+  if there exists a theory $\Sigma$ such that $\MOD(\Sigma) = \mathfrak M$.
+\end{definition}
+
+\begin{example}
+  For a language $\L$ with a single constant symbol $c$ we have
+  \[
+    \MOD(\{(\forall x)(\forall y)(x = y)\}) =
+    \set{\M \colon |W^\M| = 1}.
+  \]
+  which shows that $\set{\M \colon |W^\M| = 1}$ is definable.
+\end{example}
+
+\begin{example}
+  The structure collection
+  \[
+    \mathfrak M := \set{\M \mid \text{$\M$ is a finite field}}
+  \]
+  is not definable.
+  Assume by contradiction that existed $\Sigma$ such that 
+  $\MOD(\Sigma) = \mathfrak M$, then from 
+  \autoref{thm:finite-infinite}
+  we have that exists an infinite model $\M_\infty$ for $\Sigma$.
+  This shows that $\M_\infty \in \MOD(\Sigma)$, but by definition
+  $\M_\infty \notin \mathfrak M$.
+  This contradicts our assumption and completes the proof.
+\end{example}
+
+% \begin{example}
+%   The set $\mathfrak M := \{\M^\R\}$ such that $\M^\R$ is a model for $\R$
+%   is not definable.
+%   Assume by contradiction that exists $\Sigma$ such that 
+%   $\MOD(\Sigma) = \mathfrak M$, then we can consider the structure
+%   $\M^\R_\infty$ of the infinitesimals.
+%   We have that $\M_\R^\infty \in \MOD(\Sigma)$ and since
+%   $\$
+
+\begin{proposition}
+  Let $\Sigma$ be a theory. Then exists a theory $\Sigma'$ that only contains
+  sentences that is equivalent to $\Sigma$.
+\end{proposition}
+
+\begin{theorem}\tt{Löwenheim-Skolem}
+  Let $\Sigma$ be a consistent collection of formulas over a language $\L$,
+  that has a finite model. Thus, for an cardinality $\kappa$ satisfying
+  $\kappa \geq |L|$ there exists a model $\M$ of $\Sigma$ such that
+  $|W^\M| = \kappa$.
+\end{theorem}
+
+\begin{proposition}
+  Let $\mathfrak M_1$, $\mathfrak M_2$ be definable collections of structures
+  over the language $\L$ such that 
+  $\mathfrak M_1 \cap \mathfrak M_2 = \emptyset$.
+  Then exists a formula that is true in all models in $\mathfrak M_1$
+  and false in all models in $\mathfrak M_2$.
+\end{proposition}
+\begin{proof}
+  Let $\Sigma_1$, $\Sigma_2$ be the collections of formulas that define
+  $\mathfrak M_1$, $\mathfrak M_2$.
+  It follows that
+  \[
+    \MOD(\Sigma_1 \cup \Sigma_2) =
+    \mathfrak M_1 \cap \mathfrak M_2 =
+    \emptyset.
+  \]
+  By a previous proposition this means that $\Sigma_1 \cup \Sigma_2$ is
+  inconsistent, therefore exists a formula $\alpha$ such that
+  $\Sigma_1 \cup \Sigma_2 \vdash \alpha$ and
+  $\Sigma_1 \cup \Sigma_2 \vdash \neg \alpha$.
+  TO BE CONTINUED
+\end{proof}
+
+\begin{definition}[Definable relation]
+  Let $\L$ be a language, let $\M$ be a model for $\L$.
+  An $n$-ary relation $P \subset (W^\M)^n$ is said to be definable if there
+  exists a formula $\alpha(x_1,\dots,x_n)$ with $n$ free variables 
+  $x_1,\dots,x_n$ such that for any substitution $V$ we have
+  \[
+    \M \models_V \alpha(x_1,\dots,x_n) \iff
+    (V(x_1),\dots,V(x_n)) \in P.
+  \]
+\end{definition}
+
+\begin{example}[Definable number]
+  Consider a language with addition and multiplication and the structure
+  of $(\R,+,*)$ equipped with standard addition and multiplication.
+  We say that $r \in \R$ is definable when there exists a formula
+  $\alpha(x)$ with a single free variable $x$ such that
+  \[
+    \M \models_V \alpha(x) \iff
+    V(x) = r.
+  \]
+\end{example}
+
+\begin{itemize}
+  \item the number $0$ is definable by the formula 
+    $\alpha_0(x) \colon (\forall y)(y + x = y)$.
+  \item the number $1$ is definable by the formula
+    $\alpha_1(x) \colon (\forall y)(y * x = y)$.
+  \item the set of definable numbers must be finite or countable since the
+    number of formulas in a language is always countable.
+    This shows that most real numbers are not definable.
+  \item the set of nonnegative real numbers is definable by the formula
+    $\alpha_{\geq 0}(x) \colon (\exists y)(x = y * y)$.
+  \item the relation $\le$ on $\R$ is definable by the formula
+    $\alpha_{x < y}(x,y) \colon (\exists c)(x + c * c = y)$.
+  \item the number $\sqrt{2}$ is definable by the formula
+    $\alpha_{\sqrt 2}(x) \colon (\exists z)(\alpha_1(z) \land (x * x = z + z)
+    \land \alpha_{\geq 0}(x))$.
+\end{itemize}
+
+\begin{proposition}
+  The set of definable numbers is a subfield of $(\R,+,*)$.
+\end{proposition}
+\begin{proof}
+  We need to show that
+  \begin{enumerate}
+    \item[(1)] $0$ and $1$ are definable.
+    \item[(2)] closure under addition and multiplication.
+    \item[(3)] closure under the additive and multiplicative 
+      inverse operations.
+  \end{enumerate}
+  As we saw earlier $0$ and $1$ are definable. Let $a,b \in \R$ be definable
+  with formulas $\alpha_a(x)$ and $\alpha_b(x)$. We can see that
+  \begin{align*}
+    &\alpha_{a+b}(x) \colon (\exists x_1)(\exists x_2)
+      (\alpha_a(x_1) \land \alpha_b(x_2) \land x = x_1 + x_2); \\
+    &\alpha_{a*b}(x) \colon (\exists x_1)(\exists x_2)
+      (\alpha_a(x_1) \land \alpha_b(x_2) \land x = x_1 * x_2);
+  \end{align*}
+  which proves condition $(2)$.
+  Similarly, we have
+  \begin{align*}
+    &\alpha_{a^{1}}(x) \colon (\exists x_1)(\exists x_2)
+      (\alpha_a(x_1) \land \alpha_1(x_2) \land x * x_1 = x_2); \\
+    &\alpha_{-a}(x) \colon (\exists x_1)(\exists x_2)
+      (\alpha_a(x_1) \land \alpha_0(x_2) \land x + x_1 = x_2);
+  \end{align*}
+  which proves condition $(3)$ and completes the proof.
+\end{proof}
+
+\section{Gödel's theorem}
+\begin{definition}[Complete theory]
+  A theory $\phi$ is said to be complete if for every sentence $\alpha$
+  in $\phi$ either $\phi \vdash \alpha$ or $\phi \vdash \neg \alpha$.
+\end{definition}
+
+\begin{definition}[Computable theory]
+  A theory $\phi$ is said to be computable (or recursive) if there 
+  exists an algorithm that determines whether a sentence is 
+  a member of $\phi$.
+\end{definition}
+
+\begin{theorem}[Gödel's theorem]
+  There exists a formula such that $\N \models \alpha$ but 
+  $\mathrm{Peano} \nvdash \alpha$.
+  In particular Peano theory is not complete.
+  Moreover, if $\phi$ is a theory that satisfies
+  \begin{enumerate}
+    \item[(1)] $\N$ is a model of $\phi$;
+    \item[(2)] $\phi$ is computable;
+    \item[(3)] $\phi$ is consistent;
+  \end{enumerate}
+  then $\phi$ is not complete.
+  More generally, any theory that satisfies $(2)$ and $(3)$ and is
+  arithmetical is not complete.
+\end{theorem}
+\begin{remark}
+  It can be shown that Peano theory is not complete because
+  we have $\mathrm{Peano} \vdash \neg \alpha$ and then from
+  soundness we have that $\M \models \neg \alpha$ in contradiction
+  to $\N \models \alpha$.
+\end{remark}
+
+Recall that $\Theory(\N) = \set{\alpha \mid \N \models \alpha}$.
+\begin{proposition}
+  There is no algorithm that determines whether a sentence is a member
+  of $\Theory(\N)$.
+\end{proposition}
+
+The idea of the proof behind Godel's theorem:
+
+\end{document}

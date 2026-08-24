@@ -1,0 +1,444 @@
+\makeatletter
+
+% packages
+\usepackage{amssymb,amsfonts,amsmath,calc,tikz,pgfplots,geometry,mathtools}
+\usepackage{color}   % May be necessary if you want to color links
+\usepackage[svgnames]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{forest}
+\usepackage{commath} % ew
+\usepackage{esvect} % \vv makes vectors
+\usepackage{centernot} % for the comparison
+\usepackage{esdiff}
+\usepackage{esint}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{bm}
+\usepackage{witharrows}
+\usepackage{bookmark}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+\usepackage{bbm}
+\usepackage{textcomp}
+\usepackage{float}
+\usepackage{gensymb}
+\usepackage{cleveref}
+\usepackage{environ}
+\usepackage{comment}
+\usepackage{cancel}
+\usepackage{xparse}
+
+% Inevitable cs
+\usepackage{listings}
+\usepackage[]{algorithm2e}
+
+% tikz libraries
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{bending}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{backgrounds}
+
+% Page style setup
+\pagestyle{fancy}
+\fancyhfoffset{0pt}
+\renewcommand{\headwidth}{\textwidth}
+\geometry{margin=1in}
+\pgfplotsset{compat=1.18}
+\setlength{\headheight}{14.6pt}
+\addtolength{\topmargin}{-1.6pt}
+\hypersetup{
+    colorlinks=false,
+    linktoc=section,
+    linkcolor=black,
+}
+
+%% maketitle setup
+\ifx \nauthor\undefined
+  \def\nauthor{Yeheli Fomberg}
+\else
+\fi
+
+\ifx \nemail\undefined
+  \def\nemail{\href{mailto:yp@campus.technion.ac.il}
+  {\texttt{<yp@campus.technion.ac.il>}}}
+\else
+\fi
+
+\ifx \ncoursehead \undefined
+  \def\ncoursehead{\ncourse}
+\fi
+
+\lhead{\emph{\nouppercase{\leftmark}}}
+\ifx \nextra \undefined
+  \rhead{
+    \ifnum\thepage=1
+    \else
+      \ncoursehead
+    \fi}
+\else
+  \rhead{
+    \ifnum\thepage=1
+    \else
+      \ncoursehead \ (\nextra)
+    \fi}
+\fi
+
+\def\notes{notes}
+\def\problems{problems}
+
+\ifx \ntype \undefined
+  \def\ntype{notes}
+\else
+\fi
+
+\ifx \ntype \notes
+  \let\@real@maketitle\maketitle
+  \renewcommand{\maketitle}{\@real@maketitle\begin{center}
+  \begin{minipage}[c]{0.9\textwidth}\centering\footnotesize
+  These notes are not endorsed by the lecturers.
+  I have revised them outside lectures to incorporate supplementary
+  explanations, clarifications, and material for fun.
+  While I have strived for accuracy, any errors or misinterpretations 
+  are most likely mine.
+  \end{minipage}\end{center}}
+\else
+  \ifx \ntype \problems
+    \let\@real@maketitle\maketitle
+    \renewcommand{\maketitle}{\@real@maketitle\begin{center}
+    \begin{minipage}[c]{0.9\textwidth}\centering\footnotesize
+    These problems are mostly based on the problem sets I was given
+    when taking the course.
+    
+    While I have strived for accuracy and completeness,
+    some of the problems would not have been here without the help of
+    friends.
+    \end{minipage}\end{center}}
+  \else
+  \fi
+\fi
+
+
+% theorem environments
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{exercise}{Exercise}[section]
+\newtheorem{paradox}{Paradox}[section]
+\newtheorem{entry}{Entry}[section]
+\newtheorem*{solution}{Solution}
+\newtheorem*{question}{Question}
+\newtheorem*{answer}{Answer}
+\newtheorem*{problem}{Problem}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newenvironment{proofof}[1]{%
+    \renewcommand{\proofname}{Proof of #1}%
+    \begin{proof}
+}{%
+    \end{proof}
+}
+% tikz customization
+\pgfarrowsdeclarecombine{twolatex'}{twolatex'}{latex'}{latex'}{latex'}{latex'}
+\tikzset{->/.style = {decoration={markings,
+                                  mark=at position 0.999
+                                  with {\arrow[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{<-/.style = {decoration={markings,
+                                  mark=at position 0.001 with {\arrowreversed[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{-->/.style = {decoration={markings,
+                                  mark=at position 0.999
+                                  with {\arrow[scale=2]{latex'[sep=0pt -2.5]}}},
+                      postaction={decorate}}}
+\tikzset{<--/.style = {decoration={markings,
+                                  mark=at position 0.001
+                                  with {\arrowreversed[scale=2]{latex'[sep=0pt -2.5]}}},
+                      postaction={decorate}}}
+\tikzset{<->/.style = {decoration={markings,
+                                  mark=at position 0.001 with {\arrowreversed[scale=2]{latex'}},
+                                  mark=at position 0.999 with {\arrow[scale=2]{latex'}},},
+                      postaction={decorate}}}
+\tikzset{->-/.style = {decoration={markings,
+    mark=at position 0.50+0.225/#1 with {\arrow[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{-<-/.style = {decoration={markings,
+                                   mark=at position 0.50-0.225/#1 with {\arrowreversed[scale=2]{latex'}}},
+                       postaction={decorate}}}
+\tikzset{->>/.style = {decoration={markings,
+                                  mark=at position 1 with {\arrow[scale=2]{latex'}}},
+                      postaction={decorate}}}
+\tikzset{<<-/.style = {decoration={markings,
+                                  mark=at position 0 with {\arrowreversed[scale=2]{twolatex'}}},
+                      postaction={decorate}}}
+\tikzset{<<->>/.style = {decoration={markings,
+                                   mark=at position 0 with {\arrowreversed[scale=2]{twolatex'}},
+                                   mark=at position 1 with {\arrow[scale=2]{twolatex'}}},
+                       postaction={decorate}}}
+\tikzset{->>-/.style = {decoration={markings,
+                                   mark=at position 0.50+0.450/#1 with {\arrow[scale=2]{twolatex'}}},
+                       postaction={decorate}}}
+\tikzset{-<<-/.style = {decoration={markings,
+                                   mark=at position 0.50-0.450/#1 with {\arrowreversed[scale=2]{twolatex'}}},
+                       postaction={decorate}}}
+
+\pgfarrowsdeclare{biggertip}{biggertip}{%
+  \setlength{\arrowsize}{1pt}
+  \addtolength{\arrowsize}{.1\pgflinewidth}
+  \pgfarrowsrightextend{0}
+  \pgfarrowsleftextend{-5\arrowsize}
+}{%
+  \setlength{\arrowsize}{1pt}
+  \addtolength{\arrowsize}{.1\pgflinewidth}
+  \pgfpathmoveto{\pgfpoint{-5\arrowsize}{4\arrowsize}}
+  \pgfpathlineto{\pgfpointorigin}
+  \pgfpathlineto{\pgfpoint{-5\arrowsize}{-4\arrowsize}}
+  \pgfusepathqstroke
+}
+\tikzset{
+	EdgeStyle/.style = {>=biggertip}
+}
+
+\tikzset{circ/.style = {fill, circle, inner sep = 0, minimum size = 3}}
+\tikzset{scirc/.style = {fill, circle, inner sep = 0, minimum size = 1.5}}
+\tikzset{mstate/.style={circle, draw, black, text=black, minimum width=0.7cm}}
+
+\tikzset{eqpic/.style={baseline={([yshift=-.5ex]current bounding box.center)}}}
+
+\definecolor{mblue}{rgb}{0.2, 0.3, 0.8}
+\definecolor{morange}{rgb}{1, 0.5, 0}
+\definecolor{mgreen}{rgb}{0, 0.4, 0.2}
+\definecolor{mred}{rgb}{0.5, 0, 0}
+
+% topology
+\DeclareMathOperator{\dfr}{dfr} % deformation retract
+\newcommand{\Cells}{\text{Cells}}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\CP}{\mathbb{CP}}
+
+% order theory
+\newcommand{\join}{\vee}
+\newcommand{\meet}{\wedge}
+
+% algebraic geometry
+\DeclareMathOperator{\Rad}{Rad} % Radical of modules
+\DeclareMathOperator{\Spec}{Spec}
+% \renewcommand{\div}{\mathrm{div}} % divisors
+\DeclareMathOperator{\Mer}{Mer} % Meromorphic functions
+\DeclareMathOperator{\Exc}{Exc} % Exceptional divisor
+\DeclareMathOperator{\Td}{Td} % Todd classes
+
+% algebra
+
+\DeclareMathOperator{\trdeg}{tr.deg.}
+\DeclareMathOperator{\odd}{odd}
+\DeclareMathOperator{\even}{even}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\std}{std}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Mult}{Mult} % multiplier algebra
+\DeclareMathOperator{\Frac}{Frac} % fraction field
+\DeclareMathOperator{\Rat}{Rat}
+\DeclareMathOperator{\Gal}{Gal}
+\newcommand{\ioplus}{\overset{\text{int}}{\oplus}} % interior direct sum
+\newcommand{\GG}{\mathcal G} % Galois correspondence
+\newcommand{\FF}{\mathcal F} % Galois correspondence
+\newcommand{\cupp}{\smile} % cup product
+\newcommand{\capp}{\frown} % cap product
+\newcommand{\actson}{\curvearrowright}
+\newcommand{\bra}{\left\langle}
+\newcommand{\ket}{\right\rangle}
+\newcommand{\idealin}{\triangleleft\,}
+\newcommand{\normalin}{\triangleleft\,}
+\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\bigslant}[2]
+{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\newcommand{\properideal}{%
+  \mathrel{\ooalign{$\lneq$\cr\raise.22ex\hbox{$\lhd$}\cr}}}
+
+% categories
+\newcommand{\cat}[1]{\mathbf{#1}}
+\newcommand{\Ch}{\cat{Ch}} % Chain complexes   
+\newcommand{\Set}{\cat{Set}}
+\newcommand{\Grp}{\cat{Grp}}
+\newcommand{\Ab}{\cat{Ab}}
+\newcommand{\Ring}{\cat{Ring}}
+\newcommand{\CRing}{\cat{CRing}}
+\newcommand{\Top}{\cat{Top}}
+\newcommand{\Vect}{\cat{Vect}}
+\newcommand{\cmod}{\cat{mod}}
+
+%% matrix groups
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\Or}{\mathrm{O}}
+\newcommand{\PGL}{\mathrm{PGL}}
+\newcommand{\PSL}{\mathrm{PSL}}
+\newcommand{\PSO}{\mathrm{PSO}}
+\newcommand{\PSU}{\mathrm{PSU}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\msl}{\mathrm{sl}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\Spin}{\mathrm{Spin}}
+\newcommand{\Sp}{\mathrm{Sp}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\U}{\mathrm{U}}
+\let\char\relax
+\newcommand{\char}{\text{char}}
+
+% analysis
+\renewcommand{\Re}{\mathrm{Re}}
+\renewcommand{\Im}{\mathrm{Im}}
+\NewDocumentCommand{\dx}{o}{
+  \IfNoValueTF{#1}
+    {\dif x}                  % if no optional argument
+    {\dif^{#1} \!x}         % if optional argument
+}
+\NewDocumentCommand{\dy}{o}{
+  \IfNoValueTF{#1}
+    {\dif y}                  % if no optional argument
+    {\dif^{#1} \!y}         % if optional argument
+}
+\newcommand{\dt}{\dif t}
+\newcommand{\du}{\dif u}
+\newcommand{\dv}{\dif v}
+\newcommand{\dz}{\dif z}
+\newcommand{\ds}{\dif s}
+\newcommand{\dw}{\dif w}
+\newcommand{\dr}{\dif r}
+\newcommand{\dm}{\dif m}
+\newcommand{\df}{\dif f}
+\newcommand{\dV}{\dif V}
+\newcommand{\dS}{\dif S}
+\newcommand{\dA}{\dif \mathrm{A}}
+\newcommand{\dmu}{\dif \mu}
+\newcommand{\dnu}{\dif \nu}
+\newcommand{\dtheta}{\dif \theta}
+\newcommand{\domega}{\dif \omega}
+\newcommand{\dsigma}{\dif \sigma}
+\newcommand{\dtau}{\dif \tau}
+\newcommand{\dvarphi}{\dif \varphi}
+\renewcommand{\dif}{\mathrm{d}}
+\renewcommand{\Dif}{\mathrm{D}}
+\renewcommand{\triangle}{\Delta}
+\newcommand{\ptriangle}{\partial \triangle}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\vspan}{span}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\curl}{curl}
+\DeclareMathOperator{\esssup}{esssup}
+\newcommand{\hodge}{{\mathnormal{\star}}}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Int}{Int}
+\DeclareMathOperator{\Conv}{Conv} % convex hull
+\newcommand{\ind}{\mathbbm{1}}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\graph}{graph}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Vol}{Vol} % Volume
+\DeclareMathOperator{\Area}{Area} % Area
+\DeclareMathOperator{\area}{area}
+\DeclareMathOperator{\Ind}{Ind} % Index
+\newcommand{\length}{\mathrm{length}}
+
+% logic
+\DeclareMathOperator{\MOD}{MOD}
+\DeclareMathOperator{\Theory}{Theory}
+\newcommand{\notimplies}{%
+  \mathrel{{\ooalign{\hidewidth$\not\phantom{=}$\hidewidth\cr$\implies$}}}}
+
+% nice
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\pair}{\del}
+\newcommand{\taking}[1]{\xrightarrow{#1}}
+\newcommand{\otaking}[1]{\xleftarrow{#1}}
+\newcommand{\inv}{^{-1}}
+\newcommand{\ot}{\leftarrow}
+\newcommand{\ninfty}{-\infty}
+\newcommand{\pinfty}{+\infty}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\viff}{\Big\Updownarrow} % vertical iff
+\newcommand{\bmid}{\,\middle\vert\,} % big mid
+
+% probability
+\newcommand{\Prob}{\mathbf{P}}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+\DeclareMathOperator{\Bin}{Bin}
+\DeclareMathOperator{\Geo}{Geo}
+\DeclareMathOperator{\Poi}{Poi}
+\DeclareMathOperator{\Exp}{Exp}
+\DeclareMathOperator{\Var}{Var} % Variance
+\DeclareMathOperator{\Cov}{Cov}
+
+% special letters
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\E}{\mathbf{E}}
+\newcommand{\D}{\mathbb{D}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\ps}{\mathcal{P}}
+\newcommand{\M}{\mathcal{M}}
+\renewcommand{\L}{\mathcal{L}}
+\renewcommand{\O}{\mathcal{O}}
+\renewcommand{\U}{\mathcal{U}}
+\newcommand{\Omicron}{O}
+\newcommand{\powerset}{\mathcal{P}}
+
+% text
+\newcommand{\st}{\text{ s.t. }}
+\newcommand{\tand}{\quad \text{and} \quad}
+\newcommand{\tor}{\quad \text{or} \quad}
+\newcommand{\stand}{\text{ and }}
+\newcommand{\stor}{\text{ or }}
+\renewcommand{\tt}[1]{\textnormal{\textbf{(#1).}}} %tt=theorem title GET RID OF
+
+% title format
+\title{\textbf{\ncourse}}
+
+\ifx \ntype \notes
+  \author{Notes taken by \nauthor\, \nemail \\ Based on lectures by \nlecturer}
+  \date{\nterm\ \nyear}
+\else
+  \ifx \ntype \problems
+    \author{These problems were solved by \nauthor \\ \nemail}
+  \else
+  \fi
+\fi
+
+\makeatother

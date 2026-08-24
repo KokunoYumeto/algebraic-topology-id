@@ -1,0 +1,22 @@
+Title:           
+Subject:         
+Keywords:        
+Author:          
+Creator:         LaTeX with hyperref
+Producer:        MiKTeX pdfTeX-1.40.29
+CreationDate:    Wed Jan  1 01:00:00 2025 W. Europe Standard Time
+ModDate:         Wed Jan  1 01:00:00 2025 W. Europe Standard Time
+Custom Metadata: yes
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           57
+Encrypted:       no
+Page size:       595.276 x 841.89 pts (A4)
+Page rot:        0
+File size:       664609 bytes
+Optimized:       no
+PDF version:     1.5

@@ -1,0 +1,2502 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2025}
+\def\nterm {Winter}
+\def\nlecturer {Emanuel Milman}
+\def\ncourse {Real Functions}
+
+\input{header.tex}
+\newcommand{\A}{\mathcal A}
+
+\begin{document}
+\maketitle
+
+% Insert cool image here
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\subsection{Motivation}
+The Riemann integral we have known so far is fairly limited.
+For example it doesn't allow us to compute the Riemann integral
+of Dirichlet's function $f \colon [0,1] \to \R$ defined as
+\[
+  f(x) = \mathbbm{1}_{\Q \cap [0,1]} =
+  \begin{cases}
+    1, &x \in \Q \cap [0,1] \\
+    0, &\text{otherwise}
+  \end{cases}.
+\]
+In his thesis Lebesgue introduced a new type of integral called
+a Lebesgue integral that allows us to compute integrals for functions
+like Dirichelt's function, and he continued to develop more concepts
+like measure, and almost everywhere.
+
+\subsection{Motivation for Lebesgue integral}
+Let $f(x) = \mathbbm{1}_A$ be the function that 
+we want $\int \mathbbm{1}_A$ to be the volume of the set $A$.
+
+First we would like we define what is a volume of a set.
+We would want to require a couple of things
+\begin{enumerate}
+  \item[(1)] $\mu(A)$ is defined for all $A \subseteq \R^n$;
+  \item[(2)] $\mu([0,1]^n) = 1^n = 1$;
+  \item[(3)] $\mu$ to be invariant to congruations (isometries).
+  \item[(4)] If $\set{A_i}_{i=1}^{\infty}$ is a countable sequence
+    of pairwise disjoint sets then
+    \[
+      \mu\del{\bigcup_{i=1}^{\infty} A_i} = \sum_{i=1}^{\infty} \mu(A_i).
+    \]
+\end{enumerate}
+
+\begin{remark}
+  Property $(4)$ is called $\sigma$-additivity.
+\end{remark}
+
+\begin{theorem}[Hausdorrf, 1914]
+  There is no function that satisfies $(1) - (4)$ at the same time.
+\end{theorem}
+
+We will prove this theorem later.
+For now we can only try to weaken the requirements.
+For example instead of $\sigma$-additivity we might require finite
+additivity.
+
+\begin{theorem}
+  There exists a function that satisfies the wanted requirements in
+  dimenstions $1$ and $2$ but not in dimension $n \geq 3$.
+\end{theorem}
+
+\begin{remark}
+  For example in $n = 3$ we have the Banach--Tarski paradox.
+\end{remark}
+
+\begin{paradox}[Banach--Tarski, 1924]
+  For every $n \geq 1$ we can divide $S^2$ in $\R^n$ to a finite amount 
+  of parts such that when they are rotated and rearranged,
+  can form a new sphere of any desired size.
+\end{paradox}
+\begin{remark}
+  The bigger sphere we would want to form, the greater is the minimal
+  pieces we need to divide the unit sphere in order to form it.
+\end{remark}
+
+This paradox is based on the use of the axiom of choice, but since we
+assume the axiom of choice in this course we still need to modify the
+requirements.
+
+Instead of $(4)$ we require subadditivity:
+\[
+\mu\del{\bigcup_{i=1}^{\infty} A_i} \le \sum_{i=1}^{\infty} \mu(A_i).
+\]
+This is possible but instead we would like to keep $\sigma$-additivity
+but instead give up on requirement $(0)$.
+We will only define volume only for ``nice'' sets which include
+all of the sets we work with in analysis or geometry etc.\ these
+sets form a $\sigma$-algebra on $\R^n$.
+
+\newpage
+
+\section{Algebras and \texorpdfstring{$\sigma$}{s}-algebras}
+
+\subsection{Definitions}
+
+\begin{definition}[Algebra]
+  An algebra on a nonempty set $X$ is a collection $\mathcal A$ of
+  subsets of $X$ such that
+  \begin{enumerate}
+    \item[(1)] $\emptyset, X \in \mathcal A$;
+    \item[(2)] $\mathcal A$ is closed under complements;
+    \item[(3)] $\mathcal A$ is closed under finite unions and intersections.
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}[$\sigma$-algebra]
+  A $\sigma$-algebra on a nonempty set $X$ is an algebra $\mathcal A$ on
+  $X$ that is also closed under countable unions and intersections.
+\end{definition}
+
+\begin{remark}
+  A $\sigma$-algebra is sometimes called a $\sigma$-field.
+  That is why it is sometimes denoted $\mathcal F$.
+\end{remark}
+
+\begin{remark}
+  From De-Morgan laws we know that
+  \[
+    \del{\bigcup_{i \in I} A_i}^c =
+    \bigcap_{i \in I} A_i^c
+  \]
+  so it is only necessary to require closure under countable unions
+  or countable intersections.
+\end{remark}
+
+\begin{remark}
+  It is also possible to require $\mathcal A$ to be nonempty instead of 
+  $(1)$.
+  Then for $A \in \mathcal A$ we have
+  \[
+    A \in \A \implies A^c \in \A \implies
+    A \cup A^c = X \in \A \stand
+    A \cap A^c = \emptyset \in \A.
+  \]
+\end{remark}
+
+\begin{example}
+  $\A = \set{\emptyset, X}$ and $\A = 2^X$ are the smallest
+  and biggest $\sigma$-algebras on $X$ respectively.
+\end{example}
+
+\begin{example}
+  If $X$ is not countable.
+  Then
+  \[
+    \mathcal A =
+    \set{E \subseteq X \colon E \stor E^c \text{ are countable}} \neq
+    2^X
+  \]
+  is a $\sigma$-algebra.
+\end{example}
+
+\begin{definition}[Cocountablility]
+  Let $X$ be a set.\ Then $A$ is called cocountable if $A^c$ is countable.
+\end{definition}
+
+\begin{example}[Generated $\sigma$-algebra]
+  Let $F \subseteq 2^X$ be a family of subsets of $X$.
+  The $\sigma$-algebra generated by $F$ is defined as
+  \[
+    \sigma(F) = \bigcap \set{\mathcal A \subseteq 2^X \colon 
+    \A \text{ is a $\sigma$-algebra} \stand F \subset \A}.
+  \]
+\end{example}
+\begin{remark}
+  Notice that the intersection is indeed a $\sigma$-algerba.
+\end{remark}
+\begin{remark}
+  Let $\A$ be a $\sigma$-algebra and $F \subseteq \A$.
+  Then $\sigma(F) \subseteq A$.
+\end{remark}
+\begin{corollary}
+  Suppose $F_1 \subseteq \sigma(F_2)$ and $F_2 \subseteq \sigma(F_1)$.
+  Then $\sigma(F_1) = \sigma(F_2)$.
+\end{corollary}
+
+\begin{definition}[Borel $\sigma$-algebra]
+  Let $X$ be a topological space.
+  Then we define the Borel $\sigma$-algebra as the $\sigma$-algebra generated
+  by the open sets in $X$.
+  \[
+    B(X) = \sigma\del{\set{G \subset X \mid G \text{ is open}}}.
+  \]
+\end{definition}
+\begin{remark}
+  Recall that $G$ denotes an open set, $F$ a closed set, $G_{\delta}$
+  a countable intersection of open sets and $F_{\sigma}$ a countable
+  union of closed sets.
+  Similarly $G_{\delta \sigma}$ is a countable union of $G_{\delta}$ sets
+  etc.
+\end{remark}
+\begin{remark}
+  \[
+    B(X) = \sigma\del{\set{F \subset X \mid F \text{ is closed}}}.
+  \]
+\end{remark}
+
+\begin{proposition}
+  $B(\R)$ is generated by the collection of any type of interval.
+\end{proposition}
+\begin{proof}
+  Consider the collection of open intervals in $\R$.
+  Since any open set in $\R$ is a countable union of disjoin open intervals,
+  we get that $B(\R) = \sigma\del{(a,b)}$.
+
+  Consider the collection of closed intervals in $\R$.
+  Since any closed interval is a countable intersection of open sets,
+  we have that $[a,b] \subseteq \sigma\del{(a,b)}$.
+  Since any open interval is a countable union of closed sets,
+  we have that $(a,b) \subseteq \sigma\del{[a,b]}$.
+  % This shows that $\sigma\del{[a,b]} = \sigma\del{(a,b)} = $B(\R)$
+  
+  The proof for other types of intervals (like $(a,b]$) is similar and thus
+  omitted.
+\end{proof}
+
+\subsection{The product \texorpdfstring{$\sigma$}{s}-algebra}
+
+\begin{definition}[Product $\sigma$-algebra]
+  Let $\set{\A_{i}}_{i}$ be a collection of $\sigma$-algebras on
+  $\set{X_{i}}_{i}$.
+  Then, the product $\sigma$-algebra $\bigotimes_{i \in I} \A_{i}$ is
+  the $\sigma$-algebra generated by the cylindrical sets:
+  \[
+    \mathcal{S} = \set{\prod_{i \in I}{U_{\alpha}} \mid 
+    \exists j \in I \st 
+    \text{ $U_{i} = X_{i}$ 
+    for $i \in I \setminus \{j\}$ and $U_j \in \A_j$}},
+  \]
+  which is the also the set that generates the product topology on
+  the product space.
+\end{definition}
+\begin{remark}
+  In the case of $|I| < \aleph_0$ this is equivalent to the $\sigma$-algebra
+  generated by the open sets in $\bigotimes_{i \in I} \A_i$ with respect to the
+  box topology.
+\end{remark}
+
+\begin{proposition}
+  $B(\R^n) = \bigotimes_{i=1}^{n} B(\R)$.
+\end{proposition}
+\begin{proof}
+  Showing that $\prod_{i=1}^{n} (a_i, b_i) \subseteq B(\R^n)$ can be
+  done simply by definition.
+  We can also show that $B(\R^n) \subseteq \prod_{i=1}^{n} (a_i, b_i)$
+  because for an open set $A \subseteq \R^n$ we
+  can see that it is the countable union of all the open boxes with
+  rational sized edges contained in $A$ around any rational point $q \in A$
+  (which exist because $A$ is open).
+\end{proof}
+
+\newpage
+
+\section{Measure}
+\subsection{Definitions}
+
+\begin{definition}[Measure]
+  Let $\A$ be a $\sigma$-algebra on $X$.
+  A function $\mu \colon \A \to [0,\infty]$ is called a measure if
+  \begin{enumerate}
+  \item[(1)] $\mu(\emptyset) = 0$;
+  \item[(2)] Given a sequence $\set{E_i}_{i=1}^{\infty} \subseteq \A$ of
+    disjoint sets we have
+    \[
+      \mu\del{\bigsqcup_{i=1}^{\infty} E_i} =
+      \sum_{i=1}^{\infty} \mu(E_i).
+    \]
+  \end{enumerate}
+\end{definition}
+\begin{remark}
+  Property $(2)$ is called $\sigma$-additivity.
+  It obviouly implies finite additivity because we can choose 
+  $E_j = \emptyset$.
+\end{remark}
+
+\begin{definition}[Measurable space]
+  The space $(X,\A)$ is called a measurable space.
+  The elements of $\A$ are called measurable sets.
+\end{definition}
+
+\begin{definition}[Measure space]
+  The triple $(X,\A,\mu)$ is called a measure space.
+\end{definition}
+
+\begin{definition}[Finite measure]
+  A finite measure is a measure $\mu$ on $X$ such that $\mu(X) < \infty$.
+\end{definition}
+
+\begin{definition}[$\sigma$-finite measure]
+  A $\sigma$-finite measure is a measure $\mu$ on $X$ such that
+  $X = \bigcup_{i=1}^{\infty} E_i$ for $E_i \in \A$ such that
+  $\mu(E_i) < \infty$.
+\end{definition}
+
+\begin{definition}[Borel measure]
+  A measure $\mu$ on a topological space $X$ is called a Borel measure
+  if $B(X) \subseteq \A$.
+\end{definition}
+
+\begin{example}[Delta measure]
+  Let $x_0 \in X$ and $\A = 2^X$.
+  Then the delta measure is
+  \[
+    \delta_{x_0}(E) =
+    \begin{cases}
+      1, &x_0 \in E \\
+      0, &x_0 \notin E
+    \end{cases}.
+  \]
+\end{example}
+
+\begin{example}[Counting measure]
+  The counting measure is the measure on $\A = 2^X$ such that
+  $\mu(E) = |E|$.
+\end{example}
+
+\begin{example}
+  \label{exmp:relevency-measure-on-r}
+  Suppose $\aleph_0 < |X|$ and let $\A$ be the $\sigma$-algebra of the countable
+  or cocountable subsets of $X$. Then the follwing is a measure on $X$,
+  \[
+    \mu(E) =
+    \begin{cases}
+      0, &|E| \le \aleph_0 \\
+      1, &|E^c| = \aleph_0
+    \end{cases}.
+  \]
+\end{example}
+
+\begin{example}
+  Suppose $|X| = \infty$ and $\A = 2^X$.
+  Then the following is a measure on $X$,
+  \[
+    \mu(E) =
+    \begin{cases}
+      0, &|E| < \infty \\
+      1, &|E| = \infty
+    \end{cases}.
+  \]
+\end{example}
+\begin{remark}
+  The last example is a finite-additive, but not $\sigma$-additive.
+\end{remark}
+
+\begin{proposition}
+  Let $(X, \A, \mu)$ be a measure space.
+  Then
+  \begin{enumerate}
+    \item[(1)] Let $E,F \in \A$ such that $E \subseteq F$.
+      Then $\mu(E) \le \mu(F)$.
+    \item[(2)] Let $\set{E_i}_{i=1}^{\infty} \subseteq A$.
+      Then
+      \[
+        \mu\del{\bigcup_{i=1}^{\infty} E_i} \le \sum_{i=1}^{\infty} \mu(E_i)
+      \]
+    \item[(3)] Let $\set{E_i}_{i=1}^{\infty} \subseteq A$ such that
+      $E_1 \subseteq E_2 \subseteq \dots$ then
+      \[
+        \mu\del{\bigcup_{i=1}^{\infty} E_i} =
+        \lim_{i \to \infty} \mu(E_i)
+      \]
+    \item[(4)] Let $\set{E_i}_{i=1}^{\infty} \subseteq A$ such that
+      $E_1 \supseteq E_2 \supseteq \dots$ then
+      \[
+        \mu\del{\bigcap_{i=1}^{\infty} E_i} =
+        \lim_{i \to \infty} \mu(E_i)
+      \]
+  \end{enumerate}
+\end{proposition}
+\begin{proof} \phantom{}
+\begin{enumerate}
+  \item[(1)] We have that $F = E \sqcup (F \setminus E)$ so
+    \[
+      \mu(F) = \mu(E) + \mu(F \setminus E) \geq \mu(E).
+    \]
+  \item[(2)] Define the sets
+    \begin{align*}
+      F_1 &:= E_1 \\
+      F_2 &:= E_2 \setminus E_1 \\
+      &\vdotswithin{:=} \\
+      F_k &:= E_k \setminus \del{\bigcup_{j=1}^{k-1} E_j}.
+    \end{align*}
+    We now have that $\set{F_k}_{k=1}^{\infty}$ are disjoint and
+    for all $n \geq 1$ we have
+    \[
+      \bigsqcup_{j=1}^{n} F_j =
+      \bigcup_{j=1}^{n} E_j
+    \]
+    which implies that
+    \[
+      \mu\del{\bigcup_{j=1}^{\infty} E_j} =
+      \mu\del{\bigsqcup_{j=1}^{\infty} F_j} =
+      \sum_{j=1}^{\infty} \mu(F_j) \le
+      \sum_{j=1}^{\infty} \mu(E_j)
+    \]
+    where the last inequality follows from $F_j \subseteq E_j$ and $(1)$.
+  \item[(3)] Define similarly
+    \begin{align*}
+      F_0 &:= \emptyset \\
+      F_1 &:= F_1 \setminus E_0 \\
+      &\vdotswithin{:=} \\
+      F_k &:= F_k \setminus F_{k-1}.
+    \end{align*}
+    We now have that $\set{F_k}_{k=1}^{\infty}$ are disjoint and
+    for all $n \geq 1$ we have
+    \[
+      \bigsqcup_{j=1}^{n} F_j =
+      \bigcup_{j=1}^{n} E_j
+    \]
+    which implies that
+    \[
+      \mu\del{\bigcup_{j=1}^{n} E_j} =
+      \mu\del{\bigsqcup_{j=1}^{n} F_j} =
+      \sum_{j=1}^{\infty} \mu(F_j) =
+      \lim_{n \to \infty} \sum_{j=1}^{n} \mu(F_j) =
+      \lim_{n \to \infty}
+      \underbrace{\mu\del{\bigsqcup_{j=1}^{n} F_j}}_{\mu(E_n)}
+    \]
+    where the last euqality follows from additivity.
+  \item[(4)] This can be concluded using De Morgan's laws on $(3)$.
+\end{enumerate}
+\end{proof}
+
+\begin{definition}[$\mu$-negligible set]
+  A negligible set is a set $E \in \A$ such that $\mu(E) = 0$.
+\end{definition}
+
+\begin{definition}[Almost everywhere]
+  Let $(X,\A,\mu)$ be a measure space.
+  We say that a certain property is true \textit{almost everywhere} if it is
+  true for any $x \in X \setminus E$ such that $E$ is of measure zero
+  ($\mu$-negligible).
+\end{definition}
+
+\begin{example}
+  We have that $\sin x \neq 0$ almost everywhere because
+  \[
+    |E| = \left|\set{x \in \R \mid \sin x = 0}\right| = \aleph_0
+  \]
+  is $\mu$-negligible for the measure $\mu$ from
+  \Cref{exmp:relevency-measure-on-r} with $X = \R$ defined
+  \[
+    \mu(E) =
+    \begin{cases}
+      0, &|E| \le \aleph_0 \\
+      1, &|E^c| = \aleph_0
+    \end{cases}.
+  \]
+\end{example}
+\begin{remark}
+  A countable union of $\mu$-negligible sets is $\mu$-negligible from
+  subadditivity.
+\end{remark}
+\begin{remark}
+  A subset of a $\mu$-negligible set is $\mu$-negligible since measures are
+  monotone.
+\end{remark}
+
+\subsection{Complete measure spaces}
+
+\begin{definition}[Complete measure space]
+  A triple $(X,\A,\mu)$ is called a complete measure space if
+  for any $F \in \A$, if $\mu(F) = 0$ then for all $E \subseteq F$
+  we have $E \in \A$.
+\end{definition}
+
+\begin{theorem}[Completion theorem]
+  Let $(X, \A, \mu)$ be a measure space.
+  Define
+  \begin{align*}
+    \mathcal N &:= \set{N \in \A \mid \mu(N) = 0} \\
+    \overline \A &:= 
+    \set{E \cup F \mid E \in \A \stand F \subseteq N \in \mathcal N}.
+  \end{align*}
+  Then $\overline A$ is a $\sigma$-algebra, and there exists 
+  a unique extension $\bar \mu$ of $\mu$ such that $(X, \overline \A, \bar \mu)$
+  is a complete measure space.
+\end{theorem}
+\begin{proof}
+  In the problems section.
+\end{proof}
+\begin{remark}
+  $\overline A$ is the smallest $\sigma$-algebra containing $\A$ and all
+  the subsets of $\mu$-negligible sets.
+\end{remark}
+
+\noindent
+Our goal is to construct a measure space $(\R^n, \A, \mu)$ such that
+\[
+  \mu\del{\prod_{i=1}^{n} [a_i,b_i]} =
+  \prod_{i=1}^{n} |a_i - b_i|.
+\]
+Recall that earlier we saw that
+\[
+  B(\R^n) =
+  \bigotimes_{i=1}^{n} B(\R) =
+  \sigma\del{\prod_{i=1}^{n} [a_i,b_i]}
+\]
+which implies that $B(\R^n) \subseteq \A$.
+To define the measure for other sets we can use an outer measure
+\[
+  \mu^*(E) := \inf \set{\sum_{i=1}^{\infty} \mu(R_i) \mid E \subseteq 
+  \bigcup_{i=1}^{n} R_i}.
+\]
+We now have two questions.
+\begin{itemize}
+  \item[(1)] Do we always have $\mu^*(R) = \mu(R)$? Yes.
+  \item[(2)] Is $\mu^*$ a measure? No, it is an outer measure.
+\end{itemize}
+\begin{remark}
+  Defining $\mu^*$ only on ``good'' sets gives us a measure called
+  Lebesgue measure.
+  Good sets are sets for which the outer measure is equal to the inner measure.
+\end{remark}
+
+\begin{definition}[Outer measure]
+  Let $X \neq \emptyset$. Then $\mu^* \colon 2^X \to [0,\infty]$ is
+  called an outer measure if
+  \begin{enumerate}
+    \item[(1)] $\mu^*(\emptyset) = 0$;
+    \item[(2)] $\mu^*$ is monotone (if $A \subset B$ then $\mu^*(A) < \mu^*(B)$);
+    \item[(3)] $\mu^*$ is subadditive
+      $\del{\mu^*\del{\bigcup_{i=1}^{\infty} E_i} \le 
+      \sum_{i=1}^{\infty} \mu^*(E_i)}$.
+  \end{enumerate}
+\end{definition}
+
+\begin{proposition}
+  Let $\mathcal E \subseteq 2^X$ be a family of subsets of $X$ and
+  $\varphi \colon \mathcal E \to [0,\infty]$ such that
+  $\emptyset, X \in \mathcal E$ and $\varphi(\emptyset) = 0$.
+  For all $A \subseteq X$ we define
+  \[
+    \mu^*(A) = \inf\set{\sum_{i=1}^{\infty} \varphi(E_i) \mid 
+    E_i \in \mathcal E \stand A \subseteq \bigcup_{i=1}^{\infty} E_i}
+  \]
+  then $\mu^*$ is an outer measure.
+\end{proposition}
+\begin{remark}
+  It is not promised that $\mu^*(E) = \varphi(E)$ for $E \in \mathcal E$.
+\end{remark}
+% ADD EXAMPLE?
+\begin{proof} \phantom{}
+\begin{enumerate}
+  \item[(1)] We can cover $\emptyset$ by $E_i = \emptyset$.
+  \item[(2)] Let $A \subseteq B$.
+    We can use the cover of $B$ for $A$ since 
+    $A \subseteq B \subseteq \bigcup E_i$ which implies that
+    $\mu^*(A) \le \mu^*(B)$.
+  \item[(3)] By the definition of the infimum there exists a covering
+    $A_i \subseteq \cup_{k=1}^{\infty} E_k^i$ such that
+    \[
+      \mu\del{\bigcup_{k=1}^{\infty} E_k^i} \le 
+      \sum_{i=1}^{\infty} \mu^*(A_i) + \epsilon \cdot 2^{-i}
+    \]
+    which implies that 
+    $\bigcup_{i=1}^{\infty} A_i \subseteq \bigcup_{k,i=1}^{\infty} E_k^i$
+    and so
+    \[
+      \mu^*\del{\bigcup_{i=1}^{\infty} E_i} \le 
+      \sum_{k,i}^{\infty} \varphi(E_k^i) \le
+      \sum_{i=1}^{\infty} \mu^*(E_i) + \epsilon
+    \]
+    but $\epsilon > 0$ is arbitrary which completes the proof.
+\end{enumerate}
+\end{proof}
+
+\begin{remark}
+  Every outer measure can be constructed by $\varphi$ in this way.
+\end{remark}
+
+\begin{definition}[$\mu^*$-measurable set]
+  A set $A \subseteq X$ is called $\mu^*$-measurable if for all $E \subseteq X$,
+  \[
+    \mu^*(E) = \mu^*(E \cap A) + \mu^*(E \cap A^c).
+  \]
+\end{definition}
+
+\begin{remark}
+  It is clear that the $\le$ direction is always satisfied from subadditivity,
+  so it is only necessary to verify the $\geq$ direction.
+  In particular, it is only necessary to verify it for sets such that
+  $\mu^*(E) < \infty$.
+  Let $A \subseteq E$ be such that $\mu^*(E) < \infty$.
+  Then we need to verify that
+  \[
+    \underbrace{\mu^*(A)}_{\text{outer measure}} = 
+    \underbrace{\mu^*(E) - \mu^*(E \cap A^c)}_{\text{inner measure}}.
+  \]
+\end{remark}
+
+\subsection{Carath\'eodory's outer measure theorem}
+
+\begin{theorem}[Carath\'eodory's outer measure theorem]
+  \label{thm:car-outer-measure}
+  Let $\mu^*$ be an outer measure on $X$. Then
+  \begin{enumerate}
+    \item[(1)] $\mathcal F_{\mu^*} := 
+      \set{A \subseteq X \mid A \text{ is }\mu^*\text{-measurable}}$ is a 
+      $\sigma$-algebra.
+    \item[(2)] The triplet
+      $(X, \mathcal F_{\mu^*}, \mu^*\vert_{\mathcal F_{\mu^*}})$
+      is a complete measure space.
+  \end{enumerate}
+\end{theorem}
+\begin{remark} \label{recitations-one}
+  We saw in the recitations that in order
+  to show that $\mathcal F$ is a $\sigma$-algebra, it suffices to prove that
+  if $E_i \in \mathcal F$ are disjoint, then
+  \[
+    \bigsqcup_{i=1}^{\infty} E_i \in \mathcal F.
+  \]
+\end{remark}
+\begin{proof} \phantom{}
+\begin{enumerate}
+  \item[(1)] Let us show that $\mathcal F = \mathcal F_{\mu^*}$ is an algebra.
+  $\mathcal F$ is closed under the complement operation because by the
+  symmetric definition, if $A$ is $\mu^*$-measurable so is $A^c$.
+
+  Let $A,B \in \mathcal F$ and $E \subseteq X$.
+  Since $A$, $B$ are $\mu^*$-measurable we have that
+  \begin{align*}
+    \mu^*(E) &= \mu^*(E \cap A) + \mu^*(E \cap A^c) \\ &=
+    \mu^*(E \cap A \cap B) + \mu^*(E \cap A \cap B^c) +
+    \mu^*(E \cap A^c \cap B) + \mu^*(E \cap A^c \cap B^c).
+  \end{align*}
+  We also have that
+  \[
+    (A \cup B) \cap E =
+    \del{(A \cap B) \cap E} \sqcup
+    \del{(A^c \cap B) \cap E} \sqcup
+    \del{(A \cap B^c) \cap E}.
+  \]
+  Thus, from subadditivity
+  \[
+    \mu^*(E) \geq \mu^*(E \cap (A \cup B)) \mu^*(E \cap (A \cup B)^c)
+  \]
+  which implies $A \cup B \in \mathcal F$.
+  By induction we get that  $\mathcal F$ is closed under finite unions
+  which makes it an algebra.
+  Moreover, let $A,B \in \mathcal F$ be disjoint sets. Then
+  \[
+    \mu^*(\underbrace{A \sqcup B}_{E}) =
+    \mu^*((A \sqcup B) \cap A) +
+    \mu^*((A \sqcup B) \cap A^c) =
+    \mu^*(A) + \mu^*(B)
+  \]
+  so $\mu$ is a finite additive measure on $\mathcal F$.
+  
+  Let $\set{A_j}_{j=1}^{\infty} \subseteq \mathcal F$ be a sequence of
+  disjoint sets.
+  Define
+  \[
+    B_n := \bigsqcup_{i=1}^{n} A_i \in \mathcal F
+    \tand
+    B_{\infty} := \bigsqcup_{i=1}^{\infty} A_i.
+  \]
+  For all $E \subseteq X$ we have
+  \begin{align*}
+    \mu^*(E \cap B_n) &= 
+    \mu^*((E \sqcup B_n) \cap A_n) +
+    \mu^*((E \sqcup B_n) \cap A_n^c) \\ &=
+    \mu^*(E \cap A_n) + \mu^*(E \cap B_{n-1}) \\ &=
+    \sum_{i=1}^{n} \mu^*(E \cap A_i).
+  \end{align*}
+  Using this and since $\mu^*$ is monotone we have
+  \[
+    \mu^*(E) =
+    \mu^*(E \cap B_n) + \mu^*(E \cap B_n^c) \geq
+    \sum_{i=1}^{n} \mu^*(E \cap A_i) + \mu^*(E \cap B_{\infty}^c).
+  \]
+  Taking $n \to \infty$ we have
+  \[
+    \mu^*(E) \geq
+    \sum_{i=1}^{\infty} \mu^*(E \cap A_i) + \mu^*(E \cap B_{\infty}^c) \geq
+    \mu^*\del[4]{E \cap \underbrace{\bigcup_{i=1}^{\infty} A_i}_{B_{\infty}}}   
+    + \mu^*(E \cap B_{\infty}^c) \geq
+    \mu^*(E)
+  \]
+  which implies that $B_{\infty} \in \mathcal F$ ($\sigma$-additive).
+  From \Cref{recitations-one} we have that $\mathcal F$ is a $\sigma$-algebra.
+  \item[(2)] Let $A \subseteq X$ such that $\mu^*(A) = 0$.
+  Then we have
+  \[
+    \mu^*(E) \le
+    \mu^*(E \cap A) + \mu^*(E \cap A^c) \le
+    \underbrace{\mu^*(A)}_{0} + \mu^*(E) =
+    \mu^{E}
+  \]
+  which implies that all the expressions must be equal so
+  \[
+    \mu^*(E) =
+    \mu^*(E \cap A) + \mu^*(E \cap A^c)
+  \]
+  which means $A \in \mathcal F_{\mu^*}$.
+  Since $\mathcal F_{\mu^*}$ contains all $\mu^*$-negligible sets, it is
+  complete which also completes the proof.
+\end{enumerate}
+\end{proof}
+
+% Applications of caratheodory outer measure theorem.
+\subsubsection{Constructing Lebesgue measure on \texorpdfstring{$\R^n$}{Rn}}
+
+Let
+\[
+  \mathcal R =
+  \set{R = \prod_{i=1}^{\infty} [a_i,b_i] \middle\vert a_i,b_i \in \R},
+\]
+and define
+\[
+  \varphi(R) = \Vol(R) = \prod_{i=1}^{\infty} |a_i - b_i|
+  \tand
+  \varphi(\R) = \infty.
+\]
+Let us define the outer Lebesgue measure for $E \subseteq \R^n$
+\[
+  m^*(E) = \inf\set{\sum_{i=1} \Vol(R_i) \middle\vert
+  E \subseteq \bigcup_{i=1}^{\infty} R_i \st R_i \in \mathcal R}.
+\]
+We saw that it is an outer measure.
+By \Cref{thm:car-outer-measure} the space 
+$(\R^n,  \mathcal F_{m^*}, m^*\vert_{\L(\R^n)})$ is a complete measure space.
+We say that
+\[
+  m^*\vert_{\L(\R^n)} = m \quad 
+  \parbox{8em}{ \phantom{calle}is called \\ Lebesgue measure}
+  \tand
+  \mathcal F_{m^*} = \L(\R^n) \quad
+  \parbox{10em}{is the $\sigma$-algebra \\ of the Lebesure \\
+  measurable sets in $\R^n$.}
+\]
+We need to show that
+\begin{enumerate}
+  \item[(1)] For all $R \in \mathcal R$ we have $m^*(R) = \Vol(R)$;
+  \item[(2)] $\mathcal R \subseteq \L(\R^n) \iff 
+    B(\R^n) = \sigma(\mathcal R) \subseteq \L(\R^n)$.
+\end{enumerate}
+\begin{remark}
+  This means that every open set (in particular every Borel set)
+  is Lebesgue measurable, and in particular that $m(R) = m^*(R) = \Vol(R)$.
+\end{remark}
+
+\begin{proof}
+  $(1), (2)$ To be added.
+\end{proof}
+
+\subsubsection{Construction of Lebesgue--Stieltjes measure}
+Given a nondecreasing monotonic function $F \colon \R \to \R$ which is
+continuous from the right, we would like to construct a Borel measure $\mu_F$
+on $\R$, such that $\mu_F((a,b]) = F(b) - F(a)$.
+
+The motivation behind this construction is that given a finite
+Borel measure $\mu$ we can construct $F(x) = \mu\del{(\ninfty,x]}$
+we can easily see that
+\[
+  \mu\del{(a,b]} =
+  \mu\del{(\ninfty,b] \setminus (\ninfty,a]} = F(b) - F(a).
+\]
+The function $F$ is clearly monotonic and continuous from the right.
+We have shown the direction $\mu \to F$ which is the motivation for
+the direction $F \to \mu$.
+
+First we define an outer measure $\mu_{F}^{*} \colon 2^{\R} \to [0,\infty]$
+where $\mathcal E = \set{(a,b] \mid a < b)}$ and
+using the function $\varphi\del{(a,b])} = F(b) - F(a)$ so that
+\[
+  \mu_{F}^{*}\del{(E])} =
+  \inf\set{\sum_{i=1}^{\infty} \varphi\del{(a,b])}
+    \middle\vert E \subseteq \bigcup_{i=1}^{\infty} (a_i,b_i]} =
+  \inf\set{\sum_{i=1}^{\infty} \del{F(b_i) - F(a_i)}
+    \middle\vert E \subseteq \bigcup_{i=1}^{\infty} (a_i,b_i]}.
+\]
+According to \Cref{thm:car-outer-measure} the triplet
+$(\R, \mathcal L_{F}, \mu_{F}^{*}\vert_{\mathcal L_{F}})$
+is a complete measure space, where $\mathcal L_{F}$ is the $\mu_{F}^{*}$
+measurable sets.
+We denote $\mu_{F} := \mu_{F}^{*}\vert_{\mathcal L_{F}}$.
+We still need to show that
+\begin{enumerate}
+  \item[(1)] for all $a < b$ that
+    $\mu_{F}\del{(a,b])} = \mu^{*}\del{(a,b]} = F(b) - F(a)$;
+  \item[(2)] $(a,b] \in \mathcal L_{F} \iff \mathcal B(\R) = \sigma\del{(a,b]} \subseteq L_F \iff (\ninfty,b) \in \mathcal L_{F}$.
+\end{enumerate}
+
+\subsection{Pre-measure}
+
+\begin{definition}[Pre-measure]
+  Let $\A_0$ be an algebra on $X$.
+  A function $\mu_0 \colon \A_0 \to [0,\infty]$ is called a pre-measure if
+  \begin{enumerate}
+    \item[(1)] $\mu_0(\emptyset) = 0$.
+    \item[(2)] If $\set{E_i}_{i=1}^{\infty} \subseteq \A_0$ are disjoint
+      and $\bigsqcup_{i=1}^{\infty} E_i \in \A_0$, then
+      \[
+        \mu_0\del{\bigsqcup_{i=1}^{\infty} E_i} =
+        \sum_{i=1}^{\infty} \mu_0(E_i).
+      \]
+  \end{enumerate}
+\end{definition}
+\begin{remark}
+  A pre-measure is not a measure because is not necessarily defined on
+  a $\sigma$-algebra.
+\end{remark}
+\begin{remark}
+  In particular we get that $\mu_0$ is finite-additive and monotone.
+\end{remark}
+\begin{remark}
+  If $\mu$ is a measure on a $\sigma$-algebra $\A$,
+  then $\mu\vert_{\A_0}$ is a pre-measure for every subalgebra
+  $\A_0 \subset \A$.
+\end{remark}
+
+\begin{theorem}[Carath\'eodory's extension theorem]
+  \label{thm:car-extension-theorem}
+  Let $\mu_0$ be a pre-measure on an algebra $\A_0$,
+  and let $\A = \sigma(\A_0)$.
+  Then there exists a measure $\mu$ on $\A$ such that $\mu\vert_{\A_0} = \mu_0$
+  defined by $\mu = \mu^*\vert_{\A}$ where
+  \[
+    \mu^*(E) = \inf \set{\sum_{i=1}^{\infty} \mu_0(R_i) \mid E \subseteq 
+    \bigcup_{i=1}^{n} E_i \stand E_i \in \A_0}
+  \]
+  is the outer measure induced by $\mu_0$.
+  Moreover, if $\mu_0$ is $\sigma$-finite, that is
+  $X = \bigcup_{j=1}^{\infty} X_j$, $X_j \in \A_0$, and $\mu_0(X_j) < \infty$,
+  then the extension is unique (and the existence and uniquness are
+  for $F_{\mu^*}$).
+\end{theorem}
+
+% "In other words"
+
+\begin{corollary}
+  If $\mu_1$ and $\mu_2$ are measures on $(X,\A)$, $\A = \sigma(\A_0)$ for
+  some algebra $\A_0 \subset \A$,
+  $\mu_1\vert_{\A_0} = \mu_2\vert_{\A_0}$, and $\mu_1$, $\mu_2$ are both
+  $\sigma$-finite, then $\sigma_1 = \sigma_2$.
+\end{corollary}
+\begin{proof}
+  To be added
+\end{proof}
+
+\begin{corollary}
+  Every Borel measure $\mu$ on $\R$ that is ``locally finite''
+  (for all $M$ we have $\mu([-M,M]) < \infty$) is of the form $\mu = \mu_F$
+  where $\mu_F$ is Stieltjes' measure for some nondecreasing function
+  $F \colon \R \to \R$ that is continuous from the right.
+  If $\mu$ is finite, then $F(x) = \mu((-\infty,x])$,
+  more generally:
+  \[
+    F(x) =
+    \begin{cases}
+      \mu((0,x]), &x > 0 \\
+      0, &x = 0 \\
+      -\mu((x,0]), &x < 0
+    \end{cases}.
+  \]
+\end{corollary}
+\begin{proof}
+  To be added
+\end{proof}
+
+\begin{example}
+\end{example}
+
+We can now go back to prove \Cref{thm:car-extension-theorem}.
+\begin{proof}
+\end{proof}
+
+% Some remarks missing
+
+\begin{remark}
+  We have that $m\del{\prod_{i=1}^{n}(a_i,b_i)} = \prod_{i=1}^{n}(a_i,b_i)$
+  because we can approximate each edge with $[a_i + 1/k, b_i - 1/k]$ from
+  inside.
+  We also have for boxes $\set{R_i}_{i=1}^{\infty} \subset \mathcal R$
+  \[
+    m\del{\bigsqcup_{i=1}^{\infty} R_i} =
+    \sum_{i=1}^{\infty} \mu(R_i).
+  \]
+\end{remark}
+
+\begin{remark}
+  For every $x \in \R^n$ we have $m(\set{x}) = 0$ by definition.
+  This also implies that $m(\Q^n) = 0$ from $\sigma$-additivity.
+\end{remark}
+
+\begin{remark}
+  Recall again that $m(A) = m^*(A) = 0$ for $A \subseteq \R^n$
+  if and only if
+  \[
+    \forall \epsilon \quad \exists \set{R_i}_{i=1}^{\infty} \subseteq \mathcal R
+    \st
+    A \subseteq \bigcup_{i=1}^{\infty} R_i \stand
+    \sum_{i=1}^{\infty} \Vol(R_i) < \epsilon.
+  \]
+\end{remark}
+
+\subsection{The relation between \texorpdfstring{$\L(\R^n$)}{L} and
+  \texorpdfstring{$B(\R^n)$}{B}}
+\begin{definition}[Regular measure]
+  A Borel measure on $(\R^n, \A)$ for any metric or topological space
+  is said to be
+  \begin{itemize}
+    \item Inner regular if
+      \[
+        \forall E \in \A \quad
+        \mu(E) = \sup\set{\mu(K) \mid
+          K \subseteq E \stand \text{$K$ is compact and measurable}}.
+      \]
+    \item Outer regular if
+      \[
+        \forall E \in \A \quad
+        \mu(E) = \inf\set{\mu(G) \mid
+          E \subseteq G \stand \text{$G$ is open and measurable}}.
+      \]
+  \end{itemize}
+\end{definition}
+
+\begin{proposition}
+  \label{prp:implies-regular}
+  Given a Borel measure $\mu$ on $\R^n$ of the form
+  $\mu = \mu^*\vert_{\A_{\mu^*}}$ for
+  \[
+    \mu^*(E) = \inf\set{\sum_{i=1}^{\infty} \mu(G_i) \mid E \subseteq
+    \bigcup_{i=1}^{\infty} G_i \stand G_i \in \mathcal{E} \subseteq
+    \set{\text{open sets}}}
+  \]
+  then $\mu$ is inner regular and outer regular.
+\end{proposition}
+\begin{remark}
+  This applies to Lebesgue measure and Lebesgue--Stieltjes measure for $n = 1$.
+\end{remark}
+
+\begin{corollary}
+  For a measure space $(\R^n, \A_{\mu^*},\mu)$ as described in
+  \Cref{prp:implies-regular} (think about $(\R^n,\L(\R^n),m)$)
+  the following are equivalent:
+  \begin{enumerate}
+    \item[(0)] $E \in \A_{\mu^*}$
+    \item[(1)]
+      \begin{enumerate}
+        \item[(a)] For all $\epsilon > 0$ there exists an open set
+          $G \supseteq E$ such that $\mu^*(G \setminus E) \le \epsilon$.
+        \item[(b)] There exists $V \supseteq E$ such that $V \in G_{\delta}$
+          and $\mu(V \setminus E) = 0$.
+      \end{enumerate}
+    \item[(2)]
+      \begin{enumerate}
+        \item[(a)] For all $\epsilon > 0$ there exists a closed
+          \footnote{If $\mu^*(E) < \infty$ we can choose a compact $F$.}
+          set
+          $F \subseteq E$ such that $\mu^*(E \setminus F) \le \epsilon$.
+        \item[(b)] There exists $H \subseteq E$ such that $H \in F_{\sigma}$
+          and $\mu(E \setminus H) = 0$.
+      \end{enumerate}
+    \item[(3)]
+      \begin{enumerate}
+        \item[(a)] For all $\epsilon > 0$ there exist an open $G$ and a closed
+          $F$ such that $F \subseteq E \subseteq G$ such that
+          $\mu(G \setminus F) \le \epsilon$.
+        \item[(b)] There exist
+          $F_{\delta} \ni H \subseteq E \subseteq V \in G_{\delta}$ such that
+          $\mu(V \setminus H) = 0$.
+      \end{enumerate}
+    \item[(4)] For $n = 1$ if $\mu^*(E) < \infty$, then for all $\epsilon > 0$
+      there exists $U = \bigcup_{i=1}^{N} (a_i,b_i)$ such that
+      $\mu^*(E \triangle U) \le \epsilon$.
+  \end{enumerate}
+\end{corollary}
+\begin{proof}
+  To be added
+\end{proof}
+
+\begin{corollary}
+  $\L(\R^n)$ is the minimal completion of $B(\R^n)$ with regards to
+  Lebesgue negligible sets.
+\end{corollary}
+\begin{proof}
+  To be added
+\end{proof}
+
+\begin{proposition}
+  Lebesgue measure is invariant under translations.
+  This means that $m^*(A) = m^*(A + h)$ for all $A \subseteq \R^n$
+  and $h \subseteq \R^n$.
+  It follows that $A$ is Lebesgure measurable if and only if $A + h$ is
+  Lebesgure measurable.
+\end{proposition}
+\begin{proof}
+  To be added
+\end{proof}
+
+\begin{proposition}
+  Similarly $m^*(x \cdot A) = \abs{c}^n \cdot m^*(A)$ for all $c \in \R$.
+  It follows that $A$ is Lebesgure measurable if and only if $c\cdot A$ is
+  Lebesgure measurable for $c \neq 0$.
+\end{proposition}
+
+\begin{proposition}
+  For every $T \in \GL(n)$ we have that $m^*(TA) = \abs{\det(T)} m^*(A)$.
+\end{proposition}
+
+\begin{proposition}
+  There exists a set $P \subseteq [0,1]$ that is not Lebesgure measurable.
+\end{proposition}
+\begin{proof}
+  Define an equivalence relation on $\R$
+  \[
+    x \sim y \iff x - y \in \Q.
+  \]
+  We see that
+  \[
+    \abs{\R / \sim} = \abs{\set{[x_0] = x_0 + \Q \mid x_0 \in \R}} > \aleph_0.
+  \]
+  Using the \textit{axiom of choice} we can take choose a representative in
+  $[0,1]$ from each equivalency class,
+  and set $P \subseteq [0,1]$ to be the set of all representatives.
+  By definition we see that
+  \[
+    P + \Q =
+    \bigsqcup_{p \in P} p + \Q =
+    \bigsqcup_{p \in P} [p] = \R
+  \]
+  and since $[0,1]^c = [0,1] + [-1,1]^c \supseteq P + \Q \cap [-1,1]^c$,
+  we see that
+  \[
+    [0,1] \subseteq
+    P + \del{\Q \cap [-1,1]} \subseteq
+    [0,1] + [-1,1] \subseteq
+    [-1,2].
+  \]
+  Thus if we set $\set{q_i}_{i=1}^{\infty} = \Q \cap [-1,1]$ and define
+  $P_i = q_i + P$ we will get
+  \[
+    [0,1] \subseteq \bigsqcup_{i=1}^{\infty} P_i \subseteq [-1,2].
+  \]
+  Since Lebesgue measure is invariant under translations we get that
+  for all $i \geq 1$ that $m(P_i) = m(P)$ and then
+  \[
+    m\del{[0,1]} = 1 \le
+    \sum_{i=1}^{\infty} m(P_i) =
+    \sum_{i=1}^{\infty} m(P) \le
+    3 = m\del{[-1,2]}.
+  \]
+  However this is a contradiction since there does not exist a number
+  $m(P) \in [0,\infty]$ such that $1 \le \sum_{i=1}^{\infty} m(P) \le 3$
+  which completes the proof.
+\end{proof}
+
+\begin{remark}
+  Recall that we defined the Cantor set as
+  \[
+    C := \set{x \in [0,1] \middle\vert x =
+      \sum_{n=1}^{\infty} \frac{a_n}{3^n} \st a_n \in \set{0,2}}.
+  \]
+\end{remark}
+
+\begin{proposition}
+  The Cantor set satisfies the following properties:
+  \begin{enumerate}
+    \item[(1)] It is compact;
+    \item[(2)] We have $m(C) = 0$;
+    \item[(3)] $|C| = \aleph = 2^{\aleph_0}$.
+  \end{enumerate}
+\end{proposition}
+\begin{proof} \phantom{}
+\begin{enumerate}
+\item[(1)] We notice that
+  $C = \bigcap_{n} K_n$ such that
+  \[
+    K_n := \bigsqcup
+    \set{x_0 + [0,3^{-n}] \middle\vert x_0 = 
+    \sum_{n=1}^{\infty} \frac{a_n}{3^n} \st a_n \in \set{0,2}}.
+  \]
+  Since $K_n$ is a union of a finite amount of compact sets it is compact,
+  and since $C$ is an intersection of a countable amount of compact sets
+  it is compact.
+\item[(2)] We have from the monotonicity of $m$ that:
+  \[
+    0 \le m(C) \le m(K_n) = \frac{2^n}{3^n} \taking{n \to \infty} 0.
+  \]
+\item[(3)] Let $x \in C$. Then it has a unique ternary expansion without
+  the digit $1$:
+  \[
+    x = \sum_{n=1}^{\infty} \frac{a_n}{3^n} \st a_n \in \set{0,2}
+  \]
+  so it is clear that
+  \[
+    |C| = \abs{\set{0,2}^{\N}} = 2^{\aleph_0} = \aleph = \abs{[0,1]}.
+  \]
+\end{enumerate}
+\end{proof}
+
+\begin{definition}[Devil's staircase]
+  We can construct the almost-bijection $f \colon [0,1] \to C$ explicitly.
+  Define $b_n = \frac{a_n}{2} \in \set{0,1}$ and define
+  \[
+      y = f(x) := \sum_{n=1}^{\infty} \frac{b_n}{2^n}.
+  \]
+  It is clear that $f(C) = [0,1]$ because every number in $[0,1]$ has a binary
+  expansion, and $f$ is injective except for the numbers that have two
+  binary expansions.
+  We notice that $f$ is monotonic (nondecreasing) because $x < y$
+  implies $f(x) \le f(y)$ and if $x$, $y$ are points
+  on the boundary of a $G_n$ set we even have $f(x) < f(y)$.
+  We can expand the function such that $f \colon [0,1] \to [0,1]$ by
+  defining it to be constant on $G_n$, and this is well defined because
+  $f(x) = f(y)$ for $x,y \in \partial G_n$.
+  Since $f$ is monotonic it can only have a jump discontinuities,
+  but since $f$ is onto $[0,1]$ it doesn't have such points and thus continuous.
+  The function $f$ is called Cantor's function
+  (or sometimes the Devil's staircase).
+  It is continuous everywhere and has zero derivative almost everywhere,
+  but value still goes from $0$ to $1$ as its argument reaches from $0$ to $1$.
+  It is a very important counterexample in analysis.
+\end{definition}
+
+\begin{proposition}
+  There exists a Lebesgue measurable function that is not a Borel set.
+  That is,
+  \[
+    \L(\R) \setminus B(\R) \neq \emptyset.
+  \]
+\end{proposition}
+\begin{proof}
+  We notice that
+  \[
+    |B(\R)| = \aleph_1 = 2^{\aleph},
+  \]
+  but we have that
+  \[
+    |\L(\R)| \geq 2^{\aleph_1} > \aleph_1
+  \]
+  because every subset of $C$ is of measure $0$, (and since the measure
+  is complete) it is measurable, and there are $2^{|C|}$ such subsets.
+\end{proof}
+\begin{proof}
+  Let $f$ be the Cantor function, and define
+  \[
+    g(y) = \inf\set{x \in [0,1] \mid f(x) = y}
+  \]
+  as its inverse function.
+  The function $g$ is strictly increasing, and thus injective, 
+  but it is not continuous.
+\end{proof}
+
+\newpage
+
+\section{Measurable functions}
+\subsection{Definitions}
+\begin{definition}[Inverse image]
+  Given a map $f \colon X \to Y$.
+  The inverse image map $f^{-1} \colon 2^{Y} \to 2^{X}$ is given by
+  \[
+    f^{-1}(E) = \set{x \in X \mid f(x) \in E}, \quad E \subseteq Y.
+  \]
+\end{definition}
+\begin{remark}
+  The inverse image preserves taking complements, unions, and intersections
+  of any cardinality.
+\end{remark}
+
+From this remark we get the following proposition.
+
+\begin{proposition}
+  \label{prp:inverse-functions-induces-sigma-algebra}
+  Let $\A_Y$ be a $\sigma$-algebra on $Y$.
+  Then $f^{-1}(\A_Y) = \set{f^{-1}(E) \mid E \in \A_Y} \subseteq 2^X$
+  is a $\sigma$-algebra on $X$.
+\end{proposition}
+
+\begin{definition}[Measurable function]
+  Let $(X, \A_X)$ and $(Y, \A_Y)$ be measurable spaces,
+  and let $f \colon X \to Y$ be a function.
+  Then $f$ is called a measurable function if for all $E \in \A_Y$ we
+  have $f^{-1}(E) \in \A_X$.
+  That is $f^{-1}(\A_Y) \subseteq \A_X$.
+\end{definition}
+
+\begin{remark}
+  A composition of measurable functions is measurable.
+  This follows from the rule $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$.
+\end{remark}
+
+\begin{lemma}
+  Let $\A_Y = \sigma(\mathcal E)$ such that $\mathcal E \subseteq 2^{Y}$.
+  Then $f \colon X \to Y$ is measurable if and only if for all
+  $E \in \mathcal E$ we have $f^{-1}(E) \in \A_X$.
+\end{lemma}
+\begin{proof}
+  The first direction follows immediately from the definitions.
+  Assume that for all $E \in \mathcal E$ we have $f^{-1}(E) \in \A_X$.
+  We notice that the set
+  \[
+    \set{E \subseteq Y \mid f^{-1}(E) \in \A_X}
+  \]
+  is a $\sigma$-algebra from \Cref{prp:inverse-functions-induces-sigma-algebra},
+  and it is given by assumption that it contains $\mathcal E$.
+  This implies that it contains $\A_Y = \sigma(\mathcal E)$ which completes
+  the proof.
+\end{proof}
+
+\begin{corollary}
+  Let $X$, $Y$ be topological spaces.
+  Then a continuous funtion $f \colon (X,B(X)) \to (Y,B(Y))$ is measurable.
+\end{corollary}
+\begin{proof}
+  We have that $B(Y) = \sigma\del{\set{\text{open sets}}}$,
+  but since for every open $G \subseteq Y$ we have that $f^{-1}(G) \subseteq X$
+  is open, we get that $f^{-1}(G) \in B(X)$ which completes the proof.
+\end{proof}
+
+\begin{remark}
+  Notice that measurable functions are a lot more general than continuous
+  functions because we require $f^{-1}(G)$ to be Borel not necessarily open.
+\end{remark}
+
+\begin{remark}
+  If $(X,\A)$ is a measurable space and $f \colon X \to \R$,
+  we always endow $\R$ with $B(\R)$.
+\end{remark}
+
+\begin{corollary}
+  The following are equivalent:
+  \begin{enumerate}
+    \item[(1)] $f \colon (X,\A) \to \R$ is measurable.
+    \item[(2)] For all $a \in \R$ we have $f^{-1}\del{[a,\infty)} \in \A$.
+    \item[(3)] For all $a \in \R$ we have $f^{-1}\del{(a,\infty)} \in \A$.
+    \item[(4)] For all $b \in \R$ we have $f^{-1}\del{(\ninfty,b]} \in \A$.
+    \item[(5)] For all $b \in \R$ we have $f^{-1}\del{(\ninfty,b]} \in \A$.
+  \end{enumerate}
+  Where for example $f^{-1}\del{(\ninfty,b)} = \set{x \in X \mid f(x) < b}$.
+\end{corollary}
+
+\begin{definition}[Borel/Lebesgue measurable function]
+  A function $f \colon \R^n \to \R$ is said to be Borel or Lebesgue measurable
+  (with respect to its domain $\R^n$) if
+  \[
+    f \colon
+    \begin{array}{c}
+      (\R^n,B(\R^n)) \\
+      (\R^n,\L(\R^n))
+    \end{array}
+    \to (\R, B(\R))
+  \]
+  is measurable.
+\end{definition}
+\begin{remark}
+  We always consider the $\sigma$-algebra on the domain of the function,
+  not the range.
+\end{remark}
+
+\begin{remark}
+  A continuous function $f \colon \R^n \to \R$ is Borel (and thus Lebesgue)
+  measurable, and a function $g$ that is equal to $f$ almost everywhere,
+  is also Lebesgue measurable (but not necessarily Borel measurable).
+  That is because if
+  \[
+    m\del{\underbrace{\set{x \in \R^n \mid f(x) \neq g(x)}}_{N_0}} = 0
+  \]
+  then for any $E \in B(\R)$ we have that $g^{-1}(E) = f^{-1}(E) \triangle N$
+  for some negligible subset $N$ of $N_0$.
+\end{remark}
+
+\begin{example}[Lebesgure measurable but not Borel measurable]
+  The function $f = 0$ is Borel and Lebesgure measurable,
+  but for $E$ that is Lebesgure measurable and not Borel measurable,
+  such that $m(E) = 0$
+  the function $g = \mathbbm{1}_{E}$ is not Borel measurable even though
+  it is equal to $f$ almost everywhere.
+\end{example}
+
+\begin{remark}
+  If $f,g \colon \R \to \R$ such that $f$ is Borel measurable,
+  $g$ is Borel/Lebesgue measurable,
+  then $f \circ g$ is Borel/Lebesgue measurable
+  (because $(g \circ f)^{-1} = f^{-1} \circ g^{-1}$).
+  However, if $f$ is Lebesgue measurable,
+  then $f \circ g$ might not be measurable at all.
+\end{remark}
+
+\begin{definition}[Extended real number line]
+  The extended real number line $\overline \R$ is defined as $[\ninfty,+\infty]$
+  or $\R \cup \set{\ninfty,+\infty}$.
+  It can be turned into a totally ordered set by defining
+  $\ninfty \le a \le +\infty$ for all $a \in \overline \R$.
+  Since it is totally ordered, we can endow it with the order topology,
+  which is the topology generated by the subbase of open rays.
+  In this way, the space $\overline \R$ is compact,
+  every subset of $\overline \R$ has a supremum and an infiumum
+  (the infimum of the empty set is $+\infty$, and its supremum is $\ninfty$.
+  With this topology $\overline \R$ is also homeomorphic to the unit interval
+  $[0,1]$.
+  Thus, the topology is metrizible, correspoinding to the standard metric
+  on the interval.
+  However, there is not metric that is an extension of the standard metric on
+  $\R$.
+\end{definition}
+\begin{remark}
+  This implies that $B(\overline \R)$ is defined as the all the sets
+  of the form $B \in B(\R)$ or $B \cup \set{\infty}$ or $B \cup \set{\ninfty}$
+  or $B \cup \set{\ninfty,\infty}$.
+\end{remark}
+\begin{remark}
+  A function $f \colon (X,\A) \to \overline \R$ is said to be measurable
+  if $f \colon (X,\A) \to (\overline \R, B(\overline \R))$ is measurable.
+
+  A function $f \colon (X,\A) \to \C$ is said to be measurable
+  if $f \colon (X,\A) \to (\C, B(\C))$ is measurable.
+
+  Since we have that $\C \simeq \R^2$ we have that
+  \[
+    B(\C) = B(\R^2) = B(\R) \otimes B(\R).
+  \]
+  This implies that $f$ is measurable if
+  \[
+    \Im(f) \colon (X,\A) \to (\R,B(\R)) \tand
+    \Re(f) \colon (X,\A) \to (\R,B(\R))
+  \]
+  are both measurable because
+  \[
+    (\Re f)^{-1}(A) \cap (\Im f)^{-1}(B) = f^{-1}(A \times B).
+  \]
+\end{remark}
+
+\begin{proposition}
+  \label{prp:measurable-functions-arithmetic}
+  Let $f,g \colon (X,\A) \to \R$ be measurable, and let $c \in \R$.
+  Then functions of the form
+  \begin{enumerate}
+    \item[(1)] $c \cdot f$,
+    \item[(2)] $f + g$,
+    \item[(3)] $f \cdot g$,
+    \item[(4)] $\frac{f}{g}$ (if $g \neq 0$),
+  \end{enumerate}
+  are all measurable as well.
+\end{proposition}
+\begin{proof}
+  To be added.
+\end{proof}
+\begin{remark}
+  We have that \Cref{prp:measurable-functions-arithmetic} is true
+  for $f,g \colon (X,\A) \to \overline \R$ as well when declaring
+  \[
+    (\pinfty) + (\pinfty) = \pinfty \quad
+    (\ninfty) - (\ninfty) = \ninfty \quad
+    0 \cdot (\pm\infty) = 0 \quad
+    (\pinfty) + (\ninfty) = a \in \overline \R
+  \]
+  for some fixed $a \in \overline \R$.
+\end{remark}
+
+\begin{proposition}
+  Let $f,g \colon (X,\A) \to \overline \R$ be measurable.
+  The the functions $\abs{f}$, $\max(f,g)$, and $\min(f,g)$ are measurable.
+\end{proposition}
+\begin{proof} \phantom{}
+\begin{enumerate}
+  \item[(1)] This is simply a composition with $x \mapsto \abs{x}$.
+  \item[(2 + 3)] We can see this by noticing that
+  \begin{align*}
+    \set{\max(f,g) < b} &= \set{f < b} \cap \set{g < b} \\
+    \set{\min(f,g) < b} &= \set{f < b} \cup \set{g < b}.
+  \end{align*}
+  or by ??
+  % add later.
+\end{enumerate}
+\end{proof}
+
+\subsection{Pointwise convergence}
+\begin{proposition}
+  \label{prp:more-measurable-functions}
+  Let $\set{f_i \colon (X,\A) \to \overline \R}_{i=1}^{\infty}$ be a sequence
+  of measurable functions.
+  Then the functions
+  \[
+    \limsup_{i \to \infty} f_i \quad
+    \liminf_{i \to \infty} f_i \quad
+    \sup_{i \to \infty} f_i \quad
+    \inf_{i \to \infty} f_i
+  \]
+  are all measurable.
+\end{proposition}
+\begin{remark}
+  All the limits are pointswise.
+  That is, $(\sup_{i} f_i)(x) = \sup_{i}(f_i(x))$.
+\end{remark}
+\begin{proof}
+  To be added (not hard).
+\end{proof}
+
+\begin{corollary}
+  Let $\set{f_i \colon (X,\A) \to \overline \R}_{i=1}^{\infty}$ be a sequence
+  of measurable functions that converge pointwise to $f$.
+  Then $f \colon (X,\A) \to \overline \R$ is measurable.
+\end{corollary}
+\begin{proof}
+  \[
+    \lim_{i \to \infty} f_i =
+    \underbrace{\liminf_{i \to \infty} f_i}_{\text{measurable}}.
+  \]
+\end{proof}
+
+\subsection{Simple functions}
+\begin{definition}[Indicator function]
+  An indicator function of a set $E \subseteq X$ is defined as
+  \[
+    \mathbbm{1}_E(x) =
+    \chi_E(x) =
+    \begin{cases}
+      1, &x \in E \\
+      0, &\text{otherwise}
+    \end{cases}.
+  \]
+\end{definition}
+\begin{remark}
+  $\mathbbm 1_E$ is measurable if and only if $E$ is measurable.
+  That is because
+  \[
+    \set{\mathbbm{1}_{E} \geq b} =
+    \begin{cases}
+      \emptyset, &b > 1 \\
+      E, &0 < b \le 1 \\
+      X, &b \le 0
+    \end{cases}.
+  \]
+\end{remark}
+
+\begin{definition}[Simple function]
+  \label{def:simple-function}
+  A function $\phi \colon (X,\A) \to \R$ (not $\overline\R$)
+  is called simple if
+  \[
+    \phi(X) =
+    \sum_{j=1}^{N} c_j \cdot \mathbbm{1}_{E_j}, \quad
+    c_j \in \R \stand E_j \in \A.
+  \]
+\end{definition}
+\begin{remark}
+  We see that $\phi$ is a simple function if and only if it is measurable
+  and $\range(\phi)$ is a finite set.
+\end{remark}
+\begin{remark}
+  There could be more than one representation of the same simple function
+  as seen in \Cref{def:simple-function}.
+  The representation is called standard if $\set{c_i}_{i=1}^{\infty}$ are all
+  differenet and $E_j$ are disjoint.
+  This representation is unique because we can set
+  $\set{c_i} = \range(\phi)$ and $E_j = \phi^{-1}\del{\set{c_i}}$.
+\end{remark}
+\begin{remark}
+  The sum and product of simple functions is simple.
+\end{remark}
+
+\begin{proposition}
+  Let $f \colon (X,\A) \to [0,\infty]$ be a nonnegative measurable function.
+  % nonnegative is here for emphasis
+  Then there exists a sequence of simple functions $\set{\phi_n}$ such that
+  \[
+    0 \le \phi_1 \le \phi_2 \le \cdots
+  \]
+  is a pointwise increasing function and $\phi_n \nearrow f$ pointwise.
+  Moreover, $\phi_n \taking{n \to \infty} f$ uniformly on any set $E$
+  such that $f$ is bounded on $E$.
+\end{proposition}
+\begin{proof}
+  Given $n \in \N$, we split the interval $(0,2^n]$ to $2^{2n}$ subintervals
+  of length $2^{-n}$ as follows
+  \[
+    I_{k,n} = (k \cdot 2^{-n}, (k+1) \cdot 2^{-n}] \quad
+    k = 0,1,2,\dots,2^{2n}-1.
+  \]
+  and set $J_n = (2^n,\infty)$.
+  We also define
+  \[
+    F_n = f^{-1}(J_n) \tand
+    E_{n,k} = f^{-1}(I_{n,k}) \tand
+    \phi_n =
+    \sum_{k=0}^{2^{2n}-1}
+    k \cdot 2^{-n} \cdot \mathbbm{1}_{E_{k,n}} + 2^n \cdot \mathbbm{1}_{F_n}.
+  \]
+  % Add sketch?
+  The sequence $\phi_n$ is increasing because we just refine the partitions.
+  We also have that if $f\vert_{E} \le 2^{n_0}$ then for all $n_0 \le n$
+  we have that $0 \le f \cdot \phi_n \le 2^{-n}$ on $E$.
+  This shows that $\phi_n \taking{n \to \infty} f$ uniformly on any set $E$
+  such that $f$ is bounded on $E$.
+  In particular we have a pointwise convergence for any $x$ such that
+  $f(x) < \infty$.
+  If $f(x) = \infty$ then the approximation of $\phi_n$ is given by
+  $2^n \taking{n \to \infty} \infty$ so we have that $\phi_n \nearrow f$
+  pointwise which completes the proof.
+\end{proof}
+
+\subsection{Almost everywhere}
+Recall the following definion.
+\begin{definition}[Almost everywhere]
+  Let $(X,\A,\mu)$ be a measure space.
+  We say that a certain property is true \textit{almost everywhere} if it is
+  true for any $x \in X \setminus E$ such that $E$ is of measure zero
+  ($\mu$-negligible).
+\end{definition}
+\begin{remark}
+  It is possible that $\overline B = \set{x \mid \neg P(x)} \notin \A$.
+  We only require that $\overline B \subseteq B \in \A$ such that $\mu(B) = 0$.
+  Altenratively, that $\overline \mu(\overline B) = 0$ where
+  $(X,\overline \A,\overline \mu)$ is the completion of $(X,\A,\mu)$.
+\end{remark}
+
+\begin{proposition}
+  Let $(X,\A,\mu)$ be a complete measure space,
+  and let $f,g \colon X \to \overline \R$.
+  Then if $f$ is measurable,
+  and $f = g$ almost everywhere ($\mu(\underbrace{f \neq g}_{N}) = 0$),
+  then $g$ is measurable.
+\end{proposition}
+\begin{proof}
+  From the completeness of the space $(X,\A,\mu)$ we get that
+  \[
+    \set{g < b} =
+    \left[
+    \set{f < b} \cap N^c
+    \right] \sqcup
+    \left[
+    \set{g < b} \cap N
+    \right] \in \A.
+  \]
+\end{proof}
+
+\begin{proposition}
+  Let $(X,\A,\mu)$ is a complete measure space,
+  let $\set{f_n \colon (X,\A) \to \overline \R}_{i=1}^{\infty}$ be a sequence
+  of measurable function,
+  and let $f_n \taking{n \to \infty} f$ almost everywhere,
+  that is
+  \[
+    \mu\del{\set{x \in X \mid
+        \nexists \lim_{n \to \infty} f_n(x)
+        \textnormal{ or }
+        \exists \lim_{n \to \infty} f_n(x) \neq x}} = 0.
+  \]
+  Then $f$ is measurable.
+\end{proposition}
+\begin{proof}
+  Define $g = \limsup_{n \to \infty} f_n$.
+  It is measurable from \Cref{prp:more-measurable-functions}.
+  Since $f = g$ $\mu$-almost everywhere, from completeness $f$ is measurable.
+\end{proof}
+
+\begin{proposition}
+  \label{prp:overline-a-e-noverline}
+  Let $(X,\overline \A,\overline \mu)$ be the completion of the measure
+  space $(X,\A,\mu)$.
+  Let $\overline f \colon X \to \overline \R$ be $\overline \A$-measurable.
+  Then there exists a $\A$-measurable function $f \colon X \to \R$ such
+  that $\overline f = f$ almost everywhere.
+\end{proposition}
+
+\begin{proof}
+  To be added.
+\end{proof}
+
+\begin{corollary}
+  Let $f_n \taking{n \to \infty} \overline f$ $\mu$-almost everywhere.
+  Then it is possible that $\overline f$ is not $\A$-measurable
+  (if $(X,\A,\mu)$ is not complete) but there exists a measurable
+  function $f$ such that $\overline f = f$ almost everywhere,
+  and thus $f_n \taking{n \to \infty} f$ $\mu$-almost everywhere.
+\end{corollary}
+
+\newpage
+
+\section{Integration}
+\subsection{Integrals of simple functions}
+
+Set a measure space $(X,\A,\mu)$ and denote
+$\L^+ := \set{f \colon X \to [0,\infty] \mid \text{$f$ is measurable}}$.
+\begin{remark}
+  If $\phi \in \L^+$ is simple, then
+  \[
+    \phi = 
+    \sum_{j=1}^{N} c_j \cdot \mathbbm{1}_{E_j}, \quad
+    c_j \in [0,\infty] \stand E_j \in \A.
+  \]
+\end{remark}
+
+\begin{definition}[Integration of simple functions]
+  Let $\phi \in \L^+$ be simple.
+  Then we define
+  \[
+    \int \phi \dmu = 
+    \sum_{j=1}^{N} c_j \cdot \mu(E_j) \in [0,\infty].
+  \]
+\end{definition}
+
+\begin{remark}
+  We can verify that this definition is not dependent on the representation
+  of $\phi$.
+  Thus we usually compute this integral using the simple function's
+  standard representation.
+\end{remark}
+\begin{remark}
+  The convention is that
+  $\underset{=c_j}{0} \cdot \underset{=\mu(E_j)}{\infty} = 0$.
+\end{remark}
+\begin{remark}
+  We denote
+  \[
+    \int \phi =
+    \int \phi \dmu =
+    \int \phi(x) \dmu(x) =
+    \int \phi(x) \mu(\dx)
+  \]
+  and for all $A \in \A$ 
+  \[
+    \int_{A} \phi \dmu =
+    \int \underbrace{\phi \cdot \mathbbm{1}_{A}}_{\text{simple}} \dmu.
+  \]
+\end{remark}
+
+\begin{proposition}
+  Let $\phi, \psi \in \L^+$ be simple functions. Then
+  \begin{enumerate}
+    \item[(1)] For all $a \geq 0$ we have $\int a \phi = a \int \phi$.
+    \item[(2)] $\int (\phi + \psi) = \int \phi + \int \psi$.
+    \item[(3)] If $\phi \le \psi$ then $\int \phi \le \int \psi$.
+  \end{enumerate}
+\end{proposition}
+\begin{proof} \phantom{}
+\begin{enumerate}
+  \item[(1)] Immediate result.
+  \item[(2)] 
+  \item[(2)] 
+\end{enumerate}
+\end{proof}
+
+\begin{definition}[Integrability]
+  Let $f \in \L^+$.
+  We define
+  \[
+    \int f \dmu :=
+    \sup\set{\int \phi \dmu \middle\vert 0 \le \phi \le f \stand \phi 
+    \text{ is simple}}.
+  \]
+  A function $f \in \L^+$ is called integrable with respect to $\mu$ if
+  $\int f \dmu < \infty$.
+  We define
+  \[
+    \int_{A} f \dmu = \int f \cdot \mathbbm{1}_{A} \dmu.
+  \]
+\end{definition}
+\begin{remark}
+  This definition generalized the previous definition for $f = \phi$.
+  This follows from property $(3)$ in the previous proposition.
+\end{remark}
+\begin{remark}
+  One may ask why don't we approximate the integral from above?
+  The answer is that while for bounded functions with $|A| < \infty$
+  we can equivalently define
+  \[
+    \int f \dmu :=
+    \inf\set{\int \phi \dmu \middle\vert 0 \le f \le \phi \stand \phi
+    \text{ is simple}}.
+  \]
+  However, the situation is not so simple if the function is unbounded
+  or $|A| = \infty$. Here are a few examples:
+  \begin{itemize}
+    \item The function $f(x) = x^{-2}$ is integrable over $A = (1,\infty)$.
+      However, for any simple function such that $f \le \phi$ we have
+      $\int_{A} \phi \dmu = \infty$ which means it is not integrable.
+    \item The function $f(x) = x^{-0.5}$ is integrable over $A = (0,1)$.
+      However, there's no simple function $s$ such that $f \le s$ and
+      $s$ is finite almost everywhere.
+  \end{itemize}
+\end{remark}
+
+\begin{proposition}
+  \label{prp:l-plus-properties}
+  Let $\psi, \phi, \phi_1, \phi_2 \in \L^+$.
+  Then
+  \begin{enumerate}
+    \item[(1)] For all $a \geq 0$ we have $\int a \phi = a \int \phi$.
+    \item[(2)] $\int (\phi_1 + \phi_2) = \int \phi_1 + \int \phi_2$.
+    \item[(3)] If $0 \le \psi \le \phi$ then $0 \le \int \psi \le \int \phi$.
+  \end{enumerate}
+\end{proposition}
+
+\subsection{Monotone convergence theorem}
+\begin{theorem}[Monotone convergence theorem]
+  Let $\set{f_n} \subseteq \L^+$ be a nondecreasing sequence of functions
+  that converges pointwise to $f$.
+  Then
+  \[
+    \lim_{n \to \infty} \int f_n \dmu = \int f \dmu.
+  \]
+\end{theorem}
+\begin{remark}
+  The function $f$ is measurable because $f = \sup_{n} f_n$.
+\end{remark}
+\begin{remark}
+  The theorem is false for the Riemann integral.
+  Since $\Q$ is countable we can construct a well order on it such that
+  $\set{q_k}_{k=1}^{\infty} = \Q$ and then define
+  \[
+    f_n(x) = \begin{cases}
+      1, &x\in \bigcup_{k=1}^{n} q_k \\
+      0, &\text{otherwise}
+    \end{cases}
+  \]
+  but the limit function is $f = \mathbbm{1}_{\Q \cap [0,1]}$ which is not
+  Riemann integrable.
+\end{remark}
+\begin{proof}
+  From property $(3)$ of \Cref{prp:l-plus-properties}
+  we have
+  \[
+    \int f_1 \le \int f_2 \le \cdots \le \int f_n \le \int f
+  \]
+  so the sequence $\int f_n$ converges and we have
+  \[
+    \lim_{n \to \infty} \int f_n \dmu \le \int f \dmu.
+  \]
+  Now set $\alpha \in (0,1)$ and let $\phi$ be a simple function such that
+  $0 \le \phi \le f$.
+  We define
+  \[
+    A_n =\set{x \in X \colon f_n(x) \geq \alpha \cdot \phi(x)}
+  \]
+  and see that they are measurable, increasing, and $\bigcup A_n = X$.
+  Thus
+  \[
+    \int f_n \geq
+    \int f_n \mathbbm{1}_{A} \geq
+    \int \alpha \phi \cdot \mathbbm{1}_{A_n} =
+    \alpha \int_{A_n} \phi.
+  \]
+  and then
+  \[
+    \int_{A_n} \phi =
+    \int \phi \mathbbm{1}_{A_n} =
+    \sum_{j=1}^{N} c_j \mu\del{E_j \cap A_n} %%%% weird up arrow
+    \sum_{j=1}^{N} c_j \mu(E_j) = \int \phi.
+  \]
+  Thus finally we have
+  \[
+    \lim_{n \to \infty} \int f_n \geq \alpha \int \phi
+  \]
+  for an arbitrary $\alpha \in (0,1)$ so we can take $\alpha \to 1$
+  and get
+  \[
+    \lim_{n \to \infty} \int f_n \geq \int \phi.
+  \]
+  We can now take $\sup_{\phi}$ and get that
+  \[
+    \lim_{n \to \infty} \int f_n \geq \int f
+  \]
+  which completes the proof.
+\end{proof}
+\begin{corollary}
+  An equivalent definition to the integral of $f \in \L^+$ is
+  \[
+    \int f \dmu = \lim_{n \to \infty} \int \phi_n \dmu
+  \]
+  for any sequence of positive simple functions $0 \le \phi_n \to f$.
+  This is because we have shown that there exists such a sequence and the
+  limit is not dependent on the choice of sequence.
+\end{corollary}
+
+\begin{corollary}
+  For $f,g \in \L^+$ we have that
+  \[
+    \int f + g =
+    \int f + \int g.
+  \]
+\end{corollary}
+\begin{proof}
+  There exists sequences of simple functions $\phi_n \nearrow f$ and 
+  $\psi_n \nearrow g$, and thus $\phi_n + \psi_n \nearrow f + g$
+  and then from MCT we have
+  \[
+    \int f + g =
+    \lim_{n \to \infty}\del{\int \phi_n + \int \psi_n} =
+    \int f + \int g.
+  \]
+\end{proof}
+
+\begin{corollary}[Switching integrals and sums]
+  For $\set{f_n}_{n=1}^{\infty} \subseteq \L^+$ we have
+  \[
+    \int \sum_{n=1}^{\infty} f_n =
+    \sum_{n=1}^{\infty} \int f_n.
+  \]
+\end{corollary}
+\begin{proof}
+  We can show this is true for a finite $n$ by induction on $g$,
+  and in the general case we have
+  \[
+    \int \sum_{n=1}^{\infty} f_n =
+    \int \lim_{N \to \infty} \sum_{n=1}^{N} f_n 
+    \underset{\text{MCT}}{=}
+    \lim_{N \to \infty} \int \sum_{n=1}^{N} f_n =
+    \lim_{N \to \infty} \sum_{n=1}^{N} \int f_n =
+    \sum_{n=1}^{\infty} \int f_n
+  \]
+\end{proof}
+
+\begin{remark}
+  Recall that in general, if $f_n \taking{\text{pointwise}} f$ we don't
+  necessarily have that
+  \[
+    \lim_{n \to \infty} \int f_n \dmu = \int f \dmu.
+  \]
+  The limit might not even exist.
+  For example, we can choose $f_n = \mathbbm{1}_{[n,n+1)}$ with $\mu = m$
+  being Lebesgue measure.
+  We have that $f_n \taking{n \to \infty} 0$ pointwise,
+  but for all $n \geq 1$ we have $\inf f_n \dm = 1$ and thus
+  \[
+    1 = \lim_{n \to \infty} \int f_n \dm \neq
+    \int 0 \dm = 0.
+  \]
+\end{remark}
+
+% Another example + This is because the 'mass' is going to \infty?
+
+\begin{remark}
+  The following lemma shows us that even if the monotonic convergence theorem
+  does not hold for non monotonic function sequences,
+  at least one part of it always holds.
+\end{remark}
+
+\begin{lemma}[Fatou's lemma]
+  Let $\set{f_n}_{n=1}^{\infty} \subseteq \L^+$.
+  Then
+  \[
+    \int \liminf_{n \to \infty} f_n \le
+    \liminf_{n \to \infty} \int f_n.
+  \]
+\end{lemma}
+
+\begin{remark}
+  The direction of the inequality is affected by
+  $\set{f_n}_{n=1}^{\infty} \subseteq \L^+$.
+  For nonpositive functions we have 
+  \[
+    \int \limsup_{n \to \infty} f_n \geq
+    \limsup_{n \to \infty} \int f_n.
+  \]
+\end{remark}
+\begin{proof}
+  Set $k$, and then for all $j \geq k$ we have that that
+  \[
+    \inf_{n \geq k} f_n \le f_j \implies
+    \int \inf_{n \geq k} f_n \le \int f_j \implies
+    \int \inf_{n \geq k} f_n \le \inf_{j \geq k} \int f_j \implies
+  \]
+  TO BE CONTINUED
+\end{proof}
+
+% Go over this proof
+\begin{proposition}
+  Let $f \in \L^+$.
+  Then $\int f \dmu = 0$ if and only if $f = 0$ $\mu$-almost everywhere.
+\end{proposition}
+\begin{proof}
+  First suppose that $\phi$ is simple.
+  \[
+    \phi= \sum_{j=1}^{N} c_j \cdot \mathbbm{1}_{E_j}.
+  \]
+  This case is clear because
+  \begin{align*}
+    0 =
+    \int \phi \dmu =
+    \sum_{j=1}^{N} c_j \cdot \mu(E_j) &\iff
+    \forall j \quad c_j \mu(E_j) = 0 \\ &\iff
+    c_j = 0 \stor \mu(E_j) = 0 \iff
+    \phi = 0 \text{ $\mu$-almost everywhere}.
+  \end{align*}
+  Now for a general function, first assume that $f = 0$ almost everywhere.
+  Then if $0 \le \phi \le f$ is simple then $\phi = 0$ almost everywhere
+  and thus $\int \phi \dmu = 0$ so $\int f = \sup \int \phi \dmu = 0$.
+  
+  For the second direction we need to use Markov's inequality.
+  \begin{lemma}[Markov's inequality]
+    Let $f \in \L^+$. Then for all $r < 0$ we have
+    \[
+      \mu(f \geq r) \le \frac{\int f \dmu}{r}.
+    \]
+  \end{lemma}
+  \begin{proof}
+    \[
+      r \cdot \mu(f \geq r) =
+      \int r \cdot \mathbbm{1}_{\set{f \geq r}} \dmu \le
+      \int f \dmu.
+    \]
+  \end{proof}
+  Define $A_n = \set{f \geq \frac{1}{n}}$.
+  Assume by contradiction that we don't have $f = 0$ almost everywhere,
+  then there would exist $n$ such that $\mu(A_n) > 0$, because otherwise
+  we would have
+  \[
+    \mu(f > 0) = \mu\del{\bigcup A_n}
+  \]
+  and from continuity from below this is equal to
+  $\lim_{n \to \infty} \mu(A_n) = 0$ so $f = 0$ everywhere which is a
+  contradiction.
+  Thus,
+  \[
+    f \geq \frac{1}{n} \cdot \mathbbm{1}_{A_n} \implies
+    \int f \geq \frac{1}{n} \cdot \mu(A_n) > 0
+  \]
+  in contradiction, which completes the proof.
+\end{proof}
+
+\begin{corollary}
+  In the convergence theorems (MCT/Fatou) we can require convergence in
+  $\mu$-almost everywhere instead of pointwise convergence.
+\end{corollary}
+%% RECOLLECTIONS?
+%% PROOF OF COROLLARY?
+
+\begin{proposition}
+  Let $f \in \L^+$ such that $\int f \dmu < \infty$.
+  Then $f$ is finite $\mu$-almost everywhere ($\mu\del{\set{f = \infty}} = 0$).
+\end{proposition}
+\begin{proof}
+  The set $E = \set{f = + \infty}$ is measurable,
+  and $f \geq t \cdot \mathbbm{1}_{E}$ for all $t$ so
+  \[
+    \int f \geq t \int \mathbbm{1}_{E} = t \cdot \mu(E).
+  \]
+  So if $\mu(E) > 0$ we can take $t \to \infty$ and get a contradiction.
+\end{proof}
+\begin{exercise}
+  If $f \in \L^+$ and $\int f \dmu < \infty$ then $\set{f > 0}$ is
+  $\sigma$-finite.
+\end{exercise}
+
+\subsection{Integrals of general measurable functions}
+For each $f \colon X \to [-\infty, \infty]$ we define
+\[
+  f^+, f^- \colon X \to [0,\infty]
+\]
+by
+\[
+  f^+ = \max\set{f, 0} \tand
+  f^- = \max\set{-f, 0}.
+\]
+It is clear that $f = f^+ - f^-$ and $|f| = f^+ + f^-$.
+We also have that $f$ is measurable if and only if $f^-$ and $f^+$
+are measurable. They are also nonnegative so if $f$ is measurable thism means
+they are in $\L^+$ so we can also take their integrals.
+\begin{definition}[Integrability]
+  Let $f \colon X \to [-\infty, \infty]$ be measurable, and define
+  \[
+    \int f \dmu =
+    \int f^+ \dmu - \int f^- \dmu
+  \]
+  if at least one of the intergals is finite.
+  If both integrals are finite, we say that $f$ is integrable (or Lebesgure
+  integrable if $\mu = m$ is Lebesgure measure).
+  In the case both integrals are finite, we have
+  \[
+    \int |f| \dmu =
+    \int f^+ \dmu + \int f^- \dmu < \infty.
+  \]
+  That is, unlike the Riemann integral,
+  $f$ is integrable if and only if $f$ is absolutely integrable!
+\end{definition}
+\begin{example}[Integral exists but the function is not integrable]
+  Define $f(x) = \frac{1}{x} \cdot \mathbbm{1}_{[0,1]}$,
+  \[
+    \int_{0}^{1} f \dm \underset{\text{MCT}}{=}
+    \lim_{\epsilon_n \searrow 0} \int_{\epsilon_n}^{1} \frac{1}{x} \dm =
+    \lim_{\epsilon_n \searrow 0} \ln x \big\vert_{\epsilon_n}^{1} = \infty.
+  \]
+  Thus, the integral exists,
+  but the function is not integrable.
+\end{example}
+
+\begin{definition}[$\tilde{\L}^1$-space]
+  \[
+    \tilde{\L}^1(\mu) :=
+    \set{f \colon X \to [\ninfty,\infty] \middle\vert \int |f| \dmu < \infty \stand
+    f \text{ is measurable}}.
+  \]
+\end{definition}
+\begin{proposition}
+  The space $\tilde\L^1$ is a linear space over $\R$, and the integral
+  is a linear functional on it.
+  Let $f,g \in \tilde\L^1(\mu)$. Then
+  \begin{enumerate}
+    \item[(1)] $\int c f \dmu = c \int f \dmu$.
+    \item[(2)] $\int f + g = \int f + \int g$.
+    \item[(3)] $f \le g \implies \int f \le \int g$.
+    \item[(4)] $\abs{\int f} \le \int\abs{f}$.
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+  $\tilde\L^1(\mu)$ is a linear space because for $f,g \in \tilde\L^1(\mu)$
+  we have
+  \[
+    \int |a f + b g| \le
+    \int |a| |f| + \int |b| |g| \implies
+    a f + b g \in \tilde\L^1(\mu)
+  \]
+  We can now prove the properties as mentioned in the proposition
+  \begin{enumerate}
+    \item[(1)] It is clear that
+      \[
+        \int c \cdot f =
+        \int (c f)^+ - \int (c f)^- =
+        c \del{\int f^+ - \int f^-} =
+        c \int f.
+      \]
+    \item[(2)] Denote $h = f + g$.
+    We have that
+    \[
+      h^+ - h^- =
+      f^+ - f^- + g^+ - g^-
+    \]
+    which implies that
+    \begin{align*}
+      h^+ + f^- + g^- = f^+ + g^+ + h^- &\implies
+      \int h^+ + \int f^- + \int g^- = \int f^+ + \int g^+ + \int h^- 
+                                     \\ &\implies
+      \int h^+ - \int h^- = \int f^+ - \int f^- + \int g^+ - \int g^-
+    \end{align*}
+  \item[(3)] Suppose that $g - f \geq 0$, then
+    \[
+      0 \le \int (f - g) = \int f - \int g
+    \]
+  \item[(4)] We have that $- |f| \le f \le |f|$ so according to $(3)$ we have
+    that
+    \[
+      - \int |f| \le \int f \le \int |f|
+    \]
+  \end{enumerate}
+\end{proof}
+\begin{remark}
+  Let $f \colon X \to \C$.
+  Then $f$ is integrable if and only if $\Re f$ and $\Im f$ are integrable
+  because
+  \[
+    \int f = \int \Re f + i \int \Im f.
+  \]
+\end{remark}
+
+\begin{proposition}
+  Let $f,g \in \tilde\L^1$. Then
+  \begin{enumerate}
+    \item[(1)] $\set{f \neq 0}$ is $\sigma$-finite.
+    \item[(2)] $f = g$ $\mu$-almost everywhere if and only if
+      $\int (f - g) \dmu = 0$ if and only if for all $E \in \A$ we have
+      $\int_{E} f \dmu = \int_{E} g \dmu$.
+  \end{enumerate}
+\end{proposition}
+\begin{proof} \phantom{}
+\begin{enumerate}
+  \item[(1)] We have that $\set{f \neq 0} = \set{|f| \neq 0}$.
+    Since $|f| \in \L^+$ we have $\int |f| \dmu < \infty$.
+  \item[(2)] $f - g = 0$ $\mu$-almost everywhere if and only if
+    $\underset{\in \L^+}{|f - g|} = 0$ $\mu$-almost everywhere if and only
+    if $\int |f - g| \dmu = 0$.
+\end{enumerate}
+\end{proof}
+
+\begin{proposition}
+  \label{prp:equal-a-e-implies-equal-integral}
+  Let $f,g \in \tilde\L^1(\mu)$.
+  Then $f = g$ $\mu$-a.e.\ if and only if
+  $\int |f - g| \dmu = 0$ if and only if $\int_{E} f = \int_{E} g$ for all
+  $E \in \A$.
+\end{proposition}
+\begin{proof}
+  To be added.
+\end{proof}
+
+\begin{definition}[$\L^1(\mu)$ space]
+  We define an equivalence relation on $\tilde\L^1(\mu)$ by
+  \[
+    f \sim g \iff f = g \, (\mu \text{ almost everywhere}).
+  \]
+  The transitivity follows from the fact that
+  $\mu(A \cup B) \le \mu(A) + \mu(B) = 0$.
+  We define
+  \[
+    \L^1(\mu) = \tilde\L^1(\mu) / \sim.
+  \]
+\end{definition}
+\begin{remark}
+  The space $\L^1(\mu)$ is a vector space on $\R$.
+\end{remark}
+\begin{definition}[$\L^1(\mu)$ norm]
+  Let $f \in \L^1(\mu)$ be a representative of an equivalence class $[f]$.
+  We define
+  \[
+    \norm{[f]}_{\L^1(\mu)} =
+    \norm{f}_{\L^1(\mu)} =
+    \int |f| \dmu (< \infty).
+  \]
+\end{definition}
+\begin{remark}
+  The norm is well defined by \Cref{prp:equal-a-e-implies-equal-integral}.
+\end{remark}
+\begin{remark}
+  The space $(\L^1(\mu), \norm{\cdot}_{\L^1(\mu)})$ is a complete normed space.
+\end{remark}
+
+\begin{remark}
+  By \Cref{prp:overline-a-e-noverline} there exists a bijection between
+  $\L^1(\mu)$ and $\L^1(\overline \mu)$.
+  This means that for all $\overline f$ there exists $f$ such that
+  $f \sim \overline f$ and thus we identify them as the same space.
+\end{remark}
+
+\subsection{Dominant convergence theorem}
+
+\begin{theorem}[Dominant convergence theorem]
+  Let $\set{f_n} \subseteq \L^1(\mu)$ be a sequence such that
+  \begin{itemize}
+    \item $f_n \to f$ $\mu$-almost everywhere.
+    \item There exists an integrable ``dominant'' $g \in \L^1(\mu)$ such that
+      $|f_n| \le g$ $\mu$-almost everywhere for all $n$.
+  \end{itemize}
+  Then $f \in \L^1(\mu)$ and
+  \[
+    \int f \dmu =
+    \lim_{n \to \infty} \int f_n \dmu.
+  \]
+\end{theorem}
+\begin{remark}
+  The second requirement is the analog of the finiteness requirement
+  in the continuity from above property of measures.
+\end{remark}
+\begin{proof}
+  To be added.
+\end{proof}
+
+\begin{proposition}
+  Let $\set{f_k} \subseteq \L^1(\mu)$ be a sequence such that
+  \[
+    \sum_{k=1}^{\infty} \int \abs{f_k} \dmu < \infty.
+  \]
+  Then
+  \begin{enumerate}
+    \item[(1)] $\sum_{k=1}^{\infty} \abs{f_k} \in \L^1(\mu)$.
+    \item[(2)] There exists $g \in \L^1(\mu)$ such that
+      $\sum_{k=1}^{n} f_k \taking{n \to \infty} g$ $\mu$-almost everywhere.
+    \item[(3)] $\int g \dmu = \sum_{k=1}^{\infty} \int f_k \dmu$.
+  \end{enumerate}
+\end{proposition}
+\begin{proof} \phantom{}
+\begin{enumerate}
+  \item[(1)]
+  \item[(2)]
+  \item[(3)]
+\end{enumerate}
+\end{proof}
+
+\newpage
+
+\section{Covergence}
+\subsection{Types of convergence}
+Let $(X,\A,\mu)$ be a measure space.
+\begin{description}
+  \item[(0) $f_n \taking{n \to \infty} f$ uniformly] if
+    \[
+      \sup_{x \in X} \abs{f_n(x) - f(x)} \taking{n \to \infty} 0.
+    \]
+  \item[(1) $f_n \taking{n \to \infty} f$ $\mu$-almost everywhere] if
+    \[
+      \mu\del{\set{x \in X \mid f_n(x) \not\taking{n \to \infty} f(x)}} = 0.
+    \]
+  \item[(2) $f_n \taking{n \to \infty} f$ in $\L^1(\mu)$] if
+    \[
+      \norm{f_n - f}_{\L^1(\mu)} =
+      \int \abs{f_n - f} \dmu \taking{n \to \infty} 0.
+    \]
+  \item[(3) $f_n \taking{\mu} f$ in measure] if
+    \[
+      \forall \epsilon > 0 \quad
+      \mu\del{\set{x \in X \colon \abs{f_n(x) - f(x)} \geq \epsilon}}
+      \taking{n \to \infty} 0.
+    \]
+\end{description}
+\begin{remark}
+  We have that $(2) \Rightarrow (3)$ by Markov's inequality.
+\end{remark}
+
+\begin{remark}
+  We have that $(3) \Rightarrow (1)$ for some subsequence.
+  There exists a subsequence $\set{n_j}$ such that
+  $f_{n_j} \taking{n \to \infty} f$ $\mu$-almost everywhere.
+\end{remark}
+\begin{remark}
+  We have that $(1) \nRightarrow (2)$ and $(2) \nRightarrow (1)$.
+\end{remark}
+
+\begin{example}
+  There are examples here.
+\end{example}
+
+%% Some examples talking
+
+\subsection{Egoroff's theorem}
+\begin{remark}
+  The following theorem tells us when $(1) \Rightarrow (0)$.
+\end{remark}
+\begin{theorem}[Egoroff's theorem]
+  Let $\mu(X) < \infty$ and
+  $f_n \taking{n \to \infty} f$ $\mu$-almost everywhere.
+  Then for all $\epsilon > 0$ there exists $E \subseteq X$ such
+  that $\mu(E) < \epsilon$ and
+  $f_n \taking{n \to \infty} f$ uniformly on $E^c$.
+\end{theorem}
+\begin{proof}
+  To be added
+\end{proof}
+
+\newpage
+
+\section{Approximations of functions in \texorpdfstring{$\L^1(\mu)$}{L}}
+
+\begin{definition}[Support]
+  Let $f \colon X \to \R$ be a function.
+  The set-theoretic support of $f$ is
+  \[
+    \supp(f) = \set{x \in X \mid f(x) \neq 0}.
+  \]
+  The (topological) support of $f$ is
+  \[
+    \supp(f) = \overline{f^{-1}\del{\set{0}^c}}.
+  \]
+\end{definition}
+
+\begin{proposition}
+  The set of simple functions is dense in $\L^1(\mu)$.
+  That is,
+  we can choose $\phi = \sum_{j=1}^{k} c_j \mathbbm{1}_{E_j}$ such
+  that $\int |f - \phi| \dmu < \epsilon$.
+  We have $\phi \in \L^1(\mu)$ because
+  $\norm{\phi} \le \underbrace{\norm{f}}_{\text{finite}} +
+  \underbrace{\norm{\phi - f}}_{\epsilon} < \infty$.
+\end{proposition}
+
+\begin{proposition}
+  Let $\mu$ be the Lebesgue--Stieltjes measure on $\R$.
+  Then
+  \begin{enumerate}
+    \item[(1)] We can choose $E_j$ to be a finite disjoint union of open
+      intervals for $\phi$.
+    \item[(2)] The set of continuous functions $f \colon \R \to \R$
+      with compact support (also denoted $C_c(\R)$) is dense in $\L^1(\mu)$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{proposition}
+  Let $\mu = m$ in $\R^n$ (or any other Borel regular measure).
+  Then
+  \begin{enumerate}
+    \item[(1)] We can choose $E_j$ to be a disjoint union of open boxes
+      for $\phi$.
+    \item[(2)] The set $C_c(\R^n)$
+      (continuous functions $f \colon \R^n \to \R$ with compact support)
+      is dense in $\L^1(m)$.
+  \end{enumerate}
+\end{proposition}
+\begin{proof}
+  To be added
+\end{proof}
+
+\begin{remark}
+  The following theorem shows us that a measurable function
+  is ``almost continuous''.
+\end{remark}
+\begin{theorem}[Lusin's theorem]
+  Let $f \colon [a,b] \to \R$ be Lebesgue measurable.
+  Then for all $\epsilon > 0$ there exists a compact $E \subseteq [a,b]$
+  such that $m\del{[a,b] \setminus E} \le \epsilon$,
+  and $f\vert_E$ is continuous.
+\end{theorem}
+\begin{remark}
+  Being continuous on a subset of the domain $E \subset [a,b]$
+  means that for any $\set{x_n}_{n=1}^{\infty} \subset E$ such that
+  $x_n \to x'$ then $\lim_{n\to\infty} f(x_n) = f(x')$.
+\end{remark}
+\begin{proof}
+  In the problems section.
+\end{proof}
+
+% Riemann integral reminder
+
+\begin{theorem}
+  Let $f \colon [a,b] \to \R$ be bounded.
+  \begin{enumerate}
+    \item[(1)] If $f$ is Riemann integrable, then $f$ is Lebesgue measurable
+      (and thus also Lebesgue integrable),
+      and $\int_{a}^{b} f(x) \dx = \int_{[a,b]} f \dm$.
+    \item[(2)] $f$ is Riemann integrable if and only if
+      $m\del{\set{x \in [a,b] \mid \text{$f$ has a discontinuity at $x$}}}
+      = 0$.
+  \end{enumerate}
+\end{theorem}
+\begin{proof}
+  To be added.
+\end{proof}
+\begin{remark}
+  This theorem is not true on a noncompact interval.
+\end{remark}
+\begin{example}
+  Define the function
+  \[
+    f(x) :=
+    \sum_{n=1}^{\floor{x}} \frac{(-1)^n}{n} \cdot \mathbbm{1}_{[n,n+1)}.
+  \]
+  Since $f$ is Lebesgue integrable if and only if $\abs{f}$ is Lebesgue
+  integrable and the harmonic series diverges,
+  we get that $f \notin \L^1(m)$.
+  However, we have that
+  \begin{align*}
+    \int_{1}^{\infty} f(x) \dx &=
+    \lim_{R \to \infty} \int_{1}^{\infty} f(x) \dx \\ &=
+    \lim_{R \to R} \sum_{n=1}^{\floor{R/2}}
+    \del{\frac{1}{2n} - \frac{1}{2n + 1}} \sim
+    \sum_{n=1}^{\infty} \frac{1}{n^2} < \infty.
+  \end{align*}
+\end{example}
+\begin{remark}
+  This theorem is not true on an unbounded function.
+\end{remark}
+\begin{example}
+  Define the function
+  \[
+    f(x) := \sum_{n=1}^{\floor{x}} (-1)^n \cdot n \cdot
+    \mathbbm{1}_{\left[\frac{1}{n+1},\frac{1}{n}\right]}.
+  \]
+  We have that
+  \[
+    \int_{0}^{1} f(x) \dx =
+    \lim_{\epsilon \to 0} \int_{\epsilon}^{1} f(x) \dx < \infty
+  \]
+  where the last inequality follows from conditional convergence.
+  However, $\abs{f}$ is not Lebesgue integrable since the integral
+  diverges for it.
+\end{example}
+
+% Push forward ----- meaning?
+
+\newpage
+
+\section{Product measures}
+\begin{definition}[Product $\sigma$-algebra]
+  Let $(X,\A_X,\mu_X)$ and $(Y,\A_Y,\mu_Y)$ be measure spaces.
+  We define their product measure $\A_X \otimes \A_Y$ to be
+  \[
+    \A_X \otimes \A_Y :=
+    \sigma\del{A \times B \mid A \in \A_X \stand B \in \A_Y}.
+  \]
+\end{definition}
+We would like to construct a product measure $\mu_X \otimes \mu_Y$
+on the product measurable space $(X \times Y, \A_X \otimes \A_Y)$
+such that
+\[
+  \mu_X \otimes \mu_Y(A \times B) =
+  \mu_X(A) \cdot \mu_Y(B).
+\]
+For example, if we denote Lebesgure measure on $\R^n$ as $m^n$,
+we would like to have $m^1 \otimes m^1 = m^2$ and
+$\bigotimes_{i=1}^{n} m^1 = m^n$ etc.
+\begin{exercise}
+  Show that $m^2(A \times B) = m^1(A) \cdot m^1(B)$.
+  % by cases
+\end{exercise}
+
+Before we do that, we need a couple more definitions.
+
+\begin{definition}[Semialgebra]
+  A set $S \subseteq P(X)$ is a semialgebra over $X$ if
+  \begin{enumerate}
+    \item[(1)] $\emptyset \in \mathcal S$;
+    \item[(2)] $E,F \in \mathcal E \implies E \cap F \in \mathcal E$;
+    \item[(3)] $E \in \mathcal E \implies E^c$ is a finite disjoint
+      union of elements in $\mathcal E$.
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}[Measurable box]
+  A measurable box is a set of the form $A \times B \subseteq X \times Y$
+  such that $A \in \A_X$ and $B \in \A_Y$.
+  We denote this family with $\mathcal E$.
+\end{definition}
+\begin{remark}
+  The set of measurable boxes $\mathcal E \subseteq P(X \times Y)$ is
+  a semialgebra over $X \times Y$.
+\end{remark}
+
+We saw in the recitations that a fintite disjoint union of elements
+of a semialgebra forms an algebra, thus a finite disjoint union
+of measurable boxes forms an algebra. 
+For this section we now set $\A = \sigma(\mathcal E)$.
+To be added clarification
+
+\begin{definition}[The $\pi$ function]
+  We define the function $\pi \colon \mathcal E \to [0,\infty]$ with
+  \[
+    \pi\del{A \times B} := \mu_X(A) \times \mu_Y(B).
+  \]
+\end{definition}
+\begin{proposition}
+  Let $A \times B = \bigsqcup_{i=1}^{\infty} A_i \times B_i$.
+  Then $\pi(A \times B) = \sum_{i=1}^{\infty} \pi(A_i \times B_i)$.
+\end{proposition}
+\begin{proof}
+  First we notice that
+  \[
+    \ind_A(x) \cdot \ind_B(y) =
+    \ind_{A \times B}(x,y) =
+    \sum_{i=1}^{\infty} \ind_{A_i \times B_i}(x,y) =
+    \sum_{i=1}^{\infty} \ind_{A_i}(x) \cdot \ind_{B_i}(y).
+  \]
+  If we consider $y$ as a parameter and integrate by $\dmu_X$ we get
+  \begin{align*}
+    \mu_X(A) \cdot \underbrace{\ind_B(y)}_{\text{constant}} &=
+    \int \ind_A(x) \cdot \ind_B(y) \dmu_X \underset{\text{MCT}}{=}
+    \sum_{i=1}^{\infty} \int \ind_{A_i}(x) \cdot \ind_{B_i}(y) \dmu_X \\ &=
+    \sum_{i=1}^{\infty} \mu_X(A_i) \cdot \ind_{B_i}(y).
+  \end{align*}
+  We can now integrate by $\dmu_Y$ and get
+  \[
+    \mu_X(A) \cdot \mu_Y(B) =
+    \sum_{i=1}^{\infty} \mu_X(A_i) \cdot \mu_Y(B_i)
+  \]
+  which completes the proof.
+\end{proof}
+\begin{remark}
+  This implies that $\pi$ is $\sigma$-additive and in particular additive
+  on $\mathcal E$.
+\end{remark}
+
+\begin{definition}[The extended $\pi$ function]
+  We define the function $\pi \colon \A \to [0,\infty]$ with
+  \[
+    \pi\del{\bigsqcup_{i=1}^{N} A_i \times B_i} :=
+    \sum_{i=1}^{N} \pi\del{A_i \times B_i}.
+  \]
+\end{definition}
+\begin{proposition}
+  This is a good definition.
+\end{proposition}
+\begin{proof}
+  To be added.
+\end{proof}
+
+\begin{corollary}
+  The function $\pi \colon A \to [0,\infty]$ is a pre-measure.
+\end{corollary}
+\begin{proof}
+  To be added.
+\end{proof}
+
+According to Carath\'eodory's extension theorem
+(\Cref{thm:car-extension-theorem}),
+$\pi$ induces an outer measure $(\mu_X \otimes \mu_Y)^*$ on $X \times Y$,
+so that its restriction to $\sigma(\A) = \A_X \otimes \A_Y$,
+which we will denote with $\mu_X \otimes \mu_Y$ is a measure that
+extends $\pi$.
+
+More preciesly we have that for all $E \subseteq X \times Y$ that
+\[
+  (\mu_X \otimes \mu_Y)^*(E) :=
+  \inf\set{\sum_{i=1}^{\infty} \mu_X(A_i) \cdot \mu_Y(B_i) \middle\vert
+  E \subseteq \bigcup_{i=1}^{\infty} A_i \times B_i \st
+  A_i \in \A_X \stand B_i \in \A_Y}.
+\]
+
+
+
+
+\begin{definition}[Bounded variation]
+\end{definition}
+
+
+
+
+
+
+
+
+
+\end{document}

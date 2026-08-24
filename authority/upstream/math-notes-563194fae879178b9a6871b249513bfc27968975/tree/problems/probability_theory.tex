@@ -1,0 +1,1799 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\ncourse {Probability Theory}
+\def\ntype {problems}
+
+\input{../header.tex}
+
+\begin{document}
+\maketitle
+
+% Insert cool image here
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction to Probability}
+
+\begin{exercise}
+  Let $A$ and $B$ be independent events.
+  Prove that $A$ and $B^c$
+  are independent and that $A^c$ and $B^c$ are independent.
+\end{exercise}
+\begin{solution}
+  By definition of indepence we have that
+  \[
+    \Prob(A \cap B) = \Prob(A) \Prob(B).
+  \]
+  Now, by the basic properties of a probabiliy function we get that:
+  \[
+    \Prob\del{A \cap B^c} =
+    \Prob\del{A \cap (\Omega \setminus B)} =
+    \Prob\del{A \setminus B} =
+    \Prob\del{A \setminus (A \cap B)}.
+  \]
+  Since $A \cap B \subseteq A$ we get by independency of $A$ and $B$:
+  \begin{align*}
+    \Prob\del{A \cap B^c} &=
+    \Prob\del{A \setminus (A \cap B)} =
+    \Prob\del{A} - \Prob\del{A \cap B} =
+    \Prob\del{A} - \Prob(A) \Prob(B) \\ &=
+    \Prob\del{A} \del{1 - \Prob(B)} =
+    \Prob\del{A} \Prob(B^c),
+  \end{align*}
+  so $A$ and $B^c$ are independent.
+  Similarly, we have that $A^c$ and $B$ are independent.
+  
+  Next, by using the previous part of the exercise,
+  and the fact that:
+  \[
+    A^c \cap B^c =
+    \Omega \setminus \del{(A^c \cap B) \sqcup (A \cap B^c) \sqcup (A \cap B)}
+  \]
+  we get that:
+  \begin{align*}
+    \Prob\del{A^c \cap B^c} &=
+    1 - \del{\Prob\del{A^c \cap B} + \Prob\del{A \cap B^c} + \Prob\del{A \cap B}} \\ &=
+    1 - \del{\Prob(A) \Prob(B^c) + \Prob(A^c) \Prob(B) + \Prob(A) \Prob(B)} \\ &=
+    1 - \del{(1 - \Prob(A^c)) \Prob(B^c) + \Prob(A^c) (1 - \Prob(B^c) +
+      (1 - \Prob(A^c) (1 - \Prob(B^c)} \\ &=
+    1 - \del{1 - \Prob(A^c) \Prob(B^c)} \\ &=
+    \Prob(A^c) \Prob(B^c),
+  \end{align*}
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Suppose there are $r$ boxes and $r + 1$ balls.
+  Balls are placed in the boxes at random, one at a time until,
+  for the first time, one box has two balls.
+  Find the probability that this takes place with the $n$th ball,
+  for $2 \le n \le r + 1$.
+\end{exercise}
+\begin{solution}
+  If the first collision was on the $n$th ball,
+  this means that we had $n-1$ consecutive ball insertions
+  without collisions, and then a collision.
+  Note that the probability of a non-collision
+  given that we inserted $k$ balls without collisions is
+  equal to $\frac{r - k}{r}$, since exactly $k$ out of $r$ boxes
+  are occupied.
+  This implies that:
+  \[
+    \Prob(n\text{th ball collision}) =
+    \Prob(\text{collision} \mid n-1\text{ non-collisions}) \cdot
+    \prod_{k=0}^{n-2} \frac{r - k}{r},
+  \]
+  and since the probability of a collision given $n-1$ previous
+  non-collision is exactly $\frac{n-1}{r}$,
+  we conclude that
+  \[
+    \Prob(n\text{th ball collision}) =
+    \frac{n - 1}{r} \cdot
+    \prod_{k=0}^{n-2} \frac{r - k}{r}.
+  \]
+\end{solution}
+
+\begin{exercise}
+  A box has $10$ red balls and $5$ black balls.
+  A ball is selected from the box.
+  If the ball is red, it is returned to the box.
+  If the ball is black,
+  it is returned to the box along with two additional black balls.
+  After this, another ball is drawn.
+  \begin{enumerate}
+    \item[(1)] What is the probability that this other ball is red?
+    \item[(2)] If this other ball is black, what is the probability that
+      the first ball selected was also black?
+  \end{enumerate}
+\end{exercise}
+\begin{solution}\phantom{}
+  \begin{enumerate}
+    \item[(1)] Denote the event that the first ball drawn is red
+      by $R_1$, the event its black by $B_1$,
+      and similarly for the second ball we denote $R_2$ and $B_2$
+      respectively.
+      By using law of total probability we get that:
+      \[
+        \Prob(R_2) =
+        \Prob(R_1) \Prob(R_2 \mid R_1) + \Prob(B_1) \Prob(R_2 \mid B_1) =
+        \frac{10}{15} \cdot \frac{10}{15} +
+        \frac{5}{15} \cdot \frac{12}{17} =
+        \frac{4}{9} + \frac{10}{51} =
+        \frac{98}{153}.
+      \]
+    \item[(2)] We are asked to calculate the probability of $\Prob(B_1 \mid B_2)$.
+      By Bayes' theorem we get that:
+      \[
+        \Prob(B_1 \mid B_2) =
+        \frac{\Prob(B_2 \mid B_1) \Prob(B_1)}{\Prob(B_2)},
+      \]
+      and by calculations from part $(1)$ we conclude:
+      \[
+        \Prob(B_1 \mid B_2) =
+        \frac{\Prob(B_2 \mid B_1) \Prob(B_1)}{\Prob(B_2)} =
+        \frac{\frac{7}{17} \cdot \frac{5}{15}}{1 - \frac{98}{153}} =
+        \frac{21}{55}.
+      \]
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  In the game of bridge there are four players $A$, $B$, $C$ and $D$.
+  Players $A$ and $C$ are partners and players $B$ and $D$ are partners.
+  Each player gets $13$ cards.
+  If players $A$ and $C$ have $9$ spades between them,
+  what is the probability that the $4$ other spades are split three
+  and one between the two other players?
+\end{exercise}
+\begin{solution}
+  We want to find the probability of:
+  \[
+    \Prob(A \stand C \text{ have $4$ spades split $3:1$} \mid
+      \text{$B$ and $D$ have $9$ spades}),
+  \]
+  but note that this reduces to the probability of splitting $26$
+  cards with exactly $4$ spades in them between two players with the spades
+  splitting exactly $3 : 1$ between the players.
+  Also note that the hand of $A$ is detemined completely by the hand of $C$
+  (similarly the hand of $C$ is detemined by the hand of $C$).
+  Since we are choosing $13$ cards out of $26$ cards that contain $9$
+  spades, the total number of possible hands for $A$ is $\binom{26}{13}$,
+  and the number of hands containing exactly $3$ spades is
+  $\binom{4}{3} \cdot \binom{22}{10}$.
+  Since the probability of each hand is equally likely,
+  we get that $\Prob$ is the uniform probability function,
+  and thus:
+  \[
+    \Prob(A \stand C \text{ have $4$ spades split $3:1$}) =
+    \frac{\binom{4}{3} \cdot \binom{22}{10}}{\binom{26}{13}} +
+    \frac{\binom{4}{3} \cdot \binom{22}{10}}{\binom{26}{13}} =
+    \frac{286}{575},
+  \]
+  where we summed the same probability twince
+  since we need to consider both the case
+  where $A$ has $3$ spades and $C$ has $1$, and the symmetric case where
+  $C$ has $3$ spades and $A$ has $1$ (we are allowed to sum the probability
+  of these events since they are disjoint as it is impossible for $A$
+  for example to have both $1$ spade and $3$ spades in the same hand).
+\end{solution}
+
+\begin{exercise}
+  An elevator stops at $10$ floors and has $7$ people on it.
+  We label the various possible outcomes as follows:
+  if $6$ people get out on some particular floor and one person gets out
+  on some other particular floor, we write the outcome as $(6,1)$.
+  If $3$ people get out on one particular floor, two people get
+  out on some other particular floor and two people get out on yet another
+  particular floor, then we write the outcome as $(3,2,2)$, etc.
+  Assume that each person behaves independently of the others and that
+  each person has an equal chance of exiting on any floor.
+  Calculate the probability of $(6,1)$ and the probability of $(3,2,2)$.
+\end{exercise}
+\begin{solution}
+  NOTE: In this question we first assume order matters -
+  For example, the events $(6,1)$ and $(1,6)$ are different,
+  then show the solution in case it does not matter.
+
+  The multinomial formula states the the number of options of assigning
+  $7$ people to $10$ floors is exactly:
+  \[
+    \frac{7!}{a_1 ! a_2 ! \cdots a_{10}!},
+  \]
+  where $a_i$ denotes the amount of people who got off at the $i$th floor.
+  This implies that for an event of the form $(a_1,\dots,a_{10})$,
+  under the assumption from the exercise $\Prob$ is uniform
+  and the events of people getting off are independent we have:
+  \[
+    \Prob(a_1,\dots,a_{10}) =
+    \frac{7!}{a_1 ! a_2 ! \cdots a_{10}!} \cdot \frac{1}{10^7},
+  \]
+  where $10^{-7}$ denotes the total number of options,
+  and in order to compute the probability of an event of the form $(6,1)$,
+  we multiply by a constant $C$ which is the number of tuples $(a_1,\dots,a_{10})$,
+  that possibly represent the event (for example $(7,0,\dots,0)$ and $(0,7,\dots,0)$
+  and so on all represent the event $(7)$, so the constant is $10$).
+  It is clear that this constant is $\binom{10}{k}$ where $k$ is the number
+  of floors where more than one person got off, since we care about the order
+  they got off.
+  It follows that:
+  \[
+    \Prob(6,1) =
+    \binom{10}{2} \cdot \frac{7!}{6! 1!} \cdot \frac{1}{10^7} =
+    \frac{63}{2000000}.
+  \]
+  and
+  \[
+    \Prob(3,2,2) =
+    \binom{10}{3} \cdot \frac{7!}{3! 2! 2!} \cdot \frac{1}{10^7} =
+    \frac{63}{25000}.
+  \]
+  Note that if we did not distinguish between the events $(6,1)$
+  and $(1,6)$ (i.e. in the event $(6,1)$ it is possible $6$ people got off
+  after the first person got off),
+  then we need to multiply the probabilities we got by the
+  number of permutations of the multisets $\set{6,1}$ and $\set{3,2,2}$
+  respetively. Since it is easy to see that they are $2$ and $3$
+  respectively, we get that in that case
+  \[
+    \Prob(6,1) =
+    2 \cdot \binom{10}{2} \cdot \frac{7!}{6! 1!} \cdot \frac{1}{10^7} =
+    \frac{63}{1000000}.
+  \]
+  and
+  \[
+    \Prob(3,2,2) =
+    3 \cdot \binom{10}{3} \cdot \frac{7!}{3! 2! 2!} \cdot \frac{1}{10^7} =
+    \frac{189}{25000}.
+  \]
+\end{solution}
+
+\begin{exercise}
+  \label{ex:one-six}
+  Let $a,b \in (0,1)$.
+  Players $A$ and $B$ take turns throwing a dart at a small target.
+  Each time player $A$ throws, the probability that she hits the target is $a$.
+  Each time player $B$ throws, the probability that he hits the target is $b$.
+  Assume that the outcomes on different throws are all independent of one another.
+  Player $A$ goes first.
+  The first person to hit the target wins the game.
+  Show that the probability that player $A$ wins the game
+  is $\frac{a}{1 - (1 - a) (1 - b)}$.
+\end{exercise}
+\begin{solution}
+  Let $W$ denote the event that player $A$ wins,
+  and let $W_i$ be denote the event that player $A$ wins on her $i$th toss.
+  Since the events $\set{W_i}_{i=1}^{\infty}$ are disjoint
+  and $W = \bigcup_{i=1}^{\infty} W_i$ we get:
+  \[
+    \Prob(W) =
+    \sum_{i=1}^{\infty} \Prob(W_i).
+  \]
+  It is clear that $W_i$ is exactly the event in which
+  $A$ and $B$ miss their $1,\dots,i-1$ shots,
+  and then $A$ hits the mark.
+  Since the outcomes of all throws are independent of one another,
+  we get that:
+  \begin{align*}
+    \Prob(W_i) &=
+    \Prob(\text{$A$ $1$st shot miss})
+    \Prob(\text{$B$ $1$st shot miss}) \cdots
+    \Prob(\text{$B$ $i-1$th shot miss})
+    \Prob(\text{$A$ $i$th shot hit}) \\ &=
+    (1 - a)^{i-1} (1 - b)^{i-1} a =
+    a \del{(1 - a)(1 - b)}^{i-1}.
+  \end{align*}
+  It follows that:
+  \[
+    \Prob(W) =
+    a \sum_{i=1}^{\infty} (1 - a - b + ab)^{i-1}.
+  \]
+  This is an infinite geometric series with factor $(1 - a)(1 - b)$,
+  and thus we conclude that:
+  \[
+    \Prob(W) =
+    a \cdot \frac{1}{1 - (1 - a) (1 - b)} =
+    \frac{a}{1 - (1 - a) (1 - b)},
+  \]
+  which concludes the proof.
+  
+  However, in order to solve \Cref{ex:one-seven},
+  we additionally compute the probability for $A$ to win given that
+  $B$ started the game.
+  Now since $B$ has one additional shot at the start we get
+  \[
+    \Prob(W_i) =
+    (1 - a)^{i-1} (1 - b)^{i} a =
+    a (1 - b) \del{(1 - a)(1 - b)}^{i-1}.
+  \]
+  It is clear that now we will get
+  $\Prob(W) = \frac{a (1 - b)}{1 - (1 - a) (1 - b)}$.
+\end{solution}
+
+\begin{exercise}
+  \label{ex:one-seven}
+  A coin is tossed repeatedly.
+  On each toss, the probability of heads is $p$ and the probability of tails
+  is $1 - p$, where $p \in (0,1)$.
+  A head run of length $r$ is a sequence of $r$ heads in a row.
+  For example, if one sees $HHTTHTHTTHHHTHHHHHHT\cdots$,
+  then a head run of length $6$ occurred starting on the 14th toss.
+  Calculate the probability that a head run of length $r$ will occur before
+  a tail run of length $s$.
+  Hint: Analyze the problem in such a way that you can use the formula
+  derived in \Cref{ex:one-six}.
+\end{exercise}
+\begin{solution}
+  Suppose $A$ and $B$ are players who flip the same coin from the original
+  question, with probability $p \in (0,1)$ for heads, and probability
+  $1 - p$ for tails.
+  Before the game starts, a third unrelated player flips the coin once,
+  and then if the result is heads,
+  player $A$ starts flipping it until the coin shows tails,
+  in which case he lets $B$ flip the coin until he flips heads,
+  and so on and so forth.
+  If the first coin showed tails, the same game is played only player $B$
+  starts instead of player $A$.
+  We say that player $A$ wins if he flipped $r - 1$ heads in a row,
+  and that player $B$ wins if he flipped $s - 1$ tails in a row.
+  Now the question becomes what is the probability that $A$ wins?
+  The win condition of $A$ has probability $p^{r-1}$ and the win
+  condition of $B$ is $(1-p)^{s-1}$.
+  It is not hard to notice that the probability we are looking
+  for in the original question is exactly the probability that player $A$
+  wins the game (though it is relatively hard to think of this game
+  in the first place).
+  From the law of total probability we get:
+  \[
+    \Prob(A \text{ wins}) =
+    \Prob(A \text{ wins} \mid \text{$1$st flip } H) \Prob(\text{$1$st flip } H) +
+    \Prob(A \text{ wins} \mid \text{$1$st flip } T) \Prob(\text{$1$st flip } T).
+  \]
+  From \Cref{ex:one-six} we have that:
+  \begin{align*}
+    \Prob(A \text{ wins} \mid \text{$1$st flip }H) &=
+    \frac{p^{r-1}}{1 - (1 - p^{r-1}) (1 - (1-p)^{s-1})} \\
+    \Prob(A \text{ wins} \mid \text{$1$st flip }T) &=
+    \frac{\del{1 - (1-p)^{s-1}} p^{r-1}}{1 - (1 - p^{r-1}) (1 - (1-p)^{s-1})}
+  \end{align*}
+  and thus:
+  \begin{align*}
+    \Prob(A \text{ wins}) &=
+    \frac{p^{r}}{1 - (1 - p^{r-1}) (1 - (1-p)^{s-1})} +
+    \frac{(1 - (1-p)^{s-1}) p^{r-1} (1 - p)}{1 - (1 - p^{r-1}) (1 - (1-p)^{s-1})} \\ &=
+    \frac{p^{r - 1} \del{1 - (1-p)^s}}{1 - (1 - p^{r-1}) (1 - (1-p)^{s-1})}.
+  \end{align*}
+\end{solution}
+
+\newpage
+
+\section{Distribution and Expectation}
+
+\begin{exercise}
+  Let $X$ be uniformly distributed on $[n] = \set{1,\dots,n}$.
+  That is, $\Prob(X = j) = \frac{1}{n}$,
+  for all $j \in [j]$.
+  Calculate the variance of $X$.
+\end{exercise}
+\begin{solution}
+  We have seen that $\Var(X) = \E[X^2] - \E[X]^2$.
+  By definition of expectation of a discrete random variable we have that
+  \[
+    \E[X] =
+    \sum_{k=1}^{n} k \cdot \Prob_X(k) =
+    \frac{1}{n} \sum_{k=1}^{n} k =
+    \frac{n + 1}{2},
+  \]
+  and therefore $\E[X]^2 = (\frac{n + 1}{2})^2$
+  and similarly by the formula for $\sum_{k=1}^{n} k^2$ we get:
+  \[
+    \E(X^2) :=
+    \sum_{k=1}^{n} k^2 \cdot \Prob_{X^2}(k^2) =
+    \frac{1}{n} \sum_{k=1}^{n} k^2 =
+    \frac{(n + 1)(2n + 1)}{6},
+  \]
+  so finally:
+  \[
+    \Var(X) =
+    \E[X^2] - \E[X]^2 =
+    \frac{(n + 1)(2n + 1)}{6} - \del{\frac{n + 1}{2}}^2 =
+    \frac{n^2 - 1}{12}.
+  \]
+\end{solution}
+
+\begin{exercise}
+  Solve the following:
+  \begin{enumerate}
+    \item[(1)] Prove that:
+      \[
+        \sum_{k=0}^{n} \binom{n}{k}^2 =
+        \binom{2n}{n}.
+      \]
+    \item[(2)] Two people toss a fair coin $n$ times. 
+      What is the probability that they get the same number of heads?
+      % use (1)
+    \item[(3)] Let $p_n$ denote the answer from $(2)$.
+      Use Stirling's approximation in order to show that
+      $\lim_{n \to \infty} \sqrt{n} p_n = \frac{1}{\sqrt{\pi}}$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] On the right hand side of the equation
+      is clearly the number of ways to choose $n$ elements
+      out of $2n$ elements.
+      On the left hand side we have that:
+      \[
+        \sum_{k=0}^{n} \binom{n}{k}^2 =
+        \sum_{k=0}^{n} \binom{n}{k}\binom{n}{n - k},
+      \]
+      which is the sum of the amounts of options to pick $k$
+      elements out of $n$ elements, and $n-k$ elements out of $n$ different
+      elements, for all $0 \le k \le n$.
+      Since these amount must be equal (each choice of $n$ elements
+      out of $2n$ elements is some choice of $k$ elements out of $n$
+      elements and $n-k$ elements out of $n$ different elements and
+      vice versa), the equality is satisfied.
+    \item[(2)] Let $X$ and $Y$ be random variables that denote
+      the amount of heads each of the two people got after $n$ tosses
+      respectively.
+      We then have by part $(1)$ that:
+      \[
+        \Prob(X = Y) =
+        \sum_{k=0}^{n} \Prob(X = k) \cdot \Prob(Y = k) =
+        \del{\frac{1}{2^n}}^2 \sum_{k=0}^{n} \binom{n}{k}^2 =
+        \frac{\binom{2n}{n}}{4^{n}}.
+      \]
+    \item[(3)] We need to show that:
+      \[
+        \lim_{n \to \infty} \frac{\binom{2n}{n}\sqrt{n}}{4^{n}} = \frac{1}{\sqrt{\pi}}.
+      \]
+      From Stirling's approximation for sufficiently large $n$ we get
+      that:
+      \[
+        \frac{\binom{2n}{n}\sqrt{n}}{4^{n}} =
+        \frac{\frac{(2n)!}{n!n!}\sqrt{n}}{4^{n}} \approx
+        \frac{(2n)^{2n} e^{-2n} 2\sqrt{\pi n}}{n^{2n} e^{-2n}2\pi n}
+        \frac{\sqrt{n}}{4^{n}} =
+        \frac{(2n)^{2n} }{n^{2n} \sqrt{\pi} 4^{n}} =
+        \frac{1}{\sqrt{\pi}},
+      \]
+      Indeed, we then get that:
+      \[
+        \lim_{n \to \infty} \sqrt{n} p_n =
+        \frac{1}{\sqrt{\pi}},
+      \]
+      which completes the proof.
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  In a sequence of Bernoulli trials the probability of success is $p$ and the
+  probability of failure is $1 - p$.
+  Write down an expression for the probability of getting $N$ successes
+  before getting $M$ failures.
+  % (Hint: Let Aj denote the
+  % event that when the N -th success occurs, there are already exactly j failures.
+  % If you can calculate P (Aj ), then you can easily write down an expression
+  % for the probability of getting N successes before getting M failures. To
+  % calculate P (Aj ), just consider what happens on the first j + N − 1 trials.)
+\end{exercise}
+\begin{solution}
+  Let $q = 1 - p$, and let $A_j$ denote the event that when the $N$th success
+  occurs, there are already exactly $j$ failures,
+  for $0 \le j \le M-1$.
+  Note that in the event $A_j$ we simply have to choose when the $j$
+  failures would occur (they could occur anywhere from the $1$st to the
+  $N + j - 1$th toss, since the $N + j$th toss is necessarily a win).
+  Since in each such choice the probability of the event is exactly
+  $p^{N} q^j$ we get that:
+  \[
+    \Prob(A_j) =
+    \binom{N + j - 1}{j} p^N q^j.
+  \]
+  The event that $N$ successes occur before $M$ failures is
+  exactly the disjoint union of all events of the form $A_j$
+  so by the properties of the probability function we get:
+  \[
+    \Prob(\text{$N$ successes before $M$ failures}) =
+    \Prob\del{\bigsqcup_{j=0}^{M-1} A_j} =
+    \sum_{j=0}^{M-1} \binom{N + j - 1}{j} p^N q^j.
+  \]
+\end{solution}
+
+\begin{exercise}
+  \label{two-four}
+  Let $A \subset \set{2, 3, 4, 5, 6}$.
+  Consider the following game.
+  You toss a die until you get either a $1$ or an element from $A$.
+  Your score in the game is the value of your last toss.
+  What set $A$ should you choose if you want to
+  maximize the expected value of your score?
+\end{exercise}
+\begin{solution}
+  Let $S = A \cup \set{1}$ denote the set of sides which stop the game,
+  and let $|S| = m$.
+  The probability that we stop in each roll is exactly
+  $r := \frac{m}{6}$, and since all rolls are independent and identically
+  distributed, if we denote the number of the terminal roll by $T$,
+  we have $T \sim \Geo(r)$, and by the table of expectations of random
+  variables we get $\E[T] = \frac{1}{r}$.
+  Denote the value on the terminal roll by $X_T$ (this is our score).
+  It takes values in $k \in S$ with equal probability (uniform on $S$),
+  and therefore:
+  \[
+    \E[X_T] =
+    \sum_{k \in S} k \cdot \Prob(X_T = k) =
+    \frac{1}{m} \sum_{k \in S} k.
+  \]
+  We now need to find the set $A$ which would maximize this value.
+  At first, let $A = \emptyset$.
+  We see that whenever adding any number to $A$,
+  the value of $\frac{1}{m}$ changes regardless of what number we added,
+  and $\sum_{k \in S} k$ increases more as the number we choose to add is bigger.
+  It follows that for a set of size $|A| = k$,
+  the best $A$ we can choose is $A = \set{6,\dots,6-k+1}$.
+  Thus we only need to find the set $A$ of these forms which maximizes $\E[X_T]$.
+  We have that:
+  \[
+    \E[X_T] =
+    \frac{1}{m} \sum_{k \in S} k =
+    \begin{cases}
+      1, &A = \emptyset, \\
+      3.5, &A = \set{6}, \\
+      4, &A = \set{6,5}, \\
+      4, &A = \set{6,5,4}, \\
+      \frac{19}{5}, &A = \set{6,5,4,3}, \\
+      \frac{21}{6}, &A = \set{6,5,4,3,2}.
+    \end{cases}
+  \]
+  A set $A = \set{5,6}$, or equivalently $A = \set{4,5,6}$
+  maximizes our score.
+  In both cases the expectation is $4$.
+\end{solution}
+
+\begin{exercise}
+  Consider the game in \Cref{two-four} with the following modification:
+  your score for the game is the value of your last toss minus the
+  number of tosses.
+  Now how should you choose $A$ in order to maximize the expected value of
+  your score?
+\end{exercise}
+\begin{solution}
+  In this game the expected score is:
+  \[
+    \E[\text{score}] =
+    \E[X_T] - \E[T] =
+    \frac{1}{m} \sum_{k \in S} k - \frac{6}{m} =
+    \frac{\sum_{k \in S} k - 6}{m}
+  \]
+  where the last transition follows from calculations from \Cref{two-four}.
+  Since $m = 1 + |A|$ and we always have $1 \in S$ we
+  even get that:
+  \[
+    \E[\text{score}] =
+    \frac{\sum_{k \in S} k - 6}{m} =
+    \frac{\sum_{a \in A} a - 5}{1 + |A|}.
+  \]
+  From the same reasoning as in \Cref{two-four},
+  we only need to consider the sets of the form $\set{6,\dots,6-|A|+1}$,
+  and we compute to get:
+  \[
+    \E[\text{score}] =
+    \frac{\sum_{a \in A} a - 5}{1 + |A|} =
+    \begin{cases}
+      -5, &A = \emptyset, \\
+      0.5, &A = \set{6}, \\
+      2, &A = \set{6,5}, \\
+      2.5, &A = \set{6,5,4}, \\
+      2.6, &A = \set{6,5,4,3}, \\
+      2.5, &A = \set{6,5,4,3,2}.
+    \end{cases}
+  \]
+  It follows that the maximum expected value is $2.6$ achieved by
+  the set $A = \set{3,4,5,6}$.
+\end{solution}
+
+\begin{exercise}
+  In class we have shown that if $X_{N,m,n}$ is distributed according to the
+  hypergeometric distribution with parameters $N$, $m$, $n$,
+  then $\Prob(X_{N,m,n} = j) = \frac{\binom{m}{j} \binom{N-m}{n-j}}{\binom{N}{n}}$
+  for $j$ satisfying $0 \vee (n - N + m) \le j \le n \wedge m$.
+  We explained intuitively that if $n$ is fixed and $N$ and $m$ are very large
+  with $\frac{m}{N} \approx p$, then the distribution is close to $\Bin(n,p)$.
+  Prove that for $p \in (0,1)$ we have:
+  \[
+    \lim_{N \to \infty,m \to \infty, \frac{m}{N} \to p} \Prob(X_{N,m,n} = j) =
+    \lim_{N \to \infty,m \to \infty, \frac{m}{N} \to p} \frac{\binom{m}{j} \binom{N-m}{n-j}}{\binom{N}{n}} =
+    \binom{n}{j} p^j (1 - p)^{n - j}.
+  \]
+  Hint: Let $N \to \infty$, let $m = m_N$ and define $p_N = \frac{m_N}{N}$.
+  The assumption is that $\lim_{N \to \infty} p_N = p$.
+\end{exercise}
+\begin{solution}
+  In this exercise we will write factorials using the falling–factorial notation
+  suggested in wikiepdia $(a)_k = a(a-1)\cdots(a-k+1)$.
+  We have
+  \[
+    \binom{m}{j}\binom{N-m}{n-j}
+    = \frac{(m)_j}{j!}\cdot\frac{(N-m)_{n-j}}{(n-j)!}
+    \tand
+    \binom{N}{n} = \frac{(N)_n}{n!}.
+  \]
+  Thus we can write:
+  \[
+    \Prob\del{X_{N,m,n}=j}
+    = \binom{n}{j}\,
+      \frac{(m)_j (N-m)_{n-j}}{(N)_n}.
+  \]
+  We can divide the numerator and denominator by $N^n$ to get:
+  \[
+    \Prob\del{X_{N,m,n}=j}
+    = \binom{n}{j}\,
+      \frac{
+        \del{(m)_j / N^j}\,\del{(N-m)_{n-j}/N^{\,n-j}}
+      }{
+        (N)_n / N^n
+      }.
+  \]
+  For fixed $n$ and $j$ we get:
+  \[
+    \frac{(m)_j}{N^j}
+    = \prod_{i=0}^{j-1} \frac{m-i}{N}
+    = \prod_{i=0}^{j-1} \del{ p_N - \frac{i}{N} },
+  \]
+  where $p_N = \frac{m_N}{N}$.
+  Since $p_N \to p$ and $\frac{i}{N} \to 0$,
+  each factor tends to $p$, and therefore
+  \[
+    \lim_{N\to\infty} \frac{(m)_j}{N^j} = p^j.
+  \]
+  Similarly,
+  \[
+    \frac{(N-m)_{n-j}}{N^{\,n-j}}
+    = \prod_{i=0}^{n-j-1} \del{ 1 - p_N - \frac{i}{N} }
+    \taking{p_N \to p} (1-p)^{\,n-j}.
+  \]
+  Finally,
+  \[
+    \frac{(N)_n}{N^n}
+    = \prod_{i=0}^{n-1} \del{ 1 - \frac{i}{N} }
+    \taking{N \to \infty} 1.
+  \]
+  Putting everything together gives:
+  \[
+    \lim_{N \to \infty,m \to \infty, \frac{m}{N} \to p} \Prob(X_{N,m,n} = j) =
+    \binom{n}{j} p^j (1 - p)^{n - j},
+  \]
+  which completes the proof.
+\end{solution}
+
+\newpage
+
+\section{More Random Variables}
+
+\begin{exercise}
+  Consider an equilateral triangle with sides of length $s$.
+  Choose a point randomly from one of the sides of the triangle.
+  Let $X$ denote the distance between the point and the opposite vertex.
+  Find the distribution function and the density for this random variable.
+\end{exercise}
+\begin{solution}
+  We may fix a side of the triangle and embed it in $\R^2$ such that
+  the side from which we sample the point is on the $x$-axis
+  interval $I := [-s/2,s/2]$.
+  The height of the triangle with respect to the side we chose (although
+  since it is an equilateral triangle the side we choose does not matter)
+  is $h = \frac{\sqrt 3}{2} s$ the Pythagorean theorem.
+  Note that the opposite vertex from any point on our base side
+  is $(0,h) \in \R^2$, and so if $T \sim U(I)$ is a random variable representing
+  the $x$-coordinate of our point then we have the relation:
+  \[
+    X = \sqrt{T^2 + h^2},
+  \]
+  so $X$ has support $[h,s]$.
+  In order to compute the distribution function we see that:
+  \[
+    F_X(x) =
+    \Prob(X \le x) =
+    \Prob(T^2 + h^2 \le x^2) =
+    \Prob(|T| \le \sqrt{x^2 - h^2}),
+  \]
+  and since $T \sim U(I)$ we get
+  \[
+    F_X(x) =
+    \Prob(|T| \le \sqrt{x^2 - h^2}) =
+    \frac{2 \sqrt{x^2 - h^2}}{s} \quad \text{when } h \le x \le s.
+  \]
+  Then we get that:
+  \[
+    F_X(x) =
+    \begin{cases}
+      0 &x < h, \\
+      \frac{2 \sqrt{x^2 - h^2}}{s} &h \le x \le s, \\
+      1 &x > s.
+    \end{cases}
+  \]
+  In order to compute the density function we just need to differentiate
+  the function as follows:
+  \[
+    f_X(x) =
+    \frac{\dif}{\dx} F_X(x) =
+    \frac{2}{s} \cdot \frac{x}{\sqrt{x^2 - h^2}} \quad
+      \text{when } h \le x \le s.
+  \]
+  Thus,
+  \[
+    f_X(x) =
+    \begin{cases}
+      \frac{2x}{s \sqrt{x^2 - h^2}} &h \le x \le s, \\
+      0 &\text{otherwise}.
+    \end{cases}
+  \]
+\end{solution}
+
+\begin{exercise}
+  Let $X$ be uniformly distributed on $[0,1]$.
+  Let $Y = X^{\frac{1}{\beta}}$, where $\beta \neq 0$.
+  Find the density function for $Y$.
+\end{exercise}
+\begin{solution}
+  Since the map $g \colon x \mapsto x^{1/\beta}$ is continuous,
+  we get that $Y = g(X) = X^{1/\beta}$ is a well defined random variable.
+  Whenever $\beta > 0$ we get that the support of $Y$ is $[0,1]$ and
+  that the is increasing, so for $0 \le y \le 1$ we have:
+  \[
+    F_Y(y) =
+    \Prob(Y \le y) =
+    \Prob(X^{1/\beta} \le y) =
+    \Prob(X \le y^{\beta}) = y^{\beta},
+  \]
+  and by differentiating we get $f_Y(y) = F_Y'(y) = \beta y^{\beta - 1}$
+  for $0 < y < 1$, we conclude that:
+  \[
+    f_Y(y) =
+    \begin{cases}
+      \beta y^{\beta - 1} &0 < y < 1, \\
+      0 &\text{otherwise}.
+    \end{cases}
+  \]
+  When $\beta < 0$ we can write $Y = X^{-1/\alpha}$ for $\alpha = -\beta > 0$.
+  The support of $Y$ is now $[1,\infty)$ and the function is decreasing,
+  therefore for $y \geq 1$,
+  \[
+    F_Y(y) =
+    \Prob(Y \le y) =
+    \Prob(X^{-1/\alpha} \le y) =
+    \Prob(X \geq y^{-\alpha}) = 1 - y^{-\alpha}.
+  \]
+  Thus, similarly $f_Y(y) = F_Y'(y) = (-\beta) y^{\beta - 1}$ for $y > 1$,
+  and in conclusion:
+  \[
+    f_Y(y) =
+    \begin{cases}
+      (-\beta) y^{\beta - 1} &y > 1, \\
+      0 &\text{otherwise}.
+    \end{cases}
+  \]
+\end{solution}
+
+\begin{exercise}
+  A random variable $X$ is know to be distributed according to a normal distribution.
+  It is also known that $\Prob(X \le 160) = \half$ and $\Prob(X \le 140) = \frac{1}{4}$.
+  Find $\mu$ and $\sigma$, and find $\Prob(X \geq 200)$.
+\end{exercise}
+\begin{solution}
+  We know that $X \sim N(\mu,\sigma^2)$ for some values which we would like to find.
+  Since $X$ distributes normally, we get that $\Prob(X \le \mu) = \half$,
+  but we are given $\Prob(X \le 160)$ and thus $\mu = 160$.
+  Then we can notice that if $Z \sim \N(0,1)$,
+  then from the data given we can deduce that:
+  \[
+    \Prob\del{Z \le \frac{140 - \mu}{\sigma}} =
+    \Prob\del{Z \le \frac{140 - 160}{\sigma}}
+    \le \frac{1}{4},
+  \]
+  and since we can check with tables that the $25$th percentile of the
+  standard normal distribution is approximately $-0.674$, we get that:
+  \[
+    \frac{-20}{\sigma} = -0.674 \implies
+    \sigma = \frac{20}{0.674} \approx 29.7
+  \]
+  Finally, in order to compute $\Prob(X \geq 200)$ we just have to standardize
+  again using $Z \sim N(0,1)$ as follows:
+  \[
+    \Prob(X \geq 200) =
+    \Prob\del{Z \le \frac{200 - 160}{29.7}} =
+    \Prob(Z \geq 1.35) \approx 0.088.
+  \]
+\end{solution}
+
+\begin{exercise}
+  Let $X$ be a continuous random variable with distribution function $F$
+  and continuous density function $f$.
+  Assume that $X$ is nonnegative; that is, $F(x) = 0$, for $x \le 0$.
+  \begin{enumerate}
+    \item[(1)] Assume that $\E[X] < \infty$.
+      Prove that $\E[X] = \int_{0}^{\infty} (1 - F(x)) \dx$.
+      (Hint: By assumption, $\int_{0}^{\infty} x f(x) \dx < \infty$,
+      from which follows that $\lim_{x \to \infty} \int_{x}^{\infty} y f(y) \dy = 0$.
+      Also, note that $1 - F(x) = \int_{x}^{\infty} f(y) \dy$.)
+    \item[(2)] Assume that $\E[X] = \infty$.
+      Prove that $\int_{0}^{\infty} (1 - F(x)) \dx = \infty$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] We recall that the definition of expectation in this
+      case is:
+      \[
+        \E[X] := \int_{0}^{\infty} x f(x) \dx < \infty.
+      \]
+      As suggested in the hint, we write:
+      \[
+        1 - F(x) = \int_{x}^{\infty} f(y) \dy.
+      \]
+      Using this identity we can write:
+      \[
+        \int_{0}^{\infty} \del{1 - F(x)} \dx =
+        \int_{0}^{\infty} \del{\int_{x}^{\infty} f(y) \dy} \dx.
+      \]
+      Since the integrand is nonnegative we can change the order of integration
+      (Fubini) and get:
+      \[
+        \int_{0}^{\infty} \del{\int_{x}^{\infty} f(y) \dy} \dx =
+        \int_{x}^{\infty} f(y) \del{\int_{0}^{y} \dx} \dy =
+        \int_{x}^{\infty} y f(y) \dy = \E[X],
+      \]
+      where the upper limit of the integral changed to $y$ since we
+      are integrating over the domain
+      $D = \set{(x,y) \in \R^2 \mid 0 \le x \le y < \infty}$.
+      This completes the first part of the proof.
+    \item[(2)] In case $\E[X] = \infty$, then:
+      \[
+        \E[X] := \int_{0}^{\infty} y f(y) \dy = \infty.
+      \]
+      We cannot use exactly the same argument from part $(1)$,
+      but for every $M > 0$ we can do something similar and we get:
+      \[
+        \int_{0}^{M} \del{1 - F(x)} \dx =
+        \int_{0}^{M} \del{\int_{x}^{\infty} f(y) \dy} \dx,
+      \]
+      where now the domain of integration is
+      $D = \set{(x,y) \in \R^2 \mid 0 \le x M \stand x \le y < \infty}$.
+      By switching the order of integration (by Fubini) we get:
+      \begin{align*}
+        \int_{0}^{M} \del{1 - F(x)} \dx &=
+        \int_{0}^{M} \del{\int_{0}^{y} f(y) \dx} \dy + 
+        \int_{M}^{\infty} \del{\int_{0}^{M} f(y) \dx} \dy \\ &=
+        \int_{0}^{M} y f(y) \dy + 
+        M \int_{M}^{\infty} f(y) \dy,
+      \end{align*}
+      where in the first step we decomposed the integration over the ``triangle''
+      and the ``infinite at one side rectangle'' of the integration domain $D$.
+      Since both terms on the right are nonnegative we have that:
+      \[
+        \int_{0}^{M} \del{1 - F(x)} \dx \geq
+        \int_{0}^{M} y f(y) \dy,
+      \]
+      and this holds for any $M > 0$.
+      Of course, as $M \to \infty$ we get by the comparison theorem that:
+      \[
+        \infty = \lim_{M \to \infty} \int_{0}^{M} y f(y) \dy \le
+        \lim_{M \to \infty} \int_{0}^{M} \del{1 - F(x)} =
+        \int_{0}^{\infty} (1 - F(x)) \dx,
+      \]
+      thus $\int_{0}^{\infty} (1 - F(x)) \dx = \infty$ which completes
+      the proof.
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $X$ be a continuous random variable with density $f_X(x)$,
+  and let $\psi \colon \R \to \R$ be a measurable function.
+  Define $Y = \psi(X)$.
+  In class, we saw that the expected value of $Y$ is
+  $\E[Y] = \int_{-\infty}^{\infty} \psi(x) f_X(x) \dx$.
+  Assume now that $f_X$ is continuous and vanishes off the interval $[0,1]$.
+  Also assume now that $\psi$ is strictly increasing and continuously
+  differentiable.
+  In class we showed that $Y$ has a density function
+  $f_Y(y) = \frac{f_X(x)}{\psi'(x)} = \frac{f_X(\psi^{-1}(y))}{\psi'(\psi^{-1}(y))}$,
+  where $y = \psi(x)$.
+  But then, by the definition of the expected value for a continuous
+  random variable, we have $\E[Y] = \int_{-\infty}^{\infty} y f_Y(y) \dy$.
+  Use a change of variables to show that these two definitions are consistent.
+  That is, show that
+  $\int_{-\infty}^{\infty} \psi(x) f_X(x) \dx = \int_{-\infty}^{\infty} y f_Y(y) \dy$.
+\end{exercise}
+\begin{solution}
+  We know that $\psi$ is strictly increasing, continuously differentiable,
+  and thus $\psi'$ is positive, and we can also perform a change of variables
+  on the integral:
+  \[
+    \int_{-\infty}^{\infty} y f_Y(y) \dy =
+    \int_{-\infty}^{\infty} y \frac{f_X(\psi^{-1}(y))}{\psi'(\psi^{-1}(y))} \dy.
+  \]
+  The change necessary in this problem is $y = \psi(x)$.
+  Since $\psi(x)$ is injective and continuously differentiable we get:
+  \[
+    y = \psi(x) \tand
+    \dy = \psi'(x) \dx \tand
+    x = \psi^{-1}(y).
+  \]
+  Subtituting these into the integral we get that:
+  \[
+    \int_{-\infty}^{\infty} y f_Y(y) \dy =
+    \int_{-\infty}^{\infty} y \frac{f_X(\psi^{-1}(y))}{\psi'(\psi^{-1}(y))} \dy =
+    \int_{-\infty}^{\infty} \psi(x) \frac{f_X(x)}{\psi'(x)} \psi'(x) \dx,
+  \]
+  the Jacobian $\psi'(x)$ (which is always positive so we disregard absolute
+  value) cancels and we conclude:
+  \[
+    \int_{-\infty}^{\infty} y f_Y(y) \dy =
+    \int_{-\infty}^{\infty} \psi(x) \frac{f_X(x)}{\psi'(x)} \psi'(x) \dx =
+    \int_{-\infty}^{\infty} \psi(x) f_X(x) \dx,
+  \]
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  In real life we can't construct a continuous random variable, so we need
+  to approximate it by a discrete one which takes on only a finite number
+  of possible values.
+  Let $X$ be uniformly distributed on $[0,1]$.
+  Let $X_n$ be uniformly distributed on the $n$ points
+  $\{\frac{j}{n}\}_{j=1}^{n}$.
+  Let $H(x)$ be a continuous function from $[0,1]$ to $\R$.
+  Explain why $\lim_{n \to \infty} \E[H(X_n)] = \E[H(X)]$.
+\end{exercise}
+\begin{solution}
+  By definition of expectation of a discrete random variable we see that:
+  \[
+    \E\left[H(X_n)\right] = \frac{1}{n} \sum_{j=1}^{n} H\del{\frac{j}{n}},
+  \]
+  and on the other hand by the law of the unconscious statistician,
+  \[
+    \E[H(X)] =
+    \int_{0}^{1} H(x) \dx.
+  \]
+  Note that since $H$ is a continuous function on $[0,1]$ to $\R$,
+  so in particular, it is integrable,
+  and its Riemann integral is the limit of the Riemann sums,
+  and since of course integrability means that this is a well defined expression,
+  we can use any sequence of partitions of $[0,1]$ and any choice of
+  points in the partitions and get the same limit.
+  In particular,
+  if we choose $\set{[0,\frac{1}{k},\dots,\frac{k-1}{k},1]}_{k=1}^{\infty}$
+  with points $\set{\xi^k_j := \frac{j}{k}}_{j=1}^{k}$ for the $k$th partition,
+  we get that:
+  \[
+    \E[H(X)] =
+    \int_{0}^{1} H(x) \dx =
+    \lim_{n \to \infty} \frac{1}{n} \sum_{j=1}^{n} H\del{\frac{j}{n}} =
+    \lim_{n \to \infty} \E\left[H(X_n)\right],
+  \]
+  which completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Random Vectors}
+
+\begin{exercise}
+  Let $(X,Y)$ be a point chosen uniformly at random from the unit square
+  $[0,1] \times [0,1]$.
+  \begin{enumerate}
+    \item[(1)] Show that $X$ and $Y$ are independent.
+    \item[(2)] Let $D$ denote the distance between $X$ and $Y$ in part $(1)$.
+      Calculate $\E[D^2]$.
+      (Hint: You don't have to calculate the density function of $D$ or $D^2$).
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] The joint density of $(X,Y)$ is:
+      \[
+        f_{(X,Y)}(x,y) :=
+        \begin{cases}
+          1 &\text{if $0 \le x \le 1$ and $0 \le y \le 1$}, \\
+          0 &\text{otherwise}.
+        \end{cases}
+      \]
+      We can compute the marginal densities:
+      \begin{align*}
+        f_X(x) &=
+        \int_{0}^{1} f_{(X,Y)}(x,y) \dy =
+        \int_{0}^{1} 1 \dy = 1 \\
+        f_y(y) &=
+        \int_{0}^{1} f_{(X,Y)}(x,y) \dx =
+        \int_{0}^{1} 1 \dx = 1.
+      \end{align*}
+      Since we have and equality:
+      \[
+        f_{(X,Y)}(x,y) = 1 = f_X(x) f_y(y),
+      \]
+      it follows by a theorem from class that $X$ and $Y$ are independent.
+    \item[(2)] We have that $D = |X - Y|$ and thus $D^2 = (X - Y)^2$.
+      By linearity of expectation:
+      \[
+        \E[D^2] =
+        \E[(X-Y)^2] =
+        \E[X^2] - 2\E[XY] + \E[Y^2].
+      \]
+      Since by $(1)$ we know that $X$ and $Y$ are independent
+      and $\E[X] = \E[Y] = \int_{0}^{1} x \dx = \half$ we can compute that:
+      \[
+        \E[XY] = \E[X] \E[Y] = \half \cdot \half = \frac{1}{4}.
+      \]
+      We can also use the law of the unconscious statistician in order
+      to get:
+      \[
+        \E[X^2] = \int_{0}^{1} x^2 \dx = \frac{1}{3}.
+      \]
+      By symmetry, the same holds for $Y$ and so $\E[Y^2] = \frac{1}{3}$.
+      In conclusion,
+      \[
+        \E[D^2] =
+        \E[X^2] - 2\E[XY] + \E[Y^2] =
+        \frac{1}{3} - 2 \cdot \frac{1}{4} + \frac{1}{3} =
+        \frac{1}{6},
+      \]
+      which completes this exercise.
+   \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Suppose that $n$ balls are placed uniformly at random in $r$ boxes
+  (a box can contain more than one ball).
+  Let $X_i$ equal $1$ if box $i$ is empty and equal $0$ otherwise.
+  Let $N$ denote the number of empty boxes.
+  \begin{enumerate}
+    \item[(1)] Calculate $\E[X_i]$.
+    \item[(2)] Calculate $\E[X_i X_j]$.
+    \item[(3)] Calculate $\E[N]$ and $\sigma^2(N)$.
+      (Hint: Represent $N$ as $N = \sum_{i=1}^{r} X_i$).
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Note that $X_i$ are discrete and thus:
+      \[
+        \E[X_i] :=
+        \sum_{a \in \set{0,1}} a \cdot \Prob(X_i = a) =
+        \Prob(X_i = 1) =
+        \del{\frac{r - 1}{r}}^n =
+        \del{1 - \frac{1}{r}}^n,
+      \]
+      since the probability that the $i$th box is empty is exactly
+      the probability of all balls going to the other boxes,
+      and since they are placed at the boxes uniformly and independently
+      we get this result.
+    \item[(2)] Note that $X_i X_j = X_i$ for $i = j$
+      and thus we can use the result from $(1)$.
+      However when $i \neq j$, we get that $X_i X_j$ is an indicator
+      function that is $1$ if and only if both the $i$th and the $j$th
+      boxes are empty.
+      This implies that:
+      \[
+        \E[X_i X_j] = \Prob(X_i X_j = 1) = \Prob(\text{$i$th and $j$th boxes
+        empty}) = 
+        \del{\frac{r - 2}{r}}^n =
+        \del{1 - \frac{2}{r}}^n,
+      \]
+      since the probability of each ball to land outside these two boxes
+      is $\frac{r - 2}{r}$ (they are placed uniformly) and the placing
+      of the balls is independent.
+    \item[(3)] We have that $N = \sum_{i=1}^{r} X_i$
+      and we need to find $\E[N]$.
+      From linearity of expectation and $(2)$ we then see that:
+      \[
+        \E[N] =
+        \E\left[\sum_{i=1}^{r} X_i\right] =
+        \sum_{i=1}^{r} \E[X_i] = 
+        r \cdot \del{\frac{r - 1}{r}}^n =
+        \frac{(r - 1)^n}{r^{n-1}}.
+      \]
+      We are now tasked with finding the variance of $N$
+      denoted $\sigma^2(N)$ or $\Var(N)$.
+      We know that:
+      \[
+        \Var(N) =
+        \E[N^2] - \E[N]^2,
+      \]
+      and by linearity of expectation we have:
+      \[
+        \E[N^2] =
+        \E\left[\del{\sum_{i=1}^{r} X_i}^2\right] =
+        \sum_{i=1}^{r} \E[X_i^2] + 2 \cdot \sum_{i < j} \E[X_i X_j],
+      \]
+      and also:
+      \[
+        \E[N]^2 =
+        \E\left[\sum_{i=1}^{r} X_i\right]^2 =
+        (\sum_{i=1}^{r} \E[X_i])^2 =
+        \sum_{i=1}^{r} \E[X_i]^2 + 2 \cdot \sum_{i < j} \E[X_i] \E[X_j],
+      \]
+      so we conclude that:
+      \[
+        \Var(N) =
+        \sum_{i=1}^{r} (\E[X_i^2] - \E[X_i]^2) +
+        2 \cdot \sum_{i < j} (\E[X_i X_j] - \E[X_i] \E[X_j]),
+      \]
+      and by plugging in $\Var(X_i) = \E(E_i^2) - \E[X_i]^2$
+      and $\Cov(X_i,X_j) = \E[X_i X_j] - \E[X_i] \E[X_j]$ we get:
+      \[
+        \Var(N) = 
+        \sum_{i=1}^{r} \Var(X_i) +
+        2 \cdot \sum_{i < j} \Cov(X_i,X_j),
+      \]
+      and we can compute these from the same formulas from earlier.
+      Notice that we have $X_i^2 = X_i$ and so from $(1)$ we get:
+      \[
+        \Var(X_i) =
+        \E[X_i^2] - \E[X_i]^2 =
+        \E[X_i] - \E[X_i]^2 =
+        \del{\frac{r - 1}{r}}^n \del{1 - \del{\frac{r - 1}{r}}^n}.
+      \]
+      From parts $(1)$ and $(2)$ we get:
+      \[
+        \Cov(X_i,X_j) =
+        \E[X_i X_j] - \E[X_i] \E[X_j] =
+        \del{\frac{r - 2}{r}}^n - \del{\frac{r - 1}{r}}^{2n}.
+      \]
+      In conclusion since we have $\binom{r}{2}$ pairs $(i,j)$ with $i < j$
+      in the sum, we have that:
+      \begin{align*}
+        \Var(N) &= 
+        \frac{(r - 1)^n}{r^{n-1}} \del{1 - \del{\frac{r - 1}{r}}^n} +
+        2 \cdot \binom{r}{2} \cdot 
+        \del{\del{\frac{r - 2}{r}}^n - \del{\frac{r - 1}{r}}^{2n}} \\ &=
+        \frac{(r - 1)^n}{r^{n-1}} \del{1 - \del{\frac{r - 1}{r}}^n} +
+        r (r - 1) \cdot 
+        \del{\del{\frac{r - 2}{r}}^n - \del{\frac{r - 1}{r}}^{2n}}.
+      \end{align*}
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $X$ and $Y$ be i.i.d. random variables distributed
+  according to $\Exp(\lambda)$.
+  Let $Z = \frac{Y}{X}$.
+  Find the distribution function $F_Z(z)$ and the density function $f_Z(x)$.
+\end{exercise}
+\begin{solution}
+  Let $z > 0$.
+  We have:
+  \[
+    F_Z(z) =
+    \Prob(Z \le z) =
+    \Prob\left(\frac{Y}{X} \le z\right) =
+    \Prob\del{(X,Y) \in A_z} =
+    \int_{A_z} f_{(X,Y)}(x,y) \dx \dy,
+  \]
+  where $A_z := \set{(x,y) \mid x > 0 \stand y > 0 \stand y < zx}$,
+  and $f_{(X,Y)}(x,y)$ is the joint density function of $(X,Y)$.
+  Since $X$ and $Y$ are i.i.d we have $f_{(X,Y)}(x,y) = f_X(x) f_Y(x)$,
+  and since they both distribute according to $\Exp(\lambda)$,
+  we have that $f_{(X,Y)}(x,y) = \lambda^2 e^{-\lambda(x + y)}$.
+  We now compute the integral using Fubini's theorem (which is allowed
+  since the integrand is nonnegative):
+  \[
+    F_Z(z) =
+    \int_{A_z} \lambda^2 e^{-\lambda(x + y)} \dx \dy =
+    \int_{0}^{\infty} \del{\int_{0}^{zx} \lambda^2 e^{-\lambda(x + y)} \dy} \dx.
+  \]
+  We can compute the inner integrand easily:
+  \[
+    \int_{0}^{zx} \lambda^2 e^{-\lambda(x + y)} \dy =
+    \lambda^2 e^{-\lambda x} \int_{0}^{zx}  e^{-\lambda y)} \dy =
+    \lambda e^{-\lambda x} (1 - e^{-\lambda z x}),
+  \]
+  where the last step follows from the fundamental theorem of calculus.
+  We now have:
+  \[
+    F_Z(z) =
+    \int_{0}^{\infty} \lambda e^{-\lambda x} (1 - e^{-\lambda z x}) \dx =
+    \int_{0}^{\infty} \lambda e^{-\lambda x} \dx
+      - \int_{0}^{\infty} \lambda e^{-\lambda x(z + 1)} \dx.
+  \]
+  The first integral is:
+  \[
+    \int_{0}^{\infty} \lambda e^{-\lambda x} \dx =
+    [-e^{-\lambda x}]\biggr\vert^{\infty}_{0} = [0 - (-1)] = 1,
+  \]
+  and the second integral is exactly the first integral after a change of
+  variables $x \mapsto (z+1)x$, and since the derivative of this map
+  is $(z + 1)$ we get that the second integral is equal to $\frac{1}{z + 1}$.
+  This implies that:
+  \[
+    F_Z(z) = 1 - \frac{1}{z+1} = \frac{z}{z + 1},
+  \]
+  for $z > 0$ (recall that in the beginning we assumed $z > 0$).
+  Since $X \sim Y \sim \Exp(\lambda)$, both of these variables are positive,
+  and thus for $z \le 0$ we have $F_Z(z) = 0$.
+  We conclude that:
+  \[
+    F_Z(z) =
+    \begin{cases}
+      \frac{z}{z + 1} &z > 0, \\
+      0 &z \le 0.
+    \end{cases}
+  \]
+  In order to find the density function of $Z$,
+  we simply differentiate $F_Z(z)$ and get that:
+  \[
+    f_Z(z) = \frac{\dif F_Z(z)}{\dz} =
+    \begin{cases}
+      \frac{1}{(z + 1)^2} &z > 0, \\
+      0 &z \le 0.
+    \end{cases}
+  \]
+  This computation completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Consider tossing a coin $n$ times.
+  We define a run to be a sequence of tosses that result in the same outcome.
+  Thus, for example, if $n = 7$, the sequence $HHTHTTH$ contains 5 runs,
+  while if $n = 12$ the sequence $HHHHHTTTTHTT$ contains $4$ runs.
+  Fix $n > 0$ and let $p$ be the probability of heads.
+  Let $R$ denote the number of runs.
+  Calculate $\E[R]$, the expected value of the number of runs.
+  (Hint: Use the method of indicator random variables).
+\end{exercise}
+\begin{solution}
+  Define the indicator $I_k$ by:
+  \[
+    I_k :=
+    \begin{cases}
+      1 &\text{a new run starts at the $k$th toss}, \\
+      0 &\text{otherwise},
+    \end{cases}
+  \]
+  for $1 \le n$.
+  Note that $I_1 = 1$ always and for $k \geq 2$ we have $I_k = 1$ if 
+  and only if the $k$th toss is different than the $k-1$th toss.
+  Also note that we have $R = \sum_{k=1}^{n} I_n$.
+  We can now compute the expectation of the indicators
+  using the previous conclusions and get $\E[I_1] = 1$
+  and for $k \geq 2$ get:
+  \begin{align*}
+    \E[I_k] &=
+    \Prob(\text{$k$th toss is different than the $k-1$th toss}) =
+    \Prob(HT) + \Prob(TH) \\ &= (1 - p)p + p(1 - p) = 2p(1 - p),
+  \end{align*}
+  where the second equality follows from the fact we only have two options
+  for the event to happen; either $H$ then $T$ or $T$ then $H$ must happen.
+  We compute these probabilities easily since the tosses are independent.
+  Thus, by linearity of expectation we get:
+  \[
+    \E[R] =
+    \E\left[\sum_{k=1}^{n} I_n\right] =
+    \sum_{k=1}^{n} \E[I_n] =
+    1 + (n - 1) 2p (1 - p),
+  \]
+  which completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Conditional Distributions}
+
+\begin{exercise}
+  Let $n \in \N$.
+  Let $(X,Y)$ be a discrete random vector
+  with $p(x,y) = \binom{n}{y} p^{y+1} (1 - p)^{n - y + x}$,
+  for $y = 0,1,\dots,n$ and $x = 0,1,2,\dots$.
+  \begin{enumerate}
+    \item[(1)] Find $p_X(x)$ and $p_{Y \mid X}(y \mid x)$.
+    \item[(2)] Are $X$ and $Y$ independent?
+    \item[(3)] Find $\E[XY]$ without doing a calculation,
+      just use results you already know.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] In order to find the marginal distribution of $x$ we simply 
+      calculate by the formula:
+      \[
+        p_X(x) =
+        \sum_{y=0}^{n} \binom{n}{y} p^{y+1} (1-p)^{n-y+x} =
+        p (1-p)^x \sum_{y=0}^{n} \binom{n}{y} p^{y} (1-p)^{n-y} =
+        p (1-p)^x,
+      \]
+      since the sum is the binomial expansion of $(p + (1 - p))^n$ which
+      is simply $1$.  
+      As a corollary we get that $X \sim \Geo(p)$ on $0,1,2,\dots$.
+
+      In order to find $p_{Y \mid X}(y \mid x)$ we are still going
+      to calculate by the formula:
+      \[
+        p_{Y \mid X}(y \mid x) =
+        \frac{p(x,y)}{p_X(x)} =
+        \frac{\binom{n}{y} p^{y+1} (1 - p)^{n - y + x}}{p (1-p)^x} =
+        \binom{n}{y} p^y (1 - p)^{n - y}.
+      \]
+      Therefore we can conclude that $Y \mid X = x \sim \Bin(n,p)$,
+      which is independent of $x$ (we will use this in the following part).
+    \item[(2)] Indeed, both variables are independent,
+      and we can see that by noticing that their distributions factorizes
+      as follows:
+      \[
+        p(x,y) =
+        \underbrace{p (1 - p)^x}_{p_X(x)}
+        \underbrace{\binom{n}{y} p^y (1 - p)^{n - y}}_{p_Y(y)}.
+      \]
+    \item[(3)] Since $X$ and $Y$ are independent we get
+      $\E[XY] = \E[X]\E[Y]$, and since we have seen that
+      $Y \mid X = x \sim \Bin(n,p)$ for all $x$ so 
+      $Y \sim \Bin(n,p)$ and $X \sim \Geo(p)$ with support $0,1,2,\dots$
+      which have known expectations, we conclude that:
+      \[
+        \E[XY] =
+        \E[X] \E[Y] =
+        \del{\frac{1-p}{p}} \del{np} =
+        n (1 - p).
+      \]
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $(X,Y)$ be a random vector with
+  joint density $f(x,y) = \alpha^2 e^{-\alpha y}$,
+  for $0 \le x \le y < \infty$, where $\alpha > 0$.
+  \begin{enumerate}
+    \item[(1)] Find $f_X(x)$.
+    \item[(2)] Find $f_{Y \mid X}(y \mid x)$.
+    \item[(3)] Using parts $(1)$ and $(2)$,
+      and considering the results we obtained in class for the waiting time
+      problem, write down (with a short explanation but no calculation)
+      the density of $f_Y(y)$ of $Y$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] We are given that the support is $0 \le x \le y < \infty$,
+      so outside of this region the density is zero. 
+      However, for $x \geq 0$ we get:
+      \[
+        f_X(x) =
+        \int_{x}^{\infty} \alpha^2 e^{-\alpha y} \dy =
+        \alpha^2 \frac{e^{-\alpha x}}{\alpha} =
+        \alpha e^{-\alpha x}.
+      \]
+      We can conclude that $X \sim \Exp(\alpha)$.
+    \item[(2)] By definition we get that:
+      \[
+        f_{Y \mid X}(y \mid x) =
+        \frac{p(x,y)}{p_X(x)} =
+        \frac{\alpha^2 e^{-\alpha y}}{\alpha e^{-\alpha x}} =
+        \alpha e^{-\alpha (y - x)}.
+      \]
+      Thus, we can conclude that $Y - X \mid X = x \sim \Exp(\alpha)$,
+      which is independent of $X$.
+    \item[(3)] It is obvious that $Y = X + (Y - X)$,
+      and from $(1)$ and $(2)$ we know that $X \sim \Exp(\alpha)$
+      and $Y - X \sim \Exp(\alpha)$.
+      Thus, by a result from class we get that:
+      \[
+        f_Y(y) =
+        \alpha^2 y e^{- \alpha y}.
+      \]
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $X$ and $Y$ be i.i.d. and distributed uniformly on $[0,1]$.
+  Let $Z = X + Y$.
+  Find the density $f_Z(x)$ of $Z$.
+  (Warning: be careful with your use of convolution!).
+\end{exercise}
+\begin{solution}
+  We have that $f_X(x) = f_Y(x) = \ind_{[0,1]}(x)$,
+  and so by definition we get that:
+  \[
+    f_Z(z) =
+    \int_{\R} f_X(t) f_Y(z - t) \dt =
+    \int_{\R} \ind_{[0,1]}(t) \ind_{[0,1]}(z - t) \dt,
+  \]
+  so $f_Z(z)$ is simply the length of the intersection of
+  the intervals $[0,1] \cap [z - 1,z]$.
+  In case $0 \le z \le 1$ it is clear that the length is $z$
+  so $f_Z(z) = 1$.
+  In case $1 < z \le 2$ we have that
+  $[0,1] \cap [z - 1, z] = [z - 1, 1]$, which has length $2 - z$.
+  In other cases the intersection of the intervals is empty and thus
+  $f_Z(z) = 0$ so we conclude that:
+  \[
+    f_Z(z) :=
+    \begin{cases}
+      z &0 \le 1 \le 1, \\
+      2 - z &1 < z \le 2, \\
+      0, &\text{otherwise}.
+    \end{cases}
+  \]
+\end{solution}
+
+\begin{exercise}
+  Let $(X,Y)$ be a random vector with joint density $f(x,y) = x e^{-x(y + 1)}$,
+  for $x,y \geq 0$.
+  \begin{enumerate}
+    \item[(1)] Find $f_X(x)$ the density of $X$.
+    \item[(2)] Find $f_{Y \mid X}(y \mid x)$.
+    \item[(3)] Calculate $\E[Y \mid X = x]$.
+    \item[(4)] Use the law of total expectation along with $(1)$
+      and $(3)$ to show that $\E[Y] = \infty$.
+    \item[(5)] Calculate $f_Y(y)$, the density of $Y$ and use it to calculate
+      $\E[Y]$ directly.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] We compute the density of $X$ by definition:
+      \[
+        f_X(x) =
+        \int_{0}^{\infty} x e^{-x (y + 1)} \dy =
+        x e^{-x} \int_{0}^{\infty} e^{-xy} \dy =
+        x e^{-x} \cdot \frac{1}{x} =
+        e^{-x},
+      \]
+      for $x \geq 0$, and therefore $X \sim \Exp(1)$.
+    \item[(2)] By definition we get:
+      \[
+        f_{Y \mid X}(y \mid x) =
+        \frac{f(x,y)}{f_X(x)} =
+        \frac{x e^{-x(y + 1)}}{e^{-x}} =
+        x e^{-xy},
+      \]
+      for $y \geq 0$. 
+      Thus we conclude $Y \mid X = x \sim \Exp(x)$.
+    \item[(3)] We want to find $\E[Y \mid X = x]$
+      which is the expectation of a random variable which we found
+      distributes according to $\Exp(x)$ in part $(2)$
+      so it is simply $\E[Y \mid X = x] = \frac{1}{x}$.
+    \item[(4)] By the law of total expectation,
+      and the results from part $(3)$ we get:
+      \[
+        \E[Y] =
+        \E\left[\E[Y \mid X]\right] =
+        \E\left[\frac{1}{X}\right].
+      \]
+      Using the result from part $(1)$ that $f_X(x) = e^{-x}$
+      and the LOTUS formula we get:
+      \[
+        \E\left[\frac{1}{X}\right] =
+        \int_{0}^{\infty} \frac{1}{x} e^{-x} \dx = \infty,
+      \]
+      where the last equality follows from the fact the integral diverges
+      as $0$.
+      One can see that the integral diverges since the integrand is positive,
+      and if we assume by contradiction that it converges by the comparison
+      test the integral $\int_{0}^{\infty} \frac{1}{x} e^{-1} \dx$ would
+      also diverge, and so will the integral 
+      $\int_{0}^{\infty} \frac{1}{x} \dx$ which is a contradiction.
+      Hence we conclude:
+      \[
+        \E[Y] =
+        \E\left[\frac{1}{X}\right] = \infty.
+      \]
+    \item[(5)] We compute $f_Y(y)$ by definition:
+      \[
+        f_Y(y) =
+        \int_{0}^{\infty} x e^{-x(y+1)} \dx =
+        \int_{0}^{\infty} x e^{-(y+1)x} \dx =
+        \frac{1}{(y + 1)^2},
+      \]
+      for $y \geq 0$.
+      The integral is a famous integral from calculus $2$
+      which is solved by the substitution $t = -(y+1)$,
+      so we are just using a known result.
+      In order to find the expectation by definition we use
+      the substitution $u = y + 1$ and compute:
+      \[
+        \E[Y] =
+        \int_{0}^{\infty} \frac{y}{(y + 1)^2} \dy =
+        \int_{1}^{\infty} \frac{u - 1}{u^2} \dy =
+        \int_{1}^{\infty} \frac{1}{u} - \frac{1}{u^2} \dy = \infty.
+      \]
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}[Wald's equation]
+  Let $\{X_n\}_{n=1}^{\infty}$ be a sequence of i.i.d. random variables
+  with finite expectation.
+  Denote $\mu = \E[X_n]$.
+  Let $N$ be a random variable with finite expectation,
+  independent of $\{X_n\}_{n=1}^{\infty}$,
+  and distributed on $\N$.
+  Let $Z = S_N$,
+  that is, $Z$ is a random variable satisfying $Z \mid \set{N = n} \sim S_n$.
+  Use the law of total expectation to calculate $\E[Z] = \E[S_N]$.
+\end{exercise}
+\begin{solution}
+  By definition $Z = S_N = \sum_{k=1}^{N} X_k$. 
+  We have that $Z \mid \set{N = n} \sim S_n$ and thus:
+  \[
+    \E[Z \mid N = n] =
+    \E[S_n \mid N = n] =
+    \E\left[\sum_{k=1}^{n} X_k \mid N = n\right].
+  \]
+  By linearity of expectation, and since each $X_k \mid N = n$
+  has expectation $\E[X_k] = \mu$ (this follows from the fact $N$ is independent
+  of $\{X_n\}_{n=1}^{\infty}$)
+  we conclude:
+  \[
+    \E[S_n] =
+    \sum_{k=1}^{n} \E[X_k \mid N = n] = n\mu \implies
+    \E[Z \mid N = n] = n \mu.
+  \]
+  We can now apply the law of total expectation on $Z$ and get:
+  \[
+    \E[Z] =
+    \E\left[\E[Z \mid N]\right] =
+    \E[N\mu] =
+    \mu \E[N].
+  \]
+\end{solution}
+
+\newpage
+
+\section{Normal Distributions and Random walks}
+
+\begin{exercise}
+  A polling organization samples $1200$ voters in a large city in order to
+  estimate the proportion of people there who support candidate $A$ in a certain
+  election. 
+  At least how large (approximately) would the true proportion $p$ of
+  people in the city who support $A$ have to be in order that there be at least
+  a $95\%$ chance that at least half the people sampled will support $A$?
+\end{exercise}
+\begin{solution}
+  If we denote the number of citizens who voted for $A$ by $X$
+  then it is clear $X \sim \Bin(1200,p)$,
+  and the exercise reduces to finding approximately minimal $p$
+  so that $\Prob(X \geq 600) \geq 0.95$.
+  We note that $X = \sum_{i=1}^{1200} X_i$ for random variables $X_i$
+  which represent if the $i$th citizen voted for $A$ or not,
+  so this problem is a standard problem about the central limit theorem.
+  By the central limit theorem we get that $X \approx N(\mu,\sigma^2)$
+  where $\mu = 1200p$ and $\sigma = \sqrt{1200 p (1 - p)}$.
+  We would like to find $\Pr(X \geq 600)$,
+  but recall that the normal distribution is continuous
+  and so if we denote $Y \sim N(\mu,\sigma^2) \approx X$
+  for the values $\mu$ and $\sigma$ defined earlier,
+  a better approximation is given by $\Pr(Y \geq 599.5) \geq 0.95$.
+  If we denote $Z = \frac{X - \mu}{\sigma} \sim N(0,1)$,
+  then by a property of the normal distribution we get:
+  \[
+    \Pr(Y \geq 599.5) =
+    \Pr\del{Z \geq \frac{599.5 - \mu}{\sigma}}.
+  \]
+  From standard normal distribution tables
+  we get that $\Prob(Z \geq -1.645) \approx 0.95$,
+  and therefore we have that:
+  \[
+    \Pr\del{Z \geq \frac{599.5 - \mu}{\sigma}} \geq 0.95 \iff
+    \frac{599.5 - \mu}{\sigma} \le -1.645.
+  \]
+  By substituting the values of $\mu$ and $\sigma$ we get the inequality:
+  \[
+    1200p - 599.5 \geq 1.645 \sqrt{1200 p (1 - p)},
+  \]
+  and by solving this we get that the minimal $p$
+  so that $\Prob(X \geq 600) \geq 0.95$ is approximately $0.523$.
+\end{solution}
+
+\begin{exercise}
+  \label{ex:six-two}
+  In this exercise, you will prove that if $X \sim N(\mu_1,\sigma_1^2)$
+  and $Y \sim N(\mu_2,\sigma_2^2)$, and $X$ and $Y$ are independent,
+  then $X + Y \sim N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)$.
+  \begin{enumerate}
+    \item[(1)] Prove the exercise in the case that $\mu_1 = \mu_2 = 0$. 
+      Hint: use convolution:
+      $f_{X+Y}(z) = \int_{-\infty}^{\infty} f_X(x) f_Y(z - x) \dx$.
+      The expression in the exponent appearing in $f_X(x) f_Y(z - x)$
+      is $-(\frac{x^2}{2\sigma_1^2} + \frac{(z - x)^2}{2\sigma_2^2})$. 
+      Complete the square to rewrite this in the form
+      $-(\frac{\sigma_1^2 + \sigma_2^2}{2\sigma_1^2 \sigma_2^2}(x - A)^2 + B)$,
+      where $A$ and $B$ depend on $\sigma_1$, $\sigma_2$ and $z$. 
+      Now integrate.
+    \item[(2)] If $W$ is a random variable with desndity $f(w)$ and $c$
+      is a constant, then show
+      that the random variable $W + c$ has density $f(w - c)$.
+    \item[(3)] Use parts $(1)$ and $(2)$ in order to prove the claim for general
+      $\mu_1$ and $\mu_2$. 
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] As mentioned in the hint,
+      we know the densities of these functions,
+      and we also know that the density function for the sum $X + Y$
+      is given by convolution of each of their density functions
+      (the formula works because they are independent).
+      Using the expression given in the hint we get that:
+      \[
+        f_{X+Y}(z) =
+        \int_{-\infty}^{\infty} f_{X}(x) f_{Y}(z-x) \dx =
+        \frac{1}{2 \pi \sigma_1 \sigma_2} \int_{-\infty}^{\infty}
+        \exp\del{-\frac{x^2}{2\sigma_1^2} - \frac{(z - x)^2}{2\sigma_2^2}} \dx.
+      \]
+      Where $\exp(y)$ is the exponential function $e^y$.
+      Ignoring the constant in the exponent we get that:
+      \[
+        \frac{x^2}{\sigma_1^2} + \frac{(z - x)^2}{\sigma_2^2} =
+        \del{\frac{1}{\sigma_1^2} + \frac{1}{\sigma_2^2}} x^2
+          -\frac{2z}{\sigma_2^2} x + \frac{z^2}{\sigma_2^2},
+      \]
+      so by completing the square we get that:
+      \[
+        \frac{x^2}{\sigma_1^2} + \frac{(z - x)^2}{\sigma_2^2} =
+        \frac{\sigma_1^2 + \sigma_2^2}{\sigma_1^2 \sigma_2^2}
+          \del{x - \frac{z \sigma_1^2}{\sigma_1^2 + \sigma_2^2}}^2 +
+          \frac{z^2}{\sigma_1^2 + \sigma_2^2}.
+      \]
+      Now by using this result and taking the exponential constant
+      independent of $x$
+      outside of the integral we get that:
+      \[
+        f_{X+Y}(z) =
+        \frac{1}{2 \pi \sigma_1 \sigma_2}
+          e^{\frac{-z^2}{2(\sigma_1^2 + \sigma_2^2)}}
+          \int_{-\infty}^{\infty}
+          \exp\del{-\frac{\sigma_1^2 + \sigma_2^2}{2 \sigma_1^2 \sigma_2^2}(x - A)^2} \dx,
+      \]
+      where $A = \frac{z \sigma_1^2}{\sigma_1^2 + \sigma_2^2}$.
+      We can now use the formula of the general Gaussian integral and
+      get that:
+      \[
+        \int_{-\infty}^{\infty} e^{-c(x - A)^2} \dx =
+        \sqrt{\frac{\pi}{c}},
+      \]
+      and in our
+      case $c = \frac{\sigma_1^2 + \sigma_2^2}{2 \sigma_1^2 \sigma_2^2}$.
+      This means that:
+      \[
+        f_{X+Y}(z) =
+        \frac{1}{2 \pi \sigma_1 \sigma_2}
+          e^{\frac{-z^2}{2(\sigma_1^2 + \sigma_2^2)}}
+          \sqrt{\frac{\pi}{\frac{\sigma_1^2 + \sigma_2^2}{2 \sigma_1^2 \sigma_2^2}}} =
+          \frac{1}{\sqrt{2\pi (\sigma_1^2 + \sigma_2^2)}}
+          e^{\frac{-z^2}{2(\sigma_1^2 + \sigma_2^2)}},
+      \]
+      which implies that $X + Y \sim N(0,\sigma_1^2 + \sigma_2^2)$,
+      and completes the first part of the exercise.
+    \item[(2)] Note that if $W$ has density $f(w)$ and $c \in \R$
+      then:
+      \[
+        \Prob(W + c \le w) =
+        \Prob(W \le w - c),
+      \]
+      so the density of $W + c$ is clearly $f(w - c)$.
+    \item[(3)] In the general case we suppose that $X \sim N(\mu_1,\sigma_1^2)$
+      and $Y \sim N(\mu_2,\sigma_2^2)$.
+      This implies that $X = \mu_1 + X_0$ and $Y = \mu_2 + Y_0$
+      where $X_0 \sim N(0,\sigma_1^2)$ and $Y_0 \sim N(0,\sigma_2^2)$,
+      which are independent, so from part $(1)$ we get that
+      $X_0 + Y_0 \sim N(0,\sigma_1^2 + \sigma_2^2)$.
+      Now we have that:
+      \[
+        X + Y = (X_0 + Y_0) + (\mu_1 + \mu_2),
+      \]
+      and by part $(2)$ shifting by $\mu_1 + \mu_2$ gives
+      that $X + Y \sim N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)$,
+      which completes the proof.
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $X$ and $Y$ be independent with $X \sim N(0,9)$ and $Y \sim N(1,16)$. 
+  Calculate approximately $\Prob(X \le Y)$.
+\end{exercise}
+\begin{solution}
+  Since $-X \sim N(0,9)$ we can simply use the previous exercise
+  (\Cref{ex:six-two}) in order to conclude that:
+  \[
+    Y + (-X) \sim N(1 - 0, 16 + 9) = N(1,25).
+  \]
+  Now we can simply apply the basic property of the standard distribution:
+  \[
+    \Prob(X \le Y) =
+    \Prob(Y - X \geq 0) =
+    \Prob\del{Z \geq \frac{0 - 1}{5}} =
+    \Prob(Z \geq -0.2),
+  \]
+  for $Z \sim N(0,1)$.
+  By using symmetry we can conclude that:
+  \[
+    \Prob(X \le Y) =
+    \Prob(Z \geq -0.2) =
+    \Prob(Z \le 0.2) =
+    \Phi(0.2) \approx 0.579,
+  \]
+  which concludes the proof.
+\end{solution}
+
+\begin{exercise}
+  Let $p \in (\half,1)$ and consider the simple random walk satisfying
+  $\Prob(X_{n+1} = X_n + 1) = p$ and $\Prob(X_{n+1} = X_n - 1) = 1 - p$. 
+  Let $T_y := \inf\set{n \geq 0 \mid X_n = y}$. 
+  In class we proved that:
+  \[
+    \Prob_k(T_0 < \infty) =
+    \del{\frac{1 - p}{p}}^k,
+  \]
+  for $k \geq 0$.
+  Now let $M := \inf\set{X_n \mid n \geq 0}$.
+  The random variable $M$ is the minimum value of the random walk path.
+  \begin{enumerate}
+    \item[(1)] Calculate $\Prob_0(M \le y)$, for $y \le 0$.
+      Hint: $\set{M \le y} = \set{T_y < \infty}$.
+    \item[(2)] Calculate $\Prob_0(M = y)$, for $y \le 0$.
+    \item[(3)] Calculate $\E_0[M]$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)]
+      For $y \le 0$, we notice that $\set{M \le y} = \set{T_y < \infty}$.
+      We also note that by symmetry starting from $0$ and hitting $y \le 0$
+      is the same is starting from $-y \geq 0$ and hitting $0$.
+      By the given result from class,
+      \[
+        \Prob_0(T_y < \infty) =
+        \Prob_{-y}(T_0 < \infty) = \del{\frac{1 - p}{p}}^{-y},
+      \]
+      which completes the first part of the exercise.
+    \item[(2)] For convenience, from now on we denote
+      \[
+        r := \frac{1 - p}{p}.
+      \]
+      In this part of the exercise we just need to use differences
+      since the probability of $M = y$ is exactly the probability
+      of $\set{M \le y}$ minus the probability of $\set{M \le y-1}$.
+      From $(1)$ we get that:
+      \[
+        \Prob_0(M = y) =
+        \Prob_0(M \le y) - \Prob_0(M \le y - 1) =
+        r^{-y} - r^{-(y - 1)} =
+        (1 - r) r^{-y},
+      \]
+      which completes the proof of the second exercise.
+    \item[(3)] Notice that $\Prob_0(M \le 0) = 1$
+      since the first step is $0$,
+      so $\Prob_0(M = y) = 0$ for each $y > 0$.
+      Thus, we have by definition and part $(2)$ that:
+      \[
+        \E_0[M] =
+        \sum_{y \le 0} y \Prob_0(M = y) =
+        (1 - r) \sum_{y \le 0} y r^{-y} =
+        (1 - r) \sum_{k=1}^{\infty} (-k) r^k.
+      \]
+      Recall that $\sum_{k=0}^{\infty} r^k = \frac{1}{1 - r}$,
+      and therefore by termwise differentiation we get
+      that
+      \[
+        \sum_{k=1}^{\infty} k r^{k-1} = \frac{1}{(1 - r)^2}.
+      \]
+      Then by multiplying the series by $(-1)$ and $r$
+      we get that $\sum_{k=1}^{\infty} (-k) r^{k} = -\frac{r}{(1 - r)^2}$,
+      and thus we conclude that:
+      \[
+        \E_0[M] =
+        (1 - r) \sum_{k=1}^{\infty} (-k) r^k =
+        (1 - r) \del{-\frac{r}{(1 - r)^2}} =
+        \frac{r}{r - 1}.
+      \]
+      Finally, since $r := \frac{1 - p}{p}$, we can write more cleanly:
+      \[
+        \E_0[M] =
+        \frac{r}{r - 1} =
+        \frac{1 - p}{1 - 2p}.
+      \]
+  \end{enumerate}
+\end{solution}
+
+\end{document}

@@ -1,0 +1,143 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2026}
+\def\nterm {Spring}
+\def\nlecturer {Nir Gavish}
+\def\ncourse {Applied Math Dictionary}
+
+\input{header.tex}
+
+\begin{document}
+\maketitle
+
+% Insert cool image here
+
+\newpage
+\tableofcontents
+\newpage
+
+\textbf{Disclaimer:} The course ``Applied Mathematics'' is one of the few courses
+that does not try to formalize the math behinds its methods.
+In such courses, I believe that the best method to succeed is to
+learn the language of the course, and practice exercises in order
+to get a feeling for the methods.
+Indeed, it is not the methods in this course which are not fully formalized,
+it's mostly the language.
+As such, I suggest to treat the terms in this course as dictionary entries
+rather than mathematical definitions.
+Of course, formal definitions and theorems will be introduced when
+deemed fit.
+
+\section{Dimensional analysis}
+
+\begin{entry}[Dimension]
+  In this course, dimension refers to ``physical units''
+  such as $[L]$ (Length), $[T]$ (time) etc.
+  For example, the radius of the earth is denoted by $R[L]$,
+  where $R$ is a value and $L$ is the dimension of length.
+  Dimensions are denoted by captial letters.
+\end{entry}
+
+\begin{entry}[Relatively very small]
+  We say that $x$ is very small relative to $R$ if it is intuitively a lot
+  smaller, and we will not formalize this notion further in this course.
+  In such a case, we denote $x \ll R$.
+  Sometimes we need to use ``common sense'',
+  for example, if $R_1$ is the radius of the earth, and $R_2$
+  is the distance from the earth to the sun, then $R_1 \ll R_2$.
+\end{entry}
+
+\begin{entry}[(non)dimensional equation]
+  A dimensional equation is an equation which considers dimensions.
+  For instance, the equation for distance:
+  \[
+    x[L] = v[L T^{-1}] \times t[T],
+  \]
+  is a dimensional equation.
+  A nondimensional equation is an equation where we do not consider dimensions
+  such as Euler's formula:
+  \[
+    e^{\pi i} + 1 = 0.
+  \]
+\end{entry}
+
+\begin{entry}[Regular preturbation]
+  A regular preturbation is a small variable (possibly constant)
+  that has a negligible effect on the solution.
+  For example if $100 \ll R$ is a variable, and the actual solution
+  is $S(R) = R + 1$ then we could say $1$ is a regular perturbation.
+\end{entry}
+
+\begin{entry}[Singular preturbation]
+  A singular perturbation is a small variable in the equation which
+  affects the solution drastically.
+  For example, if our problem is finding the number of zeros of the equation:
+  \[
+    \epsilon x^2 - 2x + 1 = 0
+  \]
+  then for small nonzero values of $\epsilon$ the result is $2$,
+  but when $\epsilon = 0$ the solution changes drastically to $1$.
+  Thus $\epsilon$ is a singular perturbation.
+\end{entry}
+
+\begin{entry}[Dimensionally complete equation]
+  A dimensionally complete equation is an equation where the RHS and the
+  LHS both have the same dimension such as:
+  \[
+    x[L] = v[L T^{-1}] \times t[T].
+  \]
+  Equations of the form:
+  \[
+    x[L] = v[L T^{-1}] \tor
+    u(x,t) = x[L] + t[T],
+  \]
+  are called dimensionally incomplete.
+\end{entry}
+
+\begin{entry}[Nondimensionalization]
+  Nondimensionalization is the process of changing a dimensional equation
+  into a nondimensional equation.
+  This is done by normalizing the dimensional variable by some parameter.
+  For example if $x[L]$ is the height of a rocket, and $H[L]$ is its
+  maximal height, then $\tilde x = \frac{x}{H}$ is dimensionless.
+  By plugging $x = \tilde x H$ into the dimensional equation,
+  and considering the equation in $\tilde x$ we would get a nondimensional
+  equation.
+  As you can see, this process is not deterministic
+  since different normalizations (also called scalings) give different
+  equations.
+\end{entry}
+
+\begin{entry}[The $\O(1)$ criterion]
+  The $\O(1)$ criterion states that
+  in the process of nondimensionalization,
+  in order to reach a solution that ``makes sense'',
+  we need to have dimensionless variables that are $\O(1)$.
+  In this case, a variables $x$ is called $\O(1)$ if $-1 \le x \le 1$
+  (we do not use the standard definition of $\O(1)$ for obvious reasons).
+\end{entry}
+
+% week 2
+
+\begin{entry}[Unit of measurement]
+  A unit of measurements is a certain arbitrary size that allows us
+  to assess dimensions.
+  For example, meters, centimeters, my current height,
+  are all equally valid units of measurement for the dimension of length.
+\end{entry}
+
+\begin{entry}[Base unit]
+
+\end{entry}
+
+\begin{entry}[]
+
+\end{entry}
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "1.0.0",
+  "audit_date": "2026-08-24",
+  "status": "ADMISSIBLE_AFTER_REPAIR",
+  "translation_performed": false,
+  "backend_modified": false,
+  "authority": {
+    "repository": "https://git.sr.ht/~yp/math-notes",
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+    "source_path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+    "source_bytes": 223886,
+    "source_lines": 6069,
+    "source_sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483",
+    "license": "CC BY-SA 4.0",
+    "notes_author": "Yeheli Fomberg",
+    "based_on_lectures_by": "Nir Lazarovich",
+    "nonendorsement_notice_required": true
+  },
+  "unit": {
+    "component_unit_id": "FOMBERG_UNIT_001",
+    "course_route_unit_id": "D60-R08",
+    "source_lines": "31-614 inclusive",
+    "line_count": 584,
+    "bytes_preserving_lf": 21875,
+    "sha256_preserving_lf": "68cb0dea7aa24a42e979877a95acf61b8152c87ed86d88ad7deac7cb5cea2fe3",
+    "start_byte_offset": 671,
+    "end_byte_offset_inclusive": 22545,
+    "headings": [
+      {"line": 31, "level": "section", "title": "Homology"},
+      {"line": 32, "level": "subsection", "title": "Delta-complexes"},
+      {"line": 346, "level": "subsection", "title": "Simplicial homology"}
+    ],
+    "next_line": 615,
+    "next_heading": "Singular homology",
+    "baseline_pdf_pages_touched": "3-8",
+    "next_heading_shares_physical_page": 8
+  },
+  "counts": {
+    "active_nonblank_lines": 513,
+    "comment_only_lines": 32,
+    "definitions": 14,
+    "remarks": 14,
+    "examples": 10,
+    "lemmas": 1,
+    "corollaries": 1,
+    "proofs": 1,
+    "theorems": 0,
+    "propositions": 0,
+    "exercises": 0,
+    "enumerate_environments": 2,
+    "items": 5,
+    "display_math_blocks": 24,
+    "tikzpicture": 6,
+    "inline_tikz": 6,
+    "tikzcd": 2,
+    "diagrams_total": 14,
+    "labels": 5,
+    "cross_references": 8,
+    "citations": 0,
+    "external_file_commands": 0
+  },
+  "object_ranges": {
+    "definitions": ["52-56", "58-61", "70-76", "85-93", "95-102", "109-116", "118-134", "286-295", "347-360", "379-386", "550-553", "555-558", "566-570", "578-584"],
+    "remarks": ["48-50", "77-83", "103-107", "136-144", "146-151", "172-181", "263-278", "280-284", "336-338", "340-344", "362-364", "388-390", "497-505", "610-613"],
+    "examples": ["63-68", "153-170", "183-214", "216-261", "297-309", "311-334", "366-377", "392-430", "432-448", "450-496"],
+    "lemma": ["517-520"],
+    "proof": ["521-548"],
+    "corollary": ["560-564"],
+    "display_math": ["35-37", "40-42", "44-47", "73-75", "80-82", "90-92", "97-100", "139-142", "164-167", "219-254", "314-328", "352-359", "382-384", "394-415", "417-419", "421-426", "444-446", "479-484", "486-490", "492-495", "526-528", "531-540", "542-547", "571-577"],
+    "diagrams": ["157-161", "186-209", "220-243", "244-253", "300-307", "315-319", "320-327", "369-373", "395-400", "401-414", "435-439", "453-476", "479-484", "571-577"]
+  },
+  "labels": [
+    {"id": "def:sigma-complex", "line": 119, "references": [137, 176, 269]},
+    {"id": "exmp:delta-complex-rp2", "line": 217, "references": [265]},
+    {"id": "rem:order", "line": 264, "references": [502]},
+    {"id": "def:simplicial-complex", "line": 287, "references": [330, 332]},
+    {"id": "lem:partial-partial-zero", "line": 518, "references": [561]}
+  ],
+  "proof_status": [
+    {"source_lines": "517-548", "status": "present_but_invalid", "repair_id": "FOM-U001-PR-001"},
+    {"source_lines": "560-564", "status": "direct_after_index_repair", "repair_id": "FOM-U001-SRC-012"},
+    {"source_lines": "610-613", "status": "deferred_unproved_and_misstated", "repair_id": "FOM-U001-SRC-014"}
+  ],
+  "high_risk_findings": [
+    {"id": "FOM-U001-PR-001", "lines": "521-548", "kind": "invalid_proof_indices_and_cancellation"},
+    {"id": "FOM-U001-SRC-012", "lines": "555-568,582", "kind": "boundary_and_homology_indexing"},
+    {"id": "FOM-U001-SRC-014", "lines": "610-613", "kind": "H_sup_one_vs_H_sub_one_and_missing_hypotheses"},
+    {"id": "FOM-U001-SRC-015", "lines": "497-500", "kind": "face_restriction_vs_two_simplex_type_conflation"}
+  ],
+  "rights": {
+    "external_assets": 0,
+    "inline_diagrams_under_component_license": 14,
+    "derivative_requires_attribution_change_notice_sharealike_and_nonendorsement": true,
+    "future_integrated_license": "CC BY-SA 4.0"
+  },
+  "companion_audit": "qa/FOMBERG_UNIT_001_SOURCE_AUDIT.md"
+}

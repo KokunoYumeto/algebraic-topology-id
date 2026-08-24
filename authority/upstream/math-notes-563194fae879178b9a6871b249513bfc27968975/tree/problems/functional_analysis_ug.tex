@@ -1,0 +1,1734 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\ncourse {Introduction to Functional Analysis and Fourier Analysis}
+\def\ntype {problems}
+\def\ncoursehead {Functional Analysis 104}
+
+\input{../header.tex}
+
+\begin{document}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction and the Stone--Weierstrass theorem}
+
+\begin{exercise}
+  Let $f \in C_{\R}([-1,1])$ and assume that $\int_{-1}^{1} f(x) x^n \dx = 0$,
+  for all odd positive integers $n$.
+  Prove that $f$ is an even function.
+\end{exercise}
+\begin{solution}
+  First we will show that if $f$ is a continuous real-valued function on $[a,b]$
+  such that $\int_{a}^{b} f(x) x^n \dx = 0$ for all $n = 0,1,2,\dots$
+  then $f \equiv 0$.
+  We will show this by proving that the integral of $f^2$ over $[a,b]$
+  is $0$.
+  The result will follow because if $f$ is not the zero function,
+  from continuity $f^2$ will have an interval with values greater than
+  some $\epsilon > 0$, which contradicts $\int f^2 = 0$.
+  From linearity of the integral, and what is given, we know that
+  \[
+    \int_{a}^{b} f(x) p(x) \dx = 0
+  \]
+  for any polynomial $p(x) \in \R[x]$.
+  From the Weierstrass approximation theorem for every $1/n > 0$
+  there exists a polynomial $p_n(x) \in C[x]$ so that
+  $\norm{f - p}_{\infty} < 1 / n$.
+  Notice that we have for every $n \geq 1$ that
+  \begin{align*}
+    \abs{\int_{a}^{b} f(x)f(x) \dx} =
+    \abs{\int_{a}^{b} f(x)f(x) \dx - \int_{a}^{b} f(x)p_n(x) \dx} &\le
+    \int_{a}^{b} |f(x)| |f(x) - p_n(x)| \dx \\ &\le
+    \frac{\abs{b-a}}{n} \int_{a}^{b} |f(x)| \dx.
+  \end{align*}
+  Since the last integral is constant and this is true for any $n \geq 1$
+  we get that $\int_{a}^{b} f(x)f(x) \dx$ as wanted.
+
+  We can now go back to the original exercise.
+  In order to show that $f$ is an even function we will
+  show that $f(x) - f(-x) = 0$.
+  As we have shown earlier it suffices to show that
+  $\int_{-1}^{1} \del{f(x) - f(-x)} x^n \dx = 0$ for every $n \geq 0$.
+  From what it given, for every odd positive $n$ we have
+  \[
+    \int_{-1}^{1} \del{f(x) - f(-x)} x^n \dx =
+    \underbrace{\int_{-1}^{1} f(x)  x^n \dx}_{=\,0} -
+    \underbrace{\int_{-1}^{1} f(-x) x^n \dx}_{=\,0} = 0.
+  \]
+  For any even $n \geq 0$ we have that $x^n$ is an even function and thus
+  \[
+    \int_{-1}^{1}
+    \underbrace{\del{f(x) - f(-x)} x^n}_{\text{odd function}} \dx = 0
+  \]
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Consider $C_{\R}([a,b])$, with the metric $d(f,g) = \norm{f - g}_{\infty}$.
+  Use the Weierstrass approximation theorem to show
+  that $C_{\R}([a,b])$ is separable.
+\end{exercise}
+\begin{solution}
+  In this solution we consider $\Q[x]$ and $\R[x]$ as the rings of polynomials
+  with rational and real coefficients respectively but restricted
+  to the domain $[a,b]$.
+  We know from set theory that $\Q[x]$ is a countable set.
+  We will show that $\Q[x]$ is dense in $\C_{\R}([a,b])$.
+  First, we notice that $\Q[x]$ is dense in $\R[x]$ since
+  given $r(x) = r_0 + r_1 x + \cdots + r_n x^n \in \R[x]$ we know
+  that there exists a sequence of rational numbers
+  $\set{q_{i,m}}_{m=1}^{\infty}$ that converges to $r_i$ for all
+  $0 \le i \le n$.
+  Let $q_k(x) = \sum_{i=0}^{n} q_{i,m} x^i$ be a polynomial sequence in $\Q[x]$.
+  Denote $g_{i,m} := r_i - q_{i,m}$.
+  We now have
+  \[
+    \abs{r(x) - q_m(x)} =
+    \abs{\sum_{i=0}^{n} g_{i,m} x^i} \le
+    \sum_{i=0}^{n} \abs{g_{i,m}} \abs{x^i}
+    \taking{m \to \infty} 0,
+  \]
+  where the last step follows from the fact this is a finite sum
+  of products of $\abs{g_{i,m}}$ which goes to zero, and $\abs{x^i}$
+  which is bounded in $[a,b]$.
+  This implies that $\R[x] \subseteq \overline{\Q[x]}$
+  which means that
+  $\overline{\R[x]} \subseteq \overline{\overline{\Q[x]}} = \overline{\Q[x]}$.
+  The Weierstrass approximation theorem gives us that
+  $C_{\R}([a,b]) \subseteq \overline{\R[x]}$.
+  It follows that
+  $C_{\R}([a,b]) \subseteq \overline{\Q[x]}$
+  so $C_{\R}([a,b]) = \overline{\Q[x]}$ which completes the proof.
+  % another solution
+  % Let us define the set of polygonal rational function on $[a,b]$
+  % with factor $n$ as
+  % the set of all continuous functions $f$ on $[a,b]$ of the form
+  % $f(x) = q_n$ where $x = x_i$ for some partition $\set{x_i}_{i=1}^{n}$
+  % of $[a,b]$, and so that $f$ is linear on $[x_i,x_{i+1}]$ for
+  % $1 \le i < n$.
+  % We denote this set $Q_n$.
+  % Let $f \in C_{\R}([a,b])$.
+  % Then since $[a,b]$ is compact $f$ is uniformly continuous so there
+  % exists a sufficienly large $n$ so that $|f(x) - f(y)| < \epsilon$
+  % whenever $|x - y| < 1/n$.
+  % We can now define a function $g$ by $g(k/n) = f(k/n)$ for $k = 0,1,\dots,n$,
+  % and $g$ linear on each interval $(k/n,(k+1)/n)$.
+  % From the definition of uniform continuity
+  % we necessarily have that $\norm{f - g}_{\infty} \le \epsilon$.
+  % We now choose $h \in Q_n$ so that $|h(k/n) - g(k/n)| < \epsilon$
+  % for each $k$.
+  % It follows that $\norm{g - h}_{\infty} < \epsilon$
+  % and thus $\norm{f - h}_{\infty} < 2 \epsilon$.
+  % This means that $Q_n$ is dense in $C_{\R}([a,b])$ and we are done.
+\end{solution}
+
+\begin{exercise}
+  Let $X$ be a compact metric space.
+  Prove that $C_{\R}(X)$ is seperable.
+  % use the stone-weierstrass theorem along with
+  % 1 a compact metric space is seperatble | check
+  % 2 a compact metric space is normal | 
+  % 3 uryshohn's lemma
+\end{exercise}
+\begin{solution}
+  We know that when $X$ is a compact metric space, it is seperable.
+  Let $\set{x_n}_{n=1}^{\infty}$ be a countable set of points dense in $X$.
+  We also know that a compact metric space $X$ is normal,
+  and from Urysohn's lemma we get that any two disjoint closed subsets can be
+  separated by a continuous function.
+  This means that any for every closed and disjoint $A,B \subset X$
+  there exists a continuous function $f \colon X \to [0,1]$
+  from $X$ into the unit interval $[0,1]$ such that $f(a) = 0$
+  for all $a \in A$ and $f(b) = 1$ for all $b \in B$.
+  Since $X$ is a compact metric space it has a countable open base
+  $\mathcal B := \set{U_n}_{n \in \N}$.
+  We will choose the standard base with open balls of raional radii.
+  For each pair $(n,m)$ such that $\overline{U_n} \subseteq U_m$
+  we can generate a function (by Urysohn's lemma) $f_{n,m}$
+  so that $f(\overline{U_n}) = \set{0}$ and
+  $f\del{X \setminus U_m} = \set{1}$.
+  Let $\mathcal A \subseteq C(X)$ be the subalgebra generated
+  by the functions $\set{f_{n,m}}_{n,m \in \N}$ and the constant
+  function $g$ given by $g(X) = \set{1}$, under $\R$.
+  Since $c \cdot g \in \mathcal A$ for any $c \in \Q$, the constant functions
+  are contained in the closure of this subalgebra.
+  Let $x$, $y$ be different points in $X$.
+  Since $X$ is a metric space, there exist open balls
+  $B_n = B(x,\delta)$, $B_m = B(x,2\delta)$ so that $\delta \in \Q$.
+  We have that $B_n,B_m \in \mathcal B$ and that $\overline{B_n} \subseteq B_m$.
+  This implies that there exists $f_{n,m} \in \mathcal A$ so that
+  $f(x) = 0$ and $f(1)$ which implies that $\mathcal A$ seperates points.
+  From the Stone--Weierstrass theorem $\overline{\mathcal A}$
+  is dense in $C_{\R}(X)$,
+  which implies that $\mathcal A$ is dense in $C_{\R}(X)$,
+  but again, $\mathcal A$ is countable so $C_{\R}(X)$ is seperable which
+  completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Hilbert spaces}
+
+\begin{exercise}
+  Let $H$ be a Hilbert space.
+  \begin{enumerate}
+    \item[(1)] Let $A \subset H$ be an arbitrary subset.
+      Prove that $A^{\perp}$ is a closed subspace of $H$.
+    \item[(2)] Let $A \subset H$ be an arbitrary subset.
+      Find $A \cap A^{\perp}$.
+    \item[(3)] Let $A \subset H$ be an arbitrary subset.
+      Prove that $A^{\perp} = \overline A^{\perp}$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] By definition
+      \[
+        A^{\perp} = \set{h \in H \mid \ip{h}{a} = 0 \text{ for all } a \in A}.
+      \]
+      Let $\set{x_n}_{n=1}^{\infty}$ be a sequence in $A^{\perp}$
+      that converges to $x \in H$.
+      Since $\ip{\cdot}{\cdot}$ is a continuous function we have
+      for all $a \in A$ that
+      \[
+        0 =
+        \ip{0}{a} =
+        \lim_{n \to \infty} \ip{x - x_n}{a} =
+        \lim_{n \to \infty} \ip{x}{a} - \ip{x_n}{a} =
+        \ip{x}{a},
+      \]
+      which implies $x \in A^{\perp}$.
+    \item[(2)] We obtain from the definition that
+      \[
+        A \cap A^{\perp} =
+        \set{h \in H \cap A \mid \ip{h}{a} = 0 \text{ for all } a \in A} =
+        \set{h \in A \mid \ip{h}{a} = 0 \text{ for all } a \in A}.
+      \]
+      We notice that in particular
+      \[
+        \set{h \in A \mid \ip{h}{a} = 0 \text{ for all } a \in A} \subset
+        \set{h \in A \mid \ip{h}{h} = 0} \subseteq \set{0}.
+      \]
+      This implies that
+      \[
+        A \cap A^{\perp} =
+        \begin{cases}
+          \set{0}, &0 \in A, \\
+          \emptyset, &0 \notin A.
+        \end{cases}
+      \]
+    \item[(3)] From the definition and since $A \subset \overline A$ we have
+      \[
+        \overline A^{\perp} =
+        \set{h \in H \mid \ip{h}{a} = 0 \text{ for all } a \in \overline A}
+        \subseteq
+        \set{h \in H \mid \ip{h}{a} = 0 \text{ for all } a \in A} = A^{\perp},
+      \]
+      so it suffices to show $A^{\perp} \subseteq \overline A^{\perp}$
+      in order to complete the proof.
+      Let $a \in A^{\perp}$.
+      For all $y \in \overline A$ there exists a sequence
+      $\set{x_n}_{n=1}^{\infty}$ in $A$ that converges to $y$.
+      The inner product is continuous so we get,
+      \[
+        \ip{a}{y} =
+        \lim_{n \to \infty} \ip{a}{x_n} =
+        \lim_{n \to \infty} 0 = 0,
+      \]
+      which implies $a \in \overline A^{\perp}$ and completes the proof.
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $H$ be a Hilbert space.
+  Let $\set{e_i}_{i=1}^{n}$ be an orthonormal system in $H$.
+  Let $M = \vspan\set{e_i}_{i=1}^{n}$.
+  Let $P_M$ denote the orthogonal projection of $H$
+  onto the closed subspace $M$.
+  Prove that for all $h \in H$,
+  one has $P_M h = \sum_{i=1}^{n} (h,e_i) e_i$.
+\end{exercise}
+\begin{solution}
+  Denote $m = P_M h$.
+  Since $m \in M$ we have that
+  \[
+    m = \sum_{i=1}^{N} c_i e_i
+  \]
+  for some constants $c_i$.
+  We also notice that
+  \[
+    \ip{m}{e_k} = \sum_{i=1}^{N} c_i \ip{e_i}{e_k} = c_k,
+  \]
+  which implies that $m = \sum_{i=1}^{N} \ip{m}{e_k} e_i$.
+  We know by a corollary from linear algebra that $h - m$ is orthogonal
+  to $M$, which means that $\ip{h - m}{e_i} = 0$ for all $1 \le i \le N$.
+  This implies $\ip{h}{e_i} = \ip{m}{e_i}$ which means we can write
+  \[
+    P_M h := m = \sum_{i=1}^{N} \ip{h}{e_i} e_i
+  \]
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Consider the inner product space $C([0,1])$ of the continuous functions
+  on $[0,1]$ with the $\mathcal L^2$ norm:
+  $\norm{f}_2 := \sqrt{\int_{0}^{1} |f(x)|^2 \dx}$.
+  For $n \geq 2$, let
+  \[
+    f_n(x) :=
+    \begin{cases}
+      0, &0 \le x \le \half, \\
+      n \del{x - \half}, &\half \le x \le \half + \frac{1}{n}, \\
+      1, &\half + \frac{1}{n} \le x \le 1.
+    \end{cases}
+  \]
+  \begin{enumerate}
+    \item[(1)] Prove that $\set{f_n}_{n=2}^{\infty}$ is a Cauchy sequence.
+    \item[(2)] Prove that $\set{f_n}_{n=2}^{\infty}$ does not converge.
+  \end{enumerate}
+  % there's a hint
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Let $m,n \in \N$ so that $m < n$.
+      It follows that
+      \[
+        \norm{f_m - f_n}_2 =
+        \sqrt{\int_{0}^{1} |f_m(x) - f_n(x)|^2 \dx} \le
+        \sqrt{\int_{0}^{1} \mathbbm{1}_{[1/2,1/2+1/m]} \dx} =
+        \frac{1}{\sqrt{m}}.
+      \]
+      It follows that for $\epsilon > 0$ we can choose $N$ sufficiently
+      large so that $\frac{1}{\sqrt{N}} < \epsilon$,
+      then for all $n > N$ and $p \in \N$ we have
+      \[
+        \norm{f_n - f_{n+p}}_2 <
+        \frac{1}{\sqrt{n}} <
+        \frac{1}{\sqrt{N}} <
+        \epsilon,
+      \]
+      which implies (this is equivalent to the stadard Cauchy criterion)
+      that $\set{f_n}_{n=2}^{\infty}$ is a Cauchy sequence.
+      
+    \item[(2)] Assume, by way of contradiction,
+      that $\set{f_n}_{n=2}^{\infty}$
+      converges.
+      This means that for any
+      $\sqrt{\epsilon} > 0$ there exists $N \geq 1$ so that
+      for all $n > N$ we have
+      \[
+        \norm{f - f_n}_2^2 =
+        \int_{0}^{1} |f(x) - f_n(x)|^2 \dx < \epsilon.
+      \]
+      Denote $g_n(x) := f(x) - f_n(x)$.
+      It follows that $|g_n(x)|$ converges uniformly to $0$,
+      so $g_n(x)$ converges uniformly to $0$,
+      so in particular $f_n$ converges pointwise to $f$, and so
+      for $y \in (0,1/2)$ and $z \in (1/2,1)$ we get
+      \begin{align*}
+        f(y) = \lim_{n \to \infty} f_n(y) = 0, \\
+        f(z) = \lim_{n \to \infty} f_n(z) = 1,
+      \end{align*}
+      which implies that
+      \begin{align*}
+        f(x)\vert_{(0,1/2)} = 0, \\
+        f(x)\vert_{(1/2,1)} = 1,
+      \end{align*}
+      which is a contradiction since $f$ is continuous.
+      This contradiction shows that $\set{f_n}_{n=2}^{\infty}$
+      does not converge which completes the proof.
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Consider the space $PC([0,1])$ of piecewise continuous functions on $[0,1]$
+  with the $\mathcal L^2$ norm:
+  $\norm{f}_2 := \sqrt{\int_{0}^{1} |f(x)|^2 \dx}$.
+  For $n \geq 1$, let
+  \[
+    f_n(x) =
+    \begin{cases}
+      0, &0 \le x \le \frac{1}{n}, \\
+      x^{-\frac{1}{4}}, &\frac{1}{n} \le x \le 1.
+    \end{cases}
+  \]
+  \begin{enumerate}
+    \item[(1)] Prove that $\set{f_n}_{n=1}^{\infty}$ is a Cauchy sequence.
+    \item[(2)] Prove that $\set{f_n}_{n=1}^{\infty}$ does not converge.
+  \end{enumerate}
+  % there's a hint
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] We notice that for $m < n$ we have
+      \begin{align*}
+        \norm{f_n - f_m}_2 &=
+        \sqrt{\int_{0}^{1} |f_n(x) - f_m(x)|^2 \dx} \\ &=
+        \sqrt{\int_{0}^{1} |x^{-1/4} \mathbbm{1}_{[1/n,1/m]}|^2 \dx} \\ &=
+        \sqrt{\int_{0}^{1} x^{-1/2} \mathbbm{1}_{[1/n,1/m]} \dx} \\ &=
+        \sqrt{2\sqrt{x} \Big\vert^{1/m}_{1/n}} \\ &=
+        \sqrt{2 \left(\sqrt{1/m} - \sqrt{1/n}\right)} \\ &<
+        \sqrt{2 \left(\sqrt{1/m}\right)} \\ &=
+        2^{1/2} m^{-1/4}.
+      \end{align*}
+      For any $\epsilon > 0$ we can choose $N \geq 1$ sufficiently large
+      so that $2^{1/2} m^{-1/4} < \epsilon$.
+      For all $n,m > N$ so that $m < n$ we have that
+      \[
+        \norm{f_n - f_m}_2 < 
+        2^{1/2} m^{-1/4} <
+        2^{1/2} N^{-1/4} < \epsilon
+      \]
+      which implies that $\set{f_n}_{n=1}^{\infty}$ is a Cauchy sequence.
+    \item[(2)] Assume, by way of contradiction, that $g \in PC([0,1])$
+      is the limit of $\set{f_n}_{n=1}^{\infty}$.
+      Then since $g \in PC([0,1])$ it is bounded.
+      Let $M > 0$ be so that $|g(x)| < M$ for $x \in [0,1]$.
+      Notice we have that $x^{-1/4} \geq 2M$ for $x \in (0,(2M)^{-4})$,
+      which means that
+      \[
+        0 \le g(x) < M \le \half f_n(x)
+      \]
+      for $x \in (1/n,(2M)^{-4})$ and $n > 16M^4$.
+      This means that for $n > 16M^4$, we have that
+      \[
+        \norm{f_n - g}_2^2 \geq
+        \int_{\frac{1}{n}}^{\frac{1}{16M^4}} |f_n(x) - g(x)|^2 \dx.
+      \]
+      Using this with the previous inequality we get
+      \[
+        \norm{f_n - g}_2^2 \geq
+        \int_{\frac{1}{n}}^{\frac{1}{16M^4}} |f_n(x) - g(x)|^2 \dx \geq
+        \int_{\frac{1}{n}}^{\frac{1}{16M^4}} M^2 \dx > 0,
+      \]
+      so
+      \[
+        \norm{f_n - g}_2 \geq
+        \sqrt{\int_{\frac{1}{n}}^{\frac{1}{16M^4}} M^2 \dx} > 0,
+      \]
+      which means that $\lim_{n \to \infty} \norm{f_n - g}_2 > 0$ and thus
+      $g$ is not the limit of $\set{f_n}_{n=1}^{\infty}$, which completes the
+      proof.
+  \end{enumerate}
+\end{solution}
+
+\newpage
+
+\section{Fourier series}
+
+\begin{exercise}
+  Use the orthonormal basis $\set{e^{2\pi i n x}}_{n=-\infty}^{\infty}$
+  on $\mathcal L^2([0,1])$ (with the standard inner product) and apply Bessel's
+  inequality to $e^x$ to prove the following identity:
+  \[
+    \frac{3 - e}{4(e - 1)} =
+    \sum_{n=1}^{\infty} \frac{1}{1 + 4 \pi^2 n^2}.
+  \]
+\end{exercise}
+\begin{solution}
+  First we compute the Fourier coefficients of $e^x$ which are given by
+  \[
+    \hat f(n) =
+    \int_{0}^{1} e^x e^{-2\pi i n x} \dx =
+    \int_{0}^{1} e^{(1 - 2\pi i n) x} \dx =
+    \frac{e^{(1 - 2\pi i n) x}}{1 - 2\pi i n} \biggr\vert^{1}_{0} =
+    \frac{e^{1 - 2\pi i n} - 1}{1 - 2\pi i n}.
+  \]
+  In order to use Bessel's inequality we compute $|\hat f(n)|^2$ given by
+  \[
+    |\hat f(n)|^2 =
+    \abs{\frac{e^{1 - 2\pi i n} - 1}{1 - 2\pi i n}}^2 =
+    \frac{\abs{e^{1 - 2\pi i n} - 1}^2}{\abs{1 - 2\pi i n}^2}.
+  \]
+  We can simplify the expression by noticing that $e^{1 - 2\pi i n} = e$
+  and that the angle between $1$ and $2 \pi i n$ is $\pi/2$ so
+  by using the pythagorian theorem we get
+  \[
+    |\hat f(n)|^2 =
+    \frac{(e - 1)^2}{\abs{1 - 2\pi i n}^2} =
+    \frac{(e - 1)^2}{1 + 4\pi^2 n^2}.
+  \]
+  From the $\mathcal L^2$ convergence of Fourier series we get that
+  \[
+    \sum_{n \in \Z} |\hat f(n)|^2 =
+    \norm{f}_2^2 =
+    \int_{0}^{1} e^{2x} \dx =
+    \frac{e^{2x}}{2} \biggr\vert^{1}_{0} =
+    \frac{e^2 - 1}{2}.
+  \]
+  From the previous computation we get that
+  \[
+    \sum_{n \in \Z} \frac{(e - 1)^2}{1 + 4\pi^2 n^2} =
+    \frac{e^2 - 1}{2}.
+  \]
+  After some basic algebraic manipulations
+  \[
+    (e - 1)^2 \del{1 + 2 \sum_{n=1}^{\infty} \frac{1}{1 + 4\pi^2 n^2}} =
+    \frac{e^2 - 1}{2}.
+  \]
+  Denote
+  \[
+    x := \sum_{n=1}^{\infty} \frac{1}{1 + 4\pi^2 n^2}
+  \]
+  We need to solve
+  \begin{gather*}
+    (e - 1)^2 (1 + 2x) = \frac{e^2 - 1}{2} \\
+    \viff \\
+    2 (e - 1)^2 (1 + 2x) = e^2 - 1 \\
+    \viff \\
+    2x = \frac{e^2 - 1 - 2(e - 1)^2}{2 (e - 1)^2}  \\
+    \viff \\
+    x =
+    \frac{4 e - e^2 - 3}{4 (e - 1)^2} =
+    \frac{- (e - 1) (e - 3)}{4 (e - 1)^2} =
+    \frac{3 - e}{4 (e - 1)}.
+  \end{gather*}
+  Therefore
+  \[
+    x := \sum_{n=1}^{\infty} \frac{1}{1 + 4\pi^2 n^2} =
+    \frac{3 - e}{4 (e - 1)}.
+  \]
+\end{solution}
+
+\begin{exercise} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Find $c \in \C$ for which
+      $\inf_{c \in \C} \int_{0}^{1} \abs{e^x - c e^{2\pi i n x}}^2 \dx$
+      is attained.
+    \item[(2)] Find
+      $\inf_{c \in \C} \int_{0}^{1} \abs{e^x - c e^{2\pi i n x}}^2 \dx$.
+    \item[(3)] For $n \in \Z$ let
+      $H(n) = \inf_{c \in \C} \int_{0}^{1} \abs{e^x - c e^{2\pi i n x}}^2 \dx$.
+      Show that $\inf_{n \in \Z} H(n)$ is attained at $n = 0$.
+    \item[(4)] Find $\inf_{n \in \Z} H(n)$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] We know that the best approximation for $e^x$ by a complex
+      multiple of $e^{2\pi i n x}$ is the projection of $e^x$
+      onto $e^{2\pi i n x}$, which is
+      \[
+        \ip{e^x}{e^{2\pi i n x}} e^{2\pi i n x}.
+      \]
+      Therefore
+      $\inf_{c \in \C} \int_{0}^{1} \abs{e^x - c e^{2\pi i n x}}^2 \dx$
+      is attained at
+      \[
+        c =
+        \ip{e^x}{e^{2\pi i n x}} =
+        \int_{0}^{1} e^x \overline{e^{2\pi i n x}} \dx =
+        \int_{0}^{1} e^x e^{- 2\pi i n x} \dx =
+        \hat f(n),
+      \]
+      for $f(x) = e^x$.
+    \item[(2)] We need to find
+      \[
+        \int_{0}^{1} |e^x - \hat f(n) e^{2\pi i n x}|^2 \dx.
+      \]
+      Recall $f(x) = e^x$ and denote $g(x) = \hat f(n) e^{2\pi i n x}$.
+      With the standard inner product we have that
+      \[
+        |e^x - \hat f(n) e^{2\pi i n x}|^2 =
+        \ip{f - g}{f - g} =
+        \ip{f}{f} - \ip{f}{g} - \ip{g}{f} + \ip{g}{g}.
+      \]
+      For $e_n = e^{2 \pi i n x}$ we have
+      \[
+        \ip{f}{g} =
+        \ip{f}{\hat f(n) e_n} =
+        \hat f(n) \ip{f}{e_n} =
+        \hat f(n) \overline{\hat f(n)}.
+      \]
+      where the last equality follows from the definition of Fourier
+      coefficients.
+      Similarly we get the same result for $\ip{g}{f}$ so
+      \[
+        \ip{f}{g} = \ip{g}{f} = |\hat f(n)|^2
+      \]
+      and thus from $\ip{g}{g} = |\hat f(n)|^2$ we get
+      \[
+        |e^x - \hat f(n) e^{2\pi i n x}|^2 =
+        |e^x|^2 + \ip{g}{g} =
+        |e^x|^2 - |\hat f(n)|^2.
+      \]
+      We can now use computations from part $(1)$ and get
+      \[
+        \int_{0}^{1} |e^x - \hat f(n) e^{2\pi i n x}|^2 \dx =
+        \int_{0}^{1} |e^x|^2 - |\hat f(n)|^2 \dx =
+        \frac{e^2 - 1}{2} - \frac{(e - 1)^2}{1 + 4 \pi^2 n^2}.
+      \]
+    \item[(3)] From part $(2)$ we get that
+      \[
+        H(n) =
+        \frac{e^2 - 1}{2} - \frac{(e - 1)^2}{1 + 4 \pi^2 n^2}.
+      \]
+      Therefore, in order to minimize $H(n)$ we need to minimize
+      $1 + 4 \pi^2 n^2$, so clearly since that minimum of
+      $1 + 4 \pi^2 n^2$ is attained at $n = 0$ we get that
+      $\inf_{n \in \Z} H(n)$ is attained at $n = 0$.
+    \item[(4)] By $(3)$ we simply need to find $H(0)$ which is just
+      \[
+        H(0) =
+        \frac{e^2 - 1}{2} - \frac{(e - 1)^2}{1 + 4 \pi^2 0^2} =
+        \frac{e^2 - 1}{2} - (e - 1)^2.
+      \]
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise} 
+  Solve the following.
+  \begin{enumerate}
+    \item[(1)] We know that $\{e^{i n x} / \sqrt{2\pi}\}_{n \in \Z}$
+      is an orthonormal basis for $\mathcal L^2([-\pi,\pi])$ with the inner product
+      \[
+        \ip{f}{g} =
+        \int_{-\pi}^{\pi} f(x) \overline{g(x)} \dx.
+      \]
+      So for any real-valued $f \in \mathcal L^2([-\pi,\pi])$ we have
+      \[
+        f \overset{\mathcal L^2}{=} \sum \hat f(n) \frac{e^{i n x}}{\sqrt{2\pi}},
+      \]
+      where $\hat f(n) = \langle f,e^{i n x} / \sqrt{2\pi}\rangle$.
+      We can then write
+      \[
+        \hat f(n) =
+        \ip{f}{\frac{\cos(n x)}{\sqrt{2\pi}}} +
+        i \ip{f}{\frac{\sin(n x)}{\sqrt{2\pi}}}.
+      \]
+      Show that when plugging this equation into the original $\mathcal L^2$
+      equality, we get
+      \[
+        f \overset{\mathcal L^2}{=}
+        \frac{a_0}{2} +
+        \sum_{n=1}^{\infty} a_n \cos(nx) + \sum_{n=1}^{\infty} b_n \sin(nx),
+      \]
+      where
+      \begin{align*}
+        a_n &= \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(nx) \dx \\
+        b_n &= \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin(nx) \dx
+      \end{align*}
+      and make sure you understand why $a_0/2$ appears.
+      Recall how it was defined.
+    \item[(2)] Show that the sequence
+      \[
+        \set{\frac{1}{\sqrt{2}}, \cos(x), \sin(x), \cos(2x), \sin(2x),\dots}
+      \]
+      is an orthonormal basis for $\mathcal L^2([-\pi,\pi])$ with the inner product
+      \[
+        \ip{f}{g} =
+        \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \overline{g(x)} \dx.
+      \]
+    \item[(3)] Show that if $g$ is an even function,
+      then
+      \[
+        g \overset{\mathcal L^2}{=} a_0/2 + \sum_{n=1}^{\infty} a_n \cos(nx),
+      \]
+      and if $g$ is an odd function, then
+      \[
+        g \overset{\mathcal L^2}{=} \sum_{n=1}^{\infty} b_n \sin(nx).
+      \]
+    \item[(4)] Let $f \in \mathcal L^2([0,\pi])$.
+      Extend $f$ to $f_e(x)$ so that $f_e$ is an even function
+      in $\mathcal L^2([-\pi,\pi])$.
+      Also extend $f$ to $f_o(x)$ so that $f_o$ is an odd function
+      in $\mathcal L^2([-\pi,\pi])$.
+      Use part $(3)$ and the above extensions to show that $f$ can be
+      represented in the two following ways
+      \[
+        f(x) \overset{\mathcal L^2}{=} \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(nx),
+      \]
+      where
+      \[
+        a_n = \frac{2}{\pi} \int_{0}^{\pi} f(x) \cos(nx) \dx
+      \]
+      and
+      \[
+        f(x) \overset{\mathcal L^2}{=} \sum_{n=1}^{\infty} b_n \sin(nx),
+      \]
+      where
+      \[
+        b_n = \frac{2}{\pi} \int_{0}^{\pi} f(x) \sin(nx) \dx.
+      \]
+    \item[(5)] Prove that on $\mathcal L^2([0,\pi])$ with the inner product
+      \[
+        \ip{f}{g} =
+        \frac{2}{\pi} \int_{0}^{\pi} f(x) g(x) \dx,
+      \]
+      each of the following sequences of functions is an orthonormal basis.
+      \begin{enumerate}
+        \item[(a)] $\set{1/\sqrt{2},\cos(x),\cos(2x),\cos(3x),\dots}$.
+        \item[(b)] $\set{\sin(x),\sin(2x),\sin(3x),\dots}$.
+      \end{enumerate}
+      Note that the span of $(a)$ and $(b)$ are both not algebras.
+      Thus, we can't use the Stone--Weierstrass theorem to prove that each
+      of the above sequences is a basis.
+      Note that the equation
+      \[
+        f(x) \overset{\mathcal L^2}{=} \frac{a_0}{2} + \sum_{n=1}^{\infty} a_n \cos(nx),
+      \]
+      is called the \textit{Fourier cosine series} and equation
+      \[
+        f(x) \overset{\mathcal L^2}{=} \sum_{n=1}^{\infty} b_n \sin(nx),
+      \]
+      is called the \textit{Fourier sine series} of $f$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] We have that
+      \begin{align*}
+        f &\overset{\mathcal L^2}{=}
+        \sum
+        \del{\ip{f}{\frac{\cos(n x)}{\sqrt{2\pi}}} +
+        i \ip{f}{\frac{\sin(n x)}{\sqrt{2\pi}}}}
+        \frac{e^{i n x}}{\sqrt{2\pi}} \\ &=
+        \sum_{n \in \Z} \ip{f}{\frac{\cos(n x)}{\sqrt{2\pi}}}
+          \frac{\cos(n x)}{\sqrt{2\pi}} +
+        \sum_{n \in \Z} \ip{f}{\frac{\sin(n x)}{\sqrt{2\pi}}}
+        \frac{\sin(n x)}{\sqrt{2\pi}} \\ &+ i\del{
+          \sum_{n \in \Z} \ip{f}{\frac{\cos(n x)}{\sqrt{2\pi}}}
+          \frac{\sin(n x)}{\sqrt{2\pi}} -
+        \sum_{n \in \Z} \ip{f}{\frac{\sin(n x)}{\sqrt{2\pi}}}
+        \frac{\cos(n x)}{\sqrt{2\pi}}
+        }.
+      \end{align*}
+      Since $f$ is real valued we get that
+      \[
+        \sum_{n \in \Z} \ip{f}{\frac{\cos(n x)}{\sqrt{2\pi}}}
+          \frac{\sin(n x)}{\sqrt{2\pi}} -
+        \sum_{n \in \Z} \ip{f}{\frac{\sin(n x)}{\sqrt{2\pi}}}
+          \frac{\cos(n x)}{\sqrt{2\pi}} = 0.
+      \]
+      Now since $\cos$ is even we get
+      \[
+        \sum_{n \in \Z} \ip{f}{\frac{\cos(n x)}{\sqrt{2\pi}}}
+          \frac{\cos(n x)}{\sqrt{2\pi}} =
+        \ip{f}{\frac{\cos(0)}{2}} \cos(0) +
+        2 \sum_{n=1}^{\infty} \ip{f}{\frac{\cos(n x)}{\sqrt{2\pi}}}
+          \frac{\cos(n x)}{\sqrt{2\pi}}
+      \]
+      and since $\sin$ is even we get
+      \[
+        \sum_{n \in \Z} \ip{f}{\frac{\sin(n x)}{\sqrt{2\pi}}}
+          \frac{\sin(n x)}{\sqrt{2\pi}} =
+        \ip{f}{\frac{\sin(0)}{2\pi}} \sin(0) + 2\sum_{n=1}^{\infty} \ip{f}{\frac{\sin(n x)}{\sqrt{2\pi}}}
+          \frac{\sin(n x)}{\sqrt{2\pi}}.
+      \]
+      Compute the inner products:
+      \begin{align*}
+        \ip{f}{\frac{\cos(0)}{2}} \cos(0) &= \half \ip{f}{\frac{1}{\pi}} \\ &=
+        \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \dx, \\
+        \ip{f}{\frac{\sin(0)}{2}} \sin(0) &= 0.
+      \end{align*}
+      So by combining these results we get
+      \[
+        f \overset{\mathcal L^2}{=}
+        \frac{a_0}{2} +
+        \sum_{n=1}^{\infty} a_n \cos(nx) + \sum_{n=1}^{\infty} b_n \sin(nx),
+      \]
+      which completes the first part of the exercise.
+    \item[(2)] First we check that all vectors are of norm $1$.
+      For the constant function:
+      \[
+        \norm{\frac{1}{\sqrt{2}}}^2 =
+        \frac{1}{\pi} \int_{-\pi}^{\pi} \del{\frac{1}{\sqrt{2}}}^2 \dx =
+        \frac{1}{\pi} \cdot \half \cdot 2\pi = 1.
+      \]
+      For $\cos(nx):$
+      \[
+        \norm{\cos(nx)}^2 =
+        \frac{1}{\pi} \int_{-\pi}^{\pi} \cos^2(nx) \dx =
+        \frac{1}{\pi} \cdot \pi = 1
+      \]
+      since the integral is a known result from the proof of orthonormality
+      of the standard basis with the standard inner product.
+      Similarly,
+      \[
+        \norm{\sin(nx)}^2 =
+        \frac{1}{\pi} \int_{-\pi}^{\pi} \sin^2(nx) \dx =
+        \frac{1}{\pi} \cdot \pi = 1.
+      \]
+      Orthogonality is given immdiately from the fact
+      \[
+        \ip{f_1}{f_2} = \ip{f_1}{f_2}_{\std}
+      \]
+      Since
+      $\int_{-\pi}^{\pi} \sin(nx) \dx = \int_{-\pi}^{\pi} \cos(nx) \dx = 0$
+      we get that $1/\sqrt{2}$ is orthogonal to all elements of the basis.
+      We also know from calculus that for $n \neq m$ that
+      \[
+        \int_{-\pi}^{\pi} \cos(nx) \sin(mx) \dx =
+        \int_{-\pi}^{\pi} \sin(nx) \sin(mx) \dx =
+        \int_{-\pi}^{\pi} \cos(nx) \cos(mx) \dx = 0.
+      \]
+      This shows that any two elements of the sequence are orthogonal.
+      We have see from part $(1)$ that any $f \in \mathcal L^2([-\pi,\pi])$
+      can be written as
+      \[
+        f \overset{\mathcal L^2}{=}
+        \frac{a_0}{2} +
+        \sum_{n=1}^{\infty} a_n \cos(nx) + \sum_{n=1}^{\infty} b_n \sin(nx),
+      \]
+      where
+      \begin{align*}
+        a_n &= \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(nx) \dx =
+        \ip{f}{\cos(nx)} \\
+        b_n &= \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \sin(nx) \dx =
+        \ip{f}{\sin(nx)}
+      \end{align*}
+      which shows that the set is also complete and completes the proof.
+    \item[(3)] Let $g$ be an even function.
+      Then since $\sin(nx)$ is odd we get that $g(x) \sin(x)$ is odd so
+      \[
+        b_n = \frac{1}{\pi} \int_{-\pi}^{\pi} g(x) \sin(nx) \dx = 0
+      \]
+      so from part $(1)$ we get
+      \[
+        g \overset{\mathcal L^2}{=} a_0/2 + \sum_{n=1}^{\infty} a_n \cos(nx).
+      \]
+      Let $g$ be an odd function, then since $\cos(nx)$ is even we
+      get that $g(x) \cos(nx)$ is odd so
+      \[
+        a_n = \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \cos(nx) \dx = 0
+      \]
+      so from part $(1)$ we get
+      \[
+        g \overset{\mathcal L^2}{=} \sum_{n=1}^{\infty} b_n \sin(nx).
+      \]
+    \item[(4)] We define the extension $f_e(x)$ of $f(x)$ to be even.
+      From $(3)$ we know that if $f_e(x)$ is even then we can write
+      \[
+        f_e(x) \overset{\mathcal L^2}{=} a_0/2 + \sum_{n=1}^{\infty} a_n \cos(nx).
+      \]
+      Recall that since $f_e(x)$ and $\cos(nx)$ are even,
+      their product $f_e(x) \cos(nx)$ is even.
+      Thus by definition of $a_n$ and properties of the integral
+      \[
+        a_n =
+        \frac{1}{\pi} \int_{-\pi}^{\pi} f_e(x) \cos(nx) \dx =
+        \frac{2}{\pi} \int_{0}^{\pi} f_e(x) \cos(nx) \dx.
+      \]
+      We define the extension $f_o(x)$ of $f(x)$ to be odd.
+      From $(3)$ we know that if $f_o(x)$ is odd then we can write
+      \[
+        f_o(x) \overset{\mathcal L^2}{=} \sum_{n=1}^{\infty} b_n \sin(nx).
+      \]
+      Recall that since $f_o(x)$ and $\sin(nx)$ are even,
+      their product $f_o(x) \sin(nx)$ is even.
+      Thus by definition of $b_n$ and properties of the integral
+      \[
+        b_n =
+        \frac{1}{\pi} \int_{-\pi}^{\pi} f_o(x) \sin(nx) \dx =
+        \frac{2}{\pi} \int_{0}^{\pi} f_o(x) \sin(nx) \dx.
+      \]
+      This completes this part of the exercise.
+    \item[(5)] We will verify orthonormality of completeness seperately,
+      but both are immediate results of previous part of the exercise.
+      \begin{enumerate}
+        \item[(a)] We are only considering functions $f$ in $\mathcal L^2([0,\pi])$,
+          so we can consider their even extension $f_e$ in $\mathcal L^2([-\pi,\pi])$.
+          In part $(4)$ we saw that we can write
+          \[
+            f_e(x) \overset{\mathcal L^2}{=} a_0/2 + \sum_{n=1}^{\infty} a_n \cos(nx).
+          \]
+          for
+          \[
+            a_n =
+            \frac{2}{\pi} \int_{0}^{\pi} f_e(x) \cos(nx) \dx,
+          \]
+          so simply by restricting all the functions to the domain
+          $[0,\pi]$ we get that set $(a)$ is complete.
+          We can also notice that $(a)$ is contained in
+          \[
+            \set{\frac{1}{\sqrt{2}}, \cos(x), \sin(x), \cos(2x), \sin(2x),\dots}
+          \]
+          which is orthonormal with respect to the inner product in
+          part $(2)$ given by
+          \[
+            \ip{f}{g}_{(2)} =
+            \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \overline{g(x)} \dx.
+          \]
+          Thus in particular set $(a)$ is orthonormal with respect to
+          $\ip{f}{g}_{(2)}$.
+          However, for even, real-valued functions $f$, $g$ we see that
+          \[
+            \ip{f}{g}_{(2)} =
+            \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \overline{g(x)} \dx =
+            \frac{2}{\pi} \int_{0}^{\pi} f(x) g(x) \dx =
+            \ip{f}{g}.
+          \]
+          This means that $(a)$ is orthonormal with respect to the inner
+          product given in this part, so it is an orthonormal basis.
+        \item[(b)] We are only considering functions $f$ in $\mathcal L^2([0,\pi])$,
+          so we can consider their odd extension $f_o$ in $\mathcal L^2([-\pi,\pi])$.
+          In part $(4)$ we saw that we can write
+          \[
+            f_o(x) \overset{\mathcal L^2}{=} \sum_{n=1}^{\infty} b_n \sin(nx).
+          \]
+          for
+          \[
+            b_n =
+            \frac{2}{\pi} \int_{0}^{\pi} f_o(x) \sin(nx) \dx,
+          \]
+          so simply by restricting all the functions to the domain
+          $[0,\pi]$ we get that set $(b)$ is complete.
+          We can also notice that $(b)$ is contained in
+          \[
+            \set{\frac{1}{\sqrt{2}}, \cos(x), \sin(x), \cos(2x), \sin(2x),\dots}
+          \]
+          which is orthonormal with respect to the inner product in
+          part $(2)$ given by
+          \[
+            \ip{f}{g}_{(2)} =
+            \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \overline{g(x)} \dx.
+          \]
+          Thus in particular set $(b)$ is orthonormal with respect to
+          $\ip{f}{g}_{(2)}$.
+          However, for odd, real-valued functions $f$, $g$ we see that
+          \[
+            \ip{f}{g}_{(2)} =
+            \frac{1}{\pi} \int_{-\pi}^{\pi} f(x) \overline{g(x)} \dx =
+            \frac{2}{\pi} \int_{0}^{\pi} f(x) g(x) \dx =
+            \ip{f}{g}.
+          \]
+          This means that $(b)$ is orthonormal with respect to the inner
+          product given in this part, so it is an orthonormal basis.
+      \end{enumerate}
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+ Use Abel's summation formula to prove that if $\set{b_n}_{n=1}^{\infty}$ is
+ a sequence so that the sequence $B_n = \sum_{j=1}^{n} b_n$ is bounded,
+ and $\set{a_n}_{n=1}^{\infty}$ is monotonically nonincreasing with
+ $\lim_{n \to \infty} a_n = 0$, then the series
+ $\sum_{n=1}^{\infty} a_n b_n$ is convergent.
+\end{exercise}
+\begin{solution}
+  Since the sequence of partial sums $B_n$ is bounded there exists $M > 0$
+  so that for all $n \geq 0$ we have $|B_n| < M$.
+  Consider Abel's summation formula (summation by parts formula):
+  \[
+    \sum_{i=1}^{n} a_i b_i =
+    a_n B_n - \sum_{i=1}^{n-1} B_i (a_{i+1} - a_i).
+  \]
+  We see that the series $\sum_{i=1}^{\infty} B_i (a_{i+1} - a_i)$
+  converges since for all $n$
+  \begin{align*}
+    \sum_{i=1}^{n} \abs{B_i (a_{i+1} - a_i)} &=
+    \sum_{i=1}^{n} \abs{B_i} \cdot \abs{(a_{i+1} - a_i)} \le
+    M \sum_{i=1}^{n} \abs{(a_{i+1} - a_i)} \\ &=
+    M \sum_{i=1}^{n} (a_{i} - a_{i+1}) = M (a_1 - a_{n + 1}).
+  \end{align*}
+  Since $\lim_{n \to \infty} a_n = 0$ we get that
+  $M (a_1 - a_{n + 1})$ is bounded,
+  so $\sum_{i=1}^{n} \abs{B_i (a_{i+1} - a_i)}$ is bounded,
+  but since $\sum_{i=1}^{n} \abs{B_i (a_{i+1} - a_i)}$
+  is a bounded series of nonnegative numbers, it must converge.
+  Therefore $\sum_{i=1}^{\infty} B_i (a_{i+1} - a_i)$ converges
+  absolutely, and in particular it converges.
+  The sequence $a_n B_n$ converges to $0$ since $\lim_{n \to \infty} a_n = 0$
+  and $B_n$ is bounded.
+  Therefore
+  \[
+    \lim_{n \to \infty} a_n B_n - \sum_{i=1}^{n-1} B_i (a_{i+1} - a_i)
+  \]
+  exists so
+  \[
+    \lim_{n \to \infty} \sum_{i=1}^{n} a_i b_i =
+    \lim_{n \to \infty} a_n B_n - \sum_{i=1}^{n-1} B_i (a_{i+1} - a_i)
+  \]
+  exists which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Let $f \in \mathcal L^2([-\pi,\pi])$ be given by
+  \[
+    f(x) = \mathbbm{1}_{[a,b]}(x) =
+    \begin{cases}
+      1, & x \in [a,b], \\
+      0, & x \in [-\pi,\pi] \setminus [a,b],
+    \end{cases}
+  \]
+  for $-\pi < a < b < \pi$.
+  \begin{enumerate}
+    \item[(1)] Show that the Fourier series of $f$ is given by
+      \[
+        f \overset{\mathcal L^2}{=}
+        \frac{b - a}{2\pi} +
+        \sum_{n \neq 0} \frac{e^{- i n a} - e^{- i n b}}{2 \pi i n} e^{i n x},
+      \]
+      where $\sum_{n \neq 0}$ is summing over $n \in \Z \setminus \set{0}$.
+    \item[(2)] Show that the Fourier series on the right hand side above
+      converges at every point $x \in [-\pi,\pi] \setminus \set{a,b}$
+      by using Abel's summation.
+    \item[(3*)] Show that the Fourier series on the right hand
+      side above does not converge when $x = a$ or $x = b$.
+  \end{enumerate}
+  Note that by Dirichlet’s Theorem, the symmetric partial sums
+  $\sum_{n=-N}^{N} \frac{e^{- i n a} - e^{- i n b}}{2 \pi i n} e^{i n x}$
+  converge for all $x \in [-\pi,\pi]$ as $N \to \infty$.
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] First we calculate the
+      Fourier coefficients $\set{c_n}_{z \in \Z}$.
+      For $n = 0$ we get
+      \[
+        c_0 =
+        \ip{f}{\frac{e^{i 0 x}}{\sqrt{2\pi}}} =
+        \ip{f}{\frac{1}{\sqrt{2\pi}}} =
+        \frac{1}{\sqrt{2\pi}} \int_{-\pi}^{\pi} \mathbbm{1}_{[a,b]}(x) \dx =
+        \frac{b - a}{\sqrt{2\pi}}.
+      \]
+      For $n \neq 0$ we get
+      \[
+        c_n =
+        \ip{f}{\frac{e^{i n x}}{\sqrt{2\pi}}} =
+        \frac{1}{\sqrt{2\pi}}
+          \int_{-\pi}^{\pi} \mathbbm{1}_{[a,b]}(x) e^{- i n x} \dx =
+        \frac{1}{\sqrt{2\pi}} \int_{a}^{b} e^{- i n x} \dx.
+      \]
+      Therefore
+      \[
+        c_n =
+        \frac{1}{\sqrt{2\pi}} \int_{a}^{b} e^{- i n x} \dx =
+        \frac{1}{\sqrt{2\pi}} \eval{\frac{e^{-i n x}}{-i n}}_{a}^{b} =
+        \frac{e^{-i n b} - e^{-i n a}}{-i n \sqrt{2\pi}} =
+        \frac{e^{-i n a} - e^{-i n b}}{i n \sqrt{2\pi}}.
+      \]
+      Now by the Fourier series we get
+      \[
+        f \overset{\mathcal L^2}{=}
+        \frac{b - a}{\sqrt{2\pi}} \cdot \frac{1}{\sqrt{2\pi}} +
+        \sum_{n \neq 0} \frac{e^{-i n a} - e^{-i n b}}{\sqrt{2\pi} i n} \cdot
+        \frac{e^{i n x}}{\sqrt{2\pi}} =
+        \frac{b - a}{2\pi} +
+        \sum_{n \neq 0} \frac{e^{-i n a} - e^{-i n b}}{2\pi i n}
+        e^{i n x}
+      \]
+      which completes the proof.
+    \item[(2)] (bad solution) Let $x \in [-\pi,\pi] \setminus \set{a,b}$. %to be added %to fix %problem
+      Write the partial sums as
+      \[
+        S_N =
+        \frac{b - a}{2 \pi} +
+        \sum_{0 < |n| \le N} \frac{e^{-i n a} - e^{-i n b}}{2\pi i n} e^{i n x}=
+        \frac{b - a}{2 \pi} +
+        \sum_{0 < |n| \le N} \frac{e^{i n (x - a)}}{2\pi i n} -
+        \sum_{0 < |n| \le N} \frac{e^{i n (x - b)}}{2\pi i n}.
+      \]
+      In order to show that this sequence converges it suffices to show that
+      \[
+        \sum_{0 < |n| \le N} \frac{e^{i n (x - a)}}{2\pi i n} \tand
+        \sum_{0 < |n| \le N} \frac{e^{i n (x - b)}}{2\pi i n}
+      \]
+      converge.
+      However these sums are by definition equal to the Dirichlet's kernel
+      and we know that
+      \[
+        \sum_{0 < |n| \le N} e^{i n \theta} =
+        D_N(\theta) =
+        \frac{\sin\del{(N + \half) \theta}}{\sin(\theta/2)}.
+      \]
+      Therefore
+      \[
+        \abs{\sum_{0 < |n| \le N} e^{i n (x - a)}} =
+        \abs{D_N(x-a)} \le
+        \frac{1}{\abs{\sin\del{\frac{x - a}{2}}}}.
+      \]
+      This bounded is indepent of $n$ and well defined when $x \neq a$.
+      Now since we can take the constant $1/2\pi i$ out of the sum
+      we get that
+      \[
+        \sum_{0 < |n| \le N} \frac{e^{i n (x - a)}}{2\pi i n} =
+        \frac{1}{2\pi i}\sum_{0 < |n| \le N} \frac{e^{i n (x - a)}}{n}
+      \]
+      converges from Dirichlet's test
+      because $\sum_{0 < |n| \le N} e^{i n (x - a)}$ is bounded and
+      $1/n$ is decreasing.
+      There, after repeating the same argument for the second sum
+      we get that $S_N$ converges for $x \notin \set{a,b}$
+      which completes the proof.
+    \item[(3)] (bad solution) Let $x = a$. %to be added
+      Then we have
+      \[
+        S_N =
+        \frac{b - a}{2 \pi} +
+        \sum_{0 < |n| \le N} \frac{1 - e^{- i n (b - a)}}{2\pi i n}.
+      \]
+      We will show that the latter term does not converge.
+      \[
+        \sum_{0 < |n| \le N} \frac{1 - e^{- i n (b - a)}}{2\pi i n} =
+        \sum_{0 < |n| \le N} \frac{1}{2\pi i n} -
+        \sum_{0 < |n| \le N} \frac{e^{- i n (b - a)}}{2\pi i n} =
+        - \sum_{0 < |n| \le N} \frac{e^{- i n (b - a)}}{2\pi i n}
+      \]
+      because $\sum_{0 < |n| \le N} \frac{1}{2\pi i n} = 0$ since
+      $1/2 \pi i n$ is an odd function in $n$.
+      Notice that when we change $n$ to $-n$ we get
+      \[
+        - \sum_{0 < |n| \le N} \frac{e^{- i n (b - a)}}{2\pi i n} =
+        \sum_{0 < |n| \le N} \frac{e^{i n (b - a)}}{2\pi i n}.
+      \]
+      We also have
+      \[
+        \sum_{0 < |n| \le N} \frac{e^{i n (b - a)}}{2\pi i n} =
+        \sum_{n = 1}^{N} \del{
+        \frac{e^{i n (b - a)}}{i n} + \frac{e^{i n (b - a)}}{- i n}} =
+        \sum_{n = 1}^{N} \frac{2\sin\del{n (b - a)}}{n}
+      \]
+      where the last transition is from the identity
+      $e^{i \theta} - e^{-i \theta} = 2i \sin(\theta)$.
+      Thus, the original sum becomes
+      \[
+        S_N =
+        \frac{b - a}{2 \pi} +
+        \frac{1}{2 \pi}
+        \sum_{n = 1}^{N} \frac{2\sin\del{n (b - a)}}{n} =
+        \frac{b - a}{2 \pi} +
+        \frac{1}{\pi}
+        \sum_{n = 1}^{N} \frac{\sin\del{n (b - a)}}{n}.
+      \]
+      We need to show that
+      \[
+        \sum_{n = 1}^{N} \frac{\sin\del{n (b - a)}}{n}
+      \]
+      does not converge.
+      Similarly we can show this for $x = b$ and thus this part is complete.
+  \end{enumerate}
+\end{solution}
+
+\newpage
+
+\section{Weak convergence}
+
+\begin{exercise}
+  Prove that the weak limit is unique.
+  That is, if $h_n \taking{w} h_1$ and $h_n \taking{w} h_2$,
+  then $h_1 = h_2$.
+\end{exercise}
+\begin{solution}
+  Let $h_1,h_2 \in H$ be
+  such that $h_n \taking{w} h_1$ and $h_n \taking{w} h_2$.
+  Let $g \in H$, then from weak convergence we get that
+  \begin{gather*}
+    \lim_{n \to \infty} \ip{h_n}{g} = \ip{h_1}{g} \\
+    \lim_{n \to \infty} \ip{h_n}{g} = \ip{h_2}{g}
+  \end{gather*}
+  and from uniqueness of the limit in $\C$ we get that
+  \[
+    \ip{h_1}{g} = \ip{h_2}{g} \implies
+    \ip{h_1 - h_2}{g} = 0.
+  \]
+  Since the choice of $g$ was arbitrary this implies that
+  \[
+    \forall g \quad \ip{h_1 - h_2}{g} = 0 \implies h_1 = h_2,
+  \]
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Let $T \in B(H,K)$.
+  Then $\norm{T} = \sup_{\substack{h \in H,k \in K \\
+  \norm{h} = \norm{k} = 1}} \abs{\ip{T(h)}{k}}$.
+\end{exercise}
+\begin{solution}
+  Let $h \in H$ and $k \in K$ be so that $\norm{h} = \norm{k} = 1$.
+  Then we have from the Cauchy--Schwartz inequality that
+  \[
+    \abs{\ip{T(h)}{k}} \le
+    \norm{Th} \cdot \underbrace{\norm{k}}_{=\,1} \le
+    \norm{T} \cdot \norm{h} = \norm{T}.
+  \]
+  On the other hand, since for any $h \in H$ so that $\norm{h} = 1$
+  we can choose $k = Th / \norm{Th}$ (which also has norm $1$).
+  We get that
+  \[
+    \sup_{\substack{h \in H,k \in K \\
+      \norm{h} = \norm{k} = 1}} \abs{\ip{T(h)}{k}} \geq
+    \sup_{\substack{h \in H \\ \norm{h} = 1}}
+      \abs{\ip{T(h)}{\frac{T(h)}{\norm{Th}}}} =
+    \sup_{\substack{h \in H \\ \norm{h} = 1}}
+    \frac{1}{\norm{Th}} \cdot \norm{Th}^2 = \norm{T}. 
+  \]
+  From these two inequalities we get that
+  \[
+    \norm{T} = \sup_{\substack{h \in H,k \in K \\
+    \norm{h} = \norm{k} = 1}} \abs{\ip{T(h)}{k}},
+  \]
+  which completes the proof.
+\end{solution}
+
+\begin{exercise} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Let $h_n \taking{w} h$ and assume
+      that $l := \lim_{n \to \infty} \norm{h_n}$ exists.
+      Show that $\norm{h} \le l$.
+    \item[(2)] More generally, show that if $h_n \taking{w} h$,
+      then $\norm{h} \le \liminf_{n \to \infty} \norm{h_n}$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] By definition of weak convergence for $h \in H$ we have
+      \[
+        \lim_{n \to \infty} \ip{h_n}{h} =
+        \ip{h}{h} =
+        \abs{\ip{h}{h}} =
+        \norm{h}^2.
+      \]
+      We also know that
+      \[
+        \norm{h_n - h}^2 =
+        \norm{h_n}^2 - 2\Re(\ip{h_n}{h}) + \norm{h}^2
+      \]
+      so we can write
+      \[
+        \norm{h_n}^2 =
+        \norm{h_n - h}^2 + 2\Re(\ip{h_n}{h}) - \norm{h}^2.
+      \]
+      Note that we already know some of those values when we take $n$
+      to infinity:
+      \[
+        \norm{h_n}^2 \taking{n \to \infty} l^2 \tand
+        \text{(from weak convergence) }
+        \Re(\ip{h_n}{h}) \taking{n \to \infty} \norm{h}^2.
+      \]
+      Therefore
+      \[
+        0 \le
+        \norm{h_n}^2 \taking{n \to \infty}
+        l^2 - 2\norm{h}^2 + \norm{h^2} = l^2 - \norm{h}^2.
+      \]
+      This implies that $l^2 \geq \norm{h}^2$ and since both $l$
+      and $\norm{h}$ are nonnegative this implies that $\norm{h} \le l$.
+    \item[(2)] Denote $l := \liminf_{n \to \infty} \norm{h_n}$.
+      When $l = \infty$ the identity clearly holds.
+      When $l < \infty$ there exists a subsequence of $h_n$ so that
+      \[
+        \lim_{k \to \infty} \norm{h_{n_k}} = l.
+      \]
+      Let $g \in H$.
+      Since $\lim_{n \to \infty} \ip{h_n}{g} = \ip{h}{g}$,
+      we also have $\lim_{n \to \infty} \ip{h_{n_k}}{g} = \ip{h}{g}$.
+      The choice of $g$ was arbitrary so $h_{n_k} \taking{w} h$.
+      From $(1)$ we get that $\norm{h} \le l$ which completes the proof.
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  A not necessarily norm-continuous
+  (or equivalently, not necessarily bounded)
+  linear operator from a Hilbert space $H$ to a Hilbert space $K$
+  is called weakly sequentially continuous if $h_n \taking{w} h$
+  implies $Ah_n \taking{w} Ah$.
+  In class we will prove that if $A$
+  is weakly sequentially continuous,
+  then it is norm-continuous (or equivalently, bounded).
+  Show that if $A$ is norm-continuous
+  (or equivalently, bounded)
+  then it is weakly sequentially continuous.
+\end{exercise}
+\begin{solution}
+  Let $A \in B(H,K)$
+  and let $h_n \taking{w} h$.
+  We need to show that for any $g \in H$ we have
+  \[
+    \lim_{n \to \infty} \ip{Ah_n}{g}_K = \ip{Ah}{g}_K.
+  \]
+  Since $A \in B(H,K)$ is has a conjugate $A^*$.
+  Thus, by $h_n \taking{w} h$ we get
+  \[
+    \ip{Ah_n}{g}_K =
+    \ip{h_n}{A^* g}_H \taking{n \to \infty}
+    \ip{h}{A^* g}_H =
+    \ip{Ah}{g}_H,
+  \]
+  which completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Bounded operators}
+
+\begin{exercise}
+  Let $A \in B(H,K)$,
+  where $H,K$ are Hilbert spaces.
+  Show that if the operators $A$ and $A^*$
+  are both bounded from below, then $A$ and $A^*$ are invertible.
+\end{exercise}
+\begin{solution}
+  Since $A$ is bounded from below there exists $c > 0$ so that
+  for all $0 \neq h \in H$ we have
+  \[
+    \norm{A h}_{K} \geq c \cdot \underbrace{\norm{h}_{H}}_{> 0} > 0.
+  \]
+  Therefore $\ker(A) = 0$, which implies that $A$ is injective.
+  An identical argument shows that $\ker(A^*) = 0$ is also injective
+  (and thus by the Cantor--Schr\"oder--Bernstein $\abs{H} = \abs{K}$).
+  Since the kernels are trivials the kernel-image identites in Hilbert
+  spaces give
+  \begin{gather*}
+    \set{0_H}^{\perp} = \ker(A)^{\perp} = \overline{\im(A^*)}, \\
+    \set{0_K}^{\perp} = \ker(A^*)^{\perp} = \overline{\im(A)}.
+  \end{gather*}
+  Since operators bound from below are closed maps we get in particular
+  that $\im(A)$ and $\im(A^*)$ are closed and so
+  \begin{gather*}
+    H = \set{0_H}^{\perp} = \im(A^*), \\
+    K = \set{0_K}^{\perp} = \im(A).
+  \end{gather*}
+  This implies that $A$ and $A^*$ are both surjective.
+  All bounded operators which are bijections are invertible,
+  which implies that $A$ and $A^*$ both are invertible and completes the proof.
+\end{solution}
+
+\begin{exercise}
+  \label{ex:lemma-of-w}
+  Let $\set{W_n}_{n=1}^{\infty}$ be a sequence of positive numbers
+  satisfying $\sup_{n \geq 1} W_n = \infty$.
+  In this exercise we will show that
+  there exists a sequence $\set{a_n}_{n=1}^{\infty}$ of nonnegative
+  numbers such that
+  \[
+    \sum_{n=1}^{\infty} a_n < \infty \tand
+    \sum_{n=1}^{\infty} a_n W_n = \infty.
+  \]
+  \begin{enumerate}
+    \item[(1)] Show that by the assumption on $\set{W_n}_{n=1}^{\infty}$,
+      there exists a subsequence $\set{W_{n_k}}_{k=1}^{\infty}$
+      such that $W_{n_{k}} \geq k$.
+    \item[(2)] Define
+      \[
+        a_n :=
+        \begin{cases}
+          \frac{1}{k^2}, &\text{if } n = n_k \text{ for } k=1,2,\dots; \\
+          0, &\text{otherwise}.
+        \end{cases}
+      \]
+      Show that $\set{a_n}_{n=1}^{\infty}$ is the desired sequence.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] From $\sup_{n \geq 1} W_n = \infty$ we know that there exists
+      a subsequence $W_{n_{j}}$
+      so that $W_{n_{j}} \taking{j \to \infty} \infty$.
+      Then by definition we know that for all $\N \ni k > 0$ there exists
+      $j_k \in \N$ so that for all $j > j_k$ we have $W_{n_{j}} > k$.
+      This allows us to define a sequence subsequence of $W_{n_j}$
+      and in particular of $W_{n}$ which we can denote
+      by $\set{W_{n_k}}_{k=1}^{\infty}$ such that $W_{n_{k}} \geq k$
+      for all $k \in \N$.
+    \item[(2)] By the termwise comparison test we have that
+      \[
+        \sum_{n=1}^{\infty} \abs{a_n} \le
+        \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6},
+      \]
+      so $\sum_{n=1}^{\infty} a_n$ converges absolutely and in particular
+      it converges.
+      However we notice that
+      \[
+        a_n W_n =
+        \begin{cases}
+          \frac{W_n}{k^2}, &\text{if } n = n_k \text{ for } k=1,2,\dots; \\
+          0, &\text{otherwise}.
+        \end{cases}
+      \]
+      But since for $n = n_k$ for $k=1,2,\dots$ we have
+      \[
+        a_{n_k} W_{n_k} =
+        \frac{W_{n_k}}{k^2} \geq \frac{k}{k^2} = \frac{1}{k},
+      \]
+      we get that
+      \[
+        \sum_{n=1}^{\infty} a_n W_n =
+        \sum_{k=1}^{\infty} a_{n_k} W_{n_k} =
+        \sum_{k=1}^{\infty} \frac{1}{k}.
+      \]
+      Since the harmonic series does not converge $\sum_{n=1}^{\infty} a_n W_n$
+      does not converge which completes the proof.
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $\set{w_n}_{n=1}^{\infty}$ be a sequence of positive numbers satifying
+  $w_n \taking{n \to \infty} 0$.
+  Define the bounded linear operator $A$ on $\ell^2$ by
+  \[
+    Av = (w_1 v_1, w_2 v_2, \dots),
+  \]
+  for $v = (v_1,v_2,\cdots) \in \ell^2$.
+  \begin{enumerate}
+    \item[(1)] Show that $\norm{A} = \max\limits_{n \geq 1} \abs{w_n}$.
+    \item[(2)] Show that $w_n$ is an eigenvalue of $A$ for all $n \in \N$.
+    \item[(3)] Show that the point spectrum $\sigma_p(A)$ of $A$ is equal
+      to $\set{w_n}_{n=1}^{\infty}$.
+    \item[(4)] Show that the spectrum $\sigma(A)$ of $A$ includes $0$.
+    \item[(5)] Show that $A$ is injective.
+    \item[(6)] In light of $(4)$ and $(5)$, we get $\im(A) \neq \ell^2$.
+      Find a vector $v \in \ell^2$ satisfying $v \notin \im(A)$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Let $v \in \ell^2$ be with norm $1$.
+      Then we have
+      \[
+        \norm{Av} =
+        \sqrt{\sum_{n=1}^{\infty} \abs{w_n v_n}^2} \le
+      \sqrt{\del{\max_{n \geq 1} w_n}^2 \cdot \sum_{n=1}^{\infty} \abs{v_n}^2} =
+        \max_{n \geq 1} w_n.
+      \]
+      Therefore $\norm{A} \le \max\limits_{n \geq 1} \abs{w_n}$.
+      Next we will show that there exists $v$ with norm $1$
+      so that $\norm{Av} = \max\limits_{n \geq 1} \abs{w_n}$
+      which completes the proof.
+      Let $m$ be the index for which $w_m = \max\limits_{n \geq 1} \abs{w_n}$.
+      Define
+      \[
+        v_i :=
+        \begin{cases}
+          1, &i = m \\
+          0, &\text{otherwise}
+        \end{cases}
+      \]
+      and set $v := (v_i)_{n=1}^{\infty} \in \ell^2$.
+      We clearly have that $\norm{v} = 1$ and also
+      \[
+        \norm{Av} =
+        \sqrt{\sum_{n=1}^{\infty} \abs{w_n v_n}^2} =
+        \sqrt{\max_{n \geq 1} \abs{w_n}^2} =
+        \max_{n \geq 1} w_n.
+      \]
+      This shows that $\norm{A} = \max\limits_{n \geq 1} \abs{w_n}$ and
+      completes the proof.
+    \item[(2)] We need to show that $w_n$ is an eigenvalue of $A$
+      for every $n \in \N$.
+      Let $n \in \N$, define
+      \[
+        v_i :=
+        \begin{cases}
+          1, &i = n \\
+          0, &\text{otherwise}
+        \end{cases}
+      \]
+      and set $v := (v_i)_{n=1}^{\infty} \in \ell^2$.
+      We get that
+      \[
+        Av =
+        (w_i v_i)_{n=1}^{\infty} =
+        \begin{cases}
+          w_n, &i = n \\
+          0, &\text{otherwise}
+        \end{cases}.
+      \]
+      Therefore $Av = w_n v$.
+      Since the choice of $n$ we arbitrary we get that
+      $w_n$ is an eigenvalue of $A$ for all $n \in \N$ which completes the
+      proof.
+    \item[(3)] In $(2)$
+      we saw that $\set{w_n}_{n=1}^{\infty} \subseteq \sigma_p(A)$.
+      We will now show the opposite side of the inclusion.
+      Let $\lambda \in \sigma_p(A)$.
+      Then by definition there exists $0 \neq v \in \ell^2$ so that
+      \[
+        Av =
+        (w_1 v_1, w_2 v_2, \dots) =
+        \lambda (v_1, v_2, \dots) =
+        (\lambda v_1, \lambda v_2, \dots).
+      \]
+      Since $v \neq 0$ there exists $n \in \N$ so that $v_n \neq 0$.
+      From the previous equation we get that $w_n v_n = \lambda v_n$,
+      and since $v_n \neq 0$ we can divide by $v_n$ and get $w_n = \lambda$.
+      Therefore $\lambda \in \set{w_n}_{n=1}^{\infty}$.
+      This implies that $\sigma_p(A) \subseteq \set{w_n}_{n=1}^{\infty}$.
+      We have shown double sided inclusion so
+      $\set{w_n}_{n=1}^{\infty} = \sigma_p(A)$ which completes the proof.
+    \item[(4)] Showing that $0 \in \sigma(A)$ is equivalent to showing
+      that $A$ is not invertible.
+      Assume, by way of contradiction, that $A$ has an inverse.
+      Then $A^{-1} \in B(\ell^2)$.
+      Define the operator $B \colon \ell^2 \to \C^{\infty}$ by
+      \[
+        Bv :=
+        (w_1^{-1} v_1, w_2^{-1} v_2, \dots)
+      \]
+      for $v = (v_1,v_2,\dots) \in \ell^2$.
+      It is well defined since $\set{w_n}_{n=1}^{\infty}$ are positive
+      numbers.
+      We clearly get that $A^{-1} = B$ (although formally they are different
+      since they have different range).
+      Therefore we must have $\im(B) \subseteq \ell^2$.
+      However, from \Cref{ex:lemma-of-w} there exists
+      a sequence $\set{a_n}_{n=1}^{\infty}$ of nonnegative
+      numbers such that
+      \[
+        \sum_{n=1}^{\infty} a_n < \infty \tand
+        \sum_{n=1}^{\infty} a_n W_n = \infty.
+      \]
+      This implies that $v := (a_n)_{n=1}^{\infty} \in \ell^2$
+      but $Av \notin \ell^2$.
+      Therefore $\im(B) \nsubseteq \ell^2$.
+      This contradiction completes the proof.
+    \item[(5)] Suppose that $v = (v)_{i=1}^{\infty} \in \ell^2$
+      is a vector such that $Av = 0 \in \ell^2$.
+      Then
+      \[
+        Av =
+        (w_1 v_1, w_2 v_2, \dots) =
+        (0, 0, \dots).
+      \]
+      This gives $w_n v_n = 0$ for all $n \in \N$.
+      Since $\set{w_n}_{n=1}^{\infty}$ are positive we
+      can divide by $w_n$ and get $v_n = 0$ for all $n \in \N$
+      so $v = 0$ and thus $\ker(A) = 0$
+      so $A$ must be injective.
+    \item[(6)] Define the sequence $W_n := w_n^{-2}$.
+      Let $\set{a_n}_{n=1}^{\infty}$ be the corresponding sequence from
+      \Cref{ex:lemma-of-w}.
+      Now define $v := (\sqrt{a_n})_{n=1}^{\infty}$.
+      Since
+      \[
+        \norm{v}^2 =
+        \sum_{n=1}^{\infty} \sqrt{a_n}^2 =
+        \sum_{n=1}^{\infty} a_n < \infty
+      \]
+      we get that $v \in \ell^2$.
+      We claim that $v \notin \im(A)$.
+      Assume, by way of contradiction that there exists $u \in \ell^2$
+      so that $Au = v$.
+      Then
+      \[
+        Au =
+        (w_n u_n)_{n=1}^{\infty} =
+        (\sqrt{a_n})_{n=1}^{\infty}.
+      \]
+      Therefore we must have $u_n = \frac{\sqrt{a_n}}{w_n}$.
+      This implies that
+      \[
+        \norm{u}^2 =
+        \sum_{n=1}^{\infty} \del{\frac{\sqrt{a_n}}{w_n}}^2 =
+        \sum_{n=1}^{\infty} a_n W_n = \infty.
+      \]
+      Therefore $u \notin \ell^2$.
+      This contradiction completes the proof.
+  \end{enumerate}
+\end{solution}
+
+\newpage
+
+\section{Compact operators and the Fourier transform}
+
+\begin{exercise}
+  In this exercise we will solve the equation
+  \[
+    \int_{-\infty}^{\infty} f(t) f(x - t) \dt =
+    \frac{1}{x^2 + 1}.
+  \]
+\end{exercise}
+\begin{solution}
+  We notice that the LHS of the equation is simply $f * f$.
+  From the convolution theorem we know
+  that $\widehat{f * f} = \hat{f} \cdot \hat{f}$.
+  We have also previously seen that if $g(x) = \frac{1}{x^2 + 1}$
+  its Fourier transform is
+  \[
+    \hat{g}(\omega) = \pi e^{-\abs{\omega}}.
+  \]
+  Therefore
+  \[
+    \hat{f} \cdot \hat{f} = \pi e^{-\abs{\omega}}
+    \implies
+    \hat{f}(\omega) = \pm \sqrt{\pi} e^{-\frac{\abs{\omega}}{2}}.
+  \]
+  We can now notice that $\hat{f}$ is simply $\pm \pi^{-1/2} \hat{g}(\omega/2)$.
+  Since the Fourier transformation $\mathcal F_1$ is linear
+  and from the
+  identity $\mathcal F_1[g(ax)](\omega) = a^{-1} \mathcal F_1[g(x)](\omega/a)$
+  we get that
+  \[
+    \mathcal F_1 \left[\frac{1}{\sqrt{\pi}} \cdot \frac{2}{(2x)^2 + 1}\right](\omega) =
+    \frac{2}{\sqrt{\pi}} \mathcal F_1 \left[\frac{1}{(2x)^2 + 1}\right](\omega) =
+    \frac{1}{\sqrt{\pi}} \mathcal F_1 \left[\frac{1}{x^2 + 1}\right](\frac{\omega}{2}) =
+    \sqrt{\pi} e^{-\frac{\abs{\omega}}{2}}.
+  \]
+  And similarly we get
+  \[
+    \mathcal F_1 \left[-\frac{1}{\sqrt{\pi}} \cdot \frac{2}{(2x)^2 + 1}\right](\omega) =
+    -\sqrt{\pi} e^{-\frac{\abs{\omega}}{2}}.
+  \]
+  Therefore the functions
+  \begin{gather*}
+    f_1 = \frac{1}{\sqrt{\pi}} \cdot \frac{2}{4x^2 + 1} \\
+    f_2 = -\frac{1}{\sqrt{\pi}} \cdot \frac{2}{4x^2 + 1}
+  \end{gather*}
+  are both solutions to the equation.
+  Since the Fourier transform $\mathcal F_1$ is injective,
+  and we must
+  have $\mathcal F_1[f](\omega) = \sqrt{\pi} e^{-\frac{\abs{\omega}}{2}}$,
+  these are all the solutions of the equation.
+\end{solution}
+
+\begin{exercise}
+  Let $a,b > 0$.
+  Calculate $\int_{0}^{\infty} \frac{1}{(x^2 + a^2) (x^2 + b^2)} \dx$.
+\end{exercise}
+\begin{solution}
+  The integrand is an even function so we have
+  \[
+    \int_{0}^{\infty} \frac{1}{(x^2 + a^2) (x^2 + b^2)} \dx =
+    \half \int_{-\infty}^{\infty} \frac{1}{(x^2 + a^2) (x^2 + b^2)} \dx.
+  \]
+  Recall that we saw in the recitations that
+  \[
+    \mathcal F_1\left[e^{-a |x|}\right](\omega) =
+    \frac{2a}{a^2 + \omega^2}.
+  \]
+  We can now define $f_{y}(x) := e^{-y |x|}$ and see that
+  from the convolution theorem
+  \[
+    \mathcal F_1[f_a * f_b](\omega) =
+    \mathcal F_1[f_a](\omega) \cdot \mathcal F_1[f_b](\omega) =
+    \frac{4ab}{(a^2 + \omega^2) (b^2 + \omega^2)}.
+  \]
+  A tiresome computation shows that $f_a * f_b \in C^1$
+  and since $\widehat{f_a * f_b} \in \mathcal L^1(\R)$
+  we can use the inverse Fourier transform at $x = 0$ to get
+  \[
+    (f_a * f_b)(0) =
+    \frac{1}{2\pi}
+    \int_{-\infty}^{\infty} \frac{4ab}{(a^2 + \omega^2) (b^2 + \omega^2)} \cdot
+    e^{i \omega \cdot 0} \domega =
+    \frac{4ab}{\pi}
+    \int_{0}^{\infty} \frac{1}{(a^2 + \omega^2) (b^2 + \omega^2)} \domega.
+  \]
+  We can compute directly and get,
+  \[
+    (f_a * f_b)(0) =
+    \int_{-\infty}^{\infty} e^{-(a + b)|x|} \dx =
+    2 \int_{0}^{\infty} e^{-(a + b) x} \dx =
+    \frac{2}{a + b}.
+  \]
+  By plugging this computation in our previous equality we can easily conclude
+  that
+  \[
+    \int_{0}^{\infty} \frac{1}{(x^2 + a^2) (x^2 + b^2)} \dx =
+    \frac{\pi}{2ab (a + b)}.
+  \]
+\end{solution}
+
+\begin{exercise}
+  Let $f(x) = \ind_{[-b,b]}$.
+  We have previously seen
+  that $\hat{f}(\omega) = \frac{2 \sin(b \omega)}{\omega}$.
+  \begin{enumerate}
+    \item[(1)] Show that
+      \[
+        (f * f)(x) =
+        \begin{cases}
+          0, &|x| > 2b; \\
+          2b - x, &0 \le x \le 2b; \\
+          2b + x, &-2b \le x \le 0.
+        \end{cases}
+      \]
+    \item[(2)] Find the Fourier transform of $(f * f)$.
+    \item[(3)] Use parts $(1)$ and $(2)$
+      to calculate the following integral:
+      \[
+        \int_{0}^{\infty} \frac{\sin^4(b \omega)}{\omega^4} \domega.
+      \]
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+  \item[(1)] By definition
+    \[
+      (f * f)(x) =
+      \int_{-\infty}^{\infty} \ind_{[-b,b]} (t) \cdot \ind_{[-b,b]} (x - t) \dt.
+    \]
+    We know that $\ind_{[-b,b]} (x - t) = \ind_{[x-b,x+b](t)}$,
+    thus we can write
+    \[
+      (f * f)(x) =
+      \int_{-\infty}^{\infty} \ind_{[-b,b] \cap [x-b,x+b]} (t) \dt =
+      \int_{[-b,b] \cap [x-b,x+b]} \dt.
+    \]
+    Whenever $|x| > 2b$ we get $[-b,b] \cap [x-b,x+b] = \emptyset$
+    so $(f * f)(x) = 0$.
+    When $0 \le x \le 2b$ the intersection between the intervals
+    is $[x - b, b]$, and when $-2b \le x \le 0$ the intersection is
+    $[-b, x + b]$.
+    In both of these cases the integral is immediate and equals
+    $2b - x$ and $2b + x$ respectively.
+    Therefore
+    \[
+        (f * f)(x) =
+        \begin{cases}
+          0, &|x| > 2b; \\
+          2b - x, &0 \le x \le 2b; \\
+          2b + x, &-2b \le x \le 0.
+        \end{cases}
+      \]
+    which completes the proof.
+  \item[(2)] We need to find $\mathcal F_1[f * f](\omega)$.
+    Since $f \in \mathcal L^1(\R)$ we are allowed to use the convlusion
+    theorem which, coupled with the identity
+    from the recitations $\hat{f}(\omega) = \frac{2 \sin(b \omega)}(\omega)$,
+    gives the result immediately:
+    \[
+      \mathcal F_1[f * f](\omega) =
+      \hat{f}(\omega) \cdot \hat{f}(\omega) =
+      \frac{4 \sin^2(b \omega)}{\omega^2}.
+    \]
+  \item[(3)] Since the integrand is an even function we get that
+    \[
+      \int_{0}^{\infty} \frac{\sin^4(b \omega)}{\omega^4} \domega =
+      \half \int_{-\infty}^{\infty} \frac{\sin^4(b \omega)}{\omega^4} \domega.
+    \]
+    We can now use the result from $(2)$ to get that
+    \[
+      \int_{-\infty}^{\infty} \frac{\sin^4(b \omega)}{\omega^4} \domega =
+      \int_{-\infty}^{\infty} \abs{\frac{\sin^2(b \omega)}{\omega^2}}^2 \domega =
+      \frac{1}{16} \norm{\mathcal F_1[f * f]}_2^2.
+    \]
+    Since $f \in \mathcal L^2(\R)$ we can use Plancherel's theorem
+    to obtain
+    that
+    $\norm{\mathcal F_1[f * f]}_2 = \sqrt{2 \pi} \cdot \norm{f * f}_2$.
+    Therefore
+    \[
+      \int_{-\infty}^{\infty} \frac{\sin^4(b \omega)}{\omega^4} \domega =
+      \frac{\pi}{8} \cdot \norm{f * f}_2^2.
+    \]
+    We can now use the calculation from $(1)$ to compute the norm:
+    \[
+      \norm{f * f}_2^2 =
+      \int_{-\infty}^{\infty} \abs{(f * f)(x)}^2 \dx = 
+      \int_{-2b}^{0} (2b + x)^2 \dx +
+      \int_{0}^{2b} (2b - x)^2 \dx.
+    \]
+    We can find these integrals using a simple substitution and get that
+    \[
+      \norm{f * f}_2^2 =
+      \frac{8b^3}{3} + \frac{8b^3}{3} =
+      \frac{16b^3}{3}.
+    \]
+    Therefore we have that
+    \[
+      \int_{0}^{\infty} \frac{\sin^4(b \omega)}{\omega^4} \domega =
+      \half \int_{-\infty}^{\infty} \frac{\sin^4(b \omega)}{\omega^4} \domega =
+      \half \del{\frac{\pi}{8} \cdot \frac{16b^3}{3}} =
+      \frac{\pi b^3}{3}.
+    \]
+  \end{enumerate}
+\end{solution}
+
+
+
+\end{document}

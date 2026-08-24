@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-001-030-FOM-001-COMPOSITE-BUILD",
+  "status": "PASS",
+  "date": "2026-08-24",
+  "scope": "Roberts 30/30 complete; Fomberg Sections 1.1-1.2 (source lines 31-614); composite course partial",
+  "component_numbering": {
+    "roberts_edition_units": "001-030",
+    "fomberg_component_id": "O012-FOM-001",
+    "course_route_unit_id": "D60-R08",
+    "fomberg_is_not_roberts_unit_031": true
+  },
+  "authorities": {
+    "roberts": {
+      "repository": "DavidMichaelRoberts/AlgebraicTopology2019",
+      "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+      "tree": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+      "source_file": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+      "source_bytes": 331447,
+      "source_sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+      "license": "CC BY 4.0",
+      "license_file_bytes": 18696,
+      "license_file_sha256": "2ecfbc56ead071b6a93908f50b59c4186db6d139c8b7d0c56156bb0ad5fad3f5"
+    },
+    "fomberg": {
+      "repository": "~yp/math-notes",
+      "commit": "563194fae879178b9a6871b249513bfc27968975",
+      "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+      "source_file": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "source_bytes": 223886,
+      "source_sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483",
+      "selected_source_span": "31-614",
+      "selected_span_lines": 584,
+      "selected_span_bytes": 21875,
+      "selected_span_sha256": "68cb0dea7aa24a42e979877a95acf61b8152c87ed86d88ad7deac7cb5cea2fe3",
+      "next_source_line": 615,
+      "license": "CC BY-SA 4.0",
+      "license_file_bytes": 20140,
+      "license_file_sha256": "0b7fc2608b6d990314e908569407a6058b4a29175167c6d91ca0070c946661be"
+    }
+  },
+  "frozen_inputs": {
+    "roberts_001_030_baseline": {
+      "builder": {
+        "path": "scripts/build-units-001-030.ps1",
+        "bytes": 22753,
+        "sha256": "96c2d80c20c2900e63f0a18e2a4a5387b7b78d78be5864c2f973ba365c5a9c89"
+      },
+      "html": {
+        "path": "output/html/units-001-030/index.html",
+        "bytes": 4861791,
+        "sha256": "ed9da5653b3eacf7418d6e08760fcd2ecff4d75799c47f08689b940798099891"
+      },
+      "pdf": {
+        "path": "output/pdf/topologi-aljabar-unit-001-030-id.pdf",
+        "bytes": 2257988,
+        "sha256": "b9d37776c64541123345c7b28fd26df161b878e8c105c16670455fd532dc08a4"
+      },
+      "build_receipt": {
+        "path": "qa/UNITS_001_030_BUILD_RECEIPT.json",
+        "bytes": 12488,
+        "sha256": "15ce778ae5b85934424b3da22dcbec99f15df30746bb01630aaa4494cb3eace7"
+      },
+      "ordered_reader_sources": 30,
+      "ordered_reader_bytes": 959341,
+      "ordered_reader_lf_lines": 29430,
+      "ordered_manifest_bytes": 3409,
+      "ordered_manifest_sha256": "73d72a7bcdcfb5f513c1cbc3930def67399da6a187babf0a7e09aae08d4b0977",
+      "verified_without_rewrite": true
+    },
+    "fomberg_reader": {
+      "path": "source/id-ID/fomberg/units/fomberg-unit-001-delta-complexes-simplicial-homology.md",
+      "bytes": 34773,
+      "lf_lines": 1073,
+      "sha256": "d9b64140f9340c75bc34c12bc02ee843d87de3566e331c50c2374075718aa2c6",
+      "stable_ids": 87,
+      "semantic_blocks": 82,
+      "semantic_figures": 10,
+      "exercise_hint_solution_triples": 6
+    },
+    "fomberg_qa": {
+      "path": "qa/FOMBERG_UNIT_001_QA.json",
+      "bytes": 21253,
+      "sha256": "b3b0ebc9430b80d45c64a6c528e0e36f46ca0d646a50e7b9c9c5d68285369b7a",
+      "status": "PASS"
+    },
+    "fomberg_independent_review": {
+      "path": "qa/FOMBERG_UNIT_001_INDEPENDENT_REVIEW.md",
+      "bytes": 12357,
+      "sha256": "ec505152bed5690e77beb85039404c4a4b2dc23b14967e0f77b09f05bde06b68",
+      "bound_reader_sha256": "d9b64140f9340c75bc34c12bc02ee843d87de3566e331c50c2374075718aa2c6",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    }
+  },
+  "toolchain": {
+    "builder": "scripts/build-roberts-001-030-fomberg-001.ps1",
+    "builder_bytes": 23641,
+    "builder_sha256": "8c869df45501cea68ac638f3b91791381f7cd3891df1d334794518d035291001",
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_engine": "MiKTeX pdfTeX-1.40.29",
+    "poppler": "24.04.0",
+    "source_date_epoch": 1787529600,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "reproducibility": {
+    "html_clean_builds": 2,
+    "html_build_a_sha256": "2b64e8bec1dd5e1689ef6569360fec896ef87a683c7ba291a3780e27084a7390",
+    "html_build_b_sha256": "2b64e8bec1dd5e1689ef6569360fec896ef87a683c7ba291a3780e27084a7390",
+    "html_two_builds_byte_identical": true,
+    "pdf_clean_builds": 2,
+    "pdf_build_a_sha256": "fb81f2b2c0f73c17c4e3be4eaae164eaeaeb0c4ff0661580acfc7aa9b6d5f749",
+    "pdf_build_b_sha256": "fb81f2b2c0f73c17c4e3be4eaae164eaeaeb0c4ff0661580acfc7aa9b6d5f749",
+    "pdf_two_builds_byte_identical": true,
+    "pandoc_html_warnings_are_fatal": true,
+    "frozen_inputs_fail_closed": true,
+    "build_scratch_removed": true,
+    "reader_and_backend_unchanged": true
+  },
+  "artifacts": {
+    "html": {
+      "path": "output/html/roberts-001-030-fomberg-001/index.html",
+      "bytes": 5029788,
+      "sha256": "2b64e8bec1dd5e1689ef6569360fec896ef87a683c7ba291a3780e27084a7390"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-id.pdf",
+      "bytes": 2322978,
+      "sha256": "fb81f2b2c0f73c17c4e3be4eaae164eaeaeb0c4ff0661580acfc7aa9b6d5f749",
+      "title": "Topologi Aljabar - Roberts 30/30 dan Fomberg 1.1-1.2",
+      "pages": 362,
+      "page_size": "A4",
+      "page_size_points": "595.276x841.890",
+      "page_rotation": 0,
+      "fonts": 27,
+      "all_fonts_embedded_subset_tounicode": true,
+      "tagged": false,
+      "encrypted": false,
+      "forms": false,
+      "javascript": false,
+      "suspects": false
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001.csv",
+      "bytes": 278,
+      "sha256": "e947371a756c466dcc86b6e03e94e237be33f4ea2755c232e4843e8c437e5255",
+      "entries": 2,
+      "all_entries_match_live_artifact_bytes_and_hashes": true
+    }
+  },
+  "html_checks": {
+    "status": "PASS",
+    "lang": "id-ID",
+    "title": "Topologi Aljabar - Roberts 30/30 dan Fomberg 1.1-1.2",
+    "dom_ids": 1747,
+    "unique_dom_ids": 1747,
+    "duplicate_dom_ids": 0,
+    "fragment_links": 352,
+    "unresolved_fragment_links": 0,
+    "fomberg_stable_ids": 87,
+    "missing_fomberg_stable_ids": 0,
+    "roberts_unit_001_notice_id_present": true,
+    "literal_roberts_unit_001_heading_markers": 0,
+    "mathml_nodes": 12220,
+    "display_mathml_nodes": 2093,
+    "inline_mathml_nodes": 10127,
+    "raw_tex_math_fallbacks": 0,
+    "semantic_figures": 75,
+    "links": 431,
+    "unnamed_links": 0,
+    "images": 0,
+    "images_missing_alt": 0,
+    "script_tags": 0,
+    "runtime_external_asset_references": 0,
+    "private_credential_placeholder_markers": 0,
+    "self_contained": true
+  },
+  "responsive_static_checks": {
+    "status": "PASS",
+    "centered_desktop_rule": "body width min(100%, 72rem), max-width 72rem, margin-inline auto",
+    "ordinary_prose_metadata_wrap_rule": "body overflow-wrap anywhere",
+    "mobile_rule": "below 700px body width 100%, zero margin, bounded side padding",
+    "global_border_box": true,
+    "tables_local_horizontal_scrolling": true,
+    "display_mathml_local_horizontal_scrolling": true,
+    "inline_mathml_local_horizontal_scrolling": true,
+    "evidence_kind": "delivered DOM/CSS inspection; not live layout-engine geometry"
+  },
+  "browser_checks": {
+    "status": "PASS_AFTER_REPAIR",
+    "surface": "independent live in-app-browser witness against the exact final local HTML",
+    "superseded_failure": {
+      "severity": "P1",
+      "html_sha256": "b1901dd7e30c546972f0cf64a44fb8dc27e661ed4f39a4afa3ca2dca3dbf4df4",
+      "viewport": "390x844",
+      "document_client_width_px": 375,
+      "document_scroll_width_px": 586,
+      "body_scroll_width_px": 587,
+      "page_level_horizontal_scrollbar_visible": true,
+      "primary_contributor": "raw 64-character SHA in #o012-fom-u001-notice",
+      "cause": "overflow-wrap anywhere applied only to a and code"
+    },
+    "mobile_reflow_repair": {
+      "builder_only_change": true,
+      "frozen_reader_changed": false,
+      "backend_changed": false,
+      "rule": "body overflow-wrap anywhere",
+      "wide_mathml_local_scrolling_retained": true
+    },
+    "composite_header_boundary_repair": {
+      "severity_before_repair": "P1",
+      "cause": "no blank Markdown boundary between the composite header and the first Roberts notice heading",
+      "builder_separator_added": true,
+      "roberts_unit_001_notice_id_present": true,
+      "literal_heading_marker_in_html": false,
+      "literal_heading_marker_in_pdf_text": false,
+      "fail_closed_regression_checks_added": true
+    },
+    "resolved_mobile": {
+      "html_sha256": "2b64e8bec1dd5e1689ef6569360fec896ef87a683c7ba291a3780e27084a7390",
+      "viewport": "390x844",
+      "window_inner_width_px": 390,
+      "document_client_width_px": 375,
+      "document_scroll_width_px": 375,
+      "body_client_width_px": 375,
+      "body_scroll_width_px": 375,
+      "page_level_horizontal_overflow": false,
+      "outside_viewport_contributors": 0,
+      "locally_contained_geometry_candidates": 2144,
+      "notice_client_width_px": 340,
+      "notice_scroll_width_px": 340,
+      "notice_heading": "Tentang unit ini",
+      "wide_mathml_local_scrollers": 268,
+      "broken_fragment_links": 0,
+      "runtime_external_dependencies": 0,
+      "screenshots_without_page_scrollbar": [
+        "top",
+        "Roberts Unit 001 notice"
+      ]
+    },
+    "resolved_desktop": {
+      "viewport": "1280x900",
+      "document_client_width_px": 1265,
+      "document_scroll_width_px": 1265,
+      "body_width_px": 1152,
+      "body_scroll_width_px": 1152,
+      "body_centering_delta_px": 0.056
+    },
+    "resolved_live_structure": {
+      "dom_ids": 1748,
+      "unique_dom_ids": 1748,
+      "fomberg_ids": 87,
+      "fragment_links": 352,
+      "broken_fragment_links": 0,
+      "mathml_nodes": 12220,
+      "runtime_external_dependencies": 0,
+      "literal_heading_marker_present": false
+    },
+    "current_page_console_errors_or_warnings": 0,
+    "excluded_stale_console_entries": 0,
+    "live_desktop_geometry_pass_claimed": true,
+    "live_mobile_geometry_pass_claimed": true,
+    "console_pass_claimed": true,
+    "accessibility_tree_pass_claimed": false
+  },
+  "visual_checks": {
+    "status": "PASS",
+    "inspected_pdf_pages": "1,9,13,351-362",
+    "new_fomberg_pdf_pages": "352-362",
+    "render_dpi": 144,
+    "render_dimensions_px": "1191x1684",
+    "render_count": 15,
+    "render_total_bytes": 4079968,
+    "inspection_detail": "original resolution",
+    "clipping": 0,
+    "overlap": 0,
+    "broken_or_unreadable_glyphs": 0,
+    "unreadable_math": 0,
+    "margin_collisions": 0,
+    "orphaned_headings": 0,
+    "render_inventory": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_RENDER_INVENTORY.csv",
+      "bytes": 2287,
+      "sha256": "6194ca5afdaf20190c5e3ada9435472da6680080b48e510f12b2f9b9d10b0b07"
+    },
+    "visual_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_VISUAL_QA.md",
+      "bytes": 5656,
+      "sha256": "ca87b5abf05207b12c69512ee52dc43cee242bdca5821567fc9927785bd98e36"
+    }
+  },
+  "rights_and_provenance": {
+    "integrated_reader_license": "CC BY-SA 4.0",
+    "roberts_component_license": "CC BY 4.0",
+    "fomberg_component_license": "CC BY-SA 4.0",
+    "component_attribution_preserved": true,
+    "changes_disclosed": true,
+    "non_endorsement_disclosed": true,
+    "independent_edition_disclosed": true,
+    "model_note": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "html_primary_accessible_surface": true,
+    "pdf_untagged_limitation_disclosed": true
+  },
+  "limitations": [
+    "The composite course is partial after Fomberg Sections 1.1-1.2.",
+    "The PDF is not structurally tagged; the self-contained HTML is the primary reflowable surface.",
+    "Live reflow and console checks passed after repair; no formal accessibility-tree conformance PASS is claimed."
+  ]
+}

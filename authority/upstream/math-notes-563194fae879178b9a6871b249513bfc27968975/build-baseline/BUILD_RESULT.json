@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "authority_commit": "563194fae879178b9a6871b249513bfc27968975",
+  "authority_tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+  "source_date_epoch": 1735689600,
+  "engine_path": "<LOCAL_ACCOUNT_ROOT>\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\pdflatex.exe",
+  "engine_version": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+  "clean_build_count": 2,
+  "passes_per_build": 3,
+  "byte_identical": true,
+  "pdf_bytes": 664609,
+  "pdf_sha256": "f0f8f815423dbdc3b368b48a5972bfc62be87ae8b5c4bfcd1b7a74b8871417ff",
+  "package_input_count": 106,
+  "output_pdf": "<TASK_ROOT>\\authority\\upstream\\math-notes-563194fae879178b9a6871b249513bfc27968975\\build-baseline\\algebraic_topology-baseline.pdf",
+  "pdfinfo": "Title:           \nSubject:         \nKeywords:        \nAuthor:          \nCreator:         LaTeX with hyperref\nProducer:        MiKTeX pdfTeX-1.40.29\nCreationDate:    Wed Jan  1 01:00:00 2025 W. Europe Standard Time\nModDate:         Wed Jan  1 01:00:00 2025 W. Europe Standard Time\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           57\nEncrypted:       no\nPage size:       595.276 x 841.89 pts (A4)\nPage rot:        0\nFile size:       664609 bytes\nOptimized:       no\nPDF version:     1.5",
+  "path_sanitization": {
+    "applied": true,
+    "task_root_placeholder": "<TASK_ROOT>",
+    "local_account_root_placeholder": "<LOCAL_ACCOUNT_ROOT>",
+    "wrapped_account_segment_placeholder": "<LOCAL_ACCOUNT>",
+    "mathematical_and_build_diagnostic_text_changed": false
+  }
+}

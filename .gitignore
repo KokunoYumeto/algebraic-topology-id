@@ -5,3 +5,7 @@ qa/unit-001-render/
 tmp/pdfs/
 __pycache__/
 *.pyc
+
+# Upstream notebook autosave blobs remain in the frozen source archive/tree
+# manifest but are not duplicated as loose public repository files.
+authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/**/.ipynb_checkpoints/

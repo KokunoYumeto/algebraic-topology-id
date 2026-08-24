@@ -1,0 +1,1493 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2026}
+\def\nterm {Spring}
+\def\nlecturer {Chen Meiri}
+\def\ncourse {Noncommutative algebra}
+
+\input{header.tex}
+
+\begin{document}
+\maketitle
+
+% Insert cool image here
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\begin{remark}
+  In this course, unless explicitly stated otherwise, the term
+  ring will be preserved to rings with units which are not necessarily
+  commutative.
+  Homomorphisms between rings are required to respect the identity,
+  that means that if $f \colon R \to S$ is a ring homomorphism
+  then $f(1_R) = 1_S$.
+\end{remark}
+
+\begin{definition}[Opposite ring]
+  For a ring $R$, we define the opposite ring $R^{\op}$ by giving
+  it the additive ring of $R$, and defining $a *_{R^{\op}} b = b *_R a$.
+\end{definition}
+
+\begin{example}
+  Let $n \geq 1$, and let $\mathbb F$ be a field.
+  The map $A \mapsto A^T$ is an isomorphism from $M_n(\mathbb F)$ to $M_n(\mathbb F)^{\op}$.
+\end{example}
+
+\subsection{Modules}
+
+\begin{definition}[Module]
+  Let $R$ be a ring.
+  A left $R$-module is a pair $(M,\rho)$ where $M$ is an abelian group,
+  and $\rho$ is a homomorphism from $R$ to $\End(M)$.
+  Similarly, a right $R$-module is a pair $(M,\rho)$ where $M$ is an abelian
+  group, and $\rho$ is a homomorphism from $R$ to $\End(M)^{\op}$.
+\end{definition}
+
+\begin{remark}
+  If $R$ is commutative, then every left $R$-module is also a right $R$-module
+  and vice versa.
+  Thus, when we do commutative algebra, we simply use the term ``module''.
+\end{remark}
+
+\begin{remark}
+  We sometimes say that $M$ is a left (or right) module,
+  without mentioning the homomorphism $\rho$ when it is possible to infer
+  it from context.
+  If $r \in R$ and $m \in M$ we usually write $r \cdot m$ instead
+  of $\phi(r)(m)$.
+  This terminology is justified by the following exercise.
+\end{remark}
+
+\begin{exercise}
+  Let $R$ be a ring and $M$ and abelian group.
+  Prove that there is a bijection between the set of left $R$-modules
+  with underlying group $M$ and the set of
+  functions $\cdot \colon R \times M \to M$ which satisfy the following
+  properties:
+  \begin{enumerate}
+    \item[(1)] $1_R \cdot m = m$.
+    \item[(2)] $r \cdot (m + n) = r \cdot m + r \cdot n$.
+    \item[(3)] $(r + s) \cdot m = r \cdot m + s \cdot m$.
+    \item[(4)] $(rs) \cdot m = r \cdot (s \cdot m)$.
+  \end{enumerate}
+\end{exercise}
+
+\begin{example}
+  A vector space is a module over a field.
+\end{example}
+
+\begin{example}
+  Every abelian group is a module over $\Z$
+  (note that there is a unique homomorphism from $\Z$ to $\End(M)$).
+\end{example}
+
+\begin{example}
+  Let $n,m \geq 2$ and $R$ be a ring.
+  Then $M_{n,m}(R)$ is a left $M_n(R)$-module
+  where the action of $R$ on $M$ is by matrix multiplication from the left.
+  Similarly $M_{m,n}(R)$ is a right $M_n(R)$-module where the action of $R$
+  on $M$ is by matrix multiplication from the right.
+\end{example}
+
+\begin{example}
+  Let $R$ be a ring.
+  Then $R$ is a left (equivalently, right) $R$-module where the action of $R$
+  on $R$ is by left (equivalently, right) multiplication.
+  We usually write $_R R$ (equivalently $R_R$) to indicate that we view
+  $_R R$ as a left module (equivalently, right).
+  The left (equivalently, right) ideals of $R$ are the left (equivalently, right) submodules
+  of $_R R$ (equivalently, $R_R$).
+\end{example}
+
+\begin{remark}
+  Many definitions, constructions, and theorems about abelian groups have
+  natural counterparts in the theory of modules.
+\end{remark}
+
+\begin{definition}
+  Let $R$ be a ring.
+  \begin{enumerate}
+    \item[(1)] A $R$-homomorphism from a left $R$-module $M$
+      to a left $R$-module $N$ is a group homomorphism $\alpha \colon M \to N$
+      such that for every $r \in R$ and every $m \in M$
+      we have that $\alpha(rm) = r \alpha(m)$.
+    \item[(2)] A submodule of a left $R$-module $M$ is a subgroup
+      $L \leqslant M$ such that for every $r \in R$ and every $m \in L$
+      we have that $rm \in L$.
+    \item[(3)] Let $L$ be a submodule of a left $R$-module $M$.
+      The quotient group $M/L$ inherits a structure of a left $R$-module
+      by the rule ``for every $r \in R$ and every $m + L \in M/L$
+      we define $r(m + L) := rm + L$''.
+  \end{enumerate}
+\end{definition}
+
+\begin{example} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Let $M$ be an abelian group and view it as a $\Z$-module.
+      Every subgroup of $M$ is a submodule.
+    \item[(2)] Let $R$ be a ring. The submodules of $R_R$ are the right ideals
+      of $R$.
+  \end{enumerate}
+\end{example}
+
+\begin{exercise}
+  Let $R$ be a ring and $\alpha \colon M \to N$ be a homomorphism of left (right)
+  $R$-modules.
+  Prove that $\ker \alpha$ and $\im \alpha$ are left (right) submodules of $M$
+  and $N$ respectively.
+\end{exercise}
+
+\begin{exercise}
+  State and prove the isomorphism theorems for modules.
+\end{exercise}
+
+\begin{definition}[Direct product]
+  Let $R$ be a ring.
+  Let $(M_i)_{i \in I}$ be an indexed family of left $R$-modules.
+  The direct product of $(M_i)_{i \in I}$, denoted by $\prod_{i \in I} M_i$,
+  is the left $R$-module whose underlying group is the direct product
+  of the underlying groups of each of the $M_i$s,
+  and the action of $R$ is the pointwise actions.
+  More explicitly:
+  \begin{enumerate}
+    \item[(1)] The elements of $\prod_{i \in I} M_i$
+      are functions $f \colon I \to \cup_{i \in I} M_i$ such that
+      for every $i \in I$ we have $f(i) \in M_i$.
+    \item[(2)] For every $f,g \in \prod_{i \in I} M_i$, the sum $f + g$
+      is defined by the pointwise sum $(f + g)(i) := f(i) + g(i)$.
+    \item[(3)] For every $r \in R$ and $f \in \prod_{i \in I} M_i$,
+      the product $r \cdot f$ is defined by $(r \cdot f)(i) = r \cdot f(i)$
+      for evert $i \in I$.
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}[Direct sum]
+  Let $(M_i)_{i \in I}$ be an indexed family of left $R$-modules.
+  The direct sum of the $M_i$s denoted by $\oplus_{i \in I} M_i$,
+  is the submodule of $\prod_{i \in I} M_i$ consisting of the elements
+  $f$ with finite support, i.e., the elements $f \in \prod_{i \in I} M_i$
+  for which the set $\{i \in I \mid f(i) \neq 0\}$ is finite.
+\end{definition}
+
+\begin{remark}
+  We remind that all of the above (and below) 
+  definitions, theorems, and exercises
+  have counterparts with right $R$-modules.
+\end{remark}
+
+\begin{exercise}
+  Let $R$ be a ring and $M$ a left or right $R$-module.
+  Prove that an intersection of (possibly infinitely many) submodules of $M$
+  is a submodule of $M$.
+\end{exercise}
+
+\begin{definition}[Generated submodule]
+  Let $X$ be a subset of $M$.
+  The submodule of $M$ generated by $X$ is the intersection of all submodules
+  of $M$ that contain $X$.
+\end{definition}
+
+\begin{definition}[Sum of submodules]
+  Let $\{N_i \mid i \in I\}$ be a set consisting of submodules of $M$.
+  We denote by $\sum_{i \in I} N_i$ the submodule of $M$
+  generated by $\cup_{i \in I} N_i$.
+\end{definition}
+
+\begin{exercise}
+  Let $R$ be a ring, and let $M$ be a left or right $R$-module.
+  Prove that the submodule generated by $X$ consists of the $R$-linear
+  finite sums of elements of $X$ (where the empty sum is defined to be
+  equal to zero).
+\end{exercise}
+
+\begin{definition}
+  Let $R$ be a ring, and let $M$ be a left or right $R$-module.
+  We define $\End_R(M)$ to be the subring of $\End(M)$ consisting of the
+  $R$-homomorphisms.
+\end{definition}
+
+\begin{exercise}
+  Let $R$ be a commutative ring and $M$ an $R$-module.
+  Prove that for every $r \in R$ and every $f \in \End_R(M)$,
+  the function $rf \colon M \to M$ defined by $(rf)(m) := r(f(m))$
+  belongs to $\End_R(M)$.
+  Deduce that in this case, $\End_R(M)$ carries the structure of an $R$-module.
+\end{exercise}
+
+\begin{definition}[Noetherian ring]
+  Let $R$ be a ring, and let $M$ be a left or right module.
+  The module $M$ is called Noetherian (respectively Artinian)
+  if there is no infinite and strictly increasing (respectively, decreasing)
+  chain of submodules of $M$.
+\end{definition}
+
+\begin{example}
+  $\Z_\Z$ is a Noetherian $\Z$-module which is not Artinian.
+\end{example}
+
+\begin{example}
+  \label{ex:prufer}
+  Let $p$ be a prime number.
+  Then $\Z[1/p]/\Z = \{a/p^n \mid a \in \Z \stand n \in \N\}/\Z$
+  is an Artinian $\Z$-module which is not Noetherian.
+\end{example}
+
+\begin{remark}
+  The group $\Z[1/p]/\Z$ is known as a Pr\"ufer group,
+  and is usually denoted by $\Z(p^{\infty})$.
+  It is worth taking the time to understand its structure,
+  and why the claim in \Cref{ex:prufer} holds.
+\end{remark}
+
+\subsection{Simple and semisimple modules}
+
+\begin{definition}[Simple module]
+  Let $R$ be a ring.
+  A left or right $R$-module $M$ is called simple if $M$ is not the zero
+  module and the only submodules of $M$ are $0$ and $M$.
+\end{definition}
+
+\begin{example}
+  A finite abelian group is a simple module over $\Z$ if and only if it is
+  of a prime order.
+\end{example}
+
+\begin{example}
+  Let $n,m \geq 1$ and $\mathbb F$ be a field.
+  Then $M_{n \times m}(\mathbb F)$ is a simple left $M_n(R)$-module
+  if and only if $m = 1$.
+\end{example}
+
+\begin{example}
+  Let $R$ be a nonzero ring.
+  Then $R_R$ is a simple right $R$-module if and only if the right ideals
+  of $R$ are the zero ideal and $R$ itself.
+\end{example}
+
+\begin{exercise}[Characterization of simple modules]
+  Let $R$ be a ring.
+  For a nonzero right $R$-module $M$,
+  show that the following conditions are equivalent:
+  \begin{enumerate}
+    \item[(1)] $M$ is simple.
+    \item[(2)] $mR = M$ for all nonzero $m \in M$.
+    \item[(3)] $M \cong R_R/I$ for some maximal right ideal $I$ of $R$.
+  \end{enumerate}
+\end{exercise}
+
+\begin{lemma}[Schur's lemma]
+  Let $M$ and $N$ be right $R$-modules,
+  and let $\rho \colon M \to N$ be a nonzero homomorphism.
+  Then:
+  \begin{enumerate}
+    \item[(1)] If $M$ is simple, then $\rho$ is injective.
+    \item[(2)] If $N$ is simple, then $\rho$ is surjective.
+    \item[(3)] If $M$ and $N$ are simple right $R$-modules,
+      then either $M \cong N$ or $\Hom_R(M,N) = 0$.
+    \item[(4)] If $M$ is simple, then $\End_R(M)$ is a division ring.
+  \end{enumerate}
+\end{lemma}
+
+\begin{remark}
+  Recall that a division ring is a ring in which division is well defined for nonzero
+  elements.
+  A commutative division ring is a field.
+  As a fun fact, Wedderburn's little theorem asserts that all finite division rings
+  are commutative and therefore finite fields.
+\end{remark}
+
+\begin{definition}[Composition series]
+  Let $R$ be a ring and $M$ be a left or right $R$-module.
+  An increasing chain of submodules
+  $0 = M_0 \subsetneq M_1 \subsetneq \cdots \subsetneq M_{n-1} \subsetneq M_n = M$ 
+  of $M$ is called a composition series of $M$ if for every $0 \le i < n$,
+  the $R$-module $M_{i+1}/M_i$ is simple.
+  The factor modules are called the composition modules of $M$.
+\end{definition}
+
+\begin{example}
+  The $\Z$-module $\Z_{\Z}$ does not have a composition series.
+\end{example}
+
+\begin{example}
+  For every natural number $n \geq 2$ denote $\overline \Z_n := \Z/n\Z$.
+  The series $0 \subsetneq 4 \overline \Z_{12} \subsetneq 2 \overline \Z_{12} \subsetneq
+  \overline \Z_{12}$ and
+  $0 \subsetneq 6 \overline \Z_{12} \subsetneq 3 \overline \Z_{12} \subsetneq
+  \overline \Z_{12}$ are both composition series for the $\Z$-module $\overline \Z_{12}$.
+  The composition factors of the above two series consist of two simple modules isomorphic
+  to $\overline \Z_{2}$ and one simple module isomorphic to $\overline \Z_{3}$.
+  The fact that the composition factors are identical in both series is not a coincidence.
+\end{example}
+
+\begin{exercise}
+  Prove that $M$ has a composition series if and only if it is Noetherian
+  and also Artinian.
+\end{exercise}
+
+\begin{exercise}
+  Prove that Jordan--H\"older theorem:
+  If $M$ has a composition series then, up to isomorphism,
+  the composition factors and their multiplicity are the same for each
+  composition series.
+\end{exercise}
+
+\begin{definition}[Semisimple module]
+  A right or left $R$-module $M$ is called a semisimple module if it is isomorphic
+  to a direct sum of simple modules.
+\end{definition}
+
+\begin{example}
+  Let $p_1,\dots,p_k$ be prime numbers and denote $n := p_1 \cdots p_k$.
+  Then $\Z/n\Z$ is a semisimple $\Z$-module if and only if $p_1,\dots,p_k$
+  are distinct.
+\end{example}
+
+\begin{definition}[Internal direct sum]
+  Let $R$ be a ring and $M$ a right or left $R$-module.
+  Let $(M_i)_{i \in I}$ be an indexed collection of submodules of $M$.
+  Let $\alpha \colon \oplus_{i \in I} M_i \to \sum_{i \in I} M_i$
+  be the $R$-homomorphism defined by $\alpha(f) := \sum_{i \in I} f(i)$
+  for every $f \in \oplus_{i \in I} M_i$.
+  We say that $\sum_{i \in I} M_i$ is an internal direct sum of the indexes
+  collection $(M_i)_{i \in I}$ if $\alpha$ is an isomorphism onto $\sum_{i \in I} M_i$.
+\end{definition}
+
+\begin{example}
+  The Euclidean plane $M = \R^2$ viewed as an $R$-module is an internal direct sum
+  of the submodules $M_1 = \{(x,0) \mid x \in \R\}$ and $M_2 = \{(0,y) \mid y \in \R\}$.
+  Indeed, the map $\alpha \colon M_1 \oplus M_2 \to \sum_{i=1}^{2} M_i$ 
+  given by $\alpha((x,0),(0,y)) = (x,0) + (0,y) = (x,y)$ is an isomorphism.
+\end{example}
+
+\begin{example}
+  Any polynomial ring $k[x]$ viewed as a module over $K$ is an internal direct sum
+  of the submodules $M_{\even} = \{p \in k[x] \mid p \text{ only contains even powers
+  of } x\}$ and $M_{\odd} = \{p \in k[x] \mid p \text{ only contains odd powers
+  of } x\}$.
+  In that case $\alpha$ is clearly an isomorphism since each polynomial can be uniquely
+  decomposed into the sum of the element of each of these modules.
+\end{example}
+
+\begin{example}
+  The matrix algebra $M_n(\R)$ viewed as an $\R$-module is an internal
+  direct sum of the submodules $M_{\mathrm{sym}}$ and $M_{\mathrm{skew}}$
+  of symmetric and skew-symmetric matrices by the famous decomposition result
+  we have seen in linear algebra.
+\end{example}
+
+\begin{remark}
+  If $\sum_{i \in I} M_i$ is an internal direct sum,
+  we may use the notation $\ioplus_{i \in I} M_i = \sum_{i \in I} M_i$,
+  or write $\sum_{i \in I} M_i \overset{\text{int}}{\cong} \oplus_{i \in I} M_i$.
+\end{remark}
+
+\begin{lemma}
+  \label{lem:ioplus-lemma}
+  Let $R$ be a ring, let $M$ be a left or right $R$-module.
+  Let $N$ and $L$ be submodules of $M$.
+  Then:
+  \begin{enumerate}
+    \item[(1)] $L + N \overset{\text{int}}{\cong} L \oplus N$ if and only if
+      $L \cap N = 0$.
+    \item[(2)] If $L$ is simple then $L + N \overset{\text{int}}{\cong} L \oplus N$
+      if and only if $L$ is not contained in $N$.
+  \end{enumerate}
+\end{lemma}
+\begin{proof} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Let $\rho \colon L \oplus N \to L + N$ be the $R$-homomorphism defined by
+      $\rho((\ell,n)) = \ell + n$.
+      The $R$-homomorphism $\rho$ is always onto, so we only have to check when it is
+      injective.
+      For every $(\ell,n) \in L \oplus N$, we have that $(\ell,n) \in \ker \rho$
+      if and only if $\ell + n = 0$ or equivalently $\ell = -n \in L \cap N$.
+      It follows that $\ker \rho = 0$ if and only if $L \cap N = 0$.
+    \item[(2)] Since $L$ is simple and $L \cap N$ is a submodule of $L$,
+      by definition of the simple module either $L \cap N = 0$
+      or $L \cap N = L$.
+      By $(1)$, the former holds if and only if
+      $L + N \overset{\text{int}}{\cong} L \oplus N$.
+      The latter possibility holds if and only if $L \subseteq N$.
+      This completes the proof.
+  \end{enumerate}
+\end{proof}
+
+\begin{remark}
+  Part $(1)$ of \Cref{lem:ioplus-lemma} holds even in the case of an infinite
+  sums.
+\end{remark}
+
+\begin{definition}[Complemented module]
+  Let $R$ be a ring and $M$ a left or right $R$-module.
+  Then $M$ is called complemented if for every submodule $N$ of $M$
+  there exists a submodule $L$ such that $M = N \ioplus L$.
+\end{definition}
+
+\begin{proposition}[Properties of complemented modules]
+  \label{prop:properties-of-complemented-modules}
+  Let $R$ be a ring and $M$ a left or right complemented $R$-module.
+  Then:
+  \begin{enumerate}
+    \item[(1)] Every submodule of $M$ is complemented.
+    \item[(2)] If $M \neq 0$ then $M$ contains a simple submodule.
+    \item[(3)] $M$ is generated by its simple submodules.
+  \end{enumerate}
+\end{proposition}
+\begin{proof} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Let $N$ be a submodule of $M$ and $L$ a submodule of $N$.
+      We have to show that there exists a submodule $K$ of $N$ such that
+      $N = L \ioplus K$.
+      Since $M$ is complemented, there exists a submodule $E$ of $M$
+      such that $M = N \ioplus E$.
+      It follows by \Cref{lem:ioplus-lemma} that $L + E = L \ioplus E$,
+      which is a submodule of $M$.
+      Since $M$ is complemented, there exists a submodule $D$ of $M$
+      such that $M = D \ioplus (L \ioplus E)$.
+      Since $L \subseteq N$, we get that:
+      \[
+        N =
+        N \cap M =
+        N \cap (D \ioplus (L \ioplus E)) =
+        N \cap (L \ioplus (D \ioplus E)) =
+        L \ioplus (N \cap (D \ioplus E)),
+      \]
+      where the second to last transition is commutativity of the direct sum,
+      and the last transition is the modular property of the lattice of submodules
+      (see \Cref{ssec:lattices}).
+      Hence, we can take $K := N \cap (D \ioplus E)$,
+      which completes the proof.
+    \item[(2)] Assume that $M \neq 0$ and choose some nonzero $m \in M$.
+      By Zorn's lemma, there exists a submodule $N$ of $M$ which is maximal
+      with respect to the property that it does not contain $m$.
+      Since $m \notin N$, we get that $M \neq N$.
+      Since $M$ is complemented, there exists a submodule $L$ of $M$
+      such that $M = L \ioplus N$.
+      We claim that $L$ is simple.
+      Assume, by way of contradiction, that $L$ is not simple.
+      Since $L$ is complemented (by $(1)$),
+      there exist nonzero submodules $L_1$ and $L_2$ of $L$ such that
+      $L = L_1 \ioplus L_2$.
+      It follows that:
+      \[
+        (L_1 \ioplus N) \cap
+        (L_2 \ioplus N) = N,
+      \]
+      so $m \notin (L_1 \ioplus N) \cap (L_2 \ioplus N)$.
+      Thus, either $m \notin (L_1 \ioplus N)$
+      or $m \notin (L_2 \ioplus N)$.
+      Since $L_1$ and $L_2$ are nonzero, we get a contradiction to the maximality
+      of $N$ with respect to the property of not containing $m$.
+    \item[(3)] If $M = 0$ then $M$ is semisimple (this completes the proof).
+      Assume that $M \neq 0$.
+      Let $N$ be the submodule of $M$ which is generated by all simple
+      submodules of $M$.
+      Assume, by way of contradiction, that $M \neq N$.
+      Since $M$ is complemented, there exists a nonzero submodule $L$
+      of $M$ such that $M = L \ioplus N$.
+      By $(1)$ we get that $L$ is complemented,
+      and by $(2)$ we get that $L$ contains a simple submodule $K$.
+      By the definition of $N$, we must have $K \subseteq N \cap L = 0$,
+      which is a contradiction (recall a simple submodule is nonzero).
+  \end{enumerate}
+\end{proof}
+
+\begin{remark}
+  Note that the zero module is a semisimple but not simple.
+\end{remark}
+
+\begin{theorem}[Characterization of semisimple modules]
+  Let $R$ be a ring and $M$ a left or right $R$-module.
+  Then the following conditions are equivalent:
+  \begin{enumerate}
+    \item[(1)] $M$ is semisimple.
+    \item[(2)] $M$ is an internal direct sum of some simple submodules of it.
+    \item[(3)] $M = \sum_{i \in I} M_i$ where $\{M_i \mid i \in I\}$
+      is the set of simple submodules of $M$.
+    \item[(4)] $M$ is complemented.
+  \end{enumerate}
+\end{theorem}
+\begin{proof}
+  We can assume that $M \neq 0$ (because in that case the statement is trivial).
+  The implications $(1) \implies (2) \implies (3)$ are clear.
+  We will now show $(3) \implies (4)$.
+  Let $N$ be a submodule of $M$.
+  Define:
+    $T := \{J \subseteq I \mid
+      N + \sum_{i \in I} M_i \overset{\text{int}}{\cong}
+      N \oplus (\oplus_{i \in I} M_i)\}$.
+  $T$ is not empty since $\emptyset \in T$.
+  Moreover, $T$ is closed to the union of ascending chains of sets in $T$.
+  Thus we can apply Zorn's lemma and get that there exists a maximal
+  element $J \in T$ with respect to inclusion.
+  It is now enough to show that $M = N \ioplus (\ioplus_{i \in I} M_i)$,
+  since them $M$ is complemented which completes the proof.
+  Assume otherwise.
+  By $(3)$, there exists $j \in I$ such that $N_j$ is not contained in
+  $N \ioplus (\ioplus_{i \in I} M_i)$,
+  in particular, $j \notin J$.
+  \Cref{lem:ioplus-lemma} implies that:
+  \[
+    N = \sum_{i \in J \cup \set{j}} M_i =
+    (N \ioplus (\ioplus_{i \in J \cup \set{j}} M_i)) \ioplus N_j =
+    N \ioplus (\ioplus_{i \in J \cup \set{j}} M_i),
+  \]
+  in contradiction to the maximality of $J$.
+  This contradiction completes the proof of the implication $(3) \implies (4)$.
+  Note that in the proof of $(3) \implies (4)$, if we choose $N = 0$,
+  then we have shown that $M = \ioplus_{i \in I} M_i$,
+  which means that $M$ is semisimple hence the implication $(3) \implies (1)$
+  is now proved.
+  We now have the implications $(1) \iff (2) \iff (3) \implies (4)$,
+  but the implication $(4) \implies (3)$ follows from
+  \Cref{prop:properties-of-complemented-modules}.
+\end{proof}
+
+\begin{corollary}
+  A submodule of a semisimple module is semisimple.
+\end{corollary}
+\begin{proof}
+  This follows immediately from the characterization of semisimple modules as
+  complemented modules.
+  Since any submodule of a complemented module is itself complemented,
+  the proof is complete.
+\end{proof}
+
+\begin{exercise}
+  Let $M$ be a semisimple module.
+  Then the following are equivalent:
+  \begin{enumerate}
+    \item[(1)] $M$ is Artinian.
+    \item[(2)] $M$ is Noetherian.
+    \item[(3)] $M$ is isomorphic to a finite direct sum of simple modules.
+  \end{enumerate}
+\end{exercise}
+
+\begin{remark}
+  From now on we mainly use the term ``semisimple module'' and not the term
+  ``complemented module'',
+  since they are the same thing.
+\end{remark}
+
+\subsection{Lattices*}
+\label{ssec:lattices}
+This subsection is outside the scope of the course,
+but since we have use the modular property of the lattice of submodules
+in \Cref{prop:properties-of-complemented-modules},
+we might as well learn about it.
+
+\begin{definition}[Lattice, as a poset]
+  \label{def:lattice-poset}
+  A partially order set $(L,\le)$ is called a lattice if any pair of elements $\set{a,b}$
+  has a unique join (least upper bound) and a unique meet (greatest lower bound).
+\end{definition}
+
+\begin{remark}
+  The join of $a$ and $b$ is denoted by $a \join b$ and $a \meet b$.
+  We will soon show an example of a lattice,
+  think why both the names, and the notations make sense (think what are
+  the meet and the join in the lattice of subsets of $\R$ with respect to set
+  inclusion).
+\end{remark}
+
+\begin{example}
+  Consider the set of natural numbers where the order $a \le b$ is defined by
+  $a \mid b$ ($a$ divides $b$).
+  In this case, the join would be $a \join b = \lcm(a,b)$
+  and the meet would be $a \meet v = \gcd(a,b)$.
+\end{example}
+
+\begin{example}[Lattice of subgroups]
+  The subgroups of a group $G$ ordered by inclusion form a lattice,
+  in which case we have $H \meet K = H \cap K$
+  and $H \join K = \langle H \cup K \rangle$, for any two subgroups $H,K \leqslant G$.
+\end{example}
+
+\begin{example}[Lattice of submodules]
+  The submodules of a module $M$ ordered by inclusion form a lattice,
+  in which case we have $N \meet K = N \cap K$
+  and $N \join K = N + K$, for any two submodules $N$, $K$ of $M$.
+\end{example}
+
+\begin{example}[Lattice of ideals]
+  \label{ex:lattice-of-ideals}
+  Let $\mathcal I(R)$ be the set of all ideals of the ring $R$.
+  Under the partial order of set inclusion the bottom element
+  (denoted by $\bot$) is the zero ideal $\set{0}$,
+  and the top elements (denoted by $\top$) is the ring itself $R$.
+  The join of ideals is $I \join J = I + J$,
+  and the meet of ideals is $I \meet J = I \cap J$.
+\end{example}
+
+\begin{remark}
+  We can also view lattices as algebraic structures.
+\end{remark}
+
+\begin{definition}[Lattice]
+  \label{def:lattice-algebra}
+  A lattice is an algebraic structure $(L,\join,\meet)$, consisting of a set $L$,
+  and two binary, commutative and associative operations $\join$ and $\meet$ on $L$
+  which satisfy the following axioms (sometimes called absorption laws):
+  \[
+    a \join (a \meet b) = a \qquad
+    a \meet (a \join b) = a
+  \]
+\end{definition}
+
+\begin{remark}
+  From the axioms of the lattice follow the two ``idempotent laws'':
+  \[
+    a \join a = a \qquad a \meet a = a
+  \]
+  It also follows that both $(L,\join)$ and $(L,\meet)$ are semilattices
+  (semilattices are defined by the structure induced on these structures by
+  the bigger structure $(L,\join,\meet)$).
+\end{remark}
+
+\begin{exercise}
+  \label{ex:think}
+  Think why \Cref{def:lattice-poset} and \Cref{def:lattice-algebra} are equivalent
+  definitions.
+\end{exercise}
+
+\begin{remark}[Bounded lattice]
+  A bounded lattice is a lattice which has a top element, denoted by $1$ or $\top$,
+  and a bottom element, denoted by $0$ or $\bot$.
+  This makes $\mathcal I(R)$ (defined in \Cref{ex:lattice-of-ideals})
+  a bounded lattice.
+  Note that in bounded lattices the $0$ element is the identity element of the
+  join operation, and the $1$ element is the identity for the meet operation.
+  It can be shown that a partially ordered set is a bounded lattice if and only if
+  every finite set of elements (including the empty set) has a join and a meet.
+\end{remark}
+
+\begin{remark}[Complete lattice]
+  A poset is called a complete lattice if all its subsets have both a join and a meet.
+  Hence every complete lattice is a bounded lattice.
+\end{remark}
+
+\begin{definition}[Distributive lattice]
+  \label{def:distributive-lattice}
+  A lattice $(L,\meet,\join)$ is said to be a distributive lattice
+  if it satifies the following distributive axioms:
+  \[
+    a \join (b \meet c) = (a \join b) \meet (a \join c) \qquad
+    a \meet (b \join c) = (a \meet b) \join (a \meet c)
+  \]
+\end{definition}
+
+\begin{remark}
+  It turns out that each distributive law in \Cref{def:distributive-lattice}
+  implies the other.
+\end{remark}
+
+\begin{definition}[Modular lattice]
+  A modular lattice is a lattice $(L,\meet,\join)$ which satisfies the
+  modular law:
+  \[
+    a \le b \implies a \join (x \meet b) = (a \join x) \meet b,
+  \]
+  where $x,a,b$ are aribtrary elements in the lattice, $\le$
+  is the partial order (see \Cref{ex:think}).
+\end{definition}
+
+\begin{remark}
+  It turns out that the lattice of submodules of a module $M$ with respect
+  to set inclusion is a modular lattice that is not distributive.
+  In this case the modular property becomes:
+  \[
+    L \subseteq N \implies
+    L + (K \cap N) = (L + K) \cap N,
+  \]
+  where $L,N,K$ are clearly submodules of $M$.
+  By commutativity we get that:
+  \[
+    L \subseteq N \implies
+    L + (N \cap K) = N \cap (L + K),
+  \]
+  which is exactly what we used in \Cref{prop:properties-of-complemented-modules}.
+\end{remark}
+
+\newpage
+
+\section{Wedderburn structure theorem}
+
+\begin{definition}[The $\alpha$ map setting]
+Let $n \geq 2$, let $R$ be a ring, and let $M_1,\dots,M_n$
+be right $R$-modules.
+Let $M = \oplus_{i=1}^{n} M_i$,
+and let $\rho_i \colon M_i \to M$ be the inclusions,
+and $\pi_i \colon M \to M_i$ be the projections.
+Moreover,
+denote $\alpha_{i,j} := \pi_i \circ \alpha \circ \rho_j \in \Hom_R(M_j,M_i)$.
+For $\alpha \in \End_R(M)$ and $\overline m \in M$ denote:
+\[
+  \alpha(\overline m) :=
+  (\alpha_{i,j})_{1 \le i,j \le n}
+  \begin{pmatrix}
+    m_1 \\ \vdots \\ m_n
+  \end{pmatrix} :=
+  \begin{pmatrix}
+    \sum_{j=1}^{n} \alpha_{1,j}(m_j) \\
+    \vdots \\
+    \sum_{j=1}^{n} \alpha_{n,j}(m_j)
+  \end{pmatrix}
+\]
+Note the analogy with ordinary matrix-vector multiplication,
+where the entries $\alpha_{i,j}$ are maps applied to the components $m_j$.
+For $\alpha,\beta \in \End_R(M)$ denote:
+\[
+  (\alpha \circ \beta)_{1 \le i,j \le n} :=
+  \sum_{k=1}^{n} \alpha_{i,k} \circ \beta_{k,j},
+\]
+which is analogous to matrix multiplication.
+Conversely, for every $1 \le i,j \le n$ let $\gamma_{i,j} \in \Hom_R(M_j,M_i)$.
+We can then define a map $\alpha \colon M \to M$ by:
+for every $\overline m = (m_1,\dots,m_n)^T \in M$,
+\[
+  \alpha(\overline m) :=
+  \begin{pmatrix}
+    \sum_{j=1}^{n} \gamma_{1,j}(m_j) \\
+    \vdots \\
+    \sum_{j=1}^{n} \gamma_{n,j}(m_j)
+  \end{pmatrix}.
+\]
+The map $\alpha$ is an $R$-endomorphism of $M$ and for every $1 \le i,j \le n$
+we have $\alpha_{i,j} = \gamma_{i,j}$.
+Let $E$ be the set of $n \times n$ matrices $X$ such that for every
+$1 \le i, j \le n$, we have:
+\[
+  X_{i,j} \in \Hom(M_j,M_i).
+\]
+Let $\psi \colon \End_R(M) \to E$ be the map defined by:
+for every $\alpha \in \End_R(M)$, we have:
+\[
+  \psi(\alpha) := (\alpha_{i,j})_{1 \le i,j \le n}.
+\]
+The map $\psi$ is an isomorphism of rings, where $E$ is endowed with matrix-like
+operations:
+\begin{itemize}
+  \item Addition is defined as follows: for every $1 \le i,j \le n$
+    and all elements $\alpha = (\alpha_{i,j})_{1 \le i,j \le n}$
+    and $\beta = (\beta_{i,j})_{1 \le i,j \le n}$ of $E$,
+    then:
+    \[
+      (\alpha + \beta)_{i,j} := \alpha_{i,j} + \beta_{i,j}.
+    \]
+  \item Multiplication is defined as follows: for every $1 \le i,j \le n$
+    and all elements $\alpha = (\alpha_{i,j})_{1 \le i,j \le n}$
+    and $\beta = (\beta_{i,j})_{1 \le i,j \le n}$ of $E$,
+    then:
+    \[
+      (\alpha \beta)_{i,j} :=
+      \sum_{k=1}^{n} \alpha_{i,k} \circ \beta_{k,j}.
+    \]
+\end{itemize}
+\end{definition}
+
+\begin{corollary}
+  Let $M$ be an Artinian semisimple right $R$-module.
+  Then:
+  \[
+    \End_R(M) \cong
+    M_{n_1}(D_1) \times \cdots \times M_{n_k}(D_k).
+  \]
+\end{corollary}
+\begin{proof}
+  Since $M$ is semisimple and Artinian:
+  \[
+    M \cong \bigoplus_{i=1}^{k} M_i^{n_i},
+  \]
+  with simple and pairwise nonisomorphic modules
+  (if the sum were infinite we could show $M$ is not Artinian
+  by considering less and less coordinates).
+  By Schur's lemma, $D_i := \End_R(M_i)$ is a division algebra,
+  and for every $1 \le i \neq j \le n$, we have $\Hom_R(M_j,M_i) = 0$.
+  Using the matrix description, we get that:
+  \[
+    \End_R(M) \cong
+    M_{n_1}(D_1) \times \cdots \times M_{n_k}(D_k).
+  \]
+\end{proof}
+
+\begin{definition}[Simple ring]
+  A nonzero ring $R$ is called simple if $R$ and $0$ are the only two-sided
+  ideals.
+\end{definition}
+
+\begin{example}
+  A division ring is a simple ring.
+\end{example}
+
+\begin{example}
+  We claim that if $R$ is a simple ring then $M_n(R)$ is a simple ring.
+  \begin{enumerate}
+    \item[(1)] We have to show that for every nonzero $X \in M_n(R)$,
+      the two-sided ideal generated by $X$ is equal to $M_n(R)$.
+    \item[(2)] Let $X \in M_n(R)$ be a nonzero element and fix $1 \le k,j \le n$
+      such that $x := X_{k,l} \neq 0$.
+    \item[(3)] For every $1 \le i,j \le n$ and every $t \in R$,
+      let $e_{i,j}(t)$ be the matrix with $t$ on the $(i,j)$th entry
+      and $0$ elsewhere.
+    \item[(4)] In order to finish the proof,
+      it is enough to show that for every $1 \le i, j \le n$,
+      we have that $e_{i,j}(1)$ belongs to the two sided ideal generated by $X$.
+    \item[(5)]
+      Since $R$ is a simple ring there exist $r_1,s_1,\dots,r_m,s_m \in R$
+      such that:
+      \[
+        1 = r_1 x s_1 + \cdots + r_m x s_m \implies
+        e_{i,j}(1) =
+        e_{i,k}(r_1) X e_{l,j}(s_1) + \cdots +
+        e_{i,k}(r_m) X e_{l,j}(s_m),
+      \]
+      and this completes the proof.
+  \end{enumerate}
+\end{example}
+
+\begin{exercise}
+  \label{ex:simplicity-in-infinite-dimensions}
+  Let $D$ be a field and $V$ an $\aleph_0$-dimensional $D$-module.
+  Prove that:
+  \begin{enumerate}
+    \item[(1)] The set
+    $I := \set{\alpha \in \End_D(V) \mid \dim(\im \alpha) < \infty}$
+    is a nonzero proper two sided ideal of the space $E := \End_D(V)$.
+    \item[(2)] $R := E/I$ is a simple ring.
+    \item[(3)] $R_R$ does not contain a simple $R$-module.
+  \end{enumerate}
+\end{exercise}
+\begin{proof} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Note that a modules over a field is a vector space.
+      Let $\alpha \in \End_D(V)$ be an endomorphism which projects
+      onto a $1$ dimensional subspace of $V$.
+      Since $\dim \im \alpha = 1 < \infty$ we have $\alpha \in I$
+      hence $I \neq \emptyset$.
+
+      Let $\alpha \in I$ and $\beta,\gamma \in E$.
+      We have that $\im(\alpha \circ \beta) \subseteq \im(\alpha)$
+      hence $\dim(\alpha \circ \beta) < \infty$
+      and so $\alpha \circ \beta \in I$.
+      We also have that $\im(\gamma \circ \alpha) = \gamma(\im \alpha)$,
+      and since $\dim(\im \alpha) < \infty$, and $\gamma$
+      is a linear map, we get that $\dim(\gamma \circ \alpha) < \infty$
+      and hence $\gamma \circ \alpha \in I$.
+      
+      Additionally, $I$ is additively closed since
+      $\im(\alpha + \beta) \subseteq \im \alpha + \im \beta$.
+
+      The ideal $I$ is proper since $\dim(\id_V) = \aleph_0$
+      hence $\id_V \notin V$.
+    \item[(2)] By the correspondence theorem we must show that any ideal
+      $J \supsetneq I$ in $E$ must be equal to $E$.
+      Let $\alpha \in J \setminus I$,
+      then $\dim \im \alpha = \aleph_0$,
+      hence there exists some subspace $U \subseteq V$ such that the restriction
+      $\alpha \mid_U \colon U \to \im \alpha$ is an isomorphism,
+      hence $\dim U = \aleph_0$.
+      Note that by the above claims, we have that
+      there exist isomorphisms $\phi \colon V \to U$
+      and $\psi \colon \im \alpha \to V$.
+      Note that we have that:
+      \[
+        (\psi \circ P) \circ \alpha \circ \phi = \id_V,
+      \]
+      where $P \colon V \to \im \alpha$ is the projection map.
+      Since both $\psi \circ P$ and $\phi$ are elements in $E$,
+      we get that $\id_V \in \langle \alpha \rangle \subseteq J$,
+      hence $J = E$, which completes the proof.
+    \item[(3)] A simple submodule of $R_R$ corresponds to a minimal
+      right ideal of $R$.
+      We know from $(2)$ that $R$ has no nontrivial two sided ideals,
+      but since it tells us nothing about the existence of right ideals,
+      we have to do the work.
+
+      Let $0 \neq \alpha \in R = E/I$ meaning $\im \alpha = \aleph_0$.
+      Let $\im \alpha = W_1 \oplus W_2$
+      so that $\dim W_1 = \dim W_2 = \aleph_0$.
+      Let $\beta$ be the projection of $\alpha$ onto $W_1$,
+      so that $\dim \im \beta = \dim W_1 = \aleph_0$ hence $0 \neq \beta \in R$.
+      The inclusion $\beta R \subseteq \alpha R$ is obvious,
+      and the inclusion is strict since $\alpha \notin \beta R$
+      (because by construction we would get $\dim W_2 < \aleph_0$).
+      This implies that there is not minimal right ideal in $R$,
+      hence $R_R$ has no simple submodules.
+  \end{enumerate}
+\end{proof}
+
+\begin{exercise}
+  Let $n \geq 1$ and $D$ be a division ring.
+  View the elements of $D^n$ as rows of elements in $R$.
+  Prove that:
+  \begin{enumerate}
+    \item[(1)] $D^n$ is a simple right $M_n(D)$-module.
+    \item[(2)] $\End_{M_n(D)}(D^n) \cong D$.
+    \item[(3)] $\dim_{\End_{M_n(D)}(D^n)}(D^n) = n$.
+  \end{enumerate}
+\end{exercise}
+\begin{proof} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Let $0 \neq v \in D^n$.
+      We must show that $v \cdot M_n(D) = D^n$.
+      Since $D$ is a division ring, the conclusion is trivial.
+    \item[(2)] 
+    \item[(3)] 
+  \end{enumerate}
+\end{proof}
+
+\begin{lemma}
+  \label{lemma:submodules-of-rR-for-simple-R}
+  Let $R$ be a simple ring.
+  If $R_R$ contains a simple right submodule $M$ (equivalently, left),
+  then all the simple submodules of $R_R$ are isomorphic to $M$ and $R_R$
+  (equivalently, $_R R$) is semisimple.
+\end{lemma}
+\begin{proof}
+  For every $r \in R$ we know that $rM$ is a submodule of $R_R$.
+  If $rM \neq 0$, then the map $x \mapsto rx$ is a nonzero $R$-homomorphism
+  from the simple right $R$-module $M$ onto the right $R$-module $rM$
+  so it must be an isomorphism.
+  Since $\sum_{r \in R} rM$ is a nonzero two sided ideal of the simple ring $R$,
+  it must be equal to $R$.
+  Thus, $R_R$ is an inner direct sum of the simple submodules isomorphic to $M$.
+  In particular, $R$ is semisimple and every sime submodule of $R_R$ is
+  isomorphic to $M$.
+\end{proof}
+
+\begin{definition}[$\rho$-isomorphism]
+  Let $\rho \colon R \to S$ be an isomorphism of rings.
+  Let $M$ be a right $R$-module and $N$ a right $S$-module.
+  \begin{enumerate}
+    \item[(1)] A bijective map $\psi \colon M \to N$ is called a
+      $\rho$-isomorphism if for every $r \in R$ and $m \in M$,
+      we have that $\psi(mr) = \psi(m) \rho(r)$.
+    \item[(2)] We say that $M$ and $N$ are $\rho$-isomorphic if there exists
+      a $\rho$-isomorphism between them.
+  \end{enumerate}
+\end{definition}
+
+\begin{remark}
+  Let $\rho \colon R \to S$ be an isomorphism of rings,
+  and $\psi \colon M \to N$ a $\rho$-isomorphism of right modules.
+  The map $\overline \psi \colon \End_R(M) \to \End_S(N)$ defined by
+  $\overline \psi(\alpha) := \psi \circ \alpha \circ \psi^{-1}$
+  for every $\alpha \in \End_R(M)$,
+  is an isomorphism of rings.
+  Moreover, $\psi$ is a $\overline \psi$-isomorphism from the left
+  $\End_R(M)$-module $M$ to the left $\End_S(N)$ module $N$.
+  Indeed, for every $\alpha \in \End_R(M)$ and every $m \in M$,
+  we have:
+  \[
+    \psi(\alpha(r)) =
+    \psi \circ \alpha \circ \psi^{-1}(\psi(m)) =
+    \overline(\alpha)(\psi(m)).
+  \]
+\end{remark}
+
+\begin{lemma}
+  \label{lem:matrices-over-division-rings-are-unique}
+  Let $n_1,n_2 \geq 2$ and $D_1$ and $D_2$ be division algebras.
+  If $M_{n_1}(D_1) \cong M_{n_2}(D_2)$ then $D_1 \cong D_2$
+  and $n_1 = n_2$.
+\end{lemma}
+\begin{proof}
+  Let $\rho \colon M_{n_1}(D_1) \to M_{n_2}(D_2)$ be an isomorphism.
+  For every $1 \le r \le 2$, we have that $M_{n_r}$ is a simple ring % why?
+  so:
+  \[
+    L_r := \set{X \in M_{n_r}(D_r) \mid (\forall 2 \le i \le n_r \stand
+    \forall 1 \le j \le n_r) X_{i,j} = 0}
+  \]
+  is a minimal right ideal of $M_{n_r}(D_r)$.
+  Since $M_{n_r}(D_r)$ is simple,
+  every minimal right ideal of $M_{n_r}(D_r)$ is isomorphic to $L_r$
+  as an $M_{n_r}(D_r)$-module.
+  Since $\psi$ sends a minimal right ideal of $M_{n_1}(D_1)$
+  to a minimal right ideal of $M_{n_2}(D_2)$,
+  we get that $L_1$ and $L_2$ are $\rho$-isomorphic,
+  % check if theres notation=^p
+  and:
+  \[
+    D_1 \cong
+    \End_{M_{n_1}(D_1)}(L_1) \cong
+    \End_{M_{n_2}(D_2)}(L_2) \cong
+    D_2.
+  \]
+  Let
+  $\overline \psi \colon \End_{M_{n_1}(D_1)}(L_1) \to \End_{M_{n_2}(D_2)}(L_2)$
+  be the isomorphism induced by $\psi$.
+  Since $L_1$ and $L_2$ are also $\overline \psi$-isomorphic:
+  \[
+    n_1 =
+    \dim_{\End_{M_{n_1}(D_1)}(L_1)}(L_1) =
+    \dim_{\End_{M_{n_2}(D_2)}(L_2)}(L_2) =
+    n_2,
+  \]
+  which completes the proof.
+\end{proof}
+
+\begin{example}
+  \Cref{lem:matrices-over-division-rings-are-unique} is false over
+  general rings.
+  For example, $M_4(\mathbb F) \cong M_2(M_2(\mathbb F))$.
+  %% explain.
+\end{example}
+
+\begin{lemma}
+  \label{lem:unique-factorization-of-product-modules}
+  Let $R_1,\dots,R_m$ and $S_1,\dots,S_n$ be simple rings and denote
+  $R := R_1 \times \cdots \times R_n$ and $S := S_1 \times \cdots \times S_n$,
+  and suppose that $R \cong S$.
+  Then $m = n$ and there exists a permutation $\sigma \in \Sym(n)$
+  such that for every $1 \le i \le m$,
+  the map $\psi$ induces an isomorphism of rings
+  $\overline \psi_i \colon R_i \to S_{\sigma(i)}$.
+\end{lemma}
+\begin{proof}
+  We can view $R$ (respectively, $S$) as an inner direct product of the $R_i$s
+  (respectively, of the $S_j$s).
+  In particular, we identify each $R_i$ (respectively, each $S_j$)
+  as a two sided ideal of $R$ (respectively, $S$).
+  Since each $R_i$ (respectively, each $S_j$)
+  is a simple ring,
+  the sets $X := \set{R_i \mid 1 \le i \le m}$
+  and $Y := \set{S_j \mid 1 \le j \le n}$ are the sets of minimal
+  two sided ideals of $R$ and $S$ respectively.
+  Moreover, $|X| = m$ and $|Y| = n$.
+  Since $\psi$ is an isomorphism of rings, $m = n$ and there exists
+  $\sigma \in \Sym(m)$ such that for every $1 \le i \le m$,
+  we have $R_i = S_{\sigma(i)}$. % is this wrong?
+  Let $1 \le i \le m$ and let $\overline \psi_i \colon R_i \to S_{\sigma(i)}$
+  be the map induced by $\psi$.
+  Since $\psi$ is a homomorphism of rings, $\overline \psi$ preserves
+  addition and multiplication.
+  It is left to show that for every $1 \le i \le m$,
+  we have $\beta_i(1_{R_i}) = 1_{S_{\sigma(i)}}$.
+  Since the $\beta_i$ respect multiplication and are surjective,
+  $\beta_i(1_{R_i})$ is an element of the ring $S_{\sigma(i)}$ such that
+  for every $s \in S_{\sigma(i)}$ we have $s \beta_i(1_{R_i}) = s$.
+  In particular, by taking $s := 1_{S_{\sigma(i)}}$ we get that:
+  \[
+    \beta_i(1_R) =
+    1_{S_{\sigma(i)}} \beta_i(1_{R_i}) =
+    1_{S_{\sigma(i)}},
+  \]
+  which completes the proof.
+\end{proof}
+
+\begin{corollary}
+  Let $m_1,\dots,m_r$ and $n_1,\dots,n_s$ be positive integers,
+  and let $D_1,\dots,D_r$ and $E_1,\dots,E_s$ be division algebras
+  such that:
+  \[
+    M_{m_1}(D_1) \times \cdots \times M_{m_r}(D_r) \cong
+    M_{n_1}(E_1) \times \cdots \times M_{n_s}(E_s).
+  \]
+  Then $r = s$ and there exists a permutation $\sigma \in \Sym(r)$
+  such that for every $1 \le i \le r$ we have $n_{\sigma(i)}$
+  and $D_i \cong E_{\sigma(i)}$.
+\end{corollary}
+\begin{proof}
+  Immediate by \Cref{lem:matrices-over-division-rings-are-unique}
+  and \Cref{lem:unique-factorization-of-product-modules}.
+\end{proof}
+
+\begin{definition}
+  A ring $R$ is called a right (equivalently, left)
+  Artinian/Noetherian/semisimple ring if
+  $R$ is Artinian/Noetherian/semisimple as a right (equivalently, left)
+  $R$-module.
+\end{definition}
+
+\begin{example}
+  Here are some claims based on the previous definition:
+  \begin{enumerate}
+    \item[(1)] The ring $\Z$ is not semisimple.
+    \item[(2)] The ring $R := \Z/6\Z$ is not simple.
+      It is semisimple since $R_R \cong \Z/2\Z \oplus \Z/3\Z$.
+    \item[(3)] In \Cref{ex:simplicity-in-infinite-dimensions},
+      we constructed a simple ring
+      that does not contain a minimal ideal.
+      It follows that this ring is not semisimple.
+    \item[(4)] For every $n \geq 1$ and any division ring $D$,
+      we have that $M_n(D)$ is right semisimple.
+      Indeed, as a right module it is isomorphic to a direct sum of $n$
+      copies of $D^n$ where there elements of $D^n$ are viewed as rows
+      and $M_n(D)$ act by multiplication from the right.
+    \item[(5)] Similarly, for every $n \geq 1$ and any division ring
+      $D$ we have that $M_n(D)$ is right semisimple.
+    \item[(6)] If $R_1,\dots,R_n$ are semisimple rings,
+      so is $R_1 \times \cdots \times R_n$. % prove this! <- Chen comment
+  \end{enumerate}
+\end{example}
+
+\begin{lemma} \phantom{}
+  \begin{enumerate}
+    \item[(1)] A right semisimple ring is right Artinian.
+    \item[(2)] A left semisimple ring is left Artinian.
+    \item[(3)] A simple ring is right (equivalently, left) semisimple
+      if and only if it is right (equivalently, left) Artinian.
+  \end{enumerate}
+\end{lemma}
+\begin{proof} \phantom{}
+  \begin{enumerate}
+    \item[(1)] The module $R_R$ is generated by its simple submodules.
+      In particular, there are finitely many simple submodules
+      $M_1,\dots,M_k$ such that $1_R \in \sum_{i=1}^{k} M_k$.
+      It follows that
+      $R = \set{1_R r \mid r \in R} \subseteq \sum_{i=1}^{k} M_k$.
+      Since $R_R$ is generated by finitely many simple submodules,
+      $R$ is right Artinian.
+    \item[(2)] Analogous to $(1)$.
+    \item[(3)] By $(1)$, if $R$ is semisimple it is Artinian.
+      Assume that $R$ is simple and Artinian.
+      Since $R$ is Artinian, $R_R$ contains a minimal submodule $M$.
+      This claim follows from \Cref{lemma:submodules-of-rR-for-simple-R}.
+  \end{enumerate}
+\end{proof}
+
+\begin{theorem}[Wedderburn structure theorem]
+  Let $R$ be a ring.
+  The following properties are equivalent:
+  \begin{enumerate}
+    \item[(1)] $R$ is a right semisimple ring.
+    \item[(2)] $R$ is a left semisimple ring.
+    \item[(3)] There exist positive integers $n_1,\dots,n_k$
+      and division algebras $D_1,\dots,D_k$ such that
+      $R \cong M_{n_1}(D_1) \times \cdots \times M_{n_k}(D_k)$.
+  \end{enumerate}
+  Moreover, if $(3)$ holds, then $n_1,\dots,n_k$ are unique and
+  $D_1,\dots,D_k$ are unique up to isomorphism.
+\end{theorem}
+\begin{proof}
+  
+\end{proof}
+
+\begin{corollary}
+  An Artinian simple ring is isomorphic to $M_n(D)$
+  for unique $n \geq 2$ and unique (up to isomorphism) division algebra $D$.
+\end{corollary}
+
+\begin{corollary}
+  There exists a simple ring which is not semisimple.
+\end{corollary}
+\begin{proof}
+  The ring $R = E/I$ defined in \Cref{ex:simplicity-in-infinite-dimensions}
+  is simple (as shown in part $(2)$ of the exercise),
+  but since it is shown in part $(3)$ that it is not Artinian,
+  it cannot satisfy condition $(3)$ in the Wedderburn structure theorem,
+  hence it cannot be semisimple.
+\end{proof}
+
+\newpage
+
+\section{Radicals}
+
+\begin{definition}[Radical of a module]
+  Let $R$ be a ring and $M$ be a left (or right) $R$-module.
+  The radical of $M$ is defined to be the intersection of all maximal
+  modules of $M$.
+  If none exist, then we define it to be $M$.
+\end{definition}
+
+\begin{remark}
+  We denote the radical of $M$ by $\Rad M$.
+\end{remark}
+
+\begin{example}
+  We have the following radicals:
+  \begin{enumerate}
+    \item[(1)] $\Rad \Q_{\Q} = 0$.
+    \item[(2)] $\Rad \Q_{\Z} = \Q$.
+    \item[(3)] $\Rad(\Z/6\Z) = 2\Z/6\Z \cap 3\Z/6\Z = 0$.
+    \item[(4)] $\Rad \Z/18\Z = 2\Z/18\Z \cap 3\Z/18\Z = 6\Z/18\Z$.
+  \end{enumerate}
+\end{example}
+
+\begin{exercise}
+  Let $n \geq 1$, and let $D$ be a division ring.
+  Denote by $R = M_n(D)$.
+  Show that $\Rad _R R = \Rad R_R = 0$.
+\end{exercise}
+
+\begin{lemma}
+  \label{lem:radicals}
+  Let $R$ be a ring and $\alpha \colon M \to N$ an $R$-homomorphism.
+  Then $\alpha(\Rad M) \subseteq \Rad N$.
+\end{lemma}
+\begin{proof}
+  We have that:
+  \[
+    \alpha^{-1}(\Rad N) =
+    \bigcap_{L \text{ maximal in } N} \alpha^{-1} L,
+  \]
+  and thus we simply need to show that if $L$ is a maximal module of $N$,
+  then $\alpha^{-1}(L)$ contains $\Rad M$.
+  Let $L$ be a maximal submodule of $N$.
+  $\alpha$ induces an injective $R$-homomorphism:
+  \[
+    \bar \alpha \colon M/\alpha^{-1}(L) \to N/L,
+  \]
+  where $N/L$ is a simple ideal,
+  hence there are only two possiblities:
+  \begin{enumerate}
+    \item[(1)] $\im \bar \alpha = 0$ and then $\alpha^{-1}(L) = M$.
+    \item[(2)] $\bar \alpha$ is an isomorphism, and hence
+      $P := \alpha^{-1}(L)$ is a maximal submodule of $M$
+      and so $\Rad M \subseteq P = \alpha^{-1}(L)$.
+  \end{enumerate}
+  This completes the proof.
+\end{proof}
+
+\begin{corollary}
+  Let $R$ be a ring.
+  Then $\Rad R_R$ and $\Rad _R R$ are two-sided ideals.
+\end{corollary}
+\begin{proof}
+  Without loss of generality we will only prove the case for $\Rad R_R$.
+  It is clear that $\Rad R_R$ is a right ideal.
+  Thus it suffices to show that for every $r \in R$,
+  \[
+    r \Rad R_R \subseteq \Rad R_R.
+  \]
+  This follows from \Cref{lem:radicals}
+  since the map $R_R \to R_R$ which sends $x \mapsto r x$
+  is an $R$-homomorphism.
+\end{proof}
+
+\begin{lemma}
+  Let $R$ be a ring and $M$ be an $R$-module.
+  Then for every $m \in M$ the following conditions are equivalent:
+  \begin{enumerate}
+    \item[(1)] $m \in \Rad M$.
+    \item[(2)] For every $N \leqslant M$,
+      if $M$ is generated by $N \cup \set{m}$ then $N = M$.
+  \end{enumerate}
+\end{lemma}
+\begin{proof} \phantom{}
+  \begin{enumerate}
+    \item[$(1) \implies (2)$] Let $N$ be a submodule of $M$
+      such that $N \cup \set{m}$ generates $M$.
+      Assume, by way of contradiction, that $M = N$.
+      Since $N \cup \set{m}$ generates $M$,
+      we conclude that $m \notin N$, hence $M \neq N$.
+      Denote:
+      \[
+        X := \set{L \leqslant M \mid N \subseteq L \stand m \notin L}.
+      \]
+      The set $X$ is nonempty since $N \in L$ and it is closed under unions
+      of increasing chains, and hence by Zorn's lemma there exists a maximal
+      element $P$.
+      We know that $M \notin X$ and hence $P \neq M$.
+      $P$ is a maximal submodule with respect to the property of containing $N$
+      and not containing $m$.
+      We will now show that $P$ is a maximal submodule of $M$
+      in contradiction to:
+      \[
+        P \supseteq \Rad M \stand m \notin P \stand m \notin \Rad M,
+      \]
+      where the first inclusion follows from $P$ being a maximal submodule.
+      Assume that exists $P \leqslant Q \leqslant M$ with $P \neq Q$.
+      Then since $P$ is maximal in $X$, we get that $Q \notin X$,
+      but $N \subseteq P \subseteq Q$ and so $m \in Q$.
+      This implies that $Q = M$ since $M$ is generated by $N \set{m}$.
+    \item[$(2) \implies (1)$]
+      Let $m \in M$ be an element that satisfies the property in $(2)$.
+      Let $L$ be a maximal submodule of $M$.
+      We need to show that $m \in L$.
+      Assume, by way of contradiction, that $m \notin L$.
+      Then, by maximality of $L$,
+      the submodule generated by $L \cup \set{m}$ is $M$.
+      By assumption on $m$, we get $M = L$.
+      This contradiction completes the proof.
+  \end{enumerate}
+\end{proof}
+
+\begin{lemma}[Nakayama's lemma]
+  Let $R$ be a ring, let $M$ be an $R$-module,
+  and let $P \leqslant M$.
+  Then:
+  \begin{enumerate}
+    \item[(1)] Assume that for every $N \leqslant M$,
+      if $P + N = M$ then $N = M$.
+      Then $P \subseteq \Rad M$.
+    \item[(2)] If $P \subseteq \Rad M$ and $M$ or $P$
+      are finitely generated as modules over $R$,
+      then for every submodule $N \leqslant M$,
+      if $M = P + N$ then $M = N$.
+  \end{enumerate}
+\end{lemma}
+\begin{proof} \phantom{}
+  \begin{enumerate}
+    \item[(1)] We need to show that if $N$ is a maximal submodule of $M$,
+      then $P \leqslant N$.
+      Since $N \neq M$ (by definition) the assumption of $(1)$
+      shows that $P + N \neq M$.
+      From maximality of $N$, we get $N = P + N$,
+      which means that $P \leqslant N$.
+    \item[(2)] If $P$ is finitely generated as a module over $R$,
+      then we get the claim from induction over the minimal number of
+      generators of $P$ and the previous lemma.
+      Next assume that $M$ is finitely generated and that $N \leqslant M$
+      such that $M = P + N$.
+      Denote the generators of $M$ by $x_1,\dots,x_k$.
+      Since $M = P + N$ we get that for any $1 \le i \le k$ there exists
+      $y_i \in P$ and $z_i \in N$ such that $x_i = y_i + z_i$.
+      Denote by $Q$ the submodules of $M$ generated by $y_1,\dots,y_k$.
+      Then:
+      \begin{enumerate}
+        \item[(1)] $Q \subseteq P \subseteq \Rad M$.
+        \item[(2)] $Q$ is finitely generated.
+        \item[(3)] $M = Q + N$.
+      \end{enumerate}
+      From the previous case we get that $M = N$, which completes the proof.
+  \end{enumerate}
+\end{proof}
+
+\begin{example}
+  We have that $P = \Rad \Q_{\Z} = \Q$.
+  We have $0 \neq \Q$ and $0 + P = \Q$.
+  This shows that the assumption of being finitely generated is necessary.
+\end{example}
+
+\subsection{Jabobson's radical}
+
+\begin{lemma}[Nakayama's lemma]
+  \label{lem:nakayama}
+  Let $R \neq 0$ be a ring with maximal $P \idealin R$.
+  Then the following conditions are equivalent:
+  \begin{enumerate}
+    \item[(1)] $P \subseteq \Rad R_R$.
+    \item[(2)] If $M$ is a finitely generated right $R$-module
+      and $N \leqslant M$ satisfies $M = N + MP$,
+      then $N = M$.
+    \item[(3)] $\set{1 + x \mid x \in P} \in R^{\times}$.
+  \end{enumerate}
+\end{lemma}
+\begin{proof} \phantom{}
+  \begin{enumerate}
+    \item[$(1) \implies (2)$]
+      Let $M$ be a finitely generated module over $R$.
+      For every $m \in M$ the map $\alpha_m \colon R_R \to M$
+      given by $x \mapsto mx$ is an $R$-homomorphism.
+      Thus, by the lemma from the beginning of the section:
+      \[
+        MP =
+        \sum_{m \in M} mP =
+        \sum_{m \in M} \alpha_m(P) \subseteq
+        \Rad M.
+      \]
+      The rest follows from Nakayama's lemma for modules.
+    \item[$(2) \implies (3)$] Denote $G := \set{1 + x \mid x \in P}$.
+      Since $P$ is a right ideal,
+      $G$ is closed under multiplication and contains $1$.
+      We will show that every element in $G$ has a right inverse in $R$.
+      First, Assume by way of contradiction, that $x \in P$
+      and that $1 + x$ does not have a right inverse in $R$.
+      Then $I := (1+x) R \neq R$ is a right ideal and hence contained in a
+      maximal right ideal $J$.
+      Since $1 + x \in J$ then $x \notin J$.
+      Hence, since $J$ is maximal $R_R = J + xR$.
+      From $(2)$ it follows that $J = R_R$,
+      which is a contradiction.
+
+      We finished showing that for any $g \in G$ there exists a right inverse
+      in $R$.
+      Now we will prove that any $g \in G$ has a right inverse in $G$.
+      Let $g \in G$.
+      There exist $x \in P$ and $y \in R$ such that $g = 1 + x$
+      and $1 = xy$.
+      Denote $z := y - 1$, and then:
+      \[
+        1 = (1 + x) (1 + z) = 1 + x + z + xz,
+      \]
+      and $z = -x - xz \in P$.
+      Thus, $y = 1 + z \in G$.
+      We will now show that for any $g \in G$ there is a left inverse in $G$
+      which completes this part of the proof.
+      Let $g \in G$, there exists $h \in G$ inverse to $g$
+      % TO BE CONTINUED
+    \item[$(3)$]
+  \end{enumerate}
+\end{proof}
+
+\begin{corollary}
+  Let $R$ be a ring.
+  Then $\Rad _R R = \Rad R_R$.
+\end{corollary}
+\begin{proof}
+  By the left version of Nakayama's lemma for rings (specifically $(3)$
+  implies $(1)$),
+  we get that $\set{1 + x \mid x \in \Rad_R R} \subseteq R^{\times}$.
+  We have seen before that $\Rad _R R$ is a two sided ideal,
+  and in particular a right ideal.
+  By $(3)$ implies $(1)$ (in the right versino of Nakayama's lemma)
+  we get that $\Rad _R R \subseteq \Rad R_R$.
+  From symmetry, we get that other direction of containment,
+  hence they are equal.
+\end{proof}
+
+\begin{definition}[Jacobson radical]
+  Let $R$ be a ring.
+  The Jacobson radical of $R$ is defined by:
+  \[
+    J(R) := \Rad _R R = \Rad R_R.
+  \]
+\end{definition}
+
+\begin{exercise}
+  Show that if $R$ is an Artinian ring, then $R/J(R)$
+  is a semisimple ring.
+\end{exercise}
+
+\begin{exercise}
+  Let $R$ be a ring.
+  Let $I$ be a right (or left ideal),
+  such that all of its elements are nilpotent.
+  Show that $I \in J(R)$.
+\end{exercise}
+
+\subsection{Radicals in Artinian rings}
+
+\begin{proposition}
+  Let $R$ be an Artinian ring.
+  Then there exists $k \geq 1$ such that $J(R)^k = 0$.
+\end{proposition}
+\begin{proof}
+  We know that:
+  \[
+    \cdots \subseteq J(R)^3 \subseteq J(R)^2 \subseteq J(R).
+  \]
+  Since $R$ is Artinian, there exists $k \geq 1$
+  such that $J(R)^k = J(R)^{k+m}$ for every $m \in \N$.
+  In particular, $J(R)^k = J(R)^{2k}$.
+  We claim that $J(R)^k = 0$.
+  Denote:
+  \[
+    X := \set{0 \neq I \idealin R_R \mid I J(R)^k = I}.
+  \]
+  The set $X$ is nonempty since $J(R)^k \in X$.
+  Since $X$ is Artinian, there exists a minimal element $L$ in $X$.
+  Since $L \neq 0$, there exists $0 \neq \ell \in L$.
+  Note that:
+  \[
+    L \supseteq \ell J(R)^k \in X,
+  \]
+  so by minimality of $L$,
+  \[
+    L = \ell J(R)^k \subseteq \ell R \subseteq L,
+  \]
+  and so $L$ is finitely generated as an ideal.
+  Moreover, $L = 0 + L = 0 + L J(R)^k$.
+  By Nakayama's lemma for rings we get that $L = 0$,
+  which is a contradiction.
+\end{proof}
+
+
+\end{document}

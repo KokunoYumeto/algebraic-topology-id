@@ -49,7 +49,7 @@
     "o012-rbt-l29",
     "o012-rbt-l30"
   ],
-  "translation_state": "roberts_units_001_030_complete_contiguous_through_source_eof; every_unit_independently_reviewed_p1_p2_p3_zero; do_not_translate_any_roberts_span_again",
+  "translation_state": "roberts_units_001_030_complete_contiguous_through_source_eof; fomberg_unit_001_complete_contiguous_through_algebraic_topology_tex_line_614; every_admitted_unit_independently_reviewed_p1_p2_p3_zero; do_not_translate_any_roberts_span_or_fomberg_lines_31_614_again",
   "latest_unit": {
     "unit_id": "o012-rbt-l30",
     "source_span": "Notes.tex:6271-6368",
@@ -64,38 +64,55 @@
     "qa_receipt": "qa/UNIT_030_QA.json",
     "qa_receipt_sha256": "bef6fe6704084ac02386bb477b7b0082e02921d3d722955e1366e7d0b9247753"
   },
+  "latest_component_unit": {
+    "unit_id": "o012-fom-u001",
+    "edition_unit_id": "O012-FOM-001",
+    "course_route_unit_id": "D60-R08",
+    "source_span": "algebraic_topology.tex:31-614",
+    "source_span_bytes": 21875,
+    "source_span_sha256": "68cb0dea7aa24a42e979877a95acf61b8152c87ed86d88ad7deac7cb5cea2fe3",
+    "path": "source/id-ID/fomberg/units/fomberg-unit-001-delta-complexes-simplicial-homology.md",
+    "bytes": 34773,
+    "lines": 1073,
+    "sha256": "d9b64140f9340c75bc34c12bc02ee843d87de3566e331c50c2374075718aa2c6",
+    "stable_ids": 87,
+    "independent_review": "P1=0; P2=0; P3=0 after six preserved pre-admission findings",
+    "qa_receipt": "qa/FOMBERG_UNIT_001_QA.json",
+    "qa_receipt_sha256": "b3b0ebc9430b80d45c64a6c528e0e36f46ca0d646a50e7b9c9c5d68285369b7a"
+  },
   "backend_state": {
     "status": "PASS_APPEND_ONLY_REPLAYABLE",
-    "unit_029_prefix_records": 4596,
-    "unit_029_prefix_bytes": 5001266,
-    "unit_029_prefix_bundle_sha256": "49c599010ebee2223225f643cd09a53bea882b8064024d5189e6e15f648195d8",
-    "unit_030_records_added": 165,
-    "cumulative_records": 4761,
-    "cumulative_bytes": 5213679,
-    "cumulative_bundle_sha256": "51b8c7f611560b9b5e88e97b3a943b54e0eb687c703f0cd34c1a3d164e4fb920",
-    "receipt": "qa/BACKEND_APPEND_ONLY_UNIT_030_CUMULATIVE_RECEIPT.json",
-    "receipt_sha256": "d4f7c7310ae22b8fc53d354b72beefad637ac353be418b9fbc56ddd8cd0a65f7",
+    "roberts_terminal_prefix_records": 4761,
+    "roberts_terminal_prefix_bytes": 5213679,
+    "roberts_terminal_prefix_bundle_sha256": "51b8c7f611560b9b5e88e97b3a943b54e0eb687c703f0cd34c1a3d164e4fb920",
+    "fomberg_unit_001_records_added": 299,
+    "cumulative_records": 5060,
+    "cumulative_bytes": 5658648,
+    "cumulative_bundle_sha256": "17f57575a062025e434e79f7f3797d05de1a41e520202521ae39a409d4b6450d",
+    "receipt": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_001_CUMULATIVE_RECEIPT.json",
+    "receipt_sha256": "d110ce29513a9a9a789d6baf5e2b513d8c971c7d4e6d67e5943eed440c48bc50",
     "semantic_validator_replay": "PASS",
+    "static_qa_replay": "PASS",
     "producer_deterministic_replay": "PASS"
   },
   "reader_state": {
-    "status": "PASS_DETERMINISTIC_BROWSER_VISUAL_ACCESSIBILITY_RIGHTS_PRIVACY",
+    "status": "PASS_DETERMINISTIC_BROWSER_REFLOW_VISUAL_ACCESSIBILITY_RIGHTS_PRIVACY",
     "html": {
-      "path": "output/html/units-001-030/index.html",
-      "bytes": 4861791,
-      "sha256": "ed9da5653b3eacf7418d6e08760fcd2ecff4d75799c47f08689b940798099891"
+      "path": "output/html/roberts-001-030-fomberg-001/index.html",
+      "bytes": 5029788,
+      "sha256": "2b64e8bec1dd5e1689ef6569360fec896ef87a683c7ba291a3780e27084a7390"
     },
     "pdf": {
-      "path": "output/pdf/topologi-aljabar-unit-001-030-id.pdf",
-      "bytes": 2257988,
-      "pages": 351,
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-id.pdf",
+      "bytes": 2322978,
+      "pages": 362,
       "page_size": "A4",
-      "sha256": "b9d37776c64541123345c7b28fd26df161b878e8c105c16670455fd532dc08a4",
+      "sha256": "fb81f2b2c0f73c17c4e3be4eaae164eaeaeb0c4ff0661580acfc7aa9b6d5f749",
       "tagged": false,
       "tagging_limitation_disclosed": true
     },
-    "build_receipt": "qa/UNITS_001_030_BUILD_RECEIPT.json",
-    "build_receipt_sha256": "15ce778ae5b85934424b3da22dcbec99f15df30746bb01630aaa4494cb3eace7"
+    "build_receipt": "qa/ROBERTS_001_030_FOMBERG_001_BUILD_RECEIPT.json",
+    "build_receipt_sha256": "a830567918c16d12bebaef3da8f8ad1a05f79f28c332d57f101a5b0d7f79bde9"
   },
   "publication_state": {
     "github_public_through_unit": 30,
@@ -113,7 +130,9 @@
     "zenodo_units_001_030": "published_as_exactly_one_new_version_in_existing_concept_and_twice_anonymously_byte_verified",
     "zenodo_publication_receipt": "release/zenodo-units-001-030/publication-receipt.json",
     "zenodo_publication_receipt_sha256": "30f8c191eaf6a75cf5a96a0d301357959a2f53089a2f30af6b0ad65cdd025187",
-    "figshare": "blocked_by_InactiveAccount; no_duplicate_item"
+    "figshare": "blocked_by_InactiveAccount; no_duplicate_item",
+    "composite_local_through_fomberg_unit": 1,
+    "composite_local_release_state": "verified_and_ready_for_existing_lineage_publication; not_yet_public"
   },
   "fomberg_next": {
     "official_repository": "https://git.sr.ht/~yp/math-notes",
@@ -125,15 +144,19 @@
     "source_sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483",
     "selected_span": "31-4185",
     "selected_sections": "1.1-1.13",
-    "next_line": 31,
-    "next_coherent_route_unit": "D60-R08, Sections 1.1-1.2, lines 31-614",
+    "completed_span": "31-614",
+    "completed_through_line": 614,
+    "completed_sections": "1.1-1.2",
+    "completed_component_unit": "O012-FOM-001",
+    "next_line": 615,
+    "next_coherent_route_unit": "D60-R09, Sections 1.3-1.4, lines 615-1290",
     "license": "CC BY-SA 4.0",
     "build_gate": "55/55 PASS",
     "build_gate_receipt": "qa/FOMBERG_AUTHORITY_BUILD_GATE_QA.json",
-    "build_gate_receipt_sha256": "933d1a0158d3c1c0aecd94483b1e3dcd1a7f40cac761f25d19d272eb439d9b01",
+    "build_gate_receipt_sha256": "110ae5058f254f780812fa12e51e73cc6d1f1e6e03a319dbdfb18ecedf79fe71",
     "problem_bank_selected": false
   },
-  "next_action": "translate_fomberg_lines_31_614_contiguously_as_the_first_cc_by_sa_4_0_component_unit_with_new_component_ids_route_mapping_proof_census_mastery_and_append_only_backend",
+  "next_action": "publish_the_verified_roberts_001_030_plus_fomberg_001_checkpoint_to_the_existing_github_pages_and_zenodo_lineages_with_anonymous_byte_readback_then_translate_fomberg_lines_615_1290_contiguously",
   "terminology_qa": {
     "status": "PASS",
     "fallback_doi": "10.22146/jmt.56529",

@@ -1,0 +1,2599 @@
+\documentclass[11pt, a4paper]{article}
+
+\def\ncourse {Algebraic Geometry}
+\def\ntype {problems}
+
+\input{../header.tex}
+\renewcommand{\P}{\mathbb{P}}
+\renewcommand{\div}{\mathrm{div}} % divisors
+
+\begin{document}
+\tableofcontents
+\newpage
+
+\section{Algebraic subsets of \texorpdfstring{$\C^n$}{C}}
+
+\begin{exercise}
+  Prove that $\sqrt{\sqrt{I}} = \sqrt{I}$.
+\end{exercise}
+\begin{solution}
+  Recall the radical of an ideal $I \normalin R$
+  is given by:
+  \[
+    \sqrt{I} :=
+    \set{r \in R \mid r^n \in I \text{ for some } n \in \Z^{+}}.
+  \]
+  We will prove this by double-sided containment.
+  Let $a \in \sqrt{I}$.
+  Then for $1 \in \Z^+$ we have $a^1 \in \sqrt{I}$,
+  and therefore by definition $a \in \sqrt{\sqrt{I}}$.
+
+  Next let $a \in \sqrt{\sqrt{I}}$.
+  By definition there exists $n_1 \in \Z^+$ such that $a^{n_1} \in \sqrt{I}$,
+  which again by definition means that there is some $n_2 \in \Z^+$
+  such that $\del{a^{n_1}}^{n_2} \in I$.
+  We get that $a^{n_1 n_2} \in I$, and thus $a \in \sqrt{I}$
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Prove that $Z(I(V)) = \overline V$ (the closure in the Zariski topology).
+\end{exercise}
+\begin{solution}
+  Recall that the closure of a set $V$ is the intersection of all closed
+  sets that contain in.
+  Equivalently, it is the smallest closed set that contains $V$.
+
+  We know that $V \subset Z(I(V))$ from the theorem that $(I,Z)$
+  is a Galois connection (this also follows directly from the definition).
+  It is left to show that $Z(I(V))$ is the smallest closed subset containing
+  $V$.
+
+  Let $V \subseteq C = Z(J)$ be a Zariski closed subset that contains $V$.
+  By definition of $Z$, it follows that all polynomials in $J$
+  vanish on $V$, and therefore $J \subseteq I(V)$.
+  By the Galois connection we know that $Z$ inverses relations,
+  and thus $Z(I(V)) \subseteq Z(J) = C$.
+  This implies that $Z(I(V))$ is the smallest closed subset containing $V$,
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Find counterexamples to Theorems 2.5, 2.7 and Corollary 2.6 for $\C$
+  replaced by $\R$ in the notes.
+\end{exercise}
+\begin{solution}
+  For theorem 2.5, one counterexample is the ideal $(x^2 + 1) \idealin \R[x]$.
+  Since $x^2 + 1$ is irreducible over $\R$, the ideal $(x^2 + 1)$ is maximal.
+  However by its irreducibility, it is clearly not a point ideal.
+
+  For corollary 2.6, we can use the same counterexample $I := (x^2 + 1)$
+  since clearly $Z(I) = \emptyset$ (over $\R$) and $I \neq (1)$.
+
+  For theorem 2.7, we can use the same counterexample again $I = (x^2 + 1)$.
+  As we have seen $Z(I) = \emptyset$, and thus $I(Z(I)) = \R[x]$.
+  However, $\sqrt{I} \neq \R[x]$, since for example, $1 \notin \sqrt{I}$
+  (otherwise $1 \in I$ which is not the case).
+\end{solution}
+
+\newpage
+
+\section{Irreducible components}
+
+\begin{exercise}
+  Prove that for a proper ideal $I \subset \C[x_1,\dots,x_n]$ the set
+  $X := Z(I) \subseteq \C^n$ is irreducible if and only if $\sqrt{I}$ is a prime
+  ideal.
+\end{exercise}
+\begin{solution}
+  By the regular strength nullstellensatz theorem we get that
+  $I(Z(I)) = \sqrt{I}$, so we can replace $\sqrt{I}$ in the theorem
+  with $I(Z(I))$.
+
+  First assume that $I(Z(I))$ is not a prime ideal.
+  This means that exists $f,g$ different than $1$ that don't vanish on $Z(I)$,
+  such that $fg$ vanishes on $Z(I)$.
+  Since $fg$ vanishes on $Z(I)$ we get that $Z(I) \subset Z(fg) = Z(f) \cup Z(g)$,
+  so we get that
+  \[
+    Z(I) = \del{X \cap Z(f)} \cup \del{X \cap Z(g)}.
+  \]
+  It is clear that $\emptyset \neq X \cap Z(f)$,
+  since otherwise either $g$ vanishs on $X$ which is a contradiction,
+  and also $X \cap Z(f) \subsetneq X$,
+  since $f$ vanishes on $X \cap Z(f)$ but not on $X$.
+  Similarly we get that $\emptyset \neq X \cap Z(g) \subsetneq X$,
+  thus $X := Z(I)$ is reducible.
+
+  Next assume that $Z(I)$ is reducible.
+  Suppose that its decomposition is $Z(I) = Z(J_1) \cup Z(J_2)$.
+  We get that
+  \[
+    I(Z(I)) =
+    I\del{Z(J_1) \cup Z(J_2)} =
+    I\del{Z(J_1 \cap J_2)}.
+  \]
+  By the Galois connection notice that we have
+  \[
+    I(Z(J_1)) \supsetneq I(Z(I)) \tand
+    I(Z(J_2)) \supsetneq I(Z(I)).
+  \]
+  Choose $f \in I(Z(J_1)) \setminus I(Z(I))$ and
+  $g \in I(Z(J_1)) \setminus I(Z(I))$.
+  We now get that
+  \[
+    fg \in I\del{Z(J_1 \cap J_2)} = I(Z(I)),
+  \]
+  which implies that $I(Z(I))$ is not prime, and completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Prove that $Z(I)$ is irreducible if and only if any nonempty open subset of
+  $Z(I)$ is dense (with respect to the induced topology).
+\end{exercise}
+\begin{solution}
+  First let us prove that any open nonempty subset of an irreducible closed set
+  $Z(I)$ is dense.
+  Let $U$ be an open nonempty set such that $\overline U \neq Z(I)$.
+  Then immediately we have $Z(I) = U^c \cup \overline U$ in contradiction to $Z(I)$
+  being irreducible.
+  
+  Next, suppose that any nonempty subset of $Z(I)$ is dense.
+  Assume, by way of contradiction, that $Z(I)$ is reducible with
+  decomposition $Z(I) = Z(J_1) \cup Z(J_2)$.
+  Denote the open (in the induced topology) set $D := Z(I) \setminus Z(J_1)$.
+  We have that:
+  \[
+    D = Z(I) \setminus Z(J_1) \subseteq Z(J_2).
+  \]
+  By the assumption of the exercise $\overline D = Z(I)$,
+  however $D \subset B$ which is closed so
+  $\overline D \subset B \subsetneq I(Z)$.
+  This contradiction completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Verify that the transition functions for the cover of $\CP^n$
+  by $U_i$ are indeed holomorphic.
+\end{exercise}
+\begin{solution}
+  The charts $\varphi_i \colon U_i \to \C^n$ are given by:
+  \[
+    \varphi_i([x_0 : \cdots : x_n]) =
+    \del{\frac{x_0}{x_0},\dots,\frac{x_{i-1}}{x_i},
+      \frac{x_{i+1}}{x_i},\dots,\frac{x_n}{x_i}}.
+  \]
+  We must check that the transition functions $\varphi_j \circ \varphi_i^{-1}$
+  are holomorphic on the intersection $\varphi_i(U_i \cap U_j)$.
+  Let $z = (z_0,\dots,z_{i-1},z_{i+1},\dots,z_n) \in \varphi_i(U_i \cap U_j) \subset
+  \C^n$.
+  Then the preimage of it by $\varphi_i$ is
+  the point $[z_0,\dots,z_{i-1},1,z_{i+1},\dots,z_n]$.
+  However it must also point in $U_j$ so we may divide by $z_j$ and get:
+  \[
+    \varphi_j \circ \varphi_i^{-1} (z) =
+    \del{\frac{z_0}{z_j},\dots,\frac{z_{i-1}}{z_j},\frac{1}{z_j},
+    \frac{z_{i+1}}{z_j},\dots,\frac{z_n}{z_j}}.
+  \]
+  Since each component is a rational function with a nonvanishing
+  denominator (in the domain $\set{x_j \neq 0}$) we get that
+  the transition maps are holomorphic.
+\end{solution}
+
+%% MISSING HILBERT POLYNIALS AND BEZOUTS
+
+\newpage
+
+\section{Line bundles and vector bundles}
+
+\begin{exercise}
+  Verify that $(6.2)$ defines a section of $\mu^*L$.
+\end{exercise}
+\begin{solution}
+  We need to verify that $\mu^*s \colon X \to \mu^*L$ defined by
+  \[
+    \mu^*s \colon x \mapsto (x,s(\mu(x))) \in X \times L
+  \]
+  defines a section of $\mu^*L$.
+  A section is a map $\mu^*s \colon X \to \mu^*L$,
+  and therefore we need to verify that $\mu^*s(x) \in \mu^*L \to X$.
+  Thus we need to check that:
+  \[
+    (x,s(\mu(x))) \in
+    \set{(x,l) \in X \times L \colon \mu(x) = \pi(l)}.
+  \]
+  Indeed, since $s$ is a section on $L \to Y$ we get that
+  $\pi(s(\mu(x))) = \id_Y(\mu(x)) = \mu(x)$,
+  so the section is well defined.
+  Clearly it is holomorphic as composition of holomorphic functions.
+  It is left to check that $\pi^* \circ s = \id_X$,
+  where $\pi^*$ is the proejction map $\pi^* \colon \mu^*L \to X$
+  defined by $\pi^*(x,l) = x$.
+  However, this is easy to verify since
+  \[
+    \pi^*(\mu^*s(x)) =
+    \pi^*(x,s(\mu(x))) = x,
+  \]
+  so clearly $\pi^* \circ \mu^*s = \id_X$.
+\end{solution}
+
+\begin{exercise}
+  Show that sections of a vector bundle $W \to X$ have a
+  natural structure of a vector space over $\C$.
+\end{exercise}
+\begin{solution}
+  Let $p \colon W \to X$ be a vector bundle as defined in class.
+  We need to show that the space of global sections of $L$ $\Gamma(X,W)$
+  has the natural structure of a complex vector space.
+  We define addition and scalar multiplication pointwise.
+  That is, for any $s,t \in \Gamma(X,W)$ and $\lambda \in \C$ we have:
+  \[
+    (s + t)(x) := s(x) + t(x) \in p^{-1}(x) \tand
+    (\lambda s)(x) := \lambda\del{s(x)} \in p^{-1}(x),
+  \]
+  where the inclusions in the fiber $p^{-1}(x)$ follows from the fact
+  it is a complex vector space.
+  Since the projection map $p$ is linear we also have
+  $p \circ (s + t) = \id_X$ and $p \circ (\lambda s)_X$
+  so indeed $(s+t),(\lambda s) \in \Gamma(X,W)$
+  (this means that addition and multiplication
+  by scalar are well defined on $\Gamma(X,W)$).
+
+  Commutativity follows from commutativity of pointwise function addition,
+  and similarly associativity, distributivity, and the rest of the axioms
+  of a vector space still hold.
+
+  We will in particular mention that the zero vector
+  is the zero section $0 \in \Gamma(X,W)$
+  defined by $0(x) = 0_{p^{-1}(x)}$ (the section that sends each point
+  in $X$ to the zero of its corresponding vector space),
+  since $(s + 0)(x) = s(x) + 0(x) = s(x)$.
+
+  Similarly, the additive inverse of $s \in \Gamma(X,W)$ is $(-s)$,
+  given by $(-s)(x) = -s(x)$.
+  It is a well defined section since $s(x) \in p^{-1}(x)$ is a vector in a
+  complex vector space and has a well defined additive inverse.
+\end{solution}
+
+\begin{exercise}
+  Verify that sections of the line bundle $\C \times X \to X$ are in
+  natural bijection to holomorphic functions on $X$.
+\end{exercise}
+\begin{solution}
+  Every section $s \in \Gamma(X,\C \times X)$ can be written
+  as $s(x) = (f(x),x)$ where $f$ is some map from $x$ to the first
+  coordinate of $s$.
+  Since as we wrote $p \circ s = \id_X$, it follows that a section is
+  \textit{completely determined} by the map $f \colon X \to \C$.
+  Conversely, any such map \textit{uniquely} defines a section by $s(x) = (f(x),x)$.
+  This shows that there is a bijection between sections of the line bundle
+  and some maps $f$ on $X$.
+
+  In the case of a section $s \in \Gamma(X,\C \times X)$,
+  since a section is required to be holomorphic (by definition),
+  the map it gives rise to $f \colon X \to \C$ must also be holomorphic.
+  Conversely, a holomorphic map $f \colon X \to \C$ gives rise
+  to a section $s(x) = (f(x),x)$.
+  Using this correspondence and the uniqueness discussed in the previous
+  paragraph, we conclude that sections of the line bundle $\C \times X \to X$
+  are in natural bijection to holomorphic functions on $X$
+  which is given by
+  the corrspondence
+  $\Gamma(X,\C \times X) \ni s \longleftrightarrow f \in \mathrm{Hol}(X)$.
+\end{solution}
+
+\newpage
+
+\section{More line bundles and maps to projective spaces}
+
+\begin{exercise}
+  Verify that transition functions for the identification of $(7.1)$
+  (but for all $U_i$) are holomorphic and rational on $U_i \cap U_j$
+  and thus give $\O(1)$ the structure of a line bundle over $\CP^n$
+  in both holomorphic or algebraic settings.
+\end{exercise}
+\begin{solution}
+  Recall that the bijection $\pi^{-1} U_0 \cong \C \times U_0$
+  is given by:
+  \[
+    \del{[x_0 : \cdots : x_n],\varphi} \mapsto
+    \del{\varphi\del{1,\frac{x_1}{x_0},\dots,\frac{x_n}{x_0}},[x_0 : \cdots : x_n]}.
+  \]
+  Fix some arbitrary $i$,
+  and let the map $v^{(i)} \colon U_i \to \CP^{n+1}$
+  be the map that normalizes a point in projective coordinates
+  relative to that $i$th coordinate:
+  \[
+    v^{(i)}([x_0 : \cdots : x_n]) =
+    \del{\frac{x_0}{x_i},\dots,\frac{x_{i-1}}{x_i},1,\frac{x_{i+1}}{x_i},\dots,\frac{x_n}{x_i}}
+    \in \C^{n+1}.
+  \]
+  Define the $i$th trivialization map
+  $\Psi_i \colon \pi^{-1}(U_i) \to \C \times U_i$ to be
+  as shown in the notes and beginning of this solution:
+  \[
+    \Psi_i([x_0 : \cdots : x_n],\varphi) =
+    \del{\varphi\del{v^{(i)}([x_0 : \cdots : x_n])},[x_0 : \cdots : x_n]}.
+  \]
+  The transition maps are the maps of the form $\Psi_i \circ \Psi_j^{-1}$.
+  Note that since $\varphi$ is a linear functional (an element in the dual
+  space of the line $l_p$),
+  we have the relation:
+  \[
+    v^{(i)}\left([x_0 : \cdots : x_n]\right) =
+    \frac{x_j}{x_i} v^{(j)}\left([x_0 : \cdots : x_n]\right),
+  \]
+  because multiplying $v^{(j)}([x_0 : \cdots : x_n])$
+  by $\frac{x_j}{x_i}$ makes the $i$th coordinate $1$ and the other coordinates
+  agree with those of $v^{(i)}([x_0 : \cdots : x_n])$.
+  Therefore the transition maps
+  $\Psi_i \circ \Psi_j^{-1} \colon \C \times (U_i \cap U_j) \to \C \times (U_i \cap U_j)$
+  are simply:
+  \[
+    \Psi_i \circ \Psi_j^{-1} \colon
+    \left(a,[x_0 : \cdots : x_n]\right) \mapsto
+    \left(\frac{x_j}{x_i} a,[x_0 : \cdots : x_n]\right).
+  \]
+  The function $\frac{x_j}{x_i}$ is nowhere zero on the intersection
+  $U_i \cap U_j$, and thus holomorphic.
+  It is also a rational function since it is a ratio of homogeneous
+  polynomials of the same degree.
+\end{solution}
+
+\begin{exercise}[Bonus exercise]
+  Prove that every holomorphic section of $\O(1) \to \CP^n$
+  is a linear combination of homogeneous coordinates.
+  Hint: for any such
+  section define the map $f \colon (\C^{n+1} \setminus \set{0}) \to \C$
+  and show $f$ is holomorphic.
+  Use Hartogs Lemma to extend $f$ to a holomorphic function on $\C^{n+1}$ and
+  use Taylor expansion and $f(\lambda z) = \lambda z$.
+  The same argument shows that
+  holomorphic sections of $\O(k) \to \CP^n$ are zero for $k < 0$
+  are are homogeneous polynomials of degree $k$ for $k \geq 0$.
+\end{exercise}
+\begin{solution}
+\end{solution}
+
+\begin{exercise}
+  Prove that the maps $(7.2)$ and $(7.3)$ are embeddings of
+  complex manifolds.
+\end{exercise}
+\begin{solution}
+  The map given in $(7.2)$ is the map $f \colon \CP^1 \to \CP^2$ defined:
+  \[
+    [y_0 : y_1] \mapsto [y_0^2 : y_0 y_1 : y_1^2].
+  \]
+  Holomorphicity of this map is given by the homogeneous
+  quadratic polynomials in the homogeneous coordinates.
+  It is also injective by matter of pure set theoretic calculation.
+
+  We see that on the affine chart $U_0 = \set{y_0 \neq 0}$ with
+  the coordinate $t = y_1/y_0$ the local representative of $f$
+  is
+  \[
+    t \mapsto (1,t,t^2).
+  \]
+  Its derivative is $(0,1,2t)$, which is never the zero tangent vector.
+  This implies that the differential is injective at every point so $f$
+  is an immersion.
+  Clearly this works for the other chart as well.
+  Since $\CP^1$ is compact $f$ is automatically proper.
+  By a theorem, if $f$ is injective, proper, and an immersion (full rank
+  differential), it is an embedding.
+  
+  The map given in $(7.3)$ is the map $f \colon \CP^1 \times \CP^1 \to \CP^3$
+  defined:
+  \[
+    ([y_0 : y_1],[z_0 : z_1]) \mapsto [y_0 z_0 : y_0 z_1 : y_1 z_0 : y_1 z_1].
+  \]
+  It is holomorphic by the same argument
+  from earlier and it is also injective by matter of pure set
+  theoretic calculation.
+
+  Work on the affine chart where $y_0 \neq 0$ and $z_0 \neq 0$.
+  Put local coordinates:
+  \[
+    s = \frac{y_{1}}{y_{0}} \tand
+    t = \frac{z_{1}}{z_{0}}.
+  \]
+  Then, in the affine chart of $\CP^3$ with the first coordinate scaled
+  to $1$ we get that the map is
+  \[
+    (s,t) \mapsto (1,t,s,st).
+  \]
+  The Jacobian of this map is:
+  \[
+  \begin{pmatrix}
+    0 & 0 \\
+    0 & 1 \\
+    1 & 0 \\
+    t & s
+  \end{pmatrix}
+  \]
+  which has degree $2$ so the differential is injective at every point
+  of this chart.
+  Clearly this works for the other charts as well.
+  Since $\CP^1$ is compact and product of compact spaces is compact
+  we get that $\CP^1 \times \CP^1$ is compact and thus the map is also proper.
+  By a theorem, if $f$ is injective, proper, and an immersion (full rank
+  differential), it is an embedding.
+\end{solution}
+
+\newpage
+
+\section{Weil and Cartier divisors and class groups}
+
+\begin{exercise}
+  Find the Weil divisor $\div f$ for the rational function on $\C^2$
+  \[
+    f(x_1,x_2) =
+    \frac{x_1^3 x_2}{x_1^2 + x_2^3 - x_2}.
+  \]
+  % hint: it is simple
+\end{exercise}
+\begin{solution}
+  We write $f = \frac{N}{D}$ with
+  \[
+    N(x_1,x_2) = x_1^3 x_2 \tand
+    D(x_1,x_2) = x_1^2 + x_2^3 - x_2.
+  \]
+  The Weil divisor of $f$ over a variety $X$ is thus:
+  \[
+    \div f =
+    \div N - \div D =
+    \sum_{Y} \ord_Y(N) Y - \sum_{Y} \ord_Y(D) Y,
+  \]
+  where we sum over all prime divisors $Y$ of $X$,
+  and $\ord_Y(f) Y$  is the order of $f$ along $Y$.
+  It is clear the the pirime divisors of $N$ are exactly
+  $\set{x_1 = 0}$ and $\set{x_2 = 0}$ since $x_1$ and $x_2$
+  are the only irreducible factors of $N$.
+  It follows that:
+  \[
+    \div N =
+    \sum_{Y} \ord_Y(N) Y =
+    3 \set{x_1 = 0} + \set{x_2 = 0}.
+  \]
+  Similarly, we see that $x_1^2 + x_2^3 - x_2$ is irreducible in $\C[x_1,x_2]$,
+  and since the order is $1$ we get that:
+  \[
+    \div D =
+    \sum_{Y} \ord_Y(D) Y =
+    \set{x_1^2 + x_2^3 - x_2 = 0},
+  \]
+  and finally,
+  \[
+    \div f =
+    3 \set{x_1 = 0} + \set{x_2 = 0} -
+    \set{x_1^2 + x_2^3 - x_2 = 0}.
+  \]
+\end{solution}
+
+\begin{exercise}
+  Find a Cartier divisor on $\CP^1$ so that the corresponding
+  Weil divisor is $5[0] - [i]$.
+  % Hint: use the cover of $\CP^1$ by $U_0$ and $U_1$.
+\end{exercise}
+\begin{solution}
+    The Cartier divsor we choose (wisely) is:
+  \[
+    D = \set{\del{U_0, \frac{1}{z^4 (1 - i z)}}, \del{U_1, \frac{w^5}{w - i}}},
+  \]
+  where $w = 1/z$.
+  We see that on the intersection $U_0 \cap U_1$ we have that:
+  \[
+    \frac{f_0}{f_1} =
+    \frac{1}{z^4 (1 - i z)} \cdot \frac{1/z - i}{(1/z)^5} =
+    \frac{1}{z^4 (1 - i z)} \cdot \frac{1 - i z}{z} \cdot z^5 = 1.
+  \]
+  Since $f_0/f_1 = 1$ is a unit on $U_0 \cap U_1$ we get that this is indeed
+  a valid Cartier divisor.
+  We now have to show that its corresponding Weil divisor is the desired one.
+  Indeed, since we chose $U_0$ with coordinate $z$ ($x_0 \neq 0$)
+  and $U_1$ with coordinate $w$ ($x_1 \neq 0$),
+  we get that for $[0] = (0 : 1)$ we have that for $\frac{w^5}{w - i}$
+  (we must check this chart since $[0] \notin U_0$):
+  \[
+    \ord_{[0]}(\frac{w^5}{w - i}) = 5,
+  \]
+  and similarly for $[i] = (i : 1)$ (this time we may use any chart)
+  we get:
+  \[
+    \ord_{[i]}(\frac{w^5}{w - i}) =
+    \ord_{w = i}(\frac{w^5}{w - i}) = -1,
+  \]
+  and then we get that the corresponding Weil divisor is indeed
+  $5[0] - [i]$, which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Consider the quotient of the ring of formal power series in three variables
+  \[
+    R = \C[[x_1,x_2,x_3]] / (x_1 x_2 - x_3^2).
+  \]
+  Show that the ideal $I = (x_1, x_3) \subset R$ is not principle.
+  % Hint: look at the dimension of $I / (x_1,x_2,x_3) I$.
+\end{exercise}
+\begin{solution}
+  Let $S = \C[[x_1,x_2,x_3]]$ and so $R = S/(x_1 x_2 - x_3^2)$.
+  Note that $R$ is a regular local ring with maximal
+  ideal $\mathfrak m = (\bar x_1,\bar x_2,\bar x_3) R$.
+  By Nakayama's lemma, if $I = (x_1,x_3)$ were principle, we must have that
+  $\dim_{\C} I/\mathfrak m I = 1$.
+  We will show that $\dim_{\C} I/\mathfrak m I \geq 2$ and get a contradiction.
+
+  The ideal $I$ is generated by the images of $x_1$ and $x_3$
+  in $R$ which we will denote by $\bar x_1$ and $\bar x_3$.
+  We notice that $\mathfrak m I \subset \mathfrak m^2$.
+  That is because $\mathfrak m I = \mathfrak m(x_1,x_3)$,
+  so every element of $\mathfrak m I$ has degree at least $2$.
+  Thus the images $\bar x_1$ and $\bar x_3$ cannot be zero.
+
+  Assume, by way of contradiction, that $\bar x_1$ and $\bar x_3$
+  are linearly dependent.
+  That is, there exist nonzero $\alpha,\beta \in \C$ such that
+  \[
+    \alpha \bar x_1 + \beta \bar x_3 = 0 \quad\text{in $I/\mathfrak m I$}.
+  \]
+  This means that $\alpha x_1 + \beta x_3 \in \mathfrak m I$,
+  however since both $x_1$ and $x_3$ are of degree $1$,
+  which implies that $\alpha = \beta = 0$.
+  This contradiction shows that $\dim_{\C} I/\mathfrak m I \geq 2$
+  which completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Cartier divisors as meromorphic sections of line bundles}
+
+\begin{exercise}
+  Verify that Definition $9.1$ in the notes defines a Cartier divisor.
+  Further verify that different choices of isomorphisms
+  $\pi^{-1}(U_{\alpha}) \cong C \times U_{\alpha}$
+  define the same Cartier divisor.
+\end{exercise}
+\begin{solution}
+  It's just opening definitions but I don't have time :(
+\end{solution}
+
+\begin{exercise}
+  Verify that the relation $\sim $in Definition $9.4$ in the notes is indeed an
+  equivalence relation.
+\end{exercise}
+\begin{solution}
+  For a Cartier divisor $\set{U_{\alpha},f_{\alpha}}_{\alpha \in I}$
+  we define the relation $\sim$ on $\bigsqcup_{\alpha} (\C \times U_{\alpha})$
+  with
+  \[
+    (\C \times U_{\alpha}) \ni 
+    (t,x) \sim \del{\frac{f_{\beta}(x)}{f_{\alpha}(x)}t, x}
+    \in (\C \times U_{\beta}).
+  \]
+  We will show that it is an equivalence relation.
+  In what follows, we denote an element of $\C \times U_{\alpha}$
+  by $(t,x)_{\alpha}$ etc.
+  Note that there is a relation $(t,x)_{\alpha} \sim (s,y)_{\beta}$
+  if and only if $x = y \in U_{\alpha} \cap U_{\beta}$
+  and $s = \frac{f_{\beta}(x)}{f_{\alpha}(x)}t$.
+  
+  \noindent
+  \textbf{Reflexive:}
+  The goal is to show that $(t,x)_{\alpha} \sim (t,x)_{\alpha}$ for any $\alpha$.
+  We just need to show that $t = \frac{f_{\alpha}(x)}{f_{\alpha}(x)}t$,
+  but this is also clear so this is pretty much immediate.
+  
+  \noindent
+  \textbf{Symmetric:}
+  Given $(t,x)_{\alpha} \sim (s,y)_{\beta}$
+  we show $(s,y)_{\beta} \sim (t,x)_{\alpha}$.
+  The conditions for the relation are pretty much symmetric,
+  and the only not exactly trivial thing is to show given that
+  \[
+    s = \frac{f_{\beta}(x)}{f_{\alpha}(x)}t,
+  \]
+  that we also have
+  \[
+    t = \frac{f_{\alpha}(x)}{f_{\beta}(x)}s,
+  \]
+  but we get this by multiplying both sides of the expression given
+  by $\frac{f_{\alpha}(x)}{f_{\beta}(x)}$.
+  
+  \noindent
+  \textbf{Transitivity:}
+  It is clear that if $x = y \in U_x \cap U_y$
+  and $y =  \in U_y \cap U_z$ then $x = z \in U_x \cap U_z$.
+  It also follows from basic fraction multiplication that given
+  \[
+    s = \frac{f_{\beta}(x)}{f_{\alpha}(x)}t \tand
+    r = \frac{f_{\gamma}(x)}{f_{\beta}(x)}s,
+  \]
+  we can conclude:
+  \[
+    r = \frac{f_{\gamma}(x)}{f_{\alpha}(x)}t,
+  \]
+  and thus transitivity follows,
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Check that the canonical line bundle of $\CP^n$ is isomorphic
+  to $\O(-n-1)$, for any $n \geq 1$.
+\end{exercise}
+\begin{solution}
+  Let us compute the canonical line bundle $K$ of $\CP^n$.
+  Rational sections of $K$ are rational differential $n$-forms,
+  so we can pick one of them and compute the corresponding Cartier divisor.
+  In fact, each $n$-form $f(z_1,\dots,z_n) \dz_1 \wedge \cdots \wedge \dz_n$
+  will correspond to $f(z_1,\dots,z_n)$ which will give us a Cartier divisor.
+  Let us start with a general form:
+  \[
+    \omega =
+    \dif\del{\frac{x_1}{x_0}}
+    \dif\del{\frac{x_2}{x_0}} \cdots
+    \dif\del{\frac{x_n}{x_0}},
+  \]
+  which is precisely $\dz_1 \wedge \dz_2 \wedge \cdots \wedge \dz_n$,
+  for the coordinates on $U_0$.
+  Thus the corresponding function is $f_0 = 1$.
+  We now wish to compute it on the rest of the charts.
+  We see from computations similar to those we did in class
+  in the $\CP^2$ case that for a chart $U_{\alpha}$
+  for some natural $0 < \alpha \le n$ that:
+  \begin{align*}
+    \omega &=
+    \dif\del{\frac{x_1}{x_{\alpha}(\frac{x_0}{x_{\alpha})^{-1}} }} \cdots
+    \dif\del{\frac{x_\alpha}{x_0}}^{-1} \cdots
+    \dif\del{\frac{x_n}{x_{\alpha}(\frac{x_0}{x_{\alpha})^{-1}} }} = \cdots \\ &=
+    -\del{\frac{x_{0}}{x_{\alpha}}}^{-n-1} 
+    \dif\del{\frac{x_0}{x_{\alpha}}} \cdots
+    \widehat{\dif\del{\frac{x_{\alpha}}{x_{\alpha}}}} \cdots
+    \dif\del{\frac{x_n}{x_{\alpha}}},
+  \end{align*}
+  which gives us $f_{\alpha} = \del{\frac{x_{0}}{x_{\alpha}}}^{-n-1}$
+  (the sign does not matter since it is an invertible function).
+  Thus, the corresponding Weil divisor is $(-n-1)[\set{x_0 = 0}]$,
+  and thus the canonical line bundle of $\CP^n$ is isomorphic to $\O(-n-1)$
+  for any $n \geq 1$.
+\end{solution}
+
+\newpage
+
+\section{Cubic curve in \texorpdfstring{$\CP^2$}{CP}. Group law.}
+
+\begin{exercise}
+  Extend the count of the codimension of the bad locus to
+  arbitrary hypersurfaces of degree $d$ in $\CP^n$ by again figuring out what it
+  takes to be singular at $(1 : 0 : . . . : 0)$.
+\end{exercise}
+\begin{solution}
+  Suppose that $\set{f = 0}$ is singular at $(1 : 0 : . . . : 0)$.
+  This point lies in $U_0$ and we can dehomogenize $f = 0$ to the equation:
+  \[
+    \sum_{|\alpha| = d}
+    c_{\alpha}
+    \del{\frac{x_1}{x_0}}^{\alpha_1}
+    \del{\frac{x_2}{x_0}}^{\alpha_2} \cdots
+    \del{\frac{x_n}{x_0}}^{\alpha_n} = 0,
+  \]
+  where $\alpha$ is a multi-index with $n+1$ entries, and its first
+  entry (with index $0$) is given by $d - \sum_i \alpha_i$.
+  In order for this curve to pass through $(1 : 0 : . . . : 0)$ (the origin
+  of $U_0$), we need to have no constant term,
+  which means that $c_{(d,0,\dots,0)} = 0$.
+  Moreover, if any of the linear terms is nonzero,
+  the function is smooth at $(1 : 0 : . . . : 0)$ (from the inverse
+  function theorem), and if we write the variables of $U_0$
+  with $u_i := \frac{x_i}{x_0}$, we get that the curve is:
+  \[
+    f(1,u_1,\dots,u_n) =
+    \sum_{|\alpha| = d}
+    c_{\alpha}
+    \vec u^{\alpha} = 0,
+  \]
+  and since as mentioned we require $\frac{\partial f}{\partial {u_i}}(0) = 0$,
+  we get that $c_{\beta_i}$ where $\beta_i$ is the multi-index with $1$
+  in the $i$th index and $0$ everywhere else (except the $0$ index in which
+  it is $d$), must be $0$ for all $1 \le i \le n$.
+  In total, we get that
+  \[
+    c_{(d,0,\dots,0)} =
+    \beta_1 = \cdots = \beta_{n} = 0.
+  \]
+  Thus, the subspace of the coefficient space is of condimension $n+1$.
+\end{solution}
+
+\begin{exercise}
+  For the curve $E$ given by
+  \[
+    y^2 z = (x - \alpha_1 z) (x - \alpha_2 z) (x - \alpha_3 z),
+  \]
+  where $\alpha_i$ are distinct
+  and $O = (0 : 1 : 0)$ compute
+  explicitly the sum $A + B$ for $A = (x_1 : y_1 : 1)$ and $B = (x_2 : y_2 : 1)$
+  (you can assume $x_1 \neq x_2$).
+  Verify that the operation is associative.
+  % Hint: write a parametric equation of the line $AB$,
+  % restrict the equation of $E$ to it and
+  % then use the Vieta’s formula for the sum of three roots of a cubic polynomial.
+  % Don’t be shy about using software for algebraic manipulations.
+\end{exercise}
+\begin{solution}
+  We work in the affine chart $z = 1$.
+  The line through $A$ and $B$ has the equation:
+  \[
+    \ell \colon y = \lambda x + \nu,
+    \quad \text{where }
+    \lambda = \frac{y_2 - y_1}{x_2 - x_1},
+    \quad \text{and } \nu = y_1 - \lambda x_1.
+  \]
+  Once we subtitute $y = \lambda x + \nu$ into the euqation of the curve
+  we get:
+  \[
+    (\lambda x + \nu)^2 = (x - \alpha_1 z) (x - \alpha_2 z) (x - \alpha_3 z),
+  \]
+  which is a cubic equation in $x$, whose $3$ roots are exactly the $x$-coordinates
+  of the intersections of $\ell$ with $E$ (for a sanity check, indeed
+  there are $3$ intersections from B\'ezout's theorem).
+  Two of these roots are $x_1$ and $x_2$,
+  and if we denote the third root by $x_3$,
+  by Vieta's formula we get that:
+  \[
+    x_1 + x_2 + x_3 = \alpha_1 + \alpha_2 + \alpha_3 + \lambda^2,
+  \]
+  or simply $x_3 = \alpha_1 + \alpha_2 + \alpha_3 + \lambda^2 - x_2 - x_1$.
+  The group law states that $A + B$ is the third intersection
+  of the line $OX$ with $E$ (the one that is not $O$ nor $X$),
+  or in other words (since the cubic curve is symmetric with respect to the
+  $x$-axis),
+  the reflection across the $x$-axis of $(x_3 : y_3 : 1)$.
+  Thus we get that $A + B = (x_3 : -y_3 : 1)$.
+  We can verify that this group law is associative in modern mathmatical
+  sofware (such as SageMath).
+\end{solution}
+
+\begin{exercise}
+  Verify that $O$ is the identity of the group law on $E$.
+  Verify that the inverse $B$ of $A \in E$
+  is the third intersection point of the line $AO$ with $E$.
+\end{exercise}
+\begin{solution}
+  As we saw, in general the group law with resepct to $O = (0 : 1 : 0)$
+  in the chart $z = 1$ states that $A+B$ is the reflection
+  of the third intersection point of the line $AB$ with $E$ with respect to the $x$-axis.
+  If $A = A$ and $B = O$ then we get the reflection of the third intersection
+  point of $AO$ with $E$, which is in itself the reflection of $A$ with resepct
+  to $x$-axis, and since reflection is an involution
+  (and by that I mean that it is the inverse of itself) we get that $A + O = A$.
+
+  Suppose that $B$ is the third intersection point of the line $AO$ with $E$.
+  As we saw (since the cubic curve is symmetric with respect to the $x$-axis),
+  it is simply the reflection of $A$ with respect to the $x$-axis so
+  $B = (x_A,-y_A)$.
+  We then have that $A + B$ is the reflection of the third intersection point
+  of the line $AB$ with $E$ with respect to the $x$-axis,
+  or in other words, the reflection of $O$ with respect to the $x$-axis,
+  but this is just $O$ itself in the projective space!
+  This shows that $A + B = O$ which completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Cubic curves as complex Lie groups. Lattice description. Elliptic functions.}
+
+\begin{exercise}
+  Prove that for every lattice $\Lambda$ there exists a constant $c$ such
+  that the number of $l \in L$ with $k \le |l| < k + 1$ is at most $c k$
+  for all $k \geq 1$.
+  % Hint: Argue that the union of fundamental parallelograms of L centered at
+  % such l lies in a certain annulus and thus has smaller area.
+\end{exercise}
+\begin{solution}
+  Let every lattice point $l \in \Lambda$ a copy $F_l$
+  of the fundamental parallelogram centered at $l$
+  which is simply $F_l := l + F$.
+  Note that $\set{F_l}_{l \in \Lambda}$ partition the plane.
+  Define:
+  \[
+    S_k :=
+    \set{l \in \Lambda \mid k \le |l| < k + 1},
+  \]
+  and let $U_k := \bigcup_{l \in S_k} F_l$.
+  Each $F_{l}$ has area $\area(F)$,
+  and so $\area(U_k) = |S_k| \cdot \area(F)$.
+  Let $R := \diam(F)/2$.
+  Since this is the maximal distance from the center of a parallelogram
+  to any other point in the parallelogram we get:
+  \[
+    U_k \subset
+    \set{z \in \C \mid k - R \le |z| \le k + 1 + R} =: A_k.
+  \]
+  We can compute using a known formula for the area of an annulus
+  and see that:
+  \[
+    \area(A_k) = \pi\del{(k + 1 + R)^2 - (k - R)^2} = \cdots = \O(k),
+  \]
+  as $k \to \infty$.
+  This implies that $\area(A_k) \le C k$ for some constant $C$ depending
+  only on the lattice $\Lambda$.
+  Since $U_k \subset A_k$ we get that:
+  \[
+    |S_k| \cdot \area(F) = \area(U_k) \le \area(A_k) \le C k,
+  \]
+  and so it follows that
+  \[
+    |S_k| \le \frac{C}{\area(F)} k =: ck,
+  \]
+  for all $k \geq 1$ for a sufficienly large $C$,
+  which gives us a sufficiently large $c := \frac{C}{\area(F)}$.
+\end{solution}
+
+\begin{exercise}
+  Prove that for any even elliptic function $f$ and any $a \in \half \Lambda$
+  the order of pole or zero of $f$ at $a$ is even.
+  % Hint: Consider the Laurent power
+  % series of f at a and use f(2a −z) = f(−z) = f(z).
+\end{exercise}
+\begin{solution}
+  It suffices to show this claim for half-periods in the fundamental
+  parallelograms.
+  Let $\omega$ be a period of $f$ and $z \in \C$.
+  Since $f$ is even we have:
+  \[
+    f(\omega/2 + z) =
+    f(\omega/2 + z - \omega) =
+    f(-\omega/2 + z) =
+    f(\omega/2 - z).
+  \]
+  This holds for any $z \in \C$, and if we look at what this means
+  on the level of the Laurent expansions of $f$ at $a := \omega/2$ we get:
+  \[
+    \sum_{n=-m}^{\infty} c_n (z)^n =
+    \sum_{n=-m}^{\infty} c_n (-z)^n =
+    \sum_{n=-m}^{\infty} c_n (-1)^{n}(z)^n,
+  \]
+  and thus by uniqueness of the Laurent series we must have $c_n = (-1)^{n} c_n$,
+  and thus when $n$ is odd $c_n = 0$.
+  Since only positive powers appear in the Laurent series expansion,
+  we can conclude if $\omega/2$ were a pole (or zero, in which case $m$
+  is negative) its order must be even.
+\end{solution}
+
+\begin{exercise}
+  Prove that every elliptic function can be uniquely written
+  as a sum of an even and an odd elliptic functions.
+\end{exercise}
+\begin{solution}
+  First we recall that $\wp$ is even and $\wp'$ is odd.
+  Recall that we can write $f$ as the sum of the even and odd
+  functions:
+  \[
+    f_{\text{even}}(z) := \frac{f(z) + f(-z)}{2} \tand
+    f_{\text{odd}}(z) := \frac{f(z) - f(-z)}{2}.
+  \]
+  Since $f$ is $\Lambda$-periodic (where $\Lambda$ is the lattice of the
+  elliptic function), we have that for any $\omega \in \Lambda$ that:
+  \[
+    f_{\text{even}}(z+\omega) =
+    \frac{f(z+\omega) + f(-(z+\omega))}{2} =
+    \frac{f(z) + f(-z)}{2} =
+    f_{\text{even}}(z),
+  \]
+  and similarly,
+  \[
+    f_{\text{odd}}(z+\omega) =
+    \frac{f(z+\omega) - f(-(z+\omega))}{2} =
+    \frac{f(z) - f(-z)}{2} =
+    f_{\text{odd}}(z),
+  \]
+  so both functions of the decomposition are $\Lambda$-periodic,
+  and therefore elliptic.
+
+  Suppose that this decomposition is not unique,
+  so that we can also write $f$ as the sum of some $g_{\text{even}}$
+  and $g_{\text{odd}}$.
+  Then we get that:
+  \[
+    f_{\text{even}} - g_{\text{even}} =
+    g_{\text{odd}} - f_{\text{odd}}.
+  \]
+  Since the left-hand side is even, and the right-hand side is odd,
+  we must have that both sides are the constant zero function.
+  This implies that the decomposition is unique and completes the proof.
+\end{solution}
+
+%% LOST CODE
+
+\newpage
+
+\section{Genus of complex algebraic curves and Riemann--Hurwitz formula}
+
+\begin{exercise}
+  Prove that for a nonconstant holomorphic function $f$ with $f(0) = 0$
+  the number of solutions to $f(0) = \epsilon$ is equal,
+  for all small nonzero $\epsilon$,
+  to the smallest $k$ such that the $k$th derivative of $f$ at $z = 0$
+  is nonzero.
+  Hint: Since $f'(z)$ is holomorphic, there is a neighborhood where $f'(z)$ has
+  no other zeros than perhaps $z = 0$.
+  Thus any zeros of $f(z) - \epsilon$ will be simple.
+  Then you can count the their number in a circle $|z| < \alpha$ by
+  \[
+    \frac{1}{2 \pi i} \oint_{|z| = \alpha} \frac{f'(z)}{f(z) - \epsilon} \dz.
+  \]
+  It is continuous in $\epsilon$ for $\epsilon$ close to $0$,
+  and is equal to
+  $\frac{1}{2 \pi i} \oint_{|z| = \alpha} \frac{f'(z)}{f(z)} \dz$.
+\end{exercise}
+\begin{solution}
+  Without loss of generality assume that $0$ is the only zero of $f$
+  (otherwise, we repeat the process for all zeros seperately and sum
+  the results).
+  Since $f$ is holomorphic at $0$ with a zero at $z = 0$ of order $k$,
+  there exists a holomorphic function $g$ with $g(0) \neq 0$ such that
+  \[
+    f(z) = z^k g(z),
+  \]
+  for all $|z| \le a$ for some sufficiently small $a > 0$.
+  Since $g(0) \neq 0$, this means that there exists some $b > a > 0$
+  such that $g(z) \neq 0$ for all $0 < |z| < b$, and thus $f(z) \neq 0$
+  on that punctured disc $D_b'(0)$.
+  Since $f'$ is also holomorphic on that disc, from the same argument,
+  there also exists some punctured disc $D_c'(0)$ such that
+  $f'(z) \neq 0$ for $z \in D'_c(0)$.
+  Let $\epsilon \neq 0$, and suppose that $f(z) = \epsilon$
+  for some $z \in B := D_b'(0) \cap D_c'(0)$.
+  Since $z \neq 0$, it follows that $f'(z) \neq 0$,
+  and therefore all zeros of $f(z) - \epsilon$ in $B$
+  are simple.
+
+  Now take $\alpha > 0$ and $\epsilon > 0$
+  sufficiently small such that $f(z) \neq 0$ and $f(z) \neq 0$
+  on $0 < |z| < a$ and all solutions of $f(z) = \epsilon$
+  (for small $|\epsilon|$) lie inside $0 < |z| < a$.
+  Denote the number of solutions to $f(z) = \epsilon$ by $N(\epsilon)$.
+  We can now compute $N(\epsilon)$ by using the argument principle:
+  \[
+    N(\epsilon) =
+    \frac{1}{2 \pi i} \oint_{|z| = a} \frac{f'(z)}{f(z) - \epsilon} \dz.
+  \]
+  Note that $N(\epsilon)$ must be an integer,
+  but also, since the integrand is a continuous function,
+  $N(\epsilon)$ is continuous, and therefore it must be constant.
+  It follows that:
+  \[
+    N(\epsilon) = N(0) =
+    \frac{1}{2 \pi i} \oint_{|z| = a} \frac{f'(z)}{f(z)} \dz = k,
+  \]
+  since $f(z)$ is holomorphic, nonzero on values in $D_a(0)$ other than
+  $z = 0$, and has a zero of order $k$ at $z = 0$.
+  This completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Check the claim of Remark $14.2$ for the map $f \colon \CP^1 \to \CP^1$
+  that sends $(x_0 : x_1)$ to $(x_0^n : x_1^n)$ for some positive integer $n$.
+\end{exercise}
+\begin{solution}
+  Since $\CP^1$ is the Riemann sphere we use the standard result
+  that $\Mer(\CP^1) = \C(z)$.
+  Since here $X = Y = \CP^1$,
+  it is clear that $\Mer(X)$ and $\Mer(Y)$ are fields of transcendence
+  degree $1$ over $\C$ (Since $\mathrm{t.r.}\deg_{\C}(\C(z)) = 1$).
+
+  Choose the affine coordinate $z = \frac{x_0}{x_1}$ on $\CP^1$.
+  In this coordinate, the map becomes $z \mapsto z^n$.
+  Then the pullback map $f^* \colon \Mer(\CP^1) \to \Mer(\CP^1)$
+  is given by $f^*(\varphi)(z) = \varphi(z^n)$.
+  Since $\Mer(\CP^1) = \C(z)$ we get that:
+  \[
+    f^*(\C(z)) = \C(z^n) \subseteq \C(z) = \Mer(X).
+  \]
+  Hence the field extension $\Mer(Y)/\Mer(X)$ is
+  of degree $[\Mer(Y) : \Mer(X)] = [\C(z^n) : \C(z)] = n$,
+  which is indeed the degree of the map $z \mapsto z^n$.
+  Since algebraic topology is not a prerequisite to this class let
+  us compute the degree of the map $z \mapsto z^n$.
+  We have that for a generic point $(a : 1) \in \CP^1$
+  with $a \neq 0$ the equation $z^n = a$ has exactly $n$ distinct solutions
+  in the respective chart in $\CP^1$ which shows that
+  $\deg f = n = [\Mer(Y) : \Mer(X)]$ and completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Prove the last claim of the section.
+  Hint: First argue that for $k \geq 5$ the right hand side is at least $\half$.
+  Then for $k = 4$ the right hand is positive,
+  so at least one of $n_i$ is $3$ or more,
+  which gives at least $-2 + \half + \half + \half + \frac{2}{3} = \frac{1}{6}$.
+  If $k \le 2$, the right hand side is negative, so we must have $k = 3$, etc.
+\end{exercise}
+\begin{solution}
+  Let us denote:
+  \[
+    R_k := -2 + \sum_{i=1}^{k} \frac{n_i - 1}{n_i}.
+  \]
+  Since $R_k$ must be positive and $n_i$ are integers,
+  and each of $n_i$ is at least $2$,
+  the minimal value of $R_k$ for $k \geq 5$ is achieved when $n_i = 2$
+  for all $1 \le i \le k$.
+  We get that for $k \geq 5$ we have:
+  \[
+    R_k \geq -2 + \sum_{i=1}^{5} \frac{2 - 1}{2} = \half > \frac{1}{42}.
+  \]
+  For $k = 4$, we still need $R_k > 0$,
+  but all $n_i$ are integers and at least $2$.
+  Since $-2 + \sum_{i=1}^{4} \half = 0$,
+  we conclude that at least one $n_i$ is $3$ and since:
+  \[
+    R_4 \geq -2 + \half + \half + \half + \frac{2}{3} = \frac{1}{6} > \frac{1}{42},
+  \]
+  we also get that $R_4$ is at least $1/6$ so the inequality is again satisfied.
+  For $k \le 2$ we see that:
+  \[
+    R_k =
+    -2 + \sum_{i=1}^{k} \frac{n_i - 1}{n_i} \le
+    -2 + \sum_{i=1}^{2} \frac{n_i - 1}{n_i} \le
+    -2 + \frac{(n_1 - 1)(n_2 - 1)}{n_1 n_2} \le -1 < 0,
+  \]
+  so for $R_k$ to break the inequality, $k$ must be $3$.
+  However, it does not break the inequality, since:
+  \[
+    R_3 =
+    -2 + \del{1 - \frac{1}{n_1}} +
+         \del{1 - \frac{1}{n_2}} +
+         \del{1 - \frac{1}{n_3}} =
+    1 -
+      \underbrace{\del{\frac{1}{n_1} + \frac{1}{n_2} + \frac{1}{n_3}}}_{= S_{(n_1,n_2,n_3)}}.
+  \]
+  Since $n_1,n_2,n_3 \geq 2$ are integers, and our goal is to find
+  the maximum value of $S_k$ such that it is less than $1$.
+  It is then left to check options by reverse lexicographical order (right dictionary order),
+  on the set $\set{(n_1,n_2,n_3) \mid n_i \in \Z_{\geq 2}}/\sim$
+  where $\sim$ is the equivalence relation of permutations.
+  We get that:
+  \begin{align*}
+    S_{(2,2,2)} &= \half + \half + \half > 1, \\
+    S_{(2,3,2)} &= \half + \frac{1}{3} + \half > 1, \\
+    S_{(2,3,3)} &= \half + \frac{1}{3} + \frac{1}{3} > 1, \\
+    S_{(2,3,4)} &= \half + \frac{1}{3} + \frac{1}{4} > 1, \\
+    S_{(2,3,5)} &= \half + \frac{1}{3} + \frac{1}{5} > 1, \\
+    S_{(2,3,6)} &= \half + \frac{1}{3} + \frac{1}{6} = 1, \\
+    S_{(2,3,7)} &= \half + \frac{1}{3} + \frac{1}{7} < 1,
+  \end{align*}
+  and thus $S_{(2,3,7)} = \half + \frac{1}{3} + \frac{1}{7} = \frac{41}{42}$,
+  is our desired value, and $R_3 \geq \frac{1}{42}$ as wanted,
+  which completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Blowup of a point in \texorpdfstring{$\C^2$}{C}.
+  Birational equivalence of algebraic varieties.}
+
+\begin{exercise}
+  Check that the blowup $S$ of $\C^n$ at the origin can be identified
+  with the line bundle $\O(-1) \to \CP^{n-1}$.
+\end{exercise}
+\begin{solution}
+  Recall that $S$ is simply:
+  \[
+    S =
+    \set{(z, [l]) \in \C^n \times \CP^{n-1} \mid z \in L},
+  \]
+  where $L$ is the line in $\C^n$ represented by the point $[l] \in \CP^{n-1}$.
+  The tautological line bundle over $\CP^{n-1}$ is defined such that
+  the fiber over a point $[l] \in \CP^{n-1}$ is the line $L \subset \C^n$
+  that the point $[l]$ represents.
+  In other words, a total space $E$ defined by:
+  \[
+    E = \set{([l],v) \in \CP^{n-1} \times \C^n \mid v \in L},
+  \]
+  where $L$ is the line in $\C^n$ represented by the point $[l] \in \CP^{n-1}$.
+  The total space of the bundle also comes with the projection
+  map $\O(-1) \to \CP^{n-1}$ given by $\pi([l],v) = [l]$.
+  The identification is clearly given by the map $\psi \colon S \to E$
+  defined by $\psi(z,[l]) = ([l],z)$.
+  It is left to show that $\psi$ is an isomorphism of complex manifolds.
+  Clearly $\psi$ is well defined, and it is also clearly a bijection
+  as a reordering of the components of the product.
+  Since both $\psi$ and $\psi^{-1}$ are a reordering of components of the products,
+  and a reordering of components it is just the identity in local coordinates,
+  both of these maps are in particular holomorphic.
+  It follows that $\psi$ is a biholomorphism, which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Let $W$ be the subset of $\CP^2 \times \CP^2$ given by the conditions
+  that the points $(x_0 : x_1 : x_2) \times (y_0 : y_1 : y_2)$
+  satisfy $x_0 y_0 = x_1 y_1 = x_2 y_2$.
+  Prove that $W$ is a smooth surface.
+  Verify that the projection maps $W \to \CP^2$ are birational
+  and find the image of the exceptional locus (i.e. points
+  in $\CP^2$ with more than one preimage point).
+  \textbf{Remark:} $W$ is the closure of the graph of the Cremona transformation
+  $(x_0 : x_1 : x_2) \mapsto (\frac{1}{x_0} : \frac{1}{x_1} : \frac{1}{x_2})$.
+\end{exercise}
+\begin{solution}
+  The space $W$ is defined by the equations $x_0 y_0 = x_1 y_1$ and
+  $x_1 y_1 = x_2 y_2$.
+  In order to check smoothness, we verify that the Jacobian of the map
+  on any affine chart is of full rank $2$.
+  Consider the chart $U = \set{x_0 \neq 0 \stand y_1 \neq 0}$.
+  Once we set $x_0 = y_1 = 1$, the equations become
+  $y_0 = x_1$ and $x_1 = x_2 y_2$.
+  Then $W$ is given by the zeros of the function:
+  \[
+    F(x_1,x_2,y_0,y_2) := (y_0 - x_1, x_1 - x_2 y_2).
+  \]
+  The Jacobian matrix is:
+  \[
+    \Dif F(x_1,x_2,y_0,y_2) =
+    \begin{pmatrix}
+      \frac{\partial F_1}{\partial x_1} &
+      \frac{\partial F_1}{\partial x_2} &
+      \frac{\partial F_1}{\partial y_0} &
+      \frac{\partial F_1}{\partial y_2} \\
+      \frac{\partial F_2}{\partial x_1} &
+      \frac{\partial F_2}{\partial x_2} &
+      \frac{\partial F_2}{\partial y_0} &
+      \frac{\partial F_2}{\partial y_2}
+    \end{pmatrix} =
+    \begin{pmatrix}
+      -1 & 0 & 1 & 0 \\
+      -1 & -y_2 & 0 & -x_2
+    \end{pmatrix},
+  \]
+  where $F_1$, $F_2$ are the first and second coordinates of the function $F$.
+  The Jacobian is clearly of degree $2$ at every point,
+  and thus $W$ is a smooth manifold of dimension $4 - 2 = 2$.
+
+  Let $\pi_1 \colon W \to \CP^2$ be the projection $(x,y) \mapsto x$.
+  On the quasi-projective (dense open set) variety $U = \set{[x_0 : x_1 : x_2] \in \CP^2 \mid
+  x_0 x_1 x_2 \neq 0}$,
+  the equations $x_0 y_0 = x_1 y_1 = x_2 y_2 = \lambda$ imply that $\lambda \neq 0$,
+  thus $y_i = \frac{\lambda}{x_i}$, which means that $y$ is completely
+  determined by $x$ in the following explicit way:
+  \[
+    y = [\frac{1}{x_0} : \frac{1}{x_1} : \frac{1}{x_2}].
+  \]
+  Since $\pi_1$ has a well-defined inverse on $U$ which is an dense open
+  set in $\CP^2$, $\pi_1$ is birational.
+  By symmetry, $\pi_2 \colon (x,y) \mapsto y$ is also birational.
+
+  The exceptional locus of $\pi_1$ (we only consider $\pi_1$ without loss of generality),
+  is by definition the points $x \in \CP^2$ where $\pi_1^{-1}(x)$ is not a single
+  point.
+  We already saw that points without zero coordinates are not in that exceptional
+  locus, so let us consider points with exactly one coordinate zero.
+  Consider for example $x = [0 : 1 : 1]$.
+  The equations are $0 \cdot y_0 = 1 \cdot y_1 = 1 \cdot y_2 = \lambda$.
+  Since $\lambda = 0$, we must have $y_1 = y_2 = 0$,
+  which forces $y = [1 : 0 : 0]$, which is a single point,
+  and thus $x$ is not in the exceptional locus.
+  Next consider a point with two zero coordinates such as $x = [1 : 0 : 0]$.
+  The equations become $1 \cdot y_0 = 0 \cdot y_1 = 0 \cdot y_2 = \lambda$.
+  This forces $y_0 = \lambda = 0$.
+  However, $y_1$ and $y_2$ are free and can be anything.
+  This implies that
+  \[
+    \pi_1^{-1}(x) =
+    \set{[1 : 0 : 0]} \times \set{[y_0,y_1,y_2] \in \CP^2 \mid y_0 = 0} \cong \CP^1.
+  \]
+  Thus $[1 : 0 : 0]$ has more than one preimage,
+  and by symmetry and the previous arguments we conclude that
+  The points in $\CP^2$ with more than one preimage are exactly
+  the three vertices:
+  \[
+    \set{[1 : 0 : 0], [0 : 1 : 0], [0 : 0 : 1]}.
+  \]
+\end{solution}
+
+\begin{exercise}
+  Let $x^2 - y^3 = 0$ be a singular curve on $\C^2$.
+  Compute its proper preimage $(15.2)$ on the blowup $S$ of $\C^2$ at $(0,0)$
+  and verify that it is a smooth curve.
+  \textbf{Hint:} Work in the coordinate charts on $S$.
+\end{exercise}
+\begin{solution}
+  The blowup $S$ of $\C^2$ at the origin is covered by two charts $U_1$
+  and $U_2$, where $S \subset \C^2 \times \CP^1$ with homogeneous coordinates
+  $[u : v]$ for the $\CP^1$ factor.
+  The first chart $U_1$ is where $u \neq 0$
+  so we set $u = 1$ and let $t = v/u$ so that the coordinates are $(x,t)$
+  for $x \in \C$ and the blowup map is $\pi(x,t) = (x,xt)$,
+  where we must have $y = xt$.
+  Similarly, on $U_2$ we have $v \neq 0$ so we set $v = 1$ and let $s = u/v$.
+  The coordinates are $(y,s)$ for $y \in \C$ and the blowup map is $\pi(y,s) = (ys,y)$,
+  where we must have $x = ys$.
+
+  We now need to compute:
+  \[
+    \overline{\pi^{-1}(\C \setminus (\C \cap \pi(\mathrm{Exc})))} =
+    \overline{\pi^{-1}(\C \setminus \set{0,0})}.
+  \]
+  In the first chart $U_1$ where $x \neq 0$ and $y = xt$
+  we get that:
+  \[
+    x^2 - (xt)^3 = 0 \implies
+    x^2 (1 - xt^3) = 0.
+  \]
+  We have $x \neq 0$ in this chart so we divide by $x^2$
+  to find that:
+  \[
+    1 - xt^3 = 0 \implies
+    x = \frac{1}{t^3}.
+  \]
+  Thus the set $\pi^{-1}(\C \setminus \set{0,0})$ in this chart is
+  $\set{(x,t) \mid x = \frac{1}{t^3} \stand x \neq 0}$.
+  The closure of this includes the point it this set when $x \to 0$,
+  but this means $t \to \infty$, however the ``point'' $(0,\infty)$
+  is not in $U_1$ so this set is already a closed set.
+  
+  In the chart $U_2$ where $y \neq 0$ we have $x = sy$ and thus:
+  \[
+    (sy)^2 - y^3 = 0 \implies
+    y^2 s^2 - y^3 = 0 \implies
+    y^2 (s^2 - y) = 0,
+  \]
+  but $y \neq 0$ so we divide by $y^2$ and get $s^2 = y$.
+  Thus the set $\pi^{-1}(\C \setminus \set{0,0})$ in this chart is
+  $\set{(s,y) \mid y = s^2 \stand y \neq 0}$.
+  The closure of this set is this union the point when we take $y \to 0$,
+  which means $s \to 0$, and thus it also includes the point $(0,0)$.
+
+  The global preimage is now simply the union of these sets:
+  \[
+    \set{(s,y) \mid y = s^2 \stand y \neq 0} \cup \set{(0,0)} \cup
+    \set{(x,t) \mid x = \frac{1}{t^3} \stand x \neq 0}.
+  \]
+
+  We now have to verify that the preimage is a smooth curve.
+  We check the derivative of the local defining equation in $U_2$.
+  Let $g(s,y) = s^2 - y$, then the partial derivatives are:
+  \[
+    \frac{\partial g}{\partial s} = 2s \stand
+    \frac{\partial g}{\partial y} = -1.
+  \]
+  A singularity point can only exist when both derivatives vanish,
+  but since the derivative with respect to $y$ is the constant $1$,
+  this is never the case.
+  Similarly, for $h(x,t) = 1 - xt^3$ the partial derivatives are:
+  \[
+    \frac{\partial h}{\partial x} = -t^3 \stand
+    \frac{\partial h}{\partial t} = -3xt^2.
+  \]
+  A singularity point can only exist when both derivatives vanish,
+  but this can only happen when $t = 0$.
+  However when $t = 0$ in our equation we have $h(x,0) = 1 - 0 = 0$,
+  so this point is not on our curve.
+  This completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Finite group actions on affine algebraic varieties.}
+
+\begin{exercise}[Molien series]
+  Let $V$ be a complex finite-dimensional representation of a finite group $G$.
+  It induces a grading-preserving action of $G$ on $\Sym^*(V) \cong \C[x_1,\dots,x_n]$.
+  Prove that the Hilbert series of the ring of invariants $\Sym^*(V)^G$ can be
+  computed by:
+  \[
+    \sum_{d=0}^{\infty} \dim_{\C} \del{\Sym^d(V)}^G t^d =
+    \frac{1}{|G|} \sum_{g \in G} \prod_{i=1}^{n} \frac{1}{1 - \lambda_{g,i} t} =
+    \frac{1}{|G|} \sum_{g \in G} \det(1 - t g)^{-1},
+  \]
+  where $\lambda_{g,1},\dots,\lambda_{g,n}$ are eigenvalues of $g$ on $V$.
+  Hint: For a finite-dimensional $G$-representation $W$ we have
+  $\dim_{\C} W^G = \frac{1}{|G|} \sum_{g \in G} \tr(g,W)$.
+  Then use the result that all finite order elements in $\GL(V)$
+  are diagonilizable.
+\end{exercise}
+\begin{solution}
+  We can use the hint in order to conclude that:
+  \[
+    \sum_{d=0}^{\infty} \dim_{\C} \del{\Sym^d(V)}^G t^d =
+    \sum_{d=0}^{\infty} \del{\frac{1}{|G|} \sum_{g \in G} \tr(g,\Sym^d(V))} t^d.
+  \]
+  Since the inner sum is finite we can swap the order of summation
+  and get:
+  \[
+    \sum_{d=0}^{\infty} \dim_{\C} \del{\Sym^d(V)}^G t^d =
+    \frac{1}{|G|} \sum_{g \in G} \del{\sum_{d=0}^{\infty} \tr(g,\Sym^d(V)) \cdot t^d}.
+  \]
+  Since $G$ is finite, all elements in $G$ have finite order,
+  and thus all of them are diagonalizable.
+  Let the eigenvalues of $g$ acting on $V$
+  be $\lambda_{g,1},\dots,\lambda_{g,n}$.
+  By the previous remark, there exists a basis $\set{v_1,\dots,v_n}$ of $V$
+  such that $g(v_i) = \lambda_{g,i} v_i$,
+  and thus the induced action on the symmetric algebra $\Sym^d(V)$ has
+  a basis consisting of monomials $v_1^{\alpha_1} \cdots v_n^{\alpha_n}$
+  where $\sum a_i = d$. The action on these monomials is:
+  \[
+    g \cdot \del{v_1^{\alpha_1} \cdots v_n^{\alpha_n}} =
+    \del{\lambda_{g,1}^{\alpha_1} \cdots \lambda_{g,n}^{\alpha_n}}
+      v_1^{\alpha_1} \cdots v_n^{\alpha_n}.
+  \]
+  The trace $\tr(g,\Sym^d(V))$ is simply the sum of these eigenvalues
+  over all possible combinations of $\alpha_i$ which is:
+  \[
+    \tr(g,\Sym^d(V)) =
+    \sum_{\alpha_1 + \cdots + \alpha_n = d}
+      \lambda_{g,1}^{\alpha_1} \cdots \lambda_{g,n}^{\alpha_n}.
+  \]
+  Now go back to our original equation for the Hilbert series,
+  and consider the inner (infinite) sum of a fixed element $g \in G$:
+  \[
+    \sum_{d=0}^{\infty} \tr(g,\Sym^d(V)) \cdot t^d =
+    \sum_{d=0}^{\infty} \del{\sum_{\alpha_1 + \cdots + \alpha_n = d}
+      \lambda_{g,1}^{\alpha_1} \cdots \lambda_{g,n}^{\alpha_n}} \cdot t^d.
+  \]
+  This is exactly the expansion of a product of geometric series:
+  \[
+    \sum_{d=0}^{\infty} \tr(g,\Sym^d(V)) \cdot t^d =
+    \prod_{i=1}^{n} \del{\sum_{\alpha_i = 0}^{\infty} (\lambda_{g,i} t)^{\alpha_i}} =
+    \prod_{i=1}^{n} \frac{1}{1 - \lambda_{g,i} t}.
+  \]
+  Finally, we recall that for any linear operator $A$,
+  its determinant is just the product of its eigenvalues
+  $\det(I - tA) = \prod (1 - t \lambda_i)$.
+  Thus we get that:
+  \[
+    \prod_{i=1}^{n} \frac{1}{1 - t \lambda_{g,i}} =
+    \frac{1}{\prod_{i=1}^{n} 1 - t \lambda_{g,i}} =
+    \frac{1}{\det(1 - tg)}.
+  \]
+  We can now conclude that:
+  \[
+    \sum_{d=0}^{\infty} \dim_{\C} \del{\Sym^d(V)}^G t^d =
+    \frac{1}{|G|} \sum_{g \in G} \frac{1}{\det(1 - tg)},
+  \]
+  which concludes the proof.
+\end{solution}
+
+\begin{exercise}
+  Let $M$ be a Hermitean form on $\C^n$ given by $\ip{v}{w} = \bar w^T M v$.
+  Prove that an endomorphism:
+  \[
+    g \colon v \mapsto Av
+  \]
+  satisfies $\ip{Av}{Aw} = \ip{v}{w}$ for all $v$ and $w$ if and only if
+  $\bar A^T M A = M$.
+  Prove that if for some invertible matrix $S$ we have $M = \bar S^T S$,
+  then $S A S^{-1}$ is a unitary matrix.
+\end{exercise}
+\begin{solution}
+  In this exercise we let $^*$ denote conjugate and transpose of a map.
+  We have that:
+  \[
+    \ip{Av}{Aw} =
+    (Aw)^* M (Av) =
+    (w^* A^*) M (Av) =
+    w^* (A^* M A) v.
+  \]
+  The right side of the equality we need to prove
+  is $\ip{v}{w} = w^* M v$.
+  It is then obvious that the equality is satisfied if and only if $M = A^* M A$.
+
+  Next, assume that $M = S^* S$ for some invertible matrix $S$.
+  We must show that $U = S A S^{-1}$ is a unitary matrix.
+  In other words, we need to show that $U^* U = I$.
+  We compute and get that:
+  \[
+    U^* = (S A S^{-1})^*
+    (S^{-1})^* A^* S^*,
+  \]
+  and thus using the assumption that $M = S^* S$ we get:
+  \[
+    U^* U =
+    (S^{-1})^* A^* S^* S A S^{-1} =
+    (S^{-1})^* A^* M A S^{-1},
+  \]
+  and by using the identity $A^* M A = M$ this is just:
+  \[
+    U^* U =
+    (S^{-1})^* I S^{-1} =
+    (S^{-1})^* S^{-1} = I,
+  \]
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Prove that the conjugation action of quaternions preserves the subspace
+  $\R i + \R j + \R k$ and the norm on it.
+\end{exercise}
+\begin{solution}
+  Denote $V := \R i + \R j + \R k$,
+  and recall that each quaternion $q \in \mathbb H$ can be written as
+  $q = a + v$ where $a \in \R$ and $v = bi + cj + dk \in V$.
+  We want to show that for any $0 \neq q \in \mathbb H$ and any $v \in V$
+  we have that $u' := q u q^{-1} \in V$.
+  Recall that $v \in V$ if and only if $\bar v = -v$, this is what we will
+  actually show.
+  We have that:
+  \[
+    \overline{u'} =
+    \overline{q u q^{-1}} =
+    \overline{q^{-1}} \overline u \overline{q}.
+  \]
+  Since in quaternions $q^{-1} = \frac{\overline q}{\norm{q}^2}$,
+  we get that $\overline{q^{-1}} = \frac{q}{\norm{q}^2}$,
+  and since $u \in V$ we get $\overline u = -u$.
+  We can substitute these into the equation and get:
+  \[
+    \overline{u'} =
+    \frac{-q}{\norm{q}^2} u \overline{q} =
+    - q u \frac{\overline{q}}{\norm{q}^2},
+  \]
+  and finally we use $q^{-1} = \frac{\overline q}{\norm{q}^2}$ again and conclude:
+  \[
+    \overline{u'} =
+    - q u \frac{\overline{q}}{\norm{q}^2} =
+    - q u q^{-1} = -u',
+  \]
+  so $u' \in V$ which shows that the
+  action of quaternions preserves the subspace $V := \R i + \R j + \R k$.
+
+  Next, in order to show that it also preserves the norm,
+  we recall that the norm on the quaternions in multiplicative,
+  and then for $u \in V$ we get:
+  \[
+    \norm{q u q^{-1}} =
+    \norm{q} \cdot \norm{u} \cdot \norm{q^{-1}} =
+    \norm{q} \cdot \norm{u} \cdot \frac{\norm{\overline{q}}}{\norm{q}^2} =
+    \norm{q} \cdot \norm{u} \cdot \frac{1}{\norm{q}} = \norm{u},
+  \]
+  where we use the trivial fact that $\norm{\overline{q}} = \norm{q}$
+  in the third inequality.
+\end{solution}
+
+\newpage
+
+\section{Resolutions of \texorpdfstring{$A_n$}{An}
+  and \texorpdfstring{$D_4$}{Dfour} singularities.}
+
+\begin{exercise}
+  \label{ex:subgroups-of-sl}
+  Prove that every cyclic subgroup of $\SL(2,\C)$
+  can be conjugated to the subgroup:
+  \[
+    G = \ll g \gg,
+    g(x,y) = (\xi x, \xi^{-1} y),
+  \]
+  where $\xi = e^{2\pi i/n}$.
+\end{exercise}
+\begin{solution}
+  Let $H = \ll M \gg$ be a cyclic subgroup of $\SL(2,\C)$ of order $n > 1$.
+  Since $M^n = I$, its eigenvalues must be primitive $n$th roots of unity.
+  Since $M \in \SL(2,\C)$, its determinant must be
+  $\det M = \lambda_1 \lambda_2 = 1$,
+  so $\lambda_2 = \lambda_1^{-1} =: \lambda^{-1}$,
+  where $\lambda_1$ and $\lambda_2$ are $M$'s eigenvalues,
+  and $\lambda$ is a more convenient notation we will use to describe.
+  If $\lambda = \lambda^{-1}$, then we have $\lambda^2 = 1$,
+  and thus $\lambda = \pm 1$.
+  However, in both cases, since we consider the matrices up to scalar
+  multiplication either $n = 1$, or $M$ is not diagonalizable,
+  in which case it is conjugate to a Jordan block with a nonzero
+  eigenvalue, so it is not nilpotent, which is also a contradiction,
+  so we conclude that $\lambda \neq \lambda^{-1}$.
+
+  This implies that there exists a matrix $P' \in \GL(2,\C)$
+  such that $P'^{-1} M P' = \diag(\lambda,\lambda^{-1})$,
+  however while $P' \in \GL(2,\C)$,
+  we can actually make sure it is in $\SL(2,\C)$
+  by setting $P := (\sqrt{\det P'})^{-1} P' \in \SL(2,\C)$,
+  and now we still have $P^{-1} M P = \diag(\lambda,\lambda^{-1})$.
+  Note that $g(x,y) = (\xi x, \xi^{-1} y)$ corresponds
+  to the matrix $M_g := \diag(\xi,\xi^{-1})$ where $\xi = e^{2\pi i/n}$.
+  We have shown that $M$ is conjugate to $\diag(\lambda,\lambda^{-1})$.
+  However since $\lambda$ is a primitive root of unity,
+  we get $M^k = M_g$ for some $k \geq 1$,
+  and clearly $M = (M_g)^{k'}$ for some $k'$ coprime to $n$,
+  thus both groups contain the generators of each other and thus
+  subgroup $H$ is conjugate to the group $G$.
+\end{solution}
+
+\begin{exercise}
+  Verify that the proper image of $uv - w^n$ in the chart with coordinates
+  $u$, $\frac{v}{u}$, and $\frac{w}{u}$ is smooth.
+\end{exercise}
+\begin{solution}
+  First let us consider the first chart with coordinates
+  $(u,\alpha,\beta) = (u,\frac{v}{u},\frac{w}{u})$.
+  Under this notation we have $v = u \alpha$ and $w = u \beta$.
+  Subtituting this into the original equation we get:
+  \[
+    u (u \alpha) - (u \beta)^n =
+    u^2 \alpha - u^n \beta^n = 0.
+  \]
+  In order to find the proper preimage,
+  we factor out the exceptional divisor.
+  The lowest power of $u$ is $u^2$ and thus:
+  \[
+    u^2 (\alpha - u^{n-2} \beta^n) =
+    0.
+  \]
+  Thus, the equation for the proper preimage of this chart is:
+  \begin{equation}
+    \label{eq:seven-four}
+    \tilde f(u,\alpha,\beta) = \alpha - u^{n-2} \beta^n = 0.
+  \end{equation}
+  We know that at any singularity point,
+  all the derivatives must vanish together,
+  so let us compute the derivatives:
+  \[
+    \Dif \tilde f_1 =
+    \begin{pmatrix}
+      \diffp{{\tilde f}}{u} \\
+      \diffp{{\tilde f}}{\alpha} \\
+      \diffp{{\tilde f}}{\beta}
+    \end{pmatrix} =
+    \begin{pmatrix}
+      1 \\
+      \text{some value} \\
+      \text{some value}
+    \end{pmatrix} =
+    \begin{pmatrix}
+      0 \\ 0 \\ 0
+    \end{pmatrix}.
+  \]
+  From the first equation $1 = 0$ it is clear that no point
+  satisfies this equality, and so we get that the partial derivatives
+  cannot vanish together,
+  so there cannot be any singularities in this chart.
+  In other words, the proper preimage is smooth in this chart.
+\end{solution}
+
+\begin{exercise}
+  Check that the $D_3$ case is the same as the $A_3$ case in two ways,
+  by looking at the group action, and by making a change of variables in
+  $u^2 + wv^2 + w^2 = 0$.
+\end{exercise}
+\begin{solution}
+  First we consider the equation:
+  \[
+    u^2 + wv^2 + w^2 = 0.
+  \]
+  We complete the square with respect to $w$ and get:
+  \[
+    u^2 + \del{w + \frac{v^2}{2}}^2 - \frac{v^4}{4} = 0.
+  \]
+  Let $X = u$ and $Y = i(w + \frac{v^2}{2})$, and $Z = \frac{u}{\sqrt[4]{4}}$.
+  The equation becomes:
+  \[
+    X^2 - Y^2 - Z^4 = 0 \iff
+    (X - Y)(X + Y) - Z^4 = 0,
+  \]
+  so if we define the coordinate change $U = X - Y$,
+  $V - X + Y$, and $W = Z$ we get that
+  \[
+    UV - W^4 = 0,
+  \]
+  which is the equation for the $A_3$ singularity.
+
+  We know that $A_3$ corresponds to the cyclic group $C_4$,
+  so since $\xi = e^{2\pi i /4} = i$, the generator for the group
+  is $\diag(i,-i)$ and so the map is
+  \[
+    \begin{pmatrix}
+      i & 0 \\
+      0 & -i
+    \end{pmatrix}
+    \begin{pmatrix}
+      x \\ y
+    \end{pmatrix} =
+    \begin{pmatrix}
+      ix \\ -iy
+    \end{pmatrix}.
+  \]
+  Thus the ring of invariants is generated
+  by $w = xy$ and $u = x^4$ and $v = y^4$.
+
+  The generator for the group corresponding to $D_3$
+  is
+  \[
+    g =
+    \begin{pmatrix}
+      0 & i \\
+      i & 0
+    \end{pmatrix},
+  \]
+  and this corresponds to the action $(x,y) \mapsto (yi,xi)$.
+  Clearly the order of the group generated by this map is $4$,
+  which is the same as in the previous calculation
+  and by \Cref{ex:subgroups-of-sl} we get that
+  those two group actions are conjugate, which completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Resolutions of \texorpdfstring{$A_n$}{An} and \texorpdfstring{$D_4$}{D4}
+singularities}
+
+\begin{exercise}
+  Prove that every involution of $\CP^1$ that sends $0$ to $\infty$
+  can be written in the form $z \mapsto \frac{c}{z}$ for some nonzero
+  constant $c$.
+  Then argue that by scaling $z$ we can rewrite it as $z \mapsto \frac{1}{z}$.
+\end{exercise}
+\begin{solution}
+  First recall that every automorphism of the Riemann sphere
+  is simply a M\"obius transformation:
+  \[
+    f(z) = \frac{az + b}{cz + d},
+  \]
+  for $a,b,c,d \in \C$ where $ad - bc \neq 0$.
+  It is determined by its value on $3$ points,
+  so if we just apply the conditions $f(0) = \infty$
+  and $f(\infty)  = 0$ then we get the equations:
+  \begin{align*}
+    0 = f(\infty) = \frac{a}{c} \implies a = 0 \\
+    \infty = f(0) = \frac{b}{d} \implies d = 0.
+  \end{align*}
+  Thus, $f$ is of the form:
+  \[
+    f(z) = \frac{b}{cz} =
+    \frac{c'}{z},
+  \]
+  for some constant $c' := \frac{b}{c} \in \C^{\times}$.
+  Since the function is an involution we also have the condition:
+  \[
+    z = f(f(z)) = f(c'/z) = \frac{c'}{\frac{c'}{z}} = z,
+  \]
+  which holds for all such $c' \in \C^{\times}$.
+  Thus, an involution which satisfies the required conditions
+  is always of the form $z \mapsto \frac{c'}{z}$ for some constant
+  $c' \in \C^{\times}$.
+  Therefore if we scale the map by a factor of $(c')^{-1}$,
+  that is, define the map $g(z) := f(c^{-1}z)$,
+  we get a function $g \colon z \mapsto \frac{(c')^{-1}c'}{z} = \frac{1}{z}$,
+  which also sends $0$ to $\infty$ and $\infty$ to $0$,
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Prove that every order three automorphism of $\CP^1$ can be written as
+  $z \mapsto e^{2\pi/3}z$ in some coordinates.
+  Hint: Consider the corresponding element in $\PGL(2,\C)$ and its
+  eigenvalues (up to common scaling).
+\end{exercise}
+\begin{solution}
+  Every automorphism of $\CP^1$ is a M\"obius transformation:
+  \[
+    f(z) = \frac{az + b}{cz + d},
+  \]
+  for $a,b,c,d \in \C$ where $ad - bc \neq 0$.
+  The corresponding element in $\PGL(2,\C)$,
+  is simply the matrix:
+  \[
+    \begin{pmatrix}
+      a & b \\
+      c & d
+    \end{pmatrix} \longleftrightarrow
+    \frac{az + b}{cz + d} =: A \in \PGL(2,\C).
+  \]
+  Now the condition is that it is of order three,
+  which means that $A^{3} = \lambda I$ for some $\lambda \in \C^{\times}$
+  and $I \in \PGL(2,\C)$.
+  This implies we can scale the matrix $A$,
+  that is, redefine it as $A := \sqrt[3]{\lambda} A$ so that
+  $A^{3} = I$.
+  Thus, the eigenvalues of $A$
+  must be cube roots of unity.
+  That is, if we denote the eigenvalues of $A$ by $\mu_1$ and $\mu_2$,
+  we have $\mu_1,\mu_2 \in \set{1,\omega,\omega^2}$,
+  where $\omega = e^{2\pi/3}$.
+  
+  Assume, by way of contradiction, that $\mu_1 = \mu_2$.
+  In this case, the Jordan normal form of $A$ must be
+  either:
+  \[
+    \begin{pmatrix}
+      \mu_1 & 1 \\
+      0 & \mu_1
+    \end{pmatrix} \tor
+    \begin{pmatrix}
+      \mu_1 & 0 \\
+      0 & \mu_1
+    \end{pmatrix},
+  \]
+  however, we know that $A^3 = I$,
+  so the first option can be discarded (powers of such Jordan
+  blocks are matrices with elements that are powers of $\mu_1$
+  with a binomial coefficient, so its order is infinite, which is
+  a contradiction to the finite order of $A$).
+
+  Now we know that $A$ is a diagonalizble matrix with two distinct
+  eigenvalues (actually the latter implies the former in this case),
+  so we first assume
+  that they are $\mu_1 = 1$ and $\mu_2 = \omega$.
+  This means that there exists a diagonalizing basis in which
+  the transformation becomes:
+  \[
+    \begin{pmatrix}
+      \omega & 0 \\
+      0 & 1
+    \end{pmatrix} \longleftrightarrow
+    \frac{\omega z}{1} \quad \text{so the map is} \quad
+    z \mapsto \omega z,
+  \]
+  where we recall $\omega = e^{2\pi/3}$,
+  so this completes the proof for the $(\mu_1, \mu_2) = (1,\omega)$ case.
+
+  Note that diagonalizble elements in $\PGL(2,\C)$ are determined
+  by the ratio of their eigenvalues, we we do not need to check
+  the $(\mu_1, \mu_2) = (\omega,\omega^2)$ case,
+  and since the $(1,\omega^2)$ case gives a map conjugate to the map $(1,\omega)$
+  (since $\omega^2 = \bar \omega$ and $\bar 1 = 1$),
+  and conjugate maps are the same map under a change of coordinates,
+  the proof is complete.
+\end{solution}
+
+\begin{exercise}
+  Check that the proper preimage of $u^2 + v^3 + w^5 = 0$ has no singular
+  points in the coordinate charts with coordinates $u$, $\frac{v}{u}$,
+  $\frac{w}{u}$ and $\frac{u}{v}$, $v$, $\frac{w}{v}$.
+\end{exercise}
+\begin{solution}
+  First let us consider the first chart with coordinates
+  $(\alpha,\beta,\gamma) = (u,\frac{v}{u},\frac{w}{u})$.
+  Under this notation we have $v = u \alpha$ and $w = u \beta$.
+  Subtituting this into the original equation we get:
+  \[
+    u^2 + (u \alpha)^3 + (u \beta)^5 =
+    u^2 + u^3 \alpha^3 + u^5 \beta^5 =
+    0.
+  \]
+  In order to find the proper preimage,
+  we factor out the exceptional divisor.
+  The lowest power of $u$ is $u^2$ and thus:
+  \[
+    u^2 (1 + u \beta + u^3 \beta^5) =
+    0.
+  \]
+  Thus, the equation for the proper preimage of this chart is:
+  \begin{equation}
+    \label{eq:eight-six}
+    \tilde f_1(u,\alpha,\beta) = 1 + u \alpha^3 + u^3 \beta^5 = 0.
+  \end{equation}
+  We know that at any singularity point,
+  all the derivatives must vanish together,
+  so let us compute the derivatives:
+  \[
+    \Dif \tilde f_1 =
+    \begin{pmatrix}
+      \diffp{{\tilde f_1}}{u} \\
+      \diffp{{\tilde f_1}}{\alpha} \\
+      \diffp{{\tilde f_1}}{\beta}
+    \end{pmatrix} =
+    \begin{pmatrix}
+      \alpha^3 + 3 u^2 \beta^5 \\
+      3 u \alpha^2 \\
+      5 u^3 \beta^4
+    \end{pmatrix} =
+    \begin{pmatrix}
+      0 \\ 0 \\ 0
+    \end{pmatrix}.
+  \]
+  From the second equation it clearly follows that either $u$ or $\alpha$
+  must be zero, however if $u$ is zero then from \Cref{eq:eight-six}
+  we have $1 = 0$ so points of this form are not in the proper preimage,
+  and on the other hand if $\alpha$ is zero then either $u$ is zero,
+  in which case as we saw the point is not in the proper preimage,
+  or $\beta$ is zero, in which case we also get $1 = 0$ so these
+  points are not in the proper preimage either.
+  
+  Since there are no points in the proper preimage $\tilde f_1 = 0$
+  where all the partial derivatives vanish,
+  there cannot be any singularities in this chart.
+  In other words, the proper preimage is smooth in this chart.
+
+  Next consider the chart $(\gamma,v,\delta)$ for $\gamma = \frac{u}{v}$
+  and $\delta = \frac{w}{v}$.
+  Under these coordinates we get that:
+  \[
+    (v \gamma)^2 + v^3 + (v \delta)^5 = 
+    v^2 \gamma^2 + v^3 + v^5 \delta^5 =
+    0.
+  \]
+  We then factor out the exceptional divisor $v^2$ and we get:
+  \[
+    (v \gamma)^2 + v^3 + (v \delta)^5 = 
+    v^2 (\gamma^2 + v + v^3 \delta^5) = 0.
+  \]
+  This shows that the equation of the proper preimage is given by:
+  \[
+    \tilde f_2(\gamma,v,\delta) =
+    \gamma^2 + v + v^3 \delta^5 = 0.
+  \]
+  Then in order to check for singularities we again check if the points
+  on which the Jacobian vanishes are in the proper preimage,
+  and we see that:
+  \[
+    \Dif \tilde f_2 =
+    \begin{pmatrix}
+      \diffp{{\tilde f_2}}{\gamma} \\
+      \diffp{{\tilde f_2}}{v} \\
+      \diffp{{\tilde f_2}}{\delta}
+    \end{pmatrix} =
+    \begin{pmatrix}
+      2\gamma \\
+      1 + 3v^2 \delta^5 \\
+      5 v^3 \delta^4
+    \end{pmatrix} =
+    \begin{pmatrix}
+      0 \\ 0 \\ 0
+    \end{pmatrix}.
+  \]
+  From the third equation either $v$ or $\delta$ must be zero.
+  In case $v$ is zero, the second equation becomes $1 = 0$
+  which is impossible, and in case $\delta$ is zero,
+  the seoncd equation again becomes $1 = 0$.
+  This shows immediately that there are no singular points in the proper
+  preimage.
+  In other words, the proper preimage is smooth in this chart as well,
+  which completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Overview of intersection theory. Surfaces.}
+
+\begin{exercise}
+  \label{ex:nine-one}
+  Use $(19.1)$ in order to check that on the blowup $X$ of a point
+  in $\CP^2$ there holds $(L')^2 = 0$.
+  What is the geometric meaning of this?
+\end{exercise}
+\begin{solution}
+  Recall that we have $[L] = [L'] + [E]$,
+  or with some abuse of notation $L = L' + E$.
+  We then get that:
+  \[
+    (L')^2 =
+    (L - E)^2 =
+    L^2 - 2 L \cdot E + E^2,
+  \]
+  and since we know already from the computations in class
+  that $L^2 = 1$ and $L \cdot E = 0$ and $E^2 = -1$,
+  we conclude that:
+  \[
+    (L')^2 = 1 - 2 \cdot 0 + (-1) = 0,
+  \]
+  which completes the first part of the exercise.
+
+  When we blow of the surface at a point we pretty much pull the surface
+  apart, and in this way lines that meet at $p$ no longer
+  intersect each other, and they are sitting ``side by side''.
+  The fact that $(L')^2 = 0$ is the fact that its self intersection
+  is $0$, which means that the curve can be moved to a position where it
+  does not intersect with itself at all.
+  This is possible exactly because of the ``pulling apart'' that we
+  get as a result of the blowup.
+  We can also think of $L'$ as a fiber of a fibartion,
+  since it is pretty much that just from the definition.
+\end{solution}
+
+\begin{exercise}
+  \label{ex:nine-two}
+  Let $C$ be a smooth curve on a smooth projective surface $S$
+  and let $X \to S$ be the blowup of $S$ at a point $p \in S$.
+  Denote by $C'$ the proper preimage of $C$ in $X$.
+  Prove that $(C')^2 = C^2 - 1$.
+  This generalizes the example of \Cref{ex:nine-one}.
+\end{exercise}
+\begin{solution}
+  We have assume $p \in C$ otherwise $(C')^2 = C^2$.
+  If $\pi \colon X \to S$ is the blowup map,
+  and if the curve passes through $p$ at multiplicity $m$,
+  the total transform $\pi^* C$ in the the Picard group of $X$
+  is given by:
+  \[
+    [\pi^* C] = [C'] + m [E],
+  \]
+  and since $C$ is smooth, actually we have that the multiplicity
+  $m = 1$, so we can deduce that:
+  \[
+    C' = \pi^* C - E,
+  \]
+  and therefore:
+  \[
+    (C')^2 =
+    (\pi^* C - E)^2 =
+    (\pi^* C)^2 - 2 (\pi^* C \cdot E) + E^2.
+  \]
+  We know that the pullback preserves self-intersection so
+  $(\pi^* C)^2 = C^2$,
+  we know that $\pi^* C$ and $E$ have zero intersections because
+  of the blowup so $\pi^* C \cdot E = 0$,
+  and $E^2 = -1$ since by the same argument from class
+  we always have that the self-intesection of the exceptional
+  divisor is $-1$.
+  Substituting these into the equation we get:
+  \[
+    (C')^2 =
+    (\pi^* C)^2 - 2 (\pi^* C \cdot E) + E^2 =
+    C^2 - 2 \cdot 0 + (-1) = C^2 - 1,
+  \]
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Let $X$ be a blowup of $\CP^2$ in $5$ points $p_1,\dots,p_5$
+  in general position.
+  Prove that the proper preimage of any line through two of these points
+  has self-intersection $(-1)$.
+  Prove that the proper preimage of the unique conic that passes through
+  all five points also has self-intersection $(-1)$.
+\end{exercise}
+\begin{solution}
+  Let $L$ be a line in $\CP^2$ passing through two of the blown-up
+  points, for example $p_1$ and $p_2$.
+  In the original plane we have $L^2 = 1$ for example from Bezout's
+  theorem.
+  Similarly to what we did in \Cref{ex:nine-two},
+  we know that the relationship between the proper transform $L'$
+  and the total transform $\pi^* L$ is given by:
+  \[
+    L' = \pi^* L - E_1 - E_2,
+  \]
+  where $E_1$ and $E_2$ are the exceptional divisors at $p_1$
+  and $p_2$ respectively.
+  We only subtract $E_1$ and $E_2$ since by assumption the line
+  only passes through these points.
+  We get that:
+  \[
+    (L')^2 =
+    (\pi^* L - E_1 - E_2)^2 =
+    (\pi^* L)^2 + E_1^2 + E_2^2 - 2(\pi^* L \cdot E_1) -2(\pi^* L \cdot E_2)
+    + 2(E_1 \cdot E_2).
+  \]
+  Using again the fact that the self-intersection of an exceptional
+  divisor is $-1$, that $E_i \cdot \pi^*L = 0$ for $i=1,2$,
+  that $(\pi^* L)^2 = 1$ since it intersects with itself once,
+  and that $E_1 \cdots E_2 = 0$ (the lines live above different points
+  so they do not intersect),
+  we conclude that:
+  \[
+    (L')^2 =
+    1 + (-1) + (-1) - 0 - 0 + 0 = -1,
+  \]
+  which completes the first part of the proof.
+
+  Let $C$ be the unique conic passing through $p_1,\dots,p_5$.
+  By Bezout's we have $C^2 = 2 \cdot 2 = 4$.
+  The blowup relation is now:
+  \[
+    C' = \pi^* C - E_1 - E_2 - E_3 - E_4 - E_5,
+  \]
+  where $E_i$ corresponds to the exceptional divisor at $p_i$ for
+  each $1 \le i \le 5$.
+  Since the total transform $\pi^* C$ does not intersect
+  with excpetional divisors, and again exceptional
+  divisors at different points live in different space and also
+  do not intersect, we can compute that:
+  \[
+    (C')^2 = (\pi^* C)^2 + \sum_{i=1}^{5} E_i^2,
+  \]
+  where $E_i^2 = -1$, which does not cancel out since
+  the intersection of the exception divisor with itself is $-1$
+  (also known result).
+  We conclude that:
+  \[
+    (C')^2 = 4 + 5(-1) = -1,
+  \]
+  utilizing the fact we mentioned earlier that $(\pi^* C)^2 = C^2 = 4$
+  from Bezout.
+  This completes the proof.
+\end{solution}
+
+\newpage
+
+\section{Rational Surfaces. Del Pezzo surfaces.}
+
+\begin{exercise}
+  Prove that for any vector bundle $W \to X$ and a line
+  bundle $L \to X$ we have:
+  \[
+    \P(W \otimes L) \cong \P W.
+  \]
+  Conclude that the projectivization of $\O(a) \oplus \O(b) \to \CP^1$
+  is isomorphic to the Hirzebruch surface $H_{|a-b|}$.
+\end{exercise}
+\begin{solution}
+  Let $W \to X$ be a vector bundle of rank $r + 1$. 
+  Its projectivization is:
+  \[
+    \P(W) = \set{\text{lines in fibers of $W$}} \to X.
+  \]
+  Similarly, for a line bundle $L \to X$, we can form $W \otimes L$,
+  which has the same rank since $L$ is a line bundle.
+  We want to show that $\P(W) \cong \P(W \otimes L)$ over $X$. 
+
+  Consider a point $x \in X$. 
+  The fiber of the projectivization is:
+  \[
+    \P((W \otimes L)_x) = \P(W_x \otimes L_x).
+  \]
+  Note that $L_x$ is a $1$-dimensional vector space,
+  so tensoring it with $W_x$ does not change the lines in $W_x$. 
+  Formally, this means that there exists a canonical isomorphism of
+  projective spaces:
+  \[
+    \P(W_x \otimes L_x) \cong \P(W_x),
+  \]
+  given by $[v \otimes \ell] \mapsto [v]$,
+  which is well-defined because scaling $\ell$ does not change the line
+  $[v \otimes \ell]$. 
+
+  These fiberwise isomorphisms vary smoothly with $x \in X$,
+  therefore they glue to a bundle isomorphism:
+  \[
+    \P(W \otimes L) \cong \P(W)
+  \]
+  over $X$, which proves the first part of the exercise. 
+
+  We now consider an application of this result with $X = \CP^1$
+  and $W = \O(a) \oplus \O(b)$. 
+  Without loss of generality we may assume $a \geq b$. 
+  Then:
+  \[
+    W \cong (\O(a - b) \otimes \O(0)) \otimes \O(b),
+  \]
+  because 
+  \[
+    (\O(a - b) \otimes \O(0)) \otimes \O(b) \cong \O(a) \oplus \O(b).
+  \]
+  Now by applying the previous result we get:
+  \[
+    \P(\O(a) \oplus \O(b)) \cong 
+    \P((\O(a - b) \otimes \O(0)) \otimes \O(b)) \cong 
+    \P(\O(a - b) \otimes \O(0)).
+  \]
+  By definition, the Hirzebruch surface $H_n$ is:
+  \[
+    H_n := \P(\O(n) \oplus \O) \to \CP^1.
+  \]
+  Therefore:
+  \[
+    \P(\O(a) \oplus \O(b)) \cong \P(\O(a - b) \oplus \O) = H_{|a-b|}.
+  \]
+  The absolute value appears because in Hirzebruch surfaces we actually
+  have $H_n \cong H_{-n}$ which is also why we can assume $a \geq b$. 
+  This completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Show that the complement $H_n \setminus F_0$ is isomorphic to $\CP^1 \times C$.
+  Use it to prove that $H_n \setminus (S_0 \cup F_0) \cong \C^2$.
+\end{exercise}
+\begin{solution}
+  % A point in $H_n$ is a line $[v : w] \subseteq \O(n) \oplus \O$ over some
+  % $x \in \CP^1$, and the fiber $F_0$ is all lines over $x = 0$. 
+  %
+  In order to describe $H_n \setminus F_0$ explicitly,
+  let us consider the trivialization over $U := \CP^1 \setminus \set{0}$.
+  On $U \cong \C$ the line bundle $\O(n)$ is trivial,
+  so over $U$ we have:
+  \[
+    \O(n) \oplus \O \cong \C \oplus \C \cong \C^2.
+  \]
+  The projectivization of a trivial rank $2$ bundle is:
+  \[
+    \P(\C^2 \times U) \cong \CP^1 \times U,
+  \]
+  but $U = \CP^1 \setminus \set{0}$, so the fiber over $0$ is exactly removed. 
+  Hence it follows that:
+  \[
+    H_n \setminus F_0 \cong 
+    \CP^1 \times (\CP^1 \setminus \set{0}) \cong 
+    \CP^1 \times \C,
+  \]
+  which proves the first part of the exercise. 
+
+  For the next part, recall that $H_n \setminus F_0 \cong \CP^1 \times \C$,
+  and that the section $S_0$ is given fiberwise by the line:
+  \[
+    [v : 0] \in \P(\C \oplus \C),
+  \]
+  which is a constant section of the trivial $\CP^1$ bundle. 
+  Thus, under the previous
+  identification $H_n \setminus F_0 \cong \CP^1 \otimes \C$,
+  the section $S_0 \setminus F_0$ becomes:
+  \[
+    \{\text{a fixed point in } \CP^1\} \times \C.
+  \]
+  After choosing coordinates on the fiber, we may assume this fixed
+  point is $\infty \in \CP^1$. Therefore,
+  \[
+    H_n \setminus (S_0 \cup F_0) =
+    (H_n \setminus F_0) \setminus S_0 \cong 
+    (\CP^1 \times \C) \setminus (\set{\infty} \times \C) \cong
+    \C \times \C,
+  \]
+  hence $H_n \setminus (S_0 \cup F_0) \cong \C^2$, which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  A $(-1)$-curve in a smooth surface $X$ is by definition isomorphic to $\CP^1$
+  and satisfies $E^2 = -1$.
+  Use the adjunction formula to prove that it satisfies $K \cdot E = -1$
+  where $K$ is the Weil divisor that corresponds to the canonical line
+  bundle $K_X \to X$.
+\end{exercise}
+\begin{solution}
+  For a smooth curve $E \subset X$, the adjunction formula states that:
+  \[
+    (K_X \otimes \O_X(E)) \vert_E \cong K_E,
+  \]
+  and when we take the degree of both sides,
+  we have that the right hand side is $2g(E) - 2$ 
+  where $g(E)$ is the genus of $E$,
+  and the degree on the left
+  hand side is $\det K_X \vert_E + \deg \O_X(E) \vert_E = (K + E) \cdot E$. 
+  Thus,
+  \[
+    (K + E) \cdot E = 2g(E) - 2,
+  \]
+  Since $E \cong \CP^1$ we have $g(E) = 0$,
+  therefore the formula reduces to:
+  \[
+    (K + E) \cdot E =
+    K \cdot E + E^2 = -2,
+  \]
+  but we also have $E^2 = -1$.
+  Hence we deduce that $K \cdot E = -1$.
+\end{solution}
+
+\newpage
+
+\section{Kodaira dimension and classification of algebraic surfaces}
+
+\begin{exercise}
+  Count the parameters of rank $4$ lattices in $\C^2$,
+  up to linear transformations of $\C^2$ to show that they form a
+  four-dimensional family.
+\end{exercise}
+\begin{solution}
+  Recall that a rank $4$ lattice $\Lambda \subset \C^2$ is a discrete subgroup
+  \[
+    \Lambda = \Z v_1 \oplus \cdots \oplus \Z v_4,
+  \]
+  such that $v_1,\dots,v_4$ span $\C^2 \cong \R^4$. 
+  Thus, we can equivalently consider elements of $\GL(4,\R)$,
+  which is a vector space of real dimension $16$. 
+  Two bases define the same lattice if and only if they differ by
+  an element of $\GL(4,\Z)$, however since this group is discrete,
+  quotienting by it does not change the dimension. 
+  That is,
+  \[
+    \{\text{rank-$4$ latrices in $\C^2$}\} \sim \GL(4,\R) / \GL(4,\Z)
+  \]
+  is still real $16$-dimensional. 
+  We know need to mod out this space by linear transformations of $\C^2$,
+  that is (by a result from class), elements of $\GL(2,\C)$. 
+  This group has complex dimension $4$, but real dimension $8$,
+  so after modding by it we are left with a space of real 
+  dimension $16 - 8 = 8$, or simply complex dimension $4$.
+  We may also notice that this is equivalent to classying the moduli space
+  of complex tori since they are of the form $\C^2 / \Lambda$,
+  so the moduli space is of complex dimension $4$. Hurray!
+  A perfectly equivalent result that feels more meaningful.
+\end{solution}
+
+\begin{exercise}
+  The weighted projective space $W\P(1,1,1,3)$ is defined as the quotient
+  of $\C^4 \setminus \set{(0,0,0,0)}$ with coordinates $(x_0,x_1,x_2,t)$
+  by the action of $\C^{\times}$ given by $(x_0,x_1,x_2,t) \mapsto
+  (\lambda x_0, \lambda x_1, \lambda x_2, \lambda^3 t)$.
+  As a set, $W\P(1,1,1,3)$ can be covered by the charts $U_i = \set{x_i \neq 0}$
+  and $U_t = \set{t \neq 0}$ which gives it a structure of a (singular)
+  algebraic variety.
+  Prove that $U_{0,1,2}$ are in natural bijection to $\C^3$ and $U_t$
+  is in bijection to the quotient of $\C^3$ by the group $\Z/3\Z$
+  that acts by scaling coordinates by the third roots of $1$.
+  Prove that the surface:
+  \[
+    t^2 = x_0^6 + x_1^6 + x_2^6
+  \]
+  is smooth and maps $2 : 1$ to $\CP^2$, with ramification divisor given by:
+  \[
+    0 = x_0^6 + x_1^6 + x_2^6.
+  \]
+\end{exercise}
+\begin{solution}
+  Consider the charts $U_i$ for $i=0,1,2$ and without loss of generality
+  consider $U_0 = \set{x_0 \neq 0}$ specifically.
+  We can use the $\C^{\times}$ action to normalize $x_0 = 1$
+  by choosing $\lambda = x_0^{-1}$ and then:
+  \[
+    (x_0,x_1,x_2,t) \sim 
+    \del{1, \frac{x_1}{x_0}, \frac{x_2}{x_0}, \frac{t}{x_0^3}}.
+  \]
+  Define the following coordinates:
+  \[
+    u_1 = \frac{x_1}{x_0} \tand
+    u_2 = \frac{x_2}{x_0} \tand
+    v = \frac{t}{x_0^3}.
+  \]
+  These are $3$ unconstrained complex numbers and thus $U_0 \cong \C^3$,
+  and the same argument applies to all other charts $U_{1,2}$ as well.
+  Hence $H_{0,1,2} \cong \C^3$ which completes the first part of the exercise. 
+
+  Next consider the chart $U_t = \set{t \neq 0}$, in which in order to
+  normalize $t = 1$ we must pick $\lambda$ such that $\lambda^3 = t^{-1}$.
+  There are exactly three such choices of $\lambda$ which differ by 
+  multiplication by a cube root of unity. 
+  Note that after normalization:
+  \[
+    (x_0,x_1,x_2,t) \sim (\lambda x_0, \lambda x_1, \lambda x_2, 1),
+  \]
+  so by defining coordinates $y_i = \lambda x_i$, we see that changing
+  $\lambda$ by a cube root of unity $\zeta$, has the effect of multiplying
+  all $y_i$ by that $\zeta$. 
+  Therefore, points are identified under:
+  \[
+    (y_0,y_1,y_2) \sim (\zeta y_0, \zeta y_1, \zeta y_2),
+  \]
+  where $\zeta$ is a cube root of unity. 
+  Thus, $U_t \cong \C^3 / (\Z/3\Z)$,
+  where $\Z/3\Z$ acts by scalar multiplication by a cube root of unity,
+  which completes the second part of the exercise.
+
+  Next we want to show that the surface $X$ given by:
+  \[
+    t^2 = x_0^6 + x_1^6 + x_2^6,
+  \]
+  is smooth. 
+  On coordinates $U_{0,1,2}$ for example $U_0 \cong \C^3$,
+  with coordinates $u_1,u_2,v$ as defined earlier we have:
+  \[
+    v^2 = 1 + u_1^6 + u_2^6.
+  \]
+  Define the function $F(u_1,u_2,v) = v^2 - (1 + u_1^6 + u_2^6)$. 
+  We see that its partial derivatives are $2v$ and $-6u_1^5$ and $-6u_2^5$
+  respectively. 
+  A singular point would require that all derivatives vanish together
+  so $v = u_1 = u_2 = 0$, but the point $(0,0,0)$ is not on the surface,
+  so there are no singularities on the charts $U_{0,1,2}$. 
+
+  In $U_t$ we have $t = 1$ so the equation becomes:
+  \[
+    1 = x_0^6 + x_1^6 + x_2^6.
+  \]
+  This is a smooth affine surface in $\C^3$ which is invariant under the 
+  $\Z/3\Z$ action since the powers are multiples of $3$, and $\zeta^3 = 1$. 
+  The smoothness follows from the same argument from earlier,
+  it is clear that the only possible singulrity is at $(0,0,0)$ which is 
+  not on the surface. Therefore $X$ is smooth in the last chart $U_t$ 
+  so we conclude it is smooth. 
+
+  Consider the map $\pi X \to \CP^2$ given by the projection:
+  \[
+    \pi \colon [x_0 : x_1 : x_2 : t] \mapsto [x_0 : x_1 : x_2].
+  \]
+  This is well-defined since the $\C^{\times}$ action scales $x_i$ 
+  uniformly. 
+  When 
+  \[
+    0 \neq t^2 = x_0^6 + x_1^6 + x_2^6,
+  \]
+  for a fiber $\pi^{-1}(a_0,a_1,a_2)$ we have exactly two solutions,
+  $t = \pm \sqrt{a_0^6 + a_1^6 + a_2^6}$,
+  so the degree of the map is $2$ as wanted.
+
+  Ramification occurs where the map fails to be $2 : 1$,
+  at the origin, so it forces the ramification divisor to be exactly
+  \[
+    0 = x_0^6 + x_1^6 + x_2^6,
+  \]
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  One more accessible example of $\mathrm K3$ surfaces is that of surfaces $X$
+  in $\CP^5$ cut out by three quadratic equations.
+  Do the rough parameter count, taking into account that only the linear span
+  of the three equations matters.
+  Hint: Count the ordered bases of the space of generators,
+  which overcounts the parameter space by $\dim \GL(3,\C) = 9$.
+  If you know the formula for the dimension of Grassmannians,
+  that could be used as well.
+\end{exercise}
+\begin{solution}
+  A quadric in $\CP^5$ is a homogeneous degree-$2$ polynomial in $6$ variables. 
+  The vector space of all quadrics has dimension:
+  \[
+    \binom{6 + 2 - 1}{2} =
+    \binom{7}{2} = 21,
+  \]
+  so it is isomorphic to $\C^{21}$.
+  A surface of the given type is cut out by a $3$-dimensional subspace
+  $W \subset \C^{21}$, that is, a choice of three linearly independent 
+  quadrics, but only their linear span matters.
+  
+  First, we overcount by counting ordered triplets of independent quadrics,
+  which gives $3 \times 21 = 63$ parameters.
+  As mentioned in the hint, this overcounts by $\dim \GL(3,\C) = 9$,
+  so by subtracting we get $63 - 9 = 54$. 
+
+  Two spaces are isomorphic if they differ by a projective linear change
+  of coordinates of $\CP^5$. 
+  By known results we have:
+  \[
+    \Aut(\CP^5) = \PGL(6,\C) \tand 
+    \dim \PGL(6,\C) = 6^2 - 1 = 35.
+  \]
+  After modding by this we get a space of dimension $54 - 35 = 19$. 
+  Thus, the family of $\mathrm K3$ surfaces obtained as complete intersections 
+  of three quadrics in $\CP^5$ has $19$ complex parameters.
+\end{solution}
+
+\newpage
+
+\section{Chern classes of vector bundles. Chern character. Euler sequence.}
+
+\begin{exercise}
+  Verify claim $(22.1)$.
+\end{exercise}
+\begin{solution}
+  The formula we have is:
+  \[
+    c(\Sym^3(W)) = (1 + 3x_1)(1 + 2x_1 + x_2)(1 + x_1 + 2x_2)(1 + 3x_2),
+  \]
+  and we also found that $c_1(W) = x_1 + x_2 =: c_1$
+  and $c_2(W) = x_1 x_2 =: c_2$.
+  We notice that it may be smart to open the multiplication in pairs
+  here:
+  \[
+    (1 + 3x_1)(1 + 3x_2) =
+    1 + 3(x_1 + x_2) + 9 x_1 x_2 = 1 + 3c_1 + 9c_2,
+  \]
+  and
+  \[
+    (1 + 2x_1 + x_2)(1 + x_1 + 2x_2) =
+    1 + 3(x_1 + x_2) + 2(x_1^2 + x_2^2) + 5 x_1 x_2.
+  \]
+  Since $x_1^2 + x_2^2 = c_1^2 - 2c_2$ we get that the product
+  of this pair is simply:
+  \[
+    1 + 3c_1 + 2(c_1^2 - 2c_2) + 5c_2 = 1 + 3c_1 + 2c_1^2 + c_2,
+  \]
+  and now by a pure matter of computation and collecting the terms by
+  their degree:
+  \begin{align*}
+    c(\Sym^3(W)) &=
+    (1 + 3c_1 + 9c_2) (1 + 3c_1 + 2c_1^2 + c_2) \\ &=
+    1 + 6c_1 + (11c_1^2 + 10c_2) + (6c_1^3 + 30c_1 c_2) + (18c_1^2c_2 + 9c_2^2).
+  \end{align*}
+\end{solution}
+
+\begin{exercise}
+  Prove that the first Chern class $c_1(W)$ of a vector bundle $W$ is the first
+  Chern class of its top exterior power $\Lambda^{\rk W} W$.
+\end{exercise}
+\begin{solution}
+  Let $\rk W = r$.
+  We need to show that $c_1(W) = c_1(\Lambda^{r} W)$.
+  We can use the ``black magic'' from class called the splitting principle.
+  It states that if the bundle is over a paracompact space $X$,
+  then there exists a space $X'$ (called the flag bundle) associated to $W$,
+  and a map $p \colon X' \to X$ such that the induced cohomology homomorphism
+  $p^* \colon H^*(X) \to H^*(Y)$ is injective, and the pullback bundle
+  breaks up as a direct sum of line bundles
+  $W' := p^*W = L_1 \oplus \cdots \oplus L_r$.
+  We now get that,
+  \[
+    c_1(W') = c_1(L_1) + \cdots + c_1(L_r).
+  \]
+  The top exterior derivative is isomorphic to:
+  \[
+    \Lambda^{r} W' \cong L_1 \otimes \cdots \otimes L_r,
+  \]
+  since the exterior power of a direct sum of line bundles is their tensor
+  product.
+  From properties of Chern classes, we have that:
+  \[
+    c_1(L_1 \otimes \cdots \otimes L_r) = c_1(L_1) + \cdots + c_1(L_r).
+  \]
+  Thus, we get that $c_1(W') = c_1(\Lambda^{r} W')$.
+  By injectivity of the pullback map $p^*$ and naturality/functoriality
+  of the Chern classes (meaning the pullback diagram commutes), we get that
+  $c_1(W) = c_1(\Lambda^{r} W)$ which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  Prove that the coefficients of the Todd class of $X$ can be written
+  as polynomials in the Chern classes of $TX$, without using the dimension
+  of $X$, and verify $(22.2)$.
+  Hint: by looking at:
+  \[
+    \ln c(X) = \sum_{i} \ln(1 + x_i),
+  \]
+  we can write the sums $\sum_{i=1}^{\dim_{\C} X} x_i^k$ as polynomials in $c_j$.
+  Then consider $\ln \Td(X)$.
+\end{exercise}
+\begin{solution}
+  If $x_i$ are the Chern roots of $TX$ then we have:
+  \[
+    \ln c(X) = \sum_{i=1}^{r} \ln(1 + x_i),
+  \]
+  and by recalling the Taylor expansion of $\log(1 + x)$ which is:
+  \[
+    \ln(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \cdots,
+  \]
+  and therefore,
+  \[
+    \ln c(X) = \sum_{k \geq 1} \frac{(-1)^{k-1}}{k} \sum_{i} x_i^k.
+  \]
+  However, $\ln c(X)$ is a formal power series whose coefficients are polynomials
+  in the Chern classes $c_i$ and thus each $\sum_{i} x_i^k$ is a polynomial
+  in the Chern classes $c_i$ that is independent of $\dim X$.
+
+  Note that when considering the Todd class and taking the logarithm on both
+  sides we get that:
+  \[
+    \ln \Td(X) = \sum_{i} \ln \del{\frac{x_i}{1 - e^{-x_i}}},
+  \]
+  but we can also expand $\frac{x}{1 - e^{-x}}$ in the same way:
+  \[
+    \frac{x}{1 - e^{-x}} = \frac{x}{2} + \frac{x^2}{12} - \frac{x^4}{720}
+    + \cdots,
+  \]
+  and conclude that:
+  \[
+    \ln \Td(X) = \half \sum_{i} x_i + \frac{1}{12} \sum_{i} x_i^2
+      - \frac{1}{720} \sum_{i} x_i^4 + \dots,
+  \]
+  but each sum $\sum_{i} x_i^k$ is already known to be a polynomial in
+  in the Chern classes of $TX$ without using $\dim X$,
+  so the coefficients of the Todd class of $X$ can be written
+  as polynomials in the Chern classes of $TX$ which completes
+  the first part of the exercise.
+
+  In order to show $(22.2)$ we can now use the expansion of $e^x$
+  and substitute $\ln \Td X$ and get:
+  \[
+    \Td(X) = 1 + \ln \Td(X) + \half (\ln \Td X)^2 + \text{higher order terms},
+  \]
+  and now we just need to collect the terms by their degree.
+  The linear term is $\half c_1$, and the quadratic term is:
+  \[
+    \frac{1}{12} (c_1^2 - 2c_2) + \half \del{\half c_1}^2 =
+    \frac{1}{12} c_1^2 - \frac{1}{6} c_2 + \frac{1}{8} c_1^2 =
+    \frac{c_1^2 + c_2}{12}.
+  \]
+  Thus, we conclude that:
+  \[
+    \Td(X) = 1 + \frac{c_1}{2} + \frac{c_1^2 + c_2}{12} + \cdots,
+  \]
+  which completes the proof for $(22.2)$,
+  and the exercise in general.
+\end{solution}
+
+\newpage
+
+\section{Cohomology of vector bundles and Hirzebruch--Riemann--Roch formula.}
+
+\begin{exercise}
+  Prove that Euler characteristic is additive on short exact sequences.
+  Hint: use $(23.1)$ and the general statement about alternating sum of
+  dimensions of vector spaces in a long exact sequence.
+\end{exercise}
+\begin{solution}
+  Given a short exact:
+  \[\begin{tikzcd}
+    0 & {W_1} & {W_2} & {W_3} & 0
+    \arrow[from=1-1, to=1-2]
+    \arrow[from=1-2, to=1-3]
+    \arrow[from=1-3, to=1-4]
+    \arrow[from=1-4, to=1-5]
+  \end{tikzcd}\]
+  we know from $(23.1)$ that there exists a long exact sequence in
+  cohomology:
+  \[
+    \begin{tikzcd}
+      \cdots \ar[r] & H^i(X,W_1) \ar[r] & H^i(X,W_2) \ar[r] & H^i(X,W_3)
+        \ar[out=0, in=180, looseness=2, overlay, lld] \\
+      & H^{i+1}(X,W_1) \ar[r] & H^{i+1}(X,W_2) \ar[r] & H^{i+1}(X,W_3) \ar [r] & \cdots
+    \end{tikzcd}
+  \]
+  We don't know much about these coherent sheaf cohomologies,
+  but they are vector spaces, and so they must satisfy the alternating
+  sum of dimensions formula of a long exact sequence,
+  we actually apply additivity of dimension of a short exact sequence of vector
+  spaces multiple times (but certainly a finite amount of times, since
+  these cohomology too eventually vanishes), and get by collecting
+  terms of the same bundles together that:
+  \[
+    \sum_{i=0}^{\dim_{\C} X} (-1)^i \dim H^i(X,W_1) -
+    \sum_{i=0}^{\dim_{\C} X} (-1)^i \dim H^i(X,W_2) +
+    \sum_{i=0}^{\dim_{\C} X} (-1)^i \dim H^i(X,W_3) = 0.
+  \]
+  However, simply by substituting the definition of the Euler charateristic we
+  conclude that:
+  \[
+    \chi(X,W_1) - \chi(X,W_2) + \chi(X,W_3) = 0,
+  \]
+  and thus $\chi(X,W_1) + \chi(X,W_3) = \chi(X,W_2)$,
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  \label{ex:eleven-two}
+  Use Kodaira vanishing theorem in order to show that for all $k > - n - 1$
+  we have $H^{> 0}(\CP^n,\O(k)) = 0$.
+  Hint: Use Exercise $3$ of section $9$.
+\end{exercise}
+\begin{solution}
+  The result from the exercise mentioned in the hint
+  is $\O(-n-1) \cong K_{\CP^n}$, where $K_{\CP^n}$ is the canonical line
+  bundle on $\CP^n$.
+  Kodaira's vanishing theorem states that if $X$ is a smooth
+  projective complex variety then if $L \to X$ is an ample line bundle
+  we have $H^{> 0}(X,L \otimes K_X) = 0$.
+  In particular, for $X = \CP^n$ we get that
+  $H^{> 0}(\CP^n,L \otimes \O(-n-1)) = 0$.
+  Note that we can write:
+  \[
+    \O(k) =
+    \O(k + n + 1) \otimes K_{\CP^n} =
+    \O(k + n + 1) \otimes \O(-n-1).
+  \]
+  We know that $\O(1)$ on $\CP^n$ is ample,
+  and therefore every tensor power of it and in particular
+  $\O(k + n + 1)$ is ample on $\CP^n$,
+  and by applying Kodaira's vanishing theorem with $L = \O(k + n + 1)$
+  we get that
+  \[
+    H^{> 0}(\CP^n,L \otimes \O(-n-1)) = H^{> 0}(\CP^n,\O(k)) = 0,
+  \]
+  which completes the proof.
+\end{solution}
+
+\begin{exercise}
+  One can show (see Exercise $2$ of Section $7$) that for $k \geq 0$
+  the global sections of $\O(k)$ on $\CP^n$ are homogeneous polynomials of degree
+  $k$ in the homogeneous coordinates on $\CP^n$.
+  Together with \Cref{ex:eleven-two}, show that this is consistent with the above
+  calculation of $\chi(\CP^n,\O(k))$.
+\end{exercise}
+\begin{solution}
+  Using \Cref{ex:eleven-two} we get that $H^{> 0}(\CP^n,\O(k)) = 0$
+  and thus we get that:
+  \[
+    \chi(\CP^n,\O(k)) =
+    \dim H^0(\CP^n,\O(k)) =
+    \dim \Gamma(\CP^n,\O(k)),
+  \]
+  which as mentioned in the exercise we have:
+  \[
+    \Gamma(\CP^n,\O(k)) = 
+      \set{\text{homogeneous polynomials of degree $k$ in $n + 1$ variables}}.
+  \]
+  This reduces the exercise into a counting game.
+  The dimension of the number of sections is the number
+  of different monomials $x_0^{a_0} x_1^{a_1} \cdots x_n^{a_n}$
+  with $a_0 + \cdots a_n = k$,
+  which, by a standard combinatorial result is $\binom{k+n}{n}$,
+  so we have that:
+  \[
+    \chi(\CP^n,\O(k)) =
+    \dim \Gamma(\CP^n,\O(k)) =
+    \binom{k + n}{n} =
+    \frac{(k + 1)(k + 2) \cdots (k + n)}{n!},
+  \]
+  which is exactly consistent with the calculation we did in class.
+\end{solution}
+
+
+
+
+
+
+
+\end{document}
+

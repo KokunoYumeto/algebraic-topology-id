@@ -1,0 +1,1395 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2025}
+\def\nterm {Winter}
+\def\nlecturer {}
+\def\ncourse {Introduction to Numerical Analysis}
+\def\ncoursehead {Numerical Analysis}
+
+\input{header.tex}
+
+\DeclareMathOperator{\fl}{fl}
+\DeclareMathOperator{\NaN}{NaN}
+
+\begin{document}
+\maketitle
+
+% Insert cool image here
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+This course addresses what of all the math we have learned so far can
+we compute with the computer
+
+For example, given the task of computing the determinant of a matrix $A$,
+we want to find the most efficient algorithm.
+The most efficient algorithm is the one that uses the least amount of
+operations.
+
+One way of calculating $\det A$ is using permutations:
+\[
+  \det A = \sum_{\gamma \in S_n}
+  \sgn(\gamma) a_{1 \sigma(1)} \cdot a_{2 \sigma(2)} \cdots a_{n \sigma(n)}.
+\]
+Each permutation costs us $n$ operations of multiplication, and to calculate
+the sum we perform $n! - 1$ summation operations.
+Since there are $n!$ permutations in $S_n$, the total amount of operations
+of this algorithm is $n \cdot n! + n! - 1$.
+
+An alternative algorithm would be to find the eigendecomposition
+$A = U^{T} D U$ where $U$ is an orthogonal matrix, and then calculate
+the product of the elements on the main diagonal of $D$ (which are the
+eigenvalues of $A$).
+Using this algorithm we can compute $\det A$ in $C n^3 + n - 1$ operations
+for some costant $C$.
+Although this algorithm is much faster than the previous ones, there are
+more efficient algorithms still.
+
+\begin{definition}[Big $\O$ notation]
+  Let $(x_n)_{n \geq 1}$ and $(y_n)_{n \geq 1}$ be sequences of real numbers.
+  We say that $x_n = \O(y_n)$ if there exist constants $C$ and $N$ such that
+  for all $n > N$
+  \[
+    |x_n| \le C |y_n|
+  \]
+\end{definition}
+
+Here are some examples
+\begin{align*}
+  \frac{n + 1}{n^2} &= \O\del{\frac 1n} \\
+  Cn^3 + n - 1 &= \O(n^3) \\
+  n \cdot n! + n! - 1 &= \O(n \cdot n!)
+\end{align*}
+
+Using big $\O$ notation we can say that direct determinant calculations
+requires $\O(n \dots n!)$ calculations, while using eigendecomposition
+to calculate it takes $\O(n^3)$ operations.
+
+However, the big $\O$ notation is still not very satisfying because
+we still have
+\[
+  C n^3 + n - 1 = \O(n \cdot n!).
+\]
+To fix this problem we introduce the $\Theta$ notation.
+
+\begin{definition}[big $\Theta$ notation]
+  Let $(x_n)_{n \geq 1}$ and $(y_n)_{n \geq 1}$ be sequences of real numbers.
+  We say that $x_n = \Theta(y_n)$ if there exist constants $0 < c < C$ and $N$ 
+  such that for all $n > N$
+  \[
+    c |y_n| \le |x_n| \le C |y_n|.
+  \]
+\end{definition}
+
+Here are some examples
+\begin{align*}
+  a_k n^k + \cdots + a_1 n + a_0 &= \Theta(n^k) \\
+  Cn^3 + n - 1 &= \Theta(n^3) \\
+  n \cdot n! + n! - 1 &= \Theta(n \cdot n!)
+\end{align*}
+
+\begin{example}[Horner's algorithm]
+  Another important method before we move to the next section,
+  is Horner's method.
+  It allows computing a polynomial $p(x) = \sum_{k=0}^{n} a_k x^n$ in
+  $\Theta(n)$ operations instead of $\Theta(n^2)$ operations.
+  It states that
+  \[
+    \begin{aligned}
+      &a_{0} + a_{1}x + a_{2}x^{2} + a_{3}x^{3} + \cdots + a_{n}x^{n} \\ = {}
+      &a_{0} + x\del{a_{1} + x\del{a_{2} + x\del{a_{3} + \cdots + 
+      x(a_{n-1} + x a_{n}) \cdots}}}.
+    \end{aligned}
+  \]
+\end{example}
+
+\section{Digital Number Representation}
+We usually use base-$10$ expansion to represent number.
+For example, the number $x = 123.45$ means
+\[
+  x = 1 \times 10^2 + 2 \times 10^1 + 3 \times 10^0 + 4 \times 10^{-1} +
+    5 \times 10^{-2}.
+\]
+In this case, we say that $x$ has a finite base-$10$ expansion.
+All non-negative real numbers have a (possibly infinite) base-$10$ expansion.
+
+\begin{theorem}
+  \label{thm:bases}
+  Let $x$ be a real number in $[0,1)$, and $b \geq 2$ an integer.
+  Then there exists $L \in \Z$ and a sequence $(c_k)_{k=1}^{\infty}$ where
+  each $c_k$ is in $\set{0,1,\dots,b-1}$, so that
+  \[
+    x = \sum_{k=1}^{\infty} c_k b^{-k}.
+  \]
+\end{theorem}
+
+The motivation for this theorem is to prove for example, that computers,
+who work in base $2$, can represent the same numbers we can represent
+in the way that is more convenient to us like base $10$.
+
+\begin{lemma}
+  \label{lem:bases}
+  If $b \geq 2$ is an integer, $L \in \Z$ and $x \in [0,b^{L+1})$.
+  Then there exists $c_L \in \set{0,1,\dots,b-1}$ such that
+  $x - c_L b^{L} \in [0,b^L)$.
+\end{lemma}
+\begin{proof}
+  We notice that
+  \[
+    \bigcup_{j=0}^{b-1} \intco{j b^L, (j + 1) b^L} =
+    [0, b^{L+1}).
+  \]
+  So there exists $c_L \in \set{0,1,\dots,b-1}$ so that 
+  $x \in [c_L b^L, (c_L + 1) b^L)$.
+  Then
+  \[
+    r_L = x - c_L b^L \in [0,b^L).
+  \]
+\end{proof}
+
+We can now go back to prove \Cref{thm:bases}
+
+\begin{proof}
+  By assumption $x \in [0,b^0)$.
+  By \Cref{lem:bases} with $L = -1$ we now define:
+  \[
+    r_1 := x - c_1 b^{-1} \in [0,b^{-1}).
+  \]
+  And continue indefinitely
+  \[
+    r_S := x - \sum_{k=1}^{S} c_k b^{-k} \in [0,b^{-k}).
+  \]
+  This implies that $r_S \taking{S \to \infty} 0$ which means that
+  \[
+    x = \sum_{k=1}^{\infty} c_k b^{-k}.
+  \]
+\end{proof}
+
+We can now conclude from the theorem that for $x > 0$, we can find $L$
+large enough so that $x < b^L$ and so $x b^{-L} < 1$.
+We can then write
+\[
+  x = b^L \sum_{k=1}^{\infty} c_k b^{-k}.
+\]
+
+It is also possible in base-$b$ for $b \geq 2$ to represent any
+non-negative number as:
+\[
+  x = (-1)^s \times [1.f]_b \times 2^m,
+\]
+for some $s \in \set{0,1}$, $m \geq 0$ and $f$ an infinite sequence
+of digits.
+
+\begin{remark}
+  Obsviouly we can also represent $0$ because $0 \in \set{0,1,\dots,b}$.
+\end{remark}
+
+\subsection{Representing numbers in the computer}
+
+\begin{definition}[Integers]
+  In a computer, we represent integers using $32$ bits.
+  We use one bit to represent the sign of the integer,
+  and the other as constants to the powers of two.
+  In this way we can represent every integer 
+  $n \in [- (2^{-31} - 1), 2^{31} - 1]$ as such:
+  \[
+    n = (-1)^{c_31} \sum_{j=0}^{30}.
+  \]
+  Where $(c_0,c_1,\dots,c_{31})$ represent the bits.
+  If we add two numbers and get a result larger than $2^31 - 1$,
+  the computer will give us the result $Inf$.
+\end{definition}
+
+\begin{definition}[Fixed point representation]
+  One (uncommon) way of representing rational numbers with $32$ bits is
+  called fixed point representation.
+  In this method we allot the last bit for the sign,
+  and we write the numbers as such
+  \[
+    x =
+    (-1)^{c_{31}} (c_{30},\dots,c_{15}.c_{14},\dots,c_1,c_0)_{2} =
+    (-1)^{c_{31}}
+    \del{c_{30} 2^{15} + c_{29} 2^{14} +
+    \cdots + c_{15} + \cdots + c_0 2^{-15}}.
+  \]
+\end{definition}
+
+\begin{definition}[Floating point]
+  The common way to represent rational numbers in the computer is by
+  using the floating point format.
+  In this method we write rational numbers as
+  \[
+    x = (-1)^s \times [1.f]_2 \times 2^m.
+  \]
+  We use a single bit to encode the sign, eight bits to encode $m$ (also
+  known as the exponent) and the remaining $32$ bits to encode $f$ (also known
+  as the normalized mantissa). We call $[1.f]_2$ the mantissa.
+  This method is known as single precision.
+
+  Precise details about the implementation of special number like
+  $\pm 0$, $\pm 0$ or $\NaN$ are the in solutions.
+
+  In double precision (which is the standard in Matlab) we use $64$ bits
+  to store each number. A single bit to encode the sign, $11$ bits to encode 
+  the exponent and the remaining $52$ bits to encode the normalized mantissa.
+  In general we only focus on single precision.
+
+  The largest floating point number in single precision is
+  \[
+    2^{127} \le
+    x = (1.1 1 \cdots 1) \times 2^{127} \le
+    2^{128}.
+  \]
+
+\end{definition}
+
+\begin{definition}[Machine number]
+  Any number that can be represented in the computer exactly is called
+  a machine number.
+  In most cases we refer to numbers that can be represented using the floating
+  point method.
+\end{definition}
+
+Denote $\floor x$ or $\fl(x)$ the closest machine number to $x$.
+\begin{definition}[Absolute error]
+  The absolute error is defined as the value of $\abs{\fl(x) - x}$ and
+  we can see that in the case of a floating point that
+  \[
+    \abs{\fl(x) - x} \le 2^m 2^{-24}
+  \]
+\end{definition}
+
+\begin{definition}[Relative error]
+  Let $f(x)$ be some approximation of $x \neq 0$, the relative error
+  is defined by
+  \[
+    \frac{|f(x) - x|}{|x|} < \epsilon
+  \]
+  if and only if
+  \[
+    f(x)= x(1 + \delta)
+  \]
+  for some $\delta \in (-\epsilon, \epsilon)$.
+  We can get this equlity by setting $\delta = \frac{f(x) - x}{x}$.
+\end{definition}
+
+\begin{remark}
+  The relative erroor in the case of a floating point approximation satisfies
+  \[
+    \frac{\abs{\fl(x) - x}}{|x|} \le
+    \frac{2^m 2^{-24}}{[1.f]_2 \times 2^m} \le
+    2^{-24}.
+  \]
+\end{remark}
+This means that the relative error of rounding is pretty low.
+In double precision because we have more bits the relative error
+is bounded by $2^{-52} \sim 2 \times 10^{-16}$.
+This number is called $eps$ in Matlab.
+
+\begin{definition}[Unit roundoff error]
+  The unit roundoff error in a machine, is defined to be the minimal upper bound
+  of the relative error.
+  In single precision, the unit roundoff error is $2^{-24}$.
+\end{definition}
+
+\begin{definition}[Machine precision, machine epsilon]
+  The machine precision (or machine epsilon) is defined to be the distance
+  between the number $1$ and the immediate following machine number.
+  In single precision, the machine epsilon is $2^{-23}$.
+  That is because
+  \[
+    (1.0 0 \cdots 0 1)_2 = 1 + 2^{-23}.
+  \]
+  The closest number from below however is
+  \[
+    (1.1 1 \cdots 1 1)_2 \times 2^{-1} = 1 - 2^{-24}.
+  \]
+  In double precision the machine epsilon drops to $2^{-52}$.
+\end{definition}
+
+\begin{proposition}
+  Let $x_1,x_2 > 0$ and assume there exists some $f \colon \R \to \R$ such that
+  there exist $\delta_1$, $\delta_2$, $\delta_3$ such that
+  \[
+    f(x_1) = (1 + \delta_1) x_1 \stand
+    f(x_2) = (1 + \delta_2) x_2 \stand
+    f(f(x_1) \cdot f(x_2)) = (1 + \delta_3)[f(x_1) \cdot f(x_2)]
+  \]
+  where $|\delta_1|, |\delta_2|, |\delta_3| < \epsilon$.
+  Then
+  \[
+    f(f(x_1) \cdot f(x_2)) =
+    (1 + \delta) x_1 x_2
+  \]
+  For some $|\delta| < 3 \epsilon + 3 \epsilon^2 + \epsilon^3$.
+\end{proposition}
+\begin{proof}
+  \[
+    f(f(x_1) \cdot f(x_2)) =
+    (1 + \delta_3)[f(x_1) \cdot f(x_2)] =
+    (1 + \delta_3)(1 + \delta_2)(1 + \delta_1) x_1 x_2
+  \]
+  and
+  \[
+    (1 + \delta_3)(1 + \delta_2)(1 + \delta_1) =
+    1 + \delta_1 + \delta_2 + \delta_3 + 
+    \delta_1 \delta_2 + \delta_1 \delta_3 + \delta_2 \delta_3 + 
+    \delta_1 \delta_2 \delta_3.
+  \]
+  Denote
+  \[
+    \delta =
+    \delta_1 + \delta_2 + \delta_3 + 
+    \delta_1 \delta_2 + \delta_1 \delta_3 + \delta_2 \delta_3 + 
+    \delta_1 \delta_2 \delta_3.
+  \]
+  we get
+  \[
+    |\delta| \le 3 \epsilon + 3 \epsilon^2 + \epsilon^3
+  \]
+  which completes the proof.
+\end{proof}
+
+The above theorem shows that when taking the product of two numbers,
+the error is bigger than epsilon, but not by much.
+The situation is similar for addition and division,
+but not for subtraction.
+
+Consider
+\[
+  x_1 = [1.f0]_2 \stand x_2 = [1.f6]
+\]
+we have that $\floor{x_1} - \floor{x_2} = 0$ which implies that
+relative error is
+\[
+  \frac{\abs{\floor{\floor{x_1} - \floor{x_2}} - |x_1 - x_2|}}{|x_1 - x_2|} = 1.
+\]
+This occurs when the distance between $x_1$ and $x_2$ is very small compared
+to $x_1$.
+
+\begin{proposition}
+  Assume that $x_2 > x_1 > 0$ and $\frac{x_2}{x_2 - x_1} < a$ for some $a$.
+  Let $f \colon \R \to \R$ be a function satisfiying
+  \[
+    f(x_1) = (1 + \delta_1) x_1 \stand
+    f(x_2) = (1 + \delta_2) x_2 \stand
+    f(f(x_1) - f(x_2)) = (1 + \delta_3)[f(x_1) - f(x_2)]
+  \]
+  where $|\delta_1|, |\delta_2|, |\delta_3| < \epsilon$.
+  Then
+  \[
+    f(f(x_1) - f(x_2)) = (1 + \delta)(x_2 - x_1)
+  \]
+  where $|\delta| < 2 \epsilon + 2 a \epsilon + \epsilon^2 + 2 a \epsilon^2$.
+\end{proposition}
+\begin{proof}
+  The proof is simply by calculation
+\end{proof}
+
+Because of the propositions we have seen so far, some ways to compute
+certain expressions are more accurate than others.
+For example instead of computing
+\[
+  x - \sin(x) \tor
+  \sqrt{x^2 + 1} - 1
+\]
+to get a more accurate calculation we can calculate the equivalent
+expressions
+\[
+  - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} \cdots
+  \tand
+  \frac{x^2}{\sqrt{x^2 + 1} + 1}.
+\]
+
+As mentioned earlier, in single precision we can not represent numbers bigger
+than $2^{128}$ or smaller than $2^{-128}$.
+Instead the computer will return us the values $\infty$ and $\ninfty$ 
+respectively. This is called \emph{overflow}.
+We also can not represent numbers in the range $(-2^{-128}, 2^{-128})$.
+Instead the computer will return us the values $0$ or $-0$ if the number
+was negative. This is called \emph{underflow}.
+
+\begin{definition}[Softmax function]
+  For a fixed $\alpha \geq 0$, the softmax function 
+  $s^{\alpha} \colon \R^d \to \R^d$ is defined as
+  \[
+    s^{\alpha}_i := \frac{e^{\alpha x_i}}{\sum_{j=1}^{d} e^{\alpha} x_j}.
+  \]
+\end{definition}
+\begin{remark}
+  For all $x \in \R^d$ and $\alpha \geq 0$ the entries of $s^{\alpha}(x)$
+  are all positive and sum to one.
+\end{remark}
+\begin{remark}
+  If $k$ is some index such that $x_k > x_i$ for all $i \neq k$, then
+  \[
+    \lim_{\alpha \to \infty} s^{\alpha}(x) = e_k
+  \]
+  where $e_k$ is the unit vector with $1$ in the $k$th index and $0$ otherwise.
+  Thus, for large $\alpha$ softmax gives a strong idication of where the
+  maximum of the vector is located.
+\end{remark}
+\begin{remark}
+  If $\alpha = 0$ then $s^0(0) = (1/d, 1/d, \dots, 1/d)$ for all $x$.
+\end{remark}
+
+This function is intresting because although the entries in the result vectors
+are all between $0$ and $1$, the exponentiation can lead to underflow and
+overflow which will greatly affect its computation.
+
+To avoid overflow when computing softmax we can notice that for any scalar
+$M$ and vector $1_d = (1, 1, \dots, 1)$ we have that 
+$s^{\alpha}(x) = s^{\alpha}(x - M 1_d)$.
+This allows use to choose $M = \max\set{x_i}_i$ and compute
+$s^{\alpha}(x - M 1_d) = s^{\alpha}(x)$ without overflow.
+
+Softmax is useful in machine learning in for \textit{classification tasks}.
+For example, suppose you have $d$ different kanji characteres registered in
+some database by order of their JIS code.
+We want to build a function $h$ that assigns each vector $X$ representing a
+picture of a single handwritten charachter a probability vector
+\footnote{A vector with nonnegative entries that sum up to one.}
+$(h_1(X),\dots,h_d(X))$ so that $h_i(X)$ represents the probability
+of the picture to describe the $i$th character.
+The standard way of doing this is by defining
+\[
+  h(X) := s^{\alpha} A_2 \sigma A_1 (X),
+\]
+where $A_1$, $A_2$ are matrices, $\sigma$ is a nonlinear transformation,
+and $s^{\alpha}$ is the softmax function.
+
+This is a simple neural network, where the paramter $\alpha$ controls how
+''sharp`` the probability vector $h(X)$ will be.
+
+The real challenge is how to define $h$ well,
+but this is beyond the scope of this lecture.
+Instead we can notice that underflow doesn't really affect softmax,
+and while overflow does lead to complete nonsense,
+we can make sure it never happens.
+More on that in the solutions section.
+
+\subsection{Alternatives for symbolic computation*}
+
+The method we have used so far to calculate nubmbers is called numercial
+computation.
+Because of the way we represent numbers in (floating points) we always
+get an error bounded by $2^{-24}$.
+There are some alternatives to numerical calculation.
+
+One alternative for numerical calculations is \emph{symbolic calculations}.
+This method is used by Mathematica, Maple, Wolfram Alpha 
+and can also be used in Matlab.
+It has two main behaviours
+\begin{itemize}
+  \item When multiplying numbers, the numbers of digits increase to avoid
+    truncation.
+  \item Solutions of equations can be given symbolically like $\sqrt{2}$,
+    $\pi$ etc.
+\end{itemize}
+Using this method we gain more accuracy, but lose speed of computation.
+
+Another alternative is called \emph{interval arithmetics}.
+Since our calculations are not exact we can represent numbers using intevals.
+For example, let $x = [1.f]_2$ such that $f = f_1 \circ f_2$.
+where $f_1$ is the first 23 digits of $f$ and $f_2$ is the rest of the digits.
+In this case, we use the interval $I_x = [[1.f_1]_2,[1.f_1 1]_2]$ to represent
+$x$ because $x \in I_X$.
+
+Suppose we have two numbers $x = [a_x, b_x]$ and $y = [a_y, b_y]$, when
+calculating the sum $x + y$ we get $x + y = [a_x + a_y, b_x + b_y]$.
+In this way we can be certain that
+$x + y \in I_{x+y} = [a_x + a_y, b_x + b_y]$.
+We define multiplication in a similar, though more complicated way.
+When tying to define multiplication for intercal arithmetics, one could
+use the following proposition.
+
+\begin{proposition}
+  The minimum and maximum of the function $f(x, y) = xy$ over
+  the rectangle $[a_x, b_x] \times [a_y, b_y]$ are obtained at the corners. 
+\end{proposition}
+
+\newpage
+
+\section{Solving non-linear equations}
+From now on, we assume we can store numbers without inaccuracies, and
+perfrom arithmetics without errors.
+
+\subsection{Bisection method}
+Suppose we wanted to find a solution to the equation
+\[
+  \sin(x) = e^x.
+\]
+Then from analysis courses we know to approximate the solution by changing
+the equaition to standard form
+\[
+  f(x) = e^x - \sin(x)
+\]
+and then find an interval like $[a, b] = [-\frac{3 \pi}{2}, 1]$ for which
+$f(a) < 0 < f(b)$.
+Because then we know that there exists a solution $x \in [a,b]$.
+
+The bisection method allows us to find roots of continuous functions in
+intervals $[a,b]$ such that $\mathrm{sign} f(a) \neq \mathrm{sign} f(b)$.
+It works by repeating the following process
+\begin{enumerate}
+  \item[(-1)] Set $a_0 = a$, $b_0 = b$ and $c_0 = \frac{a_0 + b_0}{2}$.
+  \item[(n)] Assume $a_n$, $b_n$, $c_n$ are defined. If $f(c_n) = 0$
+    we have found a root. Otherwise, from the pigeonhole principle there
+    exists $x \in \set{a_n,b_n}$ such that $f(c_n)$ and $f(x)$ form an interval
+    that contains $0$. We call this interval $[a_{n + 1}, b_{n + 1}]$.
+    We set $c_{n + 1} = \frac{a_{n + 1} + b_{n + 1}}{2}$. Treating $n$
+    as a variable for formality, we increment it by one, and continue to
+    the next step (step $(n)$).
+\end{enumerate}
+Setting $|a - b| = L$ we get that $|a_n - b_n| = L 2^{-n}$.
+By Cantor's intersection theorem, and the squeeze theorem, it is clear
+that $c_n \taking{n \to \infty} x$ where $x$ is a root of $f(x)$.
+
+\begin{remark}
+  Using the bisection method, we can calculate the number of steps we need to
+  take to obtain $x'$ where $x' \in [x - \epsilon, x + \epsilon]$ for any
+  $\epsilon > 0$.
+\end{remark}
+
+Here is pseudocode for the bisection method, $f$ represents a continuous
+function, $a$, $b$ represent the limits of the interval $[a,b]$ where
+the root is.
+Tolerance is the word used for the accuracy we need, represented by $\epsilon$.
+We also need to have a maximum amount of iterations denoted $N_{\text{max}}$.
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwIn{$f$, $a$, $b$, $\epsilon$, $N_{\text{max}}$}
+\KwOut{Approximate root $c$ or failure to converge}
+
+\If{$f(a) \cdot f(b) \geq 0$}{
+    Print "Error: No root in the interval $[a, b]$"\;
+    \Return
+}
+
+\For{$k \gets 1$ \textbf{to} $N_{\text{max}}$}{
+    $c \gets \frac{a + b}{2}$\;
+    \If{$f(c) = 0$ \textbf{or} $\frac{b - a}{2} \leq \epsilon$}{
+        \Return $c$\;
+    }
+    \If{$f(a) \cdot f(c) < 0$}{
+        $b \gets c$\;
+    }
+    \Else{
+        $a \gets c$\;
+    }
+}
+
+Print "Failed to converge after $N_{\text{max}}$ iterations"\;
+\end{algorithm}
+
+\subsection{Newton's algorithm}
+Newton's algorithm (also known as the Newton--Raphson algorithm) is an algorithm
+to compute the root of a function $f \colon \R \to \R$
+so that $f \in C^2(\R)$ and $f$ has a root $x$.
+
+The idea behind the algorithm is to have a first guess of the root $x_0$,
+and then set $x_{n+1}$ to be the root of the Taylor expansion up to linear
+order of $f$ at the point $x_n$.
+
+\begin{remark}
+  This algorithm does not always converge to the root,
+  % example
+  but if we have a ``good'' approximation for the root as $x_0$ it will always
+  converge to the root very quickly.
+  We will see what ``good'' exactly means later.
+\end{remark}
+
+\begin{example}
+  Consider the function $f(x) = e^x - 6$.
+  The solution is $x = \log 6 \approx 1.7918$.
+  We start by a close guess $x_0 = 2$.
+  The iterations are given by
+  \[
+    x_{n + 1} =
+    x_n - \frac{f(x_n)}{f'(x_n)} =
+    x_n - \frac{e^{x_n} - 6}{e^{x_n}}.
+  \]
+  Applying this process gives
+  \[
+    x_1 = 1.8120 \stand
+    x_2 = 1.7920 \stand
+    x_3 = 1.7918 \stand
+    x_4 = 1.7918
+  \]
+  with errors
+  \[
+    e_1 = 2 \times 10^{-2} \stand
+    e_2 = 2 \times 10^{-4} \stand
+    e_3 = 2 \times 10^{-8} \stand
+    e_4 = 4 \times 10^{-16}.
+  \]
+  which shows that the process is very useful.
+\end{example}
+
+\begin{lemma}
+  \label{lem:newton-local}
+  Let $f \in C^2(\R)$ be a function with a root $r \in \R$.
+  Let $x_{n + 1}$ be the solution of $L(x \mid x_n) = 0$
+  (the root of the linear Taylor approximation of $f(x)$ at $x_n$).
+  Then there exists $\xi \in (r,x_n)$ such that
+  \[
+    f'(x_n)(x_{n+1} - r) = \half f''(\xi)(x_n - r)^2
+  \]
+\end{lemma}
+\begin{proof}
+  By definition we have $L(x_{n + 1} \mid x_n) = 0$, and Taylor's expansion
+  around $x_n$ gives us
+  \[
+    0 = f(r) = L(r \mid x_n) + \half f''(\xi)(x_n - r)^2
+  \]
+  so
+  \[
+    f'(x_n)(x_{n+1} - r) = L(x_{n + 1} \mid x_n) - L(r \mid x_n) =
+    L(r \mid x_n) = \half f''(\xi)(x_n - r)^2
+  \]
+  which completes the proof.
+\end{proof}
+
+\begin{proposition}
+  Let $f \in C^2(\R)$ be a function with a simple root $r \in \R$.
+  Then there exists $\delta > 0$ and $C > 0$ such that for any Newton
+  iterations starting from $x_0 \in [r - \delta, r + \delta]$, the
+  sequence $|x_n - r|$ converges monotonely to zero and
+  \[
+    |x_{n  + 1} - r| \le C(x_n - r)^2
+  \]
+\end{proposition}
+\begin{remark}
+  A simple root means that $f'(r) \neq 0$.
+\end{remark}
+\begin{proof}
+  Let $x_n$ be the sequence Newton--Raphson iterates starting from $x_0$.
+  Since $f'(r) \neq 0$, we can choose some $\delta_0 > 0$ small enough so
+  that $f'(x) \neq 0$ on $U = [r - \delta_0, r + \delta_0]$.
+  Set
+  \[
+    m = \min_{x \in U} |f'(x)| \stand M = \max_{x \in U} |f''(x)|
+  \]
+  then using \Cref{lem:newton-local} we have that whenever 
+  
+  to be added
+\end{proof}
+
+\begin{remark}
+  The convergence rate of Newton's method near a minimun is qaudratic.
+  This means that
+  \[
+    |x_{n + 1} - r| \le C (x_n - r)^2.
+  \]
+  In comparison, the convergence rate of the bisection method was linear
+  \[
+    |x_{n + 1} - r| \le \half |x_n - r|.
+  \]
+\end{remark}
+
+\begin{definition}[Convergence rate]
+  Let $x_n$ be a sequence converging to $L$.
+  We say that $x_n$ has a convergence rate $\alpha > 0$ if there exists
+  $C > 0$ and $N > 0$ such that for all $n < N$ we have
+  \[
+    |x_{n + 1} - L| \le C |x_n - L|^{\alpha}
+  \]
+\end{definition}
+
+\begin{theorem}
+  Assume $f \in C^2(\R)$ is strictly increasing, strictly convex, 
+  and has a root.
+  Then the root is unique, and Newton iterations will converge to it from
+  any starting point.
+\end{theorem}
+\begin{proof}
+  It is clear that the root is unique.
+  From strictly convex, and strictly increasing we have that
+  $f''(x) > 0$ and $f'(x) > 0$ for all $x$.
+  From \Cref{lem:newton-local} we see that $x_n - r > 0$ for all $n \geq 1$.
+  Since $f$ is increasing it follows that $f(x_n) > f(r) = 0$.
+  Since
+  \[
+    x_{n + 1} = x_n - \frac{f(x_n)}{f'(x_n)}
+  \]
+  we see that $r < x_{n + 1} < x_n$, so $x_n$ is monotonically decreasing and
+  bounded below, thus it converges to some limit $L$.
+  Since $f \in C^2(\R)$ we have that
+  \[
+    L = 
+    \lim_{x \to \infty} x_{n + 1} =
+    \lim_{n \to \infty} x_n - \frac{f(x_n)}{f'(x_n)} =
+    L - \frac{f(L)}{f'(L)}
+  \]
+  which means that $f(L) = 0$ and thus $L = r$ which completes the proof.
+\end{proof}
+
+\subsection{Generalization to higher dimensions}
+Let $f \colon \R^d \to \R^d$ be a function such that $f \in C^2{\R^d}$
+and $f$ has a root $r \in \R^d$.
+Given a point $x_n \in \R^d$, we can define $x_{n + 1}$ as the solution
+to the linear approximation of $f$ around $x_n$,
+\[
+  L(x \mid x_n) = f(x_n) + D_f(x_n)(x - x_n).
+\]
+The solution for the equation $L(x \mid x_n) = 0$ is
+\[
+  x_{n + 1} = x_n- D_f^{-1}(x_N) f(x_n).
+\]
+Given that $D_f$ is non-singular, we get a quadratic convergence rate.
+
+\begin{remark}
+  While the bisection method allowed linear convergence under very minimal
+  convergence, Newton's method allows
+  (at least \footnote{See solutions for cubic convergence of Newton's method
+  in the solutions section}) quadratic convergence,
+  and it can also be generalized to higher dimensions.
+\end{remark}
+
+\subsection{Newton's method with the contractive mapping theorem}
+The iterations in Newton's method are given by
+\[
+  x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}.
+\]
+Define a function $F$ as follows
+\[
+  F(x) = x - \frac{f(x)}{f'(x)}.
+\]
+The functions is well defined for points where the derivative of $f$ doesn't
+vanish, and also satisfies
+\[
+  x_{n+1} = F(x_n) \tand F(r) = r \iff f(r) = 0.
+\]
+Algorithms that compute sequences like $x_{n+1} = F(x_n)$ aim to find a fixed
+point of $F$ at the limit.
+These algorithms are called fixed point interations.
+One of the most helpful thoerems when dealing with these algorithms,
+it the contractive mapping theorem.
+
+\begin{theorem}[Contractive mapping theorem]
+  Let $(X,d_X)$ be a completes metric space and
+  let $F \colon X \to X$ be a contraction with contracion factor $\lambda$.
+  Then $F$ has a unique fixed point $r \in X$.
+  Moreover, every sequence $\set{x_n}_{n=1}^{\infty} \subseteq X$ of the
+  form
+  \[
+    x_{n+1} = F(x_n)
+  \]
+  converges to $r$ at least linearly.
+  Note that when working with an interval, the image of $[a,b]$ must
+  be contained in $[a,b]$.
+\end{theorem}
+\begin{proof}
+  To be added.
+\end{proof}
+
+% Analysis of algortithms
+
+\begin{example}[Gradient descent]
+  Another fixed point iteration method is the gradient descent method.
+  Assume that $f \colon \R \to \R$ is an element of $C^2(\R)$,
+  and let $r$ be a strict miniumum ($f'(r) = 0$ and $f''(r) > 0$).
+  The iterations in the gradient descent method are defined as such
+  \[
+    F(x_n) = x_n - \alpha f'(x_n)
+  \]
+  where $\alpha > 0$ is called the \textit{step-size}.
+\end{example}
+\begin{remark}
+  Each step we ``descend'' in the direction of the derivative.
+\end{remark}
+\begin{remark}
+  This method also works in higher dimensions by changing the iterations
+  to
+  \[
+    F(x_n) = x_n - \alpha \nabla f(x_n).
+  \]
+\end{remark}
+
+\begin{example}
+  Assume we want to minimize the function $f(x) = x^2$.
+  The iterations given by the gradient descent method is
+  \[
+    x_{n+1} = x_n - \alpha 2 x_n.
+  \]
+  We need to understand for which values these iterations converge.
+\end{example}
+
+\begin{proposition}
+  Let $r$ be a strict minimum of $f \in C^2(\R)$.
+  Then for all small enough $\alpha > 0$ there exists $\delta > 0$
+  such that the gradient descent iterations converge linearly to the minimum
+  $r$ for any initial $x_0 \in (r - \delta, r + \delta)$.
+\end{proposition}
+\begin{proof}
+\end{proof}
+
+\subsection{Newton-like method without derivatives*}
+
+\subsection{Polynomials the their roots}
+
+% Fundamental theorem of algebra
+
+% Horner's method
+
+\subsection{Bairstow's method*}
+
+\subsection{Homotopy method*}
+
+% Solving non-linear equations is NP-hard
+
+\newpage
+
+\section{Numerical linear algebra}
+\subsection{Solving linear equations}
+In this subsection, we will focus on solving a system of linear equations
+such as
+\[
+  Ax = b
+\]
+where $A \in \R^{n \times n}$ is non-singular.
+\begin{itemize}
+  \item When $A$ is diagonal we can find a solution in $\O(n)$ operations.
+  \item When $A$ is upper triangular or lower triangular we can find a
+    solution in $\O(n^2)$ operations.
+\end{itemize}
+Moreover, if $A = LU$ where $L$ is a lower triangular matrix, and $U$ is
+an upper triangular matrix we can solve $Ax = b$ by first solving
+$Ux = z$ then solving $Lz = b$.
+Since both of the solutions can be found at complexity $\O(n^2)$,
+the original system $Ax = b$ can be solved in $\O(n^2)$ operations as well.
+
+\begin{definition}[Permutation matrix]
+  A permutation $\sigma \colon \set{1,\dots,n} \to \set{1,\dots,n}$
+  induces a linear map $\hat \sigma \colon \R^n \to \R^n$ by
+  \[
+    \left[\hat \sigma(v) \right]_{\sigma(i)} = v_i
+  \]
+  for all $1 \le i \le n$.
+  The matrix represeting the linear operator $\hat \sigma$ is the matrix
+  $P_{\sigma}$ defined by
+  \[
+    P_{i,j} :=
+    \begin{cases}
+      1, &i = \sigma(j) \\
+      0, &\text{otherwise}
+    \end{cases}.
+  \]
+\end{definition}
+\begin{remark}
+  When a permutation matrix $P_{\sigma}$ multiplies the matrix $A$ from
+  the left, the product $P_{\sigma} A$ is given by
+  \[
+    \begin{pmatrix}
+      \text{---} & R_{\sigma(1)} & \text{---} \\ 
+        & \vdots &  \\
+      \text{---} & R_{\sigma(n)} & \text{---}
+    \end{pmatrix}
+  \]
+  where $R_i$ is the $i$th row of $A$.
+\end{remark}
+\begin{remark}
+  Every permutation matrix $P$ is orthogonal,
+  with its inverse equal to its transpose.
+  Moreover, permutation matrices can be characterized as the orthogonal
+  matrices whose entries are all non-negative.
+\end{remark}
+
+\begin{remark}
+  We denote $L^{(r,s,\lambda)}$ the matrix that operates on a matrix $A$
+  by adding the $r$th row of $A$ times $\lambda$ to the $s$th row of $A$.
+  Formally,
+  \[
+    L^{(r,s,\lambda)} = I_n + \lambda E^{sl}
+  \]
+  where $E^{sl}_{sl} = 1$ and otherwise $E_{ij} = 0$.
+\end{remark}
+
+\begin{lemma}
+  \label{lem:gaussians-commute}
+  Let $P_{\sigma}$ be a permutation matrix which swaps the rows $t$ and $u$
+  and leaves the rest of the rows fixed.
+  Let $L^{r,s,\lambda}$ be with $r > s$,
+  and assume that $r < \min\set{u,t}$.
+  Then
+  \[
+    P L^{r,s,\lambda} = L^{r,\sigma(s),\lambda} P
+  \]
+  and $\sigma(s) > r$.
+\end{lemma}
+\begin{proof}
+  To be added
+\end{proof}
+
+\subsubsection{Guassiam elimination}
+The process of Guassian elimination on $A$ can be given by first multiplying
+$A_0 = A$ by a permutation matrix such that the element in
+$(P_0 A_0)_{11} \neq 0$ and then multiplying $P_0 A_0$ on the left
+by $n - 1$ lower triangular matrices $L^{1,j,\lambda_j}$ and get a matrix
+\[
+  A_1 = L^{1,n,\lambda_n} \cdots L^{1,2,\lambda_2} P_0 A_0.
+\]
+Denote
+\[
+  L^{k} := L^{k,n,\lambda_n} \cdots L^{1,k+1,\lambda_{k+1}}
+\]
+and then by the end of the elimination we have
+\[
+  U = A_{n-1} = L_{n-1} P_{n-2} L^{n-2} P_{n-3} \cdots L^1 P_0 A.
+\]
+where $U$ is an upper triangular matrix since it is after the elimination.
+
+\begin{theorem}[$LU$ decomposition]
+  Let $A \in \R^{n \times n}$ be a non-singular matrix,
+  let $P_0,\dots,P_{n-2}$ be the permutation matrices from above,
+  let $L^{n-1},\dots,L^1$ be the lower triangular matrices from above,
+  and let $U$ be the upper triangular matrix obtained from applying
+  Gaussian elimination on $A$.
+  Then
+  \[
+    PA = LU
+  \]
+  where $L$ is some triangular matrix, and $P$ is the permutation matrix
+  $P = P_{n-2} \cdots P_{0}$.
+\end{theorem}
+\begin{proof}
+  Each $P_k$ is a permutation matrix $P_{\sigma_k}$ that permutates
+  two rows $u$ and $t$, and each $L^r$ for $r \le k$ is a product of
+  matrices of the form $L^{r,s,\lambda}$.
+  Accodring to \Cref{lem:gaussians-commute} these types of matrices
+  commute (with a slight modification) and thus
+  \begin{align*}
+    P_k L^r &=
+    P_k L^{r,n,\lambda_n} \cdots L^{1,r+1,\lambda_{r+1}} \\ &=
+    L^{r,\sigma_k(n),\lambda_n} \cdots L^{1,\sigma_k(r+1),\lambda_{r+1}}
+    P_k \\ &=
+    L^{r,n,\lambda_n} \cdots L^{1,\sigma_k(r+1),\lambda_{r+1}} P_k
+  \end{align*}
+\end{proof}
+
+\begin{remark}
+  The complexity to find the $LU$ decomposition of a matrix is $\O(n^3)$,
+  but this gives us $A = P^T LU$, then we can solve $Ax = P^T LU x = b$
+  in complexity $\O(n^2)$.
+
+  This might seem useless at first, because solving $Ax = b$ is still
+  $\O(n^3 + n^2) = \O(n^3)$.
+  However, if $A$ is fixed and we want to find the solutions $A x = b_i$
+  for $b_1,\dots,b_m$, the complexity of solving the equations without
+  $LU$ decomposition will be $\O(m n^3)$,
+  and with $LU$ decomposition $\O(n^3 + m n^2)$ which is faster in practice.
+\end{remark}
+\begin{example}
+  We can use $LU$ decomposition to find the inverse of $A$ by solving
+  the equations
+  \[
+    A c_j = e_j \quad j = 1,\dots,n
+  \]
+  in $\O(n^3 + m n^2)$ and then
+  \[
+    A^{-1} =
+    \begin{pmatrix}
+      \vert & \vert & \vert \\
+      c_1 & \cdots & c_n \\
+      \vert & \vert & \vert
+    \end{pmatrix}.
+  \]
+\end{example}
+\begin{example}
+  We can use $LU$ decomposition to compute the determinant of $A$ with
+  \[
+    \det(A) = (\det (P))^{-1} \det(L) \det(U).
+  \]
+  This is very efficient because we can calculate the determinants of
+  permutations matrices and triangular matrices in linear time.
+\end{example}
+
+\subsection{Scaled row pivoting}
+Consider the equation
+\[
+  \begin{pmatrix}
+    0 & 1 \\
+    1 & 1
+  \end{pmatrix}
+  \begin{pmatrix}
+    x \\ y
+  \end{pmatrix} =
+  \begin{pmatrix}
+    1 \\ 2
+  \end{pmatrix}.
+\]
+The solution is $(x,y) = (1,1)$.
+However, if we modify the equation slightly with a very small $\epsilon > 0$
+\[
+  \begin{pmatrix}
+    \epsilon & 1 \\
+    1 & 1
+  \end{pmatrix}
+  \begin{pmatrix}
+    x \\ y
+  \end{pmatrix} =
+  \begin{pmatrix}
+    1 \\ 2
+  \end{pmatrix}
+\]
+After applying Gaussian elimination we get
+\[
+  \begin{pmatrix}
+    \epsilon & 1 \\
+    1 & 1 - \epsilon^{-1}
+  \end{pmatrix}
+  \begin{pmatrix}
+    x \\ y
+  \end{pmatrix} =
+  \begin{pmatrix}
+    1 \\ 2 - \epsilon^{-1}
+  \end{pmatrix}
+\]
+and the solutions will be
+\begin{align*}
+  x &= \epsilon^{-1}\del{1 - \frac{2 - \epsilon^{-1}}{1 - \epsilon^{1}}} =
+  - \frac{\epsilon^{-1}}{1 - \epsilon^{-1}} \approx 1 \\
+  y &= \frac{2 - \epsilon^{-1}}{1 - \epsilon^{-1}} \approx 1.
+\end{align*}
+However, when $\epsilon$ is small enough, we have that
+\[
+  \fl(1 - \epsilon^{-1}) = \fl(2 - \epsilon^{1}) \implies x = 0
+\]
+which then gives that the solution is $(x,y) = (0,1)$ which is far from
+the correct solution.
+This shows us that when performing Gaussian elimination we need to have
+scaled row pivoting.
+With scaled row pivoting, for each row we set
+\[
+  s_i := \max\set{\abs{a_{i2},\dots,\abs{a_{in}}}}
+\]
+and then choose the first rwo to be the one for which $\abs{a_{i1}} / s_i$
+is maximal in all the steps.
+
+Using this approach in our previous example gives
+\[
+  \begin{pmatrix}
+    1 & 1 \\
+    \epsilon & 1
+  \end{pmatrix}
+  \begin{pmatrix}
+    y \\ x
+  \end{pmatrix} =
+  \begin{pmatrix}
+    2 \\ 1
+  \end{pmatrix} \implies
+  \begin{pmatrix}
+    1 & 1 \\
+    0 & 1 - \epsilon
+  \end{pmatrix}
+  \begin{pmatrix}
+    y \\ x
+  \end{pmatrix} =
+  \begin{pmatrix}
+    2 \\ 1 - 2 \epsilon
+  \end{pmatrix}
+\]
+and then even for a very small $\epsilon > 0$ we have that
+$\fl(1 - \epsilon) = 1$ and $\fl(1 - 2 \epsilon) = 1$,
+which leads to $(x,y) = (1,1)$ which is very close to the desired solution.
+
+\subsection{Condition number}
+\begin{question}
+  We know that we can solve $Ax = b$ when $\det(A) \neq 0$ but what happens
+  when $\det(A)$ is very small?
+\end{question}
+\begin{answer}
+  The solution will be very unstable.
+\end{answer}
+
+\begin{definition}[Condition number]
+  The condition number of a non-singular matrix $A$ is defined as
+  \[
+    \kappa(A) := \norm{A} \cdot \norm{A^{-1}}.
+  \]
+\end{definition}
+\begin{lemma}
+  Let $A$ be a non-singular matrix.
+  Then $\kappa(A) > 1$.
+\end{lemma}
+\begin{proof}
+  \[
+    1 = \norm{A A^{-1}} \le \norm{A} \cdot \norm{A^{-1}} = \kappa(A).
+  \]
+\end{proof}
+
+\begin{remark}
+  Since we are solving equations numerically we only get approximate
+  solutions $\hat x \approx x$.
+  Denote $\hat b = A \hat x$.
+\end{remark}
+
+\begin{theorem}
+  Let $A \in \R^{n \times n}$ be non-singular,
+  and let $x, \hat x, b, \hat b$ be nonzero vectors in $\R^n$
+  such that
+  \[
+    Ax = b \tand
+    A \hat x = \hat b
+  \]
+  then
+  \[
+    \kappa^{-1}(A) \frac{\norm{b - \hat b}}{\norm{b}} \le
+    \frac{\norm{x - \hat x}}{\norm{x}} \le
+    \kappa(A) \frac{\norm{b - \hat b}}{\norm{b}}.
+  \]
+\end{theorem}
+\begin{proof}
+  We have that
+  \begin{align*}
+    \norm{x - \hat x} &= \norm{A^{-1}(b - \hat b)} \le
+    \norm{A^{-1}} \norm{b - \hat b} \\ &=
+    \norm{A^{-1}} \norm{b - \hat b} \norm{Ax} \norm{b}^{-1} \le
+    \kappa(A) \norm{b - \hat b} \norm{x} \norm{b}^{-1}.
+  \end{align*}
+  Similarly since $x = A^{-1} b$ and $\hat x = A^{-1} \hat b$ ew get
+  \[
+    \frac{\norm{b - \hat b}}{\norm{b}} \le
+    \kappa(A^{-1}) \frac{\norm{x - \hat x}}{\norm{x}} =
+    \kappa(A) \frac{\norm{x - \hat x}}{\norm{x}}
+  \]
+\end{proof}
+
+\begin{theorem}
+  Let $A \in R^{n \times n}$ be a non-singular matrix with an orthonomal
+  basis $\mathcal B = \set{v_i}_{i=1}^{n}$ and eigenvalues
+  $\Lambda = \set{\lambda_i}_{i=1}^{n}$.
+  Then
+  \[
+    \kappa(A) = \frac{\min \Lambda}{\max \Lambda}.
+  \]
+\end{theorem}
+\begin{proof}
+  Since each vector can be decomposed to a linear combination of the basis
+  vectors, we get that $\norm{A} = \norm{A}_{\op} = \max \Lambda$.
+  Similarly, since the eigenvalues of $A^{-1}$ are $\lambda_i^{-1}$ we
+  get that $\norm{A^{-1}} = 1 / \min \Lambda$.
+  It follows that
+  \[
+    \kappa(A) = \frac{\min \Lambda}{\max \Lambda}
+  \]
+  which completes the proof.
+\end{proof}
+
+\subsection{Pure \texorpdfstring{$LU$}{LU} and Cholesky decomposition}
+
+There are some types of matrices such that we do not need any pivoting.
+
+\begin{theorem}
+  Let $A \in \R^{n \times n}$ be a matrix whose principle minors
+  $A_k \in \R^{k \times k}$ are all non-singular.
+  Then there exist a lower triangular matrix $L$ and an upper triangular
+  matrix $U$ such that $A = LU$ and the diagonla entries of $L$ are $1$.
+\end{theorem}
+\begin{proof}
+  To be added
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%% The above are weird
+
+\subsection{The power method}
+\begin{example}
+  Consider the matrix
+  \[
+    A = \begin{pmatrix}
+      -2 & 0 \\
+      0 & 1
+    \end{pmatrix}.
+  \]
+  It clearly has the eigenvalues $\lambda_1 = -2$ and $\lambda_2 = 1$.
+  Given an aribitrary vector $x = (x_1, x_2)$ we get
+  \[
+    A^k x =
+    \begin{pmatrix}
+      (-2)^k x_1 \\
+      x_2
+    \end{pmatrix}
+  \]
+  which in a sense converges to the eigenvector corresponding to $\lambda_1$
+  (the vector $e_1$).
+
+  In order to see this more clearly, we first need to normalize the vector
+  by defining recursively
+  \[
+    x^{(k)} = \frac{A^k x}{\norm{A^k x}}.
+  \]
+  We see that $x^{(2k)}$ converges to $e_1$,
+  and $x^{(2k+1)}$ converges to $-e_1$,
+  which are scalar multiplies of each other.
+  Either way we have that
+  \[
+    \norm{A x^{(k) - \lambda_1 x^{(k)}}} \taking{k \to \infty} 0.
+  \]
+  Let $v_1$ be the eigenvector of $\lambda_1$.
+  Since for any vector $w \in \R^2$ such that $\ip{v_1}{w} \neq 0$ we get
+  \[
+    \frac{\ip{A v_1}{w}}{\ip{v_1}{w}} = \lambda_1
+  \]
+  we can also approximate it by
+  \[
+    \frac{\ip{A x^{(k)}}{w}}{\ip{x^{(k)}}{w}} \taking{k \to \infty} \lambda_1
+  \]
+\end{example}
+
+What we have seen in the previous example is called the power method.
+It states that given $A \in \C^{n \times n}$ and $x^{(0)}, w \in \C^{n}$,
+if we recursively define
+\begin{align*}
+  x^{(k)} &= \frac{A x^{(n-1)}}{\norm{A x^{(n-1)}}} \\
+  \lambda^{(k)} &= \frac{\ip{A x^{(k)}}{w}}{\ip{x^{(k)}}{w}}
+\end{align*}
+the sequence $x^{(k)}$ will converge to the ``first'' eigenvector
+under some conditions.
+\begin{remark}
+  This means that $\lambda^{(k)}$ will necessarily converge to the
+  corresponding eigenvalue.
+\end{remark}
+
+\begin{theorem}
+  Let $n \geq 2$ be a natrual number,
+  let $A \in \C^{n \times n}$,
+  let $w^{(0)}, w \in \C^n$,
+  and assume that
+  \begin{enumerate}
+    \item[(1)] $A$ is diagonalizable.
+    \item[(2)] $A$ must have a \textit{dominant} eigenvalue 
+      which we will denote $\lambda_1$.
+    \item[(3)] When $x^{(0)}$ is expressed as a linear combination
+      \[
+        x^{(0)} = a_1 u_1 + a_2 u_2 + \cdots + a_n u_n
+      \]
+      the coefficient $a_1$ is not zero.
+    \item[(4)] $\ip{w}{u_1} \neq 0$.
+  \end{enumerate}
+  Then $x^{(k)}$ is well defined for all $k \geq 1$,
+  and $\lambda^{(k)}$ is well defined for all sufficiently large $k$,
+  and
+  \begin{align*}
+    &\lambda^{(k)} \taking{k \to \infty} \lambda_1 \\
+    &\norm{A x^{(k) - \lambda_1 x^{(k)}}} \taking{k \to \infty} 0.
+  \end{align*}
+\end{theorem}
+\begin{remark}
+  A dominant eigenvalue is an eigenvalue $\lambda_1$ such that for
+  all $k \geq 2$ we have $\abs{\lambda_1} > \abs{\lambda_k}$.
+  This is also the must restricitve condition,
+  the rest of the conditions are usually satisfied.
+  If the first two eigenvalues have similar magnitude the convergence
+  will be very slow.
+\end{remark}
+\begin{proof}
+\end{proof}
+
+\begin{remark}
+  In linear algebra we saw that for two column vectors
+  $x,y \in \R^{n \times 1}$ we have that the standard inner product
+  is
+  \[
+    \ip{x}{y} = y^T x,
+  \]
+  but we also find the \textit{outer product} (or tensor product) useful,
+  which is defined as
+  \[
+    x \otimes y = x y^T \in \R^{n \times n}. 
+  \]
+  This is a linear transformation, such that
+  \[
+    (x \otimes y) z = \ip{y}{z} x.
+  \]
+  In particular if $v_1, v_2$ are orthogonal, and of norm one,
+  \[
+    (v_1 v_1^T) v_1 = v_1
+    \tand
+    (v_1 v_1^T) v_2 = 0.
+  \]
+\end{remark}
+
+\subsection{The power method beyond a singlue eigenvalue}
+Suppose we have a symmetric real matrix with eigenvalues such that
+\[
+  \abs{\lambda_1} > \abs{\lambda_2} > \abs{\lambda_3}
+  \geq \cdots \geq \abs{\lambda_n}.
+\]
+After finding the first eigenvalue and eigenvector $(\lambda_1,u_1)$
+using the power method, we define $\tilde A = A - \lambda_1 u_1 u_1^T$.
+This gives that
+\[
+  \del{A - \lambda_1 u_1 u_1^T} u_j =
+  \lambda_j u_j - \lambda_1 u_1 u_1^T u_j =
+  \begin{cases}
+    0, &j = 1 \\
+    \lambda_j u_j, &j \neq 1
+  \end{cases}.
+\]
+This way the dominant eigenvalue of $\tilde A$ is $\lambda_2$,
+and in this way we can theoretically find all eigenvalues of $A$.
+\begin{remark}
+  To find all eigenvalues of $A$ we need to slightly modify the conditions
+  so that
+  \[
+    \abs{\lambda_1} > \abs{\lambda_2} > \abs{\lambda_3}
+    > \cdots > \abs{\lambda_n}.
+  \]
+\end{remark}
+\begin{remark}
+  In practice, the power method is used when we need to find only a few
+  eigenvectors, in order to find all of them other method, such as
+  the $QR$ decomposition method are preferred.
+\end{remark}
+
+\begin{remark}
+  In order to find the smallest eigenvalue,
+  we need to assume that there exists a dominant eigenvalue,
+  and a unique minimal eigenvalue, which are all positive.
+  Then after finding $\lambda_1$,
+  we can define $\tilde A = \lambda_1 I_n - A$,
+  which has the eigenvalues $\set{\lambda_1 - \lambda_i}_{i=1}^{n}$.
+  The dominant eigenvalue is $\lambda_1 - \lambda_n$, so we can find
+  it by using the power method on $\tilde A$.
+  Since we already know $\lambda_1$,
+  this means we can find $\lambda_n$.
+\end{remark}
+
+\subsection{Laplacian matrix}
+\begin{definition}[Adjacency matrix]
+  Let $G = (V,E)$ be a simple graph.
+  We define its adjacency matrix $A$ by
+  \[
+    (A)_{ij} =
+    \begin{cases}
+      1, &\set{i,j} \in E \\
+      0, &\set{i,j} \notin E
+    \end{cases}.
+  \]
+\end{definition}
+\begin{remark}
+  The degree $d_i$ of the $i$th vertex is given by
+  \[
+    d_i = \sum_{j=1}^{n} A_{ij}.
+  \]
+\end{remark}
+\begin{definition}[Laplacian matrix]
+  Let $G = (V,E)$ be a graph,
+  let $A$ be its adjacency matrix,
+  and let $\set{d_i}_{i=1}^{n}$ be the degrees of the vertices of $G$.
+  The Laplacian matrix of $G$ is
+  \[
+    L = \diag(d_1,\dots,d_n) - A.
+  \]
+\end{definition}
+
+
+
+
+
+
+
+\end{document}

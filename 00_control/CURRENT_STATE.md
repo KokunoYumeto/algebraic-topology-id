@@ -2,7 +2,53 @@
 
 Updated: 2026-08-24
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. This Roberts-complete/composite-course-partial boundary passes every semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, and hash gate and is now public and anonymously byte-exact on GitHub/Pages and Zenodo. GitHub content commit is `dd46acdeb222a4cb4b8879af05e7c929111372ff`; Pages run `32699844696` succeeded. Zenodo version `0.30.0` is record `22077025`, DOI `10.5281/zenodo.22077025`, in existing concept `10.5281/zenodo.22061489`; all nine files passed two anonymous HTTP 200 size/SHA-256 readbacks. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. Continue now with selected Fomberg lines 31–4185 and the exact original closure in `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. This Roberts-complete/composite-course-partial boundary passes every semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, and hash gate and is now public and anonymously byte-exact on GitHub/Pages and Zenodo. GitHub content commit is `dd46acdeb222a4cb4b8879af05e7c929111372ff`; Pages run `32699844696` succeeded. Zenodo version `0.30.0` is record `22077025`, DOI `10.5281/zenodo.22077025`, in existing concept `10.5281/zenodo.22061489`; all nine files passed two anonymous HTTP 200 size/SHA-256 readbacks. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. Fomberg Unit 001 is now locally closed through line 614; publish that verified checkpoint, then continue at line 615 under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+
+### Live recovery note — Fomberg Unit 001 local closure, 2026-08-24
+
+Do not translate Fomberg lines 31–614 again. `O012-FOM-001`/`D60-R08`
+translates Sections 1.1–1.2 contiguously and closes at the exact next cursor,
+line 615. Reader
+`source/id-ID/fomberg/units/fomberg-unit-001-delta-complexes-simplicial-homology.md`
+is 34,773 bytes/1,073 LF lines/87 stable IDs, SHA-256
+`d9b64140f9340c75bc34c12bc02ee843d87de3566e331c50c2374075718aa2c6`.
+Its audit is admissible after documented repairs; independent review and final
+QA are P1/P2/P3 zero. The adverse ledger ends at `O012-ADV-0425` and the
+terminology ledger at `O012-TERM-0393`.
+
+The append-only backend preserves the immutable Roberts terminal prefix at
+4,761 records/5,213,679 bytes/bundle
+`51b8c7f611560b9b5e88e97b3a943b54e0eb687c703f0cd34c1a3d164e4fb920`.
+It appends exactly 299 Fomberg Unit 001 records and finishes at 5,060
+records/5,658,648 bytes/bundle
+`17f57575a062025e434e79f7f3797d05de1a41e520202521ae39a409d4b6450d`.
+Static QA, semantic validation, prefix preservation, producer replay, and
+cumulative deterministic replay pass; controlling receipt is
+`qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_001_CUMULATIVE_RECEIPT.json`, SHA-256
+`d110ce29513a9a9a789d6baf5e2b513d8c971c7d4e6d67e5943eed440c48bc50`.
+
+Composite HTML
+`output/html/roberts-001-030-fomberg-001/index.html` is 5,029,788 bytes/SHA-256
+`2b64e8bec1dd5e1689ef6569360fec896ef87a683c7ba291a3780e27084a7390`;
+PDF `output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-id.pdf` is
+2,322,978 bytes/SHA-256
+`fb81f2b2c0f73c17c4e3be4eaae164eaeaeb0c4ff0661580acfc7aa9b6d5f749`,
+362 A4 pages. Two builds are byte-identical. Live browser QA first exposed a
+586/587-pixel page-overflow failure at a 375-pixel mobile content width; the
+builder-only body-wrap repair was then rerun and now passes at 375/375 with
+zero exposed contributors while preserving 268 local MathML scrollers. A
+final audit also caught literal Markdown at the first Roberts notice boundary;
+the builder now inserts the missing blank separator and fails closed unless
+the real `o012-rbt-u001-notice` anchor survives in both readers. The root
+license is now an explicit Roberts-only CC BY 4.0 / Fomberg-and-integrated CC
+BY-SA 4.0 scope matrix rather than a misleading repository-wide Roberts notice.
+Desktop centering, links, native MathML, offline closure, PDF title/transition
+and every Fomberg page, fonts/ToUnicode, rights, privacy, and disclosed PDF
+tagging limitation pass. Build receipt SHA-256 is
+`a830567918c16d12bebaef3da8f8ad1a05f79f28c332d57f101a5b0d7f79bde9`.
+This local boundary is ready but not yet public; next execute the existing
+GitHub/Pages and Zenodo publication lineages with anonymous byte readback, then
+translate Fomberg lines 615–1290.
 
 ### Live recovery note — Roberts local closure, 2026-08-24
 
@@ -38,6 +84,17 @@ canonical sources, authorities, backend, controls, receipts, current readers,
 and publication artifacts remain. Exact details are in
 `CLEANUP_RECEIPT_2026-08-24.json`.
 
+Three Python bytecode files were recreated by later bounded validation and
+were separately closed before production resumed. Archive
+`<workspace>/old stuff/algebraic-topology-id_recreated-python-cache_20260824T095607_CEST.zip`
+is 93,895 bytes/SHA-256
+`f570c5885bed9231576df78cf084a9d4e0b7bd059f6e929812660a3c0d35ed66`;
+all three entries were reopened and matched by path, size, and SHA-256 before
+their exact loose files and now-empty `scripts/__pycache__` directory were
+deleted. The current composite visual-QA renders were retained because they
+remain active evidence. Exact details are in
+`CLEANUP_RECEIPT_2026-08-24_RECREATED_CACHE.json`.
+
 The Fomberg authority/build gate is now genuinely closed at 55/55 PASS. The
 old PASS was rejected because the provisional CC0 `commath` shim printed
 literal optional-size syntax for `\del[4]` and `\del[1]` on pages 10 and 35.
@@ -49,7 +106,7 @@ Final passes have zero tracked warnings/errors, the malformed literals are
 absent, and official-versus-rebuilt pages 1, 3, 10, 20, 30, 35, 39, 40, and
 57 pass visual comparison. Exact gate receipt:
 `qa/FOMBERG_AUTHORITY_BUILD_GATE_QA.json`, 3,402 bytes/SHA-256
-`933d1a0158d3c1c0aecd94483b1e3dcd1a7f40cac761f25d19d272eb439d9b01`.
+`110ae5058f254f780812fa12e51e73cc6d1f1e6e03a319dbdfb18ecedf79fe71`.
 The selected translation witness remains exactly lines 31–4185, Sections
 1.1–1.13, physical pages 1–39; Section 1.14 begins on page 40.
 

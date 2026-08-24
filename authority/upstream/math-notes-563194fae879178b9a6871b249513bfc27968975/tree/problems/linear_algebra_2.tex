@@ -1,0 +1,2932 @@
+\documentclass[11pt, a4paper]{article}
+
+\def\ncourse {Linear algerba 2 - Problems}
+\def\ntype{problems}
+
+\input{../header.tex}
+\renewcommand{\Im}{\mathrm{im}}
+\DeclareMathOperator{\Ker}{Ker}
+
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\section{Projections and Invariant Subspaces}
+
+\begin{exercise}
+Show that $V = U \oplus W$ and find the projection on $U$ parallel to $W$ in
+\begin{enumerate}
+  \item[(1)] $V = \R[x]$ with 
+    \[
+      W = \text{Sp}\{x^2+x+1\}, \quad U = \set{p(x) \in V \colon p(0) = 0}.
+    \]
+  \item[(2)] $V = \R^4$ with 
+    \[
+      W = \text{Sp}\{e_1+e_4,e_2+e_4\},\quad U = \{e_1,e_2+e_3\}
+    \]
+    where $E = (e_1,...,e_4)$ is the standard basis.
+\end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+\item[(1)]
+  First we will show that $U + W = V$. Let $p \in V$ be a general polynomial:
+  \[
+    p(x) = a_nx^n + \cdots + a_0 \in V
+  \]
+  Now choose $w = a_0(x^2+x+1) \in W$ and $u = (p-w) \in U$.
+  We know that $(p-w)\in U$ because: 
+  \[
+    (p-w)(0) = p(0) - w(0) = a_0 - a_0 = 0
+  \]
+  Now we see that: 
+  \[
+    u + w = (p-w) + w = p
+  \]
+  That proves that $U + W = P$. Now we will show that $U \cap W = \{0\}$
+  which will prove that $U \oplus W = V$, as we have shown in the lecture.
+  \begin{align*}
+    U \cap W &= \{p(x)\in V \colon p(x)\in W \land p(0) = 0\} \\
+    &= \{ax^2+ax+a \colon a \in \R \land p(0) = 0\} \\
+    &= \{ax^2+ax+a \colon a \in \R \land a = 0\} \\
+    &= \{0\}
+  \end{align*}
+  Now we will find the projection on $U$ parallel to $W$. We have shown that
+  the only way to get any specific $p\in V$ is by adding the specific:
+  \[
+    u_p + w_p = (p-a_0(x^2+x+1)) + a_0(x^2+x+1)
+  \]
+  So the parallel projection will be $P \colon V\to V$:
+  \begin{align*}
+    P(p(x)) &= P(a_nx^n + \cdots + a_0) = u_p = (p-a_0(x^2+x+1)) \\
+    &= a_nx^n + \cdots + a_3x^3 + (a_2-a_0)x^2 + (a_1-a_0)x
+  \end{align*}
+\item[(2)]
+  Consider the following matrix with the vectors from $U$ and $W$:
+  \[ \begin{pmatrix}
+  \text{---} & e_1+e_4 & \text{---}\\
+  \text{---} & e_2+e_4 & \text{---}\\
+  \text{---} & e_1 & \text{---}\\
+  \text{---} & e_2+e_3 & \text{---}\\
+  \end{pmatrix} \]
+  By applying elementary row operations we get:
+  \[ \begin{pmatrix}
+  1 & 0 & 0 & 0\\
+  0 & 1 & 0 & 0\\
+  0 & 0 & 1 & 0\\
+  0 & 0 & 0 & 1\\
+  \end{pmatrix} \]
+  Which means as we know from linear algebra $1$ that $U + W = V$ and from
+  Grassman's identity(?) we know that:
+  \begin{align*}
+    \underbrace{\dim(W+U)}_4 &= \underbrace{\dim(W)}_2
+    + \underbrace{\dim(U)}_2 - \dim(U\cap W) \\
+    &\Rightarrow \dim(U\cap W) = 0 \\
+    &\Rightarrow U\cap W = \{0\}
+  \end{align*}
+  Which implies that $U\oplus W = V$. Now we will find the projection on 
+  $U$ parallel to $W$. For this we will need to find the unique decomposition
+  of any $v\in V$ to vectors $u\in U$ and $w\in W$. Where for 
+  $a,b,c,d,x_1,x_2,x_3,x_4\in\F$:
+  \begin{align*}
+    w &= a(e_1+e_4) + b(e_2+e_4) = 
+    \begin{pmatrix}
+  a\\
+  b\\
+  0\\
+  a+b\\
+    \end{pmatrix} \\
+    u &= c(e_1) + d(e_2+e_3) = 
+    \begin{pmatrix}
+  c\\
+  d\\
+  d\\
+  0\\
+    \end{pmatrix} \\
+  \end{align*}
+  \[
+    u+w = 
+    \begin{pmatrix}
+  \vert & \vert & \vert & \vert\\
+  e_1+e_4 & e_2+e_4 & e_1 & e_2+e_3\\
+  \vert & \vert & \vert & \vert\\
+    \end{pmatrix}
+    \begin{pmatrix}
+  a\\
+  b\\
+  c\\
+  d\\
+    \end{pmatrix} =
+    \begin{pmatrix}
+  a+c\\
+  b+d\\
+  d\\
+  a+b\\
+    \end{pmatrix}
+    = v =
+    \begin{pmatrix}
+  x_1\\
+  x_2\\
+  x_3\\
+  x_4\\
+    \end{pmatrix}	
+  \]
+  So we get that $d=x_3$
+  \[
+    \begin{pmatrix}
+  a+c\\
+  b+x_3\\
+  x_3\\
+  a+b\\
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+  x_1\\
+  x_2\\
+  x_3\\
+  x_4\\
+    \end{pmatrix}	
+  \]
+  Now $b=x_2-x_3$
+  \[
+    \begin{pmatrix}
+  a+c\\
+  x_2\\
+  x_3\\
+  a+x_2-x_3\\
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+  x_1\\
+  x_2\\
+  x_3\\
+  x_4\\
+    \end{pmatrix}	
+  \]
+  So $a = x_4-x_2+x_3$ and we get:
+  \[
+    \begin{pmatrix}
+  x_4-x_2+x_3+c\\
+  x_2\\
+  x_3\\
+  x_4\\
+    \end{pmatrix}
+    =
+    \begin{pmatrix}
+  x_1\\
+  x_2\\
+  x_3\\
+  x_4\\
+    \end{pmatrix}	
+  \]
+  So $c = x_1 - x_4 + x_2 - x_3$. Finally we get that for any $v\in V$ such
+  that:
+  \[
+    v =
+    \begin{pmatrix}
+  x_1\\
+  x_2\\
+  x_3\\
+  x_4\\
+    \end{pmatrix}	
+  \]
+  We get:
+  \begin{multline*}
+    v = w + u = a(e_1+e_4) + b(e_2+e_4) + c(e_1) + d(e_2+e_3) \\
+      = (x_4-x_2+x_3)(e_1+e_4) + (x_2-x_3)(e_2+e_4) \\ +
+         (x_1 - x_4 + x_2 - x_3)(e_1) + (x_3)(e_2+e_3)
+  \end{multline*}
+  Which means the projection on $U$ parallel to $W$ is $P\colon V\to V$
+  \[
+    \forall\underbrace{
+    \begin{pmatrix}
+  x_1\\
+  x_2\\
+  x_3\\
+  x_4\\
+    \end{pmatrix}}_v
+    \in V \colon P(v) = (x_1 - x_4 + x_2 - x_3)(e_1) + (x_3)(e_2+e_3) = 
+    \begin{pmatrix}
+  x_1 - x_4 + x_2 - x_3\\
+  x_3\\
+  x_3\\
+  0\\
+    \end{pmatrix} = u
+  \]
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Prove or disprove the following:
+  \begin{enumerate}
+    \item[(1)]The sum of projections is a projection
+    \item[(2)]The composition of projections is a projection
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+  \item[(1)] The statement is false.
+    Let $P_1 = P_2 = \mathrm{Id}_n$ be our projections from $\R^n$ to
+$\R^n$. It is clear these are projections since:
+\[ \mathrm{Id}_{n}^{2} = \mathrm{Id}_n \]
+But the transformation $P = P_1 + P_2$ is not a projection since:
+\[
+  P^2 = (P_1 + P_2)^2 = (2\mathrm{Id}_n)^2 = 4\mathrm{Id}_n \neq 2\mathrm{Id}_n = P
+\]
+
+  \item[(2)] This claim is false.
+  Consider the following projections over $\R^2$:
+\[
+  P_1(x,y) = (x+y,0) \quad and \quad P_2(x,y) = (x,x)
+\]
+It's easy to verify that these are indeed projections:
+\begin{align*}
+  P_1^2(x,y) &= P_1(x+y,0) = (x+y,0) = P_1(x,x) \\
+  P_2^2(x,y) &= P_2(x,x) = (x,x) = P_2(x,y)
+\end{align*}
+Yet if we consider the vector $(2,1)$ we get:
+\begin{align*}
+  (P_1\circ P_2)(2,1) &= P_1(2,2) = (4,0) \\
+  (P_1\circ P_2)^2(2,1) &= (P_1\circ P_2)(4,0) = P_1(4,4) = (8,0)
+\end{align*}
+So:
+\[
+  (P_1\circ P_2) \neq (P_1\circ P_2)^2
+\]
+Which means it's not a projection.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $V$ be a finite-dimensional vector space, and let
+  $P_1,...,P_n \in \text{End}(V)$ be parallel projections.
+  Denote $\forall i\colon R_i = \text{Im}P_i$
+  \begin{enumerate}
+    \item[(1)] Show that $\text{tr}P_i=\dim R_i$
+    \item[(2)] Let $P_1+\cdots+P_n = \text{Id}$, show that 
+      $V = \bigoplus R_i$ and infer that $\forall i\neq j \colon P_iP_j = 0$
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)]
+  Since $P_i$ is a parallel projection we know that 
+  $V = \Im P_i \oplus \Ker P_i$
+  Which means that $\Im P_i\cap \Ker P_i = \{0\}$. We know by a theorem
+  we learned in class that exist:
+  \[ B_r = \{b_1,...,b_k\} \]
+  a basis for $\im P_i = R_i$. And:
+  \[ B_k = \{r_{b+1},...,b_n\} \]
+  a basis for $\Ker P_i$ such that the ordered union:
+  \[ B = B_r \cup B_k = \{b_1,...,b_k,b_{k+1},...,b_n\} \]
+  forms a basis for $V$. That means that the matrix representation of $P_i$
+  by the basis $B$ is:
+  \[ 
+    \begin{pmatrix}
+    \vert & \vert & \vert\\
+    [P_i(b_1)]_B & ... & [P_i(b_n)]_B\\
+    \vert & \vert & \vert\\
+    \end{pmatrix}_{n\times n}
+    = 
+    \begin{pmatrix}
+    I_k & 0\\
+    0 & 0\\
+    \end{pmatrix}_{n\times n}
+  \]
+  So $\tr ([P_i]_B) = k$. And since the trace of a transformation is just
+  the trace of its representing matrix, as shown to be a well defined trait
+  of transformations  in linear algebra $1$ we conclude that:
+  \[
+    \tr (P_i) = \tr ([P_i]_B) = k = \dim\Im P_i = \dim R_i
+  \]
+  \item[(2)]
+\underline{$V = \bigoplus R_i$} - From $(1)$ we know that:
+\[
+  \dim V = \tr (\mathrm{Id}) = \tr (P_1+\cdots+P_n) = 
+  \tr (P_1) + \cdots + \tr(P_n) = \dim R_1 + \cdots + \dim R_n
+\]
+Now we will show that $R_1+\cdots R_n = V$. Let $v\in V$:
+\[
+  v = \mathrm{Id}(v) = (P_1+\cdots+P_n)(v) = P_1(v)+\cdots+P_n(v)
+\]
+Since $\forall i \colon P_i(v)\in R_i$ we get that for any $v\in V$ exist
+$P_1(v)\in R_1,...,P_n(v)\in R_n$ such that $v = P_1(v)+\cdots+P_n(v)$.
+So now we know that
+\begin{align*}
+  V &= R_1 + \cdots + R_n \\
+  \dim V &= \dim R_1 + \cdots + \dim R_n
+\end{align*}
+Denote $B_{R_i}$ the ordered basis for $R_i$ for any $i$, we get:
+\begin{align*}
+  V &= \Sp \left\{ \bigcup_i{B_{R_i}} \right\}
+  &\Rightarrow \dim V \le \left\vert \bigcup_i{B_{R_i}} \right\vert \\
+  \dim V &= \sum_i{\vert B_{R_i} \vert} \ge 
+  \left \vert \bigcup_i{B_{R_i}} \right \vert
+  &\Rightarrow \left \vert \bigcup_i{B_{R_i}} \right \vert \le \dim V \\
+  &\Rightarrow \left \vert \bigcup_i{B_{R_i}} \right \vert = \dim V
+\end{align*}
+So from:
+\[
+  \Sp \left\{ \bigcup_i{B_{R_i}} \right \}   = V
+  \stand
+  \abs{\bigcup_i{B_{R_i}}} = \dim V
+\]
+We get that the ordered union of the ordered bases $B_{R_i}$ form a basis
+of $V$ which is equivalent as we've shown in class to saying that 
+$V = \bigoplus R_i$ \\
+\underline{$\forall i\neq j \colon P_iP_j = 0$} - Let $i \neq j$. Now
+suppose that $P_iP_j \neq 0$. that means that exists a $0 \neq v\in V$
+such that $P_iP_j(v) \neq 0$, which means that $P_j(v) \notin \Ker P_i$.
+Since $P_i$ is a projection we know that $\Im P_i \oplus \Ker P_i = V$
+which means that $P_j(v) \in R_i$, but also by definition 
+$P_j(v) \in R_j$, so:
+\begin{align*}
+  \underbrace{0}_{R_1} + \cdots + \underbrace{P_j(v)}_{R_j} + \cdots + 
+  \underbrace{0}_{R_n} = P_j(v) \\
+  \underbrace{0}_{R_1} + \cdots + \underbrace{P_j(v)}_{R_i} + \cdots + 
+  \underbrace{0}_{R_n} = P_j(v) 
+\end{align*}
+ but that's a contradiction to $V = \bigoplus R_i$. So 
+ $\forall i\neq j \colon P_iP_j = 0$
+
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $V$ be a vector space, $T,S\in \text{End}(V)$, and let $S$ be 
+  diagonalizable. Prove that the eigenspaces of $S$ are $T$-invariant if 
+  and only if $TS = ST$
+\end{exercise}
+\begin{solution} \phantom{} \\
+  {$(\Leftarrow)$}
+  For any eignenvalue $\lambda$ of $S$:
+  \begin{align*}
+    \Ker(S-\lambda I) &= \{s \in V \vert S(s) = \lambda s\} \\
+    \Rightarrow T(\Ker(S-\lambda I)) &= \{T(s) \vert S(s) = \lambda s\} \\
+    &= \{s \in V \vert \exists w\colon T(w) = s \land S(w) = \lambda w\}
+  \end{align*}
+  Since for $s\in T(\Ker(S-\lambda I))$:
+  \begin{align*}
+    S(s) &= S(T(w)) \underset{TS=ST}{=} T(S(w)) = T(\lambda w) \\ &= 
+    \lambda T(w) = \lambda s
+  \end{align*}
+  We get that $T(\Ker(S-\lambda I)) \subseteq \Ker(S-\lambda I)$ which means
+  that all the eigenspaces of $S$ are $T$-invariant.
+
+  \noindent
+  {$(\Rightarrow)$}
+  We know that $S$ is diagnolizable so exist a base to $V$
+  \[
+   B = (b_1,\dots,b_n)
+  \]
+  such that $[S]_B$ is a diagnonal matrix. We will show that for any $b\in B$
+  that $TS(b) = ST(b)$. Let $b\in B$ be an eigenvector of an eigenspace
+  with eigenvalue $\lambda$:
+  \[
+    TS(b) = T(\lambda b) = \lambda (T(b))
+  \]
+  Now since $b\in V_\lambda^S$\footnote{$\lambda$-eigenspace of $S$ under $V$
+  not sure if this is the correct notation.} is $T$-invariant by the
+  assumption:
+  \[
+    \lambda (T(b)) = S(T(b)) = ST(b)
+  \]
+  We have shown that for any vector from the base $B$ of $V$
+  \[
+    TS(b) = ST(b)
+  \]
+  Since $B$ spans $V$ and $S$, $T$ are linear, we know that for any $v\in V$
+  \[
+    TS(v) = ST(v)
+  \]
+  Which is what we wanted to prove.
+\end{solution}
+
+\begin{exercise}
+  Let $V$ be a vector space over a field $\F$, with $\dim V = n$. 
+  Let $T \colon V \to V$ such that any $(n-1)$-dimentional vector subspace of 
+  $V$ is $T$-invariant. Prove that $V$ is a scalar transformation.
+\end{exercise}
+\begin{solution}
+  Let $v_1\in V$ be a vector such that $T(v_1) = v_2$ and $v_2$ isn't a
+  scalar multiply of $v_1$. That means they are linearly independent which
+  implies we can complete $\{v_1,v_2\}$ to a basis of $V$ as such:
+  \[
+    B = (v_1,v_2,\dots,v_n)
+  \] 
+  Since $\Sp\{v_1,v_3,\dots,v_n\}$ is a $n-1$-dimentional subspace of $V$,
+  it is $T$-invariant, which means that:
+  \[
+    T(v_1) = v_2 \in \Sp(v_1,v_3,\dots,v_n)
+  \]
+  But that's a contradiction since if $v_2$ were in $\Sp(v_1,v_3,\dots,v_n)$
+  then $B$ wouldn't be linearly independent even thought it's a basis of $V$.
+  That means that for any $v\in V$ then $T(v)$ is a scalar multiple of $v$.
+  Now consider the standard basis $E=(e_1,\dots,e_n)$ we know that:
+  \begin{align*} 
+    T(e_1) &= \lambda_1e_1 \\
+    T(e_2) &= \lambda_2e_2 \\
+    &\dots \\
+    T(e_n) &= \lambda_ne_n \\
+  \end{align*}
+  We also know that $T(e_1+\cdots+e_n) = \mu\sum_{i=1}^{n}{e_i}$ so:
+  \[
+    T(e_1+e_2+\cdots+e_n) = T(e_1) + \cdots + T(e_n) = 
+    \sum_{i=1}^{n}{\lambda_ie_i} = \sum_{i=1}^{n}{\mu e_i}
+  \]
+  Since $e_1,\dots,e_n$ are linearly independent that means that:
+  \[
+    \lambda_1=\lambda_2=\dots=\lambda_n=\mu
+  \]
+  Finally since $E$ is a basis, for any $v\in V$ we get that $T(v) = \mu v$.
+  In other words that $T$ is a scalar operator.
+\end{solution}
+
+\begin{exercise}
+  Let $T,S,Q\in\text{End}(v)$ such that $T = Q^{-1}SQ$. 
+  Show that $U\subseteq V$ is $T$-invariant if and only if $Q(U)$ is 
+  $S$-invariant.
+\end{exercise}
+\begin{solution}
+  First suppose that $U\subseteq V$ is $T$-invariant.
+  That means that:
+  \[
+    T(U)\subseteq U
+  \]
+  Now:
+  \[
+    S(Q(U)) = SQ(U)
+  \]
+  But we know that $T = Q^{-1}SQ \Rightarrow QT = SQ$ so:
+  \[
+    S(Q(U)) = QT(U) = Q(T(U))
+  \]
+  We know that $T(U)\subseteq U$ so:
+  \begin{align*}
+    S(Q(U)) &= Q(T(U)) \subseteq Q(U) \\
+    &\Rightarrow S(Q(U)) \subseteq Q(U)
+  \end{align*}
+  In other words - $Q(U)$ is $S$-invariant.
+
+  Next suppose that $Q(U)$ is $S$-invariant:
+  \[
+    (*) \quad S(Q(U)) \subseteq Q(U)
+  \]
+  Now:
+  \[
+    T(U) = Q^{-1}SQ(U) = Q^{-1}(S(Q(U))) \underset{*}{\subseteq} 
+    Q^{-1}(Q(U)) = U
+  \]
+  So:
+  \[
+    T(U) \subseteq U
+  \]
+  In other words $U$ is $T$-invariant.
+\end{solution}
+
+\newpage
+
+\section{The Jordan Normal Form}
+
+\begin{exercise}
+  Find the Jordan normal form, a Jordan basis, and the minimal
+  polynomial of the following matrix:
+  \[ A = 
+  \begin{pmatrix}
+    -1 & -1 & 0 & 0 \\
+    2 & 2 & 0 & 0 \\
+    4 & 2 & 2 & 1 \\
+    -2 & -1 & -1 & 0 \\
+    \end{pmatrix}\in M_n(\C).
+  \]
+\end{exercise}
+\begin{solution}
+  First we're gonna find the characteristic polynomial of this matrix. We
+  notice that the matrix is a blockwise triangular matrix:
+  \[ A = 
+  \begin{pmatrix}
+  -1 & -1 & 0 & 0\\
+  2 & 2 & 0 & 0\\
+  4 & 2 & 2 & 1\\
+  -2 & -1 & -1 & 0\\
+  \end{pmatrix}
+    =
+  \begin{pmatrix}
+  B_{2\times 2} & 0\\
+  * & C_{2\times 2}
+  \end{pmatrix}
+  \]
+  So we can solve it like we did in linear algebra $1$:
+  \begin{align*}
+    p_A(\lambda) &= p_B(\lambda)p_C(\lambda) = 
+    ((-1-\lambda)(2-\lambda)+2)((2-\lambda)(0-\lambda)+2) \\
+    &= (\lambda^2-\lambda)(\lambda^2-2\lambda+1) = 
+       (\lambda(\lambda-1))(\lambda^2-2\lambda+1) = 
+       \lambda(\lambda-1)^3
+  \end{align*}
+  But we can also notice that the sum of columns of these blocks is $1$ so
+  $1$ is an eigenvalue of both of them, and since the sum of the eigenvalues
+  of a matrix is equal to its trace we can find the other eigen value.
+  We see that $\lambda = 0$ is an eigenvalue of algebraic multiplicity $1$
+  and $\lambda = 1$ is an eigenvalue of algebraic multiplicity $3$ so the\
+  Jordan normal form will have a Jordan block $J_1(0)$ and some Jordan blocks
+  of total size $3$. Now we will find $\null(A-I)$ to find out how many Jordan
+  blocks are there:
+  \begin{align*}
+      A-I &= 
+  \begin{pmatrix}
+    -2 & -1 & 0 & 0\\
+    2 & 1 & 0 & 0\\
+    4 & 2 & 1 & 1\\
+    -2 & -1 & -1 & -1\\
+  \end{pmatrix} \to
+  \begin{pmatrix}
+    0 & 0 & 0 & 0\\
+    2 & 1 & 0 & 0\\
+    2 & 1 & 0 & 0\\
+    -2 & -1 & -1 & -1\\
+  \end{pmatrix} \to
+  \begin{pmatrix}
+    0 & 0 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+    2 & 1 & 0 & 0\\
+    0 & 0 & -1 & -1\\
+  \end{pmatrix} \\ &\to
+  \begin{pmatrix}
+    2 & 1 & 0 & 0\\
+    0 & 0 & -1 & -1\\
+    0 & 0 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+  \end{pmatrix}
+  \end{align*}
+  So we see that $\dim\ker(A-I) = 2$ so there are two Jordan blocks of 
+  $\lambda = 1$. That that the Jordan normal form of $A$ must be
+  of the form $J_2(1) \oplus J_1(1) \oplus J_1(0)$. So we want to find
+  Jordan chains of the form:
+  \begin{center}
+  \begin{tabular}{c c | c} 
+   $\lambda=1$ &  & $\lambda=2$ \\
+   \hline
+   $v_2$ &  &  \\ 
+   $\downarrow$ &  &  \\
+   $v_1$ & $v_3$ & $v_4$ \\
+  \end{tabular}
+  \end{center}
+  We shall continue with some more calculation to find the generalized
+  eigenspaces of $A$.	
+  \[
+    \ker(A-I) = \ker\left(
+    \begin{pmatrix}
+    2 & 1 & 0 & 0\\
+    0 & 0 & -1 & -1\\
+    0 & 0 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+    \end{pmatrix}\right) = 
+    \Sp
+    \left\{ \begin{pmatrix} 1\\ -2\\ 0\\ 0\\ \end{pmatrix},
+       \begin{pmatrix} 0\\ 0\\ 1\\ -1\\ \end{pmatrix} \right\}
+  \]
+  \begin{align*}
+    (A-I)^2 &= 
+  \begin{pmatrix}
+    -2 & -1 & 0 & 0\\
+    2 & 1 & 0 & 0\\
+    4 & 2 & 1 & 1\\
+    -2 & -1 & -1 & -1\\
+  \end{pmatrix} \to
+  \begin{pmatrix}
+    -2 & -1 & 0 & 0\\
+    2 & 1 & 0 & 0\\
+    2 & 1 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+  \end{pmatrix} \to
+  \begin{pmatrix}
+    2 & 1 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+  \end{pmatrix} \\
+  \ker(A-I)^2 &= \ker\left(
+    \begin{pmatrix}
+    2 & 1 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+    \end{pmatrix}\right) = 
+    \Sp
+    \left\{ \begin{pmatrix} 1\\ -2\\ 0\\ 0\\ \end{pmatrix},
+       \begin{pmatrix} 0\\ 0\\ 1\\ 0\\ \end{pmatrix},
+       \begin{pmatrix} 0\\ 0\\ 0\\ 1\\ \end{pmatrix} \right\} = 
+       \overset{\sim}{V_1} \\
+  \ker(A) &= \ker\left(
+    \begin{pmatrix}
+      -1 & -1 & 0 & 0\\
+      2 & 2 & 0 & 0\\
+      4 & 2 & 2 & 1\\
+      -2 & -1 & -1 & 0\\
+    \end{pmatrix}\right) = \ker\left(
+    \begin{pmatrix}
+      1 & 1 & 0 & 0\\
+      0 & 0 & 0 & 0\\
+      2 & 0 & 2 & 1\\
+      0 & 1 & -1 & 0\\
+  \end{pmatrix}\right)  \\ &= \ker\left(
+    \begin{pmatrix}
+      1 & 1 & 0 & 0\\
+      0 & 0 & 0 & 0\\
+      0 & 0 & 0 & 1\\
+      0 & 1 & -1 & 0\\
+    \end{pmatrix}\right) = 
+    \Sp\left\{\begin{pmatrix} -1\\ 1\\ 1\\ 0\\ \end{pmatrix}\right\} = 
+    \overset{\sim}{V_0}
+  \end{align*}
+  To test our calculations against the generalized eigenspace decomposition
+  theorem we see that indeed:
+  \[
+  V = \Sp\left\{
+    \begin{pmatrix} -1\\ 1\\ 1\\ 0\\ \end{pmatrix}\right\} \oplus
+    \Sp\left\{
+    \begin{pmatrix} 1\\ -2\\ 0\\ 0\\ \end{pmatrix},
+    \begin{pmatrix} 0\\ 0\\ 1\\ 0\\ \end{pmatrix},
+    \begin{pmatrix} 0\\ 0\\ 0\\ 1\\ \end{pmatrix}\right\} = 
+    \overset{\sim}{V_0} \oplus \overset{\sim}{V_1}
+  \]
+  To find $v_2$ we would need to find a vector in $\ker(A-I)^2$ that
+  is not in $\ker(A-I)$ for example:
+  \[
+    v_2 = \begin{pmatrix} 0\\ 0\\ 1\\ 1\\ \end{pmatrix}
+  \]
+  Then:
+  \[
+    v_1 = (A-I)v_2 = \begin{pmatrix} 0\\ 0\\ 2\\ 0\\ \end{pmatrix}
+  \]
+  Now fo find $v_3$ we will just find a vector that will complement 
+  $\Sp\{v_1,v_2\}$ to $\overset{\sim}{V_1}$ for example:
+  \[
+    v_3 = \begin{pmatrix} 1\\ -2\\ 0\\ 0\\ \end{pmatrix}
+  \]
+  And for the last vector we can just choose any vector that is in 
+  $\overset{\sim}{V_1}$ for example:
+  \[
+    v_4 = \begin{pmatrix} -1\\ 1\\ 1\\ 0\\ \end{pmatrix}
+  \]
+  So we found all of our Jordan chains and also the Jordan basis for $A$:
+  \[
+    B_J = 
+    \left\{
+    \begin{pmatrix} 0\\ 0\\ 2\\ 0\\ \end{pmatrix}
+    \begin{pmatrix} 0\\ 0\\ 1\\ 1\\ \end{pmatrix}
+    \begin{pmatrix} 1\\ -2\\ 0\\ 0\\ \end{pmatrix}
+    \begin{pmatrix} -1\\ 1\\ 1\\ 0\\ \end{pmatrix}
+    \right\}
+  \]
+  Now we will find the minimal polynomial. To find the minimal polynomial
+  we will see that it is excactly the product of the the polynomials
+  of the form $p(x)=(x-\lambda)^r$ for each distinct eigenvalue $\lambda$
+  of $A$ and $r$ being the size of the longest Jordan chain of its
+  respective $\lambda$, since each vector in $V$ can be represented as a 
+  linear combination of the Jordan base, and for any polynome that doesn't 
+  include one of these multiples of $(x-\lambda)$ we can take the top of
+  the chain of this lambda and see that it will not be a root of the supposed
+  polynome. Therefore:
+  \[
+    m_A(x) = (x-1)^2 (x-2)
+  \]
+\end{solution}
+
+
+\begin{exercise} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Let $T\colon \R_3[x]\to\R_3[x]$ be the operator 
+      \[
+      T(ax^3+bx^2+cx+d) = 2ax^3+(2b+3c+d)x^2+(2c+3d)x+2d
+      \]
+      Does exist a basis to $\R_3[x]$ such that: 
+      \[ 
+      [T^2-4T+4I]_B = 
+      \begin{pmatrix}
+      0 & 1 & 0 & 0\\
+      0 & 0 & 1 & 0\\
+      0 & 0 & 0 & 0\\
+      0 & 0 & 0 & 0\\
+      \end{pmatrix} \]
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+  \item[(1)]
+We notice that:
+\[ [T^2-4T+4I]_B = 
+\begin{pmatrix}
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+\end{pmatrix}    = J_3(0) \oplus J_1(0) \]
+And since we know that the Jordan normal form of a transformation
+is unqiue up to order, it suffices to show that the Jordan normal form
+of $T^2-4T+4I$ is the same or different than $J_3(0) \oplus J_1(0)$.
+Making some calculations we get that represented by the standard
+basis:
+\[
+  [T^2-4T+4I]_E = 
+  \begin{pmatrix}
+  0 & 0 & 0 & 0\\
+  0 & 0 & 0 & 9\\
+  0 & 0 & 0 & 0\\
+  0 & 0 & 0 & 0\\
+  \end{pmatrix} \underbrace{=}_{\text{denotion}} B 
+\]
+Which means that the characteristic polynomial of it is:
+\[
+  p_{B}(x) = 
+  \begin{vmatrix}
+-\lambda & 0 & 0 & 0\\
+0 & -\lambda & 0 & 9\\
+0 & 0 & -\lambda & 0\\
+0 & 0 & 0 & -\lambda\\
+  \end{vmatrix} = 
+  -\lambda(-\lambda^3+9*0) =
+  \lambda^4
+\]
+So the only eigenvalue of $T^2-4T+4I$ is $0$, of algebraic multiplicity $4$.
+We know by a theorem we have proved in class that there must be at least:
+\[\dim\ker(T^2-4T+4I) = 3\]
+Jordan blocks in $T^2-4T+4I$'s Jordan normal form. This means that it
+can't have the Jordan normal form of $J_3(0) \oplus J_1(0)$, so we have
+shown that there does not exist a basis $B$ to $V$ such that 
+\[[T^2-4T+4I]_B = 
+\begin{pmatrix}
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+\end{pmatrix}\]
+
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $A\in M_7(\R)$ such that:
+  \[
+    rk(A-I)^2 > rk(A-I)^3 = rk(A-I)^4
+  \] and $rk(A)=3$.
+  Find the Jordan normal form of $A$.
+\end{exercise}
+\begin{solution}
+We know that $rk(A)=\dim\im(A) = 3$ and since we also know that:
+\[
+  \underbrace{\dim\im(A)}_3 + \dim\ker(A) = \underbrace{\dim \R^7}_7
+\]
+We know that $\dim\ker(A) = 4$ which tells us that there are $4$ Jordan blocks
+in the Jordan normal form of $A$ with eigenvalue $0$. From similar 
+considerations we also see that:
+\[
+  \dim\ker(A-I)^3 = 7 - rk(A-I)^3 = 7 - rk(A-I)^4 = \dim\ker(A-I)^4
+\]
+So we know that there are:
+\[ \dim\ker(A-I)^4 - \dim\ker(A-I)^3 = 0 \]
+Jordan blocks with eigenvalue $1$ of size at least $4$. Also:
+\[
+  \dim\ker(A-I)^2 = 7 - rk(A-I)^2 < 7 - rk(A-I)^3 = \dim\ker(A-I)^3
+\]
+So there is at least $1$ Jordan block of size $3$ in the Jordan normal form 
+of $A$. Since as we have shown, there must be $4$ Jordan blocks in the Jordan
+normal form with eigenvalue $0$, and the sum of the order of the Jordan blocks
+must be equal to $7$ the only option for the Jordan normal form of $A$ is:
+\[
+  J_3(1) \oplus J_1(0) \oplus J_1(0) \oplus J_1(0) \oplus J_1(0)
+\]  
+\end{solution}
+
+\begin{exercise}
+  Let $\F$ be a field and $0\neq\lambda\in\F$. Find the Jordan 
+  normal form of $J_n(\lambda)^{-1}$.
+  No need to explicitly compute the inverse.
+\end{exercise}
+\begin{solution}
+We can write the Jordan block $J_n(\lambda)$ as the sum of a scalar and
+a nilpotent matrix like so:
+\[
+  J_n(\lambda) = \lambda I + J_n(0)
+\]
+Now we notice that since $\lambda \neq 0$ we can multiply both sided by 
+$\lambda^{-1} I$:
+\[
+  \lambda^{-1} I J_n(\lambda) =\lambda^{-1} I(\lambda I + J_n(0)) = 
+  I + \lambda^{-1}J_n(0)
+\]
+And that:
+\[
+  (I - \lambda^{-1}J_n(0))(I + \lambda^{-1}J_n(0)) = 
+  I - \lambda^{-2}J_n^2(0)
+\]
+Now since:
+\[
+  (I + \lambda^{-2}J_n^2(0))(I - \lambda^{-2}J_n^2(0)) = 
+  I - \lambda^{-4}J_n^4(0)
+\]
+We can keep going like:
+\[
+  (I + \lambda^{-4}J_n^4(0))(I - \lambda^{-4}J_n^4(0)) = 
+  I - \lambda^{-8}J_n^8(0)
+\]
+So we see know that:
+\[
+  \left(\prod_{i=1}^{k}{(I + \lambda^{-2^k}J_n^{2^k}(0))}\right)
+  (I - \lambda^{-1}J_n(0))(\lambda^{-1} I)J_n(\lambda) = I - \lambda^{-2^{k+1}}
+  J_n^{2^{k+1}}(0)
+\]
+Since $J_n(0)$ is nilpotent of order $n-1$ we can choose $k\in\N$ such that
+$2^{k+1} > n$ and then:
+\[
+  \left(\prod_{i=1}^{k}{(I + \lambda^{-2^k}J_n^{2^k}(0))}\right)
+  (I - \lambda^{-1}J_n(0))(\lambda^{-1} I)J_n(\lambda) = I - \lambda^{-2^{k+1}}
+  J_n^{2^{k+1}}(0) = I
+\]
+From linear algebra $1$ we know that a if $AB=I$ then $BA=I$ which means
+that we found the inverse of $J_n(\lambda)$:
+\[
+  J_n(\lambda)^{-1} = 
+  \left(\prod_{i=1}^{k}{(I + \lambda^{-2^k}J_n^{2^k}(0))}
+  \right)(I - \lambda^{-1}J_n(0))(\lambda^{-1} I)
+\]
+\end{solution}
+
+\begin{exercise}
+  Prove that exists a matrix $A\in M_n(\R)$ that satisfies:
+\[
+  A^9+A^{99} = \begin{pmatrix}
+  2 & 99 & 999\\
+  0 & 2 & -9\\
+  0 & 0 & 2\\
+\end{pmatrix}
+\] There's no need to find one explicitly.
+\end{exercise}
+\begin{solution}
+First we denote:
+\[
+  B = \begin{pmatrix}
+  2 & 99 & 999\\
+  0 & 2 & -9\\
+  0 & 0 & 2\\
+  \end{pmatrix}
+\]
+We notice that $\lambda = 2$ is an eigenvalue of algebraic multiplicity $3$
+and:
+\[
+  B - 2I = \begin{pmatrix}
+  0 & 99 & 999\\
+  0 & 0 & -9\\
+  0 & 0 & 0\\
+  \end{pmatrix}
+\]
+Of geometric multiplicity $1$ which means that the Jordan normal form of $B$
+is $J_3(2)$ so exists an invertible $P$ such that:
+\[
+  P^{-1}BP = J_3(2)
+\]
+We notice that according to the combinatorial calculation we did in class we
+can calculate and get:
+\[
+(J_3(2))^9 + (J_3(2))^{99} = \begin{pmatrix}
+  2 & 108 & 4887\\
+  0 & 2 & 108\\
+  0 & 0 & 2\\
+\end{pmatrix}
+\]
+This matrix is similarly similar to $J_3(2)$ which means that exists an invertible
+$Q$ such that:
+\[
+  (J_3(2))^9 + (J_3(2))^{99} = Q^{-1}BQ
+\]
+We get that:
+\[
+  Q (J_3(2))^9 Q^{-1} + Q (J_3(2))^{99} Q^{-1} = B
+\]
+And now if we denote $A = Q (J_3(2)) Q^{-1}$ we get that:
+\[
+  A^9+A^{99} = \begin{pmatrix}
+  2 & 99 & 999\\
+  0 & 2 & -9\\
+  0 & 0 & 2\\
+  \end{pmatrix}
+\]
+as wanted.
+\end{solution}
+
+\begin{exercise}
+  Find up to matrix similarity all the matrices $A \in M_4(\C)$ that
+  satisfy $A^4 - 2A^2 + 1 = 0$.
+\end{exercise}
+
+\begin{exercise} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Find all the invariant subspaces of the Jordan block $J_n(\lambda)$.
+    \item[(2)] Let $T \in \End(V)$, where $V$ is a finite dimension vector space.
+      Show that there exists a finite amount of $T$-invariant subspaces if and
+      only if $p_T(x) = m_T(X)$.
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+  Let $E$ be a field and $F \subseteq E$ a subfield, let $A \in M_n(F)$.
+  Let $m_A^F(X)$ be the minimal polynomial of $A$ with respect to $F$,
+  and $m_A^E(X)$ the minimal polynomial of $A$ with respect to $E$.
+  Show that $m_A^E(X) = m_A^F(X)$.
+
+  Notice that to find a polynomial of degree $k$ with coefficients in $E$ with
+  root $A$ we need to solve a system of $n^2$ linear equations in $k$ variables
+  with coefficients in $F$
+\end{exercise}
+
+\newpage
+
+\section{Inner Products Spaces and Orthogonality}
+
+\begin{exercise}
+  Show that for all positive $x_1,\dots,x_n\in\R$:
+  \[
+    n^2 \le (x_1+\cdots+x_n)\left(\frac{1}{x_1}+\cdots+\frac{1}{x_n}\right)
+  \]
+\end{exercise}
+\begin{solution}
+  Let $x_1,\dots,x_n$ be positive real numbers.
+  Recall that the Cauchy-Shwartz inequality states that for any $v,u$ in an 
+  inner product space, and specifically for $(\R^n,\langle,\rangle_{\std})$
+  we get:
+  \[
+    \vert\langle v,u\rangle\vert^2 \le \langle v,v\rangle\langle u,u\rangle
+  \]
+  Since $x_1,\dots,x_n$ are positive we can take their roots and then for:
+  \[ 
+    v=(\sqrt{x_1},\dots,\sqrt{x_n}) \quad\text{and}\quad 
+    u=\del{\frac{1}{\sqrt{x_1}},\dots,\frac{1}{\sqrt{x_n}}}
+  \]
+  We get:
+  \[
+    \vert\langle v,u\rangle\vert^2 = 
+    \abs{\ip{(\sqrt{x_1},\dots,\sqrt{x_n})}{
+    \del{\frac{1}{\sqrt{x_1}},\dots,\frac{1}{\sqrt{x_n}}}}}^2 =
+    \vert n\vert^2 = n^2
+  \]
+  And:
+  \[
+    \langle v,v\rangle\langle u,u\rangle = 
+    (x_1+\cdots+x_n)\del{\frac{1}{x_1}+\cdots+\frac{1}{x_n}}
+  \]
+  Now substituting we get:
+  \[
+    n^2 \le (x_1+\cdots+x_n)\left(\frac{1}{x_1}+\cdots+\frac{1}{x_n}\right)
+  \]
+  Which is what we wanted to prove.
+\end{solution}
+
+\begin{exercise}
+  Let $V=\R_2[x]$ and let:
+  \begin{align*}
+    \langle(p(x),q(x))\rangle_1 &= 
+    \int_{0}^{1}{p(x)q(x) \dx} \\
+    \langle(p(x),q(x))\rangle_2 &= 
+    \sum_{x\in\{-1,0,1\}}{p(x)q(x)}
+  \end{align*}
+  Two inner products on $V$, and let:
+  \[
+    W = \{p(x)\in V \mid p(x) = p(-x)\}
+  \]
+  \begin{enumerate}
+    \item[(1)] Find a basis for $W$ and complete it to a basis for $V$.
+    \item[(2)] Apply the Gram--Schmidt process on $V$ relative to each of the
+      inner products, find $W^\bot$ and the orthogonal projection $P_W$ on $W$.
+    \item[(3)] Find the distance of $f(x)=x+1$ from $W$ according to each of
+the inner products.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)]
+  We know that $W\neq V$ and $W\neq 0$ so since $x^2,1\in W$ and are linearly
+  independant we get that $\dim W=2$ and that
+  \[
+    B_W = \{x^2, 1\}
+  \]
+  is a basis for $W$. We can complete it to a basis for $V$ as such:
+  \[
+    B_V = \{x^2, 1, x\}
+  \]
+
+  \item[(2)]
+  According to $\langle ,\rangle_1$ we get:
+  \begin{align*}
+    u_1' &= v_1 = x^2 \\
+    u_2' &= v_2 - \sum_{i=1}^{1}
+    {\frac{\langle v_2,u'_i\rangle}{\langle u'_i,u'_i\rangle}u'_i} = 
+    v_2 - \frac{\langle v_2,u'_1\rangle}{\langle u'_1,u'_1\rangle} u'_1 = 
+    1 - \frac{\langle 1,x^2\rangle}{\langle x^2,x^2\rangle} x^2 = 
+    1 - \frac{\frac{1}{3}}{\frac{1}{5}} x^2 = 1 - \frac{5}{3}x^2 \\
+    u_3' &= v_3 - \sum_{i=1}^{2}
+    {\frac{\langle v_3,u'_i\rangle}{\langle u'_i,u'_i\rangle}u'_i} = 
+    x - \frac{\langle x,x^2\rangle}{\langle x^2,x^2\rangle}x^2 - 
+    \frac{\langle x,1\rangle}{\langle 1,1\rangle}1 = 
+    x - \frac{4}{3}x^2 - \frac{1}{2}
+  \end{align*}
+  Now to normalize the vectors:
+  \begin{align*}
+    u_1 &= \frac{u_1'}{\|u_1'\|} = 
+    \frac{x^2}{\sqrt{\langle x^2,x^2\rangle}} = 2x^2
+    \\
+    u_2 &= \frac{u_2'}{\|u_2'\|} = 
+    \frac{1-\frac{5}{3}x^2}
+    {\sqrt{\langle 1-\frac{5}{3}x^2,1-\frac{5}{3}x^2\rangle}} = 
+    \frac{3}{2}-\frac{5}{2}x^2
+    \\
+    u_3 &= \frac{u_3'}{\|u_3'\|} = 
+    \frac{x - \frac{4}{3}x^2 - \frac{1}{2}}
+    {\sqrt{\langle x - \frac{4}{3}x^2 - \frac{1}{2},x - \frac{4}{3}x^2 - 
+    \frac{1}{2}\rangle}} = 
+    \frac{30}{\sqrt{195}}x-\frac{40}{\sqrt{195}}x^2-\frac{15}{\sqrt{195}}
+  \end{align*}
+  Notice that when we applied Gram-Schmidt we first found an orthonormal basis
+  for $W$, and since we know that $V = W \oplus W^\bot$ we get:
+  \[ W^\bot = \Sp\{u_3\} = \Sp
+  \left\{\frac{30}{\sqrt{195}}x-\frac{40}{\sqrt{195}}
+  x^2-\frac{15}{\sqrt{195}} \right\} \]
+  And as we know from the lectures for all $v\in V = \R_2[x]$ we get:
+  \begin{align*}
+    P_W(v) &= \sum_{i=1}^{2}{\langle v(x),u_i \rangle u_i} = 
+    \langle v(x),2x^2 \rangle 2x^2 + \langle v(x),\frac{3}{2} - 
+    \frac{5}{2}x^2 \rangle \left(\frac{3}{2}-\frac{5}{2}x^2\right) \\ &= 
+    \left(\int_{0}^{1}{v(x) 2x^2\,dx}\right) 2x^2 + 
+    \left(\int_{0}^{1}{v(x)\left(\frac{3}{2} - \frac{5}{2}x^2\right)\,dx}
+    \right) \left(\frac{3}{2}-\frac{5}{2}x^2\right)
+  \end{align*}
+
+  According to $\langle ,\rangle_2$ we get:
+  \begin{align*}
+    u_1' &= v_1 = x^2 \\
+    u_2' &= v_2 - \sum_{i=1}^{1}
+    {\frac{\langle v_2,u'_i\rangle}{\langle u'_i,u'_i\rangle}u'_i} = 
+    v_2 - \frac{\langle v_2,u'_1\rangle}{\langle u'_1,u'_1\rangle} u'_1 = 
+    1 - \frac{\langle 1,x^2\rangle}{\langle x^2,x^2\rangle} x^2 = 
+    1 - \frac{2}{2} x^2 = 1 - x^2 \\
+    u_3' &= v_3 - \sum_{i=1}^{2}
+    {\frac{\langle v_3,u'_i\rangle}{\langle u'_i,u'_i\rangle}u'_i} = 
+    x - \frac{\langle x,x^2\rangle}{\langle x^2,x^2\rangle}x^2 - 
+    \frac{\langle x,1\rangle}{\langle 1,1\rangle}1 = 
+    x
+  \end{align*}
+  Now to normalize the vectors:
+  \begin{align*}
+    u_1 &= \frac{u_1'}{\|u_1'\|} = 
+    \frac{x^2}{\sqrt{\langle x^2,x^2\rangle}} = 
+    \frac{x^2}{\sqrt{2}}
+    \\
+    u_2 &= \frac{u_2'}{\|u_2'\|} = 
+    \frac{1 - x^2}{\sqrt{\langle 1 - x^2,1 - x^2\rangle}} = 
+    1-x^2
+    \\
+    u_3 &= \frac{u_3'}{\|u_3'\|} = 
+    \frac{x}{\sqrt{\langle x, x\rangle}} = 
+    \frac{x}{\sqrt{2}}
+  \end{align*}
+  Notice that when we applied Gram-Schmidt we first found an orthonormal basis
+  for $W$, and since we know that $V = W \oplus W^\bot$ we get:
+  \[ W^\bot = \Sp\{u_3\} = \Sp\left\{\frac{x}{\sqrt{2}}\right\} \]
+  And as we know from the lectures for all $v\in V = \R_2[x]$ we get:
+  \begin{align*}
+    P_W(v) &= \sum_{i=1}^{2}{\langle v,u_i \rangle u_i} = 
+    \langle v(x),\frac{x^2}{\sqrt{2}} \rangle \frac{x^2}{\sqrt{2}} + 
+    \langle v(x),1-x^2 \rangle \left(1-x^2\right) \\ &= 
+    \left(\sum_{x\in\{-1,0,1\}}
+    {v(x)\left(\frac{x^2}{\sqrt{2}}\right)}\right)
+    \left(\frac{x^2}{\sqrt{2}}\right) + 
+    \left(\sum_{x\in\{-1,0,1\}}{v(x)(1-x^2)}\right)\left(1-x^2\right) \\ &= 
+    \left(v(1)+v(-1)\right)\left(\frac{x^2}{2}\right) + v(0)
+    \left(1-x^2\right)
+  \end{align*}
+
+  \item[(3)]
+  We know that the distance of $f(x)=x+1$ from $W$ is the distance between
+  $x+1$ and $P_W(x+1)$ which is the point ``closest'' to $x+1$ on $W$. So
+  first we shall calculate $P_W(x+1)$ according to each of the inner product
+  spaces:
+  \begin{align*}
+    P_W(x+1) &= \left(2+0\right)\left(\frac{x^2}{2}\right) + 1
+    \left(1-x^2\right) = 1 \\
+    P_W(x+1) &= \left(\int_{0}^{1}{(x+1)2x^2\,dx}\right) 2x^2 + 
+    \left(\int_{0}^{1}{(x+1)\left(\frac{3}{2} - \frac{5}{2}x^2\right)\,dx}
+    \right) \left(\frac{3}{2}-\frac{5}{2}x^2\right) \\ &=
+    \left(\int_{0}^{1}{2x^3+2x^2\,dx}\right) 2x^2 +
+    \left(\int_{0}^{1}{\frac{3}{2} - \frac{5}{2}x^2 + \frac{3}{2}x - 
+    \frac{5}{2}x^3\,dx}\right) \left(\frac{3}{2}-\frac{5}{2}x^2\right) \\ &=
+    \frac{7}{3}x^2 + \frac{19(3-5x^2)}{48} =
+    \frac{112x^2}{48} + \frac{57 - 95x^2}{48} = \frac{17x^2+57}{48}
+  \end{align*}
+  So now according to $\langle ,\rangle_1$ we get that the distance is:
+  \[
+    \sqrt{\langle x+1,1\rangle} = \sqrt{\int_{0}^{1}{x+1\,dx}} = 
+    \sqrt{\frac{3}{2}} = \frac{\sqrt{6}}{2}
+  \]
+  And now according to $\langle ,\rangle_2$ we get that the distance is:
+  \[
+    \sqrt{\langle x+1, \frac{17x^2+57}{48}\rangle} = 
+    \sqrt{\sum_{x=-1,0,1}{\frac{17x^2+57(x+1)}{48}\,dx}} = 
+    \sqrt{\frac{17+57+131}{48}} = 
+    \frac{\sqrt{615}}{12}
+  \]
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+Let $V$ be a finite dimension inner product space and let $P\in\End(V)$ 
+be a contraction - that is $\forall v\in V(\|Pv\|\le\|v\|)$.
+Show that $P$ is the orthogonal projection on its own image.
+\end{exercise}
+\begin{solution}
+We will first show that $V = \im P \oplus \ker P$. Since $P$ is a projection
+we must have $P(v) = P^2(v)$ which implies $P(P(v)-v) = 0$ so 
+$P(v) - v = \epsilon \in \ker P$ and then $v = P(v) + (-\epsilon)$ which
+shows that $V = \im P + \ker P$. Now let $v\in \im P \cap \ker P$. We
+get that for some $u\in V$ that $P(u) = v$ and $P^2(u) = P(v) = 0$ since
+$v\in \ker P$. But since $P^2(u) = P(u)$ we get $v = 0$. This shows
+$V = \im P \oplus \ker P$. We also know that $V = \im P \oplus \im P^\bot$.
+This shows that $\dim\im P^\bot = \dim\ker P$. Now we will show that
+$\im P^\perp \subseteq \ker P$. Let $v\in\im P^\perp$ We know that 
+$P(v)\in\im P$ so:
+\[
+  \langle P(v), v\rangle = 0
+\]
+This implies that:
+\[
+  0 = \langle P(v), v\rangle = \frac{1}{4}
+  \left(
+    \|P(v)+v\|^2 - \|P(v)-v\|^2 + i\|P(v)-v\|^2 - i\|P(v)+v\|^2
+  \right)
+\]
+This implies that:
+\[
+  \|P(v)+v\| - \|P(v)-v\| = 0
+\]
+So using the reverse triangle identities we get:
+\[
+  0 \le \|P(v)\| - \|v\| - \|P(v)-v\| \le \|P(v)+v\| - \|P(v)-v\| = 0
+\]
+So:
+\[
+  \|P(v)\| - \|v\| = \|P(v)-v\|
+\]
+So from what we know $\|P(v)\| - \|v\|$ is a non-negative number and
+$\|P(v)\| \le \|v\|$ which implies  $\|P(v)\| - \|v\| = 0$ which gives:
+\[
+  \|P(v)-v\| = 0 \Rightarrow P(v) - v = 0 \Rightarrow P(v) = v
+\]
+This shows that $v\in\im P$, and since $v\in\im P^\bot$ we know $v=0$.
+But we assumed that $v\notin\ker P$ so this can't be the case, and we get a
+contradiction. Which means that $\im P^\perp \subseteq \ker P$ and we know
+$\dim\im P^\bot = \dim\ker P$ so $\im P^\bot = \ker P$. so $P$ is an 
+orthogonal projection on its own image.
+\end{solution}
+
+\begin{exercise}
+  Let $V=\C_3[x]$ with the inner product 
+  $\langle p(x),q(x)\rangle = \sum_{x=0}^{x=3}{p(x)\overline{q(x)}}$.
+  
+  Find the minimal positive constant $C$ such that 
+  for all $p\in V$:
+  \[
+  \| p(i) \| \le
+  C\sqrt{\sum_{x=0}^{3}{\| p(x) \|^2}}
+  \]
+\end{exercise}
+\begin{solution}
+  Notice that the following $\varphi \colon V \to \C$:
+  \[
+    \varphi(p(x)) = p(i)
+  \]
+  is a functional since for $\alpha\in\C$ and $p,q\in V$:
+  \[
+    \varphi(\alpha p + q) = (\alpha p + q)(i) = \alpha p(i) + q(i) = 
+    \alpha \varphi(p) + \varphi(q)
+  \]
+  Using riesz representation theorem we get that exists $w$ such that:
+  \[
+    \varphi(p) = p(i) = \langle p, w\rangle
+  \]
+  Denote $w = a+bx+cx^2+dx^3$, 
+  We see that for the basis $B = \{1,x,x^2,x^3\}$:
+  \begin{align*}
+    1 &= \varphi(1) = \langle 1, w\rangle = \overline{w(0)} + 
+    \overline{w(1)} + \overline{w(2)} + \overline{w(3)} 
+    = {w(0)} + {w(1)} + {w(2)} + {w(3)} = 1 \\
+    i &= \varphi(x) = \langle x, w\rangle = 0\overline{w(0)} + 
+    1\overline{w(1)} + 2\overline{w(2)} + 3\overline{w(3)} 
+    \Rightarrow w(1)+2w(2)+3w(3) = -i \\
+    -1 &= \varphi(x^2) = \langle x^2, w\rangle = 0\overline{w(0)} + 
+    1\overline{w(1)} + 4\overline{w(2)} + 9\overline{w(3)} = 
+    w(1 + 4w(2) + 9w(3)) = -1 \\
+    -i &= \varphi(x^3) = \langle x^3, w\rangle = 0\overline{w(0)} + 
+    1\overline{w(1)} + 8\overline{w(2)} + 27\overline{w(3)} \Rightarrow
+    w(1) + 8w(2) + 27w(3) = i \\
+  \end{align*}
+  Solving this system of equations gives:
+  \[
+    (w(0),w(1),w(2),w(3)) = 
+    \left(\frac{5}{3}i,\frac{5-5i}{2},-2+i,\frac{1}{2}-
+    \frac{1}{6}i\right)
+  \]
+  And now we can solve for $p(i)$ for any $p\in V$. By Cauchy-Schwartz we get:
+  \[
+    \|p(i)\| = |\langle p,w\rangle| \le \|p(x)\|\|w(x)\| = 
+    \sqrt{\sum_{x=0}^{3}{\| p(x) \|^2}} \sqrt{\sum_{x=0}^{3}{\| w(x) \|^2}}
+  \]
+  And we see that:
+  \[
+    \sqrt{\sum_{x=0}^{3}{\| w(x) \|^2}} = \frac{\sqrt{185}}{3}
+  \]
+  Since we know that the CS inequality can also be an equality we get that
+  this is the minimal constant such that the inequality is satisfied and then:
+  \[
+    C = \frac{\sqrt{185}}{3}
+  \]
+\end{solution}
+
+
+\begin{exercise}
+  Let $V$ be a finite dimension inner product space and $T\in\End(V)$. 
+  Show that $U\subseteq V$ is $T$-invariant iff $U^\bot$ is
+  $T^*$-invariant.
+\end{exercise}
+\begin{solution} \phantom{} \\
+  \underline{$U$ is $T$-invariant $\Rightarrow U^\bot$ is $T^*$-invariant:} \\ 
+  Since $U$ is $T$-invariant we know that:
+  \[
+    T(U) \subseteq U
+  \]
+  Now suppose that $U^\bot$ is not $T^*$-invariant, that means that exists
+  $u\in U^\bot$ such that $T^*(u)\notin U^\bot$, which means that:
+  \[
+    \langle v, T^*(u)\rangle \neq 0
+  \]
+  For some $v\in U$. This implies:
+  \begin{align*}
+    \langle T(v), u \rangle \neq 0
+  \end{align*}
+  But since $U$ is $T$-invariant we know that $T(v)\in U$, which implies
+  that $u\notin U^\bot$ - that means that out assumption must be false
+  so $U^\bot$ is $T^*$-invariant. \\
+  \underline{$U$ is $T$-invariant $\Leftarrow U^\bot$ is $T^*$-invariant:} \\ 
+  Since $U^\bot$ is $T^*$-invariant we know that:
+  \[
+    T^*(U^\bot) \subseteq U^\bot
+  \]
+  Now suppose that $U$ is not $T$-invariant, that means that exists
+  $u\in U$ such that $T(u)\notin U$, which means that:
+  \[
+    \langle T(u), v\rangle \neq 0
+  \]
+  For some $v\in U^\bot$. This implies:
+  \begin{align*}
+    \langle u, T^*(v) \rangle \neq 0
+  \end{align*}
+  But since $U^\bot$ is $T^*$-invariant we know that $T^*(v)\in U^\bot$, 
+  which implies that $u\notin U$ - that means that out assumption must be
+  false so $U$ is $T$-invariant.
+\end{solution}
+
+
+\begin{exercise}
+  Find $T^*$ for
+  \begin{enumerate}
+    \item[(1)] Let $(V,\langle , \rangle)$ be a finite dimension inner product
+      space. Let $\alpha,\beta\in V$ and define $T=T_{\alpha,\beta}\in\End(V)$ 
+      as such:
+      \[
+      T_{\alpha,\beta}(v) = \langle v, \alpha \rangle \beta
+      \]
+    \item[(2)] Let $V = (\Mat_n(\F),\langle,\rangle_{\std})$. 
+  Let $Q\in\Mat_n(\F)$ be invertible and define $T=T_Q\in\End(V)$ as such:
+  \[
+  T_Q(A) = QAQ^{-1}
+  \]
+    \item[(3)] Let $Tv=J_n(\lambda)v$ for $V=\F_n$ with 
+  $\langle,\rangle_{\std}$
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)]
+  We see that for $T$ defined as such:
+  \[
+    \langle T(v), u \rangle = 
+    \langle \langle v, \alpha \rangle \beta, u \rangle = 
+    \langle v, \alpha \rangle \langle \beta, u \rangle = 
+    \langle v, \alpha \overline{\langle \beta, u \rangle} \rangle = 
+    \langle v, \alpha \langle u, \beta \rangle \rangle
+  \]
+  And since we know that:
+  \[
+    \langle T(v), u\rangle = \langle v, T^*(u)\rangle = 
+    \langle v, \alpha \langle u, \beta \rangle \rangle
+  \]
+  We get that:
+  \[
+    T^*(u) = 
+    \langle u, \beta \rangle \alpha
+  \]
+
+    \item[(2)]
+  We see that from properties of trace:
+  \begin{align*}
+    \langle T(A), B \rangle &= 
+    \langle QAQ^{-1}, B \rangle = \tr(QAQ^{-1}B^{t}) = 
+    \tr(B^{t}QAQ^{-1}) \\ &= \tr(Q^{-1}B^{t}QA) = \tr(AQ^{-1}B^{t}Q) = 
+    \langle A, (Q^{-1}B^{t}Q)^{t} \rangle
+  \end{align*}
+  And since we know that:
+  \[
+    \langle T(A), B\rangle = \langle A, T^*(B)\rangle = 
+    \langle A, (Q^{-1}B^{t}Q)^{t} \rangle
+  \]
+  We get that:
+  \[
+    T^*(B) = 
+    (Q^{-1}B^{t}Q)^{t} = Q^{t}B(Q^{-1})^{t}
+  \]
+
+  \item[(3)]
+  We see that for $T$ defined as such:
+  \[
+    \langle T(v), u \rangle = 
+    \langle J_n(\lambda)v, u \rangle = (J_n(\lambda)v)^{t} u = 
+    v^{t} J_n(\lambda)^{t} u = \langle v, J_n(\lambda)^{t} u \rangle
+  \]
+  And since we know that:
+  \[
+    \langle T(v), u\rangle = \langle v, T^*(u)\rangle = 
+    \langle v, J_n(\lambda)^{t} u \rangle
+  \]
+  We get that:
+  \[
+    T^*(u) = 
+    J_n(\lambda)^{t} u
+  \]
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $\norm{\cdot}$ be a norm on a real or complex vector space.
+  Endow $\End(V)$ with the operator norm
+  \[
+    \norm{T}_{\op} :=
+    \sup_{0 \neq v \in V} \frac{\norm{Tv}}{\norm{v}} =
+    \sup\set{\norm{Tv} \colon \norm{v} = 1}.
+  \]
+  Show that if $\norm{I - T}_{\op} < 1$ then $T$ is invertible.
+\end{exercise}
+
+\begin{exercise}
+  Let $V$ be a finite dimension inner product space.
+  Endow $\End(V)$ with the operator norm defined by the normed that is
+  induced from the inner product.
+  \begin{enumerate}
+    \item[(1)] Show that 
+      $\norm{T \circ S}_{\op} \le \norm{T}_{\op} \cdot \norm{S}_{\op}$.
+    \item[(2)] Show that $\norm{T^*}_{\op} = \norm{T}_{\op}$
+      and that $\norm{T^* T}_{\op} = \norm{T}_{\op}^{2}$.
+      Note that you can use $(1)$ to prove one side of the equality.
+  \end{enumerate}
+\end{exercise}
+
+\newpage
+
+\section{Adjoint and Normal Operators}
+
+\begin{exercise}
+  Let $a \in \C, |a| \neq 1$ and let $V$ be a finite dimension inner product
+  space, $T \in \End(V)$.
+  \begin{enumerate}
+    \item[(1)] Show that if $T = a T^{*}$ then $T = 0$.
+    \item[(2)] Show that if $T$ is normal then $\ker T = \ker(T - aT^{*})$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+  \item[(1)]
+  We first see that $T$ is normal since:
+  \[
+    TT* = aT^*T^* = T^*aT^* = T^*T
+  \]
+  This means that exists an orthonormal basis of eigenvectors of $T$ which
+  we shall denote $B=(v_1,\dots,v_n)$ such that:
+  \[
+    [T]_B = \text{diag}(\lambda_1,\dots,\lambda_n)
+  \]
+  Where $\lambda_1,\dots,\lambda_n$ denote the corresponding eigenvalues.
+  We see that for all $1\le i \le n$ that:
+  \[
+    T(v_i) = \lambda_i v_i
+  \]
+  But on the other hand that:
+  \[
+    T(v_i) = aT^*(v_i)
+  \]
+  We know from a theorem that if $v_i$ is an eigenvector of $T$ with 
+  eigenvalue $\lambda_i$ then it is also an eigenvector of $T^*$ with
+  eigenvalue $\overline{\lambda_i}$ so we get:
+  \[
+    \lambda_i v_i = a \overline{\lambda_i} v_i \Rightarrow
+    \lambda_i = a \overline{\lambda_i}
+  \]
+  And in particular that:
+  \[
+    \vert \lambda_i \vert = \vert a \overline{\lambda_i} \vert \Rightarrow
+    \vert \lambda_i \vert = \vert a \vert \vert \overline{\lambda_i} \vert
+  \]
+  But since also $\vert \lambda_i \vert = \vert \overline{\lambda_i} \vert$
+  we get:
+  \[
+    \vert \lambda_i \vert (1-\vert a \vert) = 0
+  \]
+  And since $\vert a \vert \neq 1$ we get that $\lambda_i = 0$ which means
+  that:
+  \[
+    [T]_B = 0
+  \]
+  So $T = 0$.
+  \item[(2)]
+  We can represent these tranformations and get that:
+  \begin{align*}
+    [T]_B &= \text{diag}(\lambda_1,\dots,\lambda_n) \\
+    [T - aT^{*})]_B &= \text{diag}(\lambda_1 - a \overline{\lambda_1},\dots,
+    \lambda_n - a \overline{\lambda_n})
+  \end{align*}
+  We know that the kernel of $v\in \ker(T)$ if and only if $v$ is in the span
+  of $v_i$ with eigenvalue $0$, and that $v\in \ker(T - aT^{*})$ if and only
+  if $v$ is in the span of $v_i$ with eigenvalue $0$ but we see:
+  \begin{align*}
+    \lambda_i = 0 &\Rightarrow \lambda_i = \overline{\lambda_i} = 0 
+    \Rightarrow \lambda_i - a \overline{\lambda_i} = 0 \\
+    \lambda_i - a \overline{\lambda_i} = 0 &\Rightarrow
+    \lambda_i = a \overline{\lambda_i} \Rightarrow
+    \vert \lambda_i \vert = \vert a \overline{\lambda_i} \vert \Rightarrow
+    \vert \lambda_i \vert = \vert a \vert \vert \overline{\lambda_i} \vert
+    \Rightarrow \vert \lambda_i \vert (1-\vert a \vert) = 0 \Rightarrow
+    \lambda_i = 0
+  \end{align*}
+  Which shows that:
+  \[
+    \lambda_i = 0 \iff \lambda_i - a \overline{\lambda_i} = 0
+  \]
+  Which implies that the span of eignevectors from $B$ with eigenvalue
+  $0$ in relation of $T$ will also have eigenvalue $0$ in relation to
+  $T - aT^{*}$ so $\ker T = \ker(T - aT^{*})$ as wanted.
+  \end{enumerate}
+\end{solution}
+
+\begin{exercise}
+Given:
+\[
+A = 
+  \begin{pmatrix}
+  1 & -4 & 2 \\
+  -4 & 1 & -2 \\
+  2 & -2 & -2 
+  \end{pmatrix}
+\]
+Find an orthogonal matrix $O$ and a diagonal matrix $D$ such
+that $O^{T}AO=D$.
+\end{exercise}
+\begin{solution}
+We see that $A$ is symmetric so it must also be normal. From the spectral
+theorem for normal transformations we know that exists a basis $B$ to $V$
+such that $B$ is an orthogonal basis in realtion to the standard inner
+product and also comprises of eigenvectors of $A$. To find that $B$ we
+first will find the eigenvalues of $A$.
+\[
+A = 
+  \left\vert
+  \begin{pmatrix}
+  1-\lambda & -4 & 2 \\
+  -4 & 1-\lambda & -2 \\
+  2 & -2 & -2-\lambda 
+  \end{pmatrix}
+  \right\vert = -(\lambda+3)(\lambda+3)(\lambda-6) = 0
+\]
+So the eigenvalues are $\lambda_1 = -3$ and $\lambda_2=6$. Now to find
+an orthogonal basis for $\ker(A-3)$ we do:
+\[
+  \begin{pmatrix}
+  4 & -4 & 2 \\
+  -4 & 4 & -2 \\
+  2 & -2 & 1 
+  \end{pmatrix}
+  \begin{pmatrix}
+  x \\ y \\ z \\
+  \end{pmatrix} = 0
+\]
+And we find that:
+\[
+  \ker(A-3) = 
+  \left\{
+  a\begin{pmatrix} 1\\ 1\\ 0\\ \end{pmatrix} + 
+  b\begin{pmatrix} -1\\ 0\\ 2\\ \end{pmatrix}
+  \biggr\vert a,b\in\R
+  \right\}
+\]
+So we can choose the orthonormal basis to be:
+\[
+  B_{1} = 
+  \left\{
+  \frac{1}{\sqrt{2}} \begin{pmatrix} 1\\ 1\\ 0\\ \end{pmatrix}, 
+  \frac{1}{\sqrt{18}} \begin{pmatrix} -1\\ 1\\ 4\\ \end{pmatrix}
+  \right\}
+\]
+Now for $\ker(A+6)$ we do:
+\[
+  \begin{pmatrix}
+  -5 & -4 & 2 \\
+  -4 & -5 & -2 \\
+  2 & -2 & -8 
+  \end{pmatrix}
+  \begin{pmatrix}
+  x \\ y \\ z \\
+  \end{pmatrix} = 0
+\]
+And we find that:
+\[
+  \ker(A+6) = 
+  \left\{
+  a\begin{pmatrix} 2\\ -2\\ 1\\ \end{pmatrix}
+  \biggr\vert a\in\R
+  \right\}
+\]
+So we can choose the orthonormal basis to be:
+\[
+  B_{2} = 
+  \left\{
+  \frac{1}{3}\begin{pmatrix} 2\\ -2\\ 1\\ \end{pmatrix}
+  \right\}
+\]
+We know that vectors of different eigenspaces are always orthogonal
+so we know that:
+\[
+  B = B_{1} \cup B_{2} = 
+  \left\{
+  \frac{1}{\sqrt{2}} \begin{pmatrix} 1\\ 1\\ 0\\ \end{pmatrix}, 
+  \frac{1}{\sqrt{18}} \begin{pmatrix} -1\\ 1\\ 4\\ \end{pmatrix}, 
+  \frac{1}{3}\begin{pmatrix} 2\\ -2\\ 1\\ \end{pmatrix}
+  \right\}
+\]
+And as we know from the unitary diagnolization theorem the orthogonal
+matrix that would diagonalize $A$ is the matrix with these columns so:
+\[
+  O = \begin{pmatrix}
+  \cfrac{1}{\sqrt{2}} & -\cfrac{1}{\sqrt{18}} & \cfrac{2}{3} \\
+  \cfrac{1}{\sqrt{2}} & \cfrac{1}{\sqrt{18}} & -\cfrac{2}{3} \\
+  0 & \cfrac{4}{\sqrt{18}} & \cfrac{1}{3}
+  \end{pmatrix}
+\]
+And $D$ is just the matrix with the eigenvalues we found on the diagonal:
+\[
+  D = \begin{pmatrix}
+    -3 & 0 & 0\\
+    0 & -3 & 0\\
+    0 & 0 & 6\\
+    \end{pmatrix}
+\]
+And:
+\[
+  O^TAO = D
+\]
+\end{solution}
+
+\begin{exercise}
+Let $T$ be an operator over a finite dimension inner product space. 
+Prove or disprove the following:
+\begin{enumerate}
+  \item[(1)] $T$ is unitary iff $T$ is invertible and exists an orthonormal
+    basis $E$ such that $\|Te\|=1$ for all $e\in E$.
+  \item[(2)] $T$ is unitary iff $\|Tv\|=1$ for all $v\in V$ such that 
+    $\|v\|=1$.
+  \item[(3)] $T$ is unitary iff for all orthonormal vectors $v,u$ then 
+    $Tv,Tu$ are also orthonormal.
+\end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+  \item[(1)]
+This is false. Define $T\colon \R^2 \to \R^2$:
+\[
+  T(1,0) = (1,0) \quad\text{and}\quad 
+  T(0,1) = \left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right)
+\]
+We can see that it is invertible, and exists the standard basis $E$ 
+which is orthonormal such that $\|T(e1)\| = \|T(e2)\| = 1$, yet if we 
+consider $T(1,1)$ we see that:
+\[
+  \|(1,1)\| = \sqrt{2} \neq 
+  \sqrt{2 + \sqrt{2}} = 
+  \left\|\left(1+\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}}\right)\right\| = 
+  \|T(1,1)\|
+\]
+So we found a vector $v = (1,1)$ such that:
+\[
+  \|v\| \neq \|T(v)\|
+\]
+Which means that $T$ isn't unitary.
+
+\item[(2)]
+$(\Rightarrow)$ \\
+Let $T$ be unitary, then we know that for any $v\in V$ such that $\|v\| = 1$
+that:
+\[
+  \|Tv\| = \|v\| = 1
+\]
+$(\Leftarrow)$ \\
+Suppose that $v'$ is an eigenvector of $T$ with eigenvalue $\lambda$.
+We can normalize $v'$ and consider:
+\[
+  v = \frac{v'}{\|v'\|}
+\]
+This vetcor is also an eigenvector of $T$ with eigenvalue $\lambda$ so
+\[
+  T(v) = \lambda v
+\]
+But since $\|v\| = 1$ we also know that:
+\[
+  \|T(v)\| = \|\lambda\| \|v\| = 1 \Rightarrow \|\lambda\| = 1
+\]
+And we know that if for any eigenvalue $\lambda$ of $T$ that 
+$\|\lambda\|=1$  then $T$ is unitary. That means that we have just shown
+that $T$ is unitary.
+
+\item[(3)]
+This is true. From the Gram-Schmidt theorem we know that exists 
+$B=(v_1,\dots,v_n)$ an orthonormal basis for $V$, since any two vectors 
+$u,v\in B$ are orthonormal we get that any $T(u),T(v)\in T(B)$ are also 
+orthonormal. So the set $T(B)$ is also orthonormal. Suppose it werent 
+linearly independent we get that exist $(a_1,\dots,a_n)\neq 0$ such that:
+\[
+  \sum_{i}{a_i T(v_i)} = 0
+\]
+Using Parseval's identity we get that:
+\[
+  \left\|\sum_{i}{a_i T(v_i)}\right\| = 
+  \sqrt{\sum_{i}{\|a_i\|}} = \|0\| = 0
+\]
+But this can only happen if $\forall i(a_i = 0)$ so $T(B)$ is linearly
+indepenedent and we got that $T$ sends the orthonormal basis $B$ to 
+$T(B)$ an orthonormal basis. Let $v=\sum_{i}{a_i v_i}\in V$ we see that 
+using Parseval's identity twice gives:
+\[
+  \|T(v)\| = \left\|T\left(\sum_{i}{a_i v_i}\right)\right\| 
+  = \left\|\sum_{i}{a_i T(v_i)}\right\| = 
+  \sqrt{\sum_{i}{\|a_i\|}} = \|v\|
+\]
+We know that this is equivalent to $T$ being unitary which completes the
+proof.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $T$ be a operator over an inner product space $V$ and let 
+  $TT^{*}=\alpha T + \beta I$ for some $\alpha,\beta\in\R$.
+  Show that $\alpha^2+4\beta \ge 0$.
+\end{exercise}
+% \begin{solution}
+%   We can see that:
+%   \[
+%     T^*T = T^{-1}(TT^{*})T = T^{-1}(\alpha T + \beta I)T = \alpha T + \beta I = 
+%     TT^*
+%   \]
+%   So we get that $T$ is normal so by the spectral theorem there exists a
+%   basis of
+%   eigenvectors of $T$ such that according to that basis $T$ is diagonalizable.
+%   Let $\lambda$ be an eigenvalue of $T$ we get that:
+%   \[
+%     \|\lambda\|^2 = \alpha \lambda + \beta.
+%   \]
+% \end{solution}
+
+% More bonus exercises that could be added
+
+
+\begin{exercise}
+  Let $T$ be a self-adjoint operator over a finite inner product space.
+  Prove that exist non-negative operators $A,B$ such that:
+  \[
+    T = A-B,\quad \sqrt{TT^{*}}=A+B,\quad AB=BA=0
+  \]
+\end{exercise}
+\begin{solution}
+  We know that if $T$ is self-adjoint which implies it is unitary 
+  diagonalizable over $\R$, so exist $O\in O(n)$ and $D$ diagonal such that:
+  \[
+    O^{T}DO = [T]_C
+  \]
+  For $C$ the basis with the $i$th vector being the $i$th column of $O$.
+  Since $T$ is self-adjoint we know that all of eigenvalues are real.
+  We can denote them by the entries of the main diagonal of $D$ as such:
+  $\lambda_i = D_{ii}$, and now we can define two matrices:
+  \[
+    (A')_{ij} = 
+    \begin{cases}
+      D_{ii} & i=j \land D_{ii} \geq 0 \\
+      0 & \text{otherwise}
+    \end{cases}
+  \]
+  And:
+  \[
+    (B')_{ij} = 
+    \begin{cases}
+      -D_{ii} & i=j \land D_{ii} \leq 0 \\
+      0 & \text{otherwise}
+    \end{cases}
+  \]
+  And define the operator $A,B$ as such:
+  \[
+    A(v) = (O^{T} A' O)(v) \quad\text{and}\quad B(v) = (O^{T} B' O)(v)
+  \]
+  We see that $A,B$ are self-adjoint since $O^* = O^{T}$ and since all of
+  their eigenvalues by construction are non-negative we know that they are
+  non-negative operators. We may notice that:
+  \[
+    A - B = O^{T} A' O - (O^{T} B' O) = O^{T} (A'-B') O = O^{T} D O = T
+  \]
+  And also that:
+  \[
+    \sqrt{TT^*} = \sqrt{O^{T} DD^* O} = O^{T} |D| O = O^{T} (A'+B') O = 
+    A+B
+  \]
+  And since diagonal matrices commute under matrix multiplication and also
+  $O^{T} = O^{-1}$ we see:
+  \[
+    AB = BA = A'B' = 0
+  \]
+  Since $A'$ multiplies all the rows different than $0$ in $B$ and all the rows
+  that are zero in a scalar. This completes the proof.
+\end{solution}
+
+\newpage
+\section{SVD Decomposition and Binlinear Forms}
+
+\begin{exercise}
+  Let $T$ be a self-conjugate polynomial over the inner product space $V$, 
+  with eigenvalues $\lambda_1,\dots,\lambda_n$.
+  Prove that for any $p(x)\in\F[x]$ show that the singular values of $p(T)$ 
+  are $\vert p(\lambda_i)\vert$ up to inner order.
+\end{exercise}
+\begin{solution}
+  Since $p(x)$ is a polynomial we can write:
+  \[
+    p(x) = a_nx^n+a_{n-1}x^{n-1}+\cdots+a_0
+  \]
+  And:
+  \begin{align*}
+    p(T) &= a_nT^n+a_{n-1}T^{n-1}+\cdots+a_0I \\
+    p(T)^* &= (a_nT^n)^* + (a_{n-1}T^{n-1})^* + \cdots + (a_0I)^* = 
+    \overline{a_n}(T^*)^n + \overline{a_{n-1}}(T^*)^{n-1} + \cdots + 
+    \overline{a_0}I
+  \end{align*}
+  Let $\lambda$ be an eigenvalue asscociated with an eigenvector $v$ of $T$. 
+  We see that:
+  \begin{align*}
+    p(T)(v) &= (a_nT^n+a_{n-1}T^{n-1}+\cdots+a_0I)(v) \\ &= 
+    a_nT(v)^n + a_{n-1}T(v)^{n-1} + \cdots + a_0I(v) \\ &= 
+    a_n\lambda^{n}v + a_{n-1}\lambda^{n-1}v + \cdots + a_0v \\ &= 
+    p(\lambda)(v)
+  \end{align*}
+  And:
+  \begin{align*}
+    p(T)^*(v) &= 
+    (\overline{a_n}(T^*)^n + \overline{a_{n-1}}(T^*)^{n-1} + \cdots + 
+    \overline{a_0}I)(v) \\ &=
+    \overline{a_n}(T^*(v))^n + \overline{a_{n-1}}(T^*(v))^{n-1} + \cdots + 
+    \overline{a_0}v\\ &=
+    \overline{a_n\lambda^n}v + \overline{a_{n-1}\lambda^{n-1}}v + \cdots + 
+    \overline{a_0}v\\ &=
+    \overline{p(\lambda)}v
+  \end{align*}
+  So the eigenvalues of $p(T)^*p(T)$ are exactly 
+  $\overline{p(\lambda)}p(\lambda)$ which is exactly $\|p(\lambda)\|^2$.
+  By SVD we know that the singular values of $p(T)$ are the square roots
+  of the eigenvalues of $p(T)^*p(T)$, or in other words, the singular values
+  of $p(T)$ are $\|p(\lambda_i)\|$ up to order.
+\end{solution}
+
+\begin{exercise}
+  Show that $\|T^*T\|_{\text{op}} =  \|T\|_{\text{op}}^{2}$.
+\end{exercise}
+\begin{solution}
+  We know that:
+  \[
+    \|T\|_{\mathrm{op}} = \sup_{\|x\|=1}{\|Tv\|} 
+          = \sup_{\|x\|=1}{\sqrt{\ip{T(v)}{T(v)}}}
+          = \sup_{\|x\|=1}{\sqrt{\ip{T^*T(v)}{v}}}
+  \]
+  From this follows that:
+  \[
+    \|T\|_{\op}^{2} = \sup_{\|x\|=1}{\ip{T^*T(v)}{v}}
+  \]
+  We may notice that $\ip{T^\ast Tv}{v}$ is a non-negtive number since it's
+  just the norm of $\ip{Tv}{Tv}$ which means using Cauchy-Schwartz we get:
+  \[
+    \|T\|_{\op}^{2} = \sup_{\|x\|=1}{\ip{T^*T(v)}{v}} \le 
+    \|T^\ast T\| \|x\| = \|T^\ast T\|
+  \]
+  So we got that $\|T\|_{\op}^{2} \le \|T^\ast T\|$. To prove the other
+  direction we recall that we saw in the rehearsal that $T$ and $T^\ast$
+  have the same singular values and in particular that:
+  \[
+    \|T\|_{\op} = \|T^\ast\|_{\op}
+  \]
+  So using this and properties of the norm we get:
+  \[
+    \|T^\ast T\| \le \|T^\ast\| \|T\| = \|T\|^2
+  \]
+  From this and the other inequality we get:
+  \[
+    \boxed{\|T^*T\|_{\text{op}} =  \|T\|_{\text{op}}^{2}}
+  \]
+\end{solution}
+
+
+\begin{exercise}
+  Let $f$ be a reflexive bilinear form over a finite dimension $V$.
+  Show that if $\mathrm{rank}f=r$ then exist 
+  $\phi_1,\tau_1,\dots,\phi_r,\tau_r\in V^*$ such that:
+  \[
+    f(x,y) = 
+    \phi_{1}(x)\tau_{1}(y) + \cdots + \phi_{r}(x)\tau_{r}(y)
+  \]
+\end{exercise}
+\begin{solution}
+  We know that $\mathrm{rank} f = r$ so if we denote $A = [f]_B$ 
+  we get that $\dim\ker(A) = n - r$. Denote the basis for the
+  kernel at $B_k = \{e_{n-r+1}, \dots, e_n\}$ and complete it
+  to a basis for $V$ as such $B = \{e_{1}, \dots, e_n\}$ 
+  Now for each $u,v\in\mathrm{span}\{e_{1}, \dots, e_r\}$ we can 
+  denote:
+  \begin{align*}
+    u = \sum_{i=1}^{n}{\alpha_i e_i} \\
+    v = \sum_{i=1}^{n}{\beta_i e_i}
+  \end{align*}
+  And now for any $u,v$ we see:
+  \[
+    f(u,v) = f\left(\sum_{i=1}^{n}{\alpha_i e_i}, v\right) = 
+    \sum_{i=1}^{n}{\alpha_i f(e_i,v)} = 
+    \sum_{i=1}^{r}{\alpha_i f(e_i,v)}
+  \]
+  The last equality is true since we know that:
+  \[
+    f(v,e_i) = [v]_B A [e_i]_B = [v]_B 0 = 0
+  \]
+  And since $f$ is reflexive we get $f(e_i,v) = 0$ as well.
+  Let $\phi_i\in V^*$ where $1 \le r \le n$ be defined as:
+  \[
+    \phi_i\left(\sum_{j}{\alpha_j e_j}\right) = \alpha_i
+  \]
+  And:
+  \[
+    \tau_i(v) = f(e_i,v)
+  \]
+  These are trivially linear functionals. From the above calculations we see that:
+  \[
+    f(u,v) = \sum_{i=1}^{r}{\phi_i(u)\tau_i(v)}
+  \]
+  Which is what we wanted to prove.
+\end{solution}
+
+\begin{exercise}
+  Let $V$ be a real finite dimension inner product space and let $f$ be a 
+  bilinear form over $V$.
+  Show that there exists a unique $T\in\End(V)$ such that:
+  \[
+    f(u,v) = \ip{u}{T(v)}, \quad \forall u,v\in V
+  \]
+\end{exercise}
+\begin{solution}
+  We know by Gram-Schmidt that $V$ has an orthonormal basis $B$ which 
+  implies:
+  \[
+    \ip{v}{u} = \ip{[v]_B}{[u]_B}_{\std}
+  \]
+  So we need to show that exists a unique $T\in\End(T)$ such that:
+  \[
+    f(u,v) = \ip{[u]_B}{[T(v)]_B}_{\std}, \quad \forall u,v\in V
+  \]
+  Let:
+  \[
+    [T(v)]_B = [f]_B [v]_B \in \End(T)
+  \]
+  We see that:
+  \[
+    f(u,v) = [u]_B^* [f]_B [v]_B = [u]_B^* [T(v)]_B
+    = \ip{[u]_B}{[T(v)]_B}_{\std}
+  \]
+  This shows that exists a $T$ as wanted, we will now show it's unique.
+  Let $S\neq T$ such that:
+  \[
+    \ip{u}{T(v)} = \ip{u}{S(v)}
+  \]
+  From this follows that:
+  \begin{align*}
+    \ip{u}{T(v)} - \ip{u}{S(v)} &= 0 \\ \Rightarrow
+    \ip{u}{T(v)-S(v)} &= 0 \\ \Rightarrow
+    \ip{u}{(T-S)(v)} &= 0
+  \end{align*}
+  Since $T \neq S$ exists $v'$ such that $(T-S)(v')\neq 0$ and for all 
+  $u\in V$ and specifivally for $T(v')$ we get:
+  \[
+    \ip{T(v')}{(T-S)(v)} = \ip{T(v')}{T(v')} = \|T(v')\|^2 = 0
+  \]
+  But since $T(v') \neq 0$ this can't be. This implies that $T$ is indeed
+  unique.
+\end{solution}
+
+% More bonus exercises here
+\newpage
+\section{Sylvester's Law}
+
+\begin{exercise}
+  Let $A\in \mathrm{Mat}_n(\R)$ be symmetric and also satisfy:
+  \[
+    (A^2-5A+7I)^3 = I
+  \]
+  Show that:
+  \[
+    f(x,y) = x^{T} A y
+  \]
+  is an inner product on $\R^2$.
+\end{exercise}
+\begin{solution}
+  To show that this is an inner product on $\R^2$ we need to show that $f$
+  is positive-definite. Since $A$ is symmetric and real it is self conjugate.
+  By a theorem from class we know that if it is self conjugate and all of 
+  its eigenvalues are positive then $A$ is positive definite and then
+  $f$ is an inner product. Let $\lambda$ be an eigen value of $A$ with
+  a corresponding eigenvector $v_\lambda$ such that:
+  \[
+    Av_{\lambda} = \lambda v_{\lambda}
+  \]
+  Since $A$ satisfies the above equality we see that:
+  \[
+    v_{\lambda} = Iv_{\lambda} = (A^2-5A+7I)^3 v_{\lambda} = 
+    (A^2-5A+7I)^2 
+    (\lambda^2 v_{\lambda} - 5\lambda v_{\lambda} + 7 v_{\lambda}) = 
+    (A^2-5A+7I)^2 (\lambda^2 - 5\lambda + 7)v_{\lambda}
+  \]
+  Consider the real polynimial $g(x) = x^2-5x+7$. We see that its discriminant
+  is $\sqrt{25 - 28}$ which means it doens't have any roots. Since the
+  coefficient of $x^2$ is positive that means that $g(x) > 0$ for any
+  real $x$ and specifically that $g(\lambda) > 0$ which gives:
+  \[
+    (A^2-5A+7I)^3 v_{\lambda} = 
+    (A^2-5A+7I)^2 g(\lambda) v_{\lambda} = 
+    (A^2-5A+7I)   g(\lambda)g(\lambda) v_{\lambda} = 
+            g(\lambda)g(\lambda)g(\lambda) v_{\lambda}
+  \]
+  This implies that $1 = g(\lambda)^3$. The only real solution to that
+  equation is $g(\lambda) = 1$, considering the equation $g(x) = 1$
+  we see:
+  \[
+    g(x) = 1 \Rightarrow x^2-5x+7 - 1 = 0 \Rightarrow (x-2)(x-3) = 0
+  \]
+  So $\lambda = 2$ or $\lambda = 3$. This implies that all the eigenvalues
+  of $A$ are positive and as we said that implies that $f$ is an inner
+  product and completes the proof.
+\end{solution}
+
+\begin{exercise}
+  How many bilinear forms are there over $\R^2$ for which 
+  exists $0\neq x\in\R^2$ such that $f(x,x) > 0$ up to isomorphism?
+\end{exercise}
+\begin{solution}
+  Let $B$ be a bilinear form and $E$ be a basis for $\R^2$. We know
+  that each bilinear form defines a quadratic form $q$. We also
+  know that any quadratic form can be represented by a symmetric matrix $S_q$. 
+  Since $S_q$ is symmteric we can use Sylvester's law of inertia and get that 
+  each $S_q$ is uniquely congruent to a matrix of the form:
+  \[
+    I_{n_+} \oplus -I_{n_-} \oplus O_{n_0}
+  \]
+  We now need to consider all the options that are not negative semi-definite
+  so there would be an $x \neq 0$ such that $f(x,x) > 0$.
+  Since we are talking about a $2 \times 2$ matrix here there are only $5$
+  such options:
+  \begin{align*}
+    \begin{pmatrix}
+      1 & 0 \\
+      0 & 1
+    \end{pmatrix}
+    \quad
+    \begin{pmatrix}
+      1 & 0 \\
+      0 & 0
+    \end{pmatrix}
+    \quad
+    \begin{pmatrix}
+      0 & 0 \\
+      0 & 1
+    \end{pmatrix}
+    \quad
+    \begin{pmatrix}
+      1 & 0 \\
+      0 & -1
+    \end{pmatrix}
+    \quad
+    \begin{pmatrix}
+      -1 & 0 \\
+      0 & 1
+    \end{pmatrix}
+  \end{align*}
+  So there are exactly $5$ bilinear forms over $\R^2$ for which exists $x\neq0$
+  such that $f(x,x) > 0$ up to isomorphism.
+\end{solution}
+
+\begin{exercise}
+  Let $f$ be a symmetric bilinear form over a real finite-dimension vector 
+  space $V$.
+  \begin{enumerate}
+    \item[(1)] Prove that if $W\subseteq V$ is a subspace such that $f\vert_W$ 
+      is positive definite, then $\dim W \le n_{+}(f)$.
+    \item[(2)] Let $B = (b_1,\dots,b_n)$ be a Sylvester basis such that:
+      \[
+        [f]_B = I_{n_{+}} \oplus (-I_{n_{-}}) \oplus O_{n_{0}}.
+      \]
+      Does it necessarily follow that 
+      $W\subseteq \mathrm{sp}\{b_1,\dots,b_{n_{+}}\}$?
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+  \item[(1)]
+  Denote $\dim (W) = k$ and
+  let
+  \[
+    B_W = (v_1,\dots,v_{k})
+  \]
+  be a basis for $W$, and
+  \[
+    B_V = (v_1,\dots,v_{k},\dots v_n)
+  \]
+  be a basis for $V$.
+  We know that $f$ is a symmteric bilinear form, which implies that $[f]_B$ is 
+  symmetric. So by Sylvester's law of inertia we get that exists a diagonal 
+  matrix $D$ and an invertible matrix $S$ such that $[f]_B$ is congruent to $D$ 
+  and:
+  \[
+    S^{T}[f]_BS = D
+  \]
+  We also know by the orthogonal diagonalization theorem for real symmetric
+  matrices that exists $O\in O(n)$ such that:
+  \[
+    O^{T}[f]_BO = D'
+  \]
+  Where $D$ is diagonal with the eigenvalues of $[f]_B$ on its diagonal.
+  Since we know that $f\vert_W$ is positive definite that means that all
+  of its eigenvalues are positive and moreover that $D'_{11},\dots,D'_{kk}$
+  are the eigenvalues of $W$ and thus positive.
+  Since the positive values on the diagonal corresponds to $n_+(D')$
+  we get that $n_+(D') \geq \dim W$ and since Sylvester's character
+  and the rank don't change between congruent matrices
+  \footnote{Notice that $D$ and $D'$ are congruent because congruency
+  is an equivalence relation} 
+  we get that
+  $n_+(f) \geq \dim W$ too, which is exactly what we wanted to prove.
+\item[(2)]
+  No. Let $V = \R^2$ and $E = \{e_1,2e_2\}$ be a basis to $\R^2$ such that
+  $e_1,e_2$ are the vectors from the standard basis and:
+  \[
+    [f]_B = 
+    \begin{pmatrix}
+      1 & 0 \\
+      0 & -1 \\
+    \end{pmatrix}
+  \]
+  We see that $E$ is a Sylvester's basis but if we consider:
+  \[
+    W = \mathrm{sp}\{(1,1)\}
+  \]
+  Then $W$ is indeed a linear subspace of $V$ and if we let $w=(a,a)\in W$
+  we see that:
+  \[
+    \ip{[f]_B[w]_B}{[w]_B} = 
+    \begin{pmatrix}
+    2a & a
+    \end{pmatrix}
+    \begin{pmatrix}
+      1 & 0 \\
+      0 & -1 \\
+    \end{pmatrix}
+    \begin{pmatrix}
+    2a \\ a
+    \end{pmatrix} = 3a^2
+  \]
+  And of course $f\vert_B$ is also symmetric so by a theorem it is 
+  positive definite, yet as we can easily see $W \nsubseteq \mathrm{sp}\{e_1\}$
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $A$ be a symmetric real matrix of order $n \times n$ over $V$.
+  Prove that $A$ is non-negative iff $\Delta_i(A) \geq 0$ for all 
+  $i = 1, \dots, n$. Consider both directions
+\end{exercise}
+\underline{$(\Leftarrow)$} \\
+This is false because we can look at the matrix over $\R$:
+\[
+A = 
+  \begin{pmatrix}
+    0 & 0 \\
+    0 & -1
+  \end{pmatrix}
+\]
+We see that:
+\[
+  \Delta_1(A) = 0 \tand \Delta_2(A) = \det(A) = 0
+\]
+But still we see that is is symmetric and it has a negative eigenvalue.
+\\
+\underline{$(\Rightarrow)$} \\
+Assume that $A$ is non-negative. This clearly implies that any principle 
+minor corresponding to $\Delta_i(A)$ is also non-negative, which means that
+all of its eigenvalues are non-negative. Since the determinant of any
+principle minor is the product of its eigenvalues we get that for all
+$i = 1,\dots,n$ that $\Delta_i(A) \geq 0$ which is what we wanted to prove.
+
+\begin{exercise}
+  Let $f$, $g$ be inner products on $V$ a finite-dimension vector 
+  space. Prove that exists a basis that is orthonormal by $f$ and orthogonal 
+  by $g$.
+\end{exercise}
+
+\newpage
+\section{Past Tests}
+
+\begin{exercise}
+  Find the Jordan normal form for the following matrix:
+  \[
+  A := \begin{pmatrix}
+  0 & -1 & -1 & 0\\
+  1 & -2 & -1 & -1\\
+  0 & 0 & -1 & 1\\
+  0 & 0 & 0 & -1\\
+  \end{pmatrix} \in M_4(\R)
+  \]
+  And find an invertible $P$ such that  $P^{-1}AP$ is in Jordan normal form.
+\end{exercise}
+\begin{solution}
+  First we will start by finding the eigenvalues of $A$ by using the
+  charecteristic polynomial:
+  \[
+    \det(A - \lambda I) = (\lambda + 1)^4
+  \]
+  So the eigenvalues are $\lambda = -1$ with an algebraic multiplicity of $4$
+  and geometric multiplicity of $2$. This implies that there are $2$ Jordan
+  blocks with eigenvalues of $-1$ and their sum is $4$ which implies that:
+  \[
+    \mathrm{JordanNormalForm}(A) = J_2(-1) \oplus J_2(-1)
+  \]
+  To find $P$ we need to find the generalized eigenspaces of $A$ in relation
+  to $\lambda = -1$. We see that:
+  \begin{align*}
+    \ker(A+I) &= \ker
+    \left(\begin{matrix}
+    1 & -1 & -1 & 0 \\
+    1 & -1 & -1 & -1 \\
+    0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 0
+    \end{matrix}\right) = 
+    \Sp\left\{
+    \begin{pmatrix}
+      1\\
+      1\\
+      0\\
+      0\\
+    \end{pmatrix},
+    \begin{pmatrix}
+      0\\
+      1\\
+      -1\\
+      0\\
+    \end{pmatrix}
+    \right\} \\
+    \ker(A+I)^2 &= \ker
+    \left(\begin{matrix}
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+    \end{matrix}\right) = \R^4
+  \end{align*}
+  Now to find the Jordan basis we just need to choose $v_2, v_4$ to
+  be linearly independent vectors in $\ker(A+I)^2$ that are not in
+  $\ker(A+I)$. We can choose:
+  \[
+    v_2 = \begin{pmatrix}1 \\ 0\\ 0\\ 0\\ \end{pmatrix} \quad
+    v_4 = \begin{pmatrix}0 \\ 0\\ 0\\ 1\\ \end{pmatrix}
+  \]
+  And now the Jordan base will be:
+  \[
+    B_J = 
+    \left\{
+    \begin{pmatrix}0 \\ -1\\ 1\\ 0\\ \end{pmatrix},
+    \begin{pmatrix}1 \\ 0\\ 0\\ 0\\ \end{pmatrix},
+    \begin{pmatrix}1 \\ 1\\ 0\\ 0\\ \end{pmatrix},
+    \begin{pmatrix}0 \\ 0\\ 0\\ 1\\ \end{pmatrix}
+    \right\}
+  \]
+  And since these are the columns of $P$ we know that:
+  \[
+    P = 
+    \left(\begin{matrix}
+    0 & -1 & 1 & 0 \\
+    1 & 0 & 0 & 0 \\
+    1 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 1
+    \end{matrix}\right)
+  \]
+\end{solution}
+
+\begin{exercise}
+  Prove that the matrices $A^{-1}$ and $A^3$ are similar.
+\end{exercise}
+\begin{solution}
+  We see that:
+  \begin{align*}
+    A^{-1} &= PJ^{-1}P^{-1} \\
+    A^{3}  &= PJ^{-3}P^{-1}
+  \end{align*}
+  Whis means it is sufficient to prove that $A^{-1}$ and $A^3$ are similar.
+  Indeed we see that:
+  \[
+    A^{-1} = \left(\begin{matrix}
+    -1 & -1 & 0 & 0 \\
+    0 & -1 & 0 & 0 \\
+    0 & 0 & -1 & -1 \\
+    0 & 0 & 0 & -1
+    \end{matrix}\right) \quad
+    A^{3} = \left(\begin{matrix}
+    -1 & 3 & 0 & 0 \\
+    0 & -1 & 0 & 0 \\
+    0 & 0 & -1 & 3 \\
+    0 & 0 & 0 & -1
+    \end{matrix}\right)
+  \]
+  Both these matrices have the same eigenvalues with the same algebraic
+  and geometric multiplicity so their Jordan normal form is identical
+  which means they are similar.
+\end{solution}
+
+\begin{exercise}
+  Let $V$ be an inner product space over $\C$ and let 
+  $T \colon V \to V$ a linear transformation such that:
+  \[
+    (7I - T)T^* = 10I
+  \]
+  Show that
+  \begin{enumerate}
+    \item[(1)] $T$ is self-adjoint.
+    \item[(2)] Let $\lambda$ be an eigenvalue of $T$. Show that 
+      $2 \le \lambda \le 5$.
+    \item[(3)] Let $v \in V$ such that $\|v\| = 1$. Prove that 
+      $2 \le \|T(v)\| \le 5$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+\item[(1)]
+  We get that:
+  \[
+    T^* = \frac{TT^* + 10I}{7}
+  \]
+  And now:
+  \[
+    T = \frac{T^*T + 10I}{7}
+  \]
+  Since we know that $TT^*$ is always self adjoint we get that $T = T^*$ so
+  $T$ is self-adjoint.
+\item[(2)]
+We know that all the eigenvalues of $T$ are real since it is a normal 
+operator and by the spectral theorem for normal operators exists a basis
+$B$ of orthonormal eigenvectors of $T$ to $V$. By that basis we get:
+\[
+  [T]_B = \mathrm{diag}\{\lambda_1,\dots,\lambda_n\}
+\]
+We can also notice that since the basis is made up by orthonormal vectors:
+\[
+  \mathrm{diag}\{\overline{\lambda_1},\dots,\overline{\lambda_n}\} =
+  [T]^*_B = [T^*]_B = [T]_B = 
+  \mathrm{diag}\{\lambda_1,\dots,\lambda_n\}
+\]
+Which means that for any $1 \le i \le n$ we get 
+$\lambda_i = \overline{\lambda_i}$ or in other words that $\lambda_i\in\R$.
+Suppose $\lambda$ was an eigenvalue of $T$for $v\in V$. We get that:
+\begin{align*}
+  (7I - T)T^*(v) &= 10I(v) \\
+  \lambda (7I - T)v &= 10v \\
+  \lambda (7v - \lambda v) &= 10v \\
+  7\lambda v - \lambda^2 v - 10v &= 0 \\
+  7\lambda - \lambda^2  - 10 &= 0 \\
+  (\lambda - 2)(\lambda - 5) &= 0
+\end{align*}
+This means that $2 \le \lambda \le 5$ as wanted.
+\item[(3)]
+It might be hard considering the norm only, but luckily we can use the inner
+product and see that:
+\begin{align*}
+  \|T(v)\|^2 &= \ip{T(v)}{T(v)} = 
+  \ip{\sum_{i}{\ip{v}{e_i}Te_i}}{\sum_{i}{\ip{v}{e_i}Te_i}} = 
+  \sum_{i}{\|\ip{v}{e_i}\|^2\|\lambda_i\|^2} \\ &\le 
+  25 \|v\| = 25
+\end{align*}
+We get that $\|T(v)\| \le 5$ and similarly we can ge that $2 \le \|T(v)\|$
+and finish the proof.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $A_1$, $A_2$ be two real symmetrical and invertible matrics of 
+  order $2$. Show that if they are not congruent exist $D_1, D_2$ diagonal
+  and $P$ invetible matrix such that:
+  \begin{align*}
+    P^TA_1P = D_1 \\
+    P^TA_2P = D_2
+  \end{align*}
+\end{exercise}
+\begin{solution}
+  Since $A_1$ and $A_2$ are real matrices of order $2$ invetible and 
+  symmetrical, by Sylvester's law of inertia at least one of them
+  must be congruent to $\pm I$. Which means that exists $P$ invertible 
+  such that:
+  \[
+    P^T A_1 P = \pm I \quad \text{and} \quad 
+    P^T A_2 P = B
+  \]
+  We know that $B$ is symmetrical and invertible so exists an orthogonal
+  matrix $Q$ that diagonlaizes it, and then we get:
+  \begin{align*}
+    (PQ)^t A_1 (PQ) &= Q^T \pm I Q = \pm I = D_1 \\
+    (PQ)^t A_2 (PQ) &= Q^T B Q = D_2
+  \end{align*}
+  Which is what we wanted to prove.
+\end{solution}
+
+\begin{exercise}
+  Define the following vector space over $\R$:
+  \[
+    V = \{A \in M_2(\C) \vert A = A^*\}
+  \]
+  And also define $q \colon V \to \R$ as 
+  $
+    A \mapsto 2 \det(A)
+  $.
+  Show that $q$ is a quadratic form and find its signature.
+\end{exercise}
+\begin{solution}
+  We can notice that:
+  \[
+    V \left\{
+    \begin{pmatrix}
+      a & b + ci\\
+      b - ci & a\\
+    \end{pmatrix}
+     \biggr\vert a,b,c\in\R
+     \right\}
+  \]
+  Which means that:
+  \[
+    q(A) = 2(a^2 - b^2 - c^2)
+  \]
+  Notice that even though it may seem as if we are mapping a $2 \times 2$
+  matrix to a real number, we are basically sending the vector $(a,b,c)$
+  from $\R^3$ to $2(a^2 - b^2 - c^2)$ and so the symmetrical bilinear
+  form that defines $q$ according to the basis:
+  \[
+    B = 
+    \left\{
+      \begin{pmatrix}
+        1 & 0\\
+        0 & 1\\
+      \end{pmatrix},
+      \begin{pmatrix}
+        0 & 1\\
+        1 & 0\\
+      \end{pmatrix},
+      \begin{pmatrix}
+        0 & -i\\
+        i & 0\\
+      \end{pmatrix}
+    \right\}
+  \]
+  is the matrix:
+  \[
+  [f]_B = \begin{pmatrix}
+    2 & 0 & 0\\
+    0 & -2 & 0\\
+    0 & 0 & -2\\
+  \end{pmatrix}
+  \]
+  This shows that $q$ is a quadratic form and we can see that the signature
+  of it is just $(1,2)$ with rank $3$.
+\end{solution}
+
+\begin{exercise}
+  Let $V$ be a vector space over $\C$ and let $D,T\in\End(v)$ such
+  that $TD = DT$ and $D$ is diagonalizable.
+  \begin{enumerate}
+    \item[(1)] Prove that the eigenspaces of $D$ are $T$-invariant.
+    \item[(2)] Show that exists a basis $B$ of $V$ such that $[D]_B$ is
+      diagonal and $[T]_B$ is in its Jordan normal form.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+\item[(1)]
+  Let $\lambda$ be an eigenvalue of $D$. The corresponding eigenspace is:
+  \[
+    V_\lambda = \{v \in V \mid D(v) = \lambda v \}
+  \]
+  To show this space is $T$-invariant by definition we can consider 
+  $v\in V_\lambda$ and indeed:
+  \[
+    D(T(v)) = T(D(v)) = T(\lambda v) = \lambda T(v)
+  \]
+  Which implies that $T(v)\in V_\lambda$ as wanted.
+\item[(2)]
+  In the previous exercise we have shown that the eigenspaces of $D$ are
+  $T$-invariant, and since we know they also span $V$ we get that:
+  \[
+    V = V_{\lambda_1} \oplus \cdots \oplus V_{\lambda_k}
+  \]
+  Is a direct product decomposition of $T$. From Jordan's theorem
+  for every $V_{\lambda_i}$ exists a basis $B_i$ that changes $T$ to a normal
+  form, so we get that the ordered union $B = \bigcup B_i$ is a basis
+  such that $[T]_B$ is in Jordan normal form and since it is made of
+  eigenvectors of $D$ it of course diagonalizes $D$ as well.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  For $\R^3$ coupled with the standard inner product we denote the
+  norm and metric it induces as $|\cdot|$ and $d(\cdot,\cdot)$ 
+  correspondingly. Let:
+  \[
+  A = \begin{pmatrix}
+      4 & 3 & 0\\
+      2 & -1 & 0\\
+      0 & 0 & 2\\
+    \end{pmatrix}
+  \]
+  Find the value of $\max\{d(Av,v) \mid v\in\R^3 \land \|v\| = 1\}$.
+\end{exercise}
+\begin{solution}
+  This is a clearly a question about SVD decomposition. We see that:
+  \[
+    \max\{d(Av,v) \mid v\in\R^3 \land \|v\| = 1\} =
+    \max\{\|(A-I)(v)\| \mid v\in\R^3 \land \|v\| = 1\}
+  \]
+  We denote:
+  \[
+    B = \begin{pmatrix}
+      3 & 3 & 0\\
+      2 & -2 & 0\\
+      0 & 0 & 1\\
+    \end{pmatrix}
+  \]
+  To find it's singular values we calculate:
+  \[
+    B^TB = 
+    \left(\begin{matrix}
+      13 & 5 & 0 \\
+      5 & 13 & 0 \\
+      0 & 0 & 1
+    \end{matrix}\right)
+  \]
+  This is a block matrix so we can easily find that its eigenvalues are
+  \[
+    (\lambda_1, \lambda_2, \lambda_3) = (18,8,1)
+  \]
+  Thus the singular values of $B$ are:
+  \[
+    (\sigma_1, \sigma_2, \sigma_3) = (\sqrt{18},\sqrt{8},\sqrt{1})
+  \]
+  So finally:
+  \[
+    \max\{d(Av,v) \mid v\in\R^3 \land \|v\| = 1\} = \sqrt{18}
+  \]
+  \textbf{Find a unit vector $v\in V$ that gives that maximum} \\ 
+  This is just the unit eigenvector corresponding to the eigenvalue $18$ of
+  $B^TB$. We can easily find one:
+  \[
+    \tilde{v} = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}
+  \]
+  And now normalizing it we get:
+  \[
+    v = \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}
+  \]
+\end{solution}
+
+\begin{exercise} \phantom{}
+\begin{enumerate}
+  \item[(1)] Let $A\in U_n$.
+    Prove that $|\tr(A)| = n$ if and only if $A$ is a scalar matrix.
+  \item[(2)] Let $B\in O_n$.
+    Prove that $|\tr(A)| = n$ if and only if $A$ is $\pm I$.
+\end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+  \item[(1)] We know that $A$ is unitary so it is also normal and from the spectral
+theorem for normal matrices it is diagonalizable. Since it is unitary
+we also know that all of its eigenvalues are on the unit circle which means
+that:
+\[
+  |\tr(A)| = \left|\sum_i{\lambda_i}\right| \le \sum_i{|\lambda_i|}
+  = n
+\]
+We know that the equality holds if and only if all the vectors are
+in the same direction. Thus $|\tr(A)| = n$ if and only if $A$ is a
+scalar matrix.
+  \item[(2)]
+    Since $A\in O_n$ it is also in $U_n$ which implies that $|\tr(A)| = n$ 
+    if and only if $A$ is a scalar matrix. We can see that:
+    \[
+      n = |\tr(A)| = |\tr(cI)| = |c*n| = |n||c|
+    \]
+    This implies that $|\tr(A)| = n$ if and only if $A$ is $\pm I$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $V$ be a finite dimension vector space over $\R$ and let
+  $\varphi,\phi \colon V \to \R$ be linear functionals.
+  Define:
+  \[
+    q(v) := \varphi(v) \phi(v).
+  \]
+  \begin{enumerate}
+    \item[(1)] Prove that $q(v)$ is a quadratic form on $V$.
+    \item[(2)] Show that $n_+ \le 1$ and also that $n_- \le 1$.
+    \item[(3)] Find examples for functionals that gives all $4$ options
+      $(0,0),(1,0),(0,1),(1,1)$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+\item[(1)]
+We know that:
+\[
+  f(v,u) = \varphi(v)\phi(u)
+\]
+Is a bilinear form, and since the quadratic form it induces is $q$ we get
+that $q$ is a bilinear form by definition. Usually when working with
+bilinear and quadratic forms it's convenient to find the symmetric bilinear
+form that induces $q$ and it is:
+\[
+  g(v,u) = \frac 12 \left(\varphi(v)\phi(u) + \varphi(u)\phi(v)\right)
+\]
+\item[(2)]
+Denote $\dim(V) = n$. We know that $\varphi,\phi$ are linear functionals
+and thus, 
+\begin{align*}
+  \mathrm{null} \varphi \geq n - 1 \\
+  \mathrm{null} \phi \geq n - 1
+\end{align*}
+The intuition is that we want to eventually get to a matrix that has a 
+block of $0_{n-2}$ so we can consider $K = \ker \varphi \cup \ker \phi$. 
+We know that $\dim K \geq n - 2$. Complete it with some space $W$ to $V$ 
+as such:
+\[
+  V = W \oplus K
+\]
+We can now make a basis for $V$ as the union of the basis for $W$ and the
+basis for $K$ denoted $B= B_W \cup B_K$. The representing matrix of $g$
+with this basis will be:
+\[
+  B = [g|_{W \times W}]_{B_W} \oplus 0_{n - 2}
+\]
+This tells us that $n_- + n_+ \le 2$. Suppose $n_+ = 2$ this would mean
+that $\dim W = 2$ and that for any $0 \neq w\in V - K$ that $q(w) > 0$
+but that can't be the case since $\dim \ker \phi \geq n-1$ so we can
+choose a vector that is not in $W$ such that $q(w) = 0$ in contradiction.
+Thus $n_-,n_+ \le 1$ as wanted.
+\item[(3)]
+We can choose the functionals for $(n_+,n_-)$ such that:
+\begin{align*}
+  \varphi(a,b) &= n_+a + n_-b \\
+  \phi(a,b) &= n_+a - n_-b
+\end{align*}
+\end{enumerate}
+\end{solution}
+
+%% I am here
+\begin{exercise}
+  Let $V$ be a vector space over $\C$ and $T\in\End(V)$.
+  Prove or disprove the following:
+  \begin{enumerate}
+    \item[(1)] For any $0 \le k \le \dim V$ there exists a subspace $U$
+      that is $T$-invariant of dimension $k$.
+    \item[(2)] For any $0 \le k \le \dim V$ there exists at most one subspace 
+      $U$ that is $T$-invariant of dimension $k$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+  \item[(1)]
+  We notice that the trivial subspace $\{0\}$ is $T$-invariant. Assuming
+  we have invariant subspaces of dimension $m < k \le n$ we will prove
+  an invariant subspace of size $k$ exists. Let $U$ be an invariant subspace
+  of size $k-1$. Complete $U$ to $V$ with $W$ such that:
+  \[
+    V = U \oplus W
+  \]
+  If exists $w \in W$ such that $T(w) \in U$ than if we add $w$ to $U$
+  we get an invariant subspace of dimension $k$ as wanted. Otherwise
+  we have:
+  \[
+    T(W) \subseteq W
+  \]
+  We see now that $V = U \oplus W$ is a direct decomposition of $T$. Since
+  we are working over $\C$ this means that exists at least one eigenvector
+  in $W$ which we denote $w'$. Since it is a eigenvector we have:
+  \[
+    T(\Sp\{w'\}) \subseteq \Sp\{w'\}
+  \]
+  And now if we add $w'$ to $U$ we get an invariant subspace of dimension 
+  $k$ as wanted which completes the proof.
+\item[(2)]
+  Take:
+  \[
+    V = \C^2 \quad T = \mathrm{Id}
+  \]
+  And the subspaces will be:
+  \begin{align*}
+    A_1 &= \Sp \{\begin{pmatrix} 1 \\ 0\end{pmatrix}\}  \\
+    A_2 &= \Sp \{\begin{pmatrix} 0 \\ 1\end{pmatrix}\}
+  \end{align*}
+  It is clear that:
+  \begin{align*}
+    T(A_1) \subseteq A_1 \\
+    T(A_2) \subseteq A_2 
+  \end{align*}
+  Which means we found two different $T$-invariant subspaces of dimension $1$.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $V = \C_4[x]$. Define:
+  \[
+    (T(p))(x) := p''(x^2)
+  \]
+  \begin{enumerate}
+    \item[(1)] Find the Jordan normal form of $T$ and a Jordan basis.
+    \item[(2)] Find $T^{100}(x^4+x^3+x^2+x+1)$.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+\item[(1)]
+  We see that:
+  \[
+    T(ax^4 + bx^3 + cx^2 + dx + e) =
+    12x^2 + 6bx + 2c
+  \]
+  So the representing matrix of $T$ under the standard basis is:
+  \[
+    A = [T]_E = \left(\begin{matrix}
+        12 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 \\
+        0 & 6 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 2 & 0 & 0
+        \end{matrix}\right)
+  \]
+  To find its Jordan normal form we can first find its eigenvalues.
+  We see that it is a lower triangular matrix and so its eigenvalues
+  are $\lambda_1 = 0$ with algebraic multiplicity
+  \begin{center}	
+  \begin{tabular}{ll | l}
+  $\lambda_1 = 0$ & $\lambda_2 = 12$ & \\
+  \hline
+  4 & 1 & algebraic multiplicity\\
+  2 & 1 & geometric multiplicity\\
+  \end{tabular}
+  \end{center}
+  Now to find the Jordan chains of $\lambda_1$ we get:
+  \begin{align*}
+    \ker(A - 12I) &= \ker
+    \left(\begin{matrix}
+    12 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 6 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 2 & 0 & 0
+    \end{matrix}\right) = 
+    \Sp\{
+    e_4,e_5
+    \} \\
+    \ker(A - 12I)^2 &= \ker
+    \left(\begin{matrix}
+    144 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 12 & 0 & 0 & 0
+    \end{matrix}\right) = 
+    \Sp\{
+    e_4,e_5,e_3
+    \} \\
+    \ker(A - 12I)^3 &= \ker
+    \left(\begin{matrix}
+    1728 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0
+    \end{matrix}\right) = 
+    \Sp\{
+    e_4,e_5,e_3,e_2
+    \}
+  \end{align*}
+  This means that there is at least one block of size $3$ with eigenvalue
+  $\lambda_1$. So considering the multiplicities from earlier we get that
+  the Jordan normal form of $A$ up to order is:
+  \[
+    A = J_1(12) \oplus J_3(0) \oplus J_1(0)
+  \]
+  Which means that the chain of $\lambda_1$ of length $3$ is:
+  \[
+    v_4 = \begin{pmatrix} 0 \\ 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, \quad
+    v_3 = Av_4 = \begin{pmatrix} 0 \\ 0 \\ 6 \\ 0 \\ 0 \end{pmatrix}, \quad
+    v_2 = Av_3 = \begin{pmatrix} 0 \\ 0 \\ 0 \\ 0 \\ 12 \end{pmatrix} \quad
+  \]
+  And the Jordan basis is:
+  \[
+    B_J = 
+    \left\{
+      e_1, 12e_5, 6e_3, e_2, e_4
+    \right\}
+  \]
+\item[(2)]
+  We can see that:
+  \[
+    T^{100}(x^4+x^3+x^2+x+1) = 
+    T^{100}(x^3+x^2+x+1) + 
+    T^{100}(x^4) = 
+    0 + 12^{100}x^4 = 
+    12^{100}x^4
+  \]
+  Notice that there is also an easier way to solve the earlier problem by noticing
+  that:
+  \[
+    T(x^4) = 12x^4
+  \]
+  So $x^4$ is an eigenvector with the eigenvalue $12$, and we can also see that:
+  \begin{align*}
+    &T(x^3) = 6x^2 \quad T(6x^2) = 12 \quad T(12) = 0 \\
+    &T(x) = 0
+  \end{align*}
+  Which means that $(12,6x^2,x^3), (x)$ are Jordan chains with eigenvalue $0$
+  and then we get the same Jordan normal form and the same basis.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $(V, \ip{\cdot}{\cdot})$ be an inner product space over $\R$.
+  Let $U_1$, $U_2$ be two non-trivial subspaces of $V$. Define:
+  \[
+    \angle(U_1,U_2) := 
+    \min\{\angle(u_1,u_2) \mid 
+    u_1,u_2 \neq 0 \land (u_1,u_2)\in U_1 \times U_2\}.
+  \]
+  Show that if $P_1,P_2$ are the orthogonal projections on $U_1,U_2$ then
+  the first singular value of $P_1 \circ P_2$ is $\cos(\angle (U_1,U_2))$.
+\end{exercise}
+\begin{solution}
+  First we recall that the biggest singular value of $P_2 \circ P_1$ is:
+  \[
+    \sigma_1 = \max\{\|P_2 \circ P_1 (v)\| \mid \|v\| = 1\}
+  \]
+  Let $u_1, u_2$ be the vectors where we attain the minimum for $\angle (U_1,U_2)$,
+  without loss of generality we can assume they are unit vectors. Now by calculation
+  we get:
+  \begin{align*}
+    \cos(\angle (U_1,U_2)) &= 
+    \cos(\angle (u_1,u_2)) = 
+    \cos(\angle (u_1,u_2))\|u_1\|\|u_2\| \\ &=
+    \ip{u_1}{u_2} =_{(*)}
+    \ip{u_1}{P_1(u_2)} \le_{\mathrm{CS}}
+    \|u_1\|\|P_1(u_2)\| = 
+    \|P_1(u_2)\| \\ &= 
+    \|P_1 \circ P_2 (u_2)\| \le \sigma_1
+  \end{align*}
+  The equality $(*)$ is from the fact that $u_2 = P_1(u_2) + u^\perp$ where
+  $u^\perp \in U_1^\perp$.
+\end{solution}
+
+\begin{exercise}
+  Let $(V, \ip{\cdot}{\cdot})$ be an inner product space
+  of dimension $5$ over $\R$. Let $T$ be an invertible linear operator such
+  that:
+  \[
+    T^* = 3I - 2T^{-1}
+  \]
+  and also $\tr(T)=9$.
+  Show that $T$ is diagonalizble and find its diagonal form.
+\end{exercise}
+\begin{solution}
+  First we can notice that $T$ and $T*$ commute because $T$ commutes with $I$ and
+  with $T^-1$ so $T$ is normal. From the spectral theorem it follows that it
+  has an orthonormal basis of eigenvectors such that $T$ is diagonalizble and all
+  of its eigenvalues are real. Let $v$ be an eigenvector of $T$
+  with eigenvalue $\lambda$. We know that $v$ is also an eigenvalue of $T^*$
+  and $T^{-1}$ with eigenvalues $\overline{\lambda}$ and $\lambda^{-1}$ accordingly.
+  It follows that:
+  \[
+    \overline{\lambda} = 3\lambda - 2\lambda^{-1}
+  \]
+  Solving this equation we get:
+  \begin{align*}
+    \overline{\lambda} &= 3 - 2\lambda^{-1} \\
+    \|\lambda\|^2 &= 3\lambda - 2 \\
+    0 &= \|\lambda\|^2 - 3\lambda + 2 \\
+    0 &= \lambda^2 - 3\lambda + 2, \quad \lambda\in\R \\
+    0 &= (\lambda - 1)(\lambda - 2) \\
+  \end{align*}
+  So the possible eigenvalues of $T$ are $\lambda_1 = 1$ and $\lambda_2 = 2$ and 
+  we only need find their multiplicities. Denote their multiplicities $r_1,r_2$
+  and we get:
+  \[
+    r_1 + 2r_2 = 9 \tand
+    r_1 + r_2 = \dim V = 5.
+  \]
+  The only solution in natrual numbers is $(r_1,r_2) = (1,4)$ so that the
+  diagonal form of $T$ is $\mathrm{diag(1,2,2,2,2)}$.
+\end{solution}
+
+\begin{exercise}
+  Let $A \in O(n)$.
+  \begin{enumerate}
+    \item[(1)] Prove that
+      \[
+        q_A(v) = \|v\|^2\cos(\angle(v,Av))
+      \]
+      is a quadratic form.
+    \item[(2)] Now suppose that $n=2$. For any $\theta\in[0,2\pi]$ find the
+      signature of the quadratic form $q_A$ for the rotation matrix:
+      \[
+        A = \begin{pmatrix}
+          \cos(\theta) & -\sin(\theta)\\
+          \sin(\theta) &  \cos(\theta)\\
+        \end{pmatrix}.
+      \]
+    \item[(3)] For $\theta$ values such that $q_A$ is positive definite,
+      find an orthonormal basis for the inner product that $q_A$ is its
+      squared norm.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+  \item[(1)]
+  We define the function:
+  \[
+    f(u,v) = \ip{u}{Av} = \|u\|\|Av\|\cos(\angle(u,Av))
+  \]
+  It is clear that this is a bilinear form and we have:
+  \[
+    f(v,v) = \|v\|^2\cos(\angle(v,Av))
+  \]
+  So $q_A(v)$ is indeed a quadratic form.
+
+\item[(2)]
+  If the matrix is the rotation matrix in angle $\theta$ we get that:
+  \[
+    q_A(v) = \|v\|^2\cos(\angle(v,Av)) = \|v\|^2\cos(\theta)
+  \]
+  This means that if 
+  $x\in\left[0,\frac{\pi}{2}\right) \cup \left(\frac{3\pi}{2},2\pi\right)$
+  then $q_A(v) > 0$ for all $0 \neq v \in V$ so $(n_0,n_+,n_-) = (0,2,0)$ and
+  similarly if $x \in \left(\frac{\pi}{2},\frac{3\pi}{2}\right)$ then 
+  $(n_0,n_+,n_-) = (0,0,2)$ and if 
+  $\theta \in \left\{\frac{\pi}{2},\frac{3\pi}{2}\right\}$ then 
+  $(n_0,n_+,n_-) = (2,0,0)$.
+
+\item[(3)]
+  We have seen that $q_A(v) = \cos(\theta)\|v\|^2$ so a symmetric bilinear form
+  the induces it is $g(u,v) = \cos(\theta)\|v\|\|u\|$. In 
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+  Let $T \in \End(V)$ where $V$ is a complex vector space of finite dimension.
+  Show that there is a finite amount of $T$-invariant subspaces if and only if
+  $p_T(x) = m_T(X)$.
+\end{exercise}
+
+	
+\end{document}

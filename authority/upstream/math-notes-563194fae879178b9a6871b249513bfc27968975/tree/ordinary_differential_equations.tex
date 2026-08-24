@@ -1,0 +1,206 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2025}
+\def\nterm {Winter}
+\def\nlecturer {Ram Band}
+\def\ncourse {Ordinary Differential Equations}
+
+\input{header.tex}
+
+\begin{document}
+	\maketitle
+	\newpage
+	\tableofcontents
+	\newpage
+	\section{Introduction}
+	ODE is short for Oridnary differential equation.
+  An ODE of order $n$ is defined as such
+	\[
+		F(x,y,y',\ldots,y^{(n)})=0
+	\]
+	In most cases we would rather write the equation as such:
+	\[
+		y^{(n)}=f(x,y,y',\ldots,y^{(n-1)})
+	\]
+	\subsection{Homogeneity and Linearity of ODEs}
+	A linear ODE is of the following is an ODE of the following format:
+	\[
+		F(x,y,y',\ldots,y^{(n)})=\sum_{i=0}^{i=n}{a_i(x)y^{(i)}}=b(x)
+	\]
+	$\forall i(a_i(x)\text{ is a differentiable function})$
+	\\ A linear ODE is called homogeneous if $b(x)=0$	
+	
+	\newpage
+	\section{Linear ODEs of first order and IVPs}
+	Recall the form of this type of ODE is:
+	\[
+		y'=p(x)y+q(x)
+	\]
+	Solving $y'=q(x)$ could give us infinitly many solutions because of the 
+  integration constant.
+  That's why we usually have these kind of problem coupled with an
+  initial condition - $y(x_0)=y_0$.
+  Given an ODE and an inital condition we get an IVP ir an 
+  \textbf{I}nitial \textbf{V}alue \textbf{P}roblem.
+	\subsection{Existence and Uniqueness Theorem}
+	Given an IVP
+	\begin{equation}
+    \begin{cases}
+    y'=f(x,y) \\
+    y(x_0)=y_0
+    \end{cases}
+	\end{equation}
+	Such that $f(x,y)$ and $f'_y(x,y)$ are continuous functions over $D\in\R^2$ 
+  and $(x_0,y_0)\in D$ then there exists an $\varepsilon>0$ such that there 
+  exists only one unique solution to the problem in 
+  $[x_0-\varepsilon,x_0+\varepsilon]$.
+
+	Accordingly there couldn't be two intersecting solutions to such an equation.
+
+	\subsection{General Solution to First Order Homogeneous Linear ODEs}
+	\[
+		y'+p(x)y=0
+	\]
+	\[
+		\frac{y'}{y}=-p(x) \text{ , $y\ne0$\footnote{That's the trivial solution}}
+	\]
+	\[
+		\int\frac{y'(x)}{y(x)}dx=\int-p(x)dx
+	\]
+	\[\ldots\]
+	\[
+		y(x)=k*e^{-\int p(x)dx}, \forall k\in\R
+	\]
+	\newpage
+	\subsection{General Solution to First Order Non-Homogeneous Linear ODEs}
+	After normalization we get:
+	\[
+		y' + p(x)y = q(x)
+	\]
+	Let $U$ be a any function. We'll call $U$ the \textbf{integration factor}.
+	\[
+		Uy' + Up(x)y = Uq(x)
+	\]
+	Now let's force $U'=Uq(x)$.
+  We already know how to solve these kind of problems.
+  Let's pronouce one such solution $u$.
+  Now:
+	\[
+		uy' + u'y = Uq(x)
+	\]
+	\[
+		(uy)' = z(x)
+	\]
+	\[
+		uy = \int z(x) = a(x) + C
+	\]
+	\[
+		y = \frac{a(x)}{u(x)}+\frac{C}{u(x)}
+	\]
+	*Notice that the first argument is one solution to this IVP and the second is the general solution to the according Homogeneous ODE. 
+	
+	\newpage
+	\section{More ODEs of First Order}
+	\subsection{Separable First Order ODEs}
+	A seperable first order ODE is of the next form:
+	\[
+		y'=h(x)g(y)
+	\]
+	\[
+		\frac{y'}{g(y)}=h(x)
+	\]
+	\[
+		\frac 1{g(y)} \frac{dy}{dx}=h(x)
+	\]
+	\[
+		\int{\frac {dy}{g(y)}} = \int h(x)dx
+	\]
+	\[
+		G(y(x)) = H(x) + C
+	\]
+	That's an implicit solution to the ODE. Sometimes we can write it explicitly and sometimes we can't. If there exists a scalar $y_0$ such that $g(y_0)=0$ then $y(x)=y_0$ is a solution - called the \textbf{singular solution}.
+	\subsection{Homogeneous ODEs}
+	Different then linear homogeneous ODEs. These are equations of the form:
+	$$y' = F(\frac yx)$$
+	It's called that since a homogeneous function of order $m$ is a function such that $f(tx,ty) = t^mf(x,y)$ and $F(\frac yx)$ is a homogeneous function of order 0.\\
+	Define $v(x) = \frac {y(x)}x \Rightarrow y'(x) = v'(x)x + v(x)$ plugging that in we get
+	\[
+		v'x + v = F(\frac yx)
+	\]
+	\[	
+		\frac {v'}{F(v)-v} = \frac 1x
+	\]
+	\[
+		\int\frac {dv}{F(v)-v} =\int\frac 1x dx
+	\]
+	\[
+		G(v(x)) = ln|x|+C
+	\]
+	This solution is implicit, we must plug $v(x) = \frac {y(x)}x$ back in. Notice that if there exists a $v_0$ such that $F(v_0)=v_0$ then $v(x)=v_0$ is a singular solution to the separable equation. Thus $y(x)=v_0x$ is a singular solution to the ODE.
+	\newpage
+	\subsection{Switching $x$ and $y$}
+	Consider the following ODE:
+	\[
+	y'=\frac y{x+y^3}
+	\]
+	That's not an ODE we have encountered so far. In analysis we talked about inverse functions and we saw that $\frac{dy}{dx} = \frac{1}{\frac{dx}{dy}}$ and so we can instead solve
+	\[
+		x' = \frac{x+y^3}{y}
+	\]
+as we would for a linear nnon-homogeneous ODE of first order.
+\newpage
+\section{Exact ODEs}
+Looking at equations of this form:
+\[
+	P(x,y)+Q(x,y)y'=0
+\]
+Or, using Leibniz notation
+\[
+	(x,y)dx+Q(x,y) = 0
+\]
+We'll call the equation \textbf{exact} if there exists $F$ such that
+\begin{equation*}
+    \begin{cases}
+    F_x'=P(x,y) \\
+    F_y'=Q(x,y)
+    \end{cases}
+\end{equation*}
+And its solution is given implicitly with the equation $F(x,y)=c$. If we derive both sides we get
+\[
+	F_x'(x)'+F_y'(y(x))'=0
+\]
+\[
+	P(x)+Q(x)y'=0
+\]
+\emph{Theorem} - Let $Q(x,y),P(x,y)$ be partially continuously differentiable functions on a simple connected domain $D$.
+$$\exists F: F_x'=P\land F_y'=Q \iff P_y'=Q_x'$$
+\subsection{Almost exact ODEs}
+If $P_y'\ne P_x'$ we can mulitply everything by an integration factor $u(x,y)$
+\[
+	u(x,y)P(x,y)dx+u(x,y)Q(x,y) = 0
+\]
+And we want
+\[
+	u_y'P+uP_y' = u_x'+uQ_x'
+\]
+\[
+	u_y'P+uP_y' - u_x'Q - uQ_x' = 0
+\]
+Which is a Partially Differentiable Equation. We can solve these under certain circumstances. If $u=u(x) \Rightarrow u(P_y' - Q_x') = u_x'Q \Rightarrow$
+\[
+	\frac{u_x'}{u}=\frac{P_y'-Q_x'}{Q}
+\]
+So the left fraction is dependent on $x$ alone. A similar fraction can be generated for $y$.
+\newpage
+\section{Geometrical Aspects of ODEs}
+Let $f(x,y)$ be the function that gives the slope of a linear function that intersects with $(0,0),(x,y)$. Now considering the ODE $y'=f(x,y)$ and recalling that a deravative of a function gives us the slope near the point of derivation we can define a graph such that each point has a vector pointing at the direction of the slope given by $y'$. That graph is known as This ODE's directional field.
+\\\\
+\textbf{Isoclines} are defined as the points that solve $f(x,y)=C$\\
+\textbf{Nullclines} are defined as the points that solve $f(x,y)=0$
+\\\\
+\emph{Definition} - $y=\alpha(x)$ is called a 
+\\
+\emph{Theorem} -  Let
+
+
+\end{document}

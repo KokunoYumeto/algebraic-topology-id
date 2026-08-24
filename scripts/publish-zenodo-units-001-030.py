@@ -486,27 +486,24 @@ def publish_main() -> None:
 
     deposition_id = transaction.get("deposition_id")
     draft = None
-    if (
-        deposition_id is None
-        and transaction_preexisted
-        and transaction.get("state") == "newversion_request_pending"
-    ):
+    if deposition_id is None and transaction_preexisted:
+        if transaction.get("state") != "newversion_request_pending":
+            raise RuntimeError(
+                "existing Zenodo transaction has no persisted deposition_id "
+                "and is not a pending new-version intent"
+            )
         latest_draft_url = parent.get("links", {}).get("latest_draft")
         if latest_draft_url:
             candidate = base.api_request(session, "GET", latest_draft_url).json()
             candidate_id = int(candidate.get("id", -1))
             if candidate_id != latest_id and not candidate.get("submitted"):
                 assert_draft_lineage(candidate, candidate_id)
-                intent_time = parse_utc(transaction["intent_created_at"])
-                candidate_time = parse_utc(str(candidate.get("created", "")))
-                if not (
-                    intent_time - timedelta(minutes=2)
-                    <= candidate_time
-                    <= intent_time + timedelta(minutes=10)
-                ):
-                    raise RuntimeError("unpublished draft is outside this intent window")
-                deposition_id = candidate_id
-                draft = candidate
+                raise RuntimeError(
+                    "pending new-version intent has no persisted deposition_id, "
+                    "but an unpublished same-concept draft exists; refusing to "
+                    "adopt or delete it; reconcile the transaction and draft "
+                    "explicitly"
+                )
     if deposition_id is None:
         if transaction_preexisted:
             intent_age = datetime.now(timezone.utc) - parse_utc(

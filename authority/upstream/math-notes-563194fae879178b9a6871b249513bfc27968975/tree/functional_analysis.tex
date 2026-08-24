@@ -1,0 +1,739 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2026}
+\def\nterm {Winter}
+\def\nlecturer {Liran Rotem}
+\def\ncourse {Functional Analysis}
+
+\input{header.tex}
+
+\begin{document}
+\maketitle
+
+% Insert cool image here
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\begin{definition}[Normed space]
+  Let $V$ be a vector space over a field $\mathbb F$ (usually $\R$ or $\C$).
+  A norm $\norm{\cdot} \colon V \to \R$ is a function that satisfies
+  the following properties:
+  \begin{enumerate}
+    \item[(1)] $\norm{x} \geq 0$ and $\norm{x} = 0$ if and only if $x = 0$.
+    \item[(2)] $\norm{\lambda x} = \abs{\lambda} \cdot \norm{x}$
+      for every $\lambda \in \mathbb F$ and $x \in V$.
+    \item[(3)] $\norm{x + y} \le \norm{x} + \norm{y}$ for all $x,y \in V$.
+  \end{enumerate}
+  The norm $\norm{\cdot}$ induces a metric $d(x,y) := \norm{x - y}$ on $V$.
+\end{definition}
+
+\begin{definition}[Banach space]
+  If $(V,d)$ is a complete normed space,
+  we say that $(V,\norm{\cdot})$ is a Banach space.
+\end{definition}
+
+\begin{example}[Hilbert space]
+  Every Hilbert space is a Banach space where the norm is induced by
+  an inner product.
+\end{example}
+
+\begin{example}[$\ell_p$ spaces]
+  Fix $1 \le p < \infty$ and a natural number $n \geq 1$.
+  The space $\ell_p^n$ is the space $\mathbb F^n$ with the $p$-norm:
+  \[
+    \norm{x}_p :=
+    \norm{(x_1,\dots,x_n)}_p =
+    \del{\sum_{i=1}^{n} \abs{x_i}^p}^{1/p}.
+  \]
+  Similarly, the space $\ell^p$ is defined by:
+  \[
+    \ell_p :=
+    \set{(x_n)_{n=1}^{\infty} \,\middle\vert\, \sum_{i=1}^{\infty} \abs{x_i}^p < \infty},
+  \]
+  with the norm:
+  \[
+    \norm{x}_p := \del{\sum_{i=1}^{\infty} \abs{x_i}^p}^{1/p}.
+  \]
+  Finally, we define the space:
+  \[
+    \ell_{\infty} :=
+    \set{(x_n)_{n=1}^{\infty} \,\middle\vert\, \sup_{n} \abs{x_n} < \infty},
+  \]
+  with the norm $\norm{x}_{\infty} := \sup_{n} \abs{x_n}$.
+\end{example}
+
+\begin{remark}
+  The space $\ell^2$ is a Hilbert space,
+  where the norm is induced by the inner product
+  $\ip{x}{y} := \sum_{n=1}^{\infty} x_n \overline{y_n}$.
+  This is not true in general for $\ell_p$ spaces.
+\end{remark}
+
+\begin{remark}
+  For all $1 \le p < \infty$ the space $\ell_p$ is seperable,
+  however $\ell_{\infty}$ is a ``very big'' space,
+  and it is not seperable.
+\end{remark}
+
+\begin{example}[$C$ and $C_0$]
+  Define:
+  \[
+    C :=
+    \set{(x_n)_{n=1}^{\infty} \,\middle\vert\, \lim_{n \to \infty} x_n \text{ exists}},
+  \]
+  with the norm $\norm{x} = \sup_{n} \abs{x_n}$.
+  The space $C$ is a subspace of $\ell_{\infty}$,
+  and in particular, it is seperable.
+  
+  Next define:
+  \[
+    C_0 :=
+    \set{(x_n)_{n=1}^{\infty} \,\middle\vert\, \lim_{n \to \infty} x_n = 0}
+    \subseteq C \subseteq \ell_{\infty}.
+  \]
+\end{example}
+
+\begin{remark}
+  A subset of a Banach space is a Banach subspace if and only if
+  it is closed.
+\end{remark}
+
+\begin{example}[The space $C(X)$]
+  Let $X$ be a compact topological space.
+  We define the space:
+  \[
+    C(X) :=
+    \set{f \colon X \to \mathbb F \mid f \text{ is continuous}},
+  \]
+  and the norm is $\norm{f} := \norm{f}_{\infty} = \max_{x \in X} \abs{f(x)}$.
+\end{example}
+
+\begin{question}
+  What does it mean that $f_n \taking{n \to \infty} f$ in
+  the Banach space $C(X)$?
+\end{question}
+\begin{answer}
+  It means that $\norm{f_n - f} \taking{n \to \infty} 0$,
+  or similarly $\max\abs{f_n - f} \taking{n \to \infty} 0$,
+  which is equivalent to the condition $f_n \taking{n \to \infty} f$
+  uniformly.
+\end{answer}
+
+\begin{example}[Nonexample of a Banach space]
+  Define the vector space:
+  \[
+    C_C(\R^d) :=
+    \set{f \colon \R^d \to \R \mid f \text{is cont. and compactly supported}},
+  \]
+  and consider the norm $\norm{f} := \max\abs{f}$.
+  This is a normed space that is \textit{not} complete,
+  and therefore this is not a Banach space.
+
+  For example, suppose that $d = 1$ and take $g(x) = e^{-x^2}$.
+  % add graph?
+  Define the function sequence $\set{f_n}_{n=1}^{\infty}$
+  by:
+  \[
+    f_{n}(x) :=
+    \begin{cases}
+      e^{-x^2} &x \in [-n,n] \\
+      0 &x \notin (-n-1,n+1) \\
+      \text{linear} &\text{otherwise}
+    \end{cases}.
+  \]
+  Clearly $\set{f_n}_{n=1}^{\infty} \subseteq C_C(\R)$,
+  and $\norm{f_n - g}_{\infty} \taking{n \to \infty} 0$,
+  so since it converges, it is a Cauchy sequence,
+  however, the limit $g$ is not in $C_C(\R)$,
+  which implies that $C_C(\R)$ is not a Banach space.
+\end{example}
+
+\begin{remark}
+  Remember that every noncomplete metric space is dense in some other
+  space and can be completed.
+  It turns out that the completion of $C_C(\R^d)$
+  is the space
+  \[
+    C_0(\R^d) :=
+    \set{f \colon \R^d \to \R \,\middle\vert\, f \text{ is cont.} \stand
+      \lim_{\norm{x} \to \infty} f(x) = 0},
+  \]
+  with the norm $\norm{f} := \max\abs{f}$.
+\end{remark}
+
+% \begin{remark}[A weird sequence]
+%   Consider the space of functions %\frac{1}{x^{1/n}}
+% \end{remark}
+
+\begin{definition}[$\L^p$ spaces]
+  \label{def:Lp-spaces}
+  Fix a measure space $(X,\mathcal F,\mu)$
+  and a constant $1 \le p < \infty$.
+  Define:
+  \[
+    \L^p(X,\mathcal F,\mu) :=
+    \set{f \colon X \to X \,\middle\vert\, f \text{ measurable} \stand
+      \del{\int_{X} \abs{f}^p}^{1/p} < \infty} / \sim
+  \]
+  with the norm $\norm{f}_{p} := \del{\int_{X} \abs{f}^p}^{1/p}$,
+  where functions are identified by $f \sim g$ if and only if
+  $f =_{\text{a.e.}} g$ (equal almost everywhere).
+\end{definition}
+\begin{remark}
+  Without the equivalence reltaion in \Cref{def:Lp-spaces}
+  we could have functions which are not the zero function
+  with norm $0$.
+\end{remark}
+
+\begin{remark}
+  If $X = \N$ and the measure is the counting measure $\mu(A) = |A|$,
+  then $\L^p(X,\mu)$ is the previously defined $\ell_p$ space.
+\end{remark}
+
+\begin{question}
+  We can convince ourself that $\L^p$ spaces are normed spaces,
+  but why are they complete?
+\end{question}
+
+\begin{exercise}
+  A normed space is complete if and only if every absolutely converging
+  series converges conditionally.
+\end{exercise}
+
+\begin{theorem}
+  The space $\L^p(X,\mu)$ is complete.
+\end{theorem}
+\begin{proof}
+  Fix $\set{f_n}_{n=1}^{\infty} \subseteq \L^p(\mu)$ such that
+  $\sum_{n=1}^{\infty} \norm{f_n} < \infty$.
+
+  First assume that $\set{f_n}_{n=1}^{\infty}$
+  is a sequence of nonnegative functions.
+  Define the function $g(x) := \sum_{n=1}^{\infty} f_n(x)$,
+  and the sequence $g_N(x) := \sum_{n=1}^{\infty} f_n(x)$.
+  Note that
+  \[
+    \norm{g_N}_{\L^p} \le
+    \sum_{n=1}^{N} \norm{f_n} \le
+    \underbrace{\sum_{n=1}^{\infty} \norm{f_n}}_{:=\, S} < \infty.
+  \]
+  Note that $g_N \nearrow g$ pointwise almost everywhere.
+  Hence, by MCT we get that
+  \[
+    \int g^p \dmu =
+    \lim_{n \to \infty} \int g_n^p \dmu =
+    \lim_{n \to \infty} \norm{g_n}_p^p \le
+    S^p < \infty.
+  \]
+  Therefore $g \in \L^p(\mu)$ and in particular $g < \infty$
+  almost everywhere.
+  Now check using MCT/DCT that $\norm{g_N - g}_p \taking{N \to \infty} 0$.
+
+  For a general $f_n$ we can decompse it to its positive and negative
+  parts:
+  \[
+    f_n = \alpha_N + i \beta_n =
+    \del{\alpha_n^+ - \alpha_n^-} + i(\beta_n^+ + \beta_n^-),
+  \]
+  we take $\abs{\alpha_n^{\pm}},\abs{\alpha_n^{\pm}} \le \abs{f_n}$,
+  so they also satisfy that they are nonpositive/nonnegative
+  and satisfy
+  \[
+    \sum_{n=1}^{\infty} \abs{\alpha_n^{\pm}} < \infty
+    \tand
+    \sum_{n=1}^{\infty} \abs{\beta_n^{\pm}} < \infty,
+  \]
+  so $\sum_{n=1}^{\infty} f_n$ is a sum of four convergent sequences in
+  and thus converges (in $\L^p$).
+\end{proof}
+
+\begin{definition}[The essential supremum]
+  Let $(X,\mathcal F,\mu)$ be a measure space,
+  and let $g$ be a measurable function.
+  We define:
+  \[
+    \esssup g := \inf \set{m \,\middle\vert\, \mu\del{\set{x \mid g(x) > m} = 0}.}
+  \]
+\end{definition}
+
+\begin{definition}[$\L^{\infty}$]
+  We define the set $\L^{\infty}$ to be the space:
+  \[
+    \L^{\infty}(X,\mathcal F,\mu) =
+    \set{f \colon X \to \mathbb F \mid
+      f\text{ measurable and } \esssup|f| < \infty},
+  \]
+  with the norm $\norm{f}_{\infty} = \esssup |f|$.
+\end{definition}
+
+\begin{exercise}
+  Let $f \in \L^{p} \cap \L^{\infty}$ for some $1 \le p < \infty$.
+  Then $\norm{f}_{\infty} = \lim_{p \to \infty} \norm{f}_p$.
+\end{exercise}
+
+\subsection{Linear operators}
+
+\begin{definition}
+  Let $X,Y$ be normed spaces over a field $\mathbb F$.
+  A linear map $T \colon X \to Y$ is called bounded
+  if
+  \[
+    \norm{T} =
+    \sup_{0 \neq x \in X} \frac{\norm{Tx}_Y}{\norm{x}_X} < \infty.
+  \]
+\end{definition}
+\begin{remark}
+  We denote the space of bounded operators by $B(X,Y)$.
+\end{remark}
+\begin{remark}
+  Recall that the following conditions
+  for are equivalent for a linear operator $T$:
+  \begin{enumerate}
+    \item[(1)] $T$ is bounded.
+    \item[(2)] $T$ is continuous.
+    \item[(3)] $T$ is continuous at a point.
+    \item[(4)] $T$ is uniformly continuous.
+    \item[(5)] $T$ is Lipschitz continuous.
+  \end{enumerate}
+\end{remark}
+
+\begin{example}[Linear noncontinuous operator]
+  Let $\set{v_i}_{i \in I \subset \R}$ be a noncountable basis of $\ell_2$
+  (in the sense of linear algebra), which exists by Zorn's lemma.
+  We can define $T \colon \ell_2 \to \ell_2$ be the linear map
+  $T(v_i) = |i|^{1000} \cdot v_i$.
+\end{example}
+
+\begin{proposition}
+  Let $Y$ be a Banach space.
+  Then $B(X,Y)$ is a Banach space.
+\end{proposition}
+
+\begin{definition}[Dual space]
+  Let $X$ be a Banach space.
+  We define the dual space of $X$ by:
+  \[
+    X^* := B(X,\mathbb F),
+  \]
+  which is Banach from the previous theorem.
+\end{definition}
+
+\begin{theorem}[Riesz's representation theorem]
+  Let $H$ be a Hilbert space.
+  Then every $f \in H^*$ is of the form $f_y(x) = \ip{x}{y}$
+  for some $y \in H$ and $\norm{y}_{H} = \norm{f_y}_{H^*}$.
+\end{theorem}
+
+\begin{remark}
+  We have that $H^* \cong H$ by the map $y \mapsto f_y$.
+\end{remark}
+% over R over C subtlety
+
+\begin{corollary}[Radom--Nikodym theorem]
+  Let $\mu,\nu$ be (finite) measures on $(X,\mathcal F)$.
+  Suppose that $\mu(A) = 0$ implies $\nu(A) = 0$.
+  Then there exists $g \in \L^1(\mu)$ such that $g \geq 0$
+  and for every $A \in \mathcal F$ we have $\nu(A) = \int_{A} g \dmu$.
+\end{corollary}
+\begin{proof}
+  Let $H = \L^2(\mu + \nu)$.
+  Define the map $l \colon H \to \R$ by $l(f) = \int_X f \dmu$.
+
+  We see that $l$ is bounded by the Cauchy--Schwartz inequality:
+  \begin{align*}
+    \abs{l(f)} &\le
+    \int_X 1 \cdot |f| \dmu \le
+    \sqrt{\int_X 1^2 \dmu \cdot \int_X |f|^2 \dmu} \le
+    \sqrt{\mu(X)} \sqrt{\int |f|^2 \dif(\mu + \nu)} \\ &=
+    \sqrt{\mu(Z)} \norm{f}_{\L^2(\mu + \nu)}.
+  \end{align*}
+  By Riesz's theorem there exists $h \in H$ such that
+  for all $f \in H$ we have:
+  \begin{align*}
+    \int_X f \dmu &=
+    l(f) =
+    \ip{f}{h} =
+    \int_X f h \dif(\mu + \nu) =
+    \int_X f (1 - h) \dmu \\ &= \int_X f h \dnu.
+  \end{align*}
+  Take $A = \set{x \mid h(x) \le 0}$,
+  and $f = \ind_A \in H$.
+  We know that
+  \[
+    \mu(A) =
+    \int_A \dmu =
+    \int_A (1 - h) \dmu =
+    \int_A h \dnu 
+  \]
+\end{proof}
+
+\begin{remark}
+  Note that the inner product is simply:
+  \begin{align*}
+    \ip{f}{g} = \int_X f \overline g \dif(\mu + \nu) =
+    \int_X f \overline g \dmu + \int_X f \overline g \dnu,
+  \end{align*}
+  and $\norm{f}_{h^2} = \sqrt{\ip{f}{f}}$.
+\end{remark}
+
+\begin{theorem}
+  Fix $1 \le p < \infty$.
+  We have that $(\ell_p)^* = \ell_q$ where $\frac{1}{p} + \frac{1}{q} = 1$.
+  Additionally, every $f \in (\ell_p)^*$ is of the form:
+  \[
+    f_c\del{(a_n)_{n=1}^{\infty}} =
+    \sum_{n=1}^{\infty} a_n c_n
+  \]
+  for some sequence $c = (c_n)_{n=1}^{\infty} \in \ell_q$.
+  Moreover, $\norm{f_c}_{(\ell_p)^*} = \norm{c}_{\ell_q}$.
+\end{theorem}
+% dual of l_1 is l_infty but not the other way around
+\begin{proof}
+  Assume that $1 < p < \infty$.
+  For all $c \in \ell_q$ and $a \in \ell_p$ we have
+  \[
+    \abs{f_c(a)} =
+    \abs{\sum_{n=1}^{\infty} a_n c_n} \le
+    \sum_{n=1}^{\infty} |a_n| |c_n| \le_{\text{H\"older}}
+    \del{\sum_{n=1}^{\infty} |a_n|^{p}}^{1/p}
+    \del{\sum_{n=1}^{\infty} |c_n|^{q}}^{1/q} \le
+    \norm{c}_{\ell_q} \norm{a}_{\ell_p},
+  \]
+  so $f_c$ is well-defined, bounded,
+  and $\norm{f_c}_{(\ell_p)^*} \le \norm{c}_{\ell_q}$.
+
+  In order to show equality
+\end{proof}
+
+
+%%%%%% lecture 3
+
+\begin{example}
+  Let $X$ be a compact Hausdorff topological space (for example $X = [0,1]$).
+  Consider the dual space $C(X)^*$.
+
+  Given a finite Borel measure $\mu$ on $X$,
+  we can define the linear operator:
+  \[
+    \Phi_{\mu}(f) = \int f \dmu \in C(X)^*.
+  \]
+  Since we have
+  \[
+    \abs{\Phi_{\mu}(f)} =
+    \int |f| \dmu \le
+    \mu(X) \cdot \norm{f}_{\infty},
+  \]
+  we get that $\norm{\Phi_{\mu}}_{C(X)^*} \le \mu(X)$ so it is a bounded
+  linear functional.
+  Actually, there is equality for example if $f \equiv 1$.
+  % why equality
+\end{example}
+
+\begin{definition}[Complex measure]
+  A complex measure on a measurable space $(X,\mathcal F)$ is a function
+  $\mu \colon \mathcal F \to \C$ such that
+  for all $\set{A_n}_{n=1}^{\infty} \subseteq \mathcal F$ that are pariwise
+  disjoint we have
+  $\mu(\bigcup_{n=1}^{\infty} A_n) = \sum_{n=1}^{\infty} \mu(A_n)$.
+\end{definition}
+
+\begin{remark}[Hahn decomposition theorem]
+  Every complex measure can be written as:
+  \[
+    \mu = (\mu_1 - \mu_2) + i(\mu_3 - \mu_4),
+  \]
+  where $\mu_1,\mu_2,\mu_3,\mu_4$ are positive measures,
+  and then we define:
+  \[
+    \int f \dmu =
+    \int f \dmu_1 -
+    \int f \dmu_2 +
+    \int f \dmu_3 -
+    \int f \dmu_4.
+  \]
+\end{remark}
+
+\begin{theorem}[Riesz--Markov--Kakutani representation theorem]
+  We have that
+  \[
+    C(X)^* = M(X) = \set{\text{complex Borel measures on $X$}}.
+  \]
+  Moreover, we have that:
+  \[
+    \norm{\Phi_{\mu}}_{C(X)^*} =
+    \norm{\mu}_{M(X)} = TV(\mu) = \abs{\mu} =
+    \sup\set{\sum_{i=1}^{n} \abs{\mu(A_i)} \mid X = \bigsqcup_{i=1}^{n} A_i}.
+  \]
+\end{theorem}
+
+\begin{example}
+  In a finite (or $\sigma$-finite) meausre space $(X,\mathcal F, \mu)$,
+  every $\Phi \in \L^p(X)^*$ is of the form:
+  \[
+    \Phi_g(f) =
+    \int_X f g \dmu
+  \]
+  for $g \in \L^q(X)$
+  and $\norm{\Phi}_{\L^p(X)^*} = \norm{g}_{\L^q}$.
+
+  Proof sketch:
+  By H\"older's inequality $\Phi_g \in (\L^p)^*$
+  and $\norm{\Phi_g} \le \norm{g}_{\L^q}$,
+  and like in the case of $\ell_p$, this is actually an equality.
+
+  In order to show that $\Phi_g$ are all the bounded linear functionals
+  use Radon--Nikodym (proof omitted in class).
+
+  Equivalently, there is an isometry $\del{\L^p(X)}^* \cong \L^q(X)$
+  for $\frac{1}{p} + \frac{1}{q} = 1$.
+\end{example}
+
+\begin{definition}[Isometry]
+  A bounded linear functional $T \in \L(X,Y)$ is called an isometry,
+  if $T$ is a bijection and
+  \[
+    \norm{Tx}_Y = \norm{x}_X
+  \]
+  and we write $X \cong Y$.
+  % fix B(X) to \L(X)
+\end{definition}
+
+\begin{definition}[Isomorphism]
+  A map $T \in \L(X,Y)$ is an isomorphism if $T$ is a bijection and
+  $T^{-1} \in \L(Y,X)$.
+  Equivalently, for every $T \in \L(X,Y)$ we have
+  \[
+    c\norm{x} \le \norm{Tx} \le C\norm{x},
+  \]
+  for some constants $c$ and $C$.
+\end{definition}
+
+\begin{example}
+  Let $X = \ell_2$ be with the usual norm,
+  and let $Y = \ell_2$ with the norm
+  \[
+    \norm{(a_n)}_{Y} = \norm{(a_n)}_{\ell_2} + \abs{a_1}.
+  \]
+  We get that $X$ and $Y$ are isomorphic.
+  It follows that $Y$ is complete (since $X$ is complete).
+\end{example}
+
+\section{The Hahn--Banach theorem}
+
+\begin{remark}
+  We claimed that $\ell_1 \subsetneq (\ell_{\infty})^*$.
+  How can we find all the elements in $(\ell_{\infty})^*$
+  that are not in $\ell_1$?
+\end{remark}
+
+\begin{definition}[Sublinear function]
+  Let $X$ be a vector space over $\R$.
+  A function $p \colon X \to \R$ is said to be sublinear
+  if $p(x + y) \le p(x) + p(y)$
+  and $p(\lambda x) = \lambda p(x)$ for every $x,y \in X$
+  and $\lambda \geq 0$.
+\end{definition}
+\begin{remark}
+  Althought sublinear functions look like norms,
+  they are certainly very different.
+  For example, some sublinear function do not satisfy $p(x) = p(-x)$.
+\end{remark}
+
+\begin{theorem}[The Hahn--Banach theorem, version 1]
+  Let $X$ be a vector space over $\R$,
+  let $p \colon X \to \R$ be a sublinear function,
+  let $Y \subseteq X$ be a subspace,
+  and let $l \colon Y \to \R$ be a linear function.
+  If $l(y) \le p(y)$ for all $y \in Y$,
+  then there exists a linear extension $\tilde l \colon X \to \R$
+  such that $\tilde l\vert_Y = \ell$ and $\tilde l(x) \le p(x)$ for all $x \in X$.
+\end{theorem}
+\begin{proof}
+  Assume that $X = \vspan\set{Y,x_0}$ for some $x_0 \in X$,
+  so that every $x \in X$ can be written as $x = y + \lambda x_0$
+  for some $y \in Y$ and $\lambda \in \R$.
+
+  Note that
+  \[
+    \tilde l(x) =
+    \tilde l(y + \lambda x_0) =
+    \tilde l(y) + \lambda \tilde l(x_0) =
+    \ell(y) + \lambda \tilde l(x_0),
+  \]
+  so we only get to choose $a = \tilde l(x_0)$.
+  Can we choose $a$ such that $l(y) + \lambda a = \tilde l(y + \lambda x_0)
+  \le p(y + \lambda x_0)$.
+
+  For $\lambda = 0$ any value of $a$ is fine,
+  for $\lambda > 0$ we can solve for $a$ from
+  $l(y) + \lambda a = \tilde l(y + \lambda x_0) \le p(y + \lambda x_0)$
+  and get that for every $y \in Y$ we need
+  $a \le \frac{p(y + \lambda x_0) - l(y)}{\lambda}$,
+  and similarly we can find restriction for when $\lambda < 0$,
+  and conclude that the restrictions are:
+  \[
+    \frac{l(z) - p(z + \lambda x_0)}{\lambda}
+    \le a \le
+    \frac{p(y + \lambda x_0) - l(y)}{\lambda},
+  \]
+  or equivalently, we need to show that exists $a$ such that
+  \[
+    \sup_{\mu > 0,z \in Y}\set{l(z/\mu) - p(z/\mu - x_0)}
+    \le a \le
+    \sup_{\lambda > 0,y \in Y}\set{p(y/\lambda + x_0) - l(y/\lambda)}
+  \]
+  % picture
+
+  In the general case, if we need the extend $Y$ to $X$ by a finite
+  amount of variables, we repeat this process.
+  In the infinte case, we need to use Zorn's lemma.
+  Consider:
+  \[
+    \mathcal C = \set{(Z,\tilde l) \mid \tilde l\vert_Y = \ell \stand \tilde l \le p \text{ on }Z},
+  \]
+  for $Z \subseteq Y \subseteq X$.
+  We can order $\mathcal C$ be saying that
+  $(Z_1,\tilde l_1) \le (Z_2,\tilde l_2)$ if $Z_1 \subseteq Z_2$
+  and $\tilde l_2\vert_{Z_1} = \tilde l_1$.
+
+  Take $\set{(Z_i,\tilde l_i)}_{i \in I}$ to be a chain in $\mathcal C$.
+  Take $Z = \bigcup_{i \in I} Z_i$ and $l$ be the ``obvious''
+  extension (every $z \in Z$ belongs to some $Z_i$,
+  take $l(z) = \tilde l_i(z)$, since they agree by the chain containment).
+  Thus, $(Z,l)$ is an upper bound fo the chain.
+  By Zorn's lemma $C$ has a maximal element, $(Z, \ell)$.
+  By step $1$, $Z = X$.
+\end{proof}
+
+\begin{theorem}[The Hahn--Banach theorem, version 2]
+  \label{thm:hahn-banach-ver-two}
+  Let $X$ be a normed space over (for example a Banahc space),
+  let $Y \subseteq X$ be a subspace,
+  and let $l \in Y^*$ be a continuous functional.
+  Then there exists some linear functional
+  $\tilde l \in X^*$ such that $\tilde l \vert_{Y} = l$
+  and $\|\tilde l\|_{X^*} = \norm{l}_{Y^*}$.
+\end{theorem}
+
+\begin{example}
+  Let $\ell_{\infty}$ and $Y = C$.
+  Take $f \in Y*$ to be the functional defined by
+  \[
+    f\del{(a_n)_{n=1}^{\infty}} = \lim_{n \to \infty} a_n.
+  \]
+  Note that
+  \begin{align*}
+    \abs{f\del{(a_n)}} =
+    \abs{\lim_{n \to \infty} a_n} =
+    \lim_{n \to \infty} |a_n| \le \sup_{n} \abs{a_n} = \norm{a}_Y,
+  \end{align*}
+  it follows that $\norm{f}_{Y^*} \le 1$.
+  However, we notice that for $a = (1,1,1,\dots)$ we see
+  $\norm{f}_{Y^*} = 1$.
+
+  By the Hahn--Banach theorem,
+  we can extend $f$ to $\tilde f \in (\ell_{\infty})^*$
+  such that $\|\tilde f\|_{(\ell_{\infty})^*}$.
+
+  Note that $\tilde f$ is not of the form:
+  \[
+    \tilde f \del{(a_n)_{n=1}^{\infty}} =
+    \sum_{n=1}^{\infty} a_n b_n \quad (b_n) \in \ell_1,
+  \]
+  since otherwise, $b_n = \tilde f(e_n) = f(e_n) = 0$.
+  Thus $b_n = 0$ for all $n$ and then $\tilde f \equiv 0$ in contradiction
+  to $\norm{f}_{Y^*} = 1$.
+\end{example}
+
+\begin{proofof}{\Cref{thm:hahn-banach-ver-two}}
+  Choose $p(x) = \norm{f}_{Y^*} \norm{x}_X$.
+  Clearly, $p(x)$ is sublinear.
+  On $Y$, we have $l(y) \le p(y) = \norm{l}_{Y^*} \norm{y}$.
+  By version 1 of the Hahn--Banach theorem,
+  there exists an extension $\tilde l$
+  of $l$ such that $\tilde l(x) \le p(x) = \norm{\ell}_{Y^*} \norm{x}$
+  for all $x \in X$.
+  But then also
+  \[
+    -\tilde l(x) = \tilde l(-x) \le p(-x) = \norm{l}_{Y^*} \norm{x},
+  \]
+  and thus
+  \[
+    \abs{\tilde l(x)} \le
+    \norm{l}_{Y^*} \norm{x} \implies
+    \norm{\tilde l}_{X^*} \le \norm{l}_{Y^*}.
+  \]
+  The inequality $\|\tilde l\|_{X^*} \geq \norm{l}_{Y^*}$ is true for all
+  extensions.
+  This completes the proof for real normed spaces.
+
+  For the case of complex normed spaces, we decompose $l$ into its
+  real and complex parts, and use some algebra and the proof of the real
+  case in order to complete the proof.
+\end{proofof}
+
+\begin{corollary}
+  \label{cor:hahn-banach-one}
+  Let $X$ be a Banach space.
+  Then for every $x \in X$ there exists $f \in X^*$ such that
+  $\norm{f} = 1$ and $f(x) = \norm{x}$.
+\end{corollary}
+\begin{proof}
+  Let $Y = \vspan{x} \subseteq X$,
+  and define $f \colon Y \to \mathbb F$ by $f(\lambda x) = \lambda \norm{x}$.
+
+  We have that $f$ is linear and $\norm{f} = 1$ and
+  \[
+    \abs{f(\lambda x)} =
+    \abs{\lambda} \norm{x} =
+    \norm{\lambda x}.
+  \]
+  Extend $f$ by the Hahn--Banach theorem to conclude the proof.
+\end{proof}
+
+\begin{corollary}
+  For all $x \neq y \in X$ there exists $f \in X^*$ such that
+  $f(x) \neq f(y)$.
+\end{corollary}
+\begin{proof}
+  By \Cref{cor:hahn-banach-one}
+  take $f$ with $\norm{f} = 1$
+  and then:
+  \[
+    f(x) - f(y) =
+    f(x - y) =
+    \norm{x - y} \neq = 0.
+  \]
+  % go over
+\end{proof}
+
+\begin{corollary}
+  Let $X$ be a normed space,
+  let $E \subseteq X$ be a subspace,
+  and let $x_0 \in X$ be a point such that $d(x_0,E) = d > 0$.
+  Then there exists $f \in X^*$ such that $\norm{f} = 1$,
+  and $f(E) = 0$, and $f(x_0) = d$.
+\end{corollary}
+\begin{proof}
+  Take $Y = \vspan\set{E,x_0}$.
+  Define $f \in Y^*$ by $f(e + \lambda x_0) = \lambda d$.
+
+  For all $e \in E$ and $\lambda \in \mathbb F$
+  \[
+    \norm{e + \lambda x_0} =
+    \norm{\lambda\del{x_0 - (- \frac{e}{\lambda})}} =
+    \abs{\lambda} \cdot \norm{x_0 - \underline{(- \frac{e}{\lambda})}_{\in E}} \geq
+    \abs{\lambda} d =
+    \abs{f(e + \lambda x_0)},
+  \]
+  it follows that $\norm{f}_{Y^*} \le 1$ (in fact, there is an equality).
+  We now extend by Hahn--Banach to complete the proof.
+\end{proof}
+
+
+
+\end{document}

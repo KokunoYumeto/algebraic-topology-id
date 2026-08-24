@@ -1,0 +1,85 @@
+\documentclass[11pt, a4paper]{article}
+
+\def\ncourse {}
+\def\nterm {Winter}
+\def\nyear {2025}
+\def\nnumber {}
+
+\input{../header.tex}
+
+\begin{document}
+\newpage
+
+\section{Metric Spaces}
+\begin{exercise}
+  Let $\R^n$ be the Euclidean space with the Euclidean metric.
+  \begin{enumerate}
+    \item[(1)] Show that any set in $\R^n$ is open if and only if it is a union
+      of open balls.
+    \item[(2)] Show that any set in $\R^n$ is open if and only if it is a
+      countable union of open balls.
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+\begin{enumerate}
+  \item[(1)] Suppose that $A \subset \R^n$ is a union of open balls, then
+    since each open ball is an open set, and the set of open sets is closed
+    under unions, the set $A$ is open.
+
+    Next suppose that $A \subset \R^n$ is open.
+    Since $A$ is open, for each $a \in A$ there exists $r_a$ such that
+    \[
+      (*)\,B(a,r_a) \subset A.
+    \]
+    Consider the set
+    \[
+      B := \bigcup_{a \in A} B(a,r_a).
+    \]
+    Let $a \in A$. Then there exists $B(a,r_a)$ such that 
+    $a \in B(a,r_a) \subset B$.
+    Then $a \in B$. Then there exists $B(a,r_a)$ such that 
+    $a \in B(a,r_a) \underset{(*)}{\subset} A$.
+    Therefore $A = B$ which means that $A$ is a union of open balls which
+    completes the proof.
+  \item[(2)] Let $A$ be a countable union of open balls.
+    It is clear from $(1)$ that it is open.
+    Next suppose that $A$ is open.
+    Denote
+    \[
+      \mathcal Q := \set{x \in A \mid x \in \Q^n}
+    \]
+    We have that
+    \[
+      |\mathcal Q| \le |\Q^n| = \aleph_0
+    \]
+    so $\mathcal Q$ is countable.
+    For each $x \in \mathcal Q$ denote
+    \[
+      \mathcal B_x := \set{B(x,q) \mid q \in \Q \stand B(x,q) \subset A}.
+    \]
+    It is clear that $\mathcal B_x$ is countable.
+    Therefore
+    \[
+      B :=
+      \bigcup_{\substack{x \in \mathcal Q \\ B(x,q) \in \mathcal B_x}} B(x,q)
+    \]
+    is a countable union of open balls.
+    
+    Let $x \in B$. Then there exists $x' \in \mathcal Q$ and 
+    $B(x',q) \in B_{x'}$ such that $x \in B(x,q) \subset A$.
+    Let $x \in A$. Since $A$ is open, there exists $\delta > 0$ such that 
+    $B(x,\delta) \subset A$.
+    Since $\Q^n$ is dense in $\R^n$ there exists $q \in \Q^n$ such that
+    $d(q,x) < \delta / 2$, which implies that $q \in B(x,\delta / 2) \subset A$
+    so we also have $q \in \mathcal Q$.
+    Since $\Q$ is dense in $\R$ we can
+    choose $d(x,q) < \epsilon < \delta / 2$ such that $\epsilon \in \Q$.
+    We notice that $B(q,\epsilon) \subset B(x,\delta) \subset A$ and that
+    $x \in B(q, \epsilon) \in B$.
+    Therefore $A = B$ which implies that $A$ is a countable union of open balls 
+    which completes the proof.
+\end{enumerate}
+\end{solution}
+
+
+\end{document}

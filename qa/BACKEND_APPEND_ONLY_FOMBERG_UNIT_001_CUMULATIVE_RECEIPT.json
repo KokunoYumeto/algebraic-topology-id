@@ -1,0 +1,109 @@
+{
+  "bound_inputs": {
+    "common": {
+      "bytes": 39866,
+      "path": "scripts/fomberg-unit-001-common.py",
+      "sha256": "f0743dfabccff457a5e48dfdc5969ee581ff859e85a54485d079a936a71a46b8"
+    },
+    "manifest": {
+      "bytes": 2105,
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_001_FILE_MANIFEST.csv",
+      "sha256": "f06bd66e47dfce8d8aaad470568579e30a3d193ea045c94bc84e9b3efa42961e"
+    },
+    "producer": {
+      "bytes": 10214,
+      "path": "scripts/extend-backend-fomberg-unit-001.py",
+      "sha256": "5893666483f88a27e53dcd576add31c8266bca78d5b9f1c0b12ce2725bb53155"
+    },
+    "qa": {
+      "bytes": 21253,
+      "path": "qa/FOMBERG_UNIT_001_QA.json",
+      "sha256": "b3b0ebc9430b80d45c64a6c528e0e36f46ca0d646a50e7b9c9c5d68285369b7a"
+    },
+    "qa_script": {
+      "bytes": 6189,
+      "path": "scripts/qa-fomberg-unit-001.py",
+      "sha256": "9273df48dcf579f0ff9c9c9d0db921a160b938b9e64d806064449d3f48bb94d4"
+    },
+    "semantic_human": {
+      "bytes": 772,
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_001_RECEIPT.md",
+      "sha256": "fc6494e2f0be479caec16278537331e14a2b59fbf2e11ff5e45802c2b60c03b1"
+    },
+    "semantic_receipt": {
+      "bytes": 4704,
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_001_RECEIPT.json",
+      "sha256": "6b116c6615a721f097809ed8fc1a2bce485ea912ead5770983ba906bb2533cc7"
+    },
+    "semantic_validator": {
+      "bytes": 23735,
+      "path": "scripts/validate-backend-append-only-fomberg-unit-001.py",
+      "sha256": "742241eddaf47e70e33b693fc58f5694b91688d2297aa1a6016822e2c6a60417"
+    }
+  },
+  "cumulative_validator": {
+    "bytes": 13424,
+    "lines": 228,
+    "path": "scripts/validate-backend-append-only-fomberg-unit-001-cumulative.py",
+    "sha256": "f32f6be7c5e408a844df3c7bcd020dc421ee289acf54d69691a3f0cb5cae4015"
+  },
+  "current": {
+    "bundle_sha256": "17f57575a062025e434e79f7f3797d05de1a41e520202521ae39a409d4b6450d",
+    "mastery_triples": 6,
+    "next_source_line": 615,
+    "proof_repair": "FOM-U001-PR-001",
+    "review_counts": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "segment_records": 87,
+    "semantic_figure_blocks": 10,
+    "source_diagrams": 14,
+    "stable_ids": 87,
+    "terminal_source_eof": false,
+    "total_bytes": 5658648,
+    "total_records": 5060,
+    "unit_records": 87
+  },
+  "human_receipt": {
+    "bytes": 748,
+    "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_001_CUMULATIVE_RECEIPT.md",
+    "sha256": "7c004432e6caccb4de63009bf89c4a53101ddd5848f6b9043895e4bcbd8f757e"
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "nested_immutability": {
+    "fomberg_unit_001_suffix": {
+      "records": 299,
+      "records_by_file": {
+        "artifacts.jsonl": 6,
+        "assets.jsonl": 3,
+        "authority.jsonl": 2,
+        "concepts.jsonl": 28,
+        "corrections.jsonl": 18,
+        "qa.jsonl": 4,
+        "relations.jsonl": 31,
+        "rights.jsonl": 5,
+        "segments.jsonl": 87,
+        "terms.jsonl": 28,
+        "units.jsonl": 87
+      }
+    },
+    "roberts_units_001_030_prefix": {
+      "bundle_sha256": "51b8c7f611560b9b5e88e97b3a943b54e0eb687c703f0cd34c1a3d164e4fb920",
+      "bytes": 5213679,
+      "preserved_byte_for_byte": true,
+      "records": 4761
+    }
+  },
+  "receipt_id": "O012-BACKEND-THROUGH-FOMBERG-UNIT-001-CUMULATIVE-SEMANTIC",
+  "replay": {
+    "every_backend_file_byte_identical": true,
+    "producer_deterministic": "PASS",
+    "semantic_validator": "PASS",
+    "static_qa": "PASS"
+  },
+  "schema_version": "1.0.0",
+  "scope": "Roberts Units 001-030 immutable prefix plus Fomberg Unit 001 semantic suffix",
+  "status": "PASS"
+}

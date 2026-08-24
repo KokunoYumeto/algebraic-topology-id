@@ -1,0 +1,116 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2025}
+\def\nterm {Spring}
+\def\nlecturer {}
+\def\ncourse {}
+
+\input{header.tex}
+
+\begin{document}
+\maketitle
+
+% Insert cool image here
+
+\newpage
+\tableofcontents
+\newpage
+
+\begin{exercise} \phantom{}
+  \begin{enumerate}
+    \item[(1)] Let $f(x)$ be an unbounded on $[a,b]$.
+    Show that there exists $x_0 \in [a,b]$ such that $f$
+    is unbounded in every neighbourhood of $x_0$.
+    \item[(2)] Is $(1)$ still true for $(a,b)$?
+  \end{enumerate}
+\end{exercise}
+\begin{solution} \phantom{}
+  \begin{enumerate}
+    \item[(1)]
+    Assume without loss of generality, that $f$ is unbounded from above.
+    Thus, there does not exist $M > 0$ such that $f(x) \le M$
+    for all $x \in [a,b]$.
+    In particular $M = 0$ is not a bound of $f$ from above.
+    This means that there exists $x_1 \in [a,b]$ such that $f(x_1) > M = 0$.
+    Similarly, for all $M_n = n$, there exists $x_n \in [a,b]$ such that
+    $f(x_n) > n$.
+    Since $f(x_n) > n$, from the pizza theorem,
+    \[
+      \infty = \lim_{n \to \infty} n \le \lim_{n \to \infty} f(x_n)
+      \implies \lim_{n \to \infty} f(x_n) = \infty.
+    \]
+    The Bolzano--Weierstrass theorem states that any bounded sequence,
+    has a converging subsequence.
+    Since $\set{x_n}_{n=1}^{\infty}$ is bounded (by $a$ and $b$),
+    there exists $\set{x_{n_k}}_{k=1}^{\infty}$
+    that converges to some $x_0 \in \R$.
+    Since $[a,b]$ is a closed interval,
+    and since $\set{x_{n_k}}_{k=1}^{\infty} \subset [a,b]$
+    converges to $x_0$, we know that $x_0 \in [a,b]$.
+
+    Assume, by way of contradiction, there exists a neighbourhood
+    $U := (x_0 - \delta,x_0 + \delta)$ of $x_0$ (for $\delta > 0$)
+    so that $f(x)$ is bounded in $U$.
+    Denote the bound of $f(x)$ in $U$ by $M$.
+    Since $\set{x_{n_k}}_{k=1}^{\infty}$ is a subsequence of
+    $\set{x_n}_{n=1}^{\infty}$, we get that $\set{f(x_{n_k})}_{k=1}^{\infty}$
+    is a subsequence of $\set{f(x_n)}_{n=1}^{\infty}$,
+    which converges to $\infty$.
+    Since any subsequence of a converging sequence converges to the same limit,
+    \[
+      \lim_{k \to \infty} f(x_{n_k}) = \infty.
+    \]
+    Recall that $\set{x_{n_k}}_{k=1}^{\infty} \taking{k \to \infty} x_0$.
+    By definition, for all $\epsilon > 0$ there exists a a natural
+    number $N > 0$,
+    so that for all $k > N$, we have
+    \[
+      \abs{x_{n_k} - x_0} < \epsilon \implies
+      x_{n_k} \in (x_0 - \epsilon,x_0 + \epsilon).
+    \]
+    In particular, for $\epsilon = \delta > 0$,
+    there exists a natural number
+    $N_{\delta} > 0$ so that for all $k > N_{\delta}$ we have
+    \[
+      x_{n_k} \in (x_0 - \delta, x_0 + \delta) = U.
+    \]
+    Since $M$ is a bound of $f(x)$ in $U$,
+    we get that for all $k > N_{\delta}$,
+    \[
+      \abs{f(x_{n_k})} \le M.
+    \]
+    The sequence $\set{f(x_{n_k})}_{k=1}^{N_{\delta}}$ is finite,
+    and thus it is bounded by $M' := \max\set{f(x_{n_k})}_{k=1}^{N_{\delta}}$.
+    Denote $L := \max\set{M,M'}$.
+    For $k \le N_{\delta}$ we have $f(x_{n_k}) \le M' \le L$.
+    For $k > N_{\delta}$ we have $f(x_{n_k}) \le M \le L$.
+    Therefore, the sequence $\set{f(x_{n_k})}_{k=1}^{\infty}$ is bounded
+    by $L$.
+    But this is a contradiction, since
+    \[
+      \lim_{k \to \infty} f(x_{n_k}) = \infty.
+    \]
+    This contradiction completes the proof.
+    \item[(2)] No, $(1)$ is not true for $(a,b)$.
+      Consider the function $f \colon (0,1) \to \R$ defined by
+      \[
+        f(x) = \frac{1}{x}.
+      \]
+      Assume, by way of contradiction,
+      that there exists $x_0 \in (0,1)$ such that $f$
+      is unbounded in every neighbourhood of $x_0$.
+      Denote $a' = \frac{0 + x_0}{2}$ and $b' = \frac{1 + x_0}{2}$.
+      It is clear that for $\delta = \min\set{a',b'}$,
+      the closed neighbourhood $U:=[x_0 - \delta,x_0 + \delta]$ of $x_0$
+      is contained in $(0,1)$.
+      Since $f$ is continuous in $U$,
+      and since $U$ is a closed interval,
+      from Weierstrass' theorem, $f$ attains a maximum on $U$,
+      and in particular $f$ is bounded on $U$.
+      This is a contradiction to our assumption,
+      which completes the proof.
+  \end{enumerate}
+\end{solution}
+
+\end{document}
+

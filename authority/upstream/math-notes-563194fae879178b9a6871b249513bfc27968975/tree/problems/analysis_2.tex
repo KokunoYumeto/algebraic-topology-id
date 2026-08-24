@@ -1,0 +1,3155 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\ncourse {Analysis 2 - Problems}
+
+\input{../header.tex}
+
+\begin{document}
+	\maketitle
+	\newpage
+	\section{Basic Integrals}\label{basicintegrals}
+	The integral is:
+	\[
+		\int{\frac{x^4}{(x-1)(x-2)}\,dx}
+	\]
+	To calculate the integral we shall use polynomial division and get that:
+	\[
+		\frac{x^4}{(x-1)(x-2)} = x^2+3x+7 + \frac{15x-14}{(x-1)(x-2)}
+	\]
+	Applying linearity:
+	\[
+		\int{\frac{x^4}{(x-1)(x-2)}\,dx} = 
+		\int{x^2+3x+7 + \frac{15x-14}{(x-1)(x-2)}\,dx} = 
+		\int{x^2+3x+7\,dx} + \int{\frac{15x-14}{(x-1)(x-2)}\,dx}
+	\]
+	The first integral is:
+	\[
+		\int{x^2+3x+7\,dx} = \frac{x^3}{3} + 3\frac{x^2}{2} + 7x + C
+	\]
+	And the second one is:
+	\[
+		\int{\frac{15x-14}{(x-1)(x-2)}\,dx}
+	\]
+	Which we can solve with partial fraction decomposition that gives:
+	\[
+		\int{\frac{15x-14}{(x-1)(x-2)}\,dx} = 
+		\int{\frac{16}{x-2}\,dx} + \int{\frac{-1}{x-1}\,dx} = 
+		16\ln|x-2| - \ln|x-1| + C
+	\]
+	finnaly:
+	\[
+		\frac{x^4}{(x-1)(x-2)} = \frac{x^3}{3} + 3\frac{x^2}{2} + 7x + 
+		16\ln|x-2| - \ln|x-1| + C
+	\]
+	
+	\newpage
+	
+	Now the integral is:
+	\[
+		\int{\frac{x+1}{(x^2+4)^2}\,dx}
+	\]
+	We shall use linearity and see that:
+	\[
+		\int{\frac{x+1}{(x^2+4)^2}\,dx} = 
+		\int{\frac{x}{(x^2+4)^2}\,dx} + 
+		\int{\frac{1}{(x^2+4)^2}\,dx}
+	\]
+	We will of course use substitution with $u=x^2+4$ and get:
+	\[
+		\int{\frac{x}{(x+4)^2}\,dx} = 
+		\int{\frac{1}{2u^2}\,du} = 
+		(-2u)^{-1} + C = 
+		-(2x^2+8)^{-1} + C
+	\]
+	For the second intergal:
+	\[
+		\int{\frac{1}{(x^2+4)^2}\,dx}
+	\]
+	We would like to get to something of the form:
+	\[
+		\int{\frac{1}{(u^2+1)^n}\,dx}
+	\]
+	Because we have a solution for those integrals. We see that:
+	\[
+		\int{\frac{1}{(x^2+4)^2}\,dx} = 
+		\int{\frac{1}{(4(\left(\frac{x}{2}\right)^2+1))^2}\,dx}
+	\]
+	From here we can get with substitution of $u = \frac{x}{2}$ to the above
+	form and solve with the formula, or solve directly with integration by
+	parts.
+	
+	\newpage
+	
+	Now the integral is:
+	\[
+		\int{\frac{x\cos(\sqrt{x^2-1})}{\sqrt{x^2-1}}\,dx}
+	\]
+	We can solve this by substituting $u = \sqrt{x^2-1}$ and get:
+	\[
+		\int{\frac{x\cos(\sqrt{x^2-1})}{\sqrt{x^2-1}}\,dx} = 
+		\int{\cos(u)\,du}
+	\]
+	And from here it's trivial.
+	
+	\newpage
+	Now we will solve a trigonometric integral:
+	\[
+		\int{\frac{1+\sin(x)}{1+\cos(x)}\,dx}
+	\]
+	If we use the trigonometric substitution $u = \tan(\frac{x}{2})$ we get
+	the following:
+	\[
+		dx = \frac{2du}{1+u^2} \quad 
+		\sin x = \frac{2u}{1+u^2} \quad 
+		\cos x = \frac{1-u^2}{1+u^2}
+	\]
+	From there it's like the previous integrals.
+	
+	\newpage
+	
+	Now to practice integration by parts:
+	\[
+		\int{\sqrt{x}\ln{x}\,dx}
+	\]
+	We will denote:
+	\begin{align*}
+		f'(x) &= \sqrt{x} \\
+		g(x)  &= \ln x
+	\end{align*}
+	And then:
+	\begin{align*}
+		f(x) &= \frac{2}{3}x^{\frac{3}{2}} \\
+		g'(x)  &= \frac{1}{x}
+	\end{align*}
+	Substituting in the formula gives:
+	\[
+		\int{\sqrt{x}\ln{x}\,dx} = 
+		\frac{2}{3}x^{\frac{3}{2}}\ln x - 
+		\int{\frac{2}{3}x^{\frac{1}{2}}\,dx}
+	\]
+	And from here it's like the previous ones.
+	
+	\newpage
+	
+	The integral now will involve a slight algebraic manipulation.
+	\[
+		\int{x\ln(x+x^{-1})\,dx}
+	\]
+	In this case we want to get rid of the $x^{-1}$ inside the $\ln$ function.
+	We can do that thanks to logarithmic arithmetics.
+	\[
+		\int{x\ln(x+x^{-1})\,dx} = 
+		\int{x\ln(x^{-1}(x^2+1))\,dx} =
+		\int{x\ln(x^{-1}) + x\ln(x^2+1)\,dx}
+	\]
+	Some more manipulation gives:
+	\[
+		\int{x\ln(x^{-1}) + x\ln(x^2+1)\,dx} = 
+		\int{x\ln(x^2+1)\,dx} - \int{x\ln(x)\,dx}
+	\]
+	We may notice after some more pratice that the first part can be done
+	easily with substitution, and the second part can be done with integration
+	by parts.
+	
+	\newpage
+	
+	\section{Basic Theorems}
+	\subsection*{One}
+	In this question we are asked to prove that if a function $f$ has 
+	piecewise antiderivatives, it has an antiderivative over all of the real
+	line. This can be shown with tools from real analysis one if we understand
+	that the antiderivative if a family of functions that differ by a constant
+	``+ C''. We can then set the constants accordingly and the result will
+	follow. The function will look like:
+	\[
+		f(x) = \begin{cases}
+			F_1(x) \\
+			F_2(x) + F_1(x') - F_2(x')
+		\end{cases} + C
+	\]
+	If $x'$ is the point connecting the two intervals.
+	
+	\newpage
+	
+	Now we will look at this disasterous looking integral:
+	\[
+		\int{\frac{g(f^{-1}(x))}{f'(f^{-1}(x))}\,dx}	
+	\]
+	Now it may not be obvioius at first, but of course, there is a trick.
+	This time we may recall from real analysis one that:
+	\[
+		\frac{df^{-1}}{dx}(x) = \frac{1}{f'(f^{-1}(x))}
+	\]
+	Eureka! This looks exactly like we wanted it to look. If we substitute
+	$u = f^{-1}(x)$ we get:
+	\[
+		\int{\frac{g(f^{-1}(x))}{f'(f^{-1}(x))}\,dx} = 
+		\int{g(u)\,du}	
+	\]
+	And if we know $G(x)$ this becomes trivial. Notice we can you this to 
+	solve the third integral from \Cref{basicintegrals}.
+	
+	\newpage
+	
+	The next problem is rather long, so we may write it in bold font
+	\\
+	\textbf{Given a polynomial $P(x)$ with $\deg(P)=n$ and also given all
+	his derivatives $P',P'',...,P^{(n)}$. Use $k,n,P,P',P'',...,P^{(n)}$
+	to find the antiderivative of the function
+	\[f(x) = P(x)e^{kx}\]}
+	First we apply integration by parts:
+	\[
+		\int{P(x)e^{kx}\,dx} = 
+		P(x)\frac{e^{kx}}{k} - \int{P'(x)\frac{e^{kx}}{k}\,dx} = 
+		\frac{P(x)e^{kx}}{k} - \frac{1}{k} \int{P'(x)e^{kx}\,dx}
+	\]
+	We can see a pattern here. We will prove by induction that for a
+	polynomial of degree $n$:
+	\[
+		\int{P(x)e^{kx}\,dx} = \sum_{i=0}^{n}
+		\left(\frac{1}{k}\left(\frac{-1}{k}\right)^{i}
+		P^{(i)}(x)e^{kx}\right)+C
+	\]
+	If $\deg(P) = 0$ we see that indeed:
+	\begin{align*}
+		\int{P(x)e^{kx}\,dx} &= 
+		P(x)\frac{e^{kx}}{k} - 
+		\int{\underbrace{P'(x)}_0\frac{e^{kx}}{k}\,dx} = 
+		\frac{P(x)e^{kx}}{k} + C \\ &=
+		\sum_{i=0}^{0}
+		\left(\frac{1}{k}\left(\frac{-1}{k}\right)^{i}
+		P^{(i)}(x)e^{kx}\right)+C
+	\end{align*}
+	Now we can assume the equation is true for any polynomial of $\deg(P)=d<n$
+	and prove for a polynomial with $\deg(P)=n$. 
+	Using integration by parts we get: 
+	\[
+		\int{P(x)e^{kx}\,dx} = 
+		P(x)\frac{e^{kx}}{k} - \int{P'(x)\frac{e^{kx}}{k}\,dx} = 
+		\frac{P(x)e^{kx}}{k} - \frac{1}{k} \int{P'(x)e^{kx}\,dx}
+	\]
+	Since $\deg(P') = n - 1 < n$ so we can plug in the sum:
+	\begin{align*}
+		\frac{P(x)e^{kx}}{k} - \frac{1}{k} \int{P'(x)e^{kx}\,dx} &= 
+		\frac{P(x)e^{kx}}{k} - \sum_{i=0}^{n-1}
+		\left(\frac{1}{k}\left(\frac{-1}{k}\right)^{i}
+		P^{(i+1)}(x)e^{kx}\right)+C
+		\\
+		&= \sum_{i=0}^{n}
+		\left(\frac{1}{k}\left(\frac{-1}{k}\right)^{i}
+		P^{(i)}(x)e^{kx}\right)+C
+	\end{align*}
+	Which shows that for any polynomial of $\deg(P) = n$:
+	\[ \int{f(x)\,dx} = \int{P(x)e^{kx}\,dx} =  
+		\sum_{i=0}^{n}
+		\left(\frac{1}{k}\left(\frac{-1}{k}\right)^{i}
+		P^{(i)}(x)e^{kx}\right)+C
+	\]
+	
+	\newpage
+	
+	\section{Definition of the definite integral}
+	In this section there will be some exercises about the definition
+	of the definite integral. We shall start with proving that $f(x) = x^3$
+	is Darboux integrable on $[0,n]$ and infer the value of the integral.
+	Recall the definition for a Darboux integrable function. We need to show
+	that for all $\varepsilon > 0$ exists $\delta > 0$ such that for any
+	partition of the interval $P$ that satisfies $\lambda(P) < \delta$ we
+	get that:
+	\[
+		U(f,P) - L(f,P) < \varepsilon
+	\]
+	An equivalent definition is that for any $\varepsilon > 0$ exists a
+	partition such that:
+	\[
+		U(f,P) - L(f,P) < \varepsilon
+	\]
+	Think about the definition of the infimum and maximum and try to prove
+	that. We can now look at a very natural partition of $[0,n]$ by fractions:
+	\[
+		P_k = \left(0,\frac 1k, \frac 2k, \dots, \frac {nk}{k}\right)
+	\]
+	Then, since $f$ is strictly monotonous we get that:
+	\[
+		U(f, P_k) = 
+		\sum_{i}^{nk}{M_i\frac 1k} = 
+		\frac {1}{k^4} \sum_{i}^{nk}{i^3}
+	\]
+	Remember that we know that:
+	\[
+		\sum_{i=1}^{n}{i^3} = \left[\frac{i(i+1)}{2}\right]^2
+	\]
+	Substituting we will get that:
+	\[
+		\inf U(f, P_k) = \sup L(f, P_k) = \frac{n^4}{4}
+	\]
+	So according to the alternative definition for Darboux integrable we
+	get that the function is integrable and the integral is:
+	\[
+		\int_{0}^{n}{x^3\,dx} = \frac{n^4}{4}
+	\]
+	
+	\newpage
+	
+	The next exercise is to show the following two intresting theorems for
+	odd and even functions accordingly:
+	\begin{align*}
+		\int_{-a}^{a}{f(x)\,dx} &= 0 \\
+		\int_{-a}^{a}{f(x)\,dx} &= 2\int_{0}^{2a}{f(x)\,dx}
+	\end{align*}
+	This can be done by choosing any partition sequence with $\lambda(P_k)$
+	converging to zero, then inside the definition we can use the properties
+	of odd or even functions, and get what we want.
+	
+	\newpage
+	
+	This question is a bit tricky. We need to show that if $f$ is Darboux
+	integrable on $[a,b]$ then $f^2$ is also Darboux integrable on $[a,b]$.
+	As we don't know any tricks yet, we need to show this by definition and
+	hope things will work. Since we are working with differences of squares
+	we may use:
+	\[
+		|f^2(x) - f^2(y)| = |f(x) + f(y)||f(x) - f(y)|
+	\]
+	Hey wait a minute. We do know that if $f$ is integrable it is bounded.
+	If we denote that bound with $B$ we get:
+	\[
+		|f^2(x) - f^2(y)| \le 2B|f(x) - f(y)|
+	\]
+	It's a bit gentle but from here we can get that:
+	\[
+		U(f^2,P) - L(f^2,P) = \sum_{i=1}^{n}{[M^2_i-m^2_i](\Delta x_i)} \le
+		2B\sum_{i=1}^{n}{[M_i-m_i](\Delta x_i)} \le 2B\varepsilon
+	\]
+	
+	\newpage
+	
+	The next question is pretty cool. We can define:
+	\[
+		f(x) = \frac{\sin (x) \ln(x)}{x} \quad
+		a_n  = \int_{n}^{n+1}{f(x)\,dx}
+	\]
+	And now we need to show the sequence is well defined and find the limit
+	of the sequence. To show that it's well defined in this context means to
+	show it is integrable. We just proved that if $f$ is integrable then
+	$f^2$ is also integrable. Applying the following trick:
+	\[
+		2fg = (f+g)^2 - f^2 - g^2
+	\]
+	We can see that $fg$ is also integrable. We also know that a continuous
+	function is integrable, together this shows that the sequence is well
+	defined. To calculate the limit of the series we can notice that:
+	\[
+		\lim_{x\to\infty}{f(x)} = 0
+	\]
+	With some manipulation it can be shown by definition that the limit of
+	the sequence is also zero.
+	
+	\newpage
+	
+	This is a more geometrical exercise. We define the function:
+	\[
+		f(x) = \sqrt{1-x^2}
+	\]
+	The geometrical way to think of this function relates to the unit circle.
+	Try to think about it yourself and find:
+	\[
+		\int_{0}^{1}{f(x)\,dx}
+	\]
+	After you've done that you can try to find:
+	\[
+		\lim_{n\to\infty}{\frac{1}{n^2}\sum_{k=1}^{n}{\sqrt{n^2-k^2}}}
+	\]
+	Note that this is a Riemann sum.
+	
+	\newpage
+	
+	Now we practise more definite integrals. The first is:
+	\[
+		\int_{0}^{\pi}{e^{\cos^2(x)}\sin(2x)\,dx}
+	\]
+	We can solve this by first using the identity $\sin(2x)=\sin(x)\cos(x)$
+	and get the integral:
+	\[
+		\int_{0}^{\pi}{e^{\cos^2(x)}\sin(x)\cos(x)\,dx}
+	\]
+	Now we see it help to substitute $u = \cos(x)$ and we get:
+	\[
+		\int_{1}^{-1}{-e^{u^2}u\,dx}
+	\]
+	We can continue from here but we can also see that since the integrand
+	is an odd function the result of the integral is:
+	\[
+		\int_{0}^{\pi}{e^{\cos^2(x)}\sin(2x)\,dx} = 0
+	\]
+	
+	\newpage
+	
+	The following integral is meant for you to practice a basic property
+	of definite integrals:
+	\[
+		\int_{0}^{2}{\min\{x,x^2\}\,dx}
+	\]
+	Try it yourself!
+	
+	\newpage
+	
+	When we look at the following integral:
+	\[
+		\int_{0}^{1}{e^x\cos(2x)\,dx}
+	\]
+	We can see it makes sense to try integration by parts on it, and we
+	can even assume that if we apply it two times we could solve the integral
+	rather easily. See for yourself.
+	
+	\newpage
+	
+	In the following integral:
+	\[
+		\int_{0}^{\frac 12}{\frac{x^3}{\sqrt{1-x^2}}\,dx}
+	\]
+	Did you notice it? If we substitute $u=1-x^2$ we would get a similar
+	expression to $\frac{x}{\sqrt{x}}$ and we can deal with these things
+	quite easily by now.
+	
+	\newpage
+	
+	Another one:
+	\[
+		\int_{1}^{2\pi}{\frac{\ln(x)}{x}\cos(\ln(x))\,dx}
+	\]
+	Now this might be a bit more tricky, but since the derivative of
+	$\ln x$ is just $\frac{1}{x}$ we can see why we have motivation to apply
+	substitution with $u = \ln(x)$. After that we get another simpler
+	integral which we can already solve.
+	
+	\newpage
+	
+	This will be the last one:
+	\[
+		\int_{1}^{2e}{|\ln(x) - 1|\,dx}
+	\]
+	Here we can notice that the integrand is just:
+	\[
+		|\ln(x) - 1| = \begin{cases}
+			1 - \ln(x) & x\in[1,e] \\
+			\ln(x) - 1 & x\in[e,2e]
+		\end{cases}
+	\]
+	Applying linearty we get a rather simple integral.
+	
+	\newpage
+	
+	\section{Basic Indefinite Integral Theorems}
+	Let $f\colon [a,b]\to\R$ be integrable. Show that exists 
+	$c\in [a,b]$ such that:
+	\[
+		\int_{a}^{c}{f(x)\,dx} = \int_{c}^{b}{f(x)\,dx}
+	\]
+	Of course we need to define a function here. We will define the
+	function:
+	\[
+		g(x) = \int_{a}^{x}{f(x)\,dx}
+	\]
+	We know that this function is continuous from the fundamental theorem
+	of calculus, and we can even show easily that it is Lipshcitz continuous.
+	We also know that:
+	\[
+		g(a) = \int_{a}^{a}{f(x)\,dx} = 0
+	\]
+	So according to the mean value theorem exists $c$ such that:
+	\[
+		g(c) = \frac{1}{2}g(b)
+	\]
+	Or in other words:
+	\[
+		\int_{a}^{c}{f(x)\,dx} = \int_{c}^{b}{f(x)\,dx}
+	\]
+	
+	\newpage
+	
+	This is the exercises:
+	\[
+		\lim_{x\to 0}{\frac{\int_{0}^{x^2}{\arctan t\,dt}}
+		{\int_{0}^{x}{t^2\sin t\,dt}}}
+	\]
+	And:
+	\[
+		\lim_{n\to\infty}
+		{\left(\frac{n}{n^2+1^2}+\frac{n}{n^2+2^2}+
+		\dots+\frac{n}{n^2+n^2}\right)}	
+	\]
+	Don't forget that:
+	\[
+		\int{\frac{1}{1+x^2}\,dx} = \arctan(x) + C
+	\]
+	Good luck!
+	
+	\newpage
+	
+	Here are some integrals to prove:
+	\[
+		\int_{\frac{1}{2}}^{2}{\frac{\ln x}{x^2+1}\,dx} = 0
+	\]
+	This can simply be done by divide and conquer. We will divide as such:
+	\[
+		\int_{\frac{1}{2}}^{1}{\frac{\ln x}{x^2+1}\,dx} = 
+		-\int_{1}^{2}{\frac{\ln x}{x^2+1}\,dx}
+	\]
+	And conquer by substituting $u = \ln (x)$.
+	
+	\newpage
+	
+	The following is to show:
+	\[
+		\int_{2+\sin(x)}^{3^x}{\ln(t)\,dt}
+	\]
+	Is monotonically increasing on $[1,\infty)$. This can be done by using
+	the linearity as well.
+	
+	\newpage
+	
+	The next statements are to prove, or disprove. The first being
+	Let $f\colon[a,\infty)\to\R$ is monotone, decreasing, and non-negative,
+	if $\int_{a}^{\infty}{f(x)\,dx}$ converges, then 
+	$\lim_{x\to\infty}{f(x)} = 0$. The solution will be on the next page.
+	
+	\newpage
+	
+	Since the function is monotonic, decreasing and non-negative, 
+	if it's not converging to zero we will get from the comparison test
+	\[
+		\int_{a}^{\infty}{\epsilon\,dx} \le \int_{a}^{\infty}{f(x)\,dx}
+	\]
+	For some $\epsilon > 0$. This is the contrapositive of the statement
+	so we are done.
+	
+	\newpage
+	
+	Let $f\colon[a,\infty)\to\R$ is continuous, and non-negative,
+	if $\int_{a}^{\infty}{f(x)\,dx}$ converges, then 
+	$\lim_{x\to\infty}{f(x)} = 0$. The solution will be on the next page.
+	
+	\newpage
+	
+	This is false because we can choose the tent function.
+	
+	\newpage
+	
+	Let $f\colon[a,\infty)\to\R$ is continuous,
+	if $\int_{a}^{\infty}{f(x)\,dx}$ converges, then 
+	$\int_{a}^{\infty}{f^2(x)\,dx}$ converges. 
+	The solution will be on the next page. This is a relatively hard question.
+	Here is a hint \footnote{Try to make a rectangles function}
+
+	\newpage
+	
+	This is false. We can choose a function similar to the tent function but
+	with trapezoids. The intuition is to take rectangles with an area of 
+	$\frac{1}{n^3} * n$, this way the area will converge but if we square
+	the function the integral will be the harmonic sum which we know diverges.
+	
+	\newpage
+	
+	\section{Improper integrals}
+	
+	In this section we have to check whether the improper integrals converge
+	or diverge. Starting with this one:
+	\[
+		\int_{0}^{\frac{\pi}{2}}{\sqrt{\tan(x)}\,dx}
+	\]
+	We will use the substitution $t = \sqrt(\tan(x))$ and after some
+	manipulation that:
+	\[
+		dx = \frac{2t}{1+t^4}dt
+	\]
+	This implies that:
+	\[
+		\int_{0}^{\frac{\pi}{2}}{\sqrt{\tan(x)}\,dx} = 
+		\int_{0}^{\infty}{t\frac{2t}{1+t^4}\,dt}
+	\]
+	Which converges by the limit comparison test with 
+	$\int_{0}^{\infty}{\frac{1}{t^2}\,dt}$. Notice we don't have an issue
+	near zero.
+	
+	\newpage
+	
+	Now the integral is:
+	\[
+		\int_{-\infty}^{\infty}{\frac{dx}{x^3-1}}
+	\]
+	We can write:
+	\[
+		\int_{-\infty}^{\infty}{\frac{dx}{x^3-1}} = 
+		\int_{-\infty}^{1}{\frac{dx}{x^3-1}} + 
+		\int_{1}^{\infty}{\frac{dx}{x^3-1}}
+	\]
+	The integrals converge near negative and positive infinities for example
+	by the limit comparison test with $\int_{1}^{\infty}{\frac{1}{x^3}\,dx}$
+	and $\int_{-\infty}^{1}{\frac{1}{x^3}\,dx}$. We do know that:
+	\[
+		\frac{1}{x^3-1} = 
+		\frac{1}{(x-1)(x^2+x+1)}
+	\]
+	So there is another problematic point which is $x=1$. We can see that:
+	\[
+		\lim_{x\to 1}{\frac{\frac{1}{(x-1)(x^2+x+1)}}
+		{\frac{1}{(x-1)}}} = \frac 13
+	\]
+	This means that the integral converges iff:
+	\[
+		\int_{0}^{1}{\frac{1}{x-1}\,dx}
+	\]
+	Converges, but we know it doesn't, so the original integral also diverges.
+	
+	\newpage
+	
+	The next integral is kind of annoying but we shall deal with it:
+	\[
+		\int_{2}^{\infty}{\frac{1}{x^p(\ln x)^q}\,dx}
+	\]
+	We can try to substitute $t = \ln(x)$ and get:
+	\[
+		\int_{2}^{\infty}{\frac{1}{x^p(\ln x)^q}\,dx} = 
+		\int_{\ln 2}^{\infty}{\frac{1}{e^{(p-1)t}t^q\,dt}}
+	\]
+	And now if $p < 1$ we can see the integral diverges. If $p > 1$ then
+	we can see it converges. If $p=1$ then we get that:
+	\[
+		\int_{2}^{\infty}{\frac{1}{x^p(\ln x)^q\,dx}} = 
+		\int_{2}^{\infty}{\frac{1}{t^q}\,dt}
+	\]
+	Which we know converges for $q > 1$.
+	
+	\newpage
+	
+	And now for something completely different:
+	\[
+		\int_{2}^{\infty}{x^p(\sin x)^q\,dx}
+	\]
+	We see that $x > 2$ so we know that $x^p > 1$ for any $p$ and $x$ over
+	the integration interval. We also know that exists an $\epsilon > 0$
+	such that for any interval of the form
+	$[\frac{\pi}{2} + 2\pi k - \epsilon, \frac{\pi}{2} + 2\pi k - \epsilon]$
+	we get $\sin(x) > \frac 12$ which means that:
+	\[
+		\int_{\frac{\pi}{2} + 2\pi k - \epsilon}^
+		{\frac{\pi}{2} + 2\pi k - \epsilon}{x^p(\sin x)^q\,dx} > 
+		2\epsilon \frac {1}{2} = \epsilon
+	\]
+	So by Cauchy's integral test we know this integral divergs.
+	
+	\newpage
+	
+	And now:
+	\[
+		\int_{0}^{\infty}{x^p\sin(e^x)\,dx}
+	\]
+	Ok, we would much rather work with $\sin(u)$ here so let's substitute
+	$u = e^x$. We get:
+	\[
+		\int_{1}^{\infty}{\frac{\ln^p(u)}{u}\sin(u)\,du}
+	\]
+	We might think of using integration by parts now, but it'd be much better
+	to use another test we know, Dirichlet's test. If we choose:
+	\begin{align*}
+		f(x) &= \sin(u) \\
+		g(x) &= \frac{\ln^p(u)}{u}
+	\end{align*}
+	We can see that:
+	\[
+		\int_{1}^{T}{\sin(x)\,dx} = \cos(1) - \cos(T) \le 2
+	\]
+	We see that $g$ is differentiable on $[1,\infty)$ and we get:
+	\[
+		g'(t) = 
+		\dfrac{p\ln^{p-1}\left(t\right)}{t^2}-\dfrac{\ln^p\left(t\right)}{t^2}
+	\]
+	So:
+	\[
+		|g'(t)| \le 
+		\dfrac{p\ln^{p-1}\left(t\right)}{t^2}+\dfrac{\ln^p\left(t\right)}{t^2}
+	\]
+	We need to show the convergance of:
+	\[
+		\int_{1}^{\infty}{|g'(t)|\,dt}
+	\]
+	From the direct comparison test we can just check that:
+	\[
+		\int_{1}^{\infty}
+		{\dfrac{p\ln^{p-1}\left(t\right)}{t^2}+
+		\dfrac{\ln^p\left(t\right)}{t^2}\,dt} = 
+		p\int_{1}^{\infty}{\dfrac{\ln^{p-1}\left(t\right)}{t^2}\,dt} + 
+		\int_{1}^{\infty}{\dfrac{\ln^p\left(t\right)}{t^2}\,dt}
+	\]
+	Which... wait... these integrals just converges from that previous 
+	exercise! great, we've shown this integral converges.
+	
+	\newpage
+	
+	Now we calculate the following limit:
+	\[
+		\lim_{n\to\infty}{\int_{0}^{\infty}{e^{-nx^2}\,dx}}
+	\]
+	From intuition we would want to say the limit is zero. The intuition
+	is correct and so we'll prove it. Considering the integral:
+	\[
+		\int_{0}^{\infty}{e^{-nx^2}\,dx}
+	\]
+	We see that the integrand acts quite differently when $x$ is lower than
+	$1$ near to $1$ or greater than $1$. We will accomodate by choosing
+	$0 < \epsilon < 1$ and we may also consider $\frac{\epsilon}{3}$ because
+	eventually we will show the three parts are smaller than one epsilon:
+	\[
+		\int_{0}^{\infty}{e^{-nx^2}\,dx} = 
+		\int_{0}^{\frac{\epsilon}{3}}{e^{-nx^2}\,dx} + 
+		\int_{\frac{\epsilon}{3}}^{1}{e^{-nx^2}\,dx} + 
+		\int_{1}^{\infty}{e^{-nx^2}\,dx}
+	\]
+	We see that for the first integral we see:
+	\[
+		\int_{0}^{\frac{\epsilon}{3}}{e^{-nx^2}\,dx} \le 
+		\int_{0}^{\frac{\epsilon}{3}}{1\,dx} = \frac{\epsilon}{3}
+	\]
+	For the second integral we see:
+	\[
+		\int_{\frac{\epsilon}{3}}^{1}{e^{-nx^2}\,dx}
+	\]
+	We get a maximum at $x = \frac{\epsilon}{3}$ which means we can choose
+	an $n$ large enough such that the bound will be $\frac{\epsilon}{3}$
+	and then we will get:
+	\[
+		\int_{\frac{\epsilon}{3}}^{1}{e^{-nx^2}\,dx} \le 
+		\left(1 - \frac{\epsilon}{3}\right)\frac{\epsilon}{3} \le 
+		\frac{\epsilon}{3}
+	\]
+	For the last integral we see:
+	\[
+		\int_{1}^{\infty}{e^{-nx^2}\,dx}
+	\]
+	Ok now this might take some time to get used to, but hopefully by now
+	you may thing to multiply thei ntegrand by $x$. Why? Because that
+	an integral we can calculate using integration by parts. We get:
+	\[
+		\int_{1}^{\infty}{e^{-nx^2}\,dx} \le
+		\int_{1}^{\infty}{xe^{-nx^2}\,dx} = \frac{1}{2n}
+	\]
+	Again, we can see that for a sufficiently large $n$ this will be less
+	than $\frac{\epsilon}{3}$ and thus we get:
+	\[
+		\int_{0}^{\infty}{e^{-nx^2}\,dx} \le 
+		\frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} =
+		\epsilon
+	\]
+	
+	\newpage
+	
+	\section{Series}
+	First, as we do, let's figure out if some series converge or not.
+	\[
+		\sum_{n=2}^{\infty}{\frac{\cos(\pi n)}{\ln n}}
+	\]
+	Here we can see that the series is equivalent to:
+	\[
+		\sum_{n=2}^{\infty}{(-1)^n\ln(n)}
+	\]
+	We know that $\ln(n)$ is monotonically decreasing and 
+	$\lim_{n\to\infty}{\ln(n)} = 0$ so by Leibniz's test
+	the sum converges.
+	
+	\newpage
+	\[
+		\sum_{n=1}^{\infty}{\frac{(n!)^2}{(2n)!}}
+	\]
+	When we see factorials we need to thing of something like the quotient
+	test. Indeed:
+	\[
+		\lim_{n\to\infty}{\frac{a_{n+1}}{a_{n}}} = 
+		\lim_{n\to\infty}{\frac{\frac{((n+1)!)^2}{(2(n+1))!}}{\frac{(n!)^2}
+		{(2n)!}}} = 
+		\lim_{n\to\infty}{\frac{(n+1)^2}{(2n+1)(2n+2)}} = 
+		\frac{1}{4}
+	\]
+	So by D'Alembert's test the series converges.
+	
+	\newpage
+	
+	\[
+		\sum_{n=4}^{\infty}{\frac{1}{\sqrt{n^2-9}}}
+	\]
+	We see that this series is positive and we can compare it with the 
+	harmonic sum. We get:
+	\[
+	\lim_{n\to\infty}{\frac{\frac{1}{\sqrt{n^2-9}}}{\frac{1}{n}}} = 
+	\lim_{n\to\infty}{\frac{n}{\sqrt{n^2-9}}} = 1
+	\]
+	And since the harmonic sum does not converge this series diverges as well.
+	
+	\newpage
+	
+	\[
+		\sum_{n=2}^{\infty}{\frac{1}{(\ln(n))^n}}
+	\]
+	Here the root test is needed. We get:
+	\[
+	\lim_{n\to\infty}{\sqrt[n]{\left\vert\frac{1}{(\ln(n))^n}\right\vert}} = 
+	\lim_{n\to\infty}{\frac{1}{\ln(n)}} = 0
+	\]
+	Since $0 < 1$ this series absolutely converges.
+	
+	\newpage
+	
+	\[
+		\sum_{n=2}^{\infty}{\ln\left(1+\frac{(-1)^n}{n}\right)}
+	\]
+	
+	We can notice the following pattern:
+	\[
+	\ln\left(1+\frac{(-1)^n}{n}\right) = \begin{cases}
+		 \ln\left(\frac{n+1}{n}\right) & \text{$n$ is even} \\
+		 \ln\left(\frac{n-1}{n}\right) & \text{$n$ is odd}
+	\end{cases} = \begin{cases}
+		 \ln(n+1)-\ln(n) & \text{$n$ is even} \\
+		 \ln(n-1)-\ln(n) & \text{$n$ is odd}
+	\end{cases}
+	\]
+	We see that if we look on the odd subsequence of the partial sum
+	\footnote{$k$ must be a natural number strictly greater than $0$}
+	we get:
+	\[
+		\sum_{n=2}^{2k+1}{\ln\left(1+\frac{(-1)^n}{n}\right)} = 0 
+		\xrightarrow{k\to\infty} 0
+	\]
+	And if we look on the even partial sum we get:
+	\[
+		\sum_{n=2}^{2k}{\ln\left(1+\frac{(-1)^n}{n}\right)} = 
+		\ln\left(1+\frac{(-1)^{2k}}{2k}\right) \xrightarrow{k\to\infty} \ln(1)
+		= 0
+	\]
+	And as we know that means the series converges, moreover, it converges
+	to $0$, and since all the elements are positive the convergance is 
+	absolute.
+	
+	\newpage
+	
+	\[
+		\sum_{n=2}^{\infty}{\left(\frac{n-1}{n+1}\right)^{n(n-1)}}
+	\]
+	
+	We need to use the root test and we get:
+	\begin{align*}
+	\lim_{n\to\infty}{\sqrt[n]{
+	\left\vert\left(\frac{n-1}{n+1}\right)^{n(n-1)}\right\vert}} &= 
+	\lim_{n\to\infty}{\left(\frac{n-1}{n+1}\right)^{n-1}} \\ &= 
+	\lim_{n\to\infty}{\left(1 - \frac{2}{n+1}\right)^{n-1}} \\ &= 
+	\lim_{n\to\infty}{\left(1 - \frac{2}{n+1}\right)^{n+1}\left(1 - \frac{2}
+	{n+1}\right)^{-2}} \\ &=
+	\lim_{n\to\infty}{\underbrace{\left(1 - \frac{2}{n+1}\right)^{n+1}
+	}_{\xrightarrow{n\to\infty}e^{-2}}\underbrace{\left(1 - \frac{2}
+	{n+1}\right)^{-2}}_{\xrightarrow{n\to\infty}1}} \\ &= e^{-2}
+	\end{align*}
+	Since $e^{-2} < 1$ by the root test the series converges, moreover, it 
+	converges absolutely.
+	
+	\newpage
+	
+	For what values of $p,q\in\R$ does the following series 
+	converge?
+	\[
+		\sum_{n=2}^{\infty}{\frac{1}{n^p(\ln n)^q}}
+	\]
+	We can solve this using the integral test and the relavent previous
+	integral we did.
+	
+	\newpage
+	
+	Calculate the following series:
+	\[
+	\sum_{n=1}^{\infty}{(-1)^{n-1}\frac{2n+1}{n(n+1)}}
+	\]
+	We may get something more familiar if we get rid of this $(-1)^n$ part:
+	\begin{align*}
+		\sum_{n=1}^{\infty}{(-1)^{n-1}\frac{2n+1}{n(n+1)}} &= 
+		\sum_{n=1}^{\infty}{\left(\frac{2(2n-1)+1}{(2n-1)(2n)} - 
+		\frac{2(2n)+1}{2n(2n+1)}\right)} \\ &=
+		\sum_{n=1}^{\infty}{\left(\frac{4n-1}{2n(2n-1)} - 
+		\frac{4n+1}{2n(2n+1)}\right)} \\ &=
+		\sum_{n=1}^{\infty}{\frac{1}{2n}\left(\frac{4n-1}{2n-1} - 
+		\frac{4n+1}{2n+1}\right)} \\ &=
+		\sum_{n=1}^{\infty}{\frac{1}{2n}\frac{4n}{(2n+1)(2n-1)}} \\ &=
+		2\sum_{n=1}^{\infty}{\frac{1}{(2n+1)(2n-1)}} \\ &=
+		2\sum_{n=1}^{\infty}
+		{\left(\frac{\frac{1}{2}}{2n-1} - \frac{\frac{1}{2}}{2n+1}\right)} 
+		\\ &=
+		\sum_{n=1}^{\infty}{\left(\frac{1}{2n-1} - \frac{1}{2n+1}\right)}
+	\end{align*}
+	Looking at the partial sums we see that:
+	\begin{align*}
+		\sum_{n=1}^{k}{\left(\frac{1}{2n-1} - \frac{1}{2n+1}\right)} =
+		1 - \frac{1}{2k+1}
+	\end{align*}
+	So:
+	\[
+		\sum_{n=1}^{\infty}{(-1)^{n-1}\frac{2n+1}{n(n+1)}} = 
+		\lim_{k\to\infty}
+		{\sum_{n=1}^{k}{\left(\frac{1}{2n-1} - \frac{1}{2n+1}\right)}} = 
+		\lim_{k\to\infty}{\left(1 - \frac{1}{2k+1}\right)} = 1
+	\]
+	
+	\newpage
+	
+	\section{Series Theorems}
+	If $\lim_{n\to\infty}{a_n} = 0$ then exists a subsequnce
+	$a_{n_k}$ such that $\sum_{k=1}^{\infty}{a_{n_k}}$ converges.
+	The idea here is to take a subseuqence such that:
+	\[
+		a_{n_k} \le 2^{-k}
+	\]
+	That way using the comparison test we can see that 
+	$\sum_{k=1}^{\infty}{a_{n_k}}$ converges.
+	
+	\newpage
+	
+	Given the positive series $\sum{a_n},\sum{b_n}$ show that
+	if for any natural $n\in\N$ that:
+	\[
+	\frac{a_{n+1}}{a_{n}} < \frac{b_{n+1}}{b_{n}}
+	\]
+	Then if $\sum{b_n}$ converges then $\sum_{a_n}$ converges and that if 
+	$\sum{a_n}$ diverges then $\sum_{a_n}$ diverges.
+	The idea here is to notice:
+	\[
+		a_1 \frac{b_1}{a_1} \le b_1
+	\]
+	And then by induction it can be shown that:
+	\[
+		a_n \frac{b_1}{a_1} \le b_n
+	\]
+	And we can solve using the direct comparison test.
+	
+	\newpage
+	
+	Let $f$ be a function differentiable at $x=0$ such that
+	$f(0)=0$ and $f'(0)\neq 0$ and let $a_n$ be a positive sequence that
+	converges to $0$. Show that:
+	\[
+	\sum_{n=1}^{\infty}{a_n} \quad\text{converges} \iff 
+	\sum_{n=1}^{\infty}{f(a_n)} \quad\text{converges}
+	\]
+	We can look at the definition of the derivative with sequences and get:
+	\[
+		\lim_{n\to\infty}{\frac{f(a_n)-f(0)}{a_n-0}} = 
+		\lim_{n\to\infty}{\frac{f(a_n)}{a_n}} \neq 0
+	\]
+	Since $a_n$ is positive we get that $f(a_n)$ doesn't change its sign.
+	Since we have shown:
+	\[
+		\lim_{n\to\infty}{\frac{f(a_n)}{a_n}} = L \neq 0
+	\]
+	We are also showing that:
+	\[
+	\sum_{n=1}^{\infty}{a_n} \quad\text{converges} \iff 
+	\sum_{n=1}^{\infty}{f(a_n)} \quad\text{converges}
+	\]
+	
+	\newpage
+	
+	\textbf{Let $a_n$ be a positive series. Show that if 
+	$\sum_{n=1}^{\infty}{a_n}$ converges then 
+	$\sum_{n=1}^{\infty}{\sqrt{a_{n}a_{n-1}}}$ converges, and that if
+	$a_n$ is monotonic then the other direction is also true.}
+	
+	For the forward direction we can notice that by the AM-GM inequality:
+	\[
+		 \sqrt{a_{n}a_{n-1}} \le \frac{a_{n}+a_{n-1}}{2}
+	\]
+	We can also notice that:
+	\[
+		\sum_{n=1}^{\infty}{a_n} = 
+		\frac{a_1}{2} + \sum_{n=2}^{\infty}{\frac{a_{n-1}+a_n}{2}}
+	\]
+	Since $\sum{a_n}$ converges we know that 
+	$\sum_{n=1}^{\infty}{\frac{a_{n-1}+a_n}{2}}$ must also converge. Now by
+	the direct comparison test since as we remember:
+	\[
+		 0 \le \sqrt{a_{n}a_{n-1}} \le \frac{a_{n}+a_{n-1}}{2}
+	\]
+	We get that $\sum_{n=1}^{\infty}{\sqrt{a_{n}a_{n-1}}}$ converges.
+	Now to prove the other direction. We know that $a_n$ is monotonic
+	and it can't be increasing because it must also converge to zero.
+	This implies:
+	\[
+		a_n \le \sqrt{a_{n-1}a_n}
+	\]
+	And so by the direct comparison test we get that 
+	$\sum_{n=1}^{\infty}{a_n}$ converges
+	
+	\newpage
+
+	\textbf{Let $\sum_{n=1}^{\infty}{a_n}$ be a conditionally converging
+	series. Show that for all natural $k>1$ that the series 
+	$\sum_{n=1}^{\infty}{a_{n}n^{k}}$ diverges.}
+	Consider the series:
+	\[
+		\sum_{n=1}^{\infty}{a_{n}n^2}
+	\]
+	Suppose it were converging, that means that the limit of the inside
+	seuquence is:
+	\[
+		\lim_{n\to\infty}{a_{n}n^2} = 0
+	\]
+	But this means that:
+	\[
+		\lim_{n\to\infty}{|a_{n}n^2|} = \lim_{n\to\infty}{|a_{n}|n^2} = 0
+	\]
+	So for some natural $N$ for any $n > N$ we get that:
+	\[
+		|a_n| \le \frac{1}{n^2}
+	\]
+	And by the comparison test we get that the series 
+	$\sum_{n=1}^{\infty}{a_n}$ converges absolutely. Since that's
+	a contradiction we get that the above series is not converging
+	and by the direct compparison test the result follows.
+	
+	\newpage
+	
+	\section{Uniform Convergence}
+	Ah, uniform convergence, 
+	Show that each of the following function sequences uniformly converge on
+	$I$ and not uniformly converges on $J$:
+	
+	\begin{align*}
+		f_n(x) &= \sin(x^n(1-x)) \\
+		I &= [0,1] \\
+		J &= [0,2]
+	\end{align*}
+	We can see that for any $x\in I$ the function goes to $0$ and since
+	all the function and the zero function is continuous and $I$ is closed
+	we get uniform convergence. To show the convergence on $J$ is not
+	uniform we will try to use some theorems. Specifically we know that
+	if it were converging uniformly to $f$ then since $f_n$ are continuous
+	$f$ is continuous and there is a $\delta > 0$ such that for all $x$ in
+	$(1,1+\delta)$ we get $|f(x)| \le \frac 14$ yet we get that:
+	\[
+		(1+\delta)^n(1-(1+\delta)) = -\delta(1+\delta)^n
+	\]
+	So if we choose $n$ large enough we get that:
+	\[
+		-\delta(1+\delta)^n \le -\frac{\pi}{2}
+	\]
+	And from the middle value theorem we can choose $x_n$ such that:
+	\[
+		(x_n)^n(1-(x_n)) = -\frac{\pi}{2}
+	\]
+	And then:
+	\[
+		f_n(x_n) = -1
+	\]
+	But that's a contradiction because:
+	\[
+		\sup_{x\in J}|f_n(x) - f(x)| \geq 
+		\sup_{x\in J}|f_n(x_n) - f(x_n)| > -\frac 34
+	\]
+	Because $|f(x)| \le \frac 14$ which completes the proof.
+	
+	\newpage
+	
+	\begin{align*}
+		f_n(x) &= x\arctan(nx)-\frac{1}{2n}\ln(n^2x^2+1) \\
+		I &= [1,2] \\
+		J &= [1,\infty)
+	\end{align*}
+	We can notice that:
+	\[
+		f_n'(x) = \arctan(nx)
+	\]
+	All of $f_n'$ are continuous and also they converge pointwise to 
+	$g(x) = \frac{\pi}{2}$ and monotonically. By Dini's theorem they
+	converge uniformly to $g$. Now if we check convergence for $x=1$
+	in respect to $f_n(x)$ we get that:
+	\[
+		\lim_{n\to\infty}{
+		\left(
+		x\arctan(nx)-\frac{1}{2n}\ln(n^2x^2+1)
+		\right)} = 
+		\frac{\pi}{2}
+	\]
+	Since the sequence of $f_n'$ converges uniformly and $f$ converges at
+	$x=1$ by a theorem $f_n$ uniformly converges. Looking at $J$ we
+	can notice that the first argument is ``stronger'' than the second
+	one and thus exists a sequence of $a_n$ such that:
+	\[
+		f_n(a_n) > \pi
+	\]
+	And then we get:
+	\[
+		\sup_{x\in J}|f_n(x) - f(x)| \geq 
+		|f_n(a_n) - f(a_n)| >
+		\frac{\pi}{2}
+	\]
+	And thus the convergence is not uniform.
+	
+	\newpage
+	
+	\section{Uniform Convergence Theorems}
+	Let $I\subseteq\R$ be an interval or ray and let $f_n\colon I\to\R$ be a 
+	function sequence that converges pointwise to $f\colon I\to\R$. \\
+	\textbf{Show that if the convergence is uniform and each $f_n$ is
+	uniformly continuous on $I$ then $f$ is also uniformly continuous on $I$}
+	\\
+	We know that each $f_n$ is uniformly continuous so for all $\epsilon >0$
+	and for all $n$ exists a delta such that if $|x-y| < \delta$ then:
+	\[
+		|f_n(x) - f_n(y)| < \frac{\varepsilon}{3}
+	\]
+	We also know from pointwise convergence that exists $N$ large enough such
+	that:
+	\begin{align*}
+		|f(x) - f_n(x)| < \frac{\varepsilon}{3} \\
+		|f_n(y) - f(y)| < \frac{\varepsilon}{3}
+	\end{align*}
+	Thus for any $\varepsilon > 0$ we can choose $n > N$ and then for
+	all $|x-y| < \delta$ we get:
+	\[
+		|f(x) - f(y)| < 
+		|f_n(x) - f(x)| + |f_n(x) - f_n(y)| + |f_n(y) - f(y)| < 
+		\frac{\varepsilon}{3} + 
+		\frac{\varepsilon}{3} + \frac{\varepsilon}{3} = \varepsilon
+	\]
+	
+	\newpage
+	
+	\textbf{Show that if the convergence is not uniform, the uniform
+	continuity of $f_n$ does not necessarily imply that $f$ is uniformly
+	continuous.}
+	Consider the following function sequence: 
+	\[
+		f_n(x) = x^n
+	\]
+	We know that it converges pointwise to:
+	\[
+	f(x) = 
+		\begin{cases}
+			0 & x\in[0,1) \\
+			1 & x = 1
+		\end{cases} 
+	\]
+	It is clear that for all $n\in\N$ that $f_n(x)$ is uniformly continuous
+	on $[0,1]$ but the function $f(x)$ is not even continous, thus we 
+	have shown that the uniform continuity of $f_n$ does not necessarily 
+	imply that $f$ is uniformly continuous.
+	
+	\newpage
+	
+	\section{Limits with uniform convergence theorems}
+	\[
+		\lim_{n\to\infty}{\int_{0}^{1}{\arctan\left(\frac{x}{n}\right)\,dx}}
+	\]
+	We know that the function sequence $g_n(x) = \frac{x}{n}$ converges 
+	to $0$ and since:
+	\[
+		\lim_{x\to 0}{\arctan(x)} = 0
+	\]
+	We get that:
+	\[
+		\lim_{n\to\infty}{\arctan\left(\frac{x}{n}\right)} = 0
+	\]
+	Since the function sequence converges pointwise, to $f(x) = 0$ is 
+	monotonic, and all the functions are continuous on a closed interval, 
+	we know by Dini's theorem that the convergence is uniform. 
+	This means that:
+	\[
+		\lim_{n\to\infty}{\int_{0}^{1}{\arctan\left(\frac{x}{n}\right)\,dx}}
+		= \int_{0}^{1}{f(x)\,dx} = \int_{0}^{1}{0\,dx} = 0
+	\]
+	
+	\newpage
+	
+	Now we need to find:
+	\[
+		\lim_{n\to\infty}{\int_{0}^{1}{\sin(x^n)\,dx}}
+	\]
+	We know that the function sequence:
+	\[
+		f_n(x) = \sin(x^n)
+	\]
+	Is monotonic and converges pointwise to $f(x) = 0$ on the interval
+	$[0,1-\epsilon]$ which means by Dini's theorem that the convergence is
+	uniform. We also know that:
+	\[
+		{\int_{1-\epsilon}^{1}{\sin(x^n)\,dx}} \le 
+		{\int_{1-\epsilon}^{1}{1\,dx}} = \epsilon
+	\]
+	We get:
+	\[
+		\lim_{n\to\infty}{\int_{0}^{1}{\sin(x^n)\,dx}} = 
+		\lim_{n\to\infty}\int_{1-\epsilon}^{1}{\sin(x^n)\,dx} \le
+		\epsilon
+	\]
+	Which completes the proof.
+	
+	\newpage
+	
+	\section{Function series}
+	We are now going to practice Weierstrass's M-test now.
+	\[
+	\sum_{n=1}^{\infty}{\frac{n\sin(nx)}{2^n}}\quad\text{on}\quad I=[0,\pi]
+	\]
+	First we need to find the right bounds for each term in the series:
+	\[
+		\left\vert\frac{n\sin(nx)}{2^n}\right\vert \le \frac{n}{2^n} = M_n
+	\]
+	Now all that's left is to notice that using the quotient test on $M_n$
+	gives:
+	\[
+		\lim_{n\to\infty}{\frac{M_{n+1}}{M_{n}}} = 
+		\lim_{n\to\infty}{\dfrac{\frac{n+1}{2^{n+1}}}{\frac{n}{2^n}}} = 
+		\lim_{n\to\infty}{\frac{n+1}{2n}} = \frac{1}{2}
+	\]
+	This means that the series:
+	\[
+		\sum_{n=1}^{\infty}{M_n}
+	\]
+	Converges which completes the proof.
+	
+	\newpage
+	
+	\[
+	\sum_{n=1}^{\infty}{
+	\left(\frac{\ln x}{x}\right)^n}\quad\text{on}\quad I=[1,\infty]
+	\]
+	Here we shall also use Weierstrass's M-test. We know that
+	the limit of the function:
+	\[
+		f(x) = \frac{\ln x}{x}
+	\]
+	Exists since it's a continuous function and converges to zero at
+	infinity. We can mark it $a$ and we can show it's smaller than $1$
+	because we know that on the interval:
+	\[
+		\ln x \le x
+	\]
+	This implies that:
+	\[
+		\left(\frac{\ln x}{x}\right)^n \le a^n = M_n
+	\]
+	And since $a < 1$ we get that the series:
+	\[
+		\sum_{n=1}^{\infty}{M_n}
+	\]
+	Converges which completes the proof.
+	
+	\newpage
+	
+	\section{Convergence radiuses}
+	
+	To calculate convergence radiuses of power series we can use 
+	Chauchy-Hadamard theorem, which states that for a power series:
+	\[
+		\sum_{n=1}^{\infty}{a_n x^n}
+	\]
+	The convergence radius will be:
+	\[
+		R = \limsup_{n\to\infty}{\frac{1}{\vert a_n \vert^{\frac 1n}}}
+	\]
+	Or using D'Alembert test:
+	\[
+		R = \frac{1}{\lim_{n\to\infty}{\vert\frac{a_{n+1}}{a_{n}}\vert}}
+	\]
+	Using that we can determine the radius of convergence of the following
+	series:
+	\[
+		\sum_{n=1}^{\infty}{\frac{\sqrt{n^2+2^n}}{1+3^n}x^n}
+	\]
+	using D'Alembert's theorem and get that since:
+	\begin{align*}
+		\lim_{n\to\infty}
+		{
+			\left\vert \dfrac
+			{\dfrac{\sqrt{(n+1)^2+2^{n+1}}}{1+3^{n+1}}}
+			{\dfrac{\sqrt{n^2+2^n}}{1+3^n}} \right\vert
+		} &= 
+		\lim_{n\to\infty}
+		{
+			\left\vert \dfrac
+			{\sqrt{(n+1)^2+2^{n+1}}(1+3^n)}{(1+3^{n+1})\sqrt{n^2+2^n}} 
+			\right\vert
+		} \\ &= 
+		\lim_{n\to\infty}
+		{
+			\dfrac
+			{\sqrt{(n+1)^2+2^{n+1}}(1+3^n)}{(1+3^{n+1})\sqrt{n^2+2^n}}
+		} \\ &= 
+		\lim_{n\to\infty}
+		{
+			\sqrt{\dfrac{(n+1)^2+2^{n+1}}{n^2+2^n}}
+			\dfrac{1+3^n}{1+3^{n+1}}
+		} \\ &= \sqrt{2} \frac{1}{3} 
+		  \\ &= \frac{\sqrt{2}}{3}
+	\end{align*}
+	The radius of convergence is $R = \frac{3}{\sqrt{2}}$
+	
+	\newpage
+	
+	\[
+		\sum_{n=1}^{\infty}{\frac{e^n n!}{n^n}x^n}
+	\]
+	We see that:
+	\begin{align*}
+		\lim_{n\to\infty}{\sqrt[n]{\frac{e^n n!}{n^n}}} = 
+		\lim_{n\to\infty}{e \sqrt[n]{\frac{n!}{n^n}}} = e \frac{1}{e} = 1
+	\end{align*}
+	So by Chauchy-Hadamard the radius of convergence is $R = 1$
+	
+	\newpage
+	
+	\[
+	\sum_{n=1}^{\infty}{\frac{1}{n}\left(1+\frac{1}{n}\right)^{n^2}x^{2n+1}}
+	\]
+	
+	For this series we need to notice that the coefficients for $x^n$ are
+	actually:
+	\[
+	a_n = 
+		\begin{cases}
+			0 & \text{$n$ is even or $n=1$} \\
+			\frac{1}{(\frac{n-1}{2})}\left(1+\frac{1}{(\frac{n-1}{2})
+			}\right)^{(\frac{n-1}{2})^2} & \text{otherwise}
+		\end{cases}
+	\]
+	We see that we get:
+	\begin{align*}
+		\lim_{n\to\infty}
+		{
+			\sqrt[n]
+			{\frac{1}{(\frac{n-1}{2})}\left(1+\frac{1}{(\frac{n-1}{2})
+			}\right)^{(\frac{n-1}{2})^2}}
+		} &= 
+		\lim_{n\to\infty}
+		{
+			\sqrt[n]{\frac{2}{n-1}}\left(1+\frac{2}{n-1
+			}\right)^{(\frac{n^2-2n+1}{4n})}
+		} \\ &= 
+		\lim_{n\to\infty}
+		{
+			\sqrt[n]
+			{\frac{2}{n-1}}\left(1+\frac{2}{n-1}\right)^{\frac{n-1}{4}}
+		} \\ &= 
+		\lim_{n\to\infty}
+		{
+			\sqrt[n]{\frac{2}{n-1}}
+			\sqrt{\left(1+\frac{2}{n-1}\right)^{\frac{n-1}{2}}}
+		} \\ &= 1*\sqrt{e} \\ &= \sqrt{e}
+	\end{align*}
+	So by Cauchy-d'Alembert we get that the radius of convergence is 
+	$R = \frac{1}{\sqrt{e}}$
+	
+	\newpage
+	
+	\section{Power Seires Theorems}
+	
+	\textbf{Give example to a power series $\sum_{n=0}^{\infty}{a_n x^n}$ 
+	with convergence radius $R=1$ such that $\sum_{n=0}^{\infty}{a_n x^n}$ 
+	does not converge at $x=1$ but 
+	$\sum_{n=0}^{\infty}{\frac{a_n}{n+1} x^{n+1}}$ does converge at $x=1$} \\
+	Consider the following power series:
+	\[
+		\sum_{n=0}^{\infty}{(-1)^n x^n}
+	\]
+	This is actually just the alternating series of the power series:
+	\[
+		\frac{1}{1-x} = \sum_{n=0}^{\infty}{x^n}
+	\]
+	Which we know has a radius of convergence equal to $1$. By Leibniz's
+	test for alternating series we can see that for $|x| < 1$ the series
+	converges, and we see that for $|x| > 1$ the series diverges, that
+	means that its radius of convergence is also $R=1$. Checking for 
+	convergence at $x=1$ we get:
+	\[
+		\sum_{n=0}^{\infty}{(-1)^n 1^n} = 
+		\sum_{n=0}^{\infty}{(-1)^n}
+	\]
+	Which we know does not converge. But the series other series at $x=1$ 
+	gives:
+	\[
+		\sum_{n=0}^{\infty}{\frac{a_n}{n+1} x^{n+1}} =
+		\sum_{n=0}^{\infty}{\frac{(-1)^n}{n+1}}
+	\]
+	Which is the alternating harmonic series which we know does converge.
+	
+	\newpage
+	
+	\textbf{Give example to a power series $\sum_{n=0}^{\infty}{a_n x^n}$ 
+	with convergence radius $1$, such that $\sum_{n=0}^{\infty}{a_n x^n}$ 
+	converges at $x=1$ but $\sum_{n=0}^{\infty}{n a_n x^{n-1}}$ does not 
+	converge at $x=1$} \\
+	Let us define:
+	\[
+		a_n = \frac{(-1)^n}{n+1}
+	\]
+	We can use D'Alembert's test and see that:
+	\[
+		\lim_{n\to\infty}
+		{
+			\left\vert
+			\dfrac{\dfrac{(-1)^{n+1}}{n+1+1}}{\dfrac{(-1)^n}{n+1}}
+			\right\vert
+		} = 
+		\lim_{n\to\infty}
+		{
+			\dfrac{n+2}{n+1}
+		} = 1
+	\]
+	So we know it has a radius of convergence $R = 1$. By the previous
+	exercise we know that its power series converges at $x = 1$ yet we see 
+	that at $x=1$ we get:
+	\[
+		\sum_{n=0}^{\infty}{n a_n x^{n-1}} = 
+		\sum_{n=0}^{\infty}{n \frac{(-1)^n}{n+1}} = 
+		\sum_{n=0}^{\infty}{\left((-1)^n - \frac{(-1)^n}{n+1}\right)}
+	\]
+	Which does not converge since it doesn't satisfy Cauchy's criteria.
+	
+	\newpage
+	
+	Even though more beatiful and elegant solutions exists to the pervious
+	section, we shall now expand some functions as power series around $x=0$
+	and find the radius of convergence.
+	\[
+		f_1(x) = \frac{1}{1+ax},\quad a > 0
+	\]
+	First we shall calculate all the derivatives of $f_1$ as such:
+	\begin{align*}
+		f^{(0)}_1(x) &= \frac{1}{1+ax} \\
+		f^{(1)}_1(x) &= -\dfrac{a}{\left(ax+1\right)^2} \\
+		f^{(2)}_1(x) &= \dfrac{2a^2}{\left(ax+1\right)^3} \\
+		&\dots \\
+		f^{(n)}_1(x) &= (-1)^n \dfrac{n! a^{n}}{\left(ax+1\right)^{n+1}}
+	\end{align*}
+	This means that if exists a power series that converges to $f_1$ around
+	$x = 0$ its coefficients must be:
+	\[
+		a_n = 
+		\frac{(-1)^n \dfrac{n! a^{n}}{\left(a0+1\right)^{n+1}}}{n!} = 
+		(-1)^n a^n
+	\]
+	We can see that:
+	\[
+		\lim_{N\to\infty}{R_N(x)} = 
+		\lim_{N\to\infty}
+		{\sum_{n=N}^{\infty}{(-1)^n a^n x^n}} = 
+		\lim_{N\to\infty}
+		{\sum_{n=N}^{\infty}{(-1)^n (ax)^n}}
+	\]
+	Which is an alternating geometric sum so it converges if and only if:
+	\[
+		-1 < ax < 1 \iff x\in \left(-\frac{1}{a},\frac{1}{a}\right)
+	\]
+	And it converges to:
+	\[
+		\frac{(-1)^N (ax)^N}{1-ax}
+	\]
+	Now we know:
+	\[
+		\lim_{N\to\infty}{R_N(x)} = 
+		\lim_{N\to\infty}{\frac{(-1)^N (ax)^N}{1-ax}} = 
+		\lim_{N\to\infty}{\frac{(-ax)^N}{1-ax}}
+	\]
+	Which converges to $0$ since $x\in \left(-\frac{1}{a},\frac{1}{a}\right)$.
+	We have shown that the original series can be expressed as a power
+	series iff $\lim_{N\to\infty}{R_n(x)} = 0$ and this happens iff
+	\[
+		x\in\left(-\frac{1}{a}, \frac{1}{a}\right)
+	\]
+	Finally we can say that $f_1$ can be expressed as a power series around 
+	$0$ with radius of convergence $R = 1$ and the expression would be:
+	\[
+		\sum_{n=0}^{\infty}{\frac{(-1)^n a^n}{n!}x^n}
+	\]
+	
+	\newpage
+	
+	The previous way to expand the function was not very easy, but in fact
+	there are easier ways. For example let's look at the function:
+	\[
+		f_2(x) = \frac{1}{3x^2-2x-1}
+	\]
+	This function looks a tad weird, but we can see it decomposes to:
+	\[
+		f_2(x) = \frac{1}{3x^2-2x-1} = \frac{1}{(3x+1)(x-1)}
+	\]
+	From here using partial fraction decomposition we get:
+	\[
+		f_2(x) = \frac 14 \frac{1}{x-1} - \frac 34 \frac{1}{3x+1} =
+		-\frac 14 \frac{1}{1-x} - \frac 34 \frac{1}{1-(-3x)}
+	\]
+	And now we can use:
+	\[
+		\frac{1}{1-x} = \sum_{n=1}^{\infty}{x^n}
+	\]
+	And get that:
+	\[
+		f_2(x) = 
+		- \frac 14 \sum_{n=1}^{\infty}{x^n}
+		- \frac 34 \sum_{n=1}^{\infty}{(-3x)^n} = 
+		\sum_{n=1}^{\infty}{-\frac 14 (1+(-3)^{n+1}) x^n}
+	\]
+	Notice that to add the series we had to assume they both converge.
+	We see that the radius of convergence for the series is:
+	\[
+		\limsup_{n\to\infty}
+		{\frac{1}{\left|-\frac 14 (1+(-3)^{n+1})\right|^{\frac 1n}}} = 
+		\frac 13
+	\]
+	And in that radius indeed both of the series we added together converge.
+	
+	\newpage
+	
+	\[
+		f_3(x) = \int_{0}^{x}{\frac{t-\sin t}{t^2}\,dt}
+	\]
+	Ok now this looks kind of scary because it's a weird integral, but
+	if we look first on the integrand we can see that finding it's
+	power series is not that hard.
+	\[
+		x - \sin(x) = 
+		x - \left(x - \frac{x^3}{3!} + \frac{x^5}{5!} - \cdots \right) = 
+		\left(\frac{x^3}{3!} - \frac{x^5}{5!} + \cdots \right)
+	\]
+	And then since dividing by $x$ doesn't change the radius of convergence
+	we get:
+	\[
+		\frac{x - \sin(x)}{x^2} = 
+		\left(\frac{x}{3!} - \frac{x^3}{5!} + \cdots \right)
+	\]
+	Now if we integrate both sides we get:
+	\[
+		\int_{0}^{x}{\frac{t - \sin(t)}{t^2}\,dt} = 
+		\left(\frac{x^2}{2*3!} - \frac{x^4}{4*5!} + \cdots \right)
+	\]
+	In other words we get:
+	\[
+		f_3(x) = \sum_{n=1}^{\infty}{\frac{1}{2n(2n+1)!}x^{2n}}
+	\]
+	
+	\newpage
+	
+	The last function is a very famous function:
+	\[
+		f_4(x) = 
+		\frac{1}{\sqrt{2\pi}}\int_{0}^{x}{e^{-\frac{1}{2}t^2}\,dt}
+	\]
+	This is known as the error function. We see we can solve this question
+	in a very similar method. First we take the series expansion of the
+	exponent function:
+	\[
+		e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots
+	\]
+	Now with a simple substitution we get:
+	\[
+		e^{-\frac{1}{2}x^2} = 
+		1 + {-\frac{1}{2}x^2} + \frac{(-\frac{1}{2}x^2)^2}{2!} + 
+		\frac{(-\frac{1}{2}x^2)^3}{3!} + \cdots
+	\]
+	Performing integration by parts we get:
+	\[
+		\int_{0}^{x}{e^{-\frac{1}{2}t^2}\,dt} = 
+		x
+		{-\frac{x^3}{3*2}} + 
+		\frac{x^5}{5*2^2*2!} - 
+		\frac{x^7}{7*2^3*3!} + \cdots
+	\]
+	Finnaly we get that:
+	\[
+		f_4(x) = 
+		\frac{1}{\sqrt{2\pi}}\int_{0}^{x}{e^{-\frac{1}{2}t^2}\,dt} = 
+		\sum_{n=0}^{\infty}{
+		\frac{1}{\sqrt{2\pi}}
+		\frac{(-1)^n}{(2n+1) 2^n n!}x^{2n+1}}
+	\]
+	
+	\newpage
+	
+	\section{Series Calculations}
+	Find the radius of convergence and the explicit function for the 
+	following series:
+	\[
+		1 + 3x + 5x^2 + 7x^3 + \cdots
+	\]
+	We notice that this is the series:
+	\[
+		\sum_{n=0}^{\infty}{(2n+1)x^n} = 
+		2\sum_{n=0}^{\infty}{nx^n} + 
+		\sum_{n=0}^{\infty}{x^n}
+	\]
+	The latter sum is known to be the geometric sum:
+	\[
+		\frac{1}{1-x} = \sum_{n=0}^{\infty}{x^n}
+	\]
+	And for the first one we need to work a bit. We see that we may want
+	to intergate at sum point so we can calculate:
+	\begin{align*}
+		f(x) &= \sum_{n=0}^{\infty}{nx^n} \\
+		f(x) - 1 &= \sum_{n=1}^{\infty}{nx^n} \\
+		\frac{f(x)}{x} - \frac{1}{x} &= \sum_{n=1}^{\infty}{nx^{n-1}}
+	\end{align*}
+	Now if we integrate we get:
+	\[
+		\int_{0}^{x}{\frac{f(t)}{t} - \frac{1}{t}\,dt} = 
+		\sum_{n=1}^{\infty}{x^{n}} =
+		\frac{1}{1-x}
+	\]
+	This implies that:
+	\[
+		\frac{f(x)}{x} - \frac{1}{x} = \left[\frac{1}{1-x}\right]' = 
+		\dfrac{1}{\left(1-x\right)^2}
+	\]
+	Or in other words:
+	\[
+		f(x) = \dfrac{x}{\left(1-x\right)^2} + 1
+	\]
+	Finally:
+	\[
+		\sum_{n=0}^{\infty}{(2n+1)x^n} = 
+		2\left(\dfrac{x}{\left(1-x\right)^2} + 1\right) + \frac{1}{1-x} = 
+		\frac{x+1}{(1-x)^2} + 1
+	\]
+	With a radius of convergence of $\infty$
+	
+	\newpage
+	
+	Describe the following series as an explicit function:
+	\[
+		\sum_{n=1}^{\infty}{\frac{(-1)^n\cos^{2n}(x)}{n}}
+	\]
+	We see that this series is very similar to a power series. We can
+	substitute $t = \cos(x)$ and get:
+	\[
+		\sum_{n=1}^{\infty}{\frac{(-1)^n\cos^{2n}(x)}{n}} = 
+		\sum_{n=1}^{\infty}{\frac{(-1)^n t^{2n}}{n}}
+	\]
+	This is a known series for $\ln(1-t)$ so the explicit function is:
+	\[
+		\sum_{n=1}^{\infty}{\frac{(-1)^n\cos^{2n}(x)}{n}} = 
+		\ln(1-\cos^2(x))
+	\]
+	
+	\newpage
+	Calculate: 
+	\[
+		\frac{1}{2}\sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)! 4^n}}
+	\]
+	We can see that this is also very similar to a power series:
+	\[
+		\cos(x) = \sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)!}x^{2n+1}}
+	\]
+	We know that the radius of convergence is all of $\infty$ so we
+	can substitute $x = \frac 12$ and get:
+	\[
+		\cos\left(\frac 12\right) = 
+		\frac{1}{2}\sum_{n=0}^{\infty}{\frac{(-1)^n}{(2n+1)! 4^n}}
+	\]
+	
+	\newpage
+	
+	\section{Multivariable Calculus}
+	
+	This section is about multivariable calculus. All the definitions are
+	very similar, so we can just jump straight into it. Let:
+	\[
+		f(x,y) = 
+		\begin{cases}
+			(x^2+y^2)\sin\left(\frac{1}{\sqrt{x^2+y^2}}\right) 
+			& (x,y) \neq (0,0) \\
+			0 & (x,y) = (0,0)
+		\end{cases}
+	\]
+	\textbf{Do $f_x(0,0)$ or $f_y(0,0)$ exist?} \\
+	We see that:
+	\[
+		\frac{\partial f}{\partial x}(0,0) = 
+		\lim_{h\to 0}
+		{\frac{(h^2+0^2)\sin\left(\dfrac{1}{\sqrt{h^2+0^2}}\right) - 0}
+		{h}} = 
+		\lim_{h\to 0}
+		{\frac{h^2\sin\left(\dfrac{1}{\sqrt{h^2}}\right)}{h}} = 
+		\lim_{h\to 0}
+		{h\sin\left(\frac{1}{\vert h \vert}\right)} = 0
+	\]
+	And that:
+	\[
+		\frac{\partial f}{\partial y}(0,0) = 
+		\lim_{h\to 0}
+		{\frac{(0^2+h^2)\sin\left(\dfrac{1}{\sqrt{0^2+h^2}}\right) - 0}
+		{h}} = 
+		\lim_{h\to 0}
+		{\frac{h^2\sin\left(\dfrac{1}{\sqrt{h^2}}\right)}{h}} = 
+		\lim_{h\to 0}
+		{h\sin\left(\frac{1}{\vert h \vert}\right)} = 0
+	\]
+	So both the partial derivatives exist.
+	
+	\newpage
+	
+	\textbf{Is $f$ differentiable at $(0,0)$?} \\
+	We know that $f(x,y)$ is differentiable at $(0,0)$ if and only
+	if the following is equal to zero:
+	\begin{align*} 
+		\lim_{(x,y)\to (0,0)}
+		{\frac{f(x,y) - f(0,0) - \frac{\partial f}{\partial x}(x-0) - 
+		\frac{\partial f}{\partial y}(y-0)}{\sqrt{(x-0)^2+(y-0)^2}}} &= 
+		\lim_{(x,y)\to (0,0)}
+		{\frac{f(x,y)}{\sqrt{x^2+y^2}}} \\ &=
+		\lim_{(x,y)\to (0,0)}
+		{\sqrt{x^2+y^2}\sin\left(\frac{1}{\sqrt{x^2+y^2}}\right)}
+	\end{align*}
+	And in polar coordinates we get:
+	\[
+		\lim_{(x,y)\to (0,0)}
+		{\sqrt{x^2+y^2}\sin\left(\frac{1}{\sqrt{x^2+y^2}}\right)} =
+		\lim_{r\to 0}
+		{r\sin\left(\frac{1}{r}\right)} = 0
+	\]
+	Which means the function is differetiable at $(x,y) = (0,0)$.
+	
+	\newpage
+	
+	\textbf{Is $f_x$ continuous at $(0,0)$?} \\
+	We saw that $f_x(0,0) = 0$ and we see that at any point different
+	from $(0,0)$ we get:
+	\[
+		f_x(x,y) = 2x\sin\left(\dfrac{1}{\sqrt{x^2+y^2}}\right)-
+		\dfrac{x\cos\left(\frac{1}{\sqrt{x^2+y^2}}\right)}
+		{\sqrt{x^2+y^2}}
+	\]
+	And now:
+	\[
+		\lim_{(x,y)\to(0,0)}{\left(2x\sin\left(\dfrac{1}{\sqrt{x^2+y^2}}\right)-\dfrac{x\cos\left(\frac{1}{\sqrt{x^2+y^2}}\right)}{\sqrt{x^2+y^2}}\right)} = 
+		-\lim_{(x,y)\to(0,0)}{\left(\dfrac{x\cos\left(\frac{1}{\sqrt{x^2+y^2}}\right)}{\sqrt{x^2+y^2}}\right)}
+	\]
+	Writing the function in polar form gives:
+	\[
+		\lim_{(x,y)\to(0,0)}{\left(\dfrac{x\cos\left(\frac{1}{\sqrt{x^2+y^2}}\right)}{\sqrt{x^2+y^2}}\right)} = 
+		\lim_{(x,y)\to(0,0)}{\left(\dfrac{r\cos(\theta)\cos(r^{-1})}{r}\right)} = 
+		\lim_{(x,y)\to(0,0)}{\cos(\theta)\cos(r^{-1})}
+	\]
+	Since the limit does not exist we know that $f_x$ is not continuous
+	at $(x,y) = (0,0)$.
+	
+	\newpage
+	
+	Let:
+	\[
+		f(x) = 
+		\begin{cases}
+			\frac{x^2y-3xy^2}{(2x^2+y^2)^\alpha} & (x,y) \neq (0,0) \\
+			0 & (x,y) = (0,0)
+		\end{cases}
+	\]
+	
+	\textbf{For which values of $\alpha$ is $f$ continuous?} \\
+	We see that $f(0,0) = 0$ and also that in polar coordinates:
+	\begin{align*}
+		\lim_{(x,y)\to (0,0)}
+		{\frac{x^2y-3xy^2}{(2x^2+y^2)^\alpha}} &= 
+		\lim_{r\to 0}
+		{\frac{(r\cos(\theta))^2(r\sin(\theta))-3(r\cos(\theta))
+		(r\sin(\theta))^2}{(2(r\cos(\theta))^2+(r\sin(\theta))^2)^\alpha}} = 
+		\lim_{r\to 0}
+		{\frac{r^3 \alpha(\theta)}{(r^2\beta(\theta))^\alpha}} \\ &=
+		\lim_{r\to 0}
+		{\frac{r^3}{r^{2\alpha}}\gamma(\theta)}
+	\end{align*}
+	Such that $\alpha(\theta)$, $\beta(\theta)$ are functions bounded by 
+	$\theta$ and:
+	\[
+		\gamma(\theta) = 
+		\frac
+		{\cos^2(\theta)\sin(\theta) - 3\cos(\theta)\sin^2(\theta)}
+		{(1+\cos^2(\theta))^\alpha} = 
+		\frac
+		{\cos(\theta)\sin(\theta)(\cos(\theta)-3\sin(\theta))}
+		{(1+\cos^2(\theta))^\alpha}
+	\]
+	Since $(1+\cos^2(\theta))^\alpha$ is bounded as such:
+	\[
+		0 < 2^{-\alpha} \le (1+\cos^2(\theta))^\alpha \le 2^\alpha 
+	\]
+	We get that $\gamma(\theta)$ is a bounded function and thus
+	$f$ converges to $0$ if and only if $r^{3-2\alpha}$ is converging
+	to $0$. That means that $f$ is continuous iff:
+	\[
+		0 < 3-2\alpha \Rightarrow \boxed{\alpha < 1.5}
+	\]
+	
+	\newpage
+	
+	\textbf{For which values of $\alpha$ is $f$ differentiable?} \\
+	We see that the function is trivially differetiable everywhere
+	except at $(0,0)$ as composition of diffrentiable functions.
+	We will check differentiablity at the point $(0,0)$ directly.
+	First we will calculate the partial derivatives:
+	\begin{align*}
+		f_x(x,y) = \lim_{h\to 0}
+		{\frac{\frac{0}{2h^{2\alpha}} - 0}{h}} = 0 \\
+		f_y(x,y) = \lim_{h\to 0}
+		{\frac{\frac{0}{h^{2\alpha}} - 0}{h}} = 0
+	\end{align*}
+	We see that $f$ is differentiable iff the following limit is $0$:
+	\[
+		\lim_{(x,y)\to(0,0)}{\frac{\dfrac{x^2y-3xy^2}{(2x^2+y^2)^\alpha} - 0 - f_x(0,0)(x-0) - f_y(0,0)(y-0)}{\sqrt{x^2+y^2}}} = 
+		\lim_{(x,y)\to(0,0)}{\frac{\dfrac{x^2y-3xy^2}{(2x^2+y^2)^\alpha}}{\sqrt{x^2+y^2}}}
+	\]
+	Moving to polar form we get: 
+	\[
+	\lim_{r\to 0}{\frac{\dfrac{(r\cos(\theta))^2(r\sin(\theta))-3(r\cos(\theta))(r\sin(\theta))^2}{(2(r\cos(\theta))^2+(r\sin(\theta))^2)^\alpha}}{r}} = \lim_{r\to 0}{\frac{r^2}{r^{2\alpha}}\gamma(\theta)}
+	\]
+	As we saw $\gamma(\theta)$ is bounded and not always zero and thus the limit
+	is $0$ iff:
+	\[
+		0 < {2-2\alpha} \Rightarrow \boxed{\alpha < 1}
+	\]
+	
+	\newpage
+	
+	\textbf{For which values of $\alpha$ does $f$ have a directional 
+	derivative on the direction $u=(1,2)$?} \\
+	Using the polar form of the function we see that the function
+	will have a directional derivative if and only if:
+	\[
+		\lim_{r\to 0}{\frac{\dfrac{(r\cos(\theta))^2(r\sin(\theta))-3(r\cos(\theta))(r\sin(\theta))^2}{(2(r\cos(\theta))^2+(r\sin(\theta))^2)^\alpha} - 0}{r}}
+	\]
+	exists when $\theta = \arctan(2)$. We see that it equals to:
+	\[
+		\lim_{r\to 0}{\frac{r^2}{r^{2\alpha}}\gamma(\arctan(2))} = 
+		\gamma(\arctan(2))\lim_{r\to 0}{\frac{r^2}{r^{2\alpha}}}
+	\]
+	Which exists iff:
+	\[
+		0 \le {2-2\alpha} \Rightarrow \boxed{\alpha \le 1}
+	\]
+	
+	\newpage
+	
+	\textbf{Raise an example of the function $f\colon \R^2\to\R$ such that 
+	$f$ has a partial derivative on any direction at $(0,0)$ but is not 
+	differentiable at $(0,0)$} \\
+	Consider the following function:
+	\[
+		f(x) = 
+		\begin{cases}
+			\frac{x^2y-3xy^2}{2x^2+y^2} & (x,y) \neq (0,0) \\
+			0 & (x,y) = (0,0)
+		\end{cases}
+	\]
+	This is exactly the same function from the previous question except
+	we set $\alpha=1$. As we saw in previously this function is
+	not differentiable at $(0,0)$ but we see that
+	the derivative on any direction $u=(u_1,u_2)$ exists whenever
+	the following limit exists with $c=\arctan(\frac{u_2}{u_1})$ for
+	$\alpha = 1$, and indeed:
+	\[
+		\lim_{r\to 0}{\frac{r^2}{r^{2}}\gamma(c)} = 
+		\gamma(c)\lim_{r\to 0}{\frac{r^2}{r^{2}}} = \gamma(c)
+	\]
+	We see that the limit exists for any direction so $f(x,y)$ has a directional
+	derivative at any direction at $(0,0)$ but is not differetiable there.
+	Another good exmaple is:
+	\[
+		f(x) = 
+		\begin{cases}
+			\frac{x^3}{x^2+y^2} & (x,y) \neq (0,0) \\
+			0 & (x,y) = (0,0)
+		\end{cases}
+	\]
+	
+	\newpage
+	
+	\textbf{Let $f\colon\R^2\to\R$ and $v=(v_1,v_2)\neq(0,0)$ and $0 < a$.
+	Show that:
+	\[
+		\frac{\partial f}{\partial (av)}(x,y) = 
+	    a \frac{\partial f}{\partial v}(x,y)
+	\]} \\
+	We see that by definition:
+	\[
+		\frac{\partial f}{\partial (av)}(x,y) = 
+		\lim_{h\to 0}{\frac{f(x+hav_1,y+hav_2)-f(x,y)}{h}}
+	\]
+	Denote $c=ha$ and we get:
+	\[
+		\frac{\partial f}{\partial (av)}(x,y) = 
+		\lim_{\frac{c}{a}\to 0}{a\frac{f(x+cv_1,y+cv_2)-f(x,y)}{c}}
+	\]
+	That is the value such that for every $\varepsilon > 0$ exists $\delta'$
+	such that for all $0 < \frac{c}{a} < \delta'$ we get:
+	\[
+		\left\vert a\frac{f(x+cv_1,y+cv_2)-f(x,y)}{c} - 
+		\frac{\partial f}{\partial (av)}(x,y) \right\vert < \varepsilon
+	\]
+	But for that same value we can choose for any epsilon a delta
+	$0 < \delta=\min(\delta',\frac{\delta'}{a})$ since $a > 0$ and get that
+	for all $0 < c < \delta$ that:
+	\[
+		\left\vert a\frac{f(x+cv_1,y+cv_2)-f(x,y)}{c} - 
+		\frac{\partial f}{\partial (av)}(x,y) \right\vert < \varepsilon
+	\]
+	Which means that:
+	\[
+		\lim_{\frac{c}{a}\to 0}{a\frac{f(x+cv_1,y+cv_2)-f(x,y)}{c}} = 
+		a\lim_{c\to 0}{\frac{f(x+cv_1,y+cv_2)-f(x,y)}{c}} = 
+		a \frac{\partial f}{\partial v}(x,y)
+	\]
+	This shows that indeed:
+	\[
+		\boxed{\frac{\partial f}{\partial (av)}(x,y) = 
+	    a \frac{\partial f}{\partial v}(x,y)}
+	\]
+	
+	\newpage
+	
+	\textbf{Let $g(h)\colon\R\to\R$ such that:
+	\[
+		\lim_{h\to0}{g(h)}=0
+	\]
+	And let $f\colon\R^2\to\R$ have a directional derivative on any direction at 
+	$(x_0,y_0)$. Assume that for any $v=(v_1,v_2)\neq(0,0)$ that:
+	\[
+		0 \le \left\vert
+		\frac{f(x_0+hv_1, y_0+hv_2) - f(x_0,y_0)}{h} - 
+		f_x(x_0,y_0)v_1 - f_y(x_0,y_0)v_2 
+		\right\vert
+		\le g(h)
+	\]
+	Show that $f$ is differentiable at $(x_0,y_0)$} \\
+	First we see from the squeeze theorem that:
+	\[
+		\lim_{h\to 0}\left(\frac{f(x_0+hv_1, y_0+hv_2) - f(x_0,y_0)}{h} - 
+		f_x(x_0,y_0)v_1 - f_y(x_0,y_0)v_2\right) = 0
+	\]
+	And since all directional derivatives exist we know that:
+	\[
+		\lim_{h\to 0}\frac{f(x_0+hv_1, y_0+hv_2) - f(x_0,y_0)}{h}
+	\]
+	Exists. From arithmetic of limits we get that:
+	\[
+		\lim_{h\to 0}\frac{f(x_0+hv_1, y_0+hv_2) - f(x_0,y_0)}{h} = 
+		f_x(x_0,y_0)v_1 - f_y(x_0,y_0)v_2
+	\]
+	Denote $hv_1 = \Delta x$ and $hv_2 = \Delta hv_2$ and we get that:
+	\[
+		\lim_{h\to 0}\frac{f(x_0+\Delta x, y_0+\Delta y) - f(x_0,y_0)}{h} = 
+		f_x(x_0,y_0)\frac{\Delta x}{h} - f_y(x_0,y_0)v_2\frac{\Delta y}{h}
+	\]
+	We see know that for some function 
+	$\alpha(\Delta x, \Delta y) \xrightarrow{h\to 0} 0$, which is equivalent to
+	$\alpha(\Delta x, \Delta y) \xrightarrow{(\Delta x, \Delta y)\to (0,0)} 0$
+	that:
+	\[
+		\frac{f(x_0+\Delta x, y_0+\Delta y) - f(x_0,y_0)}{h} = 
+		f_x(x_0,y_0)\frac{\Delta x}{h} - f_y(x_0,y_0)v_2\frac{\Delta y}{h} + 
+		\alpha(\Delta x, \Delta y)
+	\]
+	Then:
+	\[
+		f(x_0+\Delta x, y_0+\Delta y) - f(x_0,y_0) = 
+		f_x(x_0,y_0){\Delta x} - f_y(x_0,y_0)v_2{\Delta y} + 
+		\alpha(\Delta x, \Delta y)h
+	\]
+	But we also see that:
+	\[
+		|h||v| = \sqrt{h^2(v_1^2 + v_2^2)} = \sqrt{\Delta x^2 + \Delta y^2}
+	\]
+	Which gives:
+	\[
+		f(x_0+\Delta x, y_0+\Delta y) - f(x_0,y_0) = 
+		f_x(x_0,y_0){\Delta x} - f_y(x_0,y_0)v_2{\Delta y} + 
+		\frac{\alpha(\Delta x, \Delta y)}{v}\sqrt{\Delta x^2 + \Delta y^2}
+	\]
+	And that is exactly the definition of $f$ being differentiable at 
+	$(x_0,y_0)$.
+	
+	\newpage
+	
+	Let $f\colon\R^2\to\R$ be a differential function at $(0,0)$. \\
+	\textbf{Show that:
+	\[
+		g(x,y) = f(x,y) - f(y,x)
+	\]
+	is differentiable at $(0,0)$} \\
+	We need to show that:
+	\[
+		\lim_{(x,y)\to(0,0)}{\frac{g(x,y)-g(0,0)-\frac{\partial g}
+		{\partial x}(0,0)(x) - \frac{\partial g}{\partial y}(0,0)
+		(y)}{\sqrt{x^2+y^2}}} = 0
+	\]
+	Or in another words that:
+	\begin{align*}
+		\lim_{(x,y)\to(0,0)} {\frac{f(x,y) - f(y,x) 
+		-\frac{\partial f(x,y) - f(y,x)}
+		{\partial x}(0,0)(x) - \frac{\partial f(x,y) - f(y,x)}
+		{\partial y}(0,0)(y)}{\sqrt{x^2+y^2}}} = 0
+	\end{align*}
+	We can use derivation arithmetic to see that the expression is just:
+	\begin{align*}
+		\lim_{(x,y)\to(0,0)} {
+		\frac{f(x,y) - f(y,x) -
+		\frac{\partial f(x,y)}{\partial x}(0,0)(x) +
+		\frac{\partial f(y,x)}{\partial x}(0,0)(x) - 
+		\frac{\partial f(x,y)}{\partial y}(0,0)(y) + 
+		\frac{\partial f(y,x)}{\partial y}(0,0)(y)}
+		{\sqrt{x^2+y^2}}}
+	\end{align*}
+	Reordering gives:
+	\begin{align*}
+		\lim_{(x,y)\to(0,0)} &{
+		\frac{
+		f(x,y)
+		-f(0,0)
+		-\frac{\partial f(x,y)}{\partial x}(0,0)(x) 
+		-\frac{\partial f(x,y)}{\partial y}(0,0)(y)
+		}
+		{\sqrt{x^2+y^2}}} \\ & -
+		\frac{
+		f(y,x)
+		-f(0,0)
+		-\frac{\partial f(y,x)}{\partial x}(0,0)(x)  
+		-\frac{\partial f(y,x)}{\partial y}(0,0)(y)
+		}
+		{\sqrt{x^2+y^2}}
+	\end{align*}
+	The first summand goes to $0$ since $f(x,y)$ is differentiable at zero. 
+	If we show that $f(y,x)$ is also differentiable at zero that would mean the 
+	other  part will also go to $0$ which will complete the proof. We see that 
+	$f(y,x)$ is just an isometry of $f(x,y)$ since it is a reflection on the axis
+	$y=x$. That means that if property $P_{xy}$ is true for $f(x,y)$ then
+	the property $P_{yx}$ is true for $f(y,x)$. In particular if $P_{00}$ is
+	being differentible at $(0,0)$ then we know that $f(y,x)$ is also
+	differetiable at $(0,0)$ which completes the proof.
+	
+	\newpage
+	
+	\textbf{Let:
+	\[
+		h(x,y) = f(\vert x\vert,y^2)
+	\]
+	show that: 
+	\[
+		h \text{ is differentiable at } (0,0) 
+		\text{ if and only if }
+		f_x(0,0)=0
+	\]} \\
+	Let $f_x(0,0) = a \neq 0$ we get that:
+	\[
+		\lim_{x\to 0^+}\frac
+		{h(x,0) - h(0,0)}
+		{x} = 
+		\lim_{x\to 0^+}\frac
+		{f(|x|,0) - f(0,0)}
+		{x} = f_x(0,0)
+	\]
+	And
+	\[
+		\lim_{x\to 0^-}\frac
+		{h(x,0) - h(0,0)}
+		{x} = 
+		\lim_{x\to 0^-}\frac
+		{f(|x|,0) - f(0,0)}
+		{-|x|} = -f_x(0,0)
+	\]
+	Since $f_x(0,0) \neq 0$ these are two different numbers,
+	so the directional derivative in the direction of $u = (1,0)$ does not
+	exist which implies  that $h$ is not differentiable. The other direction
+	can be proved using the definition of differentiability and manipulation
+	the limits.
+	
+	\newpage
+	
+	\section{The Chain Rule and Integrals Depending on a Parameter}
+	\textbf{Let $f\colon[a,\infty) \to \R$ continuous and define:
+	\[
+		I_n(x) = \int_{a}^{x}{(x-t)^{n-1}f(t)\,dt}
+	\]
+	For every natural $n$ and any $x > a$ prove that:
+	\[
+		\left(\frac{d^n}{dx^n} I_n\right)(x) = (n-1)! f(x)
+	\]}
+	When we see integral with parameters the intuition should be to start
+	thinking about functions in multiple variables so we may define:
+	\[
+		f(x,y) = (x-y)^{n-1}f(y)
+	\]
+	We can see that this function is defined and is continuous on any 
+	rectangle of the form $[a,b]\times[c,d]$ such that $a < b$ and also
+	$a < c < d$ and we see that the function is also continuously 
+	differentiable in respect to $x$ and we get:
+	\[
+		\frac{\partial^m}{\partial x^m}f(x,y) = 
+		(n-1)(n-2)\dots(n-m)(x-y)^{n-m-1}f(y)
+	\]
+	Using Leibniz's integral rule we get that:
+	\[
+		\frac{d}{dx}I_n(x) = 
+		\frac{d}{dx}\int_{a}^{x}{(x-y)^{n-1}f(y)\,dy} = 
+		(n-1)\int_{a}^{x}{(x-y)^{n-2}f(y)\,dy}
+	\]
+	Similarly for any $m < n-1$ we get that:
+	\[
+		\frac{d^m}{dx^m}I_n(x) = 
+		\frac{d^m}{dx^m}\int_{a}^{x}{(x-y)^{n-1}f(y)\,dy} = 
+		(n-1)(n-2)\dots(n-m)\int_{a}^{x}{(x-y)^{n-m-1}f(y)\,dy}
+	\]
+	And specifically for $m = n - 1$ we get:
+	\[
+		\frac{d^{n-1}}{dx^{n-1}}I_n(x) = 
+		\frac{d^{n-1}}{dx^{n-1}}\int_{a}^{x}{(x-y)^{n-1}f(y)\,dy} = 
+		(n-1)!\int_{a}^{x}{f(y)\,dy}
+	\]
+	And now from the fundamental theorem of calculus we get that:
+	\[
+		\frac{d^{n}}{dx^{n}}I_n(x) = 
+		\frac{d}{dx}(n-1)!\int_{a}^{x}{f(y)\,dy} = 
+		(n-1)!f(x)
+	\]
+	Like we wanted.
+	
+	\newpage
+	
+	\textbf{Let $f(x,y)$ be a function with continuous partial derivatives
+	in $D$, and let $p=(x_1,y_2)$ and $q=(x_2,y_2)$ be two points in $D$
+	such that:
+	\[
+		\{(tx_1+(1-t)x_2, ty_1+(1-t)y_2) \colon t\in[0,1]\} \subseteq D
+	\]}
+	Meaning the straight line connecting the points $p,q$ is inside $D$
+	and we can denote it $[p,q]$. Show that exists a point $w=(x',y')\in[p,q]$
+	such that:
+	\[
+		f(q) - f(p) = 
+		\frac{\partial}{\partial x}(w)(x_1-x_2) +
+		\frac{\partial}{\partial y}(w)(y_1-y_2)
+	\]
+	We can notice that this question seems just like Lagrange's theorem.
+	We may define the function 
+	\[
+		\gamma(t) = (tx_1+(1-t)x_2, ty_1+(1-t)y_2), \quad t\in[0,1]
+	\]
+	We may notice that this function is differentiable and thus if we consider
+	the composition $F := f\circ\gamma$ we can see that it is differentiable
+	on $[0,1]$ so using Lagrange's theorem and the chain rule we get that
+	exists $c\in[0,1]$ such that:
+	\[
+		F(1) - F(0) = F'(c)
+	\]
+	We can substitute:
+	\begin{align*}
+		F(0) &= f(p) \\
+		F(1) &= f(q)
+	\end{align*}
+	And we also get from the chain rule:
+	\[
+		F'(c) =
+		\frac{\partial f}{\partial x}(\gamma(c))(\gamma_1)'(c) + 
+		\frac{\partial f}{\partial y}(\gamma(c))(\gamma_2)'(c) = 
+		\frac{\partial f}{\partial x}(\gamma(c))(x_1-x_2) + 
+		\frac{\partial f}{\partial y}(\gamma(c))(y_1-y_2)
+	\]
+	So now if we just define $w = \gamma(c)$ we get:
+	\[
+		f(q) - f(p) = 
+		\frac{\partial}{\partial x}(w)(x_1-x_2) +
+		\frac{\partial}{\partial y}(w)(y_1-y_2)
+	\]
+	
+	\newpage
+	
+	\section{Leibniz's Rule}
+	\[
+		\int_{0}^{1}{\frac{\ln(1+x)}{1+x^2}\,dx}
+	\]
+	We can consider the function:
+	\[
+		F(y) = \int_{0}^{y}{\frac{\ln(1+xy)}{1+x^2}\,dx}
+	\]
+	The integrand is the function:
+	\[
+		f(x,y) = \frac{\ln(1+xy)}{1+x^2}
+	\]
+	Which is continuous on $[0,2]\times[0,2]$ and we see that:
+	\[
+		\frac{\partial f}{\partial y} = 
+		\dfrac{x}{\left(x^2+1\right)\left(xy+1\right)}
+	\]
+	Which is continuous on $[0,2]\times[0,2]$ as well. To use Leibniz's
+	rule we also need to calculate:
+	\begin{align*}
+		\alpha(y) = 0 \\
+		\alpha'(y) = 0 \\
+		\beta(y) = y \\
+		\beta'(y) = 1 \\
+	\end{align*}
+	Now using Leibniz's rule we get:
+	\[
+		\frac{d}{dy}F(y) = 
+		\int_{0}^{y}{\dfrac{x}{\left(x^2+1\right)\left(xy+1\right)}\,dx} + 
+		f(\beta(y),y) = 
+		\int_{0}^{y}{\dfrac{x}{\left(x^2+1\right)\left(xy+1\right)}\,dx} +
+		\frac{\ln(1+y^2)}{1+y^2}
+	\]
+	After performing partial fraction decomposition we get that:
+	\[
+		F'(y) = 
+		\frac{\ln(1+y^2)}{1+y^2} + 
+		\frac{1}{1+y^2}\int_{0}^{y}{\frac{y+x}{1+x^2}\,dx} -
+		\frac{1}{1+y^2}\int_{0}^{y}{\frac{y}{1+xy}\,dx}
+	\]
+	And now these are things we already know how to solve.
+	\[
+		\int_{0}^{y}{\frac{y+x}{1+x^2}\,dx} = 
+		y\arctan(x)\biggr\vert^{y}_{0} + 
+		\frac{1}{2}\ln(1+x^2)\biggr\vert^{y}_{0}
+	\]
+	And:
+	\[
+		\int_{0}^{y}{\frac{y}{1+xy}\,dx} = 
+		y\ln(1+xy)\biggr\vert^{y}_{0}
+	\]
+	Finally we get:
+	\[
+		F'(y) = 
+		\frac{y}{1+y^2}\arctan(y) + 
+		\frac{1}{2}\frac{1}{1+y^2}\ln(1+y^2) = 
+		\left[\frac{1}{2} \arctan(y)\ln(1+y^2)\right]'
+	\]
+	We get that:
+	\[
+		F(y) = \frac{1}{2} \arctan(y)\ln(1+y^2) + C
+	\]
+	But we know that $F(0) = 0$ so we get that $C = 0$ and then we end up 
+	with:
+	\[
+		\int_{0}^{1}{\frac{\ln(1+x)}{1+x^2}\,dx} = F(1) = 
+		\frac{1}{2} \arctan(1)\ln(2) = \frac{\pi}{8}\ln(2)
+	\]
+	
+	\newpage
+	
+	\[
+		\int_{0}^{1}{\frac{dx}{(x^2+a^2)^3}}
+	\]
+	We can easily solve the integral if $a = 0$ so from now on we shall assume
+	that $a > $. We are advised to look at the function:
+	\[
+		F(y) = \int_{0}^{1}{\frac{dx}{x^2+y^2}}
+	\]
+	We see that the integrand is:
+	\[
+		f(x,y) = \frac{1}{x^2+y^2}
+	\]
+	This function is continuous and differentiable for any $(x,y) \neq (0,0)$
+	as we can see and it's derivatives are:
+	\begin{align*}
+		\frac{\partial f}{\partial y} (x,y) &= 
+		-\dfrac{2y}{\left(y^2+x^2\right)^2} \\
+		\frac{\partial^2 f}{\partial y^2} (x,y) &= 
+		\dfrac{8y^2}{\left(y^2+x^2\right)^3}-\dfrac{2}{\left(y^2+x^2\right)^2}
+	\end{align*}
+	These are continuous also for any $(x,y) \neq (0,0)$, using Leibniz's
+	rule twice we get on the rectangle $[0,1]\times[\frac{a}{2},2a]$ that:
+	\[
+		F'(y) = \int_{0}^{1}{-\dfrac{2y}{\left(y^2+x^2\right)^2}\,dx}
+		\quad\text{and}\quad
+		F''(y) = \int_{0}^{1}{\left(
+		\dfrac{8y^2}{\left(y^2+x^2\right)^3}-\dfrac{2}
+		{\left(y^2+x^2\right)^2}\right)\,dx}
+	\]
+	We notice that the second derivative can be also written as:
+	\[
+		F''(y) = \frac{F'(y)}{y} + 8y^2\int_{0}^{1}{\frac{dx}{(x^2+y^2)^3}}
+	\]
+	So we want to find:
+	\[
+		\frac{1}{8a^2}\left(F''(a) - \frac{F'(a)}{a}\right)
+	\]
+	We actually can find $F(y)$ directly using substitution and find
+	out that:
+	\[
+		F(y) = \frac{\arctan(y^{-1})}{y}
+	\]
+	We can now calculate the derivatives directly:
+	\begin{align*}
+		F'(y) = \frac{-1}{1+y^2} \\
+		F''(y) = \frac{-2y}{(1+y^2)^2}
+	\end{align*}
+	Finally we can substitute everything and get that:
+	\[
+		\int_{0}^{1}{\frac{dx}{(x^2+a^2)^3}} =
+		\frac{1}{8a^2}\left(F''(a) - \frac{F'(a)}{a}\right) = 
+		\frac{a^2-1}{8a^3(1+a^2)^2}
+	\]
+	
+	\newpage
+	
+	\[
+		\frac{d}{dx}\left(\int_{0}^{1}{\frac{\sin(xy)}{y}\,dx}\right)
+	\]
+	Here again we obviously need to use Leibniz's rule. We can define:
+	\[
+		f(x,y) = \frac{\sin(xy)}{y}
+	\]
+	This function is continuous at any point except where $y = 0$ so using
+	Lebiniz's rule we get:
+	\[
+		\frac{d}{dx}\left(\int_{0}^{1}{\frac{\sin(xy)}{y}\,dx}\right) = 
+		\int_{0}^{1}{\frac{\partial}{\partial x}
+		\left(\frac{\sin(xy)}{y}\right)\,dx} = 
+		\int_{0}^{1}{\cos(xy)\,dx} = -\frac{\sin(x)}{x}
+	\]
+	Writing again we got that:
+	\[
+		\frac{d}{dx}\left(\int_{0}^{1}{\frac{\sin(xy)}{y}\,dx}\right) = 
+		-\frac{\sin(x)}{x}
+	\]
+	We so still need to show that we have used Leibniz's rule correctly and
+	indeed by definition we know that:
+	\[
+		\int_{0}^{1}{\frac{\sin(xy)}{y}\,dx} = 
+		\lim_{\epsilon\to0^+}{\int_{\epsilon}^{1}{\frac{\sin(xy)}{y}\,dx}}
+	\]
+	So we know we could use Leibniz's rule on the rectangles 
+	$[\epsilon,1]\times[0,1]$ and now we know that our result holds.
+	
+	\newpage
+	
+	A function $f(x,y)$ is called homogeneous of degree $0 \le m$ if:
+	\[
+		f(tx,ty) = t^m f(x,y)
+	\]
+	For every $t > 0$ and every $(x,y) \in \R^2$. \\
+	\textbf{A homogeneous function of degree $m$ has a limit at the origin
+	if and only if it is constant} \\
+	By definition we get that:
+	\[
+		f(tx,ty) = t^0 f(x,y) = f(x,y)
+	\]
+	For every $t > 0$, if the function is constant then it has a limit
+	at the origin which is the constant. For the other direction if
+	we assume the function has a limit at the origin we can write:
+	\[
+		\lim_{(x,y)\to(0,0)}{f(x,y)} = L
+	\]
+	Using the homogeneity we get that for any $t > 0$:
+	\[
+		f(x,y) = f\left(\frac{x}{t},\frac{y}{t}\right)
+	\]
+	Which means that:
+	\[
+		f(x,y) = \lim_{t\to\infty}{f\left(\frac{x}{t},\frac{y}{t}\right)} = L
+	\]
+	Which means the function is constant. \\
+	\textbf{Show that a homogeneous function of degree $0 \le m$ with
+	continuous dervatives satisfies:
+	\[
+		x \frac{\partial f}{\partial x}(x,y) + 
+		y \frac{\partial f}{\partial y}(x,y) = 
+		mf(x,y)
+	\]
+	For every $(x,y) \neq (0,0)$} \\
+	Suppose we look at $(x_0,y_0)$ since we see we need to do something
+	with the chain rule later we define a new function:
+	\[
+		\gamma(t) = (tx_0,ty_0)
+	\]
+	Since $f$ is homogeneous of degree $m$:
+	\[
+		f\circ\gamma(t) = f(tx_0,ty_0) = t^mf(x_0,y_0)
+	\]
+	We will now derive both sides while using the chain rule and we get:
+	\begin{align*}
+		\frac{d}{dt}f\circ\gamma(t) &= 
+		x_0 \frac{\partial f}{\partial x}(x_0,y_0) + 
+		y_0 \frac{\partial f}{\partial y}(x_0,y_0) \\
+		\frac{d}{dt}t^mf(x_0,y_0) &= mt^{m-1}f(x_0,y_0)
+	\end{align*}
+	Since this is true for any $t > 0$ if we substitute $t = 1$ we get:
+	\[
+		x \frac{\partial f}{\partial x}(x,y) + 
+		y \frac{\partial f}{\partial y}(x,y) = 
+		mf(x,y)
+	\]
+	
+	\newpage
+	%% WEIRD QUESTION IDK WHAT THEY WANT
+	\iffalse
+	\textbf{Show that any homogeneous function can be written as:
+	\[
+		f(x,y) = x^m F\left(\frac{y}{x}\right)
+	\]
+	For any $x \neq 0$} \\
+	This is true because without loss of generality assume $x > 0$ we
+	get that $t = \frac{1}{x} > 0$ and then we know that:
+	\[
+		f(x,y) = \left(\frac{1}{x}\right)^m f\left(1,\frac{y}{x}\right)
+	\]
+	Which means that if we denote 
+	$F\left(\frac{y}{x}\right) = f\left(1,\frac{y}{x}\right)$ we get:
+	\[
+		f(x,y) = \left(\frac{1}{x}\right)^m F\left(\frac{y}{x}\right)
+	\]
+	\fi
+	
+	\newpage
+	
+	\section{Leibniz's Theorem and Fubini's Theorem}
+	\[
+		\int_{0}^{\frac{\pi}{2}}{(a^2\cos^2(x) + b^2\sin^2(x))\,dx}
+	\]
+	We are advised to consider the following function:
+	\[
+		F(y) = 
+		\int_{0}^{\frac{\pi}{2}}{(y^2\cos^2(x) + b^2\sin^2(x))\,dx}
+	\]
+	Ok this can be solved but not now.\\
+	
+	Some more integrals...
+	
+	\newpage
+	
+	\textbf{Show that for any $p > 1$ and for any $m\in\N$ that:
+	\[
+		\int_{0}^{1}{x^p(\ln x)^m\,dx} = \frac{(-1)^m m!}{(p+1)^{m+1}}
+	\]}
+	We may try to solve this intergal by applying integration by parts
+	multiple times, but there is a more elegant way to solve this by
+	noticing:
+	\[
+		a^t = e^{t\ln(a)} 
+		\quad\text{and}\quad
+		(a^t)' = \ln(a) e^{t\ln(a)} = \ln(a) a^t
+	\]
+	We can see that:
+	\[
+		\frac{d^m}{dt^m}a^t = \ln^m(a) a^t
+	\]
+	So if we define $f(x,y) = x^y$ we get:
+	\[
+		\frac{d^m}{dy^m}f(x,y) = x^y (\ln x)^m
+	\]
+	Which means that our integrand is continuously differentiable for
+	$x > 0$ and $y > 1$ and now we can define:
+	\[
+		G_m(y) = 
+		\int_{0}^{1}{x^y(\ln x)^m\,dx} = 
+		\int_{0}^{1}{\frac{d^m}{dy^m}f(x,y)\,dx}
+	\]
+	And:
+	\[
+		F(y) = \int_{0}^{1}{x^y\,dx}
+	\]
+	Using Leibniz's rule on the rectangle $R = [0,1]\times[1,p]$ on $F(y)$
+	we get:
+	\[
+		F^{(m)}(y) = G_m(y)
+	\]
+	So we want to find $F^{(m)}(p)$ but we know that:
+	\[
+		F(y) = \int_{0}^{1}{x^y\,dx} = \frac{x^{y+1}}{y+1}\biggr\vert_0^1 =
+		\frac{1}{1+y}
+	\]
+	And we can also calculate the $m$th derivative of $F$ manually:
+	\begin{align*}
+		F'(y) &= -\dfrac{1}{\left(y+1\right)^2} \\
+		F''(y) &= \dfrac{2}{\left(y+1\right)^3} \\
+		&\dots \\
+		F^{(m)}(y) &= \frac{(-1)^m m!}{(y+1)^{m+1}}
+	\end{align*}
+	So the result is:
+	\[
+		\int_{0}^{1}{x^p(\ln x)^m\,dx} = \frac{(-1)^m m!}{(p+1)^{m+1}}
+	\]
+	As wanted.
+	
+	\newpage
+	\section{Test 1}
+	Check convergence for the following series and integral:
+	\[
+		\sum_{n=1}^{\infty}
+		{\left(\frac{1}{n} - \sin\left(\frac{1}{n}\right)\right)}^{\frac 23}
+	\]
+	The intuition here is not very clear at first. We may want to use
+	the comparison test somehow and we will. We notice a couple of things.
+	First that from some index we will get that:
+	\[
+		0 < \frac{1}{n} < \sin\left(\frac{1}{n}\right)
+	\]
+	Which means that the series is positive from some place. And also
+	from L'H\^opital's rule we can see that:
+	\[
+		\lim_{x\to0^+}{\frac{x - \sin(x)}{x^3}} = 
+		\lim_{x\to0^+}{\frac{1 - \cos(x)}{3x^2}} = 
+		\lim_{x\to0^+}{\frac{\sin(x)}{6x}} = \frac{1}{6}
+	\]
+	And more precisely we get that:
+	\[
+		\lim_{n\to\infty}
+		{\frac{(\frac{1}{n} - \sin\left(\frac{1}{n}\right))
+		^{\frac{2}{3}}}{1/n^2}} = \left(\frac{1}{6}\right)^{\frac{2}{3}}
+	\]
+	This means that by the limit comparison test our series converges
+	because we know that the series:
+	\[
+		\sum_{n=1}^{\infty}{\frac{1}{n^2}}
+	\]
+	Converges.
+	
+	\newpage
+	
+	\[
+		\int_{1}^{\infty}{\ln\left(1+\frac{\sin x}{x}\right)\,dx}
+	\]
+	We are advised to first show that the improper integral:
+	\[
+		\int_{1}^{\infty}{\left(\ln\left(1+\frac{\sin x}{x}\right)
+		- \frac{\sin x}{x}\right)\,dx}
+	\]
+	Absolutely converges. We know that near $x = 0$ we have:
+	\[
+		\ln(1+x) = x - \frac{x^2}{2} + o(x^2)
+	\]
+	Now we can use a similar technique to the one from the previous question
+	and consider:
+	\[
+		\lim_{x\to\infty}{\frac{\ln(1+x) - x}{x^2}} = -\frac 12
+	\]
+	Now we get that:
+	\[
+		\lim_{x\to\infty}
+		{\frac{\ln(1+\frac{\sin x}{x}) - \frac{\sin x}{x}}
+		{(\frac{\sin x}{x})^2}} 
+		= -\frac 12
+	\]
+	We know that the nominator is negative for a small enough delta
+	and thus we can you the limit comparison test with:
+	\[
+		\int_{1}^{\infty}{\left(\frac{\sin x}{x}\right)^2\,dx}
+	\]
+	and know that:
+	\[
+		\int_{1}^{\infty}{\left(\ln\left(1+\frac{\sin x}{x}\right)
+		- \frac{\sin x}{x}\right)\,dx}
+	\]
+	Absolutely converges. Because from Dirichlet's test we know that:
+	\[
+		\int_{1}^{\infty}{\frac{\sin x}{x}\,dx}
+	\]
+	Converges we can use improper integral arithmetic to get that:
+	\[
+		\int_{1}^{\infty}{\ln\left(1+\frac{\sin x}{x}\right)\,dx}
+	\]
+	Converges.
+	
+	\newpage
+	
+	Prove or disprove the following claim: \\
+	\textbf{Let $\sum{a_n}$ converge and $b_n$ be bounded then 
+	$\sum{a_n b_n}$ also converges.} \\
+	This is not true because we can choose:
+	\begin{align*}
+		a_n &= \frac{(-1)^n}{n} \\
+		b_n &= (-1)^n
+	\end{align*}
+	It is clear that the conditions are satisfied and we see that:
+	\[
+		\sum{a_n b_n} = \sum_{n=1}^{\infty}{\frac{1}{n}}
+	\]
+	Which does not converge.
+	
+	\newpage
+	
+	\textbf{If $f(x,y)$ is defined around the origin and has partial
+	derivatives in the origin then it is continuous there} \\
+	This is false. We can consider the following counter example:
+	\[
+		f(x,y) = \begin{cases}
+			\frac{xy}{x^2+y^2} &(x,y) \neq (0,0) \\
+			0 &(x,y) = (0,0)
+		\end{cases}
+	\]
+	The partial derivatives exist because by definition:
+	\[
+		\frac{\partial f}{\partial x}(0,0) = 
+		\lim_{\Delta x\to 0}
+		\frac{f(\Delta x, 0) - f(0,0)}{\Delta x} = 
+		0
+	\]
+	Similarly the other partial derivative exists but we get that:
+	\[
+		\lim_{t\to 0}{f(t,t)} = \frac{1}{2}
+	\]
+	So the function is not continuous at the origin.
+	
+	\newpage
+	
+	\textbf{Let $f(x)$ have a derivative $f'(0) = a \neq 0$ and $f(0) = 0$
+	Show that any positive sequence $a_n$ that converges to $0$ satisfies:
+	\[
+		\sum_{n=1}^{\infty}{a_n} \quad \text{Converges} \iff
+		\sum_{n=1}^{\infty}{f(a_n)} \quad \text{Converges}
+	\]}
+	Let $a_n$ converge to $0$, we know that since:
+	\[
+		\lim_{x\to 0}{\frac{f(x)-f(0)}{x-0}} = a
+	\]
+	That:
+	\[
+		\lim_{n\to \infty}{\frac{f(a_n)}{a_n}} = a
+	\]
+	Suppose that $a > 0$ we get that by the limit comparison that that
+	from some point $f(a_n) > 0$ and we know $a_n > 0$ so we get
+	that:
+	\[
+		\sum_{n=1}^{\infty}{a_n} \quad \text{Converges} \iff
+		\sum_{n=1}^{\infty}{f(a_n)} \quad \text{Converges}
+	\]
+	If $a < 0$ we can change $f$ with $-f$ to get the same result.
+	
+	\newpage
+	
+	\textbf{Give an example for a function $f(x)$ such that $f(0)=f'(0)=0$
+	and $f''(0) \neq 0$ and a positive sequence $a_n$ such that:
+	\[
+		\sum_{n=1}^{\infty}{a_n} \quad \text{Diverges and} \quad
+		\sum_{n=1}^{\infty}{f(a_n)} \quad \text{Converges}
+	\]}
+	We can choose:
+	\begin{align*}
+		f(x) &= x^2 \\
+		a_n  &= \frac{1}{n}
+	\end{align*}
+	We get that:
+	\[
+		f(0)=f'(0)=0
+	\quad \text{and} \quad f''(0) = 2 \neq 0
+	\]
+	And of course:
+	\[
+		\sum_{n=1}^{\infty}{\frac{1}{n}} \quad \text{Diverges and} \quad
+		\sum_{n=1}^{\infty}{\frac{1}{n^2}} \quad \text{Converges}
+	\]
+	
+	\newpage
+	
+	\textbf{Prove the following series converges for any $x\in[0,\infty)$ and
+	find the sum:
+	\[
+		\sum_{n=0}^{\infty}{\frac{x}{(1+x)^n}}
+	\]}
+	For $x = 0$ we get that the sum is $0$ and otherwise we get a geometric
+	series with a factor of $\frac{1}{1+x}$ with a sum of:
+	\[
+		\frac{a_1}{1-q} = \frac{x}{1-\frac{1}{1+x}} = 1 + x
+	\]
+	Which means that:
+	\[
+		s(x) = \begin{cases}
+			0 &x=0 \\
+			1+x &x\in(0,\infty)
+		\end{cases}
+	\]
+	
+	\newpage
+	
+	\textbf{Show that the series does not uniformly converge on $[0,1]$} \\
+	There are two ways to show this. First, to consider uniform convergence
+	we want to consider the series as a sequence of functions and we denote:
+	\[
+		s_m(x) = \sum_{n=0}^{m}{\frac{x}{(1+x)^n}}
+	\]
+	And now we can see that:
+	\[
+		s(x) - s_m(x) = \begin{cases}
+			0 &x=0 \\
+			\frac{1}{(1+x)^m} &x\in(0,\infty)
+		\end{cases}
+	\]
+	In this case:
+	\[
+		\sup_{x\in[0,1]}{s(x) - s_m(x)} = 
+		\sup_{x\in(0,1]}{\frac{1}{(1+x)^m}} = 1 \neq 0
+	\]
+	Which means the convergence is not uniform. The other way to solve
+	this is by considering that all the functions $s_m(x)$ are continuous
+	which means that if the convergence were uniform then $s(x)$ must
+	also be continuous, but since it is not continuous we can say that
+	the convergence was also not uniform.
+	
+	\newpage
+	
+	\textbf{Prove that the series:
+	\[
+		\sum_{n=0}^{\infty}{\frac{x^2}{(1+x)^n}}
+	\]
+	Converges uniformly on $[0,1]$} \\
+	This can be done in two ways as well. It would be much better for us
+	by now to think first of all about Dini's theorem. The function
+	series is non-negative, all the functions are continuous and the
+	point-wise limit of the function is:
+	\[
+		s(x) = \begin{cases}
+			0 &x=0 \\
+			x(1+x) &x\in(0,\infty)
+		\end{cases}
+	\]
+	Which is continuous. By Dini's theorem, the convergence is uniform.
+	The other way would be to calculate directly of course like we did
+	earlier but there is no need to show that calculation or do that
+	at all if you were comfortable with the previous direct calculation.
+	
+	\newpage
+	
+	\textbf{Let $0 < a < b$ be constant and define $f(x,y) = x^y$ for any
+	$(x,y)\in[0,1]\times[a,b]$ prove by calculation that for any $x\in[0,1]$:
+	\[
+		\int_{a}^{b}{x^y\,dy} = I(x) = \begin{cases}
+			0 &x=0 \\
+			b-a &x=1 \\
+			\frac{x^b - x^a}{\ln x} &x\in(0,1)
+		\end{cases}
+	\]
+	And explain why $I(x)$ is continuous on $[0,1]$} \\
+	It may be hard to notice but the question actually states that we should
+	solve this by calculation, which may seem tiring but we can see that
+	in this case it's quite the opposite. When working with exponentials
+	it's always a good idea to consider the exponent function $e^x$ and
+	this indeed solves:
+	\[
+		\int_{a}^{b}{x^y\,dy} = 
+		\int_{a}^{b}{e^{y\ln x}\,dy} = 
+		\frac{e^{y\ln x}}{\ln x} \biggr\vert^{y=b}_{y=a} = 
+		\frac{e^{b\ln x}}{\ln x} - 
+		\frac{e^{a\ln x}}{\ln x} =
+		\frac{x^b - x^a}{\ln x}
+	\]
+	We can also notice that the edge cases are trivial:
+	\begin{align*}
+		\int_{a}^{b}{0^y\,dx} &= 0 \\
+		\int_{a}^{b}{1^y\,dx} &= b-a
+	\end{align*}
+	If we want to show that $I(x)$ is continuous we can use the theorem
+	from class that if $f(x,y)$ is continuous then:
+	\[
+		\int_{a}^{b}{x^y\,dy} = I(x)
+	\]
+	Is also continuous. We can also calculate directly but that doesn't
+	yield much merit here.
+	
+	\newpage
+	
+	\textbf{Use the previous exercise and Fubini's theorem to find:
+	\[
+		\int_{0}^{1}{I(x)\,dx}
+	\]}
+	Fubini's theorem states that if $f(x,y)$ is continuous on the relevant
+	rectangle in this case $[0,1]\times[a,b]$ which as we can know, it is,
+	then change the order of the integrals and get:
+	\[
+		\int_{0}^{1}{I(x)\,dx} = 
+		\int_{0}^{1}{\int_{a}^{b}{x^y\,dy}\,dx} = 
+		\int_{a}^{b}{\int_{0}^{1}{x^y\,dx}\,dy} =
+		\int_{a}^{b}{\frac{x^{y+1}}{y+1}\biggr\vert_{x=0}^{x=1}\,dy} = 
+		\int_{a}^{b}{\frac{dy}{y+1}} = 
+	\]
+	Finally:
+	\[
+		\int_{a}^{b}{\frac{dy}{y+1}} = \ln\left(\frac{b+1}{a+1}\right)
+	\]
+	
+	\newpage
+	
+	\section{More practice}
+	Saving for volume integrals, the Jacobian matrix and some more fun stuff
+	we are mostly done with this course's matrial, so we are going to
+	solve miscellaneous exercises without consideration for their order.
+	We can start with a straight forward one using the chain rule. 
+	\newpage
+	Define the function:
+	\[
+		f(3u^2 + v, -6u + v^3) = e^{u-v}
+	\]
+	We are asked to calculate the equation of the tangential plane at the
+	point $(4,-5)$, and also the directional derivative there with the 
+	direction $u = (3,-4)$. To calculate the partial derivative at the
+	point $(x,y) = (4,-5)$ we can also calculate the partial derivatives
+	of the function:
+	\[
+		f(3u^2 + v, -6u + v^3) = e^{u-v}
+	\]
+	At $(1,1)$ and we can do that using the chain rule. To help us
+	we can denote:
+	\begin{align*}
+		&f(x(u,v),y(u,v)) = e^{u-v} \\
+		&x(u,v) = 3u^2 + v \\
+		&y(u,v) = -6u + v^3
+	\end{align*}
+	And the chain rule gives:
+	\[
+		\frac{\partial f}{\partial u}(1,1) =
+		\frac{\partial f}{\partial x}(4,-5)
+		\frac{\partial x}{\partial u}(1,1) + 
+		\frac{\partial f}{\partial y}(4,-5)
+		\frac{\partial y}{\partial u}(1,1) =
+		\frac{\partial f}{\partial x}(4,-5)
+		(6) + 
+		\frac{\partial f}{\partial y}(4,-5)
+		(-6)
+	\]
+	\[
+		\frac{\partial f}{\partial v}(1,1) =
+		\frac{\partial f}{\partial x}(4,-5)
+		\frac{\partial x}{\partial v}(1,1) + 
+		\frac{\partial f}{\partial y}(4,-5)
+		\frac{\partial y}{\partial v}(1,1) =
+		\frac{\partial f}{\partial x}(4,-5)
+		(1) + 
+		\frac{\partial f}{\partial y}(4,-5)
+		(3)
+	\]
+	But we also get that the partial derivatives are equal to:
+	\begin{align*}
+		\frac{\partial e^{u-v}}{\partial u}(1,1) &= 1 \\
+		\frac{\partial e^{u-v}}{\partial v}(1,1) &= -1
+	\end{align*}
+	Which means we now have a system of equations:
+	\[
+	\begin{cases}
+		6\frac{\partial f}{\partial x}(4,-5) -
+		6\frac{\partial f}{\partial y}(4,-5) &= 1 \\
+		\frac{\partial f}{\partial x}(4,-5) + 
+		3\frac{\partial f}{\partial y}(4,-5) &= -1 \\
+	\end{cases}
+	\]
+	Solving that we can find that:
+	\[
+		\nabla f(4, -5) = \left( -\frac 18, -\frac{7}{24} \right)
+	\]
+	This solves the first part of the question, and to solve the second
+	part we can just use calculate:
+	\[
+		\nabla f(4,-5) \cdot \frac{u}{\|u\|}
+	\]
+	
+	\newpage
+	
+	Prove the following inequality:
+	\[
+		\left(\int_{0}^{x}{e^{-t^2}\,dt}\right)^2 + 
+		\int_{0}^{1}{\frac{e^{-x^2(t^2+1)}}{t^2+1}\,dt} = 
+		\frac{\pi}{4}
+	\]
+	We can see that this is actually just the parameter integral:
+	\[
+		F(x) = \left(\int_{0}^{x}{e^{-t^2}\,dt}\right)^2 + 
+		\int_{0}^{1}{\frac{e^{-x^2(t^2+1)}}{t^2+1}\,dt}
+	\]
+	In this
+	case we can prove this by showing that the derivative of this function
+	in respect to $x$ is $0$. Using Leibniz's rule we get that
+	the derivative is:
+	\[
+		2e^{-x^2}\int_{0}^{x}{e^{-t^2}\,dt} + 
+		\int_{0}^{1}{-2xe^{-x^2(t^2+1)}\,dt}
+	\]
+	Notice, how we used the fundamental theorem of calculus here.
+	Now applying variable substitution on the second integral $u=xt$ gives:
+	\[
+		2e^{-x^2}\int_{0}^{x}{e^{-t^2}\,dt} - 
+		2e^{-x^2}\int_{0}^{x}{e^{-u^2}\,du} = 0
+	\]
+	So the original function is constant. Now if we calculate $F(0)$
+	we see:
+	\[
+		F(0) = \left(\int_{0}^{0}{e^{-t^2}\,dt}\right)^2 + 
+		\int_{0}^{1}{\frac{e^{-0^2(t^2+1)}}{t^2+1}\,dt} = 
+		\int_{0}^{1}{\frac{1}{t^2+1}\,dt} = 
+		\arctan(x)\vert_0^1 = \frac{\pi}{4}
+	\]
+	Which completes the proof.
+	
+	\newpage
+	
+	Find the value of the integral for any natural $n\in\N$:
+	\[
+		\int_{0}^{1}{x^n\ln(x)\,dx}
+	\]
+	We did a similar question to this one in the pase and indeed we can
+	see that if we define:
+	\[
+		f(x,t) = x^t
+	\]
+	The partial derivative is:
+	\[
+		\frac{\partial f}{\partial t} = x^t \ln(x)
+	\]
+	And then:
+	\[
+		\int_{0}^{1}{x^n\ln(x)\,dx} = 
+		\int_{0}^{1}{\frac{\partial}{\partial t}f(x,t)\,dx} = 
+		\frac{d}{dt}\int_{0}^{1}{x^t\,dx} = 
+		\frac{d}{dt}\frac{1}{t+1} =
+		-\frac{1}{(1+t)^2}
+	\]
+	And we are done.
+	
+	\newpage
+	
+	Find the value of the integral:
+	\[
+		\int_{0}^{1}
+		{
+			\int_{0}^{1}
+			{
+				e^{x\sqrt{y}}
+			}\,dy
+		}\,dx
+	\]
+	This isn't going to be easy to integrate first by $y$ but since
+	the integrand is continuous on $[0,1]\times[0,1]$ we can use
+	Fubini's theorem:
+	\[
+		\int_{0}^{1}
+		{
+			\int_{0}^{1}
+			{
+				e^{x\sqrt{y}}
+			}\,dy
+		}\,dx =
+		\int_{0}^{1}
+		{
+			\int_{0}^{1}
+			{
+				e^{x\sqrt{y}}
+			}\,dx
+		}\,dy =
+		\int_{0}^{1}
+		{
+			\frac{e^{\sqrt{y}}-1}{\sqrt{y}}
+		}\,dy
+	\]
+	Now using substitution $u = \sqrt{y}$ we get:
+	\[
+		\int_{0}^{1}
+		{
+			2(e^u-1)
+		}\,du =
+		2(e - 2)
+	\]
+	
+	\newpage
+	
+	We need to find the convergence or divergence of the following improper
+	integral:
+	\[
+		\int_{2}^{\infty}{e^{-(\ln x)^{\frac{1}{2}}}\,dx}
+	\]
+	We mya try to do integral substitution $u = \ln x$ and get:
+	\[
+		\int_{\ln 2}^{\infty}{e^{u-\sqrt{u}}\,du}
+	\]
+	But we can notice:
+	\[
+		\lim_{u\to\infty}{e^{u-\sqrt{u}}} = \infty
+	\]
+	Which means that the integral diverges.
+	
+	\newpage
+	Find the anti-derivative of the following function:
+	\[
+		f(x) = \frac{x - \ln(1+x)}{x(1+x)\ln(1+x)}
+	\]
+	We might try to think that using the series expansion would be a good
+	idea but since we have division here we probably need to think about
+	something else. Well, first of all by the linearity of the integral:
+	\[
+		\int{f(x)\,dx} = 
+		\int\frac{1}{(1+x)\ln(1+x)}\,dx -
+		\int\frac{1}{x(1+x)}\,dx
+	\]
+	And calculating them seperately:
+	\[
+		\int\frac{1}{x(1+x)}\,dx = \ln|x| - \ln|1+x| + C
+	\]
+	And using the substitution $u = \ln(1+x)$ we get:
+	\[
+		\int\frac{1}{u}\,du = \ln|u| + C = \ln|\ln(1+x)| + C
+	\]
+	So finally:
+	\[
+		\int{f(x)\,dx} = \ln|\ln(1+x)| - \ln|x| - \ln|1+x| + C
+	\]
+	
+	\newpage
+	\textbf{
+	Disprove the following claim: ``If $f$ is bounded on $[0,1]$ and the 
+	limit:
+	\[
+		\lim_{n\to\infty}
+		{\frac{1}{n}\sum_{i=1}^{n}{f\left(\frac{i}{n}\right)}}
+	\]
+	exists, then $f$ is integrable on $[0,1]$''} \\
+	This is not true because we can define the function:
+	\[
+		f(x) = \begin{cases}
+		1 &x\in\R\setminus\Q \\
+		0 &x\in\Q
+		\end{cases}
+	\]
+	Because then we know that the function is not integrable on $[0,1]$
+	but still the limit:
+	\[
+		\lim_{n\to\infty}
+		{\frac{1}{n}\sum_{i=1}^{n}{f\left(\frac{i}{n}\right)}} = 
+		\lim_{n\to\infty}
+		{\frac{1}{n}\sum_{i=1}^{n}{0}} = 0
+	\]
+	exists.
+	
+	\newpage
+	
+	\textbf{
+	Disprove the following claim: ``If the series
+	\[
+		\sum_{n=1}^{\infty}{a_n}
+	\]
+	converges then the series
+	\[
+		\sum_{n=1}^{\infty}{a_n^4}
+	\]
+	Also converges''} \\
+	This is not true because we can consider the sequence:
+	\[
+		a_n = \frac{(-1)^n}{\sqrt[4]{n}}
+	\]
+	The series:
+	\[
+		\sum_{n=1}^{\infty}{\frac{(-1)^n}{\sqrt[4]{n}}}
+	\]
+	Converges because the sequence $\frac{1}{\sqrt[4]{n}}$ is positive
+	and monotonically decreasing so by Leibniz's test it converges. But
+	if we consider:
+	\[
+		\sum_{n=1}^{\infty}{a_n^4} = 
+		\sum_{n=1}^{\infty}{\frac{1}{n}}
+	\]
+	It is the harmonic sum and thus does not converge.
+	
+	\newpage
+	
+	\textbf{Prove that for any $a > 0$ that the function series:
+	\[
+		\sum_{n=1}^{\infty}{\frac{x}{x^2+n^2}}
+	\]
+	Converges uniformly on $[-a,a]$} \\
+	We can do that using Weirstrass's $M$-test. We can see that:
+	\[
+		\frac{x}{x^2+n^2} \le \frac{a}{n^2}
+	\]
+	And the series:
+	\[
+		\sum_{n=1}^{\infty}{\frac{a}{n^2}}
+	\]
+	Converges. Thus we can deduce unifrom convergence on $[-a,a]$ as wanted.
+	We can see that it is does not uniformly converge on $\R$ because
+	if it did then for every $\varepsilon > 0$ we would get that exists
+	a natural $N$ such that for every $m > n > N$ we would get:
+	\[
+		\sup_{x\in\R} \left| \sum_{j=n+1}^{2n}{\frac{x}{x^2+j^2}}
+		\right| < \varepsilon
+	\]
+	But this is not the case since if we choose $x=n$ we would get:
+	\[
+		\lim_{n\to\infty}\sum_{j=n+1}^{2n}{\frac{n}{n^2+j^2}} =
+		\lim_{n\to\infty}\sum_{j=n+1}^{2n}
+		{\frac{1}{n}\frac{1}{1+(\frac{j}{n})^2}} = 
+		\int_1^2{\frac{1}{1+x^2}\,dx} = \arctan(2) - \arctan(1) > 0
+	\]
+	Which ends the proof.
+	
+	\newpage
+	
+	Check convergence for the series:
+	\[
+		\sum_{n=2}^{\infty} {\frac{(-1)^{\lfloor n/2 \rfloor}}{n\ln n}}
+	\]
+	We can check that this series convergence according to Dirichlet's
+	test. We know that the partial sums:
+	\[
+		\sum_{n=2}^{m}{(-1)^{\lfloor n/2 \rfloor}}
+	\]
+	Is bounded, and we know that:
+	\[
+		{\frac{1}{n\ln n}}
+	\]
+	Is monotonic and converges to $0$ which means that our series converges.
+	
+	\newpage
+	
+	Check for convergence for the following improper integral:
+	\[
+		\int_{0}^{\frac{\pi}{2}}
+		{\frac{\sqrt{\frac{\pi}{2}-x}}{\ln(1+\cos x)}\,dx}
+	\]
+	We can see that the problamatic point is $x = \frac{\pi}{2}$ and
+	so we need to calculate the limit of the function there. We will
+	use L'H\^opital's rule:
+	\[
+		\lim_{x\to\frac{\pi}{2}^+}
+		{\frac{\sqrt{\frac{\pi}{2}-x}}{\ln(1+\cos x)}} = 
+		\lim_{x\to\frac{\pi}{2}^+}
+		\frac{1+\cos(x)}{2\sin(x)\sqrt{\frac{\pi}{2}-x}} = \infty
+	\]
+	
+	
+	\newpage
+	
+	\textbf{Find the following integral}
+	\[
+		\int{x\arctan(x)\,dx}
+	\]
+	We can do that by using integration by parts because we want to get rid
+	of the $\arctan$ part:
+	\[
+		\int{x\arctan(x)\,dx} = 
+		\frac{x^2}{2}\arctan(x) - 
+		\int{\frac{x^2}{2(1+x^2)}\,dx}
+	\]
+	Now we need to solve the more simple second integral:
+	\[
+		\int{\frac{x^2}{2(1+x^2)}\,dx} = 
+		\frac{1}{2}\int{\frac{x^2}{(1+x^2)}\,dx}
+	\]
+	And we may want to use integration by parts, but that is a grave mistake:
+	\[
+		\int{\frac{x^2}{(1+x^2)}\,dx} =
+		\int{1 - \frac{1}{(1+x^2)}\,dx} = x - \arctan(x) + C
+	\]
+	Now combining all the results we get:
+	\[
+		\int{x\arctan(x)\,dx} = 
+		\frac{x^2}{2}\arctan(x) - 
+		\frac{x - \arctan(x)}{2} + C
+	\]
+	Or if we choose to simplify we get:
+	\[
+		\int{x\arctan(x)\,dx} = 
+		\frac{(x^2+1)\arctan(x) - x}{2} + C
+	\] 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+\end{document}

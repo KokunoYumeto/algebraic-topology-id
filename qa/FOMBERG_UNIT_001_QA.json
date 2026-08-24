@@ -1,0 +1,796 @@
+{
+  "authority": {
+    "authority_build_checks": 55,
+    "authority_build_status": "PASS",
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "edition_id": "edition:fomberg-at-2025-563194f",
+    "next_heading": "\\subsection{Singular homology}",
+    "next_source_line": 615,
+    "resource_id": "resource:fomberg-algebraic-topology-2025",
+    "source": {
+      "bytes": 223886,
+      "lines": 6069,
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    "terminal_source_eof": false,
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+    "unit_span": {
+      "bytes": 21875,
+      "line_end": 614,
+      "line_start": 31,
+      "lines": 584,
+      "sha256": "68cb0dea7aa24a42e979877a95acf61b8152c87ed86d88ad7deac7cb5cea2fe3"
+    }
+  },
+  "backend_plan": {
+    "expected_total_records": 5060,
+    "records_added": 299,
+    "records_by_file": {
+      "artifacts.jsonl": 6,
+      "assets.jsonl": 3,
+      "authority.jsonl": 2,
+      "concepts.jsonl": 28,
+      "corrections.jsonl": 18,
+      "qa.jsonl": 4,
+      "relations.jsonl": 31,
+      "rights.jsonl": 5,
+      "segments.jsonl": 87,
+      "terms.jsonl": 28,
+      "units.jsonl": 87
+    }
+  },
+  "checks": {
+    "actual_descriptive_ids_preserved": true,
+    "authority_gate_55_of_55": true,
+    "component_rights_partition": true,
+    "exact_87_ids": true,
+    "five_source_aliases": true,
+    "fourteen_source_diagrams_in_ten_blocks": true,
+    "immutable_unit30_prefix": true,
+    "independent_review_p1_p2_p3_zero": true,
+    "ledgers_closed": true,
+    "no_build_or_publication_claim": true,
+    "proof_repair_complete": true,
+    "reader_identity_lf_utf8": true,
+    "six_mastery_triples_complete": true,
+    "source_span_and_cursor": true,
+    "standard_boundary_convention": true
+  },
+  "controls": {
+    "adverse_ledger": {
+      "all_resolved": true,
+      "first": "O012-ADV-0408",
+      "records": 18,
+      "through": "O012-ADV-0425"
+    },
+    "terminology": {
+      "all_admitted": true,
+      "first": "O012-TERM-0366",
+      "records": 28,
+      "through": "O012-TERM-0393"
+    }
+  },
+  "diagrams": {
+    "figure_ids": [
+      "o012-fom-u001-fig-001",
+      "o012-fom-u001-fig-002",
+      "o012-fom-u001-fig-003",
+      "o012-fom-u001-fig-004",
+      "o012-fom-u001-fig-005",
+      "o012-fom-u001-fig-006",
+      "o012-fom-u001-fig-007",
+      "o012-fom-u001-fig-008",
+      "o012-fom-u001-fig-009",
+      "o012-fom-u001-fig-010"
+    ],
+    "semantic_figure_block_count": 10,
+    "source_diagram_count": 14,
+    "source_format_counts": {
+      "inline_tikz": 6,
+      "tikzcd": 2,
+      "tikzpicture": 6
+    }
+  },
+  "frozen_inputs": {
+    "00_control/ADVERSE_LEDGER.csv": {
+      "bytes": 135323,
+      "lines": 426,
+      "path": "00_control/ADVERSE_LEDGER.csv",
+      "sha256": "4f7e75e9b556ccdb0fa2ad358600ca8be3bdc2b27e86a9f04d0619c01f46aee4"
+    },
+    "00_control/CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md": {
+      "bytes": 8115,
+      "lines": 139,
+      "path": "00_control/CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md",
+      "sha256": "0faecfb535065cff3ac88eb0e59b55ff311981535a842e32981ca499eb4228d3"
+    },
+    "00_control/TERMINOLOGY.csv": {
+      "bytes": 46554,
+      "lines": 394,
+      "path": "00_control/TERMINOLOGY.csv",
+      "sha256": "3fb35df5fe6746ac782bfc4f16c19b152d48982f225797a3b9910610a3d42d53"
+    },
+    "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/archive/math-notes-563194fae879178b9a6871b249513bfc27968975.tar.gz": {
+      "bytes": 2236609,
+      "lines": 8129,
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/archive/math-notes-563194fae879178b9a6871b249513bfc27968975.tar.gz",
+      "sha256": "423c2c34b62a1b443e63be72e80a5c35d5cd6daf4e5b3be8e48dad1d1f897443"
+    },
+    "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/build-overlay/commath.sty": {
+      "bytes": 1346,
+      "lines": 35,
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/build-overlay/commath.sty",
+      "sha256": "524c17aef50ed58686c9ed0b0b274e7f2ccdb35380869fef9c66ce3a120a6d19"
+    },
+    "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/LICENSE": {
+      "bytes": 20140,
+      "lines": 428,
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/LICENSE",
+      "sha256": "0b7fc2608b6d990314e908569407a6058b4a29175167c6d91ca0070c946661be"
+    },
+    "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex": {
+      "bytes": 223886,
+      "lines": 6069,
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/header.tex": {
+      "bytes": 14097,
+      "lines": 444,
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/header.tex",
+      "sha256": "7c4c5cbe901c1b6c7ae8d6053d42cd28110ece34dd90bc60c5bcb7423e45e28e"
+    },
+    "qa/BACKEND_APPEND_ONLY_UNIT_030_CUMULATIVE_RECEIPT.json": {
+      "bytes": 3976,
+      "lines": 112,
+      "path": "qa/BACKEND_APPEND_ONLY_UNIT_030_CUMULATIVE_RECEIPT.json",
+      "sha256": "d4f7c7310ae22b8fc53d354b72beefad637ac353be418b9fbc56ddd8cd0a65f7"
+    },
+    "qa/FOMBERG_AUTHORITY_BUILD_GATE_FILE_MANIFEST.csv": {
+      "bytes": 3170,
+      "lines": 18,
+      "path": "qa/FOMBERG_AUTHORITY_BUILD_GATE_FILE_MANIFEST.csv",
+      "sha256": "51da0c57ee1c9c9337e16aca8df54a69602965188f0c39ebf2c44c3dc4175129"
+    },
+    "qa/FOMBERG_AUTHORITY_BUILD_GATE_QA.json": {
+      "bytes": 3402,
+      "lines": 85,
+      "path": "qa/FOMBERG_AUTHORITY_BUILD_GATE_QA.json",
+      "sha256": "110ae5058f254f780812fa12e51e73cc6d1f1e6e03a319dbdfb18ecedf79fe71"
+    },
+    "qa/FOMBERG_AUTHORITY_BUILD_GATE_VISUAL_QA.md": {
+      "bytes": 2698,
+      "lines": 50,
+      "path": "qa/FOMBERG_AUTHORITY_BUILD_GATE_VISUAL_QA.md",
+      "sha256": "bdc4609eedb03aa30fc1841f2f65415e034189cbae8f4e022615b59d2b34ccb7"
+    },
+    "qa/FOMBERG_UNIT_001_BACKEND_CONTRACT.md": {
+      "bytes": 15828,
+      "lines": 325,
+      "path": "qa/FOMBERG_UNIT_001_BACKEND_CONTRACT.md",
+      "sha256": "cefce9ba4188f36d9e0714ef9065effb5fc12608ce69826de8b5bdfccbaf4943"
+    },
+    "qa/FOMBERG_UNIT_001_INDEPENDENT_REVIEW.md": {
+      "bytes": 12357,
+      "lines": 214,
+      "path": "qa/FOMBERG_UNIT_001_INDEPENDENT_REVIEW.md",
+      "sha256": "ec505152bed5690e77beb85039404c4a4b2dc23b14967e0f77b09f05bde06b68"
+    },
+    "qa/FOMBERG_UNIT_001_SOURCE_AUDIT.json": {
+      "bytes": 4513,
+      "lines": 98,
+      "path": "qa/FOMBERG_UNIT_001_SOURCE_AUDIT.json",
+      "sha256": "f8706a32f0bf7cdb0695d9d70e808dd0b03dfa2af6a6c40bd3817b9c4a7956b0"
+    },
+    "qa/FOMBERG_UNIT_001_SOURCE_AUDIT.md": {
+      "bytes": 16794,
+      "lines": 276,
+      "path": "qa/FOMBERG_UNIT_001_SOURCE_AUDIT.md",
+      "sha256": "4157bfcfc12502d5fd56fb55cd162f3b45dae40eee2c5319cc7a8f245bb88e3a"
+    }
+  },
+  "immutable_prefix": {
+    "bundle_sha256": "51b8c7f611560b9b5e88e97b3a943b54e0eb687c703f0cd34c1a3d164e4fb920",
+    "files": {
+      "artifacts.jsonl": {
+        "bytes": 128377,
+        "records": 160,
+        "sha256": "dcafca44e0fdd9daea5534f9cb6e12ddc85d66e83657cf7905f0c76287d99356"
+      },
+      "assets.jsonl": {
+        "bytes": 21271,
+        "records": 34,
+        "sha256": "70623b74c22df743708785dd6a213d8086dd4280db983ea14b8f08075b3e8ee6"
+      },
+      "authority.jsonl": {
+        "bytes": 2721,
+        "records": 4,
+        "sha256": "f21af26912520ab34b38dff0e927ed46a546dbe5d318da0dc133e58330d0e368"
+      },
+      "concepts.jsonl": {
+        "bytes": 114998,
+        "records": 364,
+        "sha256": "0ba79f3eb7f33775e2fc1e9897de40652522ebb426688617521f226cf5ee159b"
+      },
+      "corrections.jsonl": {
+        "bytes": 397287,
+        "records": 407,
+        "sha256": "39c7fbc05989e947f4de409ef43b50f55534fecb04d6c662501401c3e295d0d8"
+      },
+      "qa.jsonl": {
+        "bytes": 75118,
+        "records": 134,
+        "sha256": "2cdfe9c1a159e2d6b1c80e158b16a991814983f07d704c30776c2ccc54108706"
+      },
+      "relations.jsonl": {
+        "bytes": 218443,
+        "records": 533,
+        "sha256": "cc56f5be615b567baf381505a883b6dd2344f8eaf1318f3f0ec4f5b4d70c418e"
+      },
+      "rights.jsonl": {
+        "bytes": 79588,
+        "records": 86,
+        "sha256": "2540e545302261e342f8a41211295e7c435e870ad52e267485d4a66f5b439d0e"
+      },
+      "segments.jsonl": {
+        "bytes": 1912371,
+        "records": 1326,
+        "sha256": "054699f1e9d902de23f5dff26d3ecee7b7e1da502fb971468bb17975c7ca65eb"
+      },
+      "terms.jsonl": {
+        "bytes": 226725,
+        "records": 357,
+        "sha256": "27c19bbacd1fd21fc371b29c64cf7e3b1f37bae6472e3670697830a98279c67f"
+      },
+      "units.jsonl": {
+        "bytes": 2036780,
+        "records": 1356,
+        "sha256": "53b5f8d6a688a71bc7f38f80bda670141109b974742dec7e9428ad43de0f495e"
+      }
+    },
+    "total_bytes": 5213679,
+    "total_records": 4761
+  },
+  "independent_review": {
+    "final_severity_counts": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "path": "qa/FOMBERG_UNIT_001_INDEPENDENT_REVIEW.md",
+    "sha256": "ec505152bed5690e77beb85039404c4a4b2dc23b14967e0f77b09f05bde06b68"
+  },
+  "mastery": {
+    "exercise_ids": [
+      "o012-fom-u001-mcheck-001",
+      "o012-fom-u001-mcheck-002",
+      "o012-fom-u001-mcheck-003",
+      "o012-fom-u001-mcheck-004",
+      "o012-fom-u001-mcheck-005",
+      "o012-fom-u001-mcheck-006"
+    ],
+    "hint_ids": [
+      "o012-fom-u001-hint-001",
+      "o012-fom-u001-hint-002",
+      "o012-fom-u001-hint-003",
+      "o012-fom-u001-hint-004",
+      "o012-fom-u001-hint-005",
+      "o012-fom-u001-hint-006"
+    ],
+    "solution_ids": [
+      "o012-fom-u001-sol-001",
+      "o012-fom-u001-sol-002",
+      "o012-fom-u001-sol-003",
+      "o012-fom-u001-sol-004",
+      "o012-fom-u001-sol-005",
+      "o012-fom-u001-sol-006"
+    ],
+    "solution_status": "complete_checked_solution",
+    "triples": 6
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "proof_closure": {
+    "corollary_id": "o012-fom-u001-cor-001",
+    "lemma_id": "o012-fom-u001-lem-boundary-square",
+    "proof_id": "o012-fom-u001-proof-001",
+    "proof_status": "complete_original_repair",
+    "repair_id": "FOM-U001-PR-001",
+    "standard_boundary_convention": "B_n=im(partial_{n+1})"
+  },
+  "qa_id": "O012-FOMBERG-UNIT-001-STATIC-QA",
+  "reader": {
+    "bytes": 34773,
+    "lines": 1073,
+    "path": "source/id-ID/fomberg/units/fomberg-unit-001-delta-complexes-simplicial-homology.md",
+    "sha256": "d9b64140f9340c75bc34c12bc02ee843d87de3566e331c50c2374075718aa2c6"
+  },
+  "rights": {
+    "companion": "rights:o012-fom-u001-companion-cc-by-sa-4.0",
+    "component": "rights:fomberg-cc-by-sa-4.0",
+    "component_license": "CC-BY-SA-4.0",
+    "composite": "rights:o012-fom-u001-composite-cc-by-sa-4.0",
+    "integrated_route": "rights:o012-d60-integrated-route-cc-by-sa-4.0",
+    "integrated_route_license": "CC-BY-SA-4.0",
+    "overlay": "rights:fomberg-build-overlay-cc0-1.0",
+    "roberts_component_preserved_as": "CC-BY-4.0"
+  },
+  "schema_version": "1.0.0",
+  "source_aliases": {
+    "def:sigma-complex": "o012-fom-u001-def-delta-complex",
+    "def:simplicial-complex": "o012-fom-u001-def-simplicial-complex",
+    "exmp:delta-complex-rp2": "o012-fom-u001-exa-rp2",
+    "lem:partial-partial-zero": "o012-fom-u001-lem-boundary-square",
+    "rem:order": "o012-fom-u001-rem-order"
+  },
+  "status": "PASS",
+  "structure": {
+    "class_counts": {
+      "boundary": 1,
+      "corollary": 1,
+      "definition": 14,
+      "example": 10,
+      "exercise": 6,
+      "figure": 10,
+      "heading": 5,
+      "hint": 6,
+      "lemma": 1,
+      "proof": 1,
+      "remark": 14,
+      "solution": 6,
+      "source-audit": 12
+    },
+    "fenced_semantic_objects": 82,
+    "identified_headings": [
+      "o012-fom-u001-notice",
+      "o012-fom-u001",
+      "o012-fom-u001-s01",
+      "o012-fom-u001-s02",
+      "o012-fom-u001-mastery"
+    ],
+    "root_heading_is_edition_root": true,
+    "root_id": "unit:o012-fom-u001",
+    "segment_records_required": 87,
+    "stable_id_count": 87,
+    "stable_ids_in_reader_order": [
+      "o012-fom-u001-notice",
+      "o012-fom-u001",
+      "o012-fom-u001-s01",
+      "o012-fom-u001-rem-001",
+      "o012-fom-u001-audit-pi-n",
+      "o012-fom-u001-def-001",
+      "o012-fom-u001-audit-affine-ambient",
+      "o012-fom-u001-def-002",
+      "o012-fom-u001-exa-001",
+      "o012-fom-u001-def-003",
+      "o012-fom-u001-audit-001",
+      "o012-fom-u001-rem-002",
+      "o012-fom-u001-def-004",
+      "o012-fom-u001-def-005",
+      "o012-fom-u001-audit-002",
+      "o012-fom-u001-rem-003",
+      "o012-fom-u001-def-006",
+      "o012-fom-u001-def-delta-complex",
+      "o012-fom-u001-rem-004",
+      "o012-fom-u001-rem-005",
+      "o012-fom-u001-exa-circle",
+      "o012-fom-u001-fig-001",
+      "o012-fom-u001-rem-006",
+      "o012-fom-u001-exa-torus",
+      "o012-fom-u001-fig-002",
+      "o012-fom-u001-audit-003",
+      "o012-fom-u001-exa-rp2",
+      "o012-fom-u001-fig-003",
+      "o012-fom-u001-rem-order",
+      "o012-fom-u001-rem-007",
+      "o012-fom-u001-def-simplicial-complex",
+      "o012-fom-u001-exa-004",
+      "o012-fom-u001-fig-004",
+      "o012-fom-u001-exa-005",
+      "o012-fom-u001-fig-005",
+      "o012-fom-u001-rem-008",
+      "o012-fom-u001-rem-009",
+      "o012-fom-u001-s02",
+      "o012-fom-u001-def-007",
+      "o012-fom-u001-audit-005",
+      "o012-fom-u001-rem-010",
+      "o012-fom-u001-exa-006",
+      "o012-fom-u001-fig-006",
+      "o012-fom-u001-def-boundary",
+      "o012-fom-u001-rem-011",
+      "o012-fom-u001-exa-007",
+      "o012-fom-u001-fig-007",
+      "o012-fom-u001-audit-006",
+      "o012-fom-u001-exa-008",
+      "o012-fom-u001-fig-008",
+      "o012-fom-u001-audit-007",
+      "o012-fom-u001-exa-009",
+      "o012-fom-u001-fig-009",
+      "o012-fom-u001-rem-012",
+      "o012-fom-u001-audit-face-sign",
+      "o012-fom-u001-lem-boundary-square",
+      "o012-fom-u001-proof-001",
+      "o012-fom-u001-audit-008",
+      "o012-fom-u001-def-008",
+      "o012-fom-u001-def-009",
+      "o012-fom-u001-cor-001",
+      "o012-fom-u001-def-010",
+      "o012-fom-u001-fig-010",
+      "o012-fom-u001-def-011",
+      "o012-fom-u001-audit-009",
+      "o012-fom-u001-rem-013",
+      "o012-fom-u001-audit-010",
+      "o012-fom-u001-mastery",
+      "o012-fom-u001-mcheck-001",
+      "o012-fom-u001-hint-001",
+      "o012-fom-u001-sol-001",
+      "o012-fom-u001-mcheck-002",
+      "o012-fom-u001-hint-002",
+      "o012-fom-u001-sol-002",
+      "o012-fom-u001-mcheck-003",
+      "o012-fom-u001-hint-003",
+      "o012-fom-u001-sol-003",
+      "o012-fom-u001-mcheck-004",
+      "o012-fom-u001-hint-004",
+      "o012-fom-u001-sol-004",
+      "o012-fom-u001-mcheck-005",
+      "o012-fom-u001-hint-005",
+      "o012-fom-u001-sol-005",
+      "o012-fom-u001-mcheck-006",
+      "o012-fom-u001-hint-006",
+      "o012-fom-u001-sol-006",
+      "o012-fom-u001-boundary-001"
+    ],
+    "target_spans": {
+      "o012-fom-u001": [
+        40,
+        835
+      ],
+      "o012-fom-u001-audit-001": [
+        124,
+        130
+      ],
+      "o012-fom-u001-audit-002": [
+        169,
+        174
+      ],
+      "o012-fom-u001-audit-003": [
+        304,
+        308
+      ],
+      "o012-fom-u001-audit-005": [
+        470,
+        474
+      ],
+      "o012-fom-u001-audit-006": [
+        559,
+        566
+      ],
+      "o012-fom-u001-audit-007": [
+        593,
+        597
+      ],
+      "o012-fom-u001-audit-008": [
+        708,
+        715
+      ],
+      "o012-fom-u001-audit-009": [
+        796,
+        807
+      ],
+      "o012-fom-u001-audit-010": [
+        826,
+        834
+      ],
+      "o012-fom-u001-audit-affine-ambient": [
+        97,
+        102
+      ],
+      "o012-fom-u001-audit-face-sign": [
+        649,
+        656
+      ],
+      "o012-fom-u001-audit-pi-n": [
+        79,
+        83
+      ],
+      "o012-fom-u001-boundary-001": [
+        1068,
+        1073
+      ],
+      "o012-fom-u001-cor-001": [
+        740,
+        747
+      ],
+      "o012-fom-u001-def-001": [
+        85,
+        95
+      ],
+      "o012-fom-u001-def-002": [
+        104,
+        107
+      ],
+      "o012-fom-u001-def-003": [
+        115,
+        122
+      ],
+      "o012-fom-u001-def-004": [
+        143,
+        157
+      ],
+      "o012-fom-u001-def-005": [
+        159,
+        167
+      ],
+      "o012-fom-u001-def-006": [
+        182,
+        196
+      ],
+      "o012-fom-u001-def-007": [
+        441,
+        468
+      ],
+      "o012-fom-u001-def-008": [
+        717,
+        725
+      ],
+      "o012-fom-u001-def-009": [
+        727,
+        738
+      ],
+      "o012-fom-u001-def-010": [
+        749,
+        758
+      ],
+      "o012-fom-u001-def-011": [
+        778,
+        794
+      ],
+      "o012-fom-u001-def-boundary": [
+        500,
+        514
+      ],
+      "o012-fom-u001-def-delta-complex": [
+        198,
+        217
+      ],
+      "o012-fom-u001-def-simplicial-complex": [
+        389,
+        397
+      ],
+      "o012-fom-u001-exa-001": [
+        109,
+        113
+      ],
+      "o012-fom-u001-exa-004": [
+        399,
+        403
+      ],
+      "o012-fom-u001-exa-005": [
+        411,
+        420
+      ],
+      "o012-fom-u001-exa-006": [
+        480,
+        492
+      ],
+      "o012-fom-u001-exa-007": [
+        520,
+        548
+      ],
+      "o012-fom-u001-exa-008": [
+        568,
+        585
+      ],
+      "o012-fom-u001-exa-009": [
+        599,
+        628
+      ],
+      "o012-fom-u001-exa-circle": [
+        241,
+        256
+      ],
+      "o012-fom-u001-exa-rp2": [
+        310,
+        332
+      ],
+      "o012-fom-u001-exa-torus": [
+        274,
+        291
+      ],
+      "o012-fom-u001-fig-001": [
+        258,
+        263
+      ],
+      "o012-fom-u001-fig-002": [
+        293,
+        302
+      ],
+      "o012-fom-u001-fig-003": [
+        334,
+        349
+      ],
+      "o012-fom-u001-fig-004": [
+        405,
+        409
+      ],
+      "o012-fom-u001-fig-005": [
+        422,
+        427
+      ],
+      "o012-fom-u001-fig-006": [
+        494,
+        498
+      ],
+      "o012-fom-u001-fig-007": [
+        550,
+        557
+      ],
+      "o012-fom-u001-fig-008": [
+        587,
+        591
+      ],
+      "o012-fom-u001-fig-009": [
+        630,
+        637
+      ],
+      "o012-fom-u001-fig-010": [
+        760,
+        776
+      ],
+      "o012-fom-u001-hint-001": [
+        856,
+        859
+      ],
+      "o012-fom-u001-hint-002": [
+        889,
+        892
+      ],
+      "o012-fom-u001-hint-003": [
+        915,
+        918
+      ],
+      "o012-fom-u001-hint-004": [
+        950,
+        953
+      ],
+      "o012-fom-u001-hint-005": [
+        984,
+        988
+      ],
+      "o012-fom-u001-hint-006": [
+        1042,
+        1046
+      ],
+      "o012-fom-u001-lem-boundary-square": [
+        658,
+        665
+      ],
+      "o012-fom-u001-mastery": [
+        836,
+        1067
+      ],
+      "o012-fom-u001-mcheck-001": [
+        842,
+        854
+      ],
+      "o012-fom-u001-mcheck-002": [
+        881,
+        887
+      ],
+      "o012-fom-u001-mcheck-003": [
+        909,
+        913
+      ],
+      "o012-fom-u001-mcheck-004": [
+        944,
+        948
+      ],
+      "o012-fom-u001-mcheck-005": [
+        970,
+        982
+      ],
+      "o012-fom-u001-mcheck-006": [
+        1029,
+        1040
+      ],
+      "o012-fom-u001-notice": [
+        15,
+        39
+      ],
+      "o012-fom-u001-proof-001": [
+        667,
+        706
+      ],
+      "o012-fom-u001-rem-001": [
+        67,
+        77
+      ],
+      "o012-fom-u001-rem-002": [
+        132,
+        141
+      ],
+      "o012-fom-u001-rem-003": [
+        176,
+        180
+      ],
+      "o012-fom-u001-rem-004": [
+        219,
+        233
+      ],
+      "o012-fom-u001-rem-005": [
+        235,
+        239
+      ],
+      "o012-fom-u001-rem-006": [
+        265,
+        272
+      ],
+      "o012-fom-u001-rem-007": [
+        384,
+        387
+      ],
+      "o012-fom-u001-rem-008": [
+        429,
+        431
+      ],
+      "o012-fom-u001-rem-009": [
+        433,
+        437
+      ],
+      "o012-fom-u001-rem-010": [
+        476,
+        478
+      ],
+      "o012-fom-u001-rem-011": [
+        516,
+        518
+      ],
+      "o012-fom-u001-rem-012": [
+        639,
+        647
+      ],
+      "o012-fom-u001-rem-013": [
+        809,
+        824
+      ],
+      "o012-fom-u001-rem-order": [
+        351,
+        382
+      ],
+      "o012-fom-u001-s01": [
+        42,
+        438
+      ],
+      "o012-fom-u001-s02": [
+        439,
+        835
+      ],
+      "o012-fom-u001-sol-001": [
+        861,
+        879
+      ],
+      "o012-fom-u001-sol-002": [
+        894,
+        907
+      ],
+      "o012-fom-u001-sol-003": [
+        920,
+        942
+      ],
+      "o012-fom-u001-sol-004": [
+        955,
+        968
+      ],
+      "o012-fom-u001-sol-005": [
+        990,
+        1027
+      ],
+      "o012-fom-u001-sol-006": [
+        1048,
+        1066
+      ]
+    },
+    "unit_records_required": 87
+  }
+}

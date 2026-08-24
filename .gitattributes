@@ -7,3 +7,8 @@ release/**/transaction.json binary
 00_control/*PUBLICATION_RECEIPT*.json binary
 qa/*-extracted.txt binary
 baseline/**/*.txt binary
+authority/upstream/**/AUTHORITY_BUILD_MANIFEST.json -text
+authority/upstream/**/AUTHORITY_TREE_MANIFEST.csv -text
+authority/upstream/**/build-baseline/** -text
+qa/FOMBERG_AUTHORITY_BUILD_GATE_FILE_MANIFEST.csv -text
+qa/FOMBERG_AUTHORITY_BUILD_GATE_QA.json -text

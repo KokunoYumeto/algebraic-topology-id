@@ -1,0 +1,35 @@
+%% Minimal, independently authored compatibility overlay for the frozen
+%% Fomberg algebraic-topology source. This is not a copy of commath.
+%% SPDX-License-Identifier: CC0-1.0
+%%
+%% The frozen header loads commath, but algebraic_topology.tex uses only the
+%% delimiter commands below. The header also renews \dif and \Dif, so the
+%% compatibility layer must define those two names before header.tex does so.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{commath}[2026/08/24 v1.0 minimal algebraic-topology build overlay]
+
+\providecommand{\dif}{\mathop{}\!\mathrm{d}}
+\providecommand{\Dif}{\mathop{}\!\mathrm{D}}
+% commath's paired delimiters accept an optional manual size: 1=\big,
+% 2=\Big, 3=\bigg, and 4=\Bigg.  The frozen source uses \del[1] and
+% \del[4], so preserve that syntax instead of leaking the bracket tokens
+% into the typeset mathematics.
+\providecommand{\del}[2][]{%
+  \if\relax\detokenize{#1}\relax
+    \left(#2\right)%
+  \else
+    \ifcase#1\relax
+      (#2)%
+    \or \bigl(#2\bigr)%
+    \or \Bigl(#2\Bigr)%
+    \or \biggl(#2\biggr)%
+    \or \Biggl(#2\Biggr)%
+    \else \PackageError{commath}{Unsupported delimiter size #1}{Use a size from 1 through 4.}%
+    \fi
+  \fi
+}
+\providecommand{\set}[1]{\left\{#1\right\}}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert}
+
+\endinput

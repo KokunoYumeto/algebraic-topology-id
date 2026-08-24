@@ -1,0 +1,641 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2025}
+\def\nterm {Winter}
+\def\nlecturer {}
+\def\ncourse {Riemann Surfaces}
+
+\usepackage{blochsphere}
+\input{header.tex}
+
+\DeclareMathOperator{\Bih}{Bih}
+\renewcommand{\H}{\mathbb H}
+\DeclareMathOperator{\Homeo}{Homeo}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\MCG}{MCG}
+\DeclareMathOperator{\Teich}{Teich}
+\DeclareMathOperator{\Mob}{Mob}
+
+
+\begin{document}
+\maketitle
+
+% Insert cool image here
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\begin{definition}[Riemann surface]
+    A Riemann surface is a $1$-dimensional complex manifold.
+\end{definition}
+
+\begin{definition}[Riemann surface]
+    A Riemann surface is a topological space $X$ together with
+    open subsets $\set{U_k}_{k \in I}$ of $X$ with
+    $\cup_{k \in I} U_k = X$ together with maps $f_i \colon U_i \to \C$
+    such that
+    \begin{enumerate}
+        \item[(1)] Each $f_i$ is a homeomorphism onto its image.
+        \item[(2)] If $U_i \cap U_j \neq \emptyset$ then 
+            $f_i \circ f_j^{-1} \colon 
+            f_j(U_i \cap U_j) \to f_i(U_i \cap U_j)$ are \emph{biholomorphic}.
+    \end{enumerate}
+\end{definition}
+
+\begin{remark}
+    A function $f \colon \C \to \C$ is holomorphic at $p$ if 
+    $f'(p) = \lim_{z \to p} \frac{f(z) - f(p)}{z - p}$ exists.
+\end{remark}
+
+\begin{definition}[Biholomorphism]
+    A function $f \colon \C \to \C$ is called biholomorphic if it has an inverse
+    and both $f$ and $f'$ are holomorphic.
+\end{definition}
+
+\begin{definition}[Atlas]
+    The $\set{(U_i, f_i)}_{i \in I}$ are called an atlas of the Riemann surface.
+\end{definition}
+
+\begin{definition}[Chart]
+    Each individual $(U_i, f_i)$ is called a chart of the Riemann surface.
+\end{definition}
+
+\begin{example}
+    Let $U \subset \C$.
+    Then $U$ can take an atlas with one chart which is the identity map.
+\end{example}
+
+\begin{example}[Riemann sphere]
+    Let $X = \set{(z,t) \in \C \times \R \colon |z|^2 + t^2 = \R}$.
+    We identify $\C$ with the $xy$ plane.
+    Denote $N$ and $S$ the north and south poles of the sphere accordingly.
+    We define $\pi_N \colon \C \to S$ such that $\pi_N$ sends each point
+    $(z,t)$ on the sphere to its stereographic projection 
+    from $N$ onto the plane (point $\xi$) as can be seen in the figure
+    below:
+    \begin{center}
+      \includegraphics[scale=0.5]{assets/RiemannSphere.png}
+    \end{center}
+    We can similarly define $\pi_S$ and verify that the images of the
+    projections are $X \setminus \set{N}$ and $X \setminus \set{S}$
+    accordingly.
+    
+    Now $X$ is a Riemann surface with an atlas consisting of 
+    $\pi_S \colon X \setminus \set{S} \to \C$ and
+    $\pi_N \colon X \setminus \set{N} \to \C$.
+    We denote the Riemann sphere as $\hat{\C}$.
+\end{example}
+
+\begin{definition}[Biholomorphism of Riemann surfaces]
+    Let $(X, (U_i, f_i))$, $(Y, (W_i,g_i))$ be two Riemann surfaces.
+    A biholomorphism between them is a homeomorphism
+    $X \xrightarrow{\phi} Y$ such that $g_i \circ \phi \circ f_i^{-1}$ 
+    are biholomorphisms on their domains of definition.
+\end{definition}
+
+A main problem in Riemann surfaces was classifying certain types of 
+Riemann surfaces up to biholomorphisms.
+
+\begin{theorem}\tt{Riemann mapping theorem}
+    Any two proper open simply connected subsets of $\C$ are biholomorphic.
+\end{theorem}
+
+A generalization of the Riemann mapping theorem is the uniformization theorem
+proved by Kobe in 1907.
+
+\begin{theorem}\tt{Uniformization theorem}
+    Any simply connected Riemann surface is biholomorphic to one of the
+    following:
+    \begin{enumerate}
+        \item[(1)] $\C$
+        \item[(2)] $\hat{\C}$
+        \item[(3)] $\H = \set{z \in \C \colon \mathrm{Im}(z) > 0}$
+    \end{enumerate}
+\end{theorem}
+
+We will give a proof for this theorem in the end of the class.
+
+A natural question that arises is what about non simply connected Riemann
+surfaces?
+
+\begin{theorem}\tt{Uniformization theorem, part II}
+    Any connected Riemann surface is biholomorphic either to $\hat{\C}$
+    or to a quotient of $\C$ or $\H$ by a properly discontinuous
+    torsion-free subgroup of biholomorphisms.
+\end{theorem}
+
+\begin{remark}
+    Biholomorphisms of $U = \C$ or $\H$ (or any subset of $\C$)
+    forms a group under composition.
+    We denote that group by $\Bih(U)$.
+\end{remark}
+
+\begin{definition}[Properly discontinuous group]
+    A countable subgroup of $\Bih(U)$ is said to be properly discontinuous
+    if for all compact $K \subseteq U$, the set 
+    $\set{g \in G \colon gK \cap K \neq \emptyset}$ is finite.
+\end{definition}
+
+\begin{definition}[torsion-free action]
+    $G \subseteq \Bih(U)$ is torsion-free if $gp = p$ for some $p \in U$
+    implies $g$ is the identity.
+\end{definition}
+
+\begin{remark}
+  Notice that multiplication in $gp$ is the group action of $g$ on the 
+  set $U$. That us $gp = g(p)$.
+\end{remark}
+
+We can know define the quotient space $\bigslant{U}{G}$ where
+$p \sim q$ if there exists $g \in G$ such that $gp = q$.
+
+Introduce a topology on $\bigslant{U}{G}$ which is the coarsest topology
+such that the canonical projections $U \to \bigslant{U}{G}$ are continuous.
+
+Under the assumptions that $G$ is properly discontinuous and torsion-free,
+$\bigslant{U}{G}$ is a Riemann surface with the following charts.
+By assumptions on $G$, we can find for any $p \in U$ a neighbourhood $W$ of
+$p \in U$ such that $\pi \colon U \to \bigslant{U}{G}$ is a homeomorphism
+onto its image when restricted to $W$.
+
+So, restrictions of $\pi$ to these neighbourhoods $W$ provide an atlas.
+
+\begin{definition}[Free action]
+  Let $G$
+\end{definition}
+
+\newpage
+
+\section{Introduction to Teichmuller spaces}
+Let $S$ be a topological space.
+Then
+\[
+  \mathrm{Modulispace}(S) = 
+  \set{\text{Riemann surfaces homeomorphic to $S$ up to biholomorphisms}}
+\]
+\begin{definition}[Teichmuller space]
+  We consider pairs $(X,f)$ where $X$ is a Riemann space and
+  $f \colon S \to X$ is a homeomorphism.
+  Then
+  \[
+    \mathrm{Teich}(S) = 
+    \bigslant{\set{(X,f) \colon f \colon S \to X}}{\sim}
+  \]
+  where $(X_1,f_1) \sim (X_2,f_2)$ if there exists a biholomorphism 
+  $X_1 \taking{\phi} X_2$ such that $f_2 \circ f_1^{-1}$ is homotopic to
+  $\phi$.
+  In other words
+  % Triangle
+  commutes up to homotopy.
+\end{definition}
+
+\begin{remark}
+  The pair $(X,f)$ is called a \emph{marking} for $S$.
+\end{remark}
+
+\begin{definition}[Homotopy]
+  We say that two continuous functions $f$, $g$ from a topological space $X$
+  to $Y$ are homotopic if there exists a continuous function 
+  $H \colon X \times [0,1] \to Y$ such that $H(x,0) = f(x)$ and
+  $H(x,1) = g(x)$ for all $x \in X$.
+\end{definition}
+
+\begin{definition}[Mapping class group]
+  First we define:
+  \begin{align*}
+    &\Homeo^+(S) = \set{\text{Orientation preserving homeomorphisms
+    $S \to S$}} \\
+    &\Homeo^0 \triangleleft \Homeo^+(S) = \set{
+      \text{the homeo. homotopic to the identity.}}
+  \end{align*}
+  And now we define
+  \[
+    \MCG(S) = \bigslant{\Homeo^+(S)}{\Homeo^0(S)} =
+    \frac{\Diff^+(S)}{\Diff^0(S)}.
+  \]
+\end{definition}
+
+We have that $\MCG$ acts on $\Teich(S)$ by $\varphi \in \Homeo^+(S),
+[\varphi] \in \MCG(S)$
+as such
+\[
+  [\varphi] [(X,f)] = [(X,f \circ e^{-1})].
+\]
+
+Now $\M(S) = \bigslant{\Teich(S)}{\MCG(S)}$.
+Our goal is to determine $\M(S)$ and $\MCG(S)$ when $S$ is a torus.
+
+\begin{theorem}
+  Assume $S$ is a torus $T \cong \bigslant{\R^2}{\Z^2}$.
+  Then $\MCG(S) = \SL_2(\Z)$ acting linearly on the torus.
+  $\M(S)$ can be identified with $\bigslant{\H}{\SL_2(\Z)}$ where the
+  action is by Mobius transformations.
+\end{theorem}
+\begin{proof}
+  Any Riemann surfaces homeomorphic to $S$ has to form 
+  $\bigslant{\C}{\Lambda}$ where $\Lambda \subseteq \Bih(\C)$ is
+properly disc, free, and $\Lambda \ip{z \to z + \tau_1}{z \to z + \tau_2}$
+  where $\tau_1,\tau_2 \notin \R$.
+  We have to determine when different $\bigslant{\C}{\Lambda}$ are
+  biholomorphic.
+  We can also write $\bigslant{\C}{\Lambda}$ where 
+  $\Lambda = \ip{\tau_1}{\tau_2} \subseteq \C$.
+  If $\Lambda_1 = \ip{\tau_1}{\tau_2}$, $\Lambda_2 = \ip{c \tau_1}{c \tau_2}$
+  for $c \in \C^*$.
+  Then $\bigslant{\C}{\Lambda_1} \to \bigslant{\C}{\Lambda_2}$
+  is given by $[z] \to [cz]$.
+
+  For any $\tau_1, \tau_2 \in \C$ there exists $c \in \C^{\times}$
+  such that (up to change in order)
+
+  % ADD STUFFFF
+
+  This tells us that any Riemann torus is biholomorphic to 
+  $\bigslant{\C}{\ip{XX}{XX}}$ where $\tau \in \H$.
+
+  So we have a surjection $\H \to \M(S)$.
+\end{proof}
+
+\begin{theorem}
+  $\bigslant{\C}{\ip{1}{\tau_1}}$ is biholomorphic to 
+  $\bigslant{\C}{\ip{1}{\tau_2}}$ iff exists $A \in \SL_2(\Z)$
+  such that writing $\tau_1, \tau_2$ as elements of $\R^2$, we have
+  $A\tau_1 = \tau_2$.
+\end{theorem}
+\begin{proof}
+  Suppose there exists a biholomorphism 
+  $f \colon \bigslant{\C}{\ip{1}{\tau_1}} \to \bigslant{\C}{\ip{1}{\tau_2}}$.
+  Let $\bar f \colon \C \to \C$ be a lift of $f$.
+  This means $f(g + x) - f(x) \in \ip{1}{\tau_1}$ whenever
+  $g \in \ip{1}{\tau_1}$.
+  \begin{align*}
+    &f \colon \bigslant{\C}{\ip{1}{\tau_1}} \to \bigslant{\C}{\ip{1}{\tau_2}}
+    bih. \\
+    &\bar f \colon \C \to \C lift.
+  \end{align*}
+  By post composing with a biholomorphism of $\C$ we can assume $\bar f(0) = 0$.
+  We know that $\bar f(\tau_2)$ and $\bar f(1)$ are equivalent mod
+  $\ip{1}{\tau_1}$.
+\end{proof}
+
+%%%% LECTURE 4
+
+\begin{remark}
+  Let $S$ be a Riemann surface.
+  Recall that $\M(S)$ is the moduli space of $S$, which is the space of Riemann
+  surfaces homeo to $S$ up to biholomorphism.
+\end{remark}
+Recall that we define
+\[
+  \MCG(S) = \bigslant{\Homeo^+(S)}{\Homeo^0(S)}
+\]
+And the Teichmuller space of $S$
+\[
+  \mathrm{Teich}(S) = 
+  \bigslant{\set{(X,f) \colon f \colon S \to X}}{\sim}
+\]
+where $(X_1,f_1) \sim (X_2,f_2)$ if there exists a biholomorphism 
+$X_1 \taking{\phi} X_2$ such that $f_2 \circ f_1^{-1}$ is homotopic to $\phi$.
+
+Our goal today is to show that for $T = \text{torus} = \bigslant{\R^2}{\Z^2}$.
+\begin{itemize}
+  \item $\MCG(S) \cong \SL_2(\Z)$.
+  \item $\M(S) \cong \bigslant{\H}{\SL_2(\Z)}$.
+  \item $\Teich(S) \cong \H$.
+\end{itemize}
+
+Notice that because of the relation
+\[
+  \bigslant{\Teich(S)}{\MCG(S)} = \M(S)
+\]
+we only need to prove two of these propositions.
+
+First let's prove that $\M(S) \cong \bigslant{\H}{\SL_2(\Z)}$.
+Any Riemann surface is homeomorphic to $T$ (a complex torus) is biholomorphic
+to $\bigslant{\C}{\ip{\tau_1}{\tau_2}}$.
+
+Recall that if $c \in \C^{\times}$ then $\bigslant{\C}{\ip{\tau_1}{\tau_2}}$
+is biholomorphic to $\bigslant{\C}{\ip{c \tau_1}{c \tau_2}}$ via the map
+\[
+  f(z + \ip{\tau_1}{\tau_2}) = cz + \ip{c \tau_1}{c \tau_2}.
+\]
+Up to changing the order of $\tau_1$, $\tau_2$ we can find $c \in \C{\times}$
+such that $c \tau_1 = 1$ and $c_2 \in \H$.
+
+Our goal now is to determine when there exists a biholomorphism
+\[
+  \bigslant{\C}{\ip{1}{\tau_1}} \mapsto
+  \bigslant{\C}{\ip{1}{\tau_2}}, \quad \tau_1,\tau_2 \in \H
+\]
+
+Denote $\Lambda_{\tau} = \ip{1}{\tau}$, when $\tau \in \H$.
+
+\begin{theorem}
+There exists a biholomorphism
+\[
+  \bigslant{\C}{\ip{1}{\tau_1}} \mapsto
+  \bigslant{\C}{\ip{1}{\tau_2}}, \quad \tau_1,\tau_2 \in \H
+\]
+iff there exists 
+\[
+  \begin{pmatrix}
+    a & b \\
+    c & d
+  \end{pmatrix} \in \SL_2(\Z)
+\]
+with $\tau_2= \frac{a \tau_1 + b}{c \tau_2 + d}$.
+This will imply that \item $\M(S) \cong \bigslant{\H}{\SL_2(\Z)}$.
+\end{theorem}
+\begin{proof}
+  Suppose there exists a biholomorphism 
+  \[
+    f \colon \bigslant{\C}{\ip{1}{\tau_1}} \to
+    \bigslant{\C}{\ip{1}{\tau_2}}.
+  \]
+  Lift it up to $\bar f \colon \C \to \C$.
+  Then $\bar f(g + x) - \bar f(x) \in \Lambda_{\tau_1}$
+  whenever $x \in \C$, $g \in \Lambda_{\tau_2}$.
+  We can replace $\bar f$ with $\bar f - \bar f(0)$.
+  We can assume that $\bar f(0) = 0$ (and is still a lift off).
+  \begin{remark}
+    Since $\bar f$ is a lift off of $f$ we have 
+    $\bar f(\Lambda_{\tau_2}) = \Lambda_{\tau_1}$.
+  \end{remark}
+  We know that $\bar f$ has form $\bar f(z) = a z + b$ such that
+  $a \in \C^{\times}$, $b \in \C$.
+  As $\bar f(0) = 0$ we have $\bar f(z) = a z$.
+  Also, $\set{0,1,\tau_2} \subseteq \Lambda_{\tau_2}$ so 
+  $0 = \bar f(0), \bar f(1) = a, \bar f(\tau_2) = a \tau_2$ are in
+  $\Lambda_{\tau_1}$ so we can write $a = \bar f(1) = $
+  %% MOR$E STUFF?
+  We now have
+  \[
+    \tau_2 =
+    \begin{pmatrix}
+      a & b \\
+      c & d
+    \end{pmatrix}
+  \]
+  and we still need to show it is an element of $\SL_2(\Z)$.
+  %% THE PART
+\end{proof}
+
+
+\newpage
+
+\section{Isotopy and Homotopy}
+Let $X$ be a metric space and $F_0, F_1 \colon X \to X$ homeomorphisms.
+Then we say $F_0$, $F_1$ are homotopic if there exists a family $F_t$
+for $t \in [0,1]$ of continuous maps such that $t \mapsto F_t(x)$ is
+continuous for all $x \in X$ (we don't require $F_0$, $F_1$ to be 
+homeomorphisms).
+
+The maps $F_0$, $F_1$ are said to be isotopic if $F_t$ are required to
+be homeomorphisms.
+
+For a surface $S$, we defined $\MCG(S)$
+
+\begin{theorem}[Baire, Epstein]
+  If $S$ is a finite type surface (e.g.\ closed surface of XXX)
+  then two homeomorphisms $F_0, F_1 \colon X \to X$ are homotopic
+  iff they are isotopic.
+\end{theorem}
+
+Last time we have shown that if $T = \R^2 / \Z^2$ is a torus,
+then $\MCG(S) = \SL_2(\Z)$.
+For any $A \in \SL_2(\Z)$ we obtained a homeomorphism
+\[
+  \fullfunction{\psi_A}{T}{T}{[x]}{[Ax]}
+\]
+We showed that any orientation preserving homeomorphism $\phi \colon T \to T$
+is homotopic to $\psi_A$ for some $A \in \SL_2(\Z)$.
+
+This gives a map
+\[
+  \fullfunction{\Phi}{\SL_2(\Z)}{\MCG(T)}{[A]}{[\psi_A]}
+\]
+which we know is surjective.
+Why is $\Phi$ injective?
+
+
+We want to show that for $A \in \SL_2(\Z)$ and $A \neq I$ that $\psi_A$
+is not homotopic to the identity map.
+
+We will see this by showing that $\psi_A$ acts nontrivially on the fundamental
+group $\Pi_1(T)$.
+
+\begin{definition}[Loop]
+  A loop based at $p$ is a continuous function $\gamma \colon [0,1] \to X$ with 
+  $f(0) = f(1) = 0$.
+\end{definition}
+
+\begin{definition}[Homotopy]
+  We say that two continuous functions $f$, $g$ from a topological space $X$
+  to $Y$ are homotopic if there exists a continuous function 
+  $H \colon X \times [0,1] \to Y$ such that $H(x,0) = f(x)$ and
+  $H(x,1) = g(x)$ for all $x \in X$.
+\end{definition}
+
+\begin{definition}[Fundamental group]
+  The fundamental group of a topological space $X$ is the space of all loops
+  in $X$ based at a point $p \in X$ up to homotopy.
+\end{definition}
+ 
+A homeomorphism $\psi \colon X \to X$ acts on $\Pi_1(X)$ by
+\[
+  \psi[\gamma] = [\psi \circ \gamma].
+\]
+The group operation is concatenation of loops.
+
+Invesrion is changing the direction of the loop.
+
+\begin{exercise}[Fundamental group of the torus]
+  The fundamental group of $T$ is $\Pi_1(T) \cong \Z^2$ is generated
+  by \[\left[\begin{pmatrix} 1 \\ 0 \end{pmatrix}\right] \tand
+  \left[\begin{pmatrix} 0 \\ 1 \end{pmatrix}\right].\]
+  This means any loop is homotopic to
+  $[\begin{pmatrix} a \\ b \end{pmatrix}]$
+  by doing $[\begin{pmatrix} 1 \\ 0 \end{pmatrix}]$ $a$ times
+  and $[\begin{pmatrix} 0 \\ 1 \end{pmatrix}]$ $b$ times.
+\end{exercise}
+
+For $A \in \SL_2(\Z)$ and $\psi_A \colon T \to T$ action on
+$\Pi_1(T, (0,0))$ (fundamental group of the torus based in $(0,0)$)
+defined by
+\[
+  (x,y) \mapsto A \begin{pmatrix} x \\ y \end{pmatrix}.
+\]
+If $\psi_A$ was homotopic to the identity it owuld act trivially on
+$\Pi_1(T, (0,0))$ which means that
+\[
+  [0,1] = [A (1,0)] = [(b,d)] \stand [(1,0)] = [A(1,0)] = [(a,c)]
+\]
+so $(a,c) = (1,0)$ and $(b,d) = (0,1)$ so $A$ is the identity matrix.
+
+\newpage
+
+\section{Hyperbolic geometry}
+Recall that $\Bih(\H)$ is the set of Mobius transformations with a representing
+matrix in $\SL_2(\Z)$.
+
+But $z \mapsto \frac 1z$ does not present Euclidean metric on 
+$\H = \set{z \colon \Im(z) > 0}$.
+
+We will introduce a metric $\rho = \rho_{hyp}$ on $\H$ s.t.\
+\[
+  \Bih(\H) = \text{Orientation preserving isometrics of } (\H,\rho).
+\]
+
+\begin{definition}[Length]
+  Let $\gamma \colon [0,1] \to \H$ be a pointwise continuous smooth path
+  between $a$ and $b$.
+
+  The hyperbolic length of $\gamma$ is
+  \[
+    L_{\rho}(\gamma) :=
+    \int_0^1 
+  \]
+\end{definition}
+
+%%%%%%%%
+
+Recall that every element in every $\Mob(\hat \C)$ is conjugate
+to either $z \mapsto z + 1$ or $z \mapsto \Lambda z$ for
+$\Lambda \in \C \setminus \set{0,1}$.
+
+Recall that $T_{\lambda}(z)= \Lambda z$ and
+$T_{\Lambda^{-1}}(z) = \Lambda^{-1} z$ are conjugate via the transform
+\[
+  S(z) = \frac{1}{z}.
+\]
+Indeed this can be verified.
+
+So in the above classification we can assume $|\Lambda| \geq 1$.
+
+\begin{corollary}
+  A complete set of nonindentity conjugacy class representations in $\Mob(\C)$
+  is $z \mapsto z + 1$ or $z \mapsto \Lambda z$ for $\set{\Lambda, 1 / \Lambda}$
+  distinct unordered pairs.
+\end{corollary}
+\begin{proof}
+  We know that $z \mapsto z + 1$ cannot be conjugate to $z \mapsto \Lambda z$
+  which has two fixed points in $\hat \C$.
+
+  We need to show that for different $\Lambda \neq 1$ and $|\Lambda| \geq 1$,
+  $z \mapsto \Lambda z$ are not conjugate.
+
+  Recall that in general if $\psi \in \Mob(\hat \C)$ then
+  \[
+    \psi = \psi_A(z) = \frac{a z + b}{c z + d} \st
+    A =
+    \begin{pmatrix}
+      a & b \\
+      c & d
+    \end{pmatrix} \in \SL_2(\C).
+  \]
+  There are two matrices representing $\psi$ which are $A$ and $-A$.
+
+  Since $\PSL_2(\C) \to \Mob(\hat \C)$ defined as $[A] \mapsto \psi_A$
+  is an isomorphism, we know that $\psi_A$ and $\psi_B$ are conjugate
+  in $\Mob(\hat C)$ if and only if $A$ is conjugate to $\pm B$ in
+  $\SL_2(\C)$.
+
+  Now, if $A$ is conjugate to $B$ then $A$, $B$ have the same eigenvalues.
+
+  Coming back to $z \mapsto \Lambda z$.
+
+  If $\Lambda_1, \Lambda_2 \in \C \setminus{0,1}$ such that
+  $|\Lambda_1|, |\Lambda_2| \geq 1$. $z \mapsto \Lambda z$ is represented
+  by
+  \[
+    \begin{pmatrix}
+      \Lambda & 0 \\
+      0 & 1 / \Lambda
+    \end{pmatrix} \in \SL_2(\C).
+  \]
+  which has eigenvalues $(1, 1 / \Lambda)$ for distinct $|\Lambda| \geq 1$
+  so they can't be conjugate.
+\end{proof}
+
+\subsection{Qualitative properties of M\"obius transformations}
+
+The map $z \mapsto z + 1$ preserves the unique line in $\H$ which converges
+to $\infty$ (which is the fixed point of $z \mapsto z + 1$) in both directions. 
+In other words, all the horizontal lines.
+
+The map $z \mapsto \Lambda z$ preserves the geodesic in $\H$ which converges to
+the two fixed points $z \to \Lambda z$ (namely $0$, $\infty$).
+
+% More things I don't know
+\begin{proposition}
+  Any discrete subgroup of $\R$ is c$\Z$ for $c \in \R$.
+  In this case it is infinite cyclic.
+\end{proposition}
+\begin{proposition}
+  Any discrete subgroup of the circle $S^1$ is 
+  $\set{e^{\frac{2 \pi i k}{n}} \colon k = 0,1,\dots,n-1}$
+  In this case it is finite cyclic.
+\end{proposition}
+
+
+Recall that for $g \in \PSL_2\R$ the commutator of $g$ is
+$C_{\PSL_2\R}(g) = \set{h \in \PSL_2\R \colon hg = gh}$.
+
+\begin{theorem}
+  If $g \in \PSL_2\R$ is a (hyperbolic / parabolic / elliptical)
+  then $C_{\PSL_2\R}(g)$
+  consists of the idnetity with all the
+  (hyperbolic / parabolic / elliptical) elements which have the
+  same fixed point set in
+  $\bar \H = \H \cup \R \cup \set{\infty}$.
+\end{theorem}
+
+\begin{remark}
+  The requirement (hyperbolic / parabolic / elliptical) is
+  redundant.
+\end{remark}
+
+Recall that if $g$ is parabolic then $C_{\PSL_2\R}(g)$ is
+conjugate to
+\[
+  C_{\PSL_2\R}(z \mapsto z + 1) =
+  \set{z \mapsto z + r \colon r \in \R}.
+\]
+
+If $g$ is elliptic then $C_{\PSL_2\R}(g)$ is
+conjugate to
+\[
+  C_{\PSL_2\R}\del{z \mapsto 
+  \frac{(\cos \theta) z - \sin \theta}
+  {(\sin \theta) z + \cos \theta}} =
+  \set{z \mapsto \frac{(\cos \theta) z - \sin \theta}
+  {(\sin \theta) z + \cos \theta} \colon \theta \in [0,2 \pi)}.
+\]
+If $g$ is hyperbolic \dots
+
+\begin{theorem}
+  If $\Gamma \subseteq \PSL_2\R$ is discrete, and each nonidentity
+  element of $\Gamma$ has the same fixed point set then
+  $\Gamma$ is cyclic.
+\end{theorem}
+\begin{proof}
+  If all nonidentity elements of $\Gamma$ have the same fixed
+  point set then they are either all hyperbolic, all parabolicm
+  or all elliptic.
+  \begin{enumerate}
+    \item[(1)] In case they are all hyperbolic,
+      \[
+        \mathrm{fix}(\Gamma) = \set{p,q} \subseteq \partial \H
+      \]
+      Then after conjugating by $T \in \Mob(\H)$ with \dots
+  \end{enumerate}
+\end{proof}
+
+
+
+
+
+
+\end{document}

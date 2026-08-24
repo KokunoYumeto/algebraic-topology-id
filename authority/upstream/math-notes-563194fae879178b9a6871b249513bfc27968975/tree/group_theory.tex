@@ -1,0 +1,302 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2025}
+\def\nterm {Winter}
+\def\nlecturer {Eli Aljadeff}
+\def\ncourse {Group Theory}
+
+\input{header.tex}
+
+\begin{document}
+	\maketitle
+
+  % Insert cool image here
+
+	\newpage
+  \tableofcontents
+  \newpage
+
+  \section{Introduction}
+  \begin{definition}[Binary operation]
+    A binary operation on a set $S$ is a mapping $f$ from $S \times S$
+    to $S$.
+  \end{definition}
+
+  \begin{definition}[Group]
+    Let $G$ be a non-empty set and $*$ a binary operation on $A$.
+    The pair $(G,*)$ is called a group if the following are satisfied:
+	  \begin{itemize}
+      \item For all $a,b,c \in G$ we have $(a * b) * c = a * (b * c)$;
+        (Associativity)
+      \item There exists $e \in G$ such that for all $a \in G$ we have
+        $a * e = e * a = a$; (Identity element)
+      \item For all $a \in G$ there exists $a^{-1} \in G$ such that
+        $a * a^{-1} = a^{-1} * a = e$. (Inverse element)
+	  \end{itemize}
+  \end{definition}
+
+  \begin{definition}[Cayley table]
+    A Cayley table is a way to describe a finite group by arranging all
+    the possible products of any two elements of the group. For example
+    the table
+    \begin{center}
+    \begin{tabular}{c | c c c}
+      $(A,*)$ & $e$ & $x$ & $y$ \\
+      \cline{1-4}
+      $e$ & $e$ & $x$ & $y$ \\
+      $x$ & $x$ & ? & ? \\
+      $y$ & $y$ & ? & ? 
+    \end{tabular}
+    \end{center}
+    is the Cayley table of some group such that $A = \{e,x,y\}$.
+  \end{definition}
+  \begin{remark}
+    There is only one way to complete the above table such that it would
+    describe a group.
+  \end{remark}
+
+  \begin{definition}[Homomorphism of groups]
+    Let $(G,*_G)$ and $(H,*_H)$ be groups.
+    A homomorphism of groups is a function $\varphi \colon G \to H$ such
+    that for any $a, b \in G$ we have
+    \[
+      \varphi(x *_G y) = \varphi(x) *_H \varphi(y).
+    \]
+    If there exists a homomorphism between $G$ and $H$, they are called
+    homomorphic groups.
+  \end{definition}
+
+  \begin{definition}[Isomorphism of groups]
+    An isomorphicm of groups is a bijective homomorphism.
+    If there exists a homomorphism between two group $G$ and $H$,
+    they are called isomorphic groups.
+  \end{definition}
+
+  We see that an isomorphism is a function the preserves the structure
+  of the group in the sense that applying the function on the product 
+  of the elements $x$, $y$ in $G$, is the same as taking the product of 
+  the elements $\varphi(x)$, $\varphi(y)$ in $H$.
+
+  We can see that the Cayley tables of isomorphic groups are the same.
+  For example, if $G$ and $H$ are isomorphic groups of size $3$,
+  with the isomorphism $\varphi \colon G \to H$ we can see that
+  \begin{center}
+    \begin{tabular}{c | c c c}
+      $(G,*_G)$ & $e$ & $x$ & $y$ \\
+      \cline{1-4}
+      $e$ & $e *_G e$ & $e *_G x$ & $e *_G y$ \\
+      $x$ & $x *_G e$ & $x *_G x$ & $x *_G y$ \\
+      $y$ & $y *_G e$ & $y *_G x$ & $y *_G y$ 
+    \end{tabular} $\approx$
+    \begin{tabular}{c | c c c}
+      $(H,*_H)$ & $\varphi(e)$ & $\varphi(x)$ & $\varphi(y)$ \\
+      \cline{1-4}
+      $\varphi(e)$ & $\varphi(e *_G e)$ & $\varphi(e *_G x)$ & $\varphi(e *_G y)$ \\
+      $\varphi(x)$ & $\varphi(x *_G e)$ & $\varphi(x *_G x)$ & $\varphi(x *_G y)$ \\
+      $\varphi(y)$ & $\varphi(y *_G e)$ & $\varphi(y *_G x)$ & $\varphi(y *_G y)$
+    \end{tabular}
+  \end{center}
+  Then by applying the homomorphism property we get that the original
+  table is approximately
+  \begin{center} 
+    \begin{tabular}{c | c c c}
+      $(H,*_H)$ & $\varphi(e)$ & $\varphi(x)$ & $\varphi(y)$ \\
+      \cline{1-4}
+      $\varphi(e)$ & $\varphi(e) *_H \varphi(e)$ & $\varphi(e) *_H \varphi(x)$ & 
+        $\varphi(e) *_H \varphi(y)$ \\
+      $\varphi(x)$ & $\varphi(x) *_H \varphi(e)$ & $\varphi(x) *_H \varphi(x)$ &
+        $\varphi(x) *_H \varphi(y)$ \\
+      $\varphi(y)$ & $\varphi(y) *_H \varphi(e)$ & $\varphi(y) *_H \varphi(x)$ &
+        $\varphi(y) *_H \varphi(y)$
+    \end{tabular}
+  \end{center}
+
+  which is exactly the Cayley group of $H$.
+  
+  \begin{definition}[Order of a group]
+    Let $(G, *)$ be a group. The size $|G|$ is said to be the order
+    of the group.
+  \end{definition}
+
+  The following table shows the amount of different groups up to isomorhism
+  by their order:
+  \begin{center}
+    \begin{tabular}{c | c}
+        Order & Number \\
+        \cline{1-2}
+        $1$ & $1$ \\
+        $2$ & $1$ \\
+        $3$ & $1$ \\
+        $4$ & $2$ \\
+        $5$ & $1$ \\
+        $6$ & $2$ \\
+        $7$ & $1$ \\
+        $8$ & $5$ \\
+        $9$ & $2$
+    \end{tabular}
+  \end{center}
+
+  \begin{definition}[Greatest common divisor]
+    The greatest common divisor (GCD) of integers $a$ and $b$,
+    at least one of which is nonzero,
+    is the greatest positive integer $d$ such that $d$ is a divisor of 
+    both $a$ and $b$.
+    The greatest common divisor of $a$ and $b$ is denoted $\gcd(a,b)$.
+  \end{definition}
+  \begin{remark}
+    We define $\gcd(0,0) = 0$, but this is mostly not relevant.
+  \end{remark}
+
+  \begin{definition}[Coprime]
+    Let $a,b \in \Z$.
+    We say that $a$ and $b$ are coprime if $\gcd(x,y) = 1$.
+  \end{definition}
+
+  \begin{proposition}
+    Let $a,b \in \Z$. Then $\gcd(a,b)$ exists and is unique.
+    Moreover, there exist $n,m \in \Z$ such that $d = am + nb$.
+  \end{proposition}
+  \begin{proof}
+	Consider the following set
+	\[
+    A := \set{ma + nb \mid m,n \in\Z \tand ma + nb > 0}.
+	\]
+	The set isn't empty since $a^2 + b^2 \in A$,
+  so by the well ordering theorem, it follows that it has a first element 
+  which we will call $d$.
+  By the construction $d$ is a positive integer.
+
+	\begin{itemize}
+		\item Without loss of generality suppose $b=qd+r$ and $r\ne 0$.
+		\begin{align*}
+			b &= q (ma + nb) + r \\
+			r &= (-qm) a + (1 - qn) b
+		\end{align*}
+		$r \neq 0 \Rightarrow r \in A$ but $r < d$ which is a contradiciton!
+		\item $c|b \quad\mathrm{and}\quad c|a \rightarrow c$ divides all linear 
+      combinations of $a,b\rightarrow c|d$
+	\end{itemize}
+  \end{proof}
+
+  \begin{proposition}
+    Every integer greater than $1$ can be represented uniquely as a product of
+    prime numbers, up to the order of the factors.
+  \end{proposition}
+  \begin{proof}
+    We will prove this by induction on $n$.
+  	For the base case $n = 2$ we know that $2 = p_1$.
+    Since $2$ is the smallest prime number this product (of one element) is
+    unique.
+
+	  Let $n > 2$.
+    If $n$ is a prime number then the proof is trivial.
+    If is not prime, then $n = n_1 * n_2$ for some $1 < n_1, n_2 < n$. 
+    By the induction hypothesis $n_1 = p_1 * \cdots * p_n$ and 
+    $n_2 = p'_1, \cdots, p'_m$. 
+    Therefore $n = (p_1 * \cdots * p_n) * (p'_1 * \cdots * p'_m)$.
+
+    Suppose $n = p_1*\ldots *p_n=q_1*\ldots *q_m$
+    We know $p_1|q_1*\ldots *q_m$ so $p_1=q_j$ for some $j$ 
+    then we can rearrange the elements such that 
+    $p_2*\ldots *p_n = q_2*\ldots *q_m$ and so on to show that
+    the factorization is unique every time.
+  \end{proof}
+	
+  \begin{definition}[The set $\Z^*_n$]
+    Let $n$ be a natural number.
+    We define
+    \[
+      \Z^*_n = \set{m \in \Z_n \mid \gcd(m,n) = 1}.
+    \]
+  \end{definition}
+  \begin{proposition}
+    The pair $(\Z^*_n, *)$ is a group where $*$ denotes modular multiplication.
+  \end{proposition}
+
+  \begin{definition}[Order of an element]
+    Let $(G,*)$ be a group, let $g \in G$.
+    Let $n$ be the smallest positive integer such that $g^n = e$ where
+    $e$ is the unit element of $G$. We denote $|g| = n$.
+    If there does not exist such $n$, we define $|g| = \infty$.
+  \end{definition}
+  
+  \begin{definition}[Abelian group]
+    Let $(G,*)$ be a group. We say that $G$ is abelian if for all $a,b \in G$
+    we have $a * b = b * a$.
+  \end{definition}
+  \begin{remark}
+  	The Cayley table for an abelian group is symmetric.
+  \end{remark}
+
+  \begin{definition}[The symmetric group]
+    Set $X_n := \{1,2,\dots,n\}$. 
+	  The symmetric group denoted as $S(X_n)$ or $S_n$, is defined as the set 
+    of all bijections $\sigma \colon X_n \to X_n$ coupled with the operation 
+    of function composition.
+  \end{definition}
+
+  \begin{proposition}
+    If $(G, *)$ is a group of finite order, then every element of $G$ also has
+    a finite order.
+  \end{proposition}
+  \begin{proof}
+    Denote $|G|=n$, and let $g \in G$.
+    Consider the elements $g, g^2, \dots, g^{n+1}$.
+    From the pigeonhole principle there exists $1 \le i \neq j \le n+1$
+    such that $g^i = g^j$. This implies that $g^{i-j} = e$.
+  	Therefore $O(g)$ is finite.
+  \end{proof}
+
+  \begin{definition}[Subgroup]
+    Let $(G, *)$ be a group. If the set $(H,*_H)$ such that $H \subset G$
+    and $*_H = *\vert_H$ is a group, then $H$ is called a subgroup of $G$.
+  \end{definition}
+
+  \begin{proposition}
+    Let $(G.*)$ be a group and $\emptyset \neq H \subseteq G$.
+    Then $H$ is a subgroup if and only if the following conditions are
+    satisfied:
+    \begin{enumerate}
+      \item[(1)] For all $a,b \in H$ we have $x * y \in H$;
+      \item[(2)] For all $a \in H$ we have $a^{-1} \in H$;
+      \item[(3)] $e \in H$.
+    \end{enumerate}
+  \end{proposition}
+  \begin{remark}
+    Condition $(3)$ is not necessary.
+    If $G$ is finite condition $(2)$ is also not necessary.
+  \end{remark}
+
+  \begin{definition}[Cyclic group]
+    Let $(G,*)$ be a group. We say that $G$ is cyclic if there exists
+    an element $g \in G$ such that
+    \[
+      G = \langle x \rangle := \set{g^k \mid k \in \Z}.
+    \]
+  \end{definition}
+
+  If the group is of finite order $n$ every subgroup is of order $k|n$.
+  Prove by contradiction.
+  A group generated from a set $S$ is
+  \[
+    G = \left<S\right> := \bigcap_{S \subseteq H_a}{H_a}
+  \]
+  Where $H_a$ are all the subgroups that contain $S$.
+  Let $S = \{a,b\}$ then the group will contain all possible products 
+  from $a,b$ and their inverses.
+
+
+  \begin{remark}
+    From now on when we talk about a group and refer to it as $G$ it should
+    be clear that it is to be interpreted as $(G,*)$.
+  \end{remark}
+
+  \begin{theorem}\tt{Lagrange's theorem}
+    Let $G$ be a group and let $H$ be a subgroup of $G$.
+    Then $|H|$ is a divisor of $|G|$.
+  \end{theorem}
+  
+
+
+
+\end{document}

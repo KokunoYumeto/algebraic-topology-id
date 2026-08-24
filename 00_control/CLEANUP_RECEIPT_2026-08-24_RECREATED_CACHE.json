@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "cleanup_id": "O012-TASK-LOCAL-RECREATED-CACHE-2026-08-24T095607-CEST",
+  "status": "PASS",
+  "scope": "Three disposable Python bytecode files recreated inside this lane after the primary verified cleanup",
+  "archive": {
+    "path": "<LOCAL_ACCOUNT_ROOT>/Documents/interlanguage/old stuff/algebraic-topology-id_recreated-python-cache_20260824T095607_CEST.zip",
+    "bytes": 93895,
+    "sha256": "f570c5885bed9231576df78cf084a9d4e0b7bd059f6e929812660a3c0d35ed66",
+    "entries": 3,
+    "uncompressed_source_bytes": 194618,
+    "no_overwrite": true
+  },
+  "verification": {
+    "zip_reopened": true,
+    "entry_count_matched": true,
+    "every_entry_path_size_and_sha256_matched": true,
+    "verification_failures": 0,
+    "every_deleted_source_confirmed_absent": true,
+    "empty_source_directory_removed": true
+  },
+  "archived_and_deleted_files": [
+    {
+      "path": "scripts/__pycache__/extend-backend-unit-029.cpython-313.pyc",
+      "bytes": 56146,
+      "sha256": "5f7c945af5033f07c133303ca5139112cc4991e8c1ba7bb4f3c5c1db68354b85"
+    },
+    {
+      "path": "scripts/__pycache__/extend-backend-unit-030.cpython-313.pyc",
+      "bytes": 58289,
+      "sha256": "3246d0fdc29f5bff10a37914deb0b9813841e7ab74403b0862f88272cd7c3784"
+    },
+    {
+      "path": "scripts/__pycache__/validate-backend.cpython-313.pyc",
+      "bytes": 80183,
+      "sha256": "8d72ac0620bbc32ee74f1b56b90ebc763e2a99cc9ad1c0550770fab167dd5d02"
+    }
+  ],
+  "deliberately_retained": [
+    "tmp/pdfs/roberts-001-030-fomberg-001-visual (current build visual-QA evidence, needed to seal the active release boundary)",
+    "canonical source and translated reader files",
+    "backend records and manifests",
+    "authority, rights, QA, build, and publication evidence",
+    "current release artifacts and durable controls"
+  ],
+  "safety": {
+    "broad_scan_used": false,
+    "git_command_used": false,
+    "shared_or_other_lane_files_touched": false,
+    "credential_bearing_files_touched": false,
+    "deletion_occurred_only_after_archive_verification": true
+  }
+}

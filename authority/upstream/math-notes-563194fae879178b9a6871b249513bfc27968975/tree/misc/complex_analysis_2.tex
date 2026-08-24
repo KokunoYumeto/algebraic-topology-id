@@ -1,0 +1,484 @@
+\documentclass[11pt,a4paper]{article}
+
+\def\nyear {2025}
+\def\nterm {Spring}
+\def\nlecturer {Orr Shalit}
+\def\ncourse {Complex Analysis 2}
+
+\input{header.tex}
+
+\begin{document}
+\maketitle
+
+% Insert cool image here
+
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\begin{definition}[The $H^{\infty}(U)$ class]
+  Let $U$ be an open subset of $\C$.
+  We denote the class of analytic functions on $U$
+  by $H(U)$ and define the following class of functions
+  \[
+    H^{\infty}(U) :=
+    \set{f \in H(U) \colon \norm{f}_{\infty} = \sup_{z \in U}
+    \abs{f(z)} < \infty}.
+  \]
+\end{definition}
+
+\begin{definition}[Schur class]
+  We define the following class of functions
+  \[
+    S := \set{f \in H^{\infty}(\D) \mid \norm{f}_{\infty} \le 1}.
+  \]
+\end{definition}
+
+\begin{proposition}[Schwartz's--Pick lemma]
+  \label{prop:schwartz-pick}
+  Let $f \in S$ and let $z_1,z_2 \in S$.
+  Then
+  \[
+    \abs{\frac{f(z_1) - f(z_2)}{1 - f(z_1) \overline{f(z_2)}}} \le
+    \abs{\frac{z_1 - z_2}{1 - z_1 \overline{z_2}}}.
+  \]
+\end{proposition}
+\begin{proof}
+  To be added.
+\end{proof}
+\begin{remark}
+  \Cref{prop:schwartz-pick} is also known as the invariant form of
+  the Schwartz lemma.
+\end{remark}
+
+\begin{definition}[Pseudohyperbolic metric]
+  Let $z,w \in \D$.
+  We define the pseudohyperbolic metric by
+  \[
+    \rho(z,w) := \abs{\frac{z - w}{1 - \overline{w} z}}.
+  \]
+\end{definition}
+\begin{remark}
+  The map $\rho$ is invariant under M\"obius transformations.
+  That is, if $\phi$ is a M\"obius transformation so that $\phi(w) = 0$
+  then we have $\rho(z,w) = \abs{\phi(z)}$.
+\end{remark}
+
+\begin{remark}
+  Let $f \colon \D \to \D$.
+  Then from the Schwartz's--Pick lemma we have
+  \[
+    \rho(f(z),f(w)) \le \rho(z,w).
+  \]
+  This means that $f$ is a contraction.
+  Moreover, there is an equality if and only if $f$ is
+  an automorphism of the disc.
+  That is because if $f$ is an automorphism of the disc then $f$ and
+  $f^{-1}$ are both contractions which implies the equality.
+\end{remark}
+
+\begin{problem}[Pick's interpolation problem]
+  \label{problem:picks-interpolaltion-problem}
+  Let $z_1,\dots,z_n \in \D$ and let
+  $w_1,\dots,w_n \in \D$.
+  Does there exist a function 
+  $f \in H(\D)$ so that
+  $f(z_i) = w_i$ for all $1 \le i \le n$
+  and $\abs{f(\lambda)} \le 1$ for all $\lambda \in \D$?
+\end{problem}
+\begin{remark}
+  In case $n = 1$ we can solve the function immediately by
+  using $f = \psi_{w_1} \circ \psi_{z_1}$ which first interchanges between
+  $0$ and $z_1$ then by $0$ and $w_1$ so $f(z_1) = w_1$ as wanted.
+  
+  In case $n = 2$ we can do this if and only if
+  $\rho(w_1,w_2) \le \rho(z_1,z_2)$.
+  An equivalent statement is that
+  \[
+    \begin{bmatrix}
+      \frac {1-|z_{1}|^{2}}{1-|w_{1}|^{2}} &
+      \frac {1-{\overline {z_{1}}}z_{2}}{1-{\overline {w_{1}}}w_{2}}
+    \\[5pt]
+      \frac {1-{\overline {z_{2}}}z_{1}}{1-{\overline {w_{2}}}w_{1}} &
+      \frac {1-|z_{2}|^{2}}{1-|w_{2}|^{2}}
+    \end{bmatrix}
+    \geq 0.
+  \]
+  % that is because?
+\end{remark}
+
+\begin{theorem}[Pick's theorem]
+  \label{thm:pick}
+  Let $z_1,\dots,z_n \in \D$ and let
+  $w_1,\dots,w_n \in \D$.
+  Then there exists $f \in H(\D)$ so that
+  $f(z_i) = w_i$ for all $1 \le i \le n$ if and only if
+  the \textit{Pick matrix}:
+  \[
+    \begin{bmatrix}
+      \cfrac{1 - w_i \overline{w_j}}{1 - z_i \overline{z_j}}
+    \end{bmatrix}_{i,j=1}^{n}
+  \]
+  is positive-semidefinite.
+\end{theorem}
+\begin{proof}
+  When $n = 1$ the condition is that
+  \[
+    \cfrac{1 - w \overline{w}}{1 - z \overline{z}} \geq 0
+  \]
+  which holds for any $z,w \in D$.
+  When $n = 2$ the condition is that
+  \[
+    \begin{bmatrix}
+      \cfrac{1 - \abs{w_1}^2}{1 - \abs{z_1}^2} &
+      \cfrac{1 - w_1 \overline{w_2}}{1 - z_1 \overline{z_2}}
+      \\
+      \cfrac{1 - w_2 \overline{w_1}}{1 - z_2 \overline{z_1}} &
+      \cfrac{1 - \abs{w_2}^2}{1 - \abs{z_2}^2}
+    \end{bmatrix} \geq 0
+  \]
+  which reduces to
+  $\rho(w_1,w_2) \le \rho(z_1,z_2)$.
+\end{proof}
+
+\begin{definition}[Hardy space]
+  We define the Hardy space $H^2(\D)$ as followsing
+  \[
+    H^2(\D) = H^2 =
+    \set{h(z) = \sum_{n=0}^{\infty} a_n z^n \in H(\D) \st
+    \norm{h}_2^2 := \sum \abs{a_n}^2 < \infty}.
+  \]
+\end{definition}
+\begin{remark}
+  Given a power series $\sum a_n z^n \in H^2$ we have by
+  the Cauchy--Scwarz's inequality
+  \[
+    \abs{\sum a_n z^n} \le
+    \del{\sum \abs{a_n}^2}^{1/2}
+    \del{\sum \abs{z}^{2n}}^{1/2}
+  \]
+  which converges for any $z \in \D$.
+\end{remark}
+
+\begin{definition}[Inner product]
+  Given two formal sums we define their inner product to be
+  \[
+    \ip{a}{b} =
+    \ip{\sum a_n z^n}{\sum b_n z^n}_{H^2} =
+    \norm{\sum a_n \overline{b^n}} \le
+    \norm{a}_2 \norm{b}_2
+  \]
+\end{definition}
+% define norm and metric
+
+\begin{remark}
+  The space $H^2$ is a complete metric space and an inner
+  product space so it is a Hilbert space.
+\end{remark}
+
+\begin{definition}[Szego kernel]
+  The Szego kernel is a function
+  $K \colon \D \times \D \to \C$
+  defined by
+  \[
+    K(z,w) := \frac{1}{1 - z \overline{w}}
+  \]
+  and the kernel function at $w \in \D$ is
+  \[
+    k_w(z) = k(z,w) = \frac{1}{1 - z \overline{w}}.
+  \]
+\end{definition}
+
+\begin{proposition}
+  Let $k_w \in H^2$,
+  let $w \in \D$
+  and let $h \in H^2$.
+  Then $h(w) = \ip{h}{k_w}$
+  and consequently from the Cauchy--Schwarz inequality we obtain
+  $\abs{h(w)} \le \frac{1}{\sqrt{1 - \abs{w}^2}} \norm{h}_2$.
+\end{proposition}
+\begin{proof}
+  We have that
+  \[
+    k_w(z) = k(z,w) = \frac{1}{1 - z \overline{w}}.
+  \]
+  to be added
+\end{proof}
+
+\begin{definition}[Bounded operator]
+  Let $X$, $Y$ be normed spaces
+  and let $T \colon X \to Y$ be a linear function.
+  Then $T$ is said to be bounded if and only if $\norm{T} < \infty$.
+  We denote $B(X,Y)$ the space of bounded operators from $X$ to $Y$.
+\end{definition}
+\begin{remark}
+  The dual space of $X^*$ is $X^* = B(X,\C)$.
+\end{remark}
+
+\begin{remark}
+  Let $w \in \D$ and define
+  $ev_w \colon H^2 \to \C$ by
+  $ev_w(h) = h(w) = \ip{h}{k_w}$ or $h \mapsto h(w)$.
+  The evaluation map of the Hardy space $ev_w \colon H^2 \to \C$ is bounded.
+\end{remark}
+
+\begin{definition}[Reproducing kernel Hilbert space]
+  Let $H$ be a linear subspace of the space of functions from $X$ to $\C$.
+  Then $H$ is said to be a RKHS if $H$ is a Hilbert space and
+  point evaluation $ev_x$ is bounded for all $x \in X$.
+\end{definition}
+
+By Riesz theorem for all $\phi \in H^*$ there exists $g \in G$
+so that for all $h \in H$ we have $\phi(h) = \ip{h}{g}$.
+Then %???
+
+\begin{definition}[Kernel function]
+  
+\end{definition}
+
+% the kernel is semi positive definite
+
+\begin{definition}[Multiplier algebra]
+  Let $H$ be an RKHS on $X$.
+  Then the multiplier algerba on $H$ is the space
+  \[
+    \Mult(H) :=
+    \set{f \colon X \to \C \mid h \in H \implies f h \in H}.
+  \]
+\end{definition}
+
+% M_f
+
+\begin{question}
+  Can we compute $\Mult(H^2)$?
+\end{question}
+\begin{answer}
+  We know that all polynomials are in $\Mult(H^2)$.
+\end{answer}
+
+\begin{proposition}
+  \label{prop:temp}
+  Let $H$ be a RKHS on $X$ and let $f \in \Mult(H)$.
+  Then for all $x \in X$ we have $M_f^* k_x = \overline{f(x)} k_x$.
+  Conversely, if $T \in B(H)$ then
+  $T k_x = \lambda_x K_x$ which implies that $T = M_f^*$
+  and $f \in \Mult(H)$.
+\end{proposition}
+
+\begin{corollary}
+  Every multiplier is a bounded function
+  \[
+    \abs{f(x)} \le \norm{M_f^*} = \norm{M_f}.
+  \]
+\end{corollary}
+\begin{corollary}
+  We have that $\Mult(H^2) \subseteq H^{\infty}(\D)$
+  since $\norm{f}_{\infty} \le \norm{f}_{\Mult}$.
+\end{corollary}
+
+\begin{proofof}{\Cref{prop:temp}}
+  Let $h \in H$ and let $f \in \Mult(H)$.
+  Then
+  \begin{align*}
+    f(x) h(x) &= \ip{fh}{k_x} \\
+              &= \ip{M_f h}{k_x} \\
+              &= \ip{h}{M_f^* k_x}.
+  \end{align*}
+\end{proofof}
+
+% needs rewriting
+
+\begin{definition}[Multiplication algebra norm]
+  We define for $f \in \Mult(H)$
+  \[
+    \norm{f}_{\Mult} :=
+    \norm{M_f} =
+    \sup_{h \neq 0} \frac{\norm{M_f h}}{\norm{h}} < \infty
+  \]
+\end{definition}
+
+\begin{proposition}
+  Let $H$ be a RKHS on $X$ and $t \in B(H)$
+  Then we have 
+  \[
+    \forall x \in X \quad \exists \lambda_x \in \C \st T K_x = \lambda_x K_x
+    \iff
+    \exists f \in M(H) \st T = M^*_{f}
+  \]
+  and in this case $\lambda_x = \overline{f(x)}$.
+\end{proposition}
+
+\begin{definition}
+  Let $f \colon \D \to \C$ and let $r \in (0,1)$.
+  Then we define $f_r(z) = f(rz)$.
+\end{definition}
+\begin{remark}
+  If $f \in H^2$ then $f_r \in H^2$.
+  This is because if $f(z) = \sum_{n=0}^{\infty} a_n z_n$
+  then we have $f_r(z) = \sum_{n=0}^{\infty} r^n b_n z_n$. %b_n or a_n.
+\end{remark}
+
+\begin{proposition}
+  Let $f(z) = \sum_{n=0}^{\infty} a_n z_n$.
+  Then
+  \[
+    \norm{f}_{2}^{2} =
+    \sum \abs{a_n}^2 =
+    \lim_{r \nearrow 1}
+    \frac{1}{2\pi} \int_{0}^{2\pi} \abs{f_r\del{e^{it}}}^2 \dt.
+  \]
+\end{proposition}
+\begin{remark}
+  We also have that
+  \[
+    \norm{f}_{2}^{2} =
+    \int_{T} \abs{f}^2 \dm
+  \]
+  where $m$ is the Lebesgue measure on the circle.
+\end{remark}
+\begin{proof}
+  to be added.  
+\end{proof}
+
+\begin{proposition}
+  Let $f \in H^{\infty}$ and $h \in H^2$.
+  We have
+  \[
+    \norm{f h}_{2}^{2} =
+    \lim_{r \nearrow 1}
+    \frac{1}{2\pi}
+    \int_{0}^{2\pi} \abs{f_r\del{e^{it}} h_r\del{e^{it}}}^2 \dt \le
+    \norm{f}^2_{\infty} \norm{h}_{2}^{2}
+  \]
+  which implies that $f \in \Mult(H)$.
+  We also have $\norm{f}_{\Mult} = \norm{M_f} \le \norm{f}_{\infty}$.
+\end{proposition}
+\begin{corollary}
+  We get that $\Mult(H^2) = H^{\infty}$.
+\end{corollary}
+
+\begin{theorem}[Pick's theorem]
+  \label{thm:pick-again}
+  Let $z_1,\dots,z_n \in \D$ and let
+  $w_1,\dots,w_n \in \D$.
+  Then there exists $f \in H(\D)$ so that
+  $f(z_i) = w_i$ for all $1 \le i \le n$ if and only if
+  the \textit{Pick matrix}:
+  \[
+    \begin{bmatrix}
+      \cfrac{1 - w_i \overline{w_j}}{1 - z_i \overline{z_j}}
+    \end{bmatrix}_{i,j=1}^{n}
+  \]
+  is positive-semidefinite.
+\end{theorem}
+\begin{proof}
+  Let $z_1,\dots,z_n \in X$ and $w_1,\dots,w_n \in \C$.
+  Let $H$ be an RKHS on $X$ so that $H = H^2$.
+  If there exists $f \in \Mult(H)$ so that
+  \begin{enumerate}
+    \item[(1)] $\norm{f}_{\Mult} \le 1$;
+    \item[(2)] $f(z_i) = w_i$
+  \end{enumerate}
+  then
+  \[
+    \begin{bmatrix}
+      K(z_i,z_j) (1 - w_i \overline{w_j})
+    \end{bmatrix} \geq 0.
+  \]
+  That is because
+  \[
+    \norm{M_f^*} = \norm{M_f} = \norm{f}_{\Mult} \le 1
+  \]
+  ...to be added
+  The opposite direction holds if we assume that the kernel is of
+  the form $K(z,w) = \frac{1}{1 - z \overline w}$.
+\end{proof}
+
+\begin{theorem}
+  We have that $f \in \Mult(H)$ so that $\norm{f}_{\Mult} \le 1$
+\end{theorem}
+
+\begin{definition}[Harmonic function]
+  Let $u \in C^2(\Omega)$ where $\Omega$ is a region in $\C = \R^2$.
+  Then $u$ is said to be harmonic if $\Delta u = u_{xx} + u_{yy}$.
+\end{definition}
+
+\begin{proposition}
+  A real $u$ on a simply connected region $\Omega$ is harmonic if and only
+  if there exists $f \in f \in H(\Omega)$ so that $u = \Re(f) = \Im(i f)$
+\end{proposition}
+\begin{proof}
+  Let $f = u + iv \in H(\Omega)$.
+  From the Cauchy--Riemman equations we get $u_x = v_y$ and $v_x = -u_y$
+  which means that $u_{xx} + u_{yy} = v_{yx} - v_{xy} = 0$.
+
+  Next suppose that $u$ is harmonic.
+  Define
+  \[
+    V(x,y) :=
+    \int v_x \dx + v_y \dy =
+    \int_{\Gamma} -u_y \dx + u_x \dy.
+  \]
+  Using Green's theorem we get that
+  \[
+    \int_{\partial \Omega} -u_y \dx + u_x \dy =
+    \int_{\Omega} \underbrace{\del{u_{xx} + u_{yy}}}_{=\,0} \dx \dy = 0
+  \]
+  After integrating $V$ we get that
+  \begin{gather*}
+    \diffp{V}{x}(x,y) =
+    \lim_{h \to 0} \frac{1}{h} \int_{x}^{x+h} -u_{y}(t,y) \dt =
+    -u_{y}\vert_{(x,y)}
+  \end{gather*}
+  which completes the proof.
+\end{proof}
+
+\begin{corollary}
+  Harmonic functions are $C^{\infty}$.
+\end{corollary}
+\begin{proof}
+  % Suppose $U$ is harmonic in $(1+\epsilon) \D$.
+  % We have that
+  % \[
+  %   u = \Re f \tand
+  %   f(z) = \sum_{n=0}^{\infty} a_n z^n.
+  % \]
+  % We can now write
+  % \[
+  %   u = \frac{f + \overline f}{2} =
+  % \]
+\end{proof}
+
+\begin{theorem}
+  Let $f \in \L^1(T)$ and let $Hf$ be defined on the closed unit disc
+  $\overline \D$ by
+  \[
+    (Hf)(r e^{i \theta}) =
+    \begin{cases}
+      f(e^{i \theta}), &r = 1 \\
+      P[f](r e^{i \theta}), &0 \le r < 1
+    \end{cases}.
+  \]
+  Then $Hf$ is harmonic in $\D$ and $Hf \in C(\overline D)$
+\end{theorem}
+\begin{remark}
+  This solves the Dirichlet's problem.
+\end{remark}
+\begin{proof}
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
