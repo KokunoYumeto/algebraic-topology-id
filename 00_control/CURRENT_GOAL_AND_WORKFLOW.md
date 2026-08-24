@@ -34,16 +34,18 @@ For each lecture: freeze span/census; translate everything in order; reflow
 margins/diagrams accessibly; log only independently verified corrections in
 `ADVERSE_LEDGER.csv`; assign stable IDs; update `TERMINOLOGY.csv`; solve every
 prompt and add only the missing separately marked mastery layer; independently
-review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–022 now cover
-`Notes.tex:134–4938`. Unit 22 is 44,066 bytes/1,349 LF lines/75 stable IDs,
-SHA-256 `0857e51568d77c811d5d79255ac75bfddc87a04b27356ae457d4e66eeffb7d0d`.
-Its cumulative 261-page PDF, self-contained HTML, and 3,337-record append-only
-backend are verified. GitHub commit
-`e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2` and the Pages reader are public and
-anonymously byte-exact. The matching reader-first Zenodo version `0.22.0` is
-public at DOI `10.5281/zenodo.22072347` inside concept
-`10.5281/zenodo.22061489`; all eight files were anonymously byte-verified.
-Continue at Lecture 23, `Notes.tex:4939`. Figshare remains blocked by
+review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–023 now cover
+`Notes.tex:134–5112`. Unit 23 is 39,176 bytes/1,094 LF lines/51 stable IDs,
+SHA-256 `6f05ddbe6a720109797976c6929b0535f21a38353673cb42d9646a3196f56bd2`.
+Its cumulative 273-page PDF and self-contained HTML are deterministic and
+visually verified; the final append-only backend has 3,528 records/3,434,879
+bytes, bundle SHA-256
+`0c8b27890f8423fc3224c89f2bcf60ed6cbcb9d93fabef7b53c399784f0aaaef`.
+The public boundary remains Unit 22 at GitHub commit
+`e2b3c015c6b3dcc66b2e4741a740de6f1972d6f2` and Zenodo DOI
+`10.5281/zenodo.22072347` in concept `10.5281/zenodo.22061489`; Unit 23 is the
+next verified publication transaction. Unit 24, `Notes.tex:5113–5369`, is
+translated and in independent admission review. Figshare remains blocked by
 the recorded `InactiveAccount` response. Continue through Roberts Lecture 30,
 then the bounded Fomberg bridge and closure.
 
@@ -62,7 +64,7 @@ Git or create a duplicate. At coherent reader boundaries update the existing
 Zenodo and Figshare lineages, preserve inherited files, label partial scope,
 and anonymously verify public bytes/hashes. The immutable Units 001–013 reader
 remains historically preserved on Pages and Zenodo `10.5281/zenodo.22061490`;
-the current Zenodo version is `10.5281/zenodo.22071667`. Figshare remains
+the current Zenodo version is `10.5281/zenodo.22072347`. Figshare remains
 pending credential/account recovery, with the failed bounded attempt recorded
 without claiming publication. Do not republish a source-only duplicate.
 Record `OpenAI Codex gpt-5.6-sol, Ultra`; never publish the directing user’s

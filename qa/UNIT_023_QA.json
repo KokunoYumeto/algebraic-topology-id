@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L23-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 4939,
+    "line_end": 5112,
+    "bytes": 331447,
+    "lines": 6368,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_bytes": 9776,
+    "span_sha256": "c7256a45621ad7a435277867298e4aeb8eb584dfce066cdae3b48c4ee0e0e3f4",
+    "source_census": {
+      "remark_begin": 1,
+      "remark_end": 1,
+      "lemma_begin": 1,
+      "lemma_end": 1,
+      "corollary_begin": 1,
+      "corollary_end": 1,
+      "example_begin": 2,
+      "example_end": 1,
+      "enumerate_begin": 2,
+      "enumerate_end": 2,
+      "enumerate_item": 6,
+      "margin": 6,
+      "xypic": 2,
+      "reference": 1,
+      "display": 9,
+      "align_star": 1,
+      "definition": 0,
+      "proof": 0,
+      "exercise": 0,
+      "construction": 0,
+      "label": 0,
+      "citation": 0,
+      "tikz": 0,
+      "external_graphic": 0,
+      "input": 0,
+      "include": 0
+    },
+    "next_line": 5113,
+    "cross_lecture_example_end": 5121
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-023-lecture-023.md",
+    "bytes": 39176,
+    "lines": 1094,
+    "sha256": "6f05ddbe6a720109797976c6929b0535f21a38353673cb42d9646a3196f56bd2",
+    "stable_ids": 51,
+    "fenced_semantic_objects": 44
+  },
+  "controls": {
+    "source_audit": {
+      "path": "qa/UNIT_023_SOURCE_AUDIT.md",
+      "bytes": 5254,
+      "sha256": "4777f7c14d35e5fb977955818ff7ab133ecc91adb3575867f0e97f8ff00d28b3"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_023_INDEPENDENT_REVIEW.md",
+      "bytes": 3149,
+      "sha256": "dce8f82872186285c85a42b61b1bbf8fb9fd8e809eea5bccd6367dc87958c880",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    },
+    "terminology_tail": 315,
+    "adverse_ledger_tail": 322
+  },
+  "rendering": {
+    "pandoc": "pandoc 3.9.0.2",
+    "target": "HTML5 native MathML",
+    "mathml_nodes": 465,
+    "runtime_fallback": false
+  },
+  "verifier": {
+    "path": "scripts/qa-unit-023.py",
+    "sha256": "54f03a9546c5db116fc68e2c9ada6d208a5850d8975ff571e9cc6fb08f8fd1dc"
+  },
+  "checks": [
+    {
+      "check": "required_files",
+      "status": "PASS",
+      "detail": "all six bounded Unit 23 inputs exist"
+    },
+    {
+      "check": "source_identity",
+      "status": "PASS",
+      "detail": "Notes.tex 331,447 bytes/6,368 lines; SHA-256 cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7"
+    },
+    {
+      "check": "source_boundary_and_continuation",
+      "status": "PASS",
+      "detail": "Notes.tex:4939-5112; 174 physical lines; 9,776 LF bytes; SHA-256 c7256a45621ad7a435277867298e4aeb8eb584dfce066cdae3b48c4ee0e0e3f4; Lecture 24 marker 5113; example 5076-5121"
+    },
+    {
+      "check": "source_census",
+      "status": "PASS",
+      "detail": "{\"align_star\": 1, \"citation\": 0, \"construction\": 0, \"corollary_begin\": 1, \"corollary_end\": 1, \"definition\": 0, \"display\": 9, \"enumerate_begin\": 2, \"enumerate_end\": 2, \"enumerate_item\": 6, \"example_begin\": 2, \"example_end\": 1, \"exercise\": 0, \"external_graphic\": 0, \"include\": 0, \"input\": 0, \"label\": 0, \"lemma_begin\": 1, \"lemma_end\": 1, \"margin\": 6, \"proof\": 0, \"reference\": 1, \"remark_begin\": 1, \"remark_end\": 1, \"tikz\": 0, \"xypic\": 2}"
+    },
+    {
+      "check": "unit_identity_and_encoding",
+      "status": "PASS",
+      "detail": "39,176 bytes/1,094 LF lines; SHA-256 6f05ddbe6a720109797976c6929b0535f21a38353673cb42d9646a3196f56bd2"
+    },
+    {
+      "check": "line_local_math_delimiters",
+      "status": "PASS",
+      "detail": "every unescaped dollar delimiter is closed on its own source line"
+    },
+    {
+      "check": "rights_provenance_and_nonendorsement",
+      "status": "PASS",
+      "detail": "author, exact source, CC BY 4.0, changes, non-endorsement, human credit, and exact model provenance present"
+    },
+    {
+      "check": "privacy",
+      "status": "PASS",
+      "detail": "no credential or local-user-path marker"
+    },
+    {
+      "check": "stable_ids",
+      "status": "PASS",
+      "detail": "51 occurrences, 51 unique IDs, exact expected set"
+    },
+    {
+      "check": "balanced_fences_and_inventory",
+      "status": "PASS",
+      "detail": "44 balanced fenced semantic objects (indentation allowed): {\"boundary\": 1, \"corollary\": 1, \"example\": 2, \"exercise\": 6, \"figure\": 2, \"hint\": 6, \"lemma\": 1, \"proof\": 4, \"remark\": 1, \"solution\": 6, \"source-audit\": 8, \"source-margin\": 6}"
+    },
+    {
+      "check": "semantic_attributes",
+      "status": "PASS",
+      "detail": "proof origins, mastery origins, Xy-pic provenance, proof status, and cross-lecture state are exact"
+    },
+    {
+      "check": "accessible_semantic_reflow",
+      "status": "PASS",
+      "detail": "two Xy-pic diagrams and six margins are semantic/read-order content; no raw diagram command or runtime fallback"
+    },
+    {
+      "check": "mathematical_and_language_invariants",
+      "status": "PASS",
+      "detail": "typed evaluation/augmentation, finite sum vs arbitrary product, componentwise cohomology, tetrahedral census, gluing exactness, quotient reduction, and admitted language are present"
+    },
+    {
+      "check": "cross_lecture_continuation",
+      "status": "PASS",
+      "detail": "source example remains explicitly open; no Notes.tex:5113-5121 content is imported; cursor is 5113"
+    },
+    {
+      "check": "mastery_closure",
+      "status": "PASS",
+      "detail": "six edition-original problem/hint/full-solution triples close all six declared competencies"
+    },
+    {
+      "check": "source_audit_and_independent_review",
+      "status": "PASS",
+      "detail": "audit 5,254/4777f7c14d35e5fb977955818ff7ab133ecc91adb3575867f0e97f8ff00d28b3; review 3,149/dce8f82872186285c85a42b61b1bbf8fb9fd8e809eea5bccd6367dc87958c880; P1=P2=P3=0"
+    },
+    {
+      "check": "terminology_and_adverse_ledgers",
+      "status": "PASS",
+      "detail": "contiguous TERM tail=315; ADV tail=322; Unit 23 rows exact"
+    },
+    {
+      "check": "pandoc_html5_mathml",
+      "status": "PASS",
+      "detail": "pandoc 3.9.0.2; exit 0; no warnings; 51 IDs; 465 native MathML nodes; no runtime fallback"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

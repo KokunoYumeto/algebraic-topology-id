@@ -1,0 +1,16 @@
+pdf_page,coverage,render_name,dpi,width_px,height_px,render_bytes,render_sha256
+1,"title, expanded subtitle, authorship, and opening contents",title-001.png,144,1191,1684,180363,535a623cb4093b7a3fd3ada96259d316d1cf01a86c9a165fd56dc9cf514546b9
+260,"late Unit 22 mastery solution before the transition",late-260.png,144,1191,1684,292345,4bfb3869e29a0703d71543da46a7a91096887688acfe0abfd6c9272bec76b2c5
+261,"Unit 22 close, boundary to Unit 23, and Unit 23 provenance opening",late-261.png,144,1191,1684,320986,19e09fa5dd4b86ed41aa342118ed8c9313a58481795d111e3fd2cf10a8dd30f9
+262,"Unit 23 notice, Lecture 23 opening, and semantic Diagram 23.1",late-262.png,144,1191,1684,341279,a9a3f6690b472cf7fa4222f841755685bb989fb774a0cc242c4a8add70acc5ad
+263,"degree-n evaluation, source audit, pointed augmentation, and formulas",late-263.png,144,1191,1684,213712,c87ee2f1798c542a7bbe3fa3fc887276acbcce02cbdf749ed46ace4e01413486
+264,"augmentation audit and disjoint-union/product setup",late-264.png,144,1191,1684,280110,103b78d89fea47f1517fd1811e54a74552a883d617664d6f24c7870bd91a10c0
+265,"disjoint-union proof, component cohomology, and infinite-product qualification",late-265.png,144,1191,1684,269262,2b50d3b924ff3cc1c0b236e75562bf9e049486678e3e315bd20cd71ebe6c7244
+266,"tetrahedral-boundary cover, complete simplex census table, and intersection cycle",late-266.png,144,1191,1684,298047,932abc3c79ae1c9aabedf9a6d49b16705392b684fd0a518ae34c05c949d65b07
+267,"semantic restriction square and full degreewise gluing proof",late-267.png,144,1191,1684,242151,e4b8d5c6ecb8e9f10370ca345c7e4b4a1ea917050ec09a669ef3c8035892f082
+268,"short exact cochain sequence, audit, and quotient/reduced-function setup",late-268.png,144,1191,1684,310850,119b428529b456cc2256e1670fc327d695951777b5e5c03b9837901834ae011c
+269,"reduced-function isomorphism, empty-subset case, continuation, and audits",late-269.png,144,1191,1684,342125,89900060f72fbf8781c4f39b6525967e0105ce2c8323346c6878475fdc3ff59a
+270,"final audits and mastery checks 23.1-23.2",late-270.png,144,1191,1684,356718,e00a27abdc597b9653270da69dd47faccc2c266a342d3e0aad8452ef8e6073bc
+271,"augmentation splitting and infinite-product mastery solution",late-271.png,144,1191,1684,238575,30afa7602c7460875c616505d122ec3910846d5d7f3f41ca5b91f390d40c699f
+272,"gluing exactness and tetrahedral-census mastery solutions",late-272.png,144,1191,1684,315230,0a8be2a6be55263fb7bc5ddcc6cef991f689c579fab1251703343182bc42e143
+273,"tetrahedral-cycle close, reduced-function mastery, and boundary to Unit 24",late-273.png,144,1191,1684,305104,3974da7a81b24f685683851040157e9cbf94c738ea2978b36f07e5551b0ad4b0
