@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-L24-QA",
+  "status": "PASS",
+  "source": {
+    "path": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "line_start": 5113,
+    "line_end": 5369,
+    "bytes": 331447,
+    "lines": 6368,
+    "sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "span_bytes": 12837,
+    "span_sha256": "b2128930a56a0a8c04c327a397e72e21b215ffe742bb684e8dd166f0e04b0aea",
+    "source_census": {
+      "lecture": 1,
+      "example_begin": 0,
+      "example_end": 1,
+      "definition": 1,
+      "theorem": 1,
+      "lemma": 3,
+      "remark": 1,
+      "proof": 3,
+      "enumerate": 1,
+      "enumerate_item": 6,
+      "margin": 7,
+      "xypic": 2,
+      "tikz": 1,
+      "label": 4,
+      "reference": 4,
+      "display": 8,
+      "exercise": 0,
+      "citation": 0,
+      "external_graphic": 0,
+      "input": 0,
+      "include": 0
+    },
+    "continued_example_close": 5121,
+    "next_line": 5370
+  },
+  "unit": {
+    "path": "source/id-ID/units/unit-024-lecture-024.md",
+    "bytes": 43085,
+    "lines": 1156,
+    "sha256": "993ad0c3493caff6bd15ab2bcf435f6cbb1f49ed9a1e11bc1009d649ae2d3647",
+    "stable_ids": 60,
+    "fenced_semantic_objects": 50,
+    "block_census": {
+      "boundary": 1,
+      "definition": 1,
+      "example": 1,
+      "exercise": 6,
+      "figure": 3,
+      "hint": 6,
+      "lemma": 3,
+      "proof": 6,
+      "remark": 1,
+      "solution": 6,
+      "source-audit": 8,
+      "source-margin": 7,
+      "theorem": 1
+    }
+  },
+  "controls": {
+    "source_audit": {
+      "path": "qa/UNIT_024_SOURCE_AUDIT.md",
+      "bytes": 4384,
+      "sha256": "0aeb3beae1b52099e97538083ef349590cca62b473ff1455b8c1fdaffbe2ba6b"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_024_INDEPENDENT_REVIEW.md",
+      "bytes": 5570,
+      "sha256": "d06dc4a2d76eabbb8f4c115fd8f311c81e974415a186f8bff8269d30cb1672b2",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    }
+  },
+  "findings": [],
+  "resolved_findings": [
+    {
+      "finding_id": "UNIT024-AUDIT-P3-001",
+      "severity": "P3",
+      "path": "qa/UNIT_024_SOURCE_AUDIT.md",
+      "line": 38,
+      "initial_observation": "audit located malformed Mayer--Vietoris term at Notes.tex:5182",
+      "resolution": "locator corrected to physical Notes.tex:5173 before admission; Notes.tex:5182 begins the Snake Lemma",
+      "reader_affected": false,
+      "status": "RESOLVED_BEFORE_ADMISSION"
+    }
+  ],
+  "corrections": {
+    "restored_H_k_plus_1_B": true,
+    "repaired_snake_lower_right_C_prime": true,
+    "corrected_a_prime_b_notation": true,
+    "restored_image_parenthesis": true
+  },
+  "proof_closure": {
+    "restriction_kernel_sequence": true,
+    "kernel_complex": true,
+    "snake_obligations": 6,
+    "snake_connector_linear": true,
+    "setup_lemma": true,
+    "theorem_identifications_splicing_naturality": true,
+    "mastery_solution_triples": 6
+  },
+  "rendering": {
+    "pandoc": "pandoc 3.9.0.2",
+    "target": "HTML5 native MathML",
+    "mathml_nodes": 502,
+    "runtime_fallback": false,
+    "declared_cross_unit_fragment": "o012-rbt-l23-exa-002"
+  },
+  "verifier": {
+    "path": "scripts/qa-unit-024.py",
+    "sha256": "6b8711eb783e356b9dea1ccfad8ed9c6dcea0238639f9b733a94121cf9f9b552"
+  },
+  "checks": [
+    {
+      "check": "required_files_and_identities",
+      "status": "PASS",
+      "detail": "authority, reader, audit, and independent review match frozen bytes"
+    },
+    {
+      "check": "source_boundary",
+      "status": "PASS",
+      "detail": "Notes.tex:5113-5369 is 12,837 LF bytes; continued example closes at 5121; next cursor 5370"
+    },
+    {
+      "check": "source_census",
+      "status": "PASS",
+      "detail": "{\"citation\": 0, \"definition\": 1, \"display\": 8, \"enumerate\": 1, \"enumerate_item\": 6, \"example_begin\": 0, \"example_end\": 1, \"exercise\": 0, \"external_graphic\": 0, \"include\": 0, \"input\": 0, \"label\": 4, \"lecture\": 1, \"lemma\": 3, \"margin\": 7, \"proof\": 3, \"reference\": 4, \"remark\": 1, \"theorem\": 1, \"tikz\": 1, \"xypic\": 2}"
+    },
+    {
+      "check": "rights_provenance_privacy",
+      "status": "PASS",
+      "detail": "CC BY 4.0, source credit, non-endorsement, human credit, exact model; no private marker"
+    },
+    {
+      "check": "stable_ids",
+      "status": "PASS",
+      "detail": "60 occurrences, 60 unique IDs, exact expected set; 10 identified headings"
+    },
+    {
+      "check": "balanced_structure",
+      "status": "PASS",
+      "detail": "50 balanced fenced objects; {\"boundary\": 1, \"definition\": 1, \"example\": 1, \"exercise\": 6, \"figure\": 3, \"hint\": 6, \"lemma\": 3, \"proof\": 6, \"remark\": 1, \"solution\": 6, \"source-audit\": 8, \"source-margin\": 7, \"theorem\": 1}; math delimiters balanced"
+    },
+    {
+      "check": "semantic_attributes_and_aliases",
+      "status": "PASS",
+      "detail": "continued parent, four source aliases, three diagram origins, six proof origins, and 18 mastery origins exact"
+    },
+    {
+      "check": "source_order_and_topology",
+      "status": "PASS",
+      "detail": "continued example, source objects, proof closures, mastery, and boundary occur in exact intended order"
+    },
+    {
+      "check": "mathematical_fidelity",
+      "status": "PASS",
+      "detail": "restriction/kernel, repaired theorem and C-prime diagram, all Snake obligations, setup, identifications, splicing, and naturality exact"
+    },
+    {
+      "check": "accessible_semantic_reflow",
+      "status": "PASS",
+      "detail": "2 Xy-pic plus 1 TikZ surface replaced by semantic arrow data; 7 margins in reading order; no raw layout command"
+    },
+    {
+      "check": "language_and_mastery",
+      "status": "PASS",
+      "detail": "admitted id-ID terminology; six exact problem/hint/full-solution triples"
+    },
+    {
+      "check": "audit_and_independent_review_identity",
+      "status": "PASS",
+      "detail": "corrected source audit bound exactly; independent review records P1=0, P2=0, P3=0"
+    },
+    {
+      "check": "source_audit_locator",
+      "status": "PASS",
+      "detail": "source-audit line 38 now gives exact authority locus 5173; UNIT024-AUDIT-P3-001 resolved before admission"
+    },
+    {
+      "check": "pandoc_html5_mathml",
+      "status": "PASS",
+      "detail": "pandoc 3.9.0.2; exit 0; warnings fatal; 502 MathML nodes; all IDs; only declared cross-unit parent fragment external"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "status": "PUBLISHED_AND_ANONYMOUSLY_VERIFIED",
+  "release_id": "o012-roberts-id-units-001-024-v0.24.0",
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Unit 1–24",
+  "version": "0.24.0",
+  "license": "cc-by-4.0",
+  "incomplete_checkpoint": true,
+  "scope": "Roberts Notes.tex lines 134-5369, lectures 1-24 of 30; lectures 25-30, Fomberg bridge, and original proof/mastery/lab/capstone closure pending",
+  "record_id": 22074233,
+  "doi": "10.5281/zenodo.22074233",
+  "concept_doi": "10.5281/zenodo.22061489",
+  "public_record_url": "https://zenodo.org/records/22074233",
+  "metadata_sha256": "7f0149d7954c761509c1f247f91180571aa659971c35658bc9278af868e0eddf",
+  "manifest_sha256": "2b682b661d4e53275bc8fa12688841d138fc966c2e91d3cb97a0af320be4bb0d",
+  "files": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_UNITS_001_024_READER.pdf",
+      "status": 200,
+      "bytes": 1907368,
+      "sha256": "5189b04f2f28d7e8192c16e8ef070e23bbf98085d150d1f2124d15c071ccf9b8",
+      "url": "https://zenodo.org/api/records/22074233/files/00_TOPOLOGI_ALJABAR_ID_UNITS_001_024_READER.pdf/content"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_024_READER.html",
+      "status": 200,
+      "bytes": 3927104,
+      "sha256": "28a84406de9e196070965920a7f7937177197977f9ddf118f0f8b07d464cbf0f",
+      "url": "https://zenodo.org/api/records/22074233/files/TOPOLOGI_ALJABAR_ID_UNITS_001_024_READER.html/content"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_024_EDITABLE_SOURCE_BACKEND.zip",
+      "status": 200,
+      "bytes": 687303,
+      "sha256": "dbe187561ee1d62992f5570d539fa80312fa5f2758872657b87216e3c77fdb31",
+      "url": "https://zenodo.org/api/records/22074233/files/TOPOLOGI_ALJABAR_ID_UNITS_001_024_EDITABLE_SOURCE_BACKEND.zip/content"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_UNITS_001_024_QA_PROVENANCE.zip",
+      "status": 200,
+      "bytes": 29585,
+      "sha256": "3f94d199968d9d30361324b1807be90d78e1b6f09e2d0c6387df45ad5bb84912",
+      "url": "https://zenodo.org/api/records/22074233/files/TOPOLOGI_ALJABAR_ID_UNITS_001_024_QA_PROVENANCE.zip/content"
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "status": 200,
+      "bytes": 2549,
+      "sha256": "92f3ede65ff5c8225d2cc29c4a121e79cd7169682f60a1c8d0d4800c2f69652c",
+      "url": "https://zenodo.org/api/records/22074233/files/README_RELEASE.md/content"
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "status": 200,
+      "bytes": 2129,
+      "sha256": "6db6dc9d9db2a7ee1e65cca1a1aef16a7da405f088056a8ece00d6842e063a27",
+      "url": "https://zenodo.org/api/records/22074233/files/RELEASE_RIGHTS.md/content"
+    },
+    {
+      "filename": "release-manifest.json",
+      "status": 200,
+      "bytes": 17169,
+      "sha256": "2b682b661d4e53275bc8fa12688841d138fc966c2e91d3cb97a0af320be4bb0d",
+      "url": "https://zenodo.org/api/records/22074233/files/release-manifest.json/content"
+    },
+    {
+      "filename": "SHA256SUMS",
+      "status": 200,
+      "bytes": 728,
+      "sha256": "7e01da25c90284d35a91df6cdd7d7fed6b0244d96ddce1d1f558089e3e65ae47",
+      "url": "https://zenodo.org/api/records/22074233/files/SHA256SUMS/content"
+    }
+  ],
+  "verification": {
+    "exact_public_inventory": true,
+    "reader_first_by_filename": true,
+    "pdf_uploaded_first": true,
+    "anonymous_byte_readback": true,
+    "all_sha256_match_local": true,
+    "credentials_recorded": false,
+    "user_personal_name_recorded": false
+  },
+  "provenance": "Published by Codex at the user's direction; production note: OpenAI Codex gpt-5.6-sol, Ultra; source author and human direction remain credited.",
+  "non_endorsement": "Independent Indonesian edition; no source-author or institutional endorsement is implied."
+}

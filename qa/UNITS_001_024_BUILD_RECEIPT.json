@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "qa_id": "O012-RBT-UNITS-001-024-BUILD",
+  "status": "PASS",
+  "scope": "Roberts Indonesian reader Units 001-024",
+  "source_authority": {
+    "repository": "DavidMichaelRoberts/AlgebraicTopology2019",
+    "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+    "tree": "aa1d3edb85818e7176e2d0bbc06d9b4bd1e247f5",
+    "source_file": "authority/upstream/AlgebraicTopology2019-b947ad2e9f9e301bfe24590a9db653bc54fa1a53/Notes.tex",
+    "source_bytes": 331447,
+    "source_lines": 6368,
+    "source_sha256": "cfe93e9dbe3e25bd96f711f59e6078ab97527682b58e1f8ad127f74357f665d7",
+    "cumulative_source_span": "134-5369",
+    "cumulative_span_lines": 5236,
+    "cumulative_span_bytes": 270823,
+    "cumulative_span_sha256": "994057814469cd70f49624dac6cbc709ef584f2c940fbe19e331b238ee5add54",
+    "next_source_line": 5370,
+    "unit_024_span": "5113-5369",
+    "unit_024_span_bytes": 12837,
+    "unit_024_span_sha256": "b2128930a56a0a8c04c327a397e72e21b215ffe742bb684e8dd166f0e04b0aea",
+    "unit_024_reader": "source/id-ID/units/unit-024-lecture-024.md",
+    "unit_024_bytes": 43085,
+    "unit_024_lines": 1156,
+    "unit_024_sha256": "993ad0c3493caff6bd15ab2bcf435f6cbb1f49ed9a1e11bc1009d649ae2d3647"
+  },
+  "frozen_baseline": {
+    "scope": "Units 001-023",
+    "builder": {
+      "path": "scripts/build-units-001-023.ps1",
+      "bytes": 19688,
+      "sha256": "2fd88a027775678ec359037923df604ecb2444e527ba8bda61731f68a6691f88"
+    },
+    "html": {
+      "path": "output/html/units-001-023/index.html",
+      "bytes": 3707037,
+      "sha256": "536fbe19e295424d12198bf1b221be3e2f0170f87fa810a9125bcca9f742264b"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-023-id.pdf",
+      "bytes": 1801983,
+      "sha256": "e51aa739eefaa12f4b1d7a4fe99073c525775f113aa62e4506395a01fe1fcbaf"
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_023.csv",
+      "bytes": 249,
+      "sha256": "f12629f0929eeec100c6fc769c239c64bcc1fb72283be4abee9daec691561f34"
+    },
+    "build_receipt": {
+      "path": "qa/UNITS_001_023_BUILD_RECEIPT.json",
+      "bytes": 5775,
+      "sha256": "a09fde0e147756c35fe4ba9ff5a212625bdbe96d19400409b14214e67afb4cf8"
+    },
+    "visual_receipt_sha256": "784bc1b77b65e3e91c1de34a2e14d42a2202861a04e24f8eb3c130f480dbd35e",
+    "render_inventory_sha256": "54b564278bcdafcec8b18420286de6b0f5274922e540fe70bd78a6be7f2d5b21",
+    "verified_without_rewrite": true
+  },
+  "unit_024_gate": {
+    "qa": {
+      "path": "qa/UNIT_024_QA.json",
+      "bytes": 6556,
+      "sha256": "dad49400f3f19367cbcab119fcdeb95e6365e5995f2403c32881ddc35bfaff99",
+      "status": "PASS"
+    },
+    "source_audit": {
+      "path": "qa/UNIT_024_SOURCE_AUDIT.md",
+      "bytes": 4384,
+      "sha256": "0aeb3beae1b52099e97538083ef349590cca62b473ff1455b8c1fdaffbe2ba6b"
+    },
+    "independent_review": {
+      "path": "qa/UNIT_024_INDEPENDENT_REVIEW.md",
+      "bytes": 5570,
+      "sha256": "d06dc4a2d76eabbb8f4c115fd8f311c81e974415a186f8bff8269d30cb1672b2",
+      "p1": 0,
+      "p2": 0,
+      "p3": 0
+    }
+  },
+  "toolchain": {
+    "builder": "scripts/build-units-001-024.ps1",
+    "builder_bytes": 21976,
+    "builder_sha256": "8e62da597b783f56e0a9174a7822ee453de6de8be01fc5493cb2ab93c41a3c44",
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_engine": "MiKTeX-pdfTeX 4.27 (MiKTeX 26.5)",
+    "poppler": "24.04.0",
+    "source_date_epoch": 1787529600,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "reproducibility": {
+    "html_two_builds_byte_identical": true,
+    "pdf_two_builds_byte_identical": true,
+    "source_baseline_authority_and_unit_024_evidence_fail_closed": true,
+    "pandoc_html_warnings_are_fatal": true,
+    "responsive_fix_rebuilt_before_final_identity": true
+  },
+  "artifacts": {
+    "html": {
+      "path": "output/html/units-001-024/index.html",
+      "bytes": 3927104,
+      "sha256": "28a84406de9e196070965920a7f7937177197977f9ddf118f0f8b07d464cbf0f"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-unit-001-024-id.pdf",
+      "bytes": 1907368,
+      "sha256": "5189b04f2f28d7e8192c16e8ef070e23bbf98085d150d1f2124d15c071ccf9b8",
+      "pages": 286,
+      "unit_024_pages": "274-286",
+      "page_size": "A4",
+      "page_rotation": 0,
+      "fonts": 27,
+      "all_fonts_embedded_subset_tounicode": true,
+      "catalog_lang": "id-ID",
+      "tagged": false,
+      "encrypted": false,
+      "forms": false,
+      "annotations": 394,
+      "widget_annotations": 0,
+      "javascript": false,
+      "suspects": false
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_UNITS_001_024.csv",
+      "bytes": 249,
+      "sha256": "23d2b33dd8eb08ba82bb020e3607abbf24925d79e774ca177be228656800a0ff"
+    }
+  },
+  "html_checks": {
+    "unique_dom_ids": 1295,
+    "duplicate_dom_ids": 0,
+    "fragment_links": 288,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 9669,
+    "raw_tex_math_fallbacks": 0,
+    "semantic_figures": 60,
+    "unit_024_ids": 60,
+    "missing_unit_024_ids": 0,
+    "runtime_external_dependencies": 0,
+    "lang": "id-ID",
+    "centered_reader_width": "min(100%, 72rem)",
+    "responsive_mobile_reflow": true
+  },
+  "browser_checks": {
+    "desktop": {
+      "requested_viewport": "1425x1000",
+      "effective_document_width_px": 1410,
+      "body_width_px": 1152,
+      "left_margin_px": 129.111,
+      "right_margin_px": 128.889,
+      "center_delta_px": 0.222,
+      "root_horizontal_overflow_px": 0,
+      "uncontained_overflow_elements": 0
+    },
+    "mobile": {
+      "requested_viewport": "390x844",
+      "effective_content_width_px": 375,
+      "body_width_px": 375.111,
+      "body_side_padding_px": 17.6,
+      "root_horizontal_overflow_px": 0,
+      "uncontained_overflow_elements": 0,
+      "wide_display_mathml_local_scrollers": 186,
+      "wide_inline_mathml_local_scrollers": 2,
+      "wide_mathml_local_scrollers_total": 188
+    },
+    "initial_mobile_overflow_px": 198,
+    "initial_mobile_overflow_cause": "two long Unit 24 inline MathML expressions escaped the display-only scroller rule",
+    "fix": "inline MathML is constrained to a max-width local horizontal scroller in the embedded cumulative CSS",
+    "final_result": "PASS"
+  },
+  "visual_checks": {
+    "receipt": "qa/UNITS_001_024_VISUAL_QA.md",
+    "receipt_bytes": 4928,
+    "receipt_sha256": "7aff942b47ec489a56923879aee189fc3911e0eded232a511de66aff8ee01a27",
+    "render_inventory": "qa/UNITS_001_024_RENDER_INVENTORY.csv",
+    "render_inventory_bytes": 2659,
+    "render_inventory_sha256": "1d9554d98de7d4751fc7ee2d1b5a6cb45edb580e62226b030aea389dff9de683",
+    "pages": [1, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286],
+    "render_dpi": 144,
+    "render_dimensions_px": "1191x1684",
+    "result": "PASS; every Unit 24 page plus title and transition inspected"
+  },
+  "privacy_and_provenance": {
+    "pdf_unit_024_pages_scanned": "274-286",
+    "forbidden_markers": 0,
+    "model_provenance_present": true,
+    "terminal_boundary_and_cursor_present": true,
+    "credentials_recorded": false,
+    "absolute_local_user_paths_recorded": false
+  },
+  "accessibility": {
+    "primary_accessible_surface": "self-contained reflowable HTML5 with native MathML and semantic figures",
+    "pdf_limitation": "PDF is untagged; disclosed without overstating accessibility"
+  },
+  "rights": {
+    "license": "CC BY 4.0",
+    "attribution": "David Michael Roberts, Algebraic Topology (2019)",
+    "changes_and_process_disclosed": true,
+    "human_contributor_credit_preserved": true,
+    "non_endorsement": true
+  }
+}

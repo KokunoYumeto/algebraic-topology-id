@@ -1,0 +1,16 @@
+pdf_page,coverage,render_name,dpi,width_px,height_px,render_bytes,render_sha256
+1,"title, expanded subtitle, authorship, and opening contents",title-001.png,144,1191,1684,183706,0a639e1686f0d0c6d027626f2c6935fc6834a14a0ccc4b5c6452967fe9ce434b
+273,"late Unit 23 mastery solution and boundary to Unit 24",transition-273.png,144,1191,1684,305104,3974da7a81b24f685683851040157e9cbf94c738ea2978b36f07e5551b0ad4b0
+274,"Unit 24 provenance, lecture opening, continued example, and restriction proof opening",unit24-274.png,144,1191,1684,385756,fd6dfab494a7635ddb0027c9fec0763492c0dfc8c5e02f0813fd1131541884bd
+275,"restriction proof completion and kernel-complex lemma proof",unit24-275.png,144,1191,1684,266859,531399e461a99a95c45ac0595c331da9a2e8cadb81f0d378021b3f7bb9e73422
+276,"kernel-complex close, relative cochains, homological algebra, and theorem opening",unit24-276.png,144,1191,1684,311668,531244bd93076908895f6f0a8b18958ac3d603adc8de8337ad596099feda00d3
+277,"long exact sequence, source audit, Snake Lemma, and semantic diagrams",unit24-277.png,144,1191,1684,294145,a36fdc15d193af169ba47ed24f339b94c30235622fe1c4bbfd66beed3f0356f2
+278,"semantic Snake path, six proof obligations, and connector construction",unit24-278.png,144,1191,1684,225509,3b6a09d3464d429a7ce854e119675735665c51df675935d306067186f68dea96
+279,"connector well-definedness, linearity, and exactness positions three through five",unit24-279.png,144,1191,1684,247901,ae0f48e6152e398f7669fdbdd6c341ea006d941170de91d9bb08f0f1534d8fb0
+280,"Snake exactness position six and preparation-diagram proof",unit24-280.png,144,1191,1684,300898,334a839baeecb6f9cf978a8ff80d4a746afca61357a15023eb8d9e54f0919c44
+281,"preparation proof close, canonical kernel-cokernel identifications, and six-term sequence",unit24-281.png,144,1191,1684,277956,debd42f3233d924c5883050962f85d58db2842ae169638524d955e90d466da8e
+282,"six-term splicing and naturality proof",unit24-282.png,144,1191,1684,336774,c3eafdf0420ae5260315d9382a1a778c99170f135cf642b0255eae26ea3cede6
+283,"naturality audit and mastery checks 24.1-24.2",unit24-283.png,144,1191,1684,337752,1a4fbfa38f591f787689a566d25302b3ab239d0dc3ef0d940ea9213eaad7d8da
+284,"mastery 24.2 close, mastery 24.3 solution, and mastery 24.4 prompt",unit24-284.png,144,1191,1684,305129,4baed5f19a9102e17720227d152472a5fcbdc9cdbe0cafe181e3558bde00d273
+285,"mastery 24.4 solution, mastery 24.5, and mastery 24.6 opening",unit24-285.png,144,1191,1684,374367,783af0e58480567209d769699fdeed2f4370069c0673929429e9767d57b24295
+286,"mastery 24.6 solution and boundary to Unit 25",unit24-286.png,144,1191,1684,236986,4daf97ab91e2d027ee229554e525692655f82be7f07b1d2f7fb4d802d13f5f90

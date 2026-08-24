@@ -34,18 +34,18 @@ For each lecture: freeze span/census; translate everything in order; reflow
 margins/diagrams accessibly; log only independently verified corrections in
 `ADVERSE_LEDGER.csv`; assign stable IDs; update `TERMINOLOGY.csv`; solve every
 prompt and add only the missing separately marked mastery layer; independently
-review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–023 now cover
-`Notes.tex:134–5112`. Unit 23 is 39,176 bytes/1,094 LF lines/51 stable IDs,
-SHA-256 `6f05ddbe6a720109797976c6929b0535f21a38353673cb42d9646a3196f56bd2`.
-Its cumulative 273-page PDF and self-contained HTML are deterministic and
-visually verified; the final append-only backend has 3,528 records/3,434,879
+review; advance `CURSOR.json` only at P1/P2/P3 zero. Units 001–024 now cover
+`Notes.tex:134–5369`. Unit 24 is 43,085 bytes/1,156 LF lines/60 stable IDs,
+SHA-256 `993ad0c3493caff6bd15ab2bcf435f6cbb1f49ed9a1e11bc1009d649ae2d3647`.
+Its cumulative 286-page PDF and self-contained HTML are deterministic and
+visually verified; the final append-only backend has 3,723 records/3,726,427
 bytes, bundle SHA-256
-`0c8b27890f8423fc3224c89f2bcf60ed6cbcb9d93fabef7b53c399784f0aaaef`.
-GitHub/Pages is public and anonymously byte-exact through Unit 23 at release
-commit `d4cc478aa569d112c5fd69a0534f3e9c6870b51a`; Zenodo remains at Unit 22,
-DOI `10.5281/zenodo.22072347` in concept `10.5281/zenodo.22061489`, and its
-Unit 23 update is next. Unit 24, `Notes.tex:5113–5369`, is translated and has
-passed independent review. Figshare remains blocked by
+`ffa8c7cb45b6d8170d7bc83df24ec487fd0c2777297b55eff2d5e7b3ae63fe25`.
+GitHub/Pages is public and anonymously byte-exact through Unit 23; the Unit 24
+push is next. Zenodo is public and twice anonymously byte-exact through Unit 24
+at DOI `10.5281/zenodo.22074233` in concept `10.5281/zenodo.22061489`. Unit 25,
+`Notes.tex:5370–5611`, is translated and independently reviewed at P1/P2/P3
+zero; backend/build admission remains. Figshare remains blocked by
 the recorded `InactiveAccount` response. Continue through Roberts Lecture 30,
 then the bounded Fomberg bridge and closure.
 
