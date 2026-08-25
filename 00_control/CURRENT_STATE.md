@@ -2,7 +2,7 @@
 
 Updated: 2026-08-25
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Fomberg Units 001–004 translate `algebraic_topology.tex:31–2846` contiguously through Sections 1.1–1.10, with all independent reviews at P1/P2/P3 zero. The Unit 004 boundary passes semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, package, and hash gates. Zenodo version `0.30.4`, record `22097007`, DOI `10.5281/zenodo.22097007`, is public in the existing concept and all nine files match anonymous local-byte readback. The matching GitHub/Pages publication remains the immediate operation; its last public boundary is still commit `c8fcc0e575de9ac902a6ca79eee479462cff2f27`, Pages run `32797456049`, until the narrow Unit 004 push and public verification finish. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. After GitHub publication, continue at exact Fomberg line 2847 under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Fomberg Units 001–004 translate `algebraic_topology.tex:31–2846` contiguously through Sections 1.1–1.10, with all independent reviews at P1/P2/P3 zero. The Unit 004 boundary passes semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, package, and hash gates. GitHub commit `465160690dcc3b8c92f0a7df2016027ee1b0d118`, Pages run `32854329469`, and Zenodo version `0.30.4`, record `22097007`, DOI `10.5281/zenodo.22097007`, are public on their existing lineages; Pages, nine commit-pinned GitHub witnesses, and all nine Zenodo files match local bytes under anonymous readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. Continue at exact Fomberg line 2847 under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
 ### Live recovery note — Fomberg Unit 004 local closure, 2026-08-25
 
@@ -49,8 +49,15 @@ anonymous readback. Receipt
 `release/zenodo-roberts-001-030-fomberg-001-004/publication-receipt.json` is
 4,946 bytes/SHA-256
 `006a57953f58455da6f175233186e987e9ec37d9f9d80c23eab9c89d2532e4f7`.
-Publish the same boundary to GitHub/Pages, then continue with Section 1.11 at
-line 2847 as the optional degree cross-check in `D60-R12`.
+GitHub commit `465160690dcc3b8c92f0a7df2016027ee1b0d118`, tree
+`43175e49e17a52018279b70e09942786ac728990`, Pages run `32854329469`, job
+`97822496048`, deployment `6084317344`, and status `17305874189` succeeded.
+The Pages reader and nine commit-pinned witnesses match local bytes. Receipt
+`00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_004.json`
+is 4,376 bytes/SHA-256
+`24bbfacc99e67f314c5168d5ae073b399840a91c23e859d03035a55d49e74c09`.
+Continue with Section 1.11 at line 2847 as the optional degree cross-check in
+`D60-R12`.
 
 ### Live recovery note — Fomberg Unit 003 closure and publication, 2026-08-25
 

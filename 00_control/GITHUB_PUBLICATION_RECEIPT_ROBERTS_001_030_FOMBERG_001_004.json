@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "status": "PUSHED_DEPLOYED_AND_ANONYMOUSLY_BYTE_VERIFIED",
+  "date": "2026-08-25",
+  "scope": "Roberts 30/30 complete; Fomberg O012-FOM-001 through O012-FOM-004 complete through algebraic_topology.tex line 2846; composite course partial",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "commit": "465160690dcc3b8c92f0a7df2016027ee1b0d118",
+  "tree": "43175e49e17a52018279b70e09942786ac728990",
+  "parent": "c1578b0dc34749975cec11da649ec9c0f936f991",
+  "changed_files": 76,
+  "workflow": {
+    "run_id": 32854329469,
+    "job_id": 97822496048,
+    "deployment_id": 6084317344,
+    "deployment_status_id": 17305874189,
+    "conclusion": "success",
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32854329469",
+    "job_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32854329469/job/97822496048"
+  },
+  "pages": {
+    "url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-004/",
+    "http_status": 200,
+    "bytes": 8155605,
+    "sha256": "cd620d5557ff05fb81fb9cf044e8bd4848a6f92ef8fcd06078b8a124f6e79326",
+    "matches_local": true
+  },
+  "commit_pinned_anonymous_readback": [
+    {
+      "role": "translated_source",
+      "path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+      "http_status": 200,
+      "bytes": 87293,
+      "sha256": "2c04d647b58afe044f5549bcba9ad3572075775711bb3aaec45d0e94fe3d3e91",
+      "matches_local": true
+    },
+    {
+      "role": "pdf_reader",
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-004-id.pdf",
+      "http_status": 200,
+      "bytes": 3964018,
+      "sha256": "bbe4b2392991ace6922230374833bf0982e00a8b6d2fddb94a990b663c8440bf",
+      "matches_local": true
+    },
+    {
+      "role": "backend_receipt",
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_004_CUMULATIVE_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 6915,
+      "sha256": "1cfc03c48d504ae7a9a39e1ea17819ae0cd462135fcb885168f2f48a5e0717f4",
+      "matches_local": true
+    },
+    {
+      "role": "build_receipt",
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_004_BUILD_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 10029,
+      "sha256": "d59e54ab6b9d370a8335a20564b5c2998ef1555f0b5d41a69cf3d0c8405527e1",
+      "matches_local": true
+    },
+    {
+      "role": "zenodo_metadata_payload",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-004/metadata.json",
+      "http_status": 200,
+      "bytes": 3948,
+      "sha256": "3876636e6b244070093e9f995290137d90fb4385db10df03a6e19a320b27f1fc",
+      "matches_local": true
+    },
+    {
+      "role": "release_manifest",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-004/artifacts/release-manifest.json",
+      "http_status": 200,
+      "bytes": 42460,
+      "sha256": "1bb40df9528a6955b9921f5b22a7379e22ec64760873839a6f55b32fb65dce9d",
+      "matches_local": true
+    },
+    {
+      "role": "editable_source_backend_zip",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-004/artifacts/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_004_EDITABLE_SOURCE_BACKEND.zip",
+      "http_status": 200,
+      "bytes": 2911830,
+      "sha256": "4e80807eebad45affed46292f5efff6323a16b14b175289a05f1742f952bb0fe",
+      "matches_local": true
+    },
+    {
+      "role": "qa_provenance_zip",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-004/artifacts/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_004_QA_PROVENANCE.zip",
+      "http_status": 200,
+      "bytes": 208228,
+      "sha256": "5bd7c16901f84cf8678f7b699ce193dc8d5a6ffe0ee1646d77df93b6628bf3c1",
+      "matches_local": true
+    },
+    {
+      "role": "pages_workflow",
+      "path": ".github/workflows/pages.yml",
+      "http_status": 200,
+      "bytes": 5511,
+      "sha256": "ee772c8295d8477ec152ddea994b27b503e72450fed6ac87cb31907654bed9ac",
+      "matches_local": true
+    }
+  ],
+  "verification": {
+    "push_succeeded": true,
+    "remote_main_matches_content_commit": true,
+    "pages_workflow_succeeded": true,
+    "pages_reader_exact": true,
+    "critical_commit_pinned_files_exact": true,
+    "anonymous_http_status_for_every_check": 200,
+    "credentials_recorded": false,
+    "absolute_local_paths_recorded": false,
+    "personal_name_recorded": false
+  }
+}

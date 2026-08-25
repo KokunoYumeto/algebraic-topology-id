@@ -53,11 +53,12 @@ the deterministic PDF is 3,964,018 bytes/SHA-256
 `bbe4b2392991ace6922230374833bf0982e00a8b6d2fddb94a990b663c8440bf`,
 424 A4 pages. Three clean builds are byte-identical; centered desktop, zero
 exposed mobile overflow, all new PDF pages 398–424, MathML, links, rights,
-privacy, append-only replay, and package gates pass. Zenodo version `0.30.4`,
+privacy, append-only replay, and package gates pass. GitHub commit
+`465160690dcc3b8c92f0a7df2016027ee1b0d118` and Pages run `32854329469`
+publish the reader with exact public-byte readback. Zenodo version `0.30.4`,
 record `22097007`, DOI `10.5281/zenodo.22097007`, is published in the existing
-concept and all nine files match anonymous readback. Push this same coherent
-Roberts-30/30-plus-Fomberg-001–004 boundary to the existing GitHub/Pages
-lineage, then continue at exact Fomberg line 2847, Section 1.11, as the
+concept and all nine files match anonymous readback. Continue at exact Fomberg
+line 2847, Section 1.11, as the
 optional degree cross-check in `D60-R12`. Figshare remains blocked by the
 recorded `InactiveAccount` response and must not trigger a duplicate or retry
 loop.

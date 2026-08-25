@@ -29,7 +29,10 @@ and document at a 375 × 812 viewport with zero exposed overflow. PDF pages
 with ToUnicode, nine primary images pair exactly with nine masks, and all three
 clean builds are byte-identical. The PDF remains disclosed as untagged. The
 append-only backend finishes at 6,113 records and replay passes. Next build
-extends from Fomberg line 2847.
+extends from Fomberg line 2847. GitHub commit
+`465160690dcc3b8c92f0a7df2016027ee1b0d118`, Pages run `32854329469`, and
+Zenodo DOI `10.5281/zenodo.22097007` preserve this boundary with exact
+anonymous public-byte readback.
 
 ## Roberts 001–030 plus Fomberg 001–003 — prior boundary
 
