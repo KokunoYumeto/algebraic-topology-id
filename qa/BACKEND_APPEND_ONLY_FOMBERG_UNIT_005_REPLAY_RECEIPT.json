@@ -1,0 +1,44 @@
+{
+  "backend": {
+    "bundle_sha256": "c7b153cd217ac7dee87f4c399815c4d2bb51cff872c71665fe395efb3ffd95fa",
+    "bytes": 7565974,
+    "records": 6309
+  },
+  "checks": {
+    "every_backend_file_byte_identical": true,
+    "exact_record_plan": "PASS",
+    "generic_schema_and_references": "PASS",
+    "producer_deterministic": "PASS",
+    "semantic_validator": "PASS"
+  },
+  "outputs": {
+    "cumulative_json": {
+      "bytes": 7558,
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_005_CUMULATIVE_RECEIPT.json",
+      "sha256": "0e7e3a4595697e55d2451314481be971b9b7a95555309a596ec4155660028b9f"
+    },
+    "cumulative_md": {
+      "bytes": 735,
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_005_CUMULATIVE_RECEIPT.md",
+      "sha256": "b88fef9d457d78b48df59b2ee866042873f1f1a3239f23fc75e8c6bdb7c9229d"
+    },
+    "manifest": {
+      "bytes": 2173,
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_005_FILE_MANIFEST.csv",
+      "sha256": "ac5b3bfb6a1e757f4959a10d32471dc14eb4ad19dd09a30b753337ce83580d70"
+    },
+    "semantic_json": {
+      "bytes": 6341,
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_005_RECEIPT.json",
+      "sha256": "cd22335c77ece4ce3fd8c4eb948d283a515ec08d485ffa01bb0d6f035fcb0cdf"
+    },
+    "semantic_md": {
+      "bytes": 779,
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_005_RECEIPT.md",
+      "sha256": "2ee27d6de9cbdd6fbbfd361ae3d6680fbf4481d4debc5e2949ffe9f99c839d48"
+    }
+  },
+  "receipt_id": "O012-BACKEND-FOMBERG-UNIT-005-DETERMINISTIC-REPLAY",
+  "schema_version": "1.0.0",
+  "status": "PASS"
+}

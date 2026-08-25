@@ -1,0 +1,91 @@
+{
+  "review_id": "O012-FOMBERG-UNIT-005-INDEPENDENT-FINAL",
+  "schema_version": "1.0.0",
+  "date": "2026-08-25",
+  "review_mode": "independent_read_only_full_source_and_reader_review",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "canonical": {
+    "path": "source/id-ID/fomberg/units/fomberg-unit-005-degree-maps-local-degree.md",
+    "bytes": 40274,
+    "lf_lines": 1150,
+    "sha256": "ad6e31291e3df97b81f7e5a30144ca27157f907291e74f4d49c09a0620487075"
+  },
+  "upstream_span": {
+    "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+    "line_start": 2847,
+    "line_end": 3122,
+    "lf_lines": 276,
+    "normalized_bytes": 12203,
+    "sha256": "9ac1d27872a09134b75bb077ad113716a9e828c2177ac296e7bf3331395da85a",
+    "next_line": 3123,
+    "next_line_text": "\\subsection{Cellular complexes}"
+  },
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "checks": {
+    "source_order": {
+      "status": "PASS",
+      "subsections": 1,
+      "source_mathematical_environments": 13,
+      "note": "Every selected source environment and remark is represented in order."
+    },
+    "mathematics": {
+      "status": "PASS",
+      "scope": "degree, reduced degree zero, reflections, fixed points, free actions, hairy-sphere theorem, local degree, choice independence, local-to-global degree, and all integer power-map cases"
+    },
+    "proof_repairs": {
+      "status": "PASS",
+      "repair_ids": [
+        "FOM-PR-12"
+      ],
+      "choice_independence": "PASS",
+      "dimension_range_disclosed": "PASS",
+      "provenance_separation": "PASS"
+    },
+    "mastery": {
+      "status": "PASS",
+      "exercise_hint_solution_triples": 6,
+      "solutions_complete": true
+    },
+    "structure": {
+      "status": "PASS",
+      "stable_ids": 52,
+      "unique_stable_ids": 52,
+      "fragment_links": 9,
+      "distinct_fragment_targets": 8,
+      "fragment_links_resolved": 9,
+      "source_locators": 31,
+      "source_locators_valid": 31,
+      "fenced_divs_balanced": true,
+      "pandoc_native": "PASS",
+      "pandoc_mathml": "PASS",
+      "mathml_nodes": 487,
+      "display_math_nodes": 78,
+      "raw_tex_fallbacks": 0
+    },
+    "figures": {
+      "status": "PASS",
+      "source_tikzcd_occurrences": 2,
+      "semantic_figure_blocks": 1,
+      "raster_redraws": 0,
+      "semantic_reflow_and_map_inventory_complete": true
+    },
+    "language": {
+      "status": "PASS",
+      "locale": "id-ID",
+      "terminology_and_grammar": "natural_and_consistent"
+    },
+    "curriculum_additivity": {
+      "status": "PASS",
+      "route": "D60-R12",
+      "degree_material": "optional_cross_check_against_roberts_unit_30",
+      "local_degree_and_solved_mastery": "additive"
+    }
+  },
+  "status": "PASS_P1_P2_P3_ZERO",
+  "file_mutations_by_reviewer": 0,
+  "git_invoked_by_reviewer": false
+}

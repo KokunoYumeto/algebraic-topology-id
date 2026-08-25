@@ -1,0 +1,131 @@
+{
+  "audit_id": "O012-FOMBERG-UNIT-005-SOURCE-AUDIT",
+  "component": "Fomberg Algebraic Topology Section 1.11",
+  "correction_and_terminology_ledgers": {
+    "adverse": {
+      "rows": 533,
+      "terminal_id": "O012-ADV-0533",
+      "unit_rows": 11,
+      "unit_tail_matches_reviewed_draft": true
+    },
+    "identities": {
+      "00_control/ADVERSE_LEDGER.csv": {
+        "bytes": 194914,
+        "encoding": "UTF-8",
+        "lf_lines": 534,
+        "newline": "LF",
+        "path": "00_control/ADVERSE_LEDGER.csv",
+        "sha256": "ebf0157674a1db25690480defe4046e2e9a3e1d5322368af2b5a8f3e94597388"
+      },
+      "00_control/TERMINOLOGY.csv": {
+        "bytes": 56920,
+        "encoding": "UTF-8",
+        "lf_lines": 455,
+        "newline": "LF",
+        "path": "00_control/TERMINOLOGY.csv",
+        "sha256": "4f3ec0ee76769ac297b3ed820c1e46645277d87c4eb30cbde5358f2cca72b68f"
+      },
+      "qa/fomberg-unit-005/ADVERSE_ROWS_DRAFT.csv": {
+        "bytes": 10140,
+        "encoding": "UTF-8",
+        "lf_lines": 12,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-005/ADVERSE_ROWS_DRAFT.csv",
+        "sha256": "e5398b2a644e475189f44bd031a11a8d8bbdb35bbbf581b583d60e6d88ac1428"
+      },
+      "qa/fomberg-unit-005/TERMINOLOGY_ROWS_DRAFT.csv": {
+        "bytes": 3608,
+        "encoding": "UTF-8",
+        "lf_lines": 21,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-005/TERMINOLOGY_ROWS_DRAFT.csv",
+        "sha256": "e5c9b7fd4a7884728e0fea696a9fe3511b21adf92ccd827c713d6c1184de3ab7"
+      }
+    },
+    "terminology": {
+      "rows": 454,
+      "terminal_id": "O012-TERM-0454",
+      "unit_rows": 20,
+      "unit_tail_matches_reviewed_draft": true
+    }
+  },
+  "course_id": "D60",
+  "course_route_unit_id": "D60-R12",
+  "date": "2026-08-25",
+  "edition_unit_id": "O012-FOM-005",
+  "independent_review": {
+    "identity": {
+      "bytes": 2878,
+      "encoding": "UTF-8",
+      "lf_lines": 91,
+      "newline": "LF",
+      "path": "qa/fomberg-unit-005/INDEPENDENT_REVIEW_FINAL.json",
+      "sha256": "bcf628eb480234d217c235727c2082289f0cc09d8062d822c1e33964c072a6e0"
+    },
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "status": "PASS_P1_P2_P3_ZERO"
+  },
+  "license": "CC BY-SA 4.0",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "reader": {
+    "bytes": 40274,
+    "encoding": "UTF-8",
+    "lf_lines": 1150,
+    "newline": "LF",
+    "path": "source/id-ID/fomberg/units/fomberg-unit-005-degree-maps-local-degree.md",
+    "sha256": "ad6e31291e3df97b81f7e5a30144ca27157f907291e74f4d49c09a0620487075"
+  },
+  "role_id": "O012",
+  "route_status": "optional degree cross-check plus additive local-degree layer",
+  "schema_version": "1.0.0",
+  "source": {
+    "authority_identity": {
+      "bytes": 223886,
+      "encoding": "UTF-8",
+      "lf_lines": 6069,
+      "newline": "LF",
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "mathematical_environment_total": 13,
+    "mathematical_environments": {
+      "definition": 2,
+      "example": 1,
+      "proof": 3,
+      "proposition": 2,
+      "remark": 4,
+      "theorem": 1
+    },
+    "next_line": 3123,
+    "next_line_text": "\\subsection{Cellular complexes}",
+    "selected_span": {
+      "bytes": 12203,
+      "lf_lines": 276,
+      "line_end": 3122,
+      "line_start": 2847,
+      "sha256": "9ac1d27872a09134b75bb077ad113716a9e828c2177ac296e7bf3331395da85a"
+    },
+    "source_tikzcd_occurrences": 2,
+    "subsections": 1,
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b"
+  },
+  "status": "PASS",
+  "translation_closure": {
+    "choice_independence_proved": true,
+    "contiguous_span": "2847-3122",
+    "dimension_range_repair_disclosed": true,
+    "mastery_triples_complete": 6,
+    "next_exact_cursor": 3123,
+    "next_exact_text": "\\subsection{Cellular complexes}",
+    "proof_repairs_complete": [
+      "FOM-PR-12"
+    ],
+    "source_mathematical_environments_represented": 13,
+    "subsections_complete_in_source_order": 1
+  }
+}

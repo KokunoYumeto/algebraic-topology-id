@@ -15,7 +15,7 @@ International License](https://creativecommons.org/licenses/by/4.0/).
 
 ## Fomberg component and integrated reader
 
-The Fomberg bridge currently adapts lines 31–614, Sections 1.1–1.2, of
+The Fomberg bridge currently adapts lines 31–3122, Sections 1.1–1.11, of
 *Algebraic Topology* by Yeheli Fomberg, based on lectures by Nir Lazarovich in
 spring 2025. The frozen source is commit
 `563194fae879178b9a6871b249513bfc27968975` of `~yp/math-notes`.

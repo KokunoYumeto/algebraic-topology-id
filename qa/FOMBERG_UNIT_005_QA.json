@@ -1,0 +1,208 @@
+{
+  "controls": {
+    "adverse": {
+      "rows": 533,
+      "terminal_id": "O012-ADV-0533",
+      "unit_rows": 11,
+      "unit_tail_matches_reviewed_draft": true
+    },
+    "identities": {
+      "00_control/ADVERSE_LEDGER.csv": {
+        "bytes": 194914,
+        "encoding": "UTF-8",
+        "lf_lines": 534,
+        "newline": "LF",
+        "path": "00_control/ADVERSE_LEDGER.csv",
+        "sha256": "ebf0157674a1db25690480defe4046e2e9a3e1d5322368af2b5a8f3e94597388"
+      },
+      "00_control/TERMINOLOGY.csv": {
+        "bytes": 56920,
+        "encoding": "UTF-8",
+        "lf_lines": 455,
+        "newline": "LF",
+        "path": "00_control/TERMINOLOGY.csv",
+        "sha256": "4f3ec0ee76769ac297b3ed820c1e46645277d87c4eb30cbde5358f2cca72b68f"
+      },
+      "qa/fomberg-unit-005/ADVERSE_ROWS_DRAFT.csv": {
+        "bytes": 10140,
+        "encoding": "UTF-8",
+        "lf_lines": 12,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-005/ADVERSE_ROWS_DRAFT.csv",
+        "sha256": "e5398b2a644e475189f44bd031a11a8d8bbdb35bbbf581b583d60e6d88ac1428"
+      },
+      "qa/fomberg-unit-005/TERMINOLOGY_ROWS_DRAFT.csv": {
+        "bytes": 3608,
+        "encoding": "UTF-8",
+        "lf_lines": 21,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-005/TERMINOLOGY_ROWS_DRAFT.csv",
+        "sha256": "e5c9b7fd4a7884728e0fea696a9fe3511b21adf92ccd827c713d6c1184de3ab7"
+      }
+    },
+    "terminology": {
+      "rows": 454,
+      "terminal_id": "O012-TERM-0454",
+      "unit_rows": 20,
+      "unit_tail_matches_reviewed_draft": true
+    }
+  },
+  "date": "2026-08-25",
+  "gates": {
+    "independent_review_p1_p2_p3_zero": "PASS",
+    "license_attribution_nonendorsement_model_and_privacy": "PASS",
+    "mastery_solution_closure": "PASS",
+    "mathematics_and_proof_repair": "PASS",
+    "pandoc_native_and_mathml": "PASS",
+    "semantic_diagram_reflow_and_accessibility": "PASS",
+    "source_identity_and_contiguity": "PASS",
+    "source_order_and_environment_census": "PASS",
+    "stable_structure_aliases_and_links": "PASS",
+    "terminology_and_correction_ledgers": "PASS"
+  },
+  "independent_review": {
+    "identity": {
+      "bytes": 2878,
+      "encoding": "UTF-8",
+      "lf_lines": 91,
+      "newline": "LF",
+      "path": "qa/fomberg-unit-005/INDEPENDENT_REVIEW_FINAL.json",
+      "sha256": "bcf628eb480234d217c235727c2082289f0cc09d8062d822c1e33964c072a6e0"
+    },
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "status": "PASS_P1_P2_P3_ZERO"
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "qa_id": "O012-FOMBERG-UNIT-005-STATIC-QA",
+  "reader": {
+    "assets": {
+      "raster_redraws": 0,
+      "semantic_figures": 1,
+      "semantic_reflow_provenance_present": true,
+      "source_tikzcd_occurrences": 2
+    },
+    "fenced_divs": {
+      "balanced": true,
+      "closed": 46,
+      "opened": 46
+    },
+    "fragment_links": {
+      "count": 9,
+      "distinct_targets": 8,
+      "resolved": 9,
+      "target_counts": {
+        "o012-fom-u005-mcheck-001": 1,
+        "o012-rbt-l30-cor-001": 1,
+        "o012-rbt-l30-def-002": 1,
+        "o012-rbt-l30-lem-001": 1,
+        "o012-rbt-l30-proof-002": 2,
+        "o012-rbt-l30-proof-004": 1,
+        "o012-rbt-l30-prop-001": 1,
+        "o012-rbt-l30-thm-003": 1
+      }
+    },
+    "identity": {
+      "bytes": 40274,
+      "encoding": "UTF-8",
+      "lf_lines": 1150,
+      "newline": "LF",
+      "path": "source/id-ID/fomberg/units/fomberg-unit-005-degree-maps-local-degree.md",
+      "sha256": "ad6e31291e3df97b81f7e5a30144ca27157f907291e74f4d49c09a0620487075"
+    },
+    "mastery": {
+      "complete_solutions": 6,
+      "exercise_hint_solution_triples": 6
+    },
+    "ordered_stable_ids_sha256": "e85b618bcffc24fd8a802834a352ee73b0b76ced4eef751d3edf3e98e3c5f503",
+    "pandoc": {
+      "display_mathml_nodes": 78,
+      "mathml_nodes": 487,
+      "mathml_render": "PASS",
+      "native_parse": "PASS",
+      "version": "pandoc 3.9.0.2",
+      "warnings": 0
+    },
+    "proof_repairs": [
+      "FOM-PR-12"
+    ],
+    "rights_provenance_privacy": "PASS",
+    "roberts_unit_030_crosslink_witness": {
+      "bytes": 23008,
+      "encoding": "UTF-8",
+      "lf_lines": 729,
+      "newline": "LF",
+      "path": "source/id-ID/units/unit-030-lecture-030.md",
+      "sha256": "88da8cf71d0f81328bdd65b0dea7d54c48655ed8836e230eaed821796b61b08d"
+    },
+    "semantic_class_counts": {
+      "boundary": 1,
+      "definition": 2,
+      "example": 1,
+      "exercise": 6,
+      "figure": 1,
+      "heading": 6,
+      "hint": 6,
+      "proof": 3,
+      "proof-supplement": 1,
+      "proposition": 2,
+      "remark": 4,
+      "solution": 6,
+      "source-audit": 11,
+      "source-omission": 1,
+      "theorem": 1
+    },
+    "source_aliases": {
+      "def:local-degree": "o012-fom-u005-def-local-degree",
+      "prop:local-degree-for-global-degree": "o012-fom-u005-prop-local-to-global"
+    },
+    "source_locators": {
+      "count": 31,
+      "valid": 31
+    },
+    "stable_ids": 52,
+    "stable_ids_unique": 52
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "authority_identity": {
+      "bytes": 223886,
+      "encoding": "UTF-8",
+      "lf_lines": 6069,
+      "newline": "LF",
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "mathematical_environment_total": 13,
+    "mathematical_environments": {
+      "definition": 2,
+      "example": 1,
+      "proof": 3,
+      "proposition": 2,
+      "remark": 4,
+      "theorem": 1
+    },
+    "next_line": 3123,
+    "next_line_text": "\\subsection{Cellular complexes}",
+    "selected_span": {
+      "bytes": 12203,
+      "lf_lines": 276,
+      "line_end": 3122,
+      "line_start": 2847,
+      "sha256": "9ac1d27872a09134b75bb077ad113716a9e828c2177ac296e7bf3331395da85a"
+    },
+    "source_tikzcd_occurrences": 2,
+    "subsections": 1,
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b"
+  },
+  "source_audit": {
+    "bytes": 4190,
+    "path": "qa/FOMBERG_UNIT_005_SOURCE_AUDIT.json",
+    "sha256": "2c8280c954bdad90995c8d209b94e9355962e3c724ffedbd1ad84675828b2135"
+  },
+  "status": "PASS"
+}
