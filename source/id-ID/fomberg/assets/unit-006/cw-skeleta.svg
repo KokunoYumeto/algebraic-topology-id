@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 360" width="1080" height="360"
+     style="max-width:100%;height:auto" preserveAspectRatio="xMidYMid meet"
+     role="img" aria-labelledby="cw-skeleta-title cw-skeleta-desc" data-source-lines="3134-3177,3236-3247">
+  <title id="cw-skeleta-title">Pembangunan kompleks CW melalui kerangka</title>
+  <desc id="cw-skeleta-desc">Tiga panel memperlihatkan himpunan titik sebagai kerangka nol, graf sebagai kerangka satu, lalu sebuah cakram berdimensi n yang batasnya dilekatkan pada kerangka sebelumnya.</desc>
+  <defs>
+    <marker id="cw-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#374151"/>
+    </marker>
+    <pattern id="cw-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="12" height="12" fill="#ede9fe"/>
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#7c3aed" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <rect width="1080" height="360" rx="18" fill="#ffffff"/>
+  <g font-family="sans-serif" fill="#111827">
+    <text x="165" y="42" text-anchor="middle" font-size="26" font-weight="700">Kerangka 0</text>
+    <text x="540" y="42" text-anchor="middle" font-size="26" font-weight="700">Kerangka 1</text>
+    <text x="905" y="42" text-anchor="middle" font-size="26" font-weight="700">Langkah dimensi n</text>
+  </g>
+  <g fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2">
+    <circle cx="82" cy="132" r="9"/><circle cx="181" cy="95" r="9"/><circle cx="244" cy="188" r="9"/>
+    <circle cx="120" cy="264" r="9"/><circle cx="268" cy="274" r="9"/>
+  </g>
+  <g stroke="#374151" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M425 132 L524 95 L587 188 L463 264 L611 274"/>
+    <path d="M425 132 Q510 205 587 188"/>
+    <path d="M611 274 C674 238 674 310 611 274"/>
+  </g>
+  <g fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2">
+    <circle cx="425" cy="132" r="9"/><circle cx="524" cy="95" r="9"/><circle cx="587" cy="188" r="9"/>
+    <circle cx="463" cy="264" r="9"/><circle cx="611" cy="274" r="9"/>
+  </g>
+  <path d="M754 229 C717 173 749 101 824 91 C899 80 949 130 938 200 C928 267 860 297 798 275 C779 268 765 252 754 229 Z"
+        fill="#dbeafe" stroke="#1d4ed8" stroke-width="5"/>
+  <path d="M788 207 C823 171 861 242 902 181" fill="none" stroke="#374151" stroke-width="6"/>
+  <circle cx="788" cy="207" r="8" fill="#1d4ed8"/><circle cx="902" cy="181" r="8" fill="#1d4ed8"/>
+  <circle cx="988" cy="158" r="62" fill="url(#cw-hatch)" stroke="#7c3aed" stroke-width="5"/>
+  <path d="M953 205 C936 235 909 247 883 247" fill="none" stroke="#374151" stroke-width="4" marker-end="url(#cw-arrow)"/>
+  <text x="988" y="167" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#5b21b6">Dⁿ</text>
+  <text x="837" y="325" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#374151">∂Dⁿ dilekatkan ke X⁽ⁿ⁻¹⁾</text>
+  <line x1="322" y1="72" x2="322" y2="320" stroke="#d1d5db" stroke-width="3"/>
+  <line x1="707" y1="72" x2="707" y2="320" stroke="#d1d5db" stroke-width="3"/>
+</svg>

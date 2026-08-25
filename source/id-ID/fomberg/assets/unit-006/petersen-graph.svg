@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 650" width="650" height="650"
+     style="max-width:100%;height:auto" preserveAspectRatio="xMidYMid meet"
+     role="img" aria-labelledby="petersen-title petersen-desc" data-source-lines="3297-3333">
+  <title id="petersen-title">Graf Petersen sebagai kompleks CW satu dimensi</title>
+  <desc id="petersen-desc">Lima verteks luar membentuk pentagon, lima verteks dalam membentuk bintang, dan setiap verteks luar terhubung ke satu verteks dalam. Sepuluh verteks adalah sel nol dan lima belas sisi adalah sel satu.</desc>
+  <rect width="650" height="650" rx="18" fill="#ffffff"/>
+  <g stroke="#374151" stroke-width="9" fill="none" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M325 55 L582 242 L484 545 L166 545 L68 242 Z"/>
+    <path d="M325 178 L411 443 L186 279 L464 279 L239 443 Z"/>
+    <path d="M325 55 L325 178 M582 242 L464 279 M484 545 L411 443 M166 545 L239 443 M68 242 L186 279"/>
+  </g>
+  <g fill="#1d4ed8" stroke="#1e3a8a" stroke-width="3">
+    <circle cx="325" cy="55" r="14"/><circle cx="582" cy="242" r="14"/><circle cx="484" cy="545" r="14"/>
+    <circle cx="166" cy="545" r="14"/><circle cx="68" cy="242" r="14"/>
+    <circle cx="325" cy="178" r="14"/><circle cx="464" cy="279" r="14"/><circle cx="411" cy="443" r="14"/>
+    <circle cx="239" cy="443" r="14"/><circle cx="186" cy="279" r="14"/>
+  </g>
+</svg>

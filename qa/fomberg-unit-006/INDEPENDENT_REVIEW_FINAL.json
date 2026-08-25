@@ -1,0 +1,260 @@
+{
+  "review_id": "O012-FOMBERG-UNIT-006-INDEPENDENT-FINAL",
+  "schema_version": "1.0.0",
+  "date": "2026-08-25",
+  "review_mode": "independent_read_only_full_source_and_reader_review",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "canonical": {
+    "path": "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md",
+    "bytes": 41416,
+    "lf_lines": 1053,
+    "sha256": "e8d4d5391f8cdf4e62a019f7a991d09e4b610633e8e660dec4e0ea2b61c538f7"
+  },
+  "upstream": {
+    "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+    "bytes": 223886,
+    "lf_lines": 6069,
+    "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483",
+    "selected_span": {
+      "line_start": 3123,
+      "line_end": 3517,
+      "lf_lines": 395,
+      "normalized_bytes": 15540,
+      "sha256": "c16d595b8f8c4c67ea5f0f58c1ad7de83ac94efae509d3a8d3bef28da2522f19"
+    },
+    "next_line": 3518,
+    "next_line_text": "\\subsection{Cellular homology}"
+  },
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "checks": {
+    "source_closure_and_order": {
+      "status": "PASS",
+      "source_environments": 14,
+      "source_remarks": 6,
+      "source_definitions": 1,
+      "source_examples": 6,
+      "source_exercises": 1,
+      "reader_source_derived_environment_wrappers": 14,
+      "source_environment_order_preserved": true,
+      "source_detail_complete": true,
+      "intra_environment_reflow": "The long CW-definition environment is semantically reflowed for reading, while every definition, map type, quotient, example, label, and dependency remains represented and source-located.",
+      "source_labels_preserved": [
+        "exmp:cw-for-sn-one-n-cell",
+        "exmp:cw-for-torus",
+        "ex:cw-for-cp"
+      ],
+      "source_locator_attributes": 35,
+      "source_locators_in_selected_span": true
+    },
+    "mathematics": {
+      "status": "PASS",
+      "scope_checked": [
+        "CW skeleta, attaching maps, characteristic maps, open cells, and quotient construction",
+        "closure-finiteness and weak topology for infinite CW complexes",
+        "Hawaiian earring versus the countable weak-topology CW wedge",
+        "intrinsic CW structure and nonplanarity of the Petersen graph",
+        "four-cell and minimal two-cell structures on spheres",
+        "torus cell structure and attaching word aba^{-1}b^{-1}",
+        "real-projective filtration and antipodal attaching maps",
+        "complex-projective filtration and Hopf attaching maps"
+      ],
+      "formula_and_map_type_check": "PASS",
+      "cw_open_cell_definition": "PASS",
+      "hawaiian_earring_argument": "PASS",
+      "petersen_graph_cell_census": "10 vertices and 15 edges; PASS",
+      "sphere_constructions": "PASS",
+      "torus_orientation_and_commutator": "PASS on the bound SVG and PNG assets",
+      "projective_space_constructions": "PASS"
+    },
+    "source_corrections": {
+      "status": "PASS",
+      "explicit_groups": 10,
+      "candidate_ids": [
+        "FOM-U006A-ADV-001",
+        "FOM-U006A-ADV-002",
+        "FOM-U006A-ADV-003",
+        "FOM-U006A-ADV-004",
+        "FOM-U006A-ADV-005",
+        "FOM-U006A-ADV-006",
+        "FOM-U006A-ADV-007",
+        "FOM-U006A-ADV-008",
+        "FOM-U006A-ADV-009",
+        "FOM-U006A-ADV-010"
+      ],
+      "attaching_map_panel_domain_correction_explicit": true,
+      "corrections_distinguished_from_source": true
+    },
+    "mastery": {
+      "status": "PASS",
+      "exercise_hint_complete_solution_triples": 6,
+      "exercise_ids": [
+        "o012-fom-u006-mcheck-001",
+        "o012-fom-u006-mcheck-002",
+        "o012-fom-u006-mcheck-003",
+        "o012-fom-u006-mcheck-004",
+        "o012-fom-u006-mcheck-005",
+        "o012-fom-u006-mcheck-006"
+      ],
+      "source_prompt_mapped": "ex:cw-for-cp",
+      "solutions_mathematically_complete": true,
+      "separate_problem_bank_copied": false
+    },
+    "structure": {
+      "status": "PASS",
+      "declared_stable_ids": 55,
+      "unique_declared_stable_ids": 55,
+      "duplicate_declared_stable_ids": 0,
+      "fragment_links": 1,
+      "fragment_target": "o012-rbt-l13-s05",
+      "fragment_target_resolved_in_existing_integrated_reader": true,
+      "fenced_div_openings": 49,
+      "fenced_div_closings": 49,
+      "fenced_divs_balanced_and_properly_nested": true
+    },
+    "figures": {
+      "status": "PASS",
+      "semantic_functions_from_source": 11,
+      "reader_figure_blocks": 7,
+      "png_files": 7,
+      "svg_master_files": 7,
+      "all_png_references_resolve": true,
+      "every_png_has_same-basename_svg_master": true,
+      "all_svg_masters_have_title_and_description": true,
+      "visual_inspection": "PASS",
+      "function_map": [
+        {"functions": [1, 2], "pair": "cw-skeleta"},
+        {"functions": [3, 4], "pair": "attaching-characteristic-maps"},
+        {"functions": [5], "pair": "hawaiian-earring"},
+        {"functions": [6], "pair": "petersen-graph"},
+        {"functions": [7, 8], "pair": "sphere-cell-structures"},
+        {"functions": [9], "pair": "torus-cw"},
+        {"functions": [10, 11], "pair": "projective-filtration"}
+      ],
+      "asset_pairs": [
+        {
+          "basename": "attaching-characteristic-maps",
+          "png_bytes": 274111,
+          "png_dimensions": "1800x771",
+          "png_sha256": "f94971c0b92cd06ba097dd2d5ae6811685eccc32f04b7837588a2e7ccf147a28",
+          "svg_bytes": 2665,
+          "svg_viewbox": "0 0 980 420",
+          "svg_sha256": "239e55c5eb21cbc003a3888b8862aa71e4128ba8478519a2b3a888de231ae3fe"
+        },
+        {
+          "basename": "cw-skeleta",
+          "png_bytes": 411720,
+          "png_dimensions": "1800x600",
+          "png_sha256": "77809269bf4e0827133fd8481f0fb6d9251dac8a2f0070bdcf0db8be3e6e9524",
+          "svg_bytes": 3197,
+          "svg_viewbox": "0 0 1080 360",
+          "svg_sha256": "5bb19f9b3c9aad35cbbc00d5190d7880148f93beb5fd8e5b4916be57e8638838"
+        },
+        {
+          "basename": "hawaiian-earring",
+          "png_bytes": 337871,
+          "png_dimensions": "1800x756",
+          "png_sha256": "400394d0a5109b61ec6d34773dcd7b524e6171094dffe520caf4c82968bc66ed",
+          "svg_bytes": 1633,
+          "svg_viewbox": "0 0 1000 420",
+          "svg_sha256": "7f37af3c1cfcffbea99be8bdcdb271d24ddc5b92bcfe6c8b5bddc9352fc12039"
+        },
+        {
+          "basename": "petersen-graph",
+          "png_bytes": 103409,
+          "png_dimensions": "1218x1218",
+          "png_sha256": "027ace5186e7700473fcb1db8366bb2f6402c8624423d1b1e727679a33b4e480",
+          "svg_bytes": 1434,
+          "svg_viewbox": "0 0 650 650",
+          "svg_sha256": "3ab44ec5d8fb249d938c001f5ecd2e86e1390d50e98d2045b862187370c5dcc9"
+        },
+        {
+          "basename": "projective-filtration",
+          "png_bytes": 242855,
+          "png_dimensions": "1800x583",
+          "png_sha256": "76363bf988ce64ae33f88b10fa5d677cc2b89ed91680f4f1acf885a33f627549",
+          "svg_bytes": 2496,
+          "svg_viewbox": "0 0 1080 350",
+          "svg_sha256": "44d47b1d114c06c98e40d67c818bee5c1f2aa340e782880463769965d9502bdc"
+        },
+        {
+          "basename": "sphere-cell-structures",
+          "png_bytes": 517477,
+          "png_dimensions": "1800x683",
+          "png_sha256": "a1f95baf3f926e3edea8a04db9f452994843163ef5bd2d32ce7c171598c9c75f",
+          "svg_bytes": 3310,
+          "svg_viewbox": "0 0 1080 410",
+          "svg_sha256": "5867c3c1e15406b7f30cda75bf36c4e07b9e2c5abe3e23de240cb1f6e11d75b1"
+        },
+        {
+          "basename": "torus-cw",
+          "png_bytes": 1148999,
+          "png_dimensions": "1800x829",
+          "png_sha256": "3d5b74d87a371dcb67f48587b9ddfeba9d2f19de3eed6463abf5672263748ccc",
+          "svg_bytes": 3683,
+          "svg_viewbox": "0 0 1020 470",
+          "svg_sha256": "748e890d80dc608c978703f6e728be7c3f7ece0a120f8ec11165e1d0d854dbaa"
+        }
+      ]
+    },
+    "language": {
+      "status": "PASS",
+      "locale": "id-ID",
+      "terminology": "natural, mathematically precise, and consistent with the admitted edition vocabulary",
+      "terms_checked": [
+        "kompleks CW",
+        "kerangka",
+        "sel terbuka",
+        "peta pelekatan",
+        "pemetaan karakteristik",
+        "topologi lemah",
+        "anting-anting Hawaii",
+        "graf Petersen",
+        "ruang projektif real",
+        "peta Hopf"
+      ]
+    },
+    "rights_and_provenance": {
+      "status": "PASS",
+      "source_author": "Yeheli Fomberg",
+      "lecture_attribution": "Nir Lazarovich",
+      "license": "CC BY-SA 4.0",
+      "source_commit": "563194fae879178b9a6871b249513bfc27968975",
+      "source_span_identity_disclosed": true,
+      "translation_and_changes_disclosed": true,
+      "nonendorsement_disclosed": true,
+      "separate_problem_bank_excluded": true,
+      "MIT_material_copied": false,
+      "model_identification_exact": "OpenAI Codex gpt-5.6-sol, Ultra"
+    },
+    "cursor": {
+      "status": "PASS",
+      "completed_through_source_line": 3517,
+      "next_source_line": 3518,
+      "next_source_heading": "Cellular homology",
+      "no_part_of_next_subsection_in_unit": true
+    }
+  },
+  "pre_final_findings_repaired_before_binding": [
+    {
+      "finding": "The source attaching-map panel colored the whole interval although the map has boundary-only domain; the redraw corrected it but the correction initially lacked an explicit audit sentence.",
+      "final_resolution": "The bound canonical explicitly records the visual/domain correction in FOM-U006A-ADV-002."
+    },
+    {
+      "finding": "The first torus redraw gave opposite geometric directions to paired sides, contradicting the commutator traversal.",
+      "final_resolution": "The bound SVG and PNG give both a-edges a common bottom-to-top direction and both b-edges a common left-to-right direction."
+    },
+    {
+      "finding": "The source remark at lines 3503-3509 initially had no dedicated declared stable ID.",
+      "final_resolution": "The bound canonical supplies source-derived wrapper o012-fom-u006-rem-projective-induction, restoring all 14 source environments and 55 unique declared IDs."
+    }
+  ],
+  "status": "PASS_P1_P2_P3_ZERO",
+  "canonical_or_asset_mutations_by_reviewer": 0,
+  "git_invoked_by_reviewer": false,
+  "browser_or_network_invoked_by_reviewer": false,
+  "review_receipt_written": true
+}

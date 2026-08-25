@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 420" width="980" height="420"
+     style="max-width:100%;height:auto" preserveAspectRatio="xMidYMid meet"
+     role="img" aria-labelledby="cw-maps-title cw-maps-desc" data-source-lines="3178-3234">
+  <title id="cw-maps-title">Perbedaan peta pelekatan dan pemetaan karakteristik</title>
+  <desc id="cw-maps-desc">Panel atas memetakan hanya dua titik batas cakram satu dimensi ke dua verteks kerangka nol. Panel bawah memetakan seluruh interval ke sel satu tertutup di kompleks CW.</desc>
+  <defs>
+    <marker id="map-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#374151"/>
+    </marker>
+  </defs>
+  <rect width="980" height="420" rx="18" fill="#ffffff"/>
+  <g font-family="sans-serif" fill="#111827">
+    <text x="38" y="54" font-size="25" font-weight="700">Peta pelekatan φ: ∂D¹ → X⁽⁰⁾</text>
+    <text x="38" y="244" font-size="25" font-weight="700">Pemetaan karakteristik ϕ: D¹ → X⁽¹⁾</text>
+  </g>
+  <g transform="translate(85,98)">
+    <line x1="0" y1="45" x2="210" y2="45" stroke="#9ca3af" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="0" cy="45" r="13" fill="#dc2626"/><circle cx="210" cy="45" r="13" fill="#dc2626"/>
+    <text x="105" y="90" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#374151">hanya ∂D¹ = {−1,1}</text>
+  </g>
+  <line x1="355" y1="143" x2="510" y2="143" stroke="#374151" stroke-width="4" marker-end="url(#map-arrow)"/>
+  <g transform="translate(585,96)">
+    <circle cx="0" cy="47" r="12" fill="#dc2626"/><circle cx="245" cy="47" r="12" fill="#dc2626"/>
+    <path d="M0 47 C68 -15 173 109 245 47" fill="none" stroke="#9ca3af" stroke-width="7"/>
+  </g>
+  <g transform="translate(85,286)">
+    <line x1="0" y1="45" x2="210" y2="45" stroke="#7c3aed" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="0" cy="45" r="11" fill="#5b21b6"/><circle cx="210" cy="45" r="11" fill="#5b21b6"/>
+    <text x="105" y="90" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#374151">seluruh D¹</text>
+  </g>
+  <line x1="355" y1="331" x2="510" y2="331" stroke="#374151" stroke-width="4" marker-end="url(#map-arrow)"/>
+  <g transform="translate(585,284)">
+    <circle cx="0" cy="47" r="12" fill="#1d4ed8"/><circle cx="245" cy="47" r="12" fill="#1d4ed8"/>
+    <path d="M0 47 C68 -15 173 109 245 47" fill="none" stroke="#7c3aed" stroke-width="9"/>
+    <text x="123" y="112" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#374151">citra sel tertutup</text>
+  </g>
+</svg>

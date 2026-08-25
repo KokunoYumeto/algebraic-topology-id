@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420"
+     style="max-width:100%;height:auto" preserveAspectRatio="xMidYMid meet"
+     role="img" aria-labelledby="earring-title earring-desc" data-source-lines="3268-3295">
+  <title id="earring-title">Anting-anting Hawaii</title>
+  <desc id="earring-desc">Deretan lingkaran berjari-jari mengecil semuanya bersinggungan pada satu titik asal. Lingkaran-lingkaran menumpuk ke arah titik itu, sehingga topologi subruang bidang bukan topologi lemah baji CW.</desc>
+  <rect width="1000" height="420" rx="18" fill="#ffffff"/>
+  <line x1="55" y1="350" x2="945" y2="350" stroke="#9ca3af" stroke-width="3"/>
+  <g fill="none" stroke="#1d4ed8" stroke-width="5">
+    <circle cx="385" cy="220" r="130"/>
+    <circle cx="450" cy="285" r="65"/>
+    <circle cx="482.5" cy="317.5" r="32.5"/>
+    <circle cx="498.75" cy="333.75" r="16.25"/>
+    <circle cx="506.875" cy="341.875" r="8.125"/>
+  </g>
+  <circle cx="515" cy="350" r="10" fill="#dc2626"/>
+  <path d="M735 170 C665 185 588 245 526 338" fill="none" stroke="#dc2626" stroke-width="4"/>
+  <text x="750" y="134" text-anchor="middle" font-family="sans-serif" font-size="23" font-weight="700" fill="#991b1b">titik singgung dan</text>
+  <text x="750" y="162" text-anchor="middle" font-family="sans-serif" font-size="23" font-weight="700" fill="#991b1b">titik akumulasi bersama</text>
+  <text x="500" y="397" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#374151">jari-jari → 0; setiap lingkungan bidang bertemu tak hingga banyak lingkaran</text>
+</svg>

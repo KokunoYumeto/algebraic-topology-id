@@ -1,0 +1,205 @@
+{
+  "audit_id": "O012-FOMBERG-UNIT-006-SOURCE-AUDIT",
+  "component": "Fomberg Algebraic Topology Section 1.12: Cellular complexes",
+  "correction_and_terminology_ledgers": {
+    "adverse": {
+      "first_unit_id": "O012-ADV-0534",
+      "rows": 546,
+      "terminal_id": "O012-ADV-0546",
+      "unit_rows": 13,
+      "unit_tail_matches_reviewed_draft": true
+    },
+    "identities": {
+      "00_control/ADVERSE_LEDGER.csv": {
+        "bytes": 203950,
+        "encoding": "UTF-8",
+        "lf_lines": 547,
+        "newline": "LF",
+        "path": "00_control/ADVERSE_LEDGER.csv",
+        "sha256": "5a5e22b232ce4b6c5ab40674ffb64cf146d708035052400febc804186672953c"
+      },
+      "00_control/TERMINOLOGY.csv": {
+        "bytes": 59260,
+        "encoding": "UTF-8",
+        "lf_lines": 470,
+        "newline": "LF",
+        "path": "00_control/TERMINOLOGY.csv",
+        "sha256": "ec9225831bf1a4207aeb5d2ed5bcd70794f81f86a03bd611c19c6e27be5c1980"
+      },
+      "qa/fomberg-unit-006/ADVERSE_ROWS_DRAFT.csv": {
+        "bytes": 9103,
+        "encoding": "UTF-8",
+        "lf_lines": 14,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-006/ADVERSE_ROWS_DRAFT.csv",
+        "sha256": "2720a903997364da6a0f288ce80ae09b9444ef8a7f7bda54c27d309101d49508"
+      },
+      "qa/fomberg-unit-006/TERMINOLOGY_ROWS_DRAFT.csv": {
+        "bytes": 2384,
+        "encoding": "UTF-8",
+        "lf_lines": 16,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-006/TERMINOLOGY_ROWS_DRAFT.csv",
+        "sha256": "7c3b771c0f10620661d3c96227892477adc6618ab0e7ca2639b04aa04dc6fd3d"
+      }
+    },
+    "terminology": {
+      "first_unit_id": "O012-TERM-0455",
+      "rows": 469,
+      "terminal_id": "O012-TERM-0469",
+      "unit_rows": 15,
+      "unit_tail_matches_reviewed_draft": true
+    }
+  },
+  "course_id": "D60",
+  "course_route_unit_id": "D60-R12",
+  "date": "2026-08-25",
+  "edition_unit_id": "O012-FOM-006",
+  "independent_review": {
+    "identity": {
+      "bytes": 10376,
+      "encoding": "UTF-8",
+      "lf_lines": 260,
+      "newline": "LF",
+      "path": "qa/fomberg-unit-006/INDEPENDENT_REVIEW_FINAL.json",
+      "sha256": "903c5166de19b0bf1b91dab27a10e12450dc73ab0400673124bac16b7847c1cc"
+    },
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "status": "PASS_P1_P2_P3_ZERO"
+  },
+  "license": "CC BY-SA 4.0",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "reader": {
+    "bytes": 41416,
+    "encoding": "UTF-8",
+    "lf_lines": 1053,
+    "newline": "LF",
+    "path": "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md",
+    "sha256": "e8d4d5391f8cdf4e62a019f7a991d09e4b610633e8e660dec4e0ea2b61c538f7"
+  },
+  "role_id": "O012",
+  "schema_version": "1.0.0",
+  "source": {
+    "authority_identity": {
+      "bytes": 223886,
+      "encoding": "UTF-8",
+      "lf_lines": 6069,
+      "newline": "LF",
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "mathematical_environment_spans": [
+      {
+        "kind": "remark",
+        "line_end": 3132,
+        "line_start": 3125
+      },
+      {
+        "kind": "definition",
+        "line_end": 3248,
+        "line_start": 3134
+      },
+      {
+        "kind": "remark",
+        "line_end": 3253,
+        "line_start": 3250
+      },
+      {
+        "kind": "remark",
+        "line_end": 3259,
+        "line_start": 3255
+      },
+      {
+        "kind": "remark",
+        "line_end": 3266,
+        "line_start": 3261
+      },
+      {
+        "kind": "example",
+        "line_end": 3295,
+        "line_start": 3268
+      },
+      {
+        "kind": "example",
+        "line_end": 3333,
+        "line_start": 3297
+      },
+      {
+        "kind": "example",
+        "line_end": 3365,
+        "line_start": 3335
+      },
+      {
+        "kind": "example",
+        "line_end": 3389,
+        "line_start": 3367
+      },
+      {
+        "kind": "remark",
+        "line_end": 3397,
+        "line_start": 3391
+      },
+      {
+        "kind": "example",
+        "line_end": 3441,
+        "line_start": 3399
+      },
+      {
+        "kind": "example",
+        "line_end": 3501,
+        "line_start": 3443
+      },
+      {
+        "kind": "remark",
+        "line_end": 3509,
+        "line_start": 3503
+      },
+      {
+        "kind": "exercise",
+        "line_end": 3516,
+        "line_start": 3511
+      }
+    ],
+    "mathematical_environment_total": 14,
+    "mathematical_environments": {
+      "definition": 1,
+      "example": 6,
+      "exercise": 1,
+      "remark": 6
+    },
+    "next_line": 3518,
+    "next_line_text": "\\subsection{Cellular homology}",
+    "selected_span": {
+      "bytes": 15540,
+      "lf_lines": 395,
+      "line_end": 3517,
+      "line_start": 3123,
+      "sha256": "c16d595b8f8c4c67ea5f0f58c1ad7de83ac94efae509d3a8d3bef28da2522f19"
+    },
+    "source_inline_tikz_occurrences": 19,
+    "source_labels": [
+      "ex:cw-for-cp",
+      "exmp:cw-for-sn-one-n-cell",
+      "exmp:cw-for-torus"
+    ],
+    "source_tikzpicture_occurrences": 2,
+    "subsections": 1,
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b"
+  },
+  "status": "PASS",
+  "translation_closure": {
+    "accessible_svg_redraws": 7,
+    "contiguous_span": "3123-3517",
+    "mastery_triples_complete": 6,
+    "next_exact_cursor": 3518,
+    "next_exact_text": "\\subsection{Cellular homology}",
+    "source_exercises_preserved": 1,
+    "source_mathematical_environments_represented": 14,
+    "subsections_complete_in_source_order": 1
+  }
+}

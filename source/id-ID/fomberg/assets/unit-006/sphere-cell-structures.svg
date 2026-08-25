@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 410" width="1080" height="410"
+     style="max-width:100%;height:auto" preserveAspectRatio="xMidYMid meet"
+     role="img" aria-labelledby="sphere-title sphere-desc" data-source-lines="3335-3389">
+  <title id="sphere-title">Dua struktur CW pada sfera</title>
+  <desc id="sphere-desc">Baris atas membangun sfera dua dari satu verteks, satu sel satu berbentuk lingkaran, dan dua sel dua yang mengisi kedua sisi. Baris bawah membangun sfera n dari satu sel nol dan satu sel n yang seluruh batasnya dilekatkan ke sel nol.</desc>
+  <defs>
+    <marker id="sphere-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#374151"/>
+    </marker>
+    <radialGradient id="sphere-fill" cx="38%" cy="32%" r="70%">
+      <stop offset="0" stop-color="#f5f3ff"/><stop offset="1" stop-color="#c4b5fd"/>
+    </radialGradient>
+  </defs>
+  <rect width="1080" height="410" rx="18" fill="#ffffff"/>
+  <g font-family="sans-serif" fill="#111827" font-size="24" font-weight="700">
+    <text x="36" y="58">S²:</text><text x="36" y="260">Sⁿ:</text>
+  </g>
+  <circle cx="180" cy="105" r="12" fill="#1d4ed8"/>
+  <line x1="225" y1="105" x2="330" y2="105" stroke="#374151" stroke-width="4" marker-end="url(#sphere-arrow)"/>
+  <circle cx="445" cy="105" r="62" fill="none" stroke="#1d4ed8" stroke-width="9"/>
+  <circle cx="445" cy="43" r="10" fill="#111827"/>
+  <line x1="523" y1="105" x2="628" y2="105" stroke="#374151" stroke-width="4" marker-end="url(#sphere-arrow)"/>
+  <circle cx="750" cy="105" r="78" fill="url(#sphere-fill)" stroke="#5b21b6" stroke-width="6"/>
+  <path d="M672 105 C700 82 800 82 828 105 C800 128 700 128 672 105 Z" fill="#dbeafe" stroke="#1d4ed8" stroke-width="4"/>
+  <path d="M672 105 C700 128 800 128 828 105" fill="none" stroke="#1d4ed8" stroke-width="4" stroke-dasharray="10 8"/>
+  <text x="750" y="204" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#374151">dua sel-2 bertemu pada sel-1</text>
+  <circle cx="180" cy="307" r="12" fill="#1d4ed8"/>
+  <text x="180" y="350" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#374151">X⁽⁰⁾={x₀}</text>
+  <line x1="225" y1="307" x2="330" y2="307" stroke="#374151" stroke-width="4" marker-end="url(#sphere-arrow)"/>
+  <g fill="#1d4ed8"><circle cx="395" cy="307" r="10"/><circle cx="465" cy="307" r="10"/><circle cx="535" cy="307" r="10"/></g>
+  <text x="465" y="350" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#374151">kerangka 1,…,n−1 tetap {x₀}</text>
+  <line x1="585" y1="307" x2="665" y2="307" stroke="#374151" stroke-width="4" marker-end="url(#sphere-arrow)"/>
+  <circle cx="780" cy="307" r="72" fill="url(#sphere-fill)" stroke="#5b21b6" stroke-width="6"/>
+  <circle cx="780" cy="379" r="11" fill="#111827"/>
+  <text x="780" y="315" text-anchor="middle" font-family="serif" font-size="35" font-weight="700" fill="#5b21b6">eⁿ</text>
+  <text x="945" y="300" text-anchor="middle" font-family="sans-serif" font-size="21" fill="#374151">∂Dⁿ ↦ x₀</text>
+  <text x="945" y="332" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700" fill="#111827">Dⁿ/∂Dⁿ ≅ Sⁿ</text>
+</svg>
