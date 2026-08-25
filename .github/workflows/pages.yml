@@ -58,6 +58,7 @@ jobs:
               "output/html/roberts-001-030-fomberg-001/index.html": (5029788, "2b64e8bec1dd5e1689ef6569360fec896ef87a683c7ba291a3780e27084a7390"),
               "output/html/roberts-001-030-fomberg-001-002/index.html": (5254038, "1f7618003e3ff273a4f1e2d97b5a81fd320f76640c475cae845ed38793fbeccd"),
               "output/html/roberts-001-030-fomberg-001-003/index.html": (7190228, "484a2a501df79b1810567810d0b454a18298a4cb43ef466c4e082622216b9542"),
+              "output/html/roberts-001-030-fomberg-001-004/index.html": (8155605, "cd620d5557ff05fb81fb9cf044e8bd4848a6f92ef8fcd06078b8a124f6e79326"),
           }
           for name, (size, digest) in expected.items():
               path = Path(name)
@@ -65,8 +66,8 @@ jobs:
               assert len(data) == size, (name, len(data), size)
               assert sha256(data).hexdigest() == digest, name
           actual = sorted(path.relative_to(Path("output/html")).as_posix() for path in Path("output/html").rglob("*") if path.is_file())
-          assert actual == ["index.html", "roberts-001-030-fomberg-001-002/index.html", "roberts-001-030-fomberg-001-003/index.html", "roberts-001-030-fomberg-001/index.html", "units-001-002/index.html", "units-001-003/index.html", "units-001-004/index.html", "units-001-005/index.html", "units-001-007/index.html", "units-001-010/index.html", "units-001-013/index.html", "units-001-019/index.html", "units-001-020/index.html", "units-001-021/index.html", "units-001-022/index.html", "units-001-023/index.html", "units-001-024/index.html", "units-001-025/index.html", "units-001-026/index.html", "units-001-027/index.html", "units-001-028/index.html", "units-001-029/index.html", "units-001-030/index.html"], actual
-          print("Frozen Roberts Unit 1-30 history and Roberts 30/30 plus Fomberg 1.1-1.6 HTML verified")
+          assert actual == ["index.html", "roberts-001-030-fomberg-001-002/index.html", "roberts-001-030-fomberg-001-003/index.html", "roberts-001-030-fomberg-001-004/index.html", "roberts-001-030-fomberg-001/index.html", "units-001-002/index.html", "units-001-003/index.html", "units-001-004/index.html", "units-001-005/index.html", "units-001-007/index.html", "units-001-010/index.html", "units-001-013/index.html", "units-001-019/index.html", "units-001-020/index.html", "units-001-021/index.html", "units-001-022/index.html", "units-001-023/index.html", "units-001-024/index.html", "units-001-025/index.html", "units-001-026/index.html", "units-001-027/index.html", "units-001-028/index.html", "units-001-029/index.html", "units-001-030/index.html"], actual
+          print("Frozen Roberts Unit 1-30 history and Roberts 30/30 plus Fomberg 1.1-1.10 HTML verified")
           PY
 
       - name: Configure Pages

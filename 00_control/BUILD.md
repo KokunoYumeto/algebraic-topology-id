@@ -1,6 +1,37 @@
 # Build record
 
-## Roberts 001–030 plus Fomberg 001–003 — current boundary
+## Roberts 001–030 plus Fomberg 001–004 — current boundary
+
+Builder: `scripts/build-roberts-001-030-fomberg-001-004.ps1`. It freezes the
+complete Roberts component and Fomberg `algebraic_topology.tex:31–2846`, builds
+HTML and PDF twice from clean scratch per invocation, requires byte identity,
+and fails closed on authority, cursor, semantic structure, links, MathML,
+figures, rights, privacy, fonts, images, trailer IDs, or protected prior output
+drift. A third complete invocation reproduced the same bytes.
+
+- HTML: `output/html/roberts-001-030-fomberg-001-004/index.html`, 8,155,605
+  bytes, SHA-256
+  `cd620d5557ff05fb81fb9cf044e8bd4848a6f92ef8fcd06078b8a124f6e79326`.
+- PDF: `output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-004-id.pdf`,
+  3,964,018 bytes, 424 A4 pages, SHA-256
+  `bbe4b2392991ace6922230374833bf0982e00a8b6d2fddb94a990b663c8440bf`.
+- Manifest: 286 bytes, SHA-256
+  `40e68a9f79e63a7dc6f6d769aa2ab8441e014f5eb9ccf157151c5a2d7aae5bee`.
+- Build receipt: `qa/ROBERTS_001_030_FOMBERG_001_004_BUILD_RECEIPT.json`,
+  10,029 bytes, SHA-256
+  `d59e54ab6b9d370a8335a20564b5c2998ef1555f0b5d41a69cf3d0c8405527e1`.
+
+HTML contains 2,108 raw ID attributes, 407 resolved fragment links, 14,396
+native MathML nodes, 134 semantic figures, and nine embedded PNGs. Browser QA
+confirms a centered 1,152-pixel body at 1,440 × 900 and a 360/360-pixel body
+and document at a 375 × 812 viewport with zero exposed overflow. PDF pages
+398–424 were fully rendered and inspected; all 27 fonts are embedded/subset
+with ToUnicode, nine primary images pair exactly with nine masks, and all three
+clean builds are byte-identical. The PDF remains disclosed as untagged. The
+append-only backend finishes at 6,113 records and replay passes. Next build
+extends from Fomberg line 2847.
+
+## Roberts 001–030 plus Fomberg 001–003 — prior boundary
 
 Builder: `scripts/build-roberts-001-030-fomberg-001-003.ps1`. It freezes the
 complete Roberts component and Fomberg `algebraic_topology.tex:31–1922`, builds

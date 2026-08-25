@@ -1,0 +1,87 @@
+{
+  "review_id": "O012-FOMBERG-UNIT-004-INDEPENDENT-FINAL",
+  "schema_version": "1.0.0",
+  "date": "2026-08-25",
+  "review_mode": "independent_read_only_full_source_and_reader_review",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "canonical": {
+    "path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+    "bytes": 87293,
+    "lf_lines": 2364,
+    "sha256": "2c04d647b58afe044f5549bcba9ad3572075775711bb3aaec45d0e94fe3d3e91"
+  },
+  "upstream_span": {
+    "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+    "line_start": 1923,
+    "line_end": 2846,
+    "lf_lines": 924,
+    "normalized_bytes": 38503,
+    "sha256": "ddde995b54154623ccc565117aee63cce8361d2ada1c3c9f2852775b1aaac638",
+    "next_line": 2847,
+    "next_line_text": "\\subsection{Degree maps}"
+  },
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "checks": {
+    "source_order": {
+      "status": "PASS",
+      "subsections": 4,
+      "source_mathematical_environments": 37,
+      "note": "Every source environment is represented in order."
+    },
+    "mathematics": {
+      "status": "PASS",
+      "scope": "formulas, signs, degrees, maps, hypotheses, and all seven proof repairs"
+    },
+    "proof_repairs": {
+      "status": "PASS",
+      "repair_ids": [
+        "FOM-PR-05",
+        "FOM-PR-06",
+        "FOM-PR-07",
+        "FOM-PR-08",
+        "FOM-PR-09",
+        "FOM-PR-10",
+        "FOM-PR-11"
+      ],
+      "provenance_separation": "PASS"
+    },
+    "mastery": {
+      "status": "PASS",
+      "exercise_hint_solution_triples": 7,
+      "solutions_complete": true
+    },
+    "structure": {
+      "status": "PASS",
+      "stable_ids": 117,
+      "unique_stable_ids": 117,
+      "fragment_links": 14,
+      "fragment_links_resolved": 14,
+      "source_locators": 93,
+      "source_locators_valid": 93,
+      "fenced_divs_balanced": true,
+      "pandoc_native": "PASS",
+      "pandoc_mathml": "PASS"
+    },
+    "figures": {
+      "status": "PASS",
+      "semantic_figures": 19,
+      "figures_with_descriptions": 19,
+      "raster_redraws": 3,
+      "raster_redraws_opened": 3,
+      "alt_text_and_prose_match": true,
+      "redraw_provenance_present": true
+    },
+    "language": {
+      "status": "PASS",
+      "locale": "id-ID",
+      "terminology_and_grammar": "natural_and_consistent"
+    }
+  },
+  "status": "PASS_P1_P2_P3_ZERO",
+  "file_mutations_by_reviewer": 0,
+  "git_invoked_by_reviewer": false
+}

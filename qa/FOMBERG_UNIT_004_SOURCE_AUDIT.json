@@ -1,0 +1,135 @@
+{
+  "audit_id": "O012-FOMBERG-UNIT-004-SOURCE-AUDIT",
+  "component": "Fomberg Algebraic Topology Sections 1.7-1.10",
+  "correction_and_terminology_ledgers": {
+    "adverse": {
+      "rows": 522,
+      "terminal_id": "O012-ADV-0522",
+      "unit_rows": 24,
+      "unit_tail_matches_reviewed_draft": true
+    },
+    "identities": {
+      "00_control/ADVERSE_LEDGER.csv": {
+        "bytes": 184841,
+        "encoding": "UTF-8",
+        "lf_lines": 523,
+        "newline": "LF",
+        "path": "00_control/ADVERSE_LEDGER.csv",
+        "sha256": "c2ae75371712f74541f3a96539ec601e40fee6d788dbb22989c99cf49d85d83f"
+      },
+      "00_control/TERMINOLOGY.csv": {
+        "bytes": 53356,
+        "encoding": "UTF-8",
+        "lf_lines": 435,
+        "newline": "LF",
+        "path": "00_control/TERMINOLOGY.csv",
+        "sha256": "cf974537fd20758cbe5bdfba7561c81df8db0ec34de3d2b61f4347d02093c9e7"
+      },
+      "qa/fomberg-unit-004/ADVERSE_ROWS_DRAFT.csv": {
+        "bytes": 17312,
+        "encoding": "UTF-8",
+        "lf_lines": 25,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-004/ADVERSE_ROWS_DRAFT.csv",
+        "sha256": "545dbb902b00409ce18de5b0e0aaf081d4b6ce04da92a5b3d71173cc07e24355"
+      },
+      "qa/fomberg-unit-004/TERMINOLOGY_ROWS_DRAFT.csv": {
+        "bytes": 3536,
+        "encoding": "UTF-8",
+        "lf_lines": 20,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-004/TERMINOLOGY_ROWS_DRAFT.csv",
+        "sha256": "bd633e1189e01ed0eaf1f25d951c9ccf022ea1e1e7a5ce8190d261a1f514bb22"
+      }
+    },
+    "terminology": {
+      "rows": 434,
+      "terminal_id": "O012-TERM-0434",
+      "unit_rows": 19,
+      "unit_tail_matches_reviewed_draft": true
+    }
+  },
+  "course_id": "D60",
+  "course_route_unit_id": "D60-R11",
+  "date": "2026-08-25",
+  "edition_unit_id": "O012-FOM-004",
+  "independent_review": {
+    "identity": {
+      "bytes": 2524,
+      "encoding": "UTF-8",
+      "lf_lines": 87,
+      "newline": "LF",
+      "path": "qa/fomberg-unit-004/INDEPENDENT_REVIEW_FINAL.json",
+      "sha256": "3c43a86f24adcb042b0ccc43d2e5031478ba622acd8925eca92721cf2cd5d102"
+    },
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "status": "PASS_P1_P2_P3_ZERO"
+  },
+  "license": "CC BY-SA 4.0",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "reader": {
+    "bytes": 87293,
+    "encoding": "UTF-8",
+    "lf_lines": 2364,
+    "newline": "LF",
+    "path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+    "sha256": "2c04d647b58afe044f5549bcba9ad3572075775711bb3aaec45d0e94fe3d3e91"
+  },
+  "role_id": "O012",
+  "schema_version": "1.0.0",
+  "source": {
+    "authority_identity": {
+      "bytes": 223886,
+      "encoding": "UTF-8",
+      "lf_lines": 6069,
+      "newline": "LF",
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "mathematical_environment_total": 37,
+    "mathematical_environments": {
+      "corollary": 1,
+      "definition": 3,
+      "example": 2,
+      "lemma": 2,
+      "proof": 10,
+      "proposition": 4,
+      "remark": 10,
+      "theorem": 5
+    },
+    "next_line": 2847,
+    "next_line_text": "\\subsection{Degree maps}",
+    "selected_span": {
+      "bytes": 38503,
+      "lf_lines": 924,
+      "line_end": 2846,
+      "line_start": 1923,
+      "sha256": "ddde995b54154623ccc565117aee63cce8361d2ada1c3c9f2852775b1aaac638"
+    },
+    "subsections": 4,
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b"
+  },
+  "status": "PASS",
+  "translation_closure": {
+    "contiguous_span": "1923-2846",
+    "mastery_triples_complete": 7,
+    "next_exact_cursor": 2847,
+    "next_exact_text": "\\subsection{Degree maps}",
+    "proof_repairs_complete": [
+      "FOM-PR-05",
+      "FOM-PR-06",
+      "FOM-PR-07",
+      "FOM-PR-08",
+      "FOM-PR-09",
+      "FOM-PR-10",
+      "FOM-PR-11"
+    ],
+    "source_mathematical_environments_represented": 37,
+    "subsections_complete_in_source_order": 4
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "controls": {
+    "adverse": {
+      "rows": 522,
+      "terminal_id": "O012-ADV-0522",
+      "unit_rows": 24,
+      "unit_tail_matches_reviewed_draft": true
+    },
+    "identities": {
+      "00_control/ADVERSE_LEDGER.csv": {
+        "bytes": 184841,
+        "encoding": "UTF-8",
+        "lf_lines": 523,
+        "newline": "LF",
+        "path": "00_control/ADVERSE_LEDGER.csv",
+        "sha256": "c2ae75371712f74541f3a96539ec601e40fee6d788dbb22989c99cf49d85d83f"
+      },
+      "00_control/TERMINOLOGY.csv": {
+        "bytes": 53356,
+        "encoding": "UTF-8",
+        "lf_lines": 435,
+        "newline": "LF",
+        "path": "00_control/TERMINOLOGY.csv",
+        "sha256": "cf974537fd20758cbe5bdfba7561c81df8db0ec34de3d2b61f4347d02093c9e7"
+      },
+      "qa/fomberg-unit-004/ADVERSE_ROWS_DRAFT.csv": {
+        "bytes": 17312,
+        "encoding": "UTF-8",
+        "lf_lines": 25,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-004/ADVERSE_ROWS_DRAFT.csv",
+        "sha256": "545dbb902b00409ce18de5b0e0aaf081d4b6ce04da92a5b3d71173cc07e24355"
+      },
+      "qa/fomberg-unit-004/TERMINOLOGY_ROWS_DRAFT.csv": {
+        "bytes": 3536,
+        "encoding": "UTF-8",
+        "lf_lines": 20,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-004/TERMINOLOGY_ROWS_DRAFT.csv",
+        "sha256": "bd633e1189e01ed0eaf1f25d951c9ccf022ea1e1e7a5ce8190d261a1f514bb22"
+      }
+    },
+    "terminology": {
+      "rows": 434,
+      "terminal_id": "O012-TERM-0434",
+      "unit_rows": 19,
+      "unit_tail_matches_reviewed_draft": true
+    }
+  },
+  "date": "2026-08-25",
+  "gates": {
+    "figures_accessibility_and_redraw_provenance": "PASS",
+    "independent_review_p1_p2_p3_zero": "PASS",
+    "license_attribution_nonendorsement_model_and_privacy": "PASS",
+    "mastery_solution_closure": "PASS",
+    "mathematics_and_proof_repairs": "PASS",
+    "pandoc_native_and_mathml": "PASS",
+    "source_identity_and_contiguity": "PASS",
+    "source_order_and_environment_census": "PASS",
+    "stable_structure_and_links": "PASS",
+    "terminology_and_correction_ledgers": "PASS"
+  },
+  "independent_review": {
+    "identity": {
+      "bytes": 2524,
+      "encoding": "UTF-8",
+      "lf_lines": 87,
+      "newline": "LF",
+      "path": "qa/fomberg-unit-004/INDEPENDENT_REVIEW_FINAL.json",
+      "sha256": "3c43a86f24adcb042b0ccc43d2e5031478ba622acd8925eca92721cf2cd5d102"
+    },
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "status": "PASS_P1_P2_P3_ZERO"
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "qa_id": "O012-FOMBERG-UNIT-004-STATIC-QA",
+  "reader": {
+    "assets": {
+      "all_redraw_provenance_present": true,
+      "files": [
+        {
+          "bytes": 139672,
+          "dimensions": [
+            1920,
+            860
+          ],
+          "path": "source/id-ID/fomberg/assets/unit-004/excision-equivalence.png",
+          "sha256": "8d4e0aa9ffe93edbe3d3eb3def640ace8d2ffbcc45044cd5dcd3a1de1124b650"
+        },
+        {
+          "bytes": 3613,
+          "path": "source/id-ID/fomberg/assets/unit-004/excision-equivalence.svg",
+          "sha256": "e69df6490440c5c81416fe0c713d160e91d01216c944bb146aba94540234c3ad"
+        },
+        {
+          "bytes": 111228,
+          "dimensions": [
+            1800,
+            860
+          ],
+          "path": "source/id-ID/fomberg/assets/unit-004/mayer-vietoris-cover.png",
+          "sha256": "55ca7d82c34c8381a0ff6d9a2cb89a04ed9c364298277cb3f2a22d5d98e00769"
+        },
+        {
+          "bytes": 2699,
+          "path": "source/id-ID/fomberg/assets/unit-004/mayer-vietoris-cover.svg",
+          "sha256": "73da09f59c7b27bcc5ef5dd7b568c97f8bb9da846cf4d0c77d5bfa6536adf733"
+        },
+        {
+          "bytes": 154975,
+          "dimensions": [
+            1360,
+            1040
+          ],
+          "path": "source/id-ID/fomberg/assets/unit-004/rp2-mayer-vietoris-cover.png",
+          "sha256": "d086a936b73046b2d505204cd016e5b2e6db539245a0f40b77e4d79ee2c85525"
+        },
+        {
+          "bytes": 3039,
+          "path": "source/id-ID/fomberg/assets/unit-004/rp2-mayer-vietoris-cover.svg",
+          "sha256": "fe2eed2d863ee12a01e982cb5158481601216a337d91e79aa3316ffc7b6252e0"
+        }
+      ],
+      "raster_reader_refs": [
+        "../assets/unit-004/excision-equivalence.png",
+        "../assets/unit-004/mayer-vietoris-cover.png",
+        "../assets/unit-004/rp2-mayer-vietoris-cover.png"
+      ],
+      "raster_redraws": 3,
+      "semantic_figures": 19
+    },
+    "fenced_divs": {
+      "balanced": true,
+      "closed": 110,
+      "opened": 110
+    },
+    "fragment_links": {
+      "count": 14,
+      "resolved": 14,
+      "target_counts": {
+        "o012-fom-u003-cor-sphere-homology": 1,
+        "o012-fom-u004-lem-compact-finite-simplices": 1,
+        "o012-fom-u004-lem-five": 1,
+        "o012-fom-u004-proof-pr05a": 1,
+        "o012-fom-u004-proof-pr05b": 1,
+        "o012-fom-u004-proof-relative-generator-repair": 1,
+        "o012-fom-u004-prop-simplex-generator": 1,
+        "o012-fom-u004-prop-sing-simp": 1,
+        "o012-fom-u004-prop-wedge-homology": 1,
+        "o012-fom-u004-rem-excision-cover-form": 1,
+        "o012-fom-u004-thm-invariance-dimension": 2,
+        "o012-fom-u004-thm-relative-quotient": 2
+      }
+    },
+    "identity": {
+      "bytes": 87293,
+      "encoding": "UTF-8",
+      "lf_lines": 2364,
+      "newline": "LF",
+      "path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+      "sha256": "2c04d647b58afe044f5549bcba9ad3572075775711bb3aaec45d0e94fe3d3e91"
+    },
+    "mastery": {
+      "complete_solutions": 7,
+      "exercise_hint_solution_triples": 7
+    },
+    "ordered_stable_ids_sha256": "1fbbae04da5968b1004b20868bb28d1bb402e7ed0042a65c7c115d11f19fc7fb",
+    "pandoc": {
+      "mathml_nodes": 930,
+      "mathml_render": "PASS",
+      "native_parse": "PASS",
+      "version": "pandoc 3.9.0.2"
+    },
+    "proof_repairs": [
+      "FOM-PR-05",
+      "FOM-PR-06",
+      "FOM-PR-07",
+      "FOM-PR-08",
+      "FOM-PR-09",
+      "FOM-PR-10",
+      "FOM-PR-11"
+    ],
+    "rights_provenance_privacy": "PASS",
+    "semantic_class_counts": {
+      "boundary": 1,
+      "corollary": 1,
+      "definition": 3,
+      "example": 2,
+      "exercise": 7,
+      "figure": 19,
+      "heading": 7,
+      "hint": 7,
+      "lemma": 2,
+      "proof": 14,
+      "proof-supplement": 3,
+      "proposition": 4,
+      "remark": 10,
+      "solution": 7,
+      "source-audit": 17,
+      "source-omission": 8,
+      "theorem": 5
+    },
+    "source_locators": {
+      "count": 93,
+      "valid": 93
+    },
+    "stable_ids": 117,
+    "stable_ids_unique": 117
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "authority_identity": {
+      "bytes": 223886,
+      "encoding": "UTF-8",
+      "lf_lines": 6069,
+      "newline": "LF",
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "mathematical_environment_total": 37,
+    "mathematical_environments": {
+      "corollary": 1,
+      "definition": 3,
+      "example": 2,
+      "lemma": 2,
+      "proof": 10,
+      "proposition": 4,
+      "remark": 10,
+      "theorem": 5
+    },
+    "next_line": 2847,
+    "next_line_text": "\\subsection{Degree maps}",
+    "selected_span": {
+      "bytes": 38503,
+      "lf_lines": 924,
+      "line_end": 2846,
+      "line_start": 1923,
+      "sha256": "ddde995b54154623ccc565117aee63cce8361d2ada1c3c9f2852775b1aaac638"
+    },
+    "subsections": 4,
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b"
+  },
+  "source_audit": {
+    "bytes": 4154,
+    "path": "qa/FOMBERG_UNIT_004_SOURCE_AUDIT.json",
+    "sha256": "55b065d20fbc2d449c68afa99a062d7afb6039496c2a2befe1665332b5c4c6ac"
+  },
+  "status": "PASS"
+}
