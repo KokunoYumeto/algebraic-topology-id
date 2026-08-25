@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "O012-FOM-U003-INDEPENDENT-EXACT-FINAL",
+  "review_date": "2026-08-25",
+  "reviewer_role": "independent_read_only_exact_section_recheck",
+  "status": "PASS_ZERO_FINDINGS",
+  "scope": {
+    "component": "Fomberg Unit 003 exact-sequences portion",
+    "frozen_source_lines": "1291-1564 inclusive",
+    "topics": [
+      "exact sequences",
+      "quotient-space long exact sequence",
+      "sphere homology",
+      "cone and suspension",
+      "non-retraction of the disk boundary",
+      "Brouwer fixed-point theorem"
+    ],
+    "canonical_reader_modified": false,
+    "review_output_only": true
+  },
+  "input_identities": {
+    "canonical_reader": {
+      "path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+      "bytes": 65540,
+      "lf_lines": 1773,
+      "newline": "LF",
+      "sha256": "2571f62b977c00bff20e04756925a73497c0129f8c987940db0e1a649177f6b9"
+    },
+    "frozen_source": {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "bytes": 223886,
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    "reviewed_source_span": {
+      "lines": "1291-1564 inclusive",
+      "line_count": 274,
+      "bytes_after_lf_normalization_and_terminal_lf": 10012,
+      "sha256": "61767c5ad71ecc9a19eca96a65b1c56e02a5a6f0d3f38e51783bd07fc10f2f0a",
+      "line_1291_exact": "\\subsection{Exact sequences}",
+      "line_1564_exact": "",
+      "next_line": 1565,
+      "next_line_exact": "\\subsection{Relative homology}"
+    },
+    "prior_exact_review": {
+      "path": "qa/fomberg-unit-003/INDEPENDENT_REVIEW_EXACT.json",
+      "bytes": 14012,
+      "sha256": "58001c6a54d1328f5bacae65e26fdcef5043e4c03c1732a2eaad274825e770bf",
+      "prior_counts": {
+        "p1": 0,
+        "p2": 1,
+        "p3": 1
+      }
+    }
+  },
+  "prior_finding_resolution": [
+    {
+      "finding_id": "O012-FOM-U003-IR-EX-001",
+      "prior_severity": "P2",
+      "status": "RESOLVED",
+      "reader_locators": [
+        "219-224 (#o012-fom-u003-proof-sphere-homology)",
+        "284-317 (#o012-fom-u003-proof-sphere-homology)"
+      ],
+      "evidence": "Reader line 220 now begins the quotient-space argument explicitly as the induction step n at least 1. Lines 284-305 derive the induction isomorphism only inside that scope, while lines 307-315 separately state the reduced-homology base case S^0. The false base-case quotient D^0/boundary(D^0) is no longer implied."
+    },
+    {
+      "finding_id": "O012-FOM-U003-IR-EX-002",
+      "prior_severity": "P3",
+      "status": "RESOLVED",
+      "reader_locators": [
+        "478-497 (#o012-fom-u003-proof-boundary-not-retract)",
+        "541-558 (#o012-fom-u003-proof-brouwer)"
+      ],
+      "evidence": "The non-retraction proof now derives reduced-homology surjectivity directly from r composed with i equals the identity, so it no longer relies on an ordinary-homology-only citation. The Brouwer proof explicitly reuses that reduced functoriality argument and writes the impossible map from zero to Z."
+    }
+  ],
+  "closure_validation": {
+    "status": "PASS",
+    "source_semantic_objects": 22,
+    "reader_source_derived_semantic_objects": 22,
+    "semantic_kind_counts": {
+      "definition": 4,
+      "remark": 3,
+      "example": 6,
+      "theorem": 1,
+      "corollary": 3,
+      "proposition": 1,
+      "proof": 4
+    },
+    "source_diagrams": 14,
+    "reader_source_derived_figures": 14,
+    "source_labels": 3,
+    "reader_source_labels": 3,
+    "source_cross_references": 6,
+    "reader_explicit_internal_link_occurrences_for_first_five_references": 5,
+    "sixth_source_reference_replaced_by_explicit_reduced_functoriality_argument": true,
+    "declared_ids_in_reader_lines_40_560": 42,
+    "unique_ids_in_reader_lines_40_560": 42,
+    "duplicate_ids_in_reader_lines_40_560": 0,
+    "all_source_derived_objects_present_in_source_order": true,
+    "all_source_labels_preserved": true,
+    "all_reference_functions_preserved": true
+  },
+  "mathematical_checks": {
+    "status": "PASS",
+    "exact_sequence_definition_and_indexing": "PASS; exactness is kernel alpha_i equals image alpha_(i+1), and the consecutive composite is the well-typed alpha_n after alpha_(n+1).",
+    "injective_surjective_isomorphism_examples": "PASS",
+    "short_exact_quotient_identification": "PASS; A is first identified with image(alpha), after which C is isomorphic to B/image(alpha) and hence B/A.",
+    "good_pair_definition": "PASS",
+    "quotient_long_exact_sequence_statement": "PASS",
+    "quotient_long_exact_sequence_proof_scope": "PASS_FORWARD_TRANSPARENT; reader lines 197-205 identify the source omission, do not claim a local proof, name the later relative-homology and excision closure, and mark the block edition-original with forward-proof status.",
+    "sphere_homology_statement": "PASS",
+    "disk_boundary_good_pair_supplement": "PASS; for n at least 1, the collar U and radial deformation retraction are explicit and remain within U.",
+    "sphere_induction_scope": "PASS; n at least 1 is explicit and S^0 is a separate reduced-homology base case.",
+    "sphere_reduced_homology_formula": "PASS",
+    "cone_definition": "PASS; X times {1} is collapsed to the cone vertex.",
+    "suspension_definition": "PASS; the cone base X times {0} is collapsed, not the already collapsed vertex.",
+    "cone_good_pair_supplement": "PASS; the saturated open neighborhood and deformation to the cone base are explicit.",
+    "cone_contractibility_apex": "PASS; contraction is to the vertex represented by X times {1}.",
+    "suspension_shift": "PASS; X is nonempty, n is at least 1, and reduced degree -1 is not invoked.",
+    "boundary_non_retraction": "PASS; n is at least 1 and the contradiction uniformly uses reduced homology, including n=1.",
+    "brouwer_statement": "PASS; every continuous self-map is covered for n at least 0.",
+    "brouwer_scope": "PASS; n=0 is handled directly and the no-fixed-point radial argument is restricted to n at least 1.",
+    "brouwer_radial_formula": "PASS; the positive intersection parameter solves the unit-sphere quadratic, has nonzero denominator because f(x) differs from x, is continuous, and equals 1 on the boundary.",
+    "brouwer_contradiction": "PASS; the constructed map is a retraction and reduced functoriality forces an impossible surjection from zero to Z."
+  },
+  "source_defect_and_provenance_checks": {
+    "status": "PASS",
+    "correction_ids_present_and_audited": [
+      "FOM-U003-COR-001",
+      "FOM-U003-COR-002",
+      "FOM-U003-COR-003",
+      "FOM-U003-COR-004",
+      "FOM-U003-COR-005",
+      "FOM-U003-COR-006",
+      "FOM-U003-COR-007",
+      "FOM-U003-COR-008",
+      "FOM-U003-COR-009",
+      "FOM-U003-COR-010",
+      "FOM-U003-COR-011",
+      "FOM-U003-COR-012",
+      "FOM-U003-COR-013",
+      "FOM-U003-COR-014",
+      "FOM-U003-COR-015"
+    ],
+    "high_severity_source_repairs": {
+      "composition_order_FOM_U003_SRC_002": "PASS",
+      "forward_proof_FOM_U003_SRC_004": "PASS_TRANSPARENT",
+      "sphere_base_FOM_U003_SRC_006": "PASS",
+      "suspension_face_FOM_U003_SRC_008": "PASS",
+      "cone_apex_FOM_U003_SRC_013": "PASS",
+      "non_retraction_reduced_scope_FOM_U003_SRC_014": "PASS",
+      "Brouwer_continuity_hypothesis_FOM_U003_SRC_015": "PASS"
+    },
+    "edition_original_boundaries": "PASS; the forward-proof marker, disk good-pair proof, cone good-pair proof, radial continuity proof, and correction dossier are explicitly edition-original while source-derived statements retain source-line locators.",
+    "silent_source_corrections": 0
+  },
+  "geometric_redraw_checks": {
+    "status": "PASS",
+    "linked_png_count": 3,
+    "missing_links": 0,
+    "empty_alt_text": 0,
+    "semantic_descriptions_present": 3,
+    "png_decode": "PASS",
+    "visual_render_review": "PASS; an independently generated transient three-panel montage showed complete, nonblank, unclipped cone, suspension, and Brouwer radial-retraction drawings; the montage was removed after inspection.",
+    "assets": [
+      {
+        "source_lines": "1453-1461",
+        "reader_link_line": 337,
+        "reader_figure_id": "o012-fom-u003-fig-circle-cone",
+        "png": {
+          "path": "source/id-ID/fomberg/assets/unit-003/cone-circle.png",
+          "bytes": 37062,
+          "sha256": "40b452e48da782626b1b75425e57d4dd3ee202d337f3d8189db395077a1eaf35",
+          "pixels": "960x720"
+        },
+        "svg": {
+          "path": "source/id-ID/fomberg/assets/unit-003/cone-circle.svg",
+          "bytes": 1092,
+          "sha256": "ee45855df1ad90ea6e2fdf26f3a4790ab60e1c3fab194a597a612f1a9ddb7b83",
+          "viewBox": "0 0 480 360",
+          "role": "img",
+          "title_count": 1,
+          "desc_count": 1
+        }
+      },
+      {
+        "source_lines": "1472-1482",
+        "reader_link_line": 368,
+        "reader_figure_id": "o012-fom-u003-fig-circle-suspension",
+        "png": {
+          "path": "source/id-ID/fomberg/assets/unit-003/suspension-circle.png",
+          "bytes": 148311,
+          "sha256": "ad79445d601905192911cc3ee7e8457bb00bae17e7ece767798c2316709cfa3d",
+          "pixels": "800x800"
+        },
+        "svg": {
+          "path": "source/id-ID/fomberg/assets/unit-003/suspension-circle.svg",
+          "bytes": 1350,
+          "sha256": "2c31c274111fc3a059868a58e39035782fcbae73389975bacab65c8797a8cdef",
+          "viewBox": "0 0 480 480",
+          "role": "img",
+          "title_count": 1,
+          "desc_count": 1
+        }
+      },
+      {
+        "source_lines": "1542-1553",
+        "reader_link_line": 533,
+        "reader_figure_id": "o012-fom-u003-fig-brouwer-retraction",
+        "png": {
+          "path": "source/id-ID/fomberg/assets/unit-003/brouwer-radial-retraction.png",
+          "bytes": 180164,
+          "sha256": "97b0745e2b31b911fa777bdade3d51d88f5247a4d1d9cf29bf1c4aedc5f287c1",
+          "pixels": "1018x800"
+        },
+        "svg": {
+          "path": "source/id-ID/fomberg/assets/unit-003/brouwer-radial-retraction.svg",
+          "bytes": 1359,
+          "sha256": "34170760d9179f61ec3ece881e21e83a5a1556ddc86a781d163ff76d796b0885",
+          "viewBox": "0 0 560 440",
+          "role": "img",
+          "title_count": 1,
+          "desc_count": 1
+        }
+      }
+    ]
+  },
+  "parser_check": {
+    "status": "PASS",
+    "tool": "pandoc 3.9.0.2",
+    "input": "markdown+fenced_divs+tex_math_dollars",
+    "output": "JSON AST",
+    "exit_code": 0
+  },
+  "final_findings": {
+    "p1": [],
+    "p2": [],
+    "p3": [],
+    "counts": {
+      "p1": 0,
+      "p2": 0,
+      "p3": 0,
+      "total": 0
+    },
+    "disposition": "PASS_ZERO_FINDINGS"
+  },
+  "review_mutations": {
+    "canonical_reader_modified": false,
+    "assets_modified": false,
+    "source_modified": false,
+    "backend_modified": false,
+    "git_run": false,
+    "network_used": false,
+    "only_review_artifact_written": "qa/fomberg-unit-003/INDEPENDENT_REVIEW_EXACT_FINAL.json"
+  }
+}

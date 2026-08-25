@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "access_right": "open",
+    "contributors": [
+      {"name": "Lazarovich, Nir", "type": "Other"},
+      {"name": "Editor edisi Bahasa Indonesia", "type": "Editor"},
+      {"name": "Translation and Transcription Project", "type": "Other"}
+    ],
+    "creators": [
+      {"name": "Roberts, David Michael"},
+      {"name": "Fomberg, Yeheli"}
+    ],
+    "description": "<p><strong>Status: checkpoint parsial kursus komposit; korpus Roberts lengkap 30/30 dan komponen Fomberg O012-FOM-001–003 lengkap untuk Bagian 1.1–1.6.</strong> Versi 0.30.3 memuat terjemahan Bahasa Indonesia seluruh Kuliah 1–30 dari <em>Algebraic Topology</em> karya David Michael Roberts serta jembatan kompleks Δ, homologi simpleks dan singular, invariansi homotopi, barisan eksak, dan homologi relatif dari catatan <em>Algebraic Topology</em> karya Yeheli Fomberg, berdasarkan kuliah Nir Lazarovich.</p><p>Cakupan Roberts adalah <code>Notes.tex</code> baris 134–6368 pada komit <code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>. Cakupan Fomberg adalah <code>algebraic_topology.tex</code> baris 31–1922, Bagian 1.1–1.6, pada komit <code>563194fae879178b9a6871b249513bfc27968975</code>; kursor berikutnya ialah baris 1923. O012-FOM-001, O012-FOM-002, dan O012-FOM-003 bukan Kuliah Roberts 31–33. Kursus komposit masih parsial: Bagian 1.7–1.13, sisa perbaikan pembuktian, penguasaan rute, laboratorium, dan capstone belum lengkap.</p><p>PDF A4 adalah berkas pembaca pertama: 397 halaman, 3.550.987 byte, SHA-256 <code>57382750a561667bf02eb98bd7f4806618c3a785f4ca18ceb4c6679c46543b4b</code>. HTML mandiri/offline adalah permukaan utama yang reflowable dan memakai MathML asli: 7.190.228 byte, SHA-256 <code>484a2a501df79b1810567810d0b454a18298a4cb43ef466c4e082622216b9542</code>. Backend final berisi 5.747 rekaman dan 6.649.486 byte dengan SHA-256 bundel <code>9e416c70e69dea1601bd79a259c278a9cfdfe5dca10d40b7bbc8e67d9ffba76b</code>. Sumber Markdown, backend JSONL ber-ID stabil, lisensi komponen, manifest, checksum, QA, dan provenance ringkas turut disertakan.</p><p>Pembaca dan paket terpadu dirilis di bawah <strong>CC BY-SA 4.0</strong>. Komponen Roberts tetap diidentifikasi sebagai CC BY 4.0 dan komponen Fomberg sebagai CC BY-SA 4.0; atribusi, penandaan perubahan, share-alike, dan non-endorsement dijelaskan dalam <code>RELEASE_RIGHTS.md</code>. Produksi menggunakan <strong>OpenAI Codex gpt-5.6-sol, Ultra</strong> atas arahan pengguna; ini bukan kredit kepengarangan atau endorsement. Edisi ini independen dan tidak disponsori atau disahkan oleh penulis, dosen asal, maupun institusi mereka.</p>",
+    "keywords": [
+      "topologi aljabar",
+      "Bahasa Indonesia",
+      "homotopi",
+      "ruang penutup",
+      "grup fundamental",
+      "homologi simpleks",
+      "homologi singular",
+      "invariansi homotopi",
+      "barisan eksak",
+      "homologi relatif",
+      "MathML",
+      "machine-readable textbook"
+    ],
+    "language": "ind",
+    "license": "cc-by-sa-4.0",
+    "notes": "ID rilis: o012-composite-id-roberts-001-030-fomberg-001-003-v0.30.3. Roberts lengkap 30/30; Fomberg O012-FOM-001–003 lengkap untuk Bagian 1.1–1.6; kursus komposit tetap parsial. Versi ini melanjutkan konsep Zenodo 10.5281/zenodo.22061489 dan tidak membuat konsep pesaing.",
+    "publication_date": "2026-08-25",
+    "publication_type": "book",
+    "related_identifiers": [
+      {"identifier": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53", "relation": "isDerivedFrom", "scheme": "url"},
+      {"identifier": "https://git.sr.ht/~yp/math-notes/tree/563194fae879178b9a6871b249513bfc27968975", "relation": "isDerivedFrom", "scheme": "url"},
+      {"identifier": "10.5281/zenodo.22061489", "relation": "isVersionOf", "scheme": "doi"},
+      {"identifier": "10.5281/zenodo.22087423", "relation": "isNewVersionOf", "scheme": "doi"}
+    ],
+    "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Roberts 1–30 dan Jembatan Homologi §1.1–1.6",
+    "upload_type": "publication",
+    "version": "0.30.3"
+  }
+}

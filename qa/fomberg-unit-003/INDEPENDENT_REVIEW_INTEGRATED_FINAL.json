@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "O012-FOMBERG-UNIT-003-INDEPENDENT-INTEGRATED-FINAL",
+  "review_date": "2026-08-25",
+  "status": "PASS_ZERO_FINDINGS",
+  "review_scope": "Final read-only integrated recheck of the frozen Unit 003 reader and its six linked PNG redraws plus six accessible SVG source companions.",
+  "reviewed_reader": {
+    "path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+    "bytes": 65540,
+    "lf_lines": 1773,
+    "newline": "LF",
+    "ends_with_lf": true,
+    "encoding": "UTF-8",
+    "sha256": "2571f62b977c00bff20e04756925a73497c0129f8c987940db0e1a649177f6b9"
+  },
+  "controls": {
+    "terminology_ledger": {
+      "path": "00_control/TERMINOLOGY.csv",
+      "rows": 415,
+      "sha256": "5374b6073eadda56e8ad752fd7ec65c1459f58054125f53a7343ecdd0adaf9a1"
+    },
+    "frozen_source_span": {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "commit": "563194fae879178b9a6871b249513bfc27968975",
+      "lines": "1291-1922 inclusive",
+      "bytes_preserving_lf": 24270,
+      "sha256_preserving_lf": "870e617b30b82eb8a557b0733096623a73375ed079601e7e7938ce489d0ce064",
+      "line_1291_exact": "\\subsection{Exact sequences}",
+      "line_1922_exact": "",
+      "next_line": 1923,
+      "next_line_exact": "\\subsection{Excisions}"
+    },
+    "initial_review": {
+      "path": "qa/fomberg-unit-003/INDEPENDENT_REVIEW_INTEGRATED.json",
+      "sha256": "e680d802b4125909d670100079dc8cd09c4766742879382e72e5c695c604d9d4",
+      "initial_counts": {
+        "p1": 0,
+        "p2": 4,
+        "p3": 2
+      }
+    }
+  },
+  "initial_finding_resolution": [
+    {
+      "finding_id": "O012-FOM-U003-INT-P2-001",
+      "status": "RESOLVED",
+      "evidence": "All six source drawings now have real reader-linked PNG redraws at reader lines 337, 368, 533, 767, 801, and 822. Every image has nonempty Indonesian alternative text and an adjacent semantic description. Each PNG decodes and renders, and each has a valid accessible SVG source companion."
+    },
+    {
+      "finding_id": "O012-FOM-U003-INT-P2-002",
+      "status": "RESOLVED",
+      "evidence": "The eight named audit blocks at reader lines 732, 811, 840, 890, 1157, 1340, 1388, and 1394 now use data-origin=edition-original. Across the reader, all 50 explicit data-origin values are edition-original and edition-correction occurs zero times; source adaptations remain identified by component notice and exact source-line locators."
+    },
+    {
+      "finding_id": "O012-FOM-U003-INT-P2-003",
+      "status": "RESOLVED",
+      "evidence": "Reader lines 885-887 now state that f_# and g_# are connected by homotopi rantai as relative chain maps, with a complete Indonesian subject and the admitted O012-TERM-0400 wording. The rejected phrase homotop sebagai occurs zero times."
+    },
+    {
+      "finding_id": "O012-FOM-U003-INT-P2-004",
+      "status": "RESOLVED",
+      "evidence": "The pointed-pair reduced isomorphism is restricted to n at least 1 at reader lines 1290-1314, and lines 1316-1329 prove degree zero separately from the ordinary long exact sequence. F3.6 assumes n at least 1, restricts the reduced connecting isomorphism to k at least 1, and computes degree zero separately at lines 1703-1736. No undefined reduced degree -1 group is invoked."
+    },
+    {
+      "finding_id": "O012-FOM-U003-INT-P3-001",
+      "status": "RESOLVED",
+      "evidence": "The natural two-word form tak kosong is used at reader lines 390 and 468-469; takkosong occurs zero times."
+    },
+    {
+      "finding_id": "O012-FOM-U003-INT-P3-002",
+      "status": "RESOLVED",
+      "evidence": "Reader lines 27-31 now state directly that no prose from the separate Fomberg problem bank and no MIT material was copied into this component."
+    }
+  ],
+  "asset_verification": {
+    "status": "PASS",
+    "total_assets": 12,
+    "linked_png_assets": 6,
+    "accessible_svg_companions": 6,
+    "reader_link_resolution": "PASS; all six relative PNG paths resolve from the reader and each occurs exactly once.",
+    "reader_accessibility": "PASS; all six Markdown images have nonempty Indonesian alternative text and adjacent Indonesian semantic descriptions.",
+    "svg_accessibility": "PASS; every SVG is well-formed XML with viewBox, role=img, one title, one desc, and aria-labelledby tokens resolving to those title and desc IDs.",
+    "self_containment": "PASS; the six SVGs contain no script, image, foreignObject, href, external reference, external font, URL paint reference, or private path.",
+    "png_decode": "PASS; all six files have the PNG signature and decoded successfully with ImageMagick 7.",
+    "visual_render_review": "PASS; a transient six-panel raster montage showed all drawings fully rendered with no clipping, overlap, missing labels, or blank panels; the transient montage was then removed.",
+    "assets": [
+      {
+        "source_lines": "1453-1461",
+        "reader_figure_id": "o012-fom-u003-fig-circle-cone",
+        "reader_link_line": 337,
+        "svg": {
+          "path": "source/id-ID/fomberg/assets/unit-003/cone-circle.svg",
+          "bytes": 1092,
+          "sha256": "ee45855df1ad90ea6e2fdf26f3a4790ab60e1c3fab194a597a612f1a9ddb7b83",
+          "viewBox": "0 0 480 360"
+        },
+        "png": {
+          "path": "source/id-ID/fomberg/assets/unit-003/cone-circle.png",
+          "bytes": 37062,
+          "sha256": "40b452e48da782626b1b75425e57d4dd3ee202d337f3d8189db395077a1eaf35",
+          "pixels": "960x720"
+        }
+      },
+      {
+        "source_lines": "1472-1482",
+        "reader_figure_id": "o012-fom-u003-fig-circle-suspension",
+        "reader_link_line": 368,
+        "svg": {
+          "path": "source/id-ID/fomberg/assets/unit-003/suspension-circle.svg",
+          "bytes": 1350,
+          "sha256": "2c31c274111fc3a059868a58e39035782fcbae73389975bacab65c8797a8cdef",
+          "viewBox": "0 0 480 480"
+        },
+        "png": {
+          "path": "source/id-ID/fomberg/assets/unit-003/suspension-circle.png",
+          "bytes": 148311,
+          "sha256": "ad79445d601905192911cc3ee7e8457bb00bae17e7ece767798c2316709cfa3d",
+          "pixels": "800x800"
+        }
+      },
+      {
+        "source_lines": "1542-1553",
+        "reader_figure_id": "o012-fom-u003-fig-brouwer-retraction",
+        "reader_link_line": 533,
+        "svg": {
+          "path": "source/id-ID/fomberg/assets/unit-003/brouwer-radial-retraction.svg",
+          "bytes": 1359,
+          "sha256": "34170760d9179f61ec3ece881e21e83a5a1556ddc86a781d163ff76d796b0885",
+          "viewBox": "0 0 560 440"
+        },
+        "png": {
+          "path": "source/id-ID/fomberg/assets/unit-003/brouwer-radial-retraction.png",
+          "bytes": 180164,
+          "sha256": "97b0745e2b31b911fa777bdade3d51d88f5247a4d1d9cf29bf1c4aedc5f287c1",
+          "pixels": "1018x800"
+        }
+      },
+      {
+        "source_lines": "1603-1615",
+        "reader_figure_id": "o012-fom-u003-fig-relative-cycle",
+        "reader_link_line": 767,
+        "svg": {
+          "path": "source/id-ID/fomberg/assets/unit-003/relative-cycle.svg",
+          "bytes": 1671,
+          "sha256": "e3ef9ef498f8e379cca12b4d769c35f5b90d4c823860b8ef7249ace19d12e459",
+          "viewBox": "0 0 680 420"
+        },
+        "png": {
+          "path": "source/id-ID/fomberg/assets/unit-003/relative-cycle.png",
+          "bytes": 260456,
+          "sha256": "e7057f0cc58dbe48eac8369e04f61fea9c5974dc1882f4ca53a3532c5ccc9e7f",
+          "pixels": "1200x741"
+        }
+      },
+      {
+        "source_lines": "1624-1637",
+        "reader_figure_id": "o012-fom-u003-fig-relative-boundary",
+        "reader_link_line": 801,
+        "svg": {
+          "path": "source/id-ID/fomberg/assets/unit-003/relative-boundary.svg",
+          "bytes": 1899,
+          "sha256": "ec7af0378a1a92ddecda8cf27fd13cd73a68079e6286d845c441434e7a945eb4",
+          "viewBox": "0 0 680 430"
+        },
+        "png": {
+          "path": "source/id-ID/fomberg/assets/unit-003/relative-boundary.png",
+          "bytes": 291686,
+          "sha256": "20393edd49cb9fa29dade8fbae82387ee7eaa955ed1161648f9292f40e9af6f9",
+          "pixels": "1200x759"
+        }
+      },
+      {
+        "source_lines": "1641-1663",
+        "reader_figure_id": "o012-fom-u003-fig-formal-relative-chains",
+        "reader_link_line": 822,
+        "svg": {
+          "path": "source/id-ID/fomberg/assets/unit-003/relative-chains-formal.svg",
+          "bytes": 2565,
+          "sha256": "ca5e9d78c07579b0bf5b162fbe21769d2eb16bc590179d3a6765e3ad973e57b9",
+          "viewBox": "0 0 700 430"
+        },
+        "png": {
+          "path": "source/id-ID/fomberg/assets/unit-003/relative-chains-formal.png",
+          "bytes": 297867,
+          "sha256": "c9789bf829f308bbd3b80350d510f9c26c2c03d2878e7133dfa46b0395cbdefa",
+          "pixels": "1200x737"
+        }
+      }
+    ]
+  },
+  "passed_checks": {
+    "natural_id_ID": "PASS; the prior grammar and spacing findings are resolved, reader prose remains natural and consistent, and quoted upstream spellings are confined to explicit source-audit notes.",
+    "terminology_ledger_consistency": "PASS; admitted rows O012-TERM-0400 through O012-TERM-0415 are used consistently, including homotopi rantai, pasangan baik, kerucut, suspensi, grup rantai relatif, homologi relatif, siklus relatif, batas relatif, homotopi melalui peta pasangan, diagram komutatif, and barisan eksak panjang tripel.",
+    "provenance_vocabulary": {
+      "status": "PASS",
+      "explicit_data_origin_values": {
+        "edition-original": 50
+      },
+      "undefined_values": 0,
+      "edition_correction_hits": 0
+    },
+    "source_vs_edition_original_boundaries": "PASS; translated/adapted source content carries exact source-line locators, while forward proofs, proof supplements, audit notes, and the mastery layer are explicitly edition-original.",
+    "rights_and_attribution": "PASS; reader lines 17-36 identify Fomberg, Lazarovich, the frozen commit/span, CC BY-SA 4.0 source and adaptation terms, change scope, non-endorsement, and OpenAI Codex gpt-5.6-sol, Ultra assistance without displacing source or author credit.",
+    "stable_ids": {
+      "status": "PASS",
+      "declared": 124,
+      "unique": 124,
+      "duplicates": 0
+    },
+    "fenced_divs": {
+      "status": "PASS",
+      "openers": 119,
+      "closers": 119,
+      "nesting_or_width_errors": 0
+    },
+    "display_math": {
+      "status": "PASS",
+      "delimiter_lines": 202,
+      "display_blocks": 101
+    },
+    "pandoc_parse": {
+      "status": "PASS",
+      "version": "pandoc 3.9.0.2",
+      "input": "markdown+fenced_divs+tex_math_dollars",
+      "output": "JSON AST",
+      "exit_code": 0
+    },
+    "internal_links": {
+      "status": "PASS",
+      "occurrences": 10,
+      "unique_targets": 5,
+      "unit_003_targets_resolved": 4,
+      "unit_002_targets_resolved": 1,
+      "unresolved": 0
+    },
+    "asset_links": {
+      "status": "PASS",
+      "linked_pngs": 6,
+      "missing": 0,
+      "empty_alt_text": 0
+    },
+    "source_coverage_and_order": "PASS; source Section 1.5 is preserved first at reader lines 40-560 from source lines 1291-1564, followed by Section 1.6 at reader lines 677-1408 from source lines 1565-1922. The intervening correction dossier is explicitly edition-original audit material. The prior 39-item semantic and 31-item equation/diagram source census remains accounted for, with the six formerly missing geometric surfaces now restored.",
+    "mandatory_FOM_PR_04": "PASS; the edition-original repair remains present with explicit repair IDs and proves well-definedness, additivity, and exactness at the three recurring positions.",
+    "mastery_surface": "PASS; six exercises each retain a hint and complete solution.",
+    "stray_local_or_private_paths": "PASS_NONE_FOUND",
+    "stray_credentials_or_tokens": "PASS_NONE_FOUND"
+  },
+  "final_findings": {
+    "p1": [],
+    "p2": [],
+    "p3": [],
+    "counts": {
+      "p1": 0,
+      "p2": 0,
+      "p3": 0,
+      "total": 0
+    },
+    "disposition": "PASS_ZERO_FINDINGS"
+  },
+  "review_mutations": {
+    "canonical_reader_modified": false,
+    "assets_modified": false,
+    "terminology_ledger_modified": false,
+    "backend_modified": false,
+    "git_run": false,
+    "network_used": false,
+    "only_review_artifact_written": "qa/fomberg-unit-003/INDEPENDENT_REVIEW_INTEGRATED_FINAL.json"
+  }
+}

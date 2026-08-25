@@ -1,0 +1,215 @@
+{
+  "bound_inputs": {
+    "00_control/ADVERSE_LEDGER.csv": {
+      "bytes": 167596,
+      "path": "00_control/ADVERSE_LEDGER.csv",
+      "sha256": "0eee620b74dbfb3f6ee4d2030f6ca77c7ae4cf169fd09a604c82bb29895e5a3b"
+    },
+    "00_control/TERMINOLOGY.csv": {
+      "bytes": 49864,
+      "path": "00_control/TERMINOLOGY.csv",
+      "sha256": "5374b6073eadda56e8ad752fd7ec65c1459f58054125f53a7343ecdd0adaf9a1"
+    },
+    "common": {
+      "bytes": 52905,
+      "path": "scripts/fomberg-unit-003-common.py",
+      "sha256": "6de06575cda67e50bd714c69fdaa03d8d5e8358d641ec6a0b38478981637703e"
+    },
+    "cumulative_validator": {
+      "bytes": 14292,
+      "path": "scripts/validate-backend-append-only-fomberg-unit-003-cumulative.py",
+      "sha256": "8aa78976e1191f7c601f4813d8b97b112ac3dd2ad4d2b1802c39a9f8f8e8dfb9"
+    },
+    "producer": {
+      "bytes": 13878,
+      "path": "scripts/extend-backend-fomberg-unit-003.py",
+      "sha256": "90e14782df8d2bb9626546be86c12d24fabb8f2134bdfa744f912881b919a7db"
+    },
+    "qa/FOMBERG_UNIT_003_QA.json": {
+      "bytes": 39281,
+      "path": "qa/FOMBERG_UNIT_003_QA.json",
+      "sha256": "1ec779739012e45e098786d6d8f9d9f5fb3b456146bd769d535cdaf4342c5963"
+    },
+    "qa/FOMBERG_UNIT_003_SOURCE_AUDIT.json": {
+      "bytes": 443845,
+      "path": "qa/FOMBERG_UNIT_003_SOURCE_AUDIT.json",
+      "sha256": "e9bde4987e24e8d3839208f3d70c76a3362702f0f6e6b8e0eefb5467c80e80b2"
+    },
+    "qa/fomberg-unit-003/INDEPENDENT_REVIEW_EXACT_FINAL.json": {
+      "bytes": 11017,
+      "path": "qa/fomberg-unit-003/INDEPENDENT_REVIEW_EXACT_FINAL.json",
+      "sha256": "360d84f2deb75445e698050c9e968284612ec087bfec606dfc63427b069c5e5d"
+    },
+    "qa/fomberg-unit-003/INDEPENDENT_REVIEW_INTEGRATED_FINAL.json": {
+      "bytes": 12424,
+      "path": "qa/fomberg-unit-003/INDEPENDENT_REVIEW_INTEGRATED_FINAL.json",
+      "sha256": "eec178895fde82ffd3dfff04f3167bdf3fa276f5352c11e5db2a4cf7ea8f06f5"
+    },
+    "qa/fomberg-unit-003/INDEPENDENT_REVIEW_RELATIVE_FINAL.json": {
+      "bytes": 11409,
+      "path": "qa/fomberg-unit-003/INDEPENDENT_REVIEW_RELATIVE_FINAL.json",
+      "sha256": "5471e6ee304713da288d075fb1e506c6b2125f4e7090740044f181fb31bf97fb"
+    },
+    "qa/fomberg-unit-003/INTEGRATED_REVIEW_COUNT_RECONCILIATION.json": {
+      "bytes": 2013,
+      "path": "qa/fomberg-unit-003/INTEGRATED_REVIEW_COUNT_RECONCILIATION.json",
+      "sha256": "48fd3133d1136d6c102960f0e269ed6090fd8cb62ec353bf2f69853bb8415243"
+    },
+    "validator": {
+      "bytes": 7175,
+      "path": "scripts/validate-backend-append-only-fomberg-unit-003.py",
+      "sha256": "03cdb288543829334b7956b7246d2ac7f757025ad37865096e3cb174e1e99e2a"
+    }
+  },
+  "current": {
+    "backend_files": [
+      {
+        "bytes": 143337,
+        "filename": "artifacts.jsonl",
+        "records": 177,
+        "sha256": "6452e6190d2505913d546a1b956b1acebcafdc45af3e535840b02fd323cd426f"
+      },
+      {
+        "bytes": 37270,
+        "filename": "assets.jsonl",
+        "records": 53,
+        "sha256": "03091c88d8276bf834e9a39aefccf6c68e285e5747f77027f4e4598f2e322d0e"
+      },
+      {
+        "bytes": 4374,
+        "filename": "authority.jsonl",
+        "records": 6,
+        "sha256": "84c622f56dbbd5ba379361245ecfe07bc79c9f4fd6b18ba21b82b5f545211869"
+      },
+      {
+        "bytes": 130574,
+        "filename": "concepts.jsonl",
+        "records": 414,
+        "sha256": "ee995d610ddc86d3b61a436be851b1063055a1dcb4b0f75eaad136a2705a710d"
+      },
+      {
+        "bytes": 499984,
+        "filename": "corrections.jsonl",
+        "records": 498,
+        "sha256": "6bc8c0a3e49f943aaa9fd4ce060da4b9247458c9ad329bd51ef25343bd64341c"
+      },
+      {
+        "bytes": 81358,
+        "filename": "qa.jsonl",
+        "records": 146,
+        "sha256": "be3b1a0ad285ba7d3ab8ded44caffcd935da859117e0d9eabc062b6b7e18cf88"
+      },
+      {
+        "bytes": 272700,
+        "filename": "relations.jsonl",
+        "records": 655,
+        "sha256": "72db0a89c3b09bae0559af3189b35cd51062600f160e1ac37f72173cf845f9ce"
+      },
+      {
+        "bytes": 86669,
+        "filename": "rights.jsonl",
+        "records": 95,
+        "sha256": "68d7a7a5bfebad6414a6a6b7761aca29d3f28498b0a6b4457e660915123d5880"
+      },
+      {
+        "bytes": 2494755,
+        "filename": "segments.jsonl",
+        "records": 1633,
+        "sha256": "dce882c74e5ff52fd9a94a5a034b2aa0f90d2b7e7f407ee80cff08a48161e4a9"
+      },
+      {
+        "bytes": 262803,
+        "filename": "terms.jsonl",
+        "records": 407,
+        "sha256": "bada6c6904eedfdbd5f215ea2d88e68dc326ea1aa5ac41e2cf33e739d0c47594"
+      },
+      {
+        "bytes": 2635662,
+        "filename": "units.jsonl",
+        "records": 1663,
+        "sha256": "15b9062f5b5e943ec85e724ab8b189318052bf1c1f51dff357ae0dcf4831b3ab"
+      }
+    ],
+    "bundle_sha256": "9e416c70e69dea1601bd79a259c278a9cfdfe5dca10d40b7bbc8e67d9ffba76b",
+    "mastery_triples": 18,
+    "next_source_line": 1923,
+    "proof_repairs_closed": [
+      "FOM-PR-01",
+      "FOM-PR-02",
+      "FOM-PR-03",
+      "FOM-PR-04"
+    ],
+    "redraw_files": 12,
+    "review_counts": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "segment_records": 307,
+    "semantic_figure_blocks": 50,
+    "source_diagrams": 57,
+    "stable_ids": 307,
+    "terminal_source_eof": false,
+    "total_bytes": 6649486,
+    "total_records": 5747,
+    "unit_records": 307
+  },
+  "human_receipt": {
+    "bytes": 739,
+    "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_003_CUMULATIVE_RECEIPT.md",
+    "sha256": "7632092b93be6310d3b69b7cf9bc0cec0d4aef58830a77f4fe83790c7f469470"
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "nested_immutability": {
+    "fomberg_unit_001_boundary": {
+      "bundle_sha256": "17f57575a062025e434e79f7f3797d05de1a41e520202521ae39a409d4b6450d",
+      "bytes": 5658648,
+      "preserved_byte_for_byte": true,
+      "records": 5060
+    },
+    "fomberg_unit_002_boundary": {
+      "bundle_sha256": "83d98f1b271c5e62334a072354f1be1c4a1535ed26c8a403223e89773bb1eba1",
+      "bytes": 6040123,
+      "preserved_byte_for_byte": true,
+      "records": 5342
+    },
+    "fomberg_unit_003_suffix": {
+      "records": 405,
+      "records_by_file": {
+        "artifacts.jsonl": 6,
+        "assets.jsonl": 14,
+        "authority.jsonl": 0,
+        "concepts.jsonl": 15,
+        "corrections.jsonl": 42,
+        "qa.jsonl": 4,
+        "relations.jsonl": 57,
+        "rights.jsonl": 2,
+        "segments.jsonl": 125,
+        "terms.jsonl": 15,
+        "units.jsonl": 125
+      }
+    },
+    "roberts_units_001_030_prefix": {
+      "bundle_sha256": "51b8c7f611560b9b5e88e97b3a943b54e0eb687c703f0cd34c1a3d164e4fb920",
+      "bytes": 5213679,
+      "preserved_byte_for_byte": true,
+      "records": 4761
+    }
+  },
+  "receipt_id": "O012-BACKEND-THROUGH-FOMBERG-UNIT-003-CUMULATIVE-SEMANTIC",
+  "replay": {
+    "every_backend_file_byte_identical": true,
+    "exact_record_plan": "PASS",
+    "generic_schema_and_references": "PASS",
+    "producer_deterministic": "PASS",
+    "semantic_validator": "PASS"
+  },
+  "schema_version": "1.0.0",
+  "scope": "Roberts Units 001-030 immutable prefix plus Fomberg Units 001-003 append-only semantic suffixes",
+  "semantic_receipt": {
+    "bytes": 6663,
+    "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_003_RECEIPT.json",
+    "sha256": "5a20c700c5a9b21ca5b34291d67cf1129fd17b1ff1f57503b7ad96fdb046225f"
+  },
+  "status": "PASS"
+}

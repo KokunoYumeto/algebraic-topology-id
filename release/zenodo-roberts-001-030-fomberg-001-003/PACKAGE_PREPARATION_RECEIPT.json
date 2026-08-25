@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS_PREPARED_NOT_PUBLISHED",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-003-v0.30.3",
+  "scope": "Roberts 30/30 complete; Fomberg O012-FOM-001, O012-FOM-002, and O012-FOM-003 (Sections 1.1-1.6, lines 31-1922) complete; next Fomberg line 1923; composite course partial",
+  "release_directory": "release/zenodo-roberts-001-030-fomberg-001-003",
+  "reader_first_filename": "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_READER.pdf",
+  "frozen_input_ledger": {
+    "path": "release/zenodo-roberts-001-030-fomberg-001-003/frozen-inputs.json",
+    "bytes": 26041,
+    "sha256": "71380dc5ecbad43007437831a74a49bdbd9e2cd83a61e797874647330b219fda",
+    "entries": 139
+  },
+  "packager": {
+    "path": "scripts/package-release-roberts-001-030-fomberg-001-003.py",
+    "bytes": 43126,
+    "sha256": "23b4e40a8f5344bca371c7e4396837339babde2ac49e1d4eba27816f2559affb"
+  },
+  "files": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_READER.pdf",
+      "bytes": 3550987,
+      "sha256": "57382750a561667bf02eb98bd7f4806618c3a785f4ca18ceb4c6679c46543b4b"
+    },
+    {
+      "filename": "LICENSE.md",
+      "bytes": 1488,
+      "sha256": "48d38ec397df42f7e395318b117591d784e3cc7a3bcf49e63aa37b043a86e985"
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "bytes": 3710,
+      "sha256": "ead13c19caf37fd925b46931ce10960686a48783fb0474c9b0a1c2c31a549bdd"
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "bytes": 3255,
+      "sha256": "613e13c3efcbdc41d2b8d8db2ca4784c1e9ad8d1e9a89510a3d2425f81fe8916"
+    },
+    {
+      "filename": "SHA256SUMS",
+      "bytes": 877,
+      "sha256": "126cd85ce864c225734bd14abb420f191887dc801fd263196bcdbdf10731101c"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 2394549,
+      "sha256": "eae2b74e1ac7669b540440dce8ef5e0f2a5cecfedc6e427221898993c5a7d59e"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_QA_PROVENANCE.zip",
+      "bytes": 188261,
+      "sha256": "dfd1cc241d04488559431746fc5149c8c8dc7747c35857673077848c6fb3af13"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_READER.html",
+      "bytes": 7190228,
+      "sha256": "484a2a501df79b1810567810d0b454a18298a4cb43ef466c4e082622216b9542"
+    },
+    {
+      "filename": "release-manifest.json",
+      "bytes": 37364,
+      "sha256": "f230886c6d1fdb368bddbbeed103756bd502ba4883c04d6d740107cd4fc7ffb1"
+    }
+  ],
+  "file_count": 9,
+  "total_payload_bytes": 13370719,
+  "archives": [
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 2394549,
+      "sha256": "eae2b74e1ac7669b540440dce8ef5e0f2a5cecfedc6e427221898993c5a7d59e",
+      "entry_count": 92,
+      "uncompressed_bytes": 10360911,
+      "crc_status": "PASS",
+      "first_entry": "00_control/ADVERSE_LEDGER.csv",
+      "last_entry": "source/id-ID/units/unit-030-lecture-030.md"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_QA_PROVENANCE.zip",
+      "bytes": 188261,
+      "sha256": "dfd1cc241d04488559431746fc5149c8c8dc7747c35857673077848c6fb3af13",
+      "entry_count": 41,
+      "uncompressed_bytes": 1056055,
+      "crc_status": "PASS",
+      "first_entry": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_003.csv",
+      "last_entry": "release/release-manifest.template.json"
+    }
+  ],
+  "verification": {
+    "manifest_artifact_identities_match": true,
+    "sha256sums_match": true,
+    "zip_crc_and_inventory_pass": true,
+    "source_archive_local_link_closure_pass": true,
+    "rights_component_scope_consistent": true,
+    "reader_first": true,
+    "integrated_license": "CC BY-SA 4.0",
+    "roberts_component_license": "CC BY 4.0",
+    "fomberg_component_license": "CC BY-SA 4.0",
+    "new_concept_created": false,
+    "network_actions": 0,
+    "git_actions": 0,
+    "credentials_used": false,
+    "published": false
+  }
+}

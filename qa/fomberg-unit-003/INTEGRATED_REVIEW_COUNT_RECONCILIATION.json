@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "reconciliation_id": "O012-FOM-U003-INTEGRATED-REVIEW-COUNT-RECONCILIATION",
+  "date": "2026-08-25",
+  "status": "PASS_RECOMPUTED_COUNT_SUPERSEDES_REVIEW_COUNT_FIELD_ONLY",
+  "reader": {
+    "path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+    "bytes": 65540,
+    "lf_lines": 1773,
+    "sha256": "2571f62b977c00bff20e04756925a73497c0129f8c987940db0e1a649177f6b9"
+  },
+  "review": {
+    "path": "qa/fomberg-unit-003/INDEPENDENT_REVIEW_INTEGRATED_FINAL.json",
+    "bytes": 12424,
+    "sha256": "eec178895fde82ffd3dfff04f3167bdf3fa276f5352c11e5db2a4cf7ea8f06f5",
+    "observed_incorrect_field": "passed_checks.stable_ids.declared/unique = 124"
+  },
+  "independent_recomputation": {
+    "heading_ids": 6,
+    "fenced_div_ids": 119,
+    "stable_ids_total": 125,
+    "stable_ids_unique": 125,
+    "duplicates": 0,
+    "heading_ids_in_order": [
+      "o012-fom-u003-notice",
+      "o012-fom-u003",
+      "o012-fom-u003-s05",
+      "o012-fom-u003-source-corrections",
+      "o012-fom-u003-s06",
+      "o012-fom-u003-mastery"
+    ],
+    "fenced_class_counts": {
+      "boundary": 1,
+      "corollary": 4,
+      "definition": 7,
+      "example": 7,
+      "exercise": 6,
+      "figure": 26,
+      "hint": 6,
+      "proof": 7,
+      "proof-supplement": 4,
+      "proposition": 1,
+      "remark": 13,
+      "solution": 6,
+      "source-audit": 27,
+      "source-omission": 2,
+      "theorem": 2
+    }
+  },
+  "cause": "The final integrated review undercounted one declared stable ID. The frozen reader itself is unchanged and internally collision-free.",
+  "effect": "All final QA, backend, build, and publication records must bind the recomputed count of 125. The review's zero-finding conclusions remain evidence for its other checks, but its stable-ID count field is not authoritative.",
+  "mutations": {
+    "reader_modified": false,
+    "review_modified": false,
+    "backend_modified": false,
+    "git_run": false,
+    "network_used": false
+  }
+}

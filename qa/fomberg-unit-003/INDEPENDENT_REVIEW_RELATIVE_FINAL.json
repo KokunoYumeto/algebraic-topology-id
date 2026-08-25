@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "O012-FOMBERG-UNIT-003-INDEPENDENT-RELATIVE-FINAL",
+  "review_date": "2026-08-25",
+  "status": "PASS_ZERO_FINDINGS",
+  "review_model": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "independence": {
+    "canonical_reader_edited": false,
+    "frozen_source_edited": false,
+    "source_audit_edited": false,
+    "prior_review_edited": false,
+    "backend_edited": false,
+    "review_artifact_only": true
+  },
+  "snapshot_binding": {
+    "required_identity": {
+      "path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+      "bytes": 65540,
+      "lf_lines": 1773,
+      "sha256": "2571f62b977c00bff20e04756925a73497c0129f8c987940db0e1a649177f6b9"
+    },
+    "actual_identity": {
+      "path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+      "bytes": 65540,
+      "lf_lines": 1773,
+      "sha256": "2571f62b977c00bff20e04756925a73497c0129f8c987940db0e1a649177f6b9"
+    },
+    "identity_match": true,
+    "prior_snapshot_used_for_final_findings": false
+  },
+  "authority": {
+    "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "full_file_bytes": 223886,
+    "full_file_lf_lines": 6069,
+    "full_file_sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483",
+    "reviewed_span": {
+      "line_start": 1565,
+      "line_end": 1922,
+      "line_count": 358,
+      "bytes_normalized_lf_with_terminal_lf": 14258,
+      "sha256_normalized_lf_with_terminal_lf": "e5b4d4a1e1f927ba6cf8859e262a419205a84d133523e6bb6c65ac532d9abd35"
+    },
+    "next_source_line": 1923,
+    "next_source_line_exact": "\\subsection{Excisions}"
+  },
+  "review_inputs": {
+    "source_audit": {
+      "path": "qa/FOMBERG_UNIT_003_SOURCE_AUDIT_DRAFT.json",
+      "bytes": 53271,
+      "lf_lines": 1365,
+      "sha256": "3e3fcaf430f456bf9c926cbd159185a118e1a64d3dfa363c974c82eb6f077e99"
+    },
+    "prior_relative_review": {
+      "path": "qa/fomberg-unit-003/INDEPENDENT_REVIEW_RELATIVE.json",
+      "bytes": 8734,
+      "lf_lines": 203,
+      "sha256": "2de6d94e4ac9dc5353cdb9d54687ee01f45aae4eb30f3ccf6dcab62910f12dec"
+    },
+    "integrated_review": {
+      "path": "qa/fomberg-unit-003/INDEPENDENT_REVIEW_INTEGRATED.json",
+      "bytes": 9103,
+      "lf_lines": 167,
+      "sha256": "e680d802b4125909d670100079dc8cd09c4766742879382e72e5c695c604d9d4"
+    }
+  },
+  "scope": {
+    "frozen_source_lines": "1565-1922 inclusive",
+    "canonical_reader_source_body_lines": "677-1407",
+    "canonical_reader_mastery_lines": "1409-1766",
+    "canonical_reader_boundary_lines": "1768-1773",
+    "topics": [
+      "relative chain groups, cycles, boundaries, and homology",
+      "maps of pairs and homotopy through maps of pairs",
+      "short and long exact sequences",
+      "FOM-PR-04 connecting-map and exactness repair",
+      "pointed-pair degree-zero supplement",
+      "singleton and triple notation",
+      "all six F3 mastery exercise, hint, and solution triples",
+      "source-order, provenance, and terminal-boundary preservation"
+    ]
+  },
+  "method": [
+    "Re-read frozen source lines 1565-1922 in source order and verified line 1923 as the excluded next subsection.",
+    "Compared all 17 source semantic environments and all 15 displayed diagram functions in the span with their reader counterparts.",
+    "Type-checked the relative quotient boundary, pair-homotopy prism identity, chain maps, and long exact sequence.",
+    "Reconstructed FOM-PR-04 independently, including construction, cycle status, both choice checks, additivity, and all recurring exactness positions.",
+    "Checked the pointed-pair argument separately in positive and zero degree under the reader's nonnegative grading convention.",
+    "Solved and type-checked every F3 mastery item against its stated hint and complete solution.",
+    "Verified source-derived, corrected-source, and edition-original boundaries from the reader attributes and stable IDs."
+  ],
+  "closure_validation": {
+    "source_semantic_objects": 17,
+    "reader_source_derived_semantic_objects": 17,
+    "all_source_semantic_objects_present_once_in_source_order": true,
+    "source_display_and_diagram_functions": 15,
+    "reader_display_and_diagram_functions_preserved": 15,
+    "all_display_and_diagram_functions_present_in_source_order": true,
+    "relative_geometric_redraws_present": 3,
+    "relative_geometric_redraw_assets_exist": true,
+    "duplicate_declared_stable_ids_in_canonical_reader": 0,
+    "mastery_exercises": 6,
+    "mastery_hints": 6,
+    "mastery_solutions": 6,
+    "source_span_hash_recomputed": true,
+    "next_source_line_checked_exactly": true
+  },
+  "prior_finding_resolution_mapping": [
+    {
+      "prior_finding_id": "O012-FOM-U003-REL-REV-P2-001",
+      "related_integrated_finding_id": "O012-FOM-U003-INT-P2-004",
+      "prior_status": "P2",
+      "prior_problem": "The F3.6 derivation invoked reduced homology in degree minus one when k=0.",
+      "current_reader_locators": [
+        {
+          "lines": "1701-1710",
+          "stable_id": "o012-fom-u003-mcheck-006"
+        },
+        {
+          "lines": "1719-1747",
+          "stable_id": "o012-fom-u003-sol-006"
+        },
+        {
+          "lines": "1289-1329",
+          "stable_id": "o012-fom-u003-exa-pointed-relative"
+        },
+        {
+          "lines": "1316-1329",
+          "stable_id": "o012-fom-u003-proof-pointed-degree-zero"
+        }
+      ],
+      "resolution": "RESOLVED",
+      "resolution_evidence": [
+        "F3.6 now asks for every k at least zero but states the connecting isomorphism only for k at least one.",
+        "F3.6 derives H_0(D^n,S^(n-1))=0 separately from the ordinary long exact sequence and the surjectivity of H_0(S^(n-1)) to H_0(D^n).",
+        "The final piecewise relative-homology formula is explicitly scoped to k at least zero.",
+        "The pointed-pair example states its reduced connecting argument only for n at least one and supplies a separate ordinary-H_0 quotient proof at degree zero."
+      ],
+      "regression_check": "PASS"
+    }
+  ],
+  "relative_homology_checks": {
+    "relative_chain_group_and_free_quotient_basis": "PASS",
+    "relative_boundary_descends_to_quotient": "PASS",
+    "relative_chain_complex": "PASS",
+    "relative_cycle_characterization": "PASS",
+    "relative_boundary_characterization": "PASS",
+    "formal_singular_chain_example_and_C1_repair": "PASS",
+    "map_of_pairs_definition": "PASS",
+    "homotopy_condition_F_of_A_times_I_contained_in_B": "PASS",
+    "relative_prism_operator_type": "PASS",
+    "chain_homotopy_sign_g_minus_f": "PASS",
+    "chain_homotopy_terminology_and_sentence": "PASS",
+    "degreewise_short_exact_chain_sequence": "PASS",
+    "pair_long_exact_sequence_for_every_pair": "PASS",
+    "source_order_and_locators": "PASS"
+  },
+  "FOM_PR_04_checks": {
+    "source_omission_preserved_at_lines_1869_1872": "PASS",
+    "repair_separately_marked_edition_original_without_source_line_claim": "PASS",
+    "connecting_homomorphism_defined_on_homology_classes": "PASS",
+    "lift_exists_by_surjectivity": "PASS",
+    "target_preimage_exists_by_exactness": "PASS",
+    "target_is_a_cycle": "PASS",
+    "independence_of_lift": "PASS",
+    "independence_of_cycle_representative": "PASS",
+    "additivity": "PASS",
+    "exactness_at_Hn_B": "PASS",
+    "exactness_at_Hn_C": "PASS",
+    "exactness_at_Hn_minus_1_A": "PASS",
+    "all_degrees_spliced_into_long_exact_sequence": "PASS",
+    "chain_cycle_and_class_types_distinct": "PASS",
+    "acceptance_test": "PASS"
+  },
+  "pointed_degree_zero_checks": {
+    "positive_degree_reduced_sequence_restricted_to_n_at_least_1": "PASS",
+    "degree_zero_uses_ordinary_long_exact_sequence": "PASS",
+    "image_of_H0_singleton_identified_with_base_component_generator": "PASS",
+    "quotient_H0_X_by_base_component_isomorphic_to_reduced_H0_X": "PASS",
+    "no_negative_degree_group_used_in_derivation": "PASS"
+  },
+  "singleton_and_triple_checks": {
+    "singleton_symbol_x0_consistent": "PASS",
+    "singleton_written_with_set_braces": "PASS",
+    "relative_term_is_ordinary_Hn_X_singleton": "PASS",
+    "conclusion_reduced_Hn_X_isomorphic_to_relative_Hn_all_nonnegative_degrees": "PASS",
+    "triple_order_B_subset_A_subset_X": "PASS",
+    "triple_chain_short_exact_sequence": "PASS",
+    "uppercase_B_point_specialization": "PASS"
+  },
+  "mastery_checks": [
+    {
+      "stable_id": "o012-fom-u003-mcheck-001",
+      "hint_id": "o012-fom-u003-hint-001",
+      "solution_id": "o012-fom-u003-sol-001",
+      "topic": "short exact sequence, quotient, and splitting",
+      "status": "PASS"
+    },
+    {
+      "stable_id": "o012-fom-u003-mcheck-002",
+      "hint_id": "o012-fom-u003-hint-002",
+      "solution_id": "o012-fom-u003-sol-002",
+      "topic": "suspension and sphere homology",
+      "status": "PASS"
+    },
+    {
+      "stable_id": "o012-fom-u003-mcheck-003",
+      "hint_id": "o012-fom-u003-hint-003",
+      "solution_id": "o012-fom-u003-sol-003",
+      "topic": "relative cycles and boundaries",
+      "status": "PASS"
+    },
+    {
+      "stable_id": "o012-fom-u003-mcheck-004",
+      "hint_id": "o012-fom-u003-hint-004",
+      "solution_id": "o012-fom-u003-sol-004",
+      "topic": "constructing the connecting homomorphism",
+      "status": "PASS"
+    },
+    {
+      "stable_id": "o012-fom-u003-mcheck-005",
+      "hint_id": "o012-fom-u003-hint-005",
+      "solution_id": "o012-fom-u003-sol-005",
+      "topic": "exactness of the long homology sequence",
+      "status": "PASS"
+    },
+    {
+      "stable_id": "o012-fom-u003-mcheck-006",
+      "hint_id": "o012-fom-u003-hint-006",
+      "solution_id": "o012-fom-u003-sol-006",
+      "topic": "disk pair, degree zero, non-retraction, and Brouwer",
+      "status": "PASS",
+      "specific_checks": {
+        "exercise_scope_n_at_least_1_and_k_at_least_0": "PASS",
+        "connecting_isomorphism_restricted_to_k_at_least_1": "PASS",
+        "ordinary_H0_segment_used_at_k_0": "PASS",
+        "H0_relative_group_zero_proved": "PASS",
+        "piecewise_formula_all_k_at_least_0": "PASS",
+        "reduced_homology_non_retraction_argument": "PASS",
+        "radial_retraction_contradiction": "PASS"
+      }
+    }
+  ],
+  "reader_source_boundary_checks": {
+    "relative_source_start_1565_preserved": "PASS",
+    "relative_source_end_1922_preserved": "PASS",
+    "next_source_line_1923_not_translated_in_this_unit": "PASS",
+    "source_omission_and_edition_original_repair_distinguished": "PASS",
+    "pointed_degree_zero_supplement_marked_edition_original": "PASS",
+    "correction_audits_marked_edition_original_with_source_targets": "PASS",
+    "mastery_layer_marked_edition_original": "PASS",
+    "terminal_boundary_marker_exact": "PASS"
+  },
+  "final_finding_counts": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0,
+    "total": 0
+  },
+  "findings": {
+    "P1": [],
+    "P2": [],
+    "P3": []
+  },
+  "overall_assessment": {
+    "translated_relative_homology_body": "PASS",
+    "pair_homotopy": "PASS",
+    "long_exact_sequence": "PASS",
+    "FOM_PR_04": "PASS",
+    "pointed_degree_zero_supplement": "PASS",
+    "singleton_and_triple_notation": "PASS",
+    "mastery_surface": "PASS",
+    "reader_source_boundaries": "PASS",
+    "P1_blockers": 0,
+    "P2_blockers": 0,
+    "release_recommendation": "PASS_RELATIVE_SECTION_ADMISSIBLE"
+  }
+}
