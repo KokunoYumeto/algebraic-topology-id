@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "status": "PUSHED_DEPLOYED_AND_ANONYMOUSLY_BYTE_VERIFIED",
+  "date": "2026-08-25",
+  "scope": "Roberts 30/30 complete; Fomberg O012-FOM-001 through O012-FOM-005 complete through algebraic_topology.tex line 3122; composite course partial",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "commit": "5f089fc8ea886f72b1723ec4101e36ee819c11ee",
+  "tree": "c2e4d2add843378cfd3f96f92c049e614316f95e",
+  "parent": "0beb2a97d77f00d5ebe06378e5b72c44e387905b",
+  "changed_files": 66,
+  "workflow": {
+    "run_id": 32865486189,
+    "job_id": 97859601129,
+    "deployment_id": 6086351300,
+    "deployment_status_id": 17311157789,
+    "conclusion": "success",
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32865486189",
+    "job_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32865486189/job/97859601129"
+  },
+  "pages": {
+    "url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-005/",
+    "http_status": 200,
+    "bytes": 8353769,
+    "sha256": "d726c8d8a565172fb620233080f60e2ccbde4386d6fa03b099bf6219645aea90",
+    "matches_local": true
+  },
+  "commit_pinned_anonymous_readback": [
+    {
+      "role": "translated_source",
+      "path": "source/id-ID/fomberg/units/fomberg-unit-005-degree-maps-local-degree.md",
+      "http_status": 200,
+      "bytes": 40274,
+      "sha256": "ad6e31291e3df97b81f7e5a30144ca27157f907291e74f4d49c09a0620487075",
+      "matches_local": true
+    },
+    {
+      "role": "static_qa",
+      "path": "qa/FOMBERG_UNIT_005_QA.json",
+      "http_status": 200,
+      "bytes": 6268,
+      "sha256": "874d9ef02875d4fbc28458e56b2c2894be8c990a9fd1c333a0327ccd2d3c4964",
+      "matches_local": true
+    },
+    {
+      "role": "backend_receipt",
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_005_CUMULATIVE_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 7558,
+      "sha256": "0e7e3a4595697e55d2451314481be971b9b7a95555309a596ec4155660028b9f",
+      "matches_local": true
+    },
+    {
+      "role": "build_receipt",
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_005_BUILD_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 10205,
+      "sha256": "0d9d947a65982b84c5b0e2d2922fda2ab091c4ee627d7249abfd2aa948b79993",
+      "matches_local": true
+    },
+    {
+      "role": "pdf_reader",
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-005-id.pdf",
+      "http_status": 200,
+      "bytes": 4035750,
+      "sha256": "b0b0441ae16ad0065dc50dfc3ba36df49932efbdf939dc048cd332dc881f931a",
+      "matches_local": true
+    },
+    {
+      "role": "html_reader",
+      "path": "output/html/roberts-001-030-fomberg-001-005/index.html",
+      "http_status": 200,
+      "bytes": 8353769,
+      "sha256": "d726c8d8a565172fb620233080f60e2ccbde4386d6fa03b099bf6219645aea90",
+      "matches_local": true
+    },
+    {
+      "role": "package_receipt",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-005/PACKAGE_PREPARATION_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 4048,
+      "sha256": "89dfb8f01244c974ce9f0dc0ce733f25bf824c9f6ae83e1523cdbe56eba16bd4",
+      "matches_local": true
+    },
+    {
+      "role": "zenodo_publication_receipt",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-005/publication-receipt.json",
+      "http_status": 200,
+      "bytes": 4962,
+      "sha256": "635a2b4afbdbd6c39853481c422dce2eee0f19282f47857f65a62289fc0af6a9",
+      "matches_local": true
+    },
+    {
+      "role": "repository_readme",
+      "path": "README.md",
+      "http_status": 200,
+      "bytes": 6871,
+      "sha256": "37bac8db557e1551ee909f17395e08fa152b17ed81cd8de4efb0f5e211d46350",
+      "matches_local": true
+    }
+  ],
+  "verification": {
+    "push_succeeded": true,
+    "remote_main_matches_content_commit": true,
+    "pages_workflow_succeeded": true,
+    "pages_reader_exact": true,
+    "critical_commit_pinned_files_exact": true,
+    "anonymous_http_status_for_every_check": 200,
+    "credentials_recorded": false,
+    "absolute_local_paths_recorded": false,
+    "personal_name_recorded": false
+  }
+}

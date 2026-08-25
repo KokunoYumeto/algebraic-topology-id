@@ -40,28 +40,29 @@ is public and anonymously byte-exact on GitHub/Pages at content commit
 `dd46acdeb222a4cb4b8879af05e7c929111372ff` and on Zenodo at DOI
 `10.5281/zenodo.22077025` within concept `10.5281/zenodo.22061489`.
 
-Fomberg Units 001–004 now translate `algebraic_topology.tex:31–2846`, Sections
-1.1–1.10, contiguously as `O012-FOM-001`–`004` across `D60-R08`–`R11`; every
-final independent review is P1/P2/P3 zero. Unit 004 closes `FOM-PR-05` through
-`FOM-PR-11`, supplies seven solved mastery triples, and records 24 deduplicated
-source/correction events. The append-only backend preserves the 5,747-record
-Unit 003 prefix and ends at 6,113 records/7,284,299 bytes, bundle SHA-256
-`902eb71aa8a8b25e824ebe9ddae556e914e370d603382f28860392d6e186baba`.
-The verified composite HTML is 8,155,605 bytes/SHA-256
-`cd620d5557ff05fb81fb9cf044e8bd4848a6f92ef8fcd06078b8a124f6e79326`;
-the deterministic PDF is 3,964,018 bytes/SHA-256
-`bbe4b2392991ace6922230374833bf0982e00a8b6d2fddb94a990b663c8440bf`,
-424 A4 pages. Three clean builds are byte-identical; centered desktop, zero
-exposed mobile overflow, all new PDF pages 398–424, MathML, links, rights,
-privacy, append-only replay, and package gates pass. GitHub commit
-`465160690dcc3b8c92f0a7df2016027ee1b0d118` and Pages run `32854329469`
-publish the reader with exact public-byte readback. Zenodo version `0.30.4`,
-record `22097007`, DOI `10.5281/zenodo.22097007`, is published in the existing
+Fomberg Units 001–005 now translate `algebraic_topology.tex:31–3122`, Sections
+1.1–1.11, contiguously as `O012-FOM-001`–`005` across `D60-R08`–`R12`; every
+final independent review is P1/P2/P3 zero. Unit 005 preserves the optional
+degree cross-check, adds the local-degree material that is genuinely additive,
+closes `FOM-PR-12`, supplies six solved mastery triples, and records eleven
+deduplicated source/correction events plus twenty terminology decisions. The
+append-only backend preserves the 6,113-record Unit 004 prefix and ends at
+6,309 records/7,565,974 bytes, bundle SHA-256
+`c7b153cd217ac7dee87f4c399815c4d2bb51cff872c71665fe395efb3ffd95fa`.
+The verified composite HTML is 8,353,769 bytes/SHA-256
+`d726c8d8a565172fb620233080f60e2ccbde4386d6fa03b099bf6219645aea90`;
+the deterministic PDF is 4,035,750 bytes/SHA-256
+`b0b0441ae16ad0065dc50dfc3ba36df49932efbdf939dc048cd332dc881f931a`,
+437 A4 pages. Two clean builds are byte-identical; centered desktop, zero
+exposed mobile overflow, all new PDF pages 425–437, MathML, links, rights,
+privacy, append-only replay, and package gates pass. GitHub content commit
+`5f089fc8ea886f72b1723ec4101e36ee819c11ee` and Pages run `32865486189`
+publish the reader with exact public-byte readback. Zenodo version `0.30.5`,
+record `22098820`, DOI `10.5281/zenodo.22098820`, is published in the existing
 concept and all nine files match anonymous readback. Continue at exact Fomberg
-line 2847, Section 1.11, as the
-optional degree cross-check in `D60-R12`. Figshare remains blocked by the
-recorded `InactiveAccount` response and must not trigger a duplicate or retry
-loop.
+line 3123, Section 1.12, as the cellular-complexes/homology bridge in
+`D60-R12`. Figshare remains blocked by the recorded `InactiveAccount` response
+and must not trigger a duplicate or retry loop.
 
 ## Backend, QA, and publication gates
 
@@ -78,7 +79,7 @@ Git or create a duplicate. At coherent reader boundaries update the existing
 Zenodo and Figshare lineages, preserve inherited files, label partial scope,
 and anonymously verify public bytes/hashes. The immutable Units 001–013 reader
 remains historically preserved on Pages and Zenodo `10.5281/zenodo.22061490`;
-the current Zenodo version is `10.5281/zenodo.22097007`. Figshare remains
+the current Zenodo version is `10.5281/zenodo.22098820`. Figshare remains
 pending credential/account recovery, with the failed bounded attempt recorded
 without claiming publication. Do not republish a source-only duplicate.
 Record `OpenAI Codex gpt-5.6-sol, Ultra`; never publish the directing user’s
