@@ -65,7 +65,7 @@ ORGANIZATION_PATTERN = re.compile(
 
 # Replace only after all required inputs and final build/backend/visual receipts
 # exist and frozen-inputs.json has been generated from those live bytes.
-FROZEN_LEDGER_SHA256 = "UNSEALED_REPLACE_WITH_FROZEN_INPUTS_SHA256"
+FROZEN_LEDGER_SHA256 = "1b7f56493de3ea74cedd657b3d5233749696fd00c0c4e603dcc96c0323a27986"
 
 PDF_INPUT = "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-006-id.pdf"
 HTML_INPUT = "output/html/roberts-001-030-fomberg-001-006/index.html"
@@ -198,6 +198,11 @@ def source_entries() -> dict[str, Path]:
                 LANE
                 / "scripts"
                 / "finalize-build-roberts-001-030-fomberg-001-006.py"
+            ),
+            "scripts/seal-frozen-inputs-roberts-001-030-fomberg-001-006.py": (
+                LANE
+                / "scripts"
+                / "seal-frozen-inputs-roberts-001-030-fomberg-001-006.py"
             ),
             "scripts/package-release-roberts-001-030-fomberg-001-006.py": SCRIPT,
             "scripts/publish-zenodo-roberts-001-030-fomberg-001-006.py": (

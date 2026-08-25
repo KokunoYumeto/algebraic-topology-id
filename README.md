@@ -26,7 +26,9 @@ diselesaikan.
   mempertahankan tepat byte batas Roberts 30/30 + Fomberg 1.1–1.10. Versi
   [0.30.5](https://doi.org/10.5281/zenodo.22098820) mempertahankan tepat byte
   pembaca dan paket sumber/backend untuk cakupan 1.1–1.11 pada garis konsep
-  yang sama.
+  yang sama. Checkpoint terkini
+  [0.30.6](https://doi.org/10.5281/zenodo.22102865) mempertahankan tepat byte
+  pembaca, sumber/backend, dan bukti QA untuk cakupan 1.1–1.12.
 
 Checkpoint ini mencakup seluruh 30 kuliah Roberts hingga `Notes.tex:6368`:
 topologi dasar, homotopi, ruang penutup dan monodromi, grup/grupoid fundamental,

@@ -437,12 +437,8 @@ def verify_public(
     description = str(actual.get("description", ""))
     for marker in (
         "Roberts lengkap 30/30",
-        "O012-FOM-001",
-        "O012-FOM-002",
-        "O012-FOM-003",
-        "O012-FOM-004",
-        "O012-FOM-005",
-        "O012-FOM-006",
+        "O012-FOM-001–006",
+        "O012-FOM-001 sampai O012-FOM-006",
         "baris 31–3517",
         "baris 3518",
         "CC BY 4.0",

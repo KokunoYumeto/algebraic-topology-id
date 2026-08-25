@@ -55,3 +55,28 @@ bounds. At phone width,
 scrollers while the page itself did not widen. Desktop centering, mobile
 reflow, Unit 006 navigation, fragment closure, and image bounds therefore
 pass.
+
+## Public GitHub Pages browser QA
+
+The deployed reader at
+`https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-006/`
+returned HTTP 200 and exactly 12,555,960 bytes with SHA-256
+`80a7d092cb786e4d4f7ecab31ba40746cf59398db50f0adca50f2431746f7c92`,
+identical to the local HTML artifact. The GitHub Pages workflow run
+`32904157067` and deploy job `97984350511` both completed successfully.
+
+In the public browser at `1440x900`, the 1,152-pixel body remained centered
+inside a 1,425-pixel document viewport, with no page-level horizontal
+overflow. The application exposed 2,231 unique IDs, 431/431 resolved local
+fragment links, 15,273 MathML nodes, 142 semantic `.figure` blocks, and 16
+embedded figure images, all in bounds. The Unit 006 anchor opened directly at
+`Kompleks Seluler`, and the console produced zero warnings or errors.
+
+At `375x812`, the rendered document and body both measured 360 pixels wide
+with 360-pixel scroll widths and zero page-level horizontal overflow. The
+reader confined 426 wide mathematics nodes and one table to 427 local
+scrollers; all 16 images remained in bounds. A fresh navigation to the public
+Unit 006 anchor showed the component heading, introductory remark, cellular
+construction definition, and display mathematics cleanly at phone width.
+Public desktop centering, mobile reflow, fragment closure, navigation, image
+bounds, and runtime console checks therefore pass.

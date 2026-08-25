@@ -1,0 +1,15 @@
+{
+  "entries": [],
+  "final_boundary_paths": [
+    "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-006-id.pdf",
+    "output/html/roberts-001-030-fomberg-001-006/index.html",
+    "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_006.csv",
+    "qa/ROBERTS_001_030_FOMBERG_001_006_BUILD_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_006_CUMULATIVE_RECEIPT.json",
+    "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_006_CUMULATIVE_RECEIPT.md"
+  ],
+  "instructions": "After every final build, backend, browser, visual, and control gate is mutually consistent, list the exact required inputs, generate frozen-inputs.json with path/bytes/sha256 for each, set state final_inputs_sealed_local_only, keep publication-plan artifact_identities_known true with identities copied from the passing receipts, and bind the frozen-inputs.json SHA-256 in the packager. Never infer artifact identities.",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-006-v0.30.6",
+  "schema_version": "1.0",
+  "state": "template_unsealed_do_not_package"
+}

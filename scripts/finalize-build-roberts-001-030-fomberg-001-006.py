@@ -17,21 +17,21 @@ TARGET = LANE / "qa/ROBERTS_001_030_FOMBERG_001_006_BUILD_RECEIPT.json"
 # outputs. ``None`` is an intentional fail-closed scaffold value: final artifact
 # byte identities themselves are computed and cross-checked live below.
 FINAL_QA_FACTS = {
-    "pdf_pages": None,
-    "pdf_fonts": None,
-    "html_raw_ids": None,
-    "html_live_ids": None,
-    "html_fragment_links": None,
-    "html_mathml_nodes": None,
-    "html_semantic_figures": None,
-    "mobile_local_scrollers": None,
-    "new_pdf_pages": None,
-    "inspected_pdf_pages": None,
-    "individual_page_renders": None,
-    "contact_sheets": None,
-    "render_count": None,
-    "render_total_bytes": None,
-    "original_resolution_pages": None,
+    "pdf_pages": 452,
+    "pdf_fonts": 27,
+    "html_raw_ids": 2231,
+    "html_live_ids": 2231,
+    "html_fragment_links": 431,
+    "html_mathml_nodes": 15273,
+    "html_semantic_figures": 142,
+    "mobile_local_scrollers": 427,
+    "new_pdf_pages": "439-452",
+    "inspected_pdf_pages": "438-452",
+    "individual_page_renders": 15,
+    "contact_sheets": 1,
+    "render_count": 16,
+    "render_total_bytes": 7411114,
+    "original_resolution_pages": list(range(438, 453)),
 }
 
 

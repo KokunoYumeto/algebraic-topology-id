@@ -1,6 +1,56 @@
 # Build record
 
-## Roberts 001–030 plus Fomberg 001–004 — current boundary
+## Roberts 001–030 plus Fomberg 001–006 — current boundary
+
+Builder: `scripts/build-roberts-001-030-fomberg-001-006.ps1`. It freezes the
+complete Roberts component and Fomberg `algebraic_topology.tex:31–3517`, builds
+HTML and PDF twice from clean task-local scratch, requires byte identity, and
+fails closed on authority, prior-boundary drift, semantic structure, links,
+MathML, figures, rights, privacy, fonts, images, trailer IDs, backend replay,
+or artifact hashes.
+
+```powershell
+python -B scripts/qa-fomberg-unit-006.py
+python -B scripts/validate-backend-append-only-fomberg-unit-006.py
+python -B scripts/validate-backend-append-only-fomberg-unit-006-cumulative.py
+pwsh -NoProfile -File scripts/build-roberts-001-030-fomberg-001-006.ps1
+python -B scripts/finalize-build-roberts-001-030-fomberg-001-006.py
+```
+
+- Unit reader: 41,416 bytes/1,053 LF lines/55 stable IDs; SHA-256
+  `e8d4d5391f8cdf4e62a019f7a991d09e4b610633e8e660dec4e0ea2b61c538f7`.
+- HTML: `output/html/roberts-001-030-fomberg-001-006/index.html`, 12,555,960
+  bytes; SHA-256
+  `80a7d092cb786e4d4f7ecab31ba40746cf59398db50f0adca50f2431746f7c92`.
+- PDF: `output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-006-id.pdf`,
+  6,723,586 bytes/452 A4 pages; SHA-256
+  `136dc7f6fa744e87fe067a96a36a8fbee8098aad9167629653bc085f6a718c37`.
+- Manifest: 287 bytes; SHA-256
+  `a6a507bb89af051904d54629738f9f9c355eeadade5bf6c1a7d62ad48bd0858c`.
+- Build receipt: `qa/ROBERTS_001_030_FOMBERG_001_006_BUILD_RECEIPT.json`,
+  10,169 bytes; SHA-256
+  `0347abd8312f8058a769a2b0b01c4d3605798c544c832e0fff82d84ade912829`.
+- Append-only backend: 6,512 records/7,855,910 bytes; validator-defined bundle
+  SHA-256
+  `377be644a38e6db06f8992113ea47b8fc172953254c9b1005493e0ad3b7bd4ad`.
+
+The final HTML contains 2,231 reader ID attributes after excluding the browser
+QA overlay, 431/431 resolved fragments, 15,273 native MathML nodes, and 142
+semantic figures. Browser QA confirms a centered 1,152-pixel body at
+1,440 × 900 and a 360/360-pixel body and document at 375 × 812 with zero
+page-level overflow; 427 intentionally wide formulas/tables scroll only inside
+their local containers. PDF pages 438–452 were rendered and inspected; all 27
+fonts are embedded/subset/ToUnicode. The PDF remains disclosed as untagged.
+
+GitHub content commit `46fb3110a7aa151fcf3c9503ea58735db793e336`, Pages
+run `32904157067`, job `97984350511`, deployment `6092930617`, and deployment
+status `17328440485` succeeded, and the public HTML matches local bytes.
+Zenodo version `0.30.6`, record `22102865`, DOI
+`10.5281/zenodo.22102865`, preserves the reader-first nine-file package in the
+existing concept; every file was anonymously read back with its exact local
+SHA-256. The next build begins at Fomberg line 3518, Section 1.13.
+
+## Roberts 001–030 plus Fomberg 001–004 — prior boundary
 
 Builder: `scripts/build-roberts-001-030-fomberg-001-004.ps1`. It freezes the
 complete Roberts component and Fomberg `algebraic_topology.tex:31–2846`, builds
