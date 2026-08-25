@@ -42,9 +42,10 @@ page-level overflow; 427 intentionally wide formulas/tables scroll only inside
 their local containers. PDF pages 438–452 were rendered and inspected; all 27
 fonts are embedded/subset/ToUnicode. The PDF remains disclosed as untagged.
 
-GitHub content commit `46fb3110a7aa151fcf3c9503ea58735db793e336`, Pages
-run `32904157067`, job `97984350511`, deployment `6092930617`, and deployment
-status `17328440485` succeeded, and the public HTML matches local bytes.
+GitHub release commit `372f9d01d691393760779dc840b6d8c36ea2b025`, Pages
+run `32906265163`, job `97990960689`, deployment `6093297209`, and deployment
+status `17329343917` succeeded, and the public HTML plus nine commit-pinned
+witnesses match local bytes.
 Zenodo version `0.30.6`, record `22102865`, DOI
 `10.5281/zenodo.22102865`, preserves the reader-first nine-file package in the
 existing concept; every file was anonymously read back with its exact local

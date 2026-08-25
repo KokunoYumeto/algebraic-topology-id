@@ -2,7 +2,7 @@
 
 Updated: 2026-08-26
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Fomberg Units 001–006 translate `algebraic_topology.tex:31–3517` contiguously through Sections 1.1–1.12, with all independent reviews at P1/P2/P3 zero. The Unit 006 boundary passes semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, package, and hash gates. GitHub content commit `46fb3110a7aa151fcf3c9503ea58735db793e336`, Pages run `32904157067`, and Zenodo version `0.30.6`, record `22102865`, DOI `10.5281/zenodo.22102865`, are public on their existing lineages; Pages and all nine Zenodo files match local bytes under anonymous readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. Continue at exact Fomberg line 3518 under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Fomberg Units 001–006 translate `algebraic_topology.tex:31–3517` contiguously through Sections 1.1–1.12, with all independent reviews at P1/P2/P3 zero. The Unit 006 boundary passes semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, package, and hash gates. GitHub release commit `372f9d01d691393760779dc840b6d8c36ea2b025`, Pages run `32906265163`, and Zenodo version `0.30.6`, record `22102865`, DOI `10.5281/zenodo.22102865`, are public on their existing lineages; Pages, nine commit-pinned GitHub witnesses, and all nine Zenodo files match local bytes under anonymous readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. Continue at exact Fomberg line 3518 under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
 ### Live recovery note — Fomberg Unit 006 closure and publication, 2026-08-26
 
@@ -49,13 +49,29 @@ anonymous readback. Receipt
 `release/zenodo-roberts-001-030-fomberg-001-006/publication-receipt.json` is
 4,986 bytes/SHA-256
 `ea94756cb1770d4627a55e374728de411fa710d65db69c1ed5d176b15c6acb0a`.
-GitHub content commit `46fb3110a7aa151fcf3c9503ea58735db793e336`, tree
-`a26e129eed116a9c0e1c8d5a606f1f01949dba7b`, Pages run `32904157067`, job
-`97984350511`, deployment `6092930617`, and status `17328440485` succeeded;
-the public Pages HTML matches local bytes. A final control commit and manual
-Pages replay will bind the publication receipt without changing reader bytes.
+GitHub release commit `372f9d01d691393760779dc840b6d8c36ea2b025`, tree
+`772a52a3150f0f1a654818e6c1031e715acd5228`, Pages run `32906265163`, job
+`97990960689`, deployment `6093297209`, and status `17329343917` succeeded;
+the public Pages HTML and nine commit-pinned source/release witnesses match
+local bytes. Receipt
+`00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_006.json`
+is 4,195 bytes/SHA-256
+`b6e1b10c91aeca726c60132eca46a53e9fbc57ba0a788fbeda7010fb50382d19`.
 Continue with Section 1.13 at lines 3518–4185 as `O012-FOM-007`, the terminal
 selected Fomberg cellular-homology bridge.
+
+The Unit 007 source freeze is already complete but does not advance the
+translation cursor. `qa/FOMBERG_UNIT_007_SOURCE_AUDIT.json` is 18,838
+bytes/SHA-256
+`1cae10108e5af2dc3c0a9b63dd76861b7c44f42087f3ff5ec158a8d69b68b159`.
+It binds exact lines 3518–4185 (26,533 bytes/SHA-256
+`a22afacfdbecdfad48942421412c4cff1c0f317eb77f18253578125a5d0d7ce2`),
+15 semantic environments, 17 conceptual diagram groups, zero source
+exercises, eight exact correction flags, and mandatory repairs `FOM-PR-13`–15.
+The next source text after this terminal selected bridge is line 4186,
+`\subsection{Extras before cohomology}`. Translation starts at line 3518 and
+must not be marked closed until all three repairs and six original mastery
+triples pass independent review.
 
 ### Live recovery note — Fomberg Unit 005 closure and publication, 2026-08-25
 

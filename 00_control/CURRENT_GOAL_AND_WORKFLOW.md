@@ -54,8 +54,8 @@ the deterministic PDF is 6,723,586 bytes/SHA-256
 `136dc7f6fa744e87fe067a96a36a8fbee8098aad9167629653bc085f6a718c37`,
 452 A4 pages. Two clean builds are byte-identical; centered desktop, zero
 exposed mobile overflow, PDF pages 438–452, MathML, links, rights, privacy,
-append-only replay, and package gates pass. GitHub content commit
-`46fb3110a7aa151fcf3c9503ea58735db793e336` and Pages run `32904157067`
+append-only replay, and package gates pass. GitHub release commit
+`372f9d01d691393760779dc840b6d8c36ea2b025` and Pages run `32906265163`
 publish the reader with exact public-byte readback. Zenodo version `0.30.6`,
 record `22102865`, DOI `10.5281/zenodo.22102865`, is published in the existing
 concept and all nine files match anonymous readback. Continue at exact Fomberg

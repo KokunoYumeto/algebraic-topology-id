@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "status": "PUSHED_DEPLOYED_AND_ANONYMOUSLY_BYTE_VERIFIED",
+  "date": "2026-08-26",
+  "scope": "Roberts 30/30 complete; Fomberg O012-FOM-001 through O012-FOM-006 complete through algebraic_topology.tex line 3517; composite course partial",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "commit": "372f9d01d691393760779dc840b6d8c36ea2b025",
+  "tree": "772a52a3150f0f1a654818e6c1031e715acd5228",
+  "parent": "46fb3110a7aa151fcf3c9503ea58735db793e336",
+  "changed_files": 33,
+  "workflow": {
+    "event": "workflow_dispatch",
+    "run_id": 32906265163,
+    "job_id": 97990960689,
+    "deployment_id": 6093297209,
+    "deployment_status_id": 17329343917,
+    "conclusion": "success",
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32906265163",
+    "job_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32906265163/job/97990960689"
+  },
+  "pages": {
+    "url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-006/",
+    "http_status": 200,
+    "bytes": 12555960,
+    "sha256": "80a7d092cb786e4d4f7ecab31ba40746cf59398db50f0adca50f2431746f7c92",
+    "matches_local": true
+  },
+  "commit_pinned_anonymous_readback": [
+    {
+      "role": "translated_source",
+      "path": "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md",
+      "http_status": 200,
+      "bytes": 41416,
+      "sha256": "e8d4d5391f8cdf4e62a019f7a991d09e4b610633e8e660dec4e0ea2b61c538f7",
+      "matches_local": true
+    },
+    {
+      "role": "static_qa",
+      "path": "qa/FOMBERG_UNIT_006_QA.json",
+      "http_status": 200,
+      "bytes": 11837,
+      "sha256": "ff9cdd26fadc775c485f64aa2b6e5ae1444a6925c73897386bcb2d75db4db5de",
+      "matches_local": true
+    },
+    {
+      "role": "backend_receipt",
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_006_CUMULATIVE_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 10567,
+      "sha256": "2962fc0a5584c64a27aca24929e9f8b5ac4333ef311207af1c6725b7b94d4909",
+      "matches_local": true
+    },
+    {
+      "role": "build_receipt",
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_006_BUILD_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 10169,
+      "sha256": "0347abd8312f8058a769a2b0b01c4d3605798c544c832e0fff82d84ade912829",
+      "matches_local": true
+    },
+    {
+      "role": "pdf_reader",
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-006-id.pdf",
+      "http_status": 200,
+      "bytes": 6723586,
+      "sha256": "136dc7f6fa744e87fe067a96a36a8fbee8098aad9167629653bc085f6a718c37",
+      "matches_local": true
+    },
+    {
+      "role": "html_reader",
+      "path": "output/html/roberts-001-030-fomberg-001-006/index.html",
+      "http_status": 200,
+      "bytes": 12555960,
+      "sha256": "80a7d092cb786e4d4f7ecab31ba40746cf59398db50f0adca50f2431746f7c92",
+      "matches_local": true
+    },
+    {
+      "role": "package_receipt",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-006/PACKAGE_PREPARATION_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 4049,
+      "sha256": "1e747155989a0eed17029445d7e17548c5bd38ff3ce5f889176f848401d554d1",
+      "matches_local": true
+    },
+    {
+      "role": "zenodo_publication_receipt",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-006/publication-receipt.json",
+      "http_status": 200,
+      "bytes": 4986,
+      "sha256": "ea94756cb1770d4627a55e374728de411fa710d65db69c1ed5d176b15c6acb0a",
+      "matches_local": true
+    },
+    {
+      "role": "repository_readme",
+      "path": "README.md",
+      "http_status": 200,
+      "bytes": 7247,
+      "sha256": "ed0b5e86fcfc73b3d75451f70f4005cb3b2c73249bf3acc0e7618be665874704",
+      "matches_local": true
+    }
+  ],
+  "verification": {
+    "push_succeeded": true,
+    "remote_main_matched_deployed_commit_at_verification": true,
+    "pages_workflow_succeeded": true,
+    "pages_reader_exact": true,
+    "critical_commit_pinned_files_exact": true,
+    "anonymous_http_status_for_every_check": 200,
+    "credentials_recorded": false,
+    "absolute_local_paths_recorded": false,
+    "personal_name_recorded": false
+  }
+}

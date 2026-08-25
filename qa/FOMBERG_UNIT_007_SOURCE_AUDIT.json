@@ -1,0 +1,508 @@
+{
+  "audit_id": "O012-FOMBERG-UNIT-007-SOURCE-AUDIT",
+  "schema_version": "1.0.0",
+  "date": "2026-08-26",
+  "status": "PASS_WITH_MANDATORY_REPAIRS_IDENTIFIED",
+  "scope_status": "FROZEN_SOURCE_AUDIT_ONLY_NOT_TRANSLATED",
+  "role_id": "O012",
+  "course_id": "D60",
+  "course_route_unit_id": "D60-R12",
+  "edition_unit_id": "O012-FOM-007",
+  "component": "Fomberg Algebraic Topology Section 1.13: Cellular homology",
+  "license": "CC BY-SA 4.0",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "source": {
+    "official_notes_page": "https://yp.srht.site/notes/",
+    "official_repository": "https://git.sr.ht/~yp/math-notes",
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+    "authority_identity": {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "bytes": 223886,
+      "lf_lines": 6069,
+      "encoding": "UTF-8",
+      "newline": "LF",
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    "license_identity": {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/LICENSE",
+      "bytes": 20140,
+      "sha256": "0b7fc2608b6d990314e908569407a6058b4a29175167c6d91ca0070c946661be"
+    },
+    "header_identity": {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/header.tex",
+      "bytes": 14097,
+      "sha256": "7c4c5cbe901c1b6c7ae8d6053d42cd28110ece34dd90bc60c5bcb7423e45e28e"
+    },
+    "selected_span": {
+      "line_start": 3518,
+      "line_end": 4185,
+      "lf_lines": 668,
+      "byte_offset_start_zero_based": 135986,
+      "byte_offset_end_exclusive_zero_based": 162519,
+      "byte_position_start_one_based": 135987,
+      "byte_position_end_inclusive_one_based": 162519,
+      "bytes": 26533,
+      "sha256": "a22afacfdbecdfad48942421412c4cff1c0f317eb77f18253578125a5d0d7ce2"
+    },
+    "text_witnesses": {
+      "line_3518": "\\subsection{Cellular homology}",
+      "line_3520": "\\begin{remark}",
+      "line_4184": "\\end{example}",
+      "line_4185": "",
+      "next_line_4186": "\\subsection{Extras before cohomology}"
+    },
+    "next_line": 4186,
+    "next_line_text": "\\subsection{Extras before cohomology}"
+  },
+  "source_census": {
+    "subsections": 1,
+    "semantic_environment_total": 15,
+    "semantic_environments": {
+      "definition": 2,
+      "example": 6,
+      "lemma": 1,
+      "proof": 1,
+      "remark": 5,
+      "theorem": 0,
+      "proposition": 0,
+      "exercise": 0
+    },
+    "theorem_like_statement_total": 1,
+    "proof_total": 1,
+    "exercise_total": 0,
+    "structural_math_environments": {
+      "cases": 9,
+      "enumerate": 2
+    },
+    "math_syntax": {
+      "display_math_delimiter_pairs": 35,
+      "inline_dollar_delimiter_pairs": 146,
+      "cases_environments": 9,
+      "counting_note": "Counts use the exact selected bytes after removing each full-line TeX comment at its first percent sign; display counts are paired \\[ and \\] delimiters, and inline counts are unescaped dollar tokens divided by two."
+    },
+    "diagram_syntax": {
+      "tikzcd_environments": 9,
+      "tikzpicture_environments": 3,
+      "inline_tikz_occurrences": 10,
+      "primitive_total": 22,
+      "conceptual_diagram_groups": 17,
+      "counting_note": "A conceptual group is one reader-facing diagram or chain-complex display; a group may contain two inline TikZ primitives."
+    },
+    "inactive_full_comment_lines": 26,
+    "inactive_comment_spans": [
+      {
+        "line_start": 3545,
+        "line_end": 3568,
+        "purpose": "unfinished expansion of lemma part (1)"
+      },
+      {
+        "line_start": 3592,
+        "line_end": 3592,
+        "purpose": "unfinished skeleton-isomorphism chain"
+      },
+      {
+        "line_start": 3617,
+        "line_end": 3617,
+        "purpose": "q.uiver provenance URL for the following inline diagram"
+      }
+    ],
+    "source_labels": [
+      "exmp:cw-for-torus-homology",
+      "exmp:homology-of-genus-two",
+      "exmp:homology-of-rpn"
+    ],
+    "cross_references": {
+      "within_selected_span": [
+        "exmp:cw-for-torus-homology",
+        "exmp:homology-of-genus-two"
+      ],
+      "prior_selected_units": [
+        "exmp:cw-for-sn-one-n-cell",
+        "ex:cw-for-cp",
+        "exmp:cw-for-torus",
+        "prop:local-degree-for-global-degree"
+      ]
+    }
+  },
+  "mathematical_environment_spans": [
+    {
+      "prospective_id": "o012-fom-u007-rem-good-pair",
+      "kind": "remark",
+      "line_start": 3520,
+      "line_end": 3523
+    },
+    {
+      "prospective_id": "o012-fom-u007-lem-cellular-skeleta-homology",
+      "kind": "lemma",
+      "line_start": 3525,
+      "line_end": 3540,
+      "repair_ids": [
+        "FOM-PR-13"
+      ]
+    },
+    {
+      "prospective_id": "o012-fom-u007-proof-cellular-skeleta-homology",
+      "kind": "proof",
+      "line_start": 3541,
+      "line_end": 3594,
+      "proof_status": "source_incomplete_for_general_part_3",
+      "repair_ids": [
+        "FOM-PR-13"
+      ]
+    },
+    {
+      "prospective_id": "o012-fom-u007-def-cellular-chains",
+      "kind": "definition",
+      "line_start": 3596,
+      "line_end": 3610,
+      "repair_ids": [
+        "FOM-PR-14"
+      ]
+    },
+    {
+      "prospective_id": "o012-fom-u007-def-cellular-boundary",
+      "kind": "definition",
+      "line_start": 3612,
+      "line_end": 3640,
+      "repair_ids": [
+        "FOM-PR-14"
+      ]
+    },
+    {
+      "prospective_id": "o012-fom-u007-rem-cellular-incidence-formula",
+      "kind": "remark",
+      "line_start": 3642,
+      "line_end": 3664,
+      "repair_ids": [
+        "FOM-PR-15"
+      ]
+    },
+    {
+      "prospective_id": "o012-fom-u007-rem-boundary-notation",
+      "kind": "remark",
+      "line_start": 3666,
+      "line_end": 3670
+    },
+    {
+      "prospective_id": "o012-fom-u007-rem-computation-summary",
+      "kind": "remark",
+      "line_start": 3672,
+      "line_end": 3682,
+      "repair_ids": [
+        "FOM-PR-15"
+      ]
+    },
+    {
+      "prospective_id": "o012-fom-u007-ex-sphere-homology",
+      "kind": "example",
+      "line_start": 3684,
+      "line_end": 3710
+    },
+    {
+      "prospective_id": "o012-fom-u007-ex-complex-projective-homology",
+      "kind": "example",
+      "line_start": 3712,
+      "line_end": 3738
+    },
+    {
+      "prospective_id": "o012-fom-u007-ex-torus-homology",
+      "kind": "example",
+      "line_start": 3740,
+      "line_end": 3845,
+      "source_label": "exmp:cw-for-torus-homology"
+    },
+    {
+      "prospective_id": "o012-fom-u007-ex-genus-two-homology",
+      "kind": "example",
+      "line_start": 3847,
+      "line_end": 3971,
+      "source_label": "exmp:homology-of-genus-two"
+    },
+    {
+      "prospective_id": "o012-fom-u007-rem-genus-g-homology",
+      "kind": "remark",
+      "line_start": 3973,
+      "line_end": 3988
+    },
+    {
+      "prospective_id": "o012-fom-u007-ex-klein-bottle-homology",
+      "kind": "example",
+      "line_start": 3990,
+      "line_end": 4097
+    },
+    {
+      "prospective_id": "o012-fom-u007-ex-real-projective-space-homology",
+      "kind": "example",
+      "line_start": 4099,
+      "line_end": 4184,
+      "source_label": "exmp:homology-of-rpn"
+    }
+  ],
+  "prospective_diagram_id_inventory": [
+    {
+      "prospective_id": "o012-fom-u007-fig-les-vanishing",
+      "line_start": 3571,
+      "line_end": 3576,
+      "source_primitives": 1,
+      "syntax": "tikzcd"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-cellular-chain-complex",
+      "line_start": 3603,
+      "line_end": 3609,
+      "source_primitives": 1,
+      "syntax": "tikzcd"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-cellular-boundary-diagram",
+      "line_start": 3618,
+      "line_end": 3635,
+      "source_primitives": 1,
+      "syntax": "tikzcd"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-sphere-chain-complex",
+      "line_start": 3690,
+      "line_end": 3699,
+      "source_primitives": 1,
+      "syntax": "tikzcd"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-complex-projective-chain-complex",
+      "line_start": 3719,
+      "line_end": 3729,
+      "source_primitives": 1,
+      "syntax": "tikzcd"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-torus-polygon",
+      "line_start": 3743,
+      "line_end": 3761,
+      "source_primitives": 1,
+      "syntax": "tikzpicture"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-torus-chain-complex",
+      "line_start": 3763,
+      "line_end": 3770,
+      "source_primitives": 1,
+      "syntax": "tikzcd"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-torus-attaching-projection",
+      "line_start": 3783,
+      "line_end": 3803,
+      "source_primitives": 2,
+      "syntax": "inline_tikz"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-torus-nullhomotopy",
+      "line_start": 3808,
+      "line_end": 3829,
+      "source_primitives": 2,
+      "syntax": "inline_tikz"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-genus-two-polygon",
+      "line_start": 3852,
+      "line_end": 3906,
+      "source_primitives": 1,
+      "syntax": "tikzpicture"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-genus-two-chain-complex",
+      "line_start": 3909,
+      "line_end": 3916,
+      "source_primitives": 1,
+      "syntax": "tikzcd"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-genus-two-nullhomotopy",
+      "line_start": 3920,
+      "line_end": 3959,
+      "source_primitives": 2,
+      "syntax": "inline_tikz"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-klein-bottle-polygon",
+      "line_start": 3992,
+      "line_end": 4010,
+      "source_primitives": 1,
+      "syntax": "tikzpicture"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-klein-bottle-chain-complex",
+      "line_start": 4015,
+      "line_end": 4022,
+      "source_primitives": 1,
+      "syntax": "tikzcd"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-klein-bottle-attaching-projection",
+      "line_start": 4026,
+      "line_end": 4046,
+      "source_primitives": 2,
+      "syntax": "inline_tikz"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-klein-bottle-degree-two",
+      "line_start": 4048,
+      "line_end": 4069,
+      "source_primitives": 2,
+      "syntax": "inline_tikz"
+    },
+    {
+      "prospective_id": "o012-fom-u007-fig-real-projective-chain-complex",
+      "line_start": 4105,
+      "line_end": 4113,
+      "source_primitives": 1,
+      "syntax": "tikzcd"
+    }
+  ],
+  "proof_repairs_required": [
+    {
+      "repair_id": "FOM-PR-13",
+      "severity": "P1",
+      "source_lines": "3525-3594",
+      "observed": "The lemma states H_k(X^(n)) is isomorphic to H_k(X) for every CW complex when n is greater than k, but the active proof handles only finite-dimensional X and then ends; the sole general continuation is an inactive one-line comment.",
+      "required_closure": "Supply a separately identified complete proof for arbitrary CW complexes, including the finite-subcomplex or direct-limit passage, while retaining the finite-dimensional argument as the first case."
+    },
+    {
+      "repair_id": "FOM-PR-14",
+      "severity": "P1",
+      "source_lines": "3596-3640,3684-4184",
+      "observed": "The source defines cellular chain groups and their differential but never states or proves the cellular-homology theorem identifying the homology of this complex with singular homology. The first two examples write H^CW, while later examples silently switch to H.",
+      "required_closure": "Add a separately identified theorem and complete proof that H_n(C_*^CW(X)) is naturally isomorphic to H_n(X), with the filtration, exact sequences, and naturality typed explicitly before singular-homology notation is used."
+    },
+    {
+      "repair_id": "FOM-PR-15",
+      "severity": "P1",
+      "source_lines": "3642-3664",
+      "observed": "The cellular incidence-number formula is asserted in a remark and then used throughout the computations, but no proof relates q composed with the attaching map to the connecting morphism and chosen oriented cell generators.",
+      "required_closure": "State the formula as a theorem and prove it from the connecting map, quotient projections, orientations, and degrees, after correcting the sphere dimensions and wedge-summand index."
+    }
+  ],
+  "source_correction_flags": [
+    {
+      "flag_id": "FOM-U007-SRC-001",
+      "severity": "P1",
+      "source_lines": "3571-3589",
+      "observed": "The long-exact-sequence diagram types its left relative group as (H_{k+1}X^(n),X^(n-1)), and line 3582 concludes H_k(X^(n-1)) isomorphic to H_k(X^(k)); the exact-sequence conclusion should compare the adjacent skeleta H_k(X^(n-1)) and H_k(X^(n)).",
+      "action": "Correct the relative-group parentheses and the terminal skeleton index before translating the induction."
+    },
+    {
+      "flag_id": "FOM-U007-SRC-002",
+      "severity": "P2",
+      "source_lines": "3596-3602",
+      "observed": "The cellular chain group is defined for X, but line 3602 changes the argument to W without introducing W.",
+      "action": "Use C_n^CW(X) consistently."
+    },
+    {
+      "flag_id": "FOM-U007-SRC-003",
+      "severity": "P1",
+      "source_lines": "3647-3658",
+      "observed": "The quotient denominator repeats S_beta for every delta not equal to beta, and the resulting attaching-projection composite is typed S^n_alpha to S^n_beta although every displayed map has dimension n-1.",
+      "action": "Replace the denominator summands by S_delta and type phi_{alpha beta}: S^(n-1)_alpha to S^(n-1)_beta."
+    },
+    {
+      "flag_id": "FOM-U007-SRC-004",
+      "severity": "P2",
+      "source_lines": "3830-3836,3960-3962",
+      "observed": "Null-homotopic attaching-projection maps are called zero maps; the required conclusion is that their degrees, and hence the corresponding cellular-boundary coefficients, are zero.",
+      "action": "State null-homotopy and degree zero without identifying a map of spaces with an algebraic zero map."
+    },
+    {
+      "flag_id": "FOM-U007-SRC-005",
+      "severity": "P1",
+      "source_lines": "4073-4077",
+      "observed": "The Klein-bottle computation states deg(phi_{Delta a}) equals 2 twice, then concludes d_2(Delta)=2(a+b); the second coefficient must refer to phi_{Delta b} if that conclusion is retained.",
+      "action": "Recompute both attaching-word exponent sums from the drawn edge orientations and name the a and b coefficients separately."
+    },
+    {
+      "flag_id": "FOM-U007-SRC-006",
+      "severity": "P3",
+      "source_lines": "4081-4086",
+      "observed": "The final free summand is written with plain Z rather than the source's blackboard-bold integer macro.",
+      "action": "Normalize Z to \\Z without changing the group."
+    },
+    {
+      "flag_id": "FOM-U007-SRC-007",
+      "severity": "P1",
+      "source_lines": "4143-4149",
+      "observed": "For the n-dimensional real-projective-space calculation, a preimage point is declared to lie in S^1; the active map and its antipodal pair lie in S^(n-1).",
+      "action": "Replace S^1 by S^(n-1) and keep the local-degree neighborhoods dimensionally typed."
+    },
+    {
+      "flag_id": "FOM-U007-SRC-008",
+      "severity": "P2",
+      "source_lines": "4151-4165",
+      "observed": "After computing the degree of the sphere map, the source writes deg(d_n)=2 or 0 even though d_n is a homomorphism of cellular chain groups, not a map of oriented manifolds with a degree.",
+      "action": "Say that the sphere map has degree 1+(-1)^n and therefore d_n is multiplication by 2 for even n and the zero homomorphism for odd n."
+    }
+  ],
+  "dependencies_and_assets": {
+    "external_asset_files": 0,
+    "includegraphics_occurrences": 0,
+    "input_or_include_occurrences": 0,
+    "citation_occurrences": 0,
+    "active_url_occurrences": 0,
+    "inactive_q_uiver_urls": 1,
+    "graphics_closure": "All graphics in the selected span are inline TikZ or TikZ-CD; there are no external image files.",
+    "required_header_surfaces": [
+      "tikz",
+      "tikz-cd",
+      "patterns",
+      "custom directional edge styles used by ->- and -<-",
+      "custom eqpic style",
+      "macros including CW, del, set, Z, D, CP, RP, taking, stor, and stand"
+    ],
+    "prior_source_label_dependencies": [
+      "exmp:cw-for-sn-one-n-cell",
+      "ex:cw-for-cp",
+      "exmp:cw-for-torus",
+      "prop:local-degree-for-global-degree"
+    ]
+  },
+  "prospective_stable_id_summary": {
+    "unit_root_id": "o012-fom-u007",
+    "semantic_environment_ids": 15,
+    "diagram_ids": 17,
+    "repair_ids_reserved": [
+      "FOM-PR-13",
+      "FOM-PR-14",
+      "FOM-PR-15"
+    ],
+    "source_correction_ids": [
+      "FOM-U007-SRC-001",
+      "FOM-U007-SRC-002",
+      "FOM-U007-SRC-003",
+      "FOM-U007-SRC-004",
+      "FOM-U007-SRC-005",
+      "FOM-U007-SRC-006",
+      "FOM-U007-SRC-007",
+      "FOM-U007-SRC-008"
+    ]
+  },
+  "production_implications": {
+    "source_exercises_available": 0,
+    "mastery_surface_requirement": "All six ordinary Unit 007 mastery problems, hints, and complete solutions must be edition-original unless a separately rights-cleared prompt is admitted.",
+    "diagram_requirement": "Preserve all 17 conceptual diagram groups with accessible, reader-width-safe redraws or faithful semantic equivalents.",
+    "admission_gate": "Do not mark Unit 007 mathematically closed until FOM-PR-13 through FOM-PR-15 and all P1 source corrections are independently checked."
+  },
+  "reproduction": {
+    "line_rule": "Python bytes.splitlines(keepends=True), zero-based slice [3517:4185], preserving every LF including the blank line 4185.",
+    "byte_rule": "SHA-256 and byte count are over the exact UTF-8 slice; offsets are measured in the frozen authority byte stream.",
+    "comment_rule": "For structural counts, discard source text from the first percent sign through the end of each line; inactive commented TeX is counted separately and never promoted to active source.",
+    "environment_rule": "Pair active begin/end tokens by environment name; semantic totals include only definition, example, lemma, proof, remark, theorem, proposition, and exercise.",
+    "math_rule": "Count active paired display delimiters and unescaped dollar delimiters after comment removal; report cases separately rather than inflating the display count.",
+    "diagram_rule": "Count active tikzcd, tikzpicture, and inline tikz primitives exactly; additionally group primitives by their enclosing reader-facing display or centered figure."
+  },
+  "next_cursor": {
+    "completed_source_lines": "3518-4185",
+    "next_exact_cursor": 4186,
+    "next_exact_text": "\\subsection{Extras before cohomology}",
+    "selected_fomberg_bridge_end": 4185,
+    "selected_bridge_complete_after_this_unit": true
+  }
+}
