@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "status": "PUBLISHED_AND_ANONYMOUSLY_VERIFIED",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-003-v0.30.3",
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Roberts 1–30 dan Jembatan Homologi §1.1–1.6",
+  "version": "0.30.3",
+  "license": "cc-by-sa-4.0",
+  "scope": "Roberts Notes.tex lines 134-6368, lectures 1-30 complete; Fomberg algebraic_topology.tex lines 31-1922, Sections 1.1-1.6, O012-FOM-001/002/003 complete; next line 1923; composite course partial",
+  "record_id": 22088708,
+  "doi": "10.5281/zenodo.22088708",
+  "concept_doi": "10.5281/zenodo.22061489",
+  "public_record_url": "https://zenodo.org/records/22088708",
+  "metadata_sha256": "3da6675bcda55bc2b253cfc64e341e31eaef8b58908edfc87e7c0ee1dddf2e66",
+  "manifest_sha256": "f230886c6d1fdb368bddbbeed103756bd502ba4883c04d6d740107cd4fc7ffb1",
+  "package_receipt_sha256": "199238c2a24263643af72e0ade18cb93339da1f45ffe2f0a4b1927706db56b9f",
+  "upload_order": [
+    "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_READER.pdf",
+    "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_READER.html",
+    "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_EDITABLE_SOURCE_BACKEND.zip",
+    "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_QA_PROVENANCE.zip",
+    "LICENSE.md",
+    "README_RELEASE.md",
+    "RELEASE_RIGHTS.md",
+    "release-manifest.json",
+    "SHA256SUMS"
+  ],
+  "files": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_READER.pdf",
+      "status": 200,
+      "bytes": 3550987,
+      "sha256": "57382750a561667bf02eb98bd7f4806618c3a785f4ca18ceb4c6679c46543b4b",
+      "url": "https://zenodo.org/api/records/22088708/files/00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_READER.pdf/content"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_READER.html",
+      "status": 200,
+      "bytes": 7190228,
+      "sha256": "484a2a501df79b1810567810d0b454a18298a4cb43ef466c4e082622216b9542",
+      "url": "https://zenodo.org/api/records/22088708/files/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_READER.html/content"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_EDITABLE_SOURCE_BACKEND.zip",
+      "status": 200,
+      "bytes": 2394549,
+      "sha256": "eae2b74e1ac7669b540440dce8ef5e0f2a5cecfedc6e427221898993c5a7d59e",
+      "url": "https://zenodo.org/api/records/22088708/files/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_EDITABLE_SOURCE_BACKEND.zip/content"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_QA_PROVENANCE.zip",
+      "status": 200,
+      "bytes": 188261,
+      "sha256": "dfd1cc241d04488559431746fc5149c8c8dc7747c35857673077848c6fb3af13",
+      "url": "https://zenodo.org/api/records/22088708/files/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_QA_PROVENANCE.zip/content"
+    },
+    {
+      "filename": "LICENSE.md",
+      "status": 200,
+      "bytes": 1488,
+      "sha256": "48d38ec397df42f7e395318b117591d784e3cc7a3bcf49e63aa37b043a86e985",
+      "url": "https://zenodo.org/api/records/22088708/files/LICENSE.md/content"
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "status": 200,
+      "bytes": 3710,
+      "sha256": "ead13c19caf37fd925b46931ce10960686a48783fb0474c9b0a1c2c31a549bdd",
+      "url": "https://zenodo.org/api/records/22088708/files/README_RELEASE.md/content"
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "status": 200,
+      "bytes": 3255,
+      "sha256": "613e13c3efcbdc41d2b8d8db2ca4784c1e9ad8d1e9a89510a3d2425f81fe8916",
+      "url": "https://zenodo.org/api/records/22088708/files/RELEASE_RIGHTS.md/content"
+    },
+    {
+      "filename": "release-manifest.json",
+      "status": 200,
+      "bytes": 37364,
+      "sha256": "f230886c6d1fdb368bddbbeed103756bd502ba4883c04d6d740107cd4fc7ffb1",
+      "url": "https://zenodo.org/api/records/22088708/files/release-manifest.json/content"
+    },
+    {
+      "filename": "SHA256SUMS",
+      "status": 200,
+      "bytes": 877,
+      "sha256": "126cd85ce864c225734bd14abb420f191887dc801fd263196bcdbdf10731101c",
+      "url": "https://zenodo.org/api/records/22088708/files/SHA256SUMS/content"
+    }
+  ],
+  "verification": {
+    "exact_public_inventory": true,
+    "reader_first_by_filename": true,
+    "pdf_uploaded_first": true,
+    "anonymous_byte_readback": true,
+    "all_sha256_match_local": true,
+    "existing_concept_reused": true,
+    "credentials_recorded": false,
+    "authorization_header_recorded": false,
+    "bucket_url_recorded": false,
+    "absolute_local_paths_recorded": false,
+    "user_personal_name_recorded": false
+  },
+  "provenance": "Published by Codex at the user's direction; production note: OpenAI Codex gpt-5.6-sol, Ultra; source authors and human direction remain credited.",
+  "non_endorsement": "Independent Indonesian edition; no source-author or institutional endorsement is implied."
+}

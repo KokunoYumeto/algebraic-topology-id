@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "status": "PUSHED_DEPLOYED_AND_ANONYMOUSLY_BYTE_VERIFIED",
+  "date": "2026-08-25",
+  "scope": "Roberts 30/30 complete; Fomberg O012-FOM-001 through O012-FOM-003 complete through algebraic_topology.tex line 1922; composite course partial",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "commit": "c8fcc0e575de9ac902a6ca79eee479462cff2f27",
+  "tree": "4d84a447edcd8995333f3be10eabb9173bacd426",
+  "parent": "5f9a0ce7a96f36502ab75d0603e6ba1dc28ac86c",
+  "changed_files": 72,
+  "workflow": {
+    "run_id": 32797456049,
+    "job_id": 97651554751,
+    "deployment_id": 6074581337,
+    "deployment_status_id": 17279967348,
+    "conclusion": "success",
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32797456049",
+    "job_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32797456049/job/97651554751"
+  },
+  "pages": {
+    "url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-003/",
+    "http_status": 200,
+    "bytes": 7190228,
+    "sha256": "484a2a501df79b1810567810d0b454a18298a4cb43ef466c4e082622216b9542",
+    "matches_local": true
+  },
+  "commit_pinned_anonymous_readback": [
+    {
+      "role": "translated_source",
+      "path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+      "http_status": 200,
+      "bytes": 65540,
+      "sha256": "2571f62b977c00bff20e04756925a73497c0129f8c987940db0e1a649177f6b9",
+      "matches_local": true
+    },
+    {
+      "role": "pdf_reader",
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-003-id.pdf",
+      "http_status": 200,
+      "bytes": 3550987,
+      "sha256": "57382750a561667bf02eb98bd7f4806618c3a785f4ca18ceb4c6679c46543b4b",
+      "matches_local": true
+    },
+    {
+      "role": "backend_receipt",
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_003_CUMULATIVE_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 7362,
+      "sha256": "219bd0a43509cf2be98eefb19a13cd033db4a2e2e0deafeee9e3d80a532dc157",
+      "matches_local": true
+    },
+    {
+      "role": "build_receipt",
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_003_BUILD_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 8092,
+      "sha256": "a164e36d1448808bc33f36b7685c92513313cc092c789f6876c9aa421c2b27ee",
+      "matches_local": true
+    },
+    {
+      "role": "zenodo_metadata_payload",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-003/metadata.json",
+      "http_status": 200,
+      "bytes": 4087,
+      "sha256": "3da6675bcda55bc2b253cfc64e341e31eaef8b58908edfc87e7c0ee1dddf2e66",
+      "matches_local": true
+    },
+    {
+      "role": "release_manifest",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-003/artifacts/release-manifest.json",
+      "http_status": 200,
+      "bytes": 37364,
+      "sha256": "f230886c6d1fdb368bddbbeed103756bd502ba4883c04d6d740107cd4fc7ffb1",
+      "matches_local": true
+    },
+    {
+      "role": "editable_source_backend_zip",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-003/artifacts/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_EDITABLE_SOURCE_BACKEND.zip",
+      "http_status": 200,
+      "bytes": 2394549,
+      "sha256": "eae2b74e1ac7669b540440dce8ef5e0f2a5cecfedc6e427221898993c5a7d59e",
+      "matches_local": true
+    },
+    {
+      "role": "qa_provenance_zip",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-003/artifacts/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_003_QA_PROVENANCE.zip",
+      "http_status": 200,
+      "bytes": 188261,
+      "sha256": "dfd1cc241d04488559431746fc5149c8c8dc7747c35857673077848c6fb3af13",
+      "matches_local": true
+    },
+    {
+      "role": "pages_workflow",
+      "path": ".github/workflows/pages.yml",
+      "http_status": 200,
+      "bytes": 5313,
+      "sha256": "1f3e1b4445920079c8e7632fb278f95c1e9465b10f777599b0b0b1b48bd03c40",
+      "matches_local": true
+    }
+  ],
+  "verification": {
+    "push_succeeded": true,
+    "remote_main_matches_content_commit": true,
+    "pages_workflow_succeeded": true,
+    "pages_reader_exact": true,
+    "critical_commit_pinned_files_exact": true,
+    "anonymous_http_status_for_every_check": 200,
+    "credentials_recorded": false,
+    "absolute_local_paths_recorded": false,
+    "personal_name_recorded": false
+  }
+}

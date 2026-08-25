@@ -40,24 +40,25 @@ is public and anonymously byte-exact on GitHub/Pages at content commit
 `dd46acdeb222a4cb4b8879af05e7c929111372ff` and on Zenodo at DOI
 `10.5281/zenodo.22077025` within concept `10.5281/zenodo.22061489`.
 
-Fomberg Units 001–002 now translate `algebraic_topology.tex:31–1290`, Sections
-1.1–1.4, contiguously as `O012-FOM-001`/`D60-R08` and
-`O012-FOM-002`/`D60-R09`; all final independent reviews are P1/P2/P3 zero.
-The append-only backend preserves the 4,761-record Roberts prefix and ends at
-5,342 records/6,040,123 bytes, bundle SHA-256
-`83d98f1b271c5e62334a072354f1be1c4a1535ed26c8a403223e89773bb1eba1`.
-The verified composite HTML is 5,254,038 bytes/SHA-256
-`1f7618003e3ff273a4f1e2d97b5a81fd320f76640c475cae845ed38793fbeccd`;
-the deterministic PDF is 2,399,760 bytes/SHA-256
-`7dc8ac1db0b03ed1d9d94fe2c3491b631d3fb8bcec869997889d67d70236ef82`,
-376 A4 pages. Repeated clean builds, centered desktop and zero exposed
-page-overflow mobile geometry, every new PDF page, component-license scope,
-rights, privacy, and replay gates pass. This coherent
-Roberts-30/30-plus-Fomberg-001–002 checkpoint is public on the existing
-GitHub/Pages and Zenodo lineages. GitHub commit
-`085934c001a5acde8b3279de5bea6a69803e2c95`, Pages run `32781982738`, and
-Zenodo DOI `10.5281/zenodo.22087423` all passed anonymous exact-byte readback.
-Continue at Fomberg line 1291 through Sections 1.5–1.6. Figshare remains
+Fomberg Units 001–003 now translate `algebraic_topology.tex:31–1922`, Sections
+1.1–1.6, contiguously as `O012-FOM-001`/`D60-R08`,
+`O012-FOM-002`/`D60-R09`, and `O012-FOM-003`/`D60-R10`; all final independent
+reviews are P1/P2/P3 zero. Unit 003 closes `FOM-PR-04` and adds six fully solved
+mastery triples without waiving the forward proof dependency on excision. The
+append-only backend preserves the 4,761-record Roberts prefix and ends at 5,747
+records/6,649,486 bytes, bundle SHA-256
+`9e416c70e69dea1601bd79a259c278a9cfdfe5dca10d40b7bbc8e67d9ffba76b`.
+The verified composite HTML is 7,190,228 bytes/SHA-256
+`484a2a501df79b1810567810d0b454a18298a4cb43ef466c4e082622216b9542`;
+the deterministic PDF is 3,550,987 bytes/SHA-256
+`57382750a561667bf02eb98bd7f4806618c3a785f4ca18ceb4c6679c46543b4b`,
+397 A4 pages. Repeated clean builds, centered desktop, zero exposed mobile page
+overflow, all new PDF pages, component-license scope, rights, privacy, package,
+and replay gates pass. This coherent Roberts-30/30-plus-Fomberg-001–003
+checkpoint is public on the existing GitHub/Pages and Zenodo lineages. GitHub
+commit `c8fcc0e575de9ac902a6ca79eee479462cff2f27`, Pages run `32797456049`, and
+Zenodo DOI `10.5281/zenodo.22088708` all passed anonymous exact-byte readback.
+Continue at Fomberg line 1923 through Sections 1.7–1.10 as `D60-R11`. Figshare remains
 blocked by the recorded `InactiveAccount` response and must not trigger a
 duplicate or retry loop.
 
@@ -76,7 +77,7 @@ Git or create a duplicate. At coherent reader boundaries update the existing
 Zenodo and Figshare lineages, preserve inherited files, label partial scope,
 and anonymously verify public bytes/hashes. The immutable Units 001–013 reader
 remains historically preserved on Pages and Zenodo `10.5281/zenodo.22061490`;
-the current Zenodo version is `10.5281/zenodo.22087423`. Figshare remains
+the current Zenodo version is `10.5281/zenodo.22088708`. Figshare remains
 pending credential/account recovery, with the failed bounded attempt recorded
 without claiming publication. Do not republish a source-only duplicate.
 Record `OpenAI Codex gpt-5.6-sol, Ultra`; never publish the directing user’s

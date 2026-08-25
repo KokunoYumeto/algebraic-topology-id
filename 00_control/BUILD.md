@@ -1,6 +1,36 @@
 # Build record
 
-## Roberts 001–030 plus Fomberg 001–002 — current boundary
+## Roberts 001–030 plus Fomberg 001–003 — current boundary
+
+Builder: `scripts/build-roberts-001-030-fomberg-001-003.ps1`. It freezes the
+complete Roberts component and Fomberg `algebraic_topology.tex:31–1922`, builds
+HTML and PDF twice from clean scratch, requires byte identity, and fails closed
+on authority, source cursor, structure, links, MathML, figures, rights, privacy,
+font, image, trailer-ID, or protected-prior-boundary drift.
+
+- HTML: `output/html/roberts-001-030-fomberg-001-003/index.html`, 7,190,228
+  bytes, SHA-256
+  `484a2a501df79b1810567810d0b454a18298a4cb43ef466c4e082622216b9542`.
+- PDF: `output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-003-id.pdf`,
+  3,550,987 bytes, 397 A4 pages, SHA-256
+  `57382750a561667bf02eb98bd7f4806618c3a785f4ca18ceb4c6679c46543b4b`.
+- Manifest: 286 bytes, SHA-256
+  `eaadfc72151f617de4d316369be0bc70cd72006603d8853023206e8062f6e206`.
+- Build receipt: `qa/ROBERTS_001_030_FOMBERG_001_003_BUILD_RECEIPT.json`,
+  8,092 bytes, SHA-256
+  `a164e36d1448808bc33f36b7685c92513313cc092c789f6876c9aa421c2b27ee`.
+
+HTML contains 1,982 unique build-census IDs, 385 resolved fragment links,
+13,466 native MathML nodes, 115 semantic figures, and six embedded Unit 003
+PNGs. Browser QA confirms a centered 1,152-pixel body at 1440 × 900 and zero
+page-level overflow at 375 × 812. PDF pages 377–397 were fully rendered and
+inspected; all 27 fonts are embedded/subset with ToUnicode, six primary images
+pair exactly with six masks, and the two clean outputs have no trailer ID and
+are byte-identical. The PDF remains intentionally disclosed as untagged. The
+release package and public GitHub/Pages and Zenodo byte readbacks pass. Next
+build extends from Fomberg line 1923.
+
+## Roberts 001–030 plus Fomberg 001–002 — prior boundary
 
 Builder: `scripts/build-roberts-001-030-fomberg-001-002.ps1`. It binds the
 complete Roberts component and Fomberg `algebraic_topology.tex:31–1290`, runs
