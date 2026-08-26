@@ -1,0 +1,139 @@
+{
+  "receipt_id": "O012-GITHUB-ROBERTS-001-030-FOMBERG-001-007-CA01",
+  "status": "PASS_PUSH_DEPLOY_AND_ANONYMOUS_READBACK",
+  "date": "2026-08-26",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "commit": "4b5f8f74bf361e45687d55fc31a95ea3e0c657ab",
+  "tree": "7c5a24b240e62fb2fdb9679157ef045bd984630a",
+  "commit_subject": "Add cumulative assessment 1 checkpoint",
+  "push": {
+    "remote": "origin",
+    "ref": "main",
+    "status": "PASS"
+  },
+  "pages": {
+    "workflow": "Deploy Indonesian reader",
+    "run_id": 32924728855,
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32924728855",
+    "job_id": 98045214112,
+    "job_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32924728855/job/98045214112",
+    "deployment_id": 6096182721,
+    "deployment_status_id": 17338809603,
+    "conclusion": "success",
+    "reader_url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01/"
+  },
+  "anonymous_readbacks": [
+    {
+      "label": "pages_html",
+      "url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01/",
+      "http_status": 200,
+      "bytes": 14958219,
+      "sha256": "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_html",
+      "path": "output/html/roberts-001-030-fomberg-001-007-ca01/index.html",
+      "http_status": 200,
+      "bytes": 14958219,
+      "sha256": "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_pdf",
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-id.pdf",
+      "http_status": 200,
+      "bytes": 8358561,
+      "sha256": "476b0de3bbb2cbfe03a151ac3060e121c5f89364e70b54d918ab270f4c965ade",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_source",
+      "path": "source/id-ID/mastery/cumulative-assessment-001-foundations-coverings-homotopy.md",
+      "http_status": 200,
+      "bytes": 15185,
+      "sha256": "5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_backend_receipt",
+      "path": "qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENT_001_CUMULATIVE_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 9934,
+      "sha256": "79fc0c7afde5f72b9eaf3809b08ab27cfd696c9d0269905608a1336ae4cd7e13",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_build_receipt",
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BUILD_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 7842,
+      "sha256": "22fef828b7963219759f85d11e409e0ebf957889d0fa76dc02ec04f3a707a9e0",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_browser_receipt",
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BROWSER_QA.json",
+      "http_status": 200,
+      "bytes": 2358,
+      "sha256": "3558f726ed794f4e94729a86e7177b407dc1efabf668b96a76f80d68ca3acca4",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_visual_receipt",
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_VISUAL_QA.md",
+      "http_status": 200,
+      "bytes": 5161,
+      "sha256": "c33d75b9f93224ece7e57bcb7aae9413f47a84f3eade72fbd010c09463182e2a",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_route_census",
+      "path": "qa/ROUTE_MASTERY_CENSUS.json",
+      "http_status": 200,
+      "bytes": 117453,
+      "sha256": "9ef889a41a78a92cf1a0bf8804416e39c3e35ab1e71f0bbcec87310cf57e30b7",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_proof_census",
+      "path": "qa/PROOF_REPAIR_CENSUS.json",
+      "http_status": 200,
+      "bytes": 141748,
+      "sha256": "1b445db1d6c24d82c8fad150e531bc2a2496637f0aca2145a36d6ad94ebb4058",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_artifact_manifest",
+      "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01.csv",
+      "http_status": 200,
+      "bytes": 297,
+      "sha256": "eac46f939ac99da1479c7826a350eb926c30f91d4c74fdfe785a597f7a58803d",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_package_receipt",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01/PACKAGE_PREPARATION_RECEIPT.json",
+      "http_status": 200,
+      "bytes": 4234,
+      "sha256": "bb463a0e44e35f89644b5ed2c4d76f8c2de83edb7dbb3c3dfe4740500fb52e96",
+      "match": true
+    },
+    {
+      "label": "commit_pinned_release_manifest",
+      "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01/artifacts/release-manifest.json",
+      "http_status": 200,
+      "bytes": 68800,
+      "sha256": "4b1538e52fe743eb35953730423f7a6fb61410fdf5acb9c6558a2d45c337f616",
+      "match": true
+    }
+  ],
+  "readback_summary": {
+    "http_200": 13,
+    "exact_byte_and_sha256_matches": 13,
+    "mismatches": 0
+  },
+  "credentials_recorded": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

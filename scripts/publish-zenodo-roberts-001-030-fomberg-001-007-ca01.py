@@ -319,7 +319,7 @@ def verify_public(record_id: int, metadata_payload: dict, local: dict) -> tuple[
     description = str(actual.get("description", ""))
     for marker in (
         "Roberts lengkap 30/30", "O012-FOM-001–007 lengkap", "D60-CA01", "lengkap 8/8",
-        "D60-CA02", "D60-CA03", "empat laboratorium", "capstone", "CC BY 4.0", "CC BY-SA 4.0",
+        "Asesmen Kumulatif 2 dan 3 (16 butir)", "empat laboratorium", "capstone", "CC BY 4.0", "CC BY-SA 4.0",
         base.MODEL_NOTE, "tidak disponsori atau disahkan",
     ):
         if marker not in description:

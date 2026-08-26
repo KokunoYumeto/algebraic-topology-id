@@ -511,3 +511,11 @@ HTML is centered at desktop width and reflows at 375 x 812 with no page-level
 horizontal overflow, no broken fragments, no external runtime asset references,
 and zero console errors. The PDF remains intentionally untagged; HTML is the
 primary accessibility surface.
+
+The checkpoint is public at GitHub content commit
+`4b5f8f74bf361e45687d55fc31a95ea3e0c657ab` and Pages run `32924728855`;
+the Pages reader and twelve commit-pinned witnesses match local bytes under
+anonymous HTTP readback. Zenodo version `0.31.0`, record `22105179`, DOI
+`10.5281/zenodo.22105179`, reuses concept DOI
+`10.5281/zenodo.22061489`; its exact nine-file, 31,542,547-byte payload passed
+anonymous byte/SHA-256 readback for every file.

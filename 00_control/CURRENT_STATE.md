@@ -2,12 +2,11 @@
 
 Updated: 2026-08-26
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Fomberg Units 001–007 translate `algebraic_topology.tex:31–4185` contiguously through the complete selected Sections 1.1–1.13, with all independent reviews at P1/P2/P3 zero. The Unit 007 boundary passes semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, package, and hash gates. Its cumulative reader is 14,885,069 bytes of HTML and a 472-page, 8,326,404-byte A4 PDF; backend totals are 6,742 records/8,213,649 bytes with bundle SHA-256 `523b570517eb54720c50007aacc5d4eea525ea252b9ca1f6f45b027182354765`. Zenodo version `0.30.7`, record `22104150`, DOI `10.5281/zenodo.22104150`, and GitHub commit `1c25c0b43ba605ff16cf95363f405455f78f29eb`/Pages run `32919363394` are public in their existing lineages; the Pages reader and all Zenodo plus commit-pinned witnesses have exact anonymous byte/hash readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. Continue at exact source line 4186 with the separately marked original mastery/laboratory/capstone layer under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` through source EOF, and Fomberg Units 001–007 translate the entire selected `algebraic_topology.tex:31–4185` / Sections 1.1–1.13 span. Every admitted unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Cumulative Assessment 1 is also complete and public: the current reader is 14,958,219 bytes of centered/reflowing HTML and a 477-page, 8,358,561-byte A4 PDF; the backend has 6,854 records/8,345,799 bytes with bundle SHA-256 `51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57`. GitHub commit `4b5f8f74bf361e45687d55fc31a95ea3e0c657ab` / Pages run `32924728855` and Zenodo version `0.31.0`, record `22105179`, DOI `10.5281/zenodo.22105179`, are public in their existing lineages with exact anonymous byte/hash readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. The exact next action is the 36-hint ordinary-mastery closure for `D60-R01`–`D60-R06`; source line 4186 is only the nominal post-Fomberg marker and is not authority to translate beyond the selected span.
 
-### Live recovery note — Cumulative Assessment 1 local closure, 2026-08-26
+### Live recovery note — Cumulative Assessment 1 public checkpoint, 2026-08-26
 
-`D60-CA01` / `O012-ORIG-CA01` is locally complete and frozen pending its
-authorized publication transaction. The reader source
+`D60-CA01` / `O012-ORIG-CA01` is complete, frozen, and public. The reader source
 `source/id-ID/mastery/cumulative-assessment-001-foundations-coverings-homotopy.md`
 is 15,185 bytes/389 LF lines/34 stable IDs, SHA-256
 `5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8`.
@@ -34,10 +33,32 @@ and the centered HTML passes 1440 x 900 plus 375 x 812 browser QA with no page
 overflow or unresolved fragments. Final build receipt
 `qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BUILD_RECEIPT.json` is 7,842 bytes,
 SHA-256 `22fef828b7963219759f85d11e409e0ebf957889d0fa76dc02ec04f3a707a9e0`.
-Next executable action: publish this exact boundary to the existing GitHub,
-Pages, and Zenodo lineages, anonymously read back every public byte, then begin
-the 36-hint ordinary-mastery closure. Source line 4186 remains the nominal
-post-Fomberg cursor; it is not authority to translate beyond the selected span.
+GitHub commit `4b5f8f74bf361e45687d55fc31a95ea3e0c657ab`, tree
+`7c5a24b240e62fb2fdb9679157ef045bd984630a`, Pages run `32924728855`, job
+`98045214112`, and deployment `6096182721` are successful. The public Pages
+reader and twelve commit-pinned witnesses match local bytes. Receipt
+`00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_007_CA01.json`
+is 5,039 bytes/SHA-256
+`7361de7c9e08a2afa8c0565710828f7ea65e76c4cde0ff0958484621aed69987`.
+Zenodo version `0.31.0`, record `22105179`, DOI
+`10.5281/zenodo.22105179`, is published in unchanged concept
+`10.5281/zenodo.22061489`; all nine files match local bytes anonymously.
+Receipt
+`release/zenodo-roberts-001-030-fomberg-001-007-ca01/publication-receipt.json`
+is 5,080 bytes/SHA-256
+`b55f98b6c7575fd1e3cc3b3afba3c1f348864cf3c32ec45f9c6b8b4dc8d7a625`.
+Before hint admission, the route-census selector was corrected to reserve each
+existing solution ID exactly once. The previous first-six rule advertised two
+Route 6 prompt pairs that share one solution; no admitted graph or published
+CA01 byte was affected. Corrected census
+`qa/ROUTE_MASTERY_CENSUS.json` is 121,128 bytes/SHA-256
+`d011e6f94eec2995d95ed2fe88833a94207a4087f50859d3a068d65c20ec4e41`
+with zero validation errors; the exact decision receipt is
+`qa/ROUTE_MASTERY_CENSUS_SELECTOR_CORRECTION.json`, 2,232 bytes/SHA-256
+`96c293905148d511afce84805e4d47f59f1bc01480de9d0afde7636bb06d954f`.
+Next executable action: begin the 36-hint ordinary-mastery closure. Source line
+4186 remains the nominal post-Fomberg cursor; it is not authority to translate
+beyond the selected span.
 
 ### Live recovery note — Fomberg Unit 007 local closure, 2026-08-26
 

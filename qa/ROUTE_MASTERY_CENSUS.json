@@ -354,12 +354,12 @@
     },
     "controls": {
       "cursor": {
-        "bytes": 10309,
-        "lf_count": 211,
+        "bytes": 11479,
+        "lf_count": 238,
         "path": "00_control/CURSOR.json",
-        "sha256": "643146f28ce8354606a85dd4a012fd025addf1ce51a9d08b931a7b638a569ffe"
+        "sha256": "887ad5f66770ca73e655bc21387dde928359efc3c868f2edbab53f891a2c28d6"
       },
-      "cursor_next_action": "complete the original 108-item mastery layer, four reproducible computation laboratories, proof-repair dossier, and cumulative proof/cross-invariant capstone; then run final route closure and maintain the existing publication lineages from exact source cursor 4186",
+      "cursor_next_action": "continue the 108-item mastery layer by adding 36 stable hints to the census-selected existing D60-R01-D60-R06 exercise/full-solution pairs without duplicating prompts or solutions; independently review and append them to the locale-neutral backend before the next reader boundary",
       "handoff": {
         "bytes": 8115,
         "lf_count": 139,
@@ -368,10 +368,10 @@
       }
     },
     "script": {
-      "bytes": 37794,
-      "lf_count": 944,
+      "bytes": 40034,
+      "lf_count": 985,
       "path": "scripts/census-route-mastery.py",
-      "sha256": "a8af0c6fe68f2dc3079f6ed8907a86910a003645fa89589f2e840d3fdfbe22ea"
+      "sha256": "5610cf6aac3ce9a8f2568d890ca2b85cc756f8d7b2ffe508a0b1792545cbdc7e"
     }
   },
   "next_deficits": {
@@ -505,6 +505,7 @@
     "ordinary_missing_triples": 36,
     "ordinary_routes": [
       {
+        "candidate_selection_rule": "sorted exercise IDs with exactly one existing solution; solution ID must be globally unused by any admitted triple or earlier deterministic candidate",
         "course_route_unit_id": "D60-R01",
         "deterministic_candidate_hint_targets": [
           "unit:o012-rbt-l01-ex-001",
@@ -514,11 +515,21 @@
           "unit:o012-rbt-l02-ex-003",
           "unit:o012-rbt-l02-ex-004"
         ],
+        "deterministic_candidate_solution_ids": [
+          "unit:o012-rbt-l01-sol-001",
+          "unit:o012-rbt-l01-sol-002",
+          "unit:o012-rbt-l02-sol-001",
+          "unit:o012-rbt-l02-sol-002",
+          "unit:o012-rbt-l02-sol-003",
+          "unit:o012-rbt-l02-sol-004"
+        ],
         "missing_graph_complete_triples": 6,
         "new_exercises_or_solutions_required": 0,
-        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs",
+        "skipped_candidate_pairs_before_quota": []
       },
       {
+        "candidate_selection_rule": "sorted exercise IDs with exactly one existing solution; solution ID must be globally unused by any admitted triple or earlier deterministic candidate",
         "course_route_unit_id": "D60-R02",
         "deterministic_candidate_hint_targets": [
           "unit:o012-rbt-l03-ex-001",
@@ -528,11 +539,21 @@
           "unit:o012-rbt-l03-ex-005",
           "unit:o012-rbt-l04-ex-001"
         ],
+        "deterministic_candidate_solution_ids": [
+          "unit:o012-rbt-l03-sol-001",
+          "unit:o012-rbt-l03-sol-002",
+          "unit:o012-rbt-l03-sol-003",
+          "unit:o012-rbt-l03-sol-004",
+          "unit:o012-rbt-l03-sol-005",
+          "unit:o012-rbt-l04-sol-001"
+        ],
         "missing_graph_complete_triples": 6,
         "new_exercises_or_solutions_required": 0,
-        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs",
+        "skipped_candidate_pairs_before_quota": []
       },
       {
+        "candidate_selection_rule": "sorted exercise IDs with exactly one existing solution; solution ID must be globally unused by any admitted triple or earlier deterministic candidate",
         "course_route_unit_id": "D60-R03",
         "deterministic_candidate_hint_targets": [
           "unit:o012-rbt-l05-mcheck-001",
@@ -542,11 +563,21 @@
           "unit:o012-rbt-l06-mcheck-001",
           "unit:o012-rbt-l06-mcheck-002"
         ],
+        "deterministic_candidate_solution_ids": [
+          "unit:o012-rbt-l05-sol-001",
+          "unit:o012-rbt-l05-sol-002",
+          "unit:o012-rbt-l05-sol-003",
+          "unit:o012-rbt-l05-sol-004",
+          "unit:o012-rbt-l06-sol-001",
+          "unit:o012-rbt-l06-sol-002"
+        ],
         "missing_graph_complete_triples": 6,
         "new_exercises_or_solutions_required": 0,
-        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs",
+        "skipped_candidate_pairs_before_quota": []
       },
       {
+        "candidate_selection_rule": "sorted exercise IDs with exactly one existing solution; solution ID must be globally unused by any admitted triple or earlier deterministic candidate",
         "course_route_unit_id": "D60-R04",
         "deterministic_candidate_hint_targets": [
           "unit:o012-rbt-l07-mcheck-001",
@@ -556,11 +587,21 @@
           "unit:o012-rbt-l08-ex-001",
           "unit:o012-rbt-l08-mcheck-002"
         ],
+        "deterministic_candidate_solution_ids": [
+          "unit:o012-rbt-l07-sol-001",
+          "unit:o012-rbt-l07-sol-002",
+          "unit:o012-rbt-l07-sol-003",
+          "unit:o012-rbt-l07-sol-004",
+          "unit:o012-rbt-l08-sol-001",
+          "unit:o012-rbt-l08-sol-002"
+        ],
         "missing_graph_complete_triples": 6,
         "new_exercises_or_solutions_required": 0,
-        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs",
+        "skipped_candidate_pairs_before_quota": []
       },
       {
+        "candidate_selection_rule": "sorted exercise IDs with exactly one existing solution; solution ID must be globally unused by any admitted triple or earlier deterministic candidate",
         "course_route_unit_id": "D60-R05",
         "deterministic_candidate_hint_targets": [
           "unit:o012-rbt-l11-mcheck-001",
@@ -570,23 +611,53 @@
           "unit:o012-rbt-l12-mcheck-002",
           "unit:o012-rbt-l12-mcheck-003"
         ],
+        "deterministic_candidate_solution_ids": [
+          "unit:o012-rbt-l11-sol-001",
+          "unit:o012-rbt-l11-sol-002",
+          "unit:o012-rbt-l11-sol-003",
+          "unit:o012-rbt-l12-sol-001",
+          "unit:o012-rbt-l12-sol-002",
+          "unit:o012-rbt-l12-sol-003"
+        ],
         "missing_graph_complete_triples": 6,
         "new_exercises_or_solutions_required": 0,
-        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs",
+        "skipped_candidate_pairs_before_quota": []
       },
       {
+        "candidate_selection_rule": "sorted exercise IDs with exactly one existing solution; solution ID must be globally unused by any admitted triple or earlier deterministic candidate",
         "course_route_unit_id": "D60-R06",
         "deterministic_candidate_hint_targets": [
           "unit:o012-rbt-l14-ex-001",
           "unit:o012-rbt-l14-ex-002",
           "unit:o012-rbt-l14-mcheck-001",
-          "unit:o012-rbt-l14-mcheck-002",
-          "unit:o012-rbt-l14-mcheck-003",
-          "unit:o012-rbt-l14-mcheck-004"
+          "unit:o012-rbt-l14-mcheck-004",
+          "unit:o012-rbt-l14-mcheck-005",
+          "unit:o012-rbt-l14-mcheck-006"
+        ],
+        "deterministic_candidate_solution_ids": [
+          "unit:o012-rbt-l14-sol-002",
+          "unit:o012-rbt-l14-sol-003",
+          "unit:o012-rbt-l14-sol-001",
+          "unit:o012-rbt-l14-sol-004",
+          "unit:o012-rbt-l14-sol-005",
+          "unit:o012-rbt-l14-sol-006"
         ],
         "missing_graph_complete_triples": 6,
         "new_exercises_or_solutions_required": 0,
-        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs",
+        "skipped_candidate_pairs_before_quota": [
+          {
+            "exercise_id": "unit:o012-rbt-l14-mcheck-002",
+            "reason": "solution_already_reserved_by_another_triple_or_candidate",
+            "solution_id": "unit:o012-rbt-l14-sol-002"
+          },
+          {
+            "exercise_id": "unit:o012-rbt-l14-mcheck-003",
+            "reason": "solution_already_reserved_by_another_triple_or_candidate",
+            "solution_id": "unit:o012-rbt-l14-sol-003"
+          }
+        ]
       }
     ],
     "source_assessment_items_to_create": 16,

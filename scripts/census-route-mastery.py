@@ -680,13 +680,47 @@ def main() -> int:
 
     route_detail: dict[str, dict[str, Any]] = {}
     ordinary_deficits: list[dict[str, Any]] = []
+    # A hint closes a triple only when its exercise already has exactly one
+    # complete solution and that solution is not credited to another hinted
+    # exercise.  Some legacy Roberts prompts intentionally share one solution,
+    # so selecting the first exercise IDs alone can advertise a graph that the
+    # one-to-one validator must reject.  Reserve every solution already used by
+    # a triple, then reserve each newly selected solution deterministically.
+    reserved_candidate_solution_ids = set(triple_solution_ids)
     for route_id in ROUTE_IDS:
         route_triples = triples_by_route[route_id]
         pair_ids = sorted(ordinary_pair_targets_by_route[route_id])
         reusable_ids = sorted(set(pair_ids) - ordinary_triple_exercise_ids)
         triple_count = len(route_triples)
         gap = max(ORDINARY_PER_ROUTE - triple_count, 0)
-        selected_candidates = reusable_ids[:gap]
+        selected_candidates: list[str] = []
+        selected_candidate_solution_ids: list[str] = []
+        skipped_candidate_pairs: list[dict[str, str]] = []
+        for exercise_id in reusable_ids:
+            solution_edges = solutions_by_exercise.get(exercise_id, [])
+            if len(solution_edges) != 1:
+                skipped_candidate_pairs.append(
+                    {
+                        "exercise_id": exercise_id,
+                        "reason": f"solution_edge_count_{len(solution_edges)}",
+                    }
+                )
+                continue
+            solution_id = solution_edges[0]["from_id"]
+            if solution_id in reserved_candidate_solution_ids:
+                skipped_candidate_pairs.append(
+                    {
+                        "exercise_id": exercise_id,
+                        "solution_id": solution_id,
+                        "reason": "solution_already_reserved_by_another_triple_or_candidate",
+                    }
+                )
+                continue
+            selected_candidates.append(exercise_id)
+            selected_candidate_solution_ids.append(solution_id)
+            reserved_candidate_solution_ids.add(solution_id)
+            if len(selected_candidates) == gap:
+                break
         new_problem_solution_gap = max(gap - len(selected_candidates), 0)
         route_detail[route_id] = {
             "frozen_components": list(EXPECTED_ROUTE_COMPONENTS[route_id]),
@@ -706,6 +740,13 @@ def main() -> int:
                     "course_route_unit_id": route_id,
                     "missing_graph_complete_triples": gap,
                     "deterministic_candidate_hint_targets": selected_candidates,
+                    "deterministic_candidate_solution_ids": selected_candidate_solution_ids,
+                    "skipped_candidate_pairs_before_quota": skipped_candidate_pairs,
+                    "candidate_selection_rule": (
+                        "sorted exercise IDs with exactly one existing solution; "
+                        "solution ID must be globally unused by any admitted triple "
+                        "or earlier deterministic candidate"
+                    ),
                     "new_exercises_or_solutions_required": new_problem_solution_gap,
                     "required_action": (
                         "add separately modeled active hint units and one-to-one "

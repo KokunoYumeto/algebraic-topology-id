@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS_CORRECTED_BEFORE_HINT_ADMISSION",
+  "date": "2026-08-26",
+  "scope": "deterministic hint-target selection for the existing 108-item mastery graph",
+  "defect": {
+    "description": "The prior selector took the first sorted exercise IDs without reserving their existing solution IDs. In D60-R06 this advertised two pairs of exercises that share one complete solution, although the graph validator requires every credited exercise-hint-solution triple to have a distinct solution.",
+    "affected_prior_census": {
+      "path": "qa/ROUTE_MASTERY_CENSUS.json",
+      "bytes": 117453,
+      "sha256": "9ef889a41a78a92cf1a0bf8804416e39c3e35ab1e71f0bbcec87310cf57e30b7"
+    },
+    "shared_solution_pairs": [
+      {
+        "solution_id": "unit:o012-rbt-l14-sol-002",
+        "exercise_ids": [
+          "unit:o012-rbt-l14-ex-001",
+          "unit:o012-rbt-l14-mcheck-002"
+        ]
+      },
+      {
+        "solution_id": "unit:o012-rbt-l14-sol-003",
+        "exercise_ids": [
+          "unit:o012-rbt-l14-ex-002",
+          "unit:o012-rbt-l14-mcheck-003"
+        ]
+      }
+    ]
+  },
+  "correction": {
+    "rule": "Select sorted exercise IDs only when the exercise has exactly one existing solution and that solution ID is unused by every admitted triple and every earlier candidate.",
+    "script": {
+      "path": "scripts/census-route-mastery.py",
+      "bytes": 40034,
+      "sha256": "5610cf6aac3ce9a8f2568d890ca2b85cc756f8d7b2ffe508a0b1792545cbdc7e"
+    },
+    "corrected_census": {
+      "path": "qa/ROUTE_MASTERY_CENSUS.json",
+      "bytes": 121128,
+      "sha256": "d011e6f94eec2995d95ed2fe88833a94207a4087f50859d3a068d65c20ec4e41",
+      "status": "PASS",
+      "validation_errors": 0,
+      "ordinary_capped_credit_before_hints": 48,
+      "assessment_credit_before_hints": 8
+    },
+    "corrected_r06_targets": [
+      "unit:o012-rbt-l14-ex-001",
+      "unit:o012-rbt-l14-ex-002",
+      "unit:o012-rbt-l14-mcheck-001",
+      "unit:o012-rbt-l14-mcheck-004",
+      "unit:o012-rbt-l14-mcheck-005",
+      "unit:o012-rbt-l14-mcheck-006"
+    ],
+    "prompts_or_solutions_changed": false,
+    "already_admitted_triples_changed": false,
+    "published_ca01_bytes_changed": false
+  }
+}
