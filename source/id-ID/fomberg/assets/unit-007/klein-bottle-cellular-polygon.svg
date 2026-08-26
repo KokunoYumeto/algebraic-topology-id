@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Independent accessible semantic redraw for O012-FOM-007.
+  Source authority: Yeheli Fomberg, algebraic_topology.tex, commit
+  563194fae879178b9a6871b249513bfc27968975, lines 3992-4010 (CC BY-SA 4.0).
+  Changes: faithfully preserves the source's nonstandard adjacent-edge model;
+  each oriented edge is explicitly labeled, avoiding dependence on color.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 590" width="980" height="590"
+     style="max-width:100%;height:auto" preserveAspectRatio="xMidYMid meet"
+     role="img" aria-labelledby="klein-poly-title klein-poly-desc"
+     data-audit-id="o012-fom-u007-fig-klein-bottle-polygon" data-source-lines="3992-4010">
+  <title id="klein-poly-title">Model poligon seluler botol Klein</title>
+  <desc id="klein-poly-desc">Persegi dalam model tak standar dari sumber. Sisi atas dan kanan sama-sama berlabel b dan diikuti menurut orientasi batas; sisi bawah dan kiri sama-sama berlabel a dan juga diikuti menurut orientasi batas. Kata batasnya b kuadrat a kuadrat, sehingga kedua jumlah eksponen adalah dua.</desc>
+  <defs>
+    <marker id="klein-red-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#b91c1c"/>
+    </marker>
+    <marker id="klein-blue-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#1d4ed8"/>
+    </marker>
+    <pattern id="klein-hatch" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="14" height="14" fill="#ecfdf5"/>
+      <line x1="0" y1="0" x2="0" y2="14" stroke="#6ee7b7" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <rect width="980" height="590" rx="18" fill="#ffffff"/>
+  <text x="490" y="46" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="700" fill="#111827">Botol Klein: model b²a² dari sumber</text>
+  <rect x="270" y="115" width="440" height="360" fill="url(#klein-hatch)" stroke="#374151" stroke-width="5"/>
+  <line x1="290" y1="115" x2="690" y2="115" stroke="#b91c1c" stroke-width="9" marker-end="url(#klein-red-arrow)"/>
+  <line x1="710" y1="135" x2="710" y2="455" stroke="#b91c1c" stroke-width="9" marker-end="url(#klein-red-arrow)"/>
+  <line x1="690" y1="475" x2="290" y2="475" stroke="#1d4ed8" stroke-width="9" marker-end="url(#klein-blue-arrow)"/>
+  <line x1="270" y1="455" x2="270" y2="135" stroke="#1d4ed8" stroke-width="9" marker-end="url(#klein-blue-arrow)"/>
+  <g fill="#111827">
+    <circle cx="270" cy="115" r="12"/><circle cx="710" cy="115" r="12"/>
+    <circle cx="710" cy="475" r="12"/><circle cx="270" cy="475" r="12"/>
+  </g>
+  <g font-family="sans-serif" font-size="29" font-weight="700">
+    <text x="490" y="94" text-anchor="middle" fill="#991b1b">b →</text>
+    <text x="758" y="302" text-anchor="middle" fill="#991b1b">b ↓</text>
+    <text x="490" y="515" text-anchor="middle" fill="#1e40af">← a</text>
+    <text x="222" y="302" text-anchor="middle" fill="#1e40af">a ↑</text>
+    <text x="490" y="310" text-anchor="middle" font-size="46" fill="#5b21b6">Δ</text>
+  </g>
+  <text x="490" y="553" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#374151">∂Δ = bbaa = b²a²; koefisien a dan b masing-masing 2</text>
+  <text x="490" y="580" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#4b5563">Model ini setara dengan model persegi standar melalui pemotongan diagonal.</text>
+</svg>

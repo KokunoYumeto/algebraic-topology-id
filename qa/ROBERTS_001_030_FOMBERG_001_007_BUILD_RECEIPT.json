@@ -1,0 +1,188 @@
+{
+  "qa_id": "O012-RBT-001-030-FOM-001-007-COMPOSITE-BUILD",
+  "status": "PASS",
+  "scope": "Roberts 30/30 complete; Fomberg Sections 1.1-1.13 through source line 4185; composite course partial",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "artifacts": {
+    "html": {
+      "path": "output/html/roberts-001-030-fomberg-001-007/index.html",
+      "bytes": 14885069,
+      "sha256": "87d58a5955954125c424ab1220a9c6aa7967a782a9bd739094a31ae0a50af5f6",
+      "title": "Topologi Aljabar — Roberts 30/30 dan Fomberg 1.1–1.13",
+      "lang": "id-ID",
+      "self_contained": true
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-id.pdf",
+      "bytes": 8326404,
+      "sha256": "1beca2d03f04c1fcca7eb01bd2654567908febc1ba7941b459c06b90ef865c22",
+      "pages": 472,
+      "page_size": "A4",
+      "tagged": false,
+      "fonts": 27,
+      "primary_images": 19,
+      "soft_masks": 16
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007.csv",
+      "bytes": 287,
+      "sha256": "6a5a49c1a7179c27bb21f9bced2517ff38cf79953d566f75eb3143b6a3039aaa",
+      "entries": 2
+    }
+  },
+  "authorities": {
+    "roberts": {
+      "commit": "b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+      "license": "CC BY 4.0"
+    },
+    "fomberg": {
+      "commit": "563194fae879178b9a6871b249513bfc27968975",
+      "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+      "license": "CC BY-SA 4.0",
+      "selected_source_span": "31-4185",
+      "selected_span_bytes": 161848,
+      "selected_span_sha256": "4b96191b5e3cf5006d82175d609a4be8bba567458f7ee1c9f01cfe53490a645c",
+      "next_source_line": 4186
+    }
+  },
+  "unit_007": {
+    "qa": {
+      "path": "qa/FOMBERG_UNIT_007_QA.json",
+      "bytes": 16998,
+      "sha256": "3db0476e5f954402a3f704090b5fea0d1a4a0d04e889b3062b048dbea8f51f1f"
+    },
+    "source_audit": {
+      "path": "qa/FOMBERG_UNIT_007_SOURCE_AUDIT.json",
+      "bytes": 18838,
+      "sha256": "1cae10108e5af2dc3c0a9b63dd76861b7c44f42087f3ff5ec158a8d69b68b159"
+    },
+    "math_review": {
+      "path": "qa/fomberg-unit-007/INDEPENDENT_MATH_REVIEW_FINAL.json",
+      "bytes": 10168,
+      "sha256": "191d7b63c2a179b5d670b34ee3778ab032f1b3cd6548825f4fe15ce414969383"
+    },
+    "source_language_review": {
+      "path": "qa/fomberg-unit-007/INDEPENDENT_SOURCE_LANGUAGE_REVIEW_FINAL.json",
+      "bytes": 15526,
+      "sha256": "be906b6e9808fea67ce79eec49cc2513668e8b42e590e830d3b2fdb03145c11b"
+    },
+    "reader": {
+      "path": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md",
+      "bytes": 60598,
+      "sha256": "417b62c6c334b2f55965b623d8bfc8c3c94d4b2e109db149e42e294916673def",
+      "stable_ids": 72,
+      "mastery_triples": 6,
+      "semantic_figures": 17,
+      "png_fallbacks": 3
+    }
+  },
+  "backend_boundary": {
+    "status": "PASS_APPEND_ONLY_REPLAYABLE",
+    "unit_006_prefix_records": 6512,
+    "unit_006_prefix_bytes": 7855910,
+    "unit_006_prefix_bundle_sha256": "377be644a38e6db06f8992113ea47b8fc172953254c9b1005493e0ad3b7bd4ad",
+    "unit_007_records_added": 230,
+    "cumulative_records": 6742,
+    "cumulative_bytes": 8213649,
+    "cumulative_bundle_sha256": "523b570517eb54720c50007aacc5d4eea525ea252b9ca1f6f45b027182354765",
+    "receipt": {
+      "path": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_007_CUMULATIVE_RECEIPT.json",
+      "bytes": 8954,
+      "sha256": "6d1bf89439d0c4dae64005a64da2a2d9848153f229a2292b530c688a19cce364"
+    },
+    "semantic_validator_replay": "PASS",
+    "producer_deterministic_replay": "PASS"
+  },
+  "html_checks": {
+    "status": "PASS",
+    "raw_html_id_attributes": 2314,
+    "live_browser_dom_ids": 2315,
+    "live_browser_unique_dom_ids": 2315,
+    "fragment_links": 440,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 15945,
+    "semantic_figures": 159,
+    "embedded_png_images": 19,
+    "raw_tex_math_fallbacks": 0,
+    "runtime_external_asset_references": 0,
+    "self_contained": true
+  },
+  "visual_checks": {
+    "status": "PASS",
+    "inspected_pdf_pages": "438-472",
+    "render_dpi": 120,
+    "individual_page_renders": 35,
+    "contact_sheets": 1,
+    "render_count": 36,
+    "render_total_bytes": 10408333,
+    "clipping": 0,
+    "overlap": 0,
+    "margin_collisions": 0,
+    "orphaned_headings": 0,
+    "broken_or_unreadable_glyphs": 0,
+    "unreadable_math": 0,
+    "render_inventory": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_RENDER_INVENTORY.csv",
+      "bytes": 7326,
+      "sha256": "b9bfb97ea5ade108ad1c73f1eeaf2b0d9859ccf00f72a434b768c7ed6e90df6a"
+    },
+    "visual_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_VISUAL_QA.md",
+      "bytes": 3258,
+      "sha256": "1b95790cd0dbb0bade96b54459e51301ed55ea0714ad55d93b5a69c47ccfff25"
+    }
+  },
+  "browser_checks": {
+    "status": "PASS",
+    "surface": "local loopback reader HTML in Codex in-app browser",
+    "desktop_viewport": "1440x900",
+    "mobile_viewport": "375x812",
+    "page_level_horizontal_overflow": false,
+    "embedded_images_in_bounds": 19,
+    "console_errors": 0,
+    "non_fatal_instrumentation_warnings": 2,
+    "measurements_bound_by": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_VISUAL_QA.md",
+      "bytes": 3258,
+      "sha256": "1b95790cd0dbb0bade96b54459e51301ed55ea0714ad55d93b5a69c47ccfff25"
+    }
+  },
+  "reproducibility": {
+    "frozen_inputs_fail_closed": true,
+    "html_clean_builds": 2,
+    "html_build_sha256": "87d58a5955954125c424ab1220a9c6aa7967a782a9bd739094a31ae0a50af5f6",
+    "html_builds_byte_identical": true,
+    "pdf_clean_builds": 2,
+    "pdf_build_sha256": "1beca2d03f04c1fcca7eb01bd2654567908febc1ba7941b459c06b90ef865c22",
+    "pdf_builds_byte_identical": true,
+    "backend_append_only_prefix_unchanged": true,
+    "trailer_id_suppressed": true,
+    "build_scratch_removed": true
+  },
+  "rights_and_provenance": {
+    "integrated_license": "CC BY-SA 4.0",
+    "roberts_component_license": "CC BY 4.0",
+    "fomberg_component_license": "CC BY-SA 4.0",
+    "translation_and_change_notices": true,
+    "non_endorsement_notices": true,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+    "pdf_untagged_limitation_disclosed": true
+  },
+  "toolchain": {
+    "builder": {
+      "path": "scripts/build-roberts-001-030-fomberg-001-007.ps1",
+      "bytes": 27222,
+      "sha256": "926659faaebc7e27d56f9609fb8fc15ed610382b335a07ed271fd70b7a9011d2"
+    },
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_engine": "MiKTeX-pdfTeX",
+    "source_date_epoch": 1787616000,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "limitations": [
+    "The composite course remains partial after Fomberg Section 1.13.",
+    "The PDF is not structurally tagged; self-contained HTML is the primary reflowable surface.",
+    "Browser checks cover only the local loopback viewports documented in the visual-QA report; public-byte browser readback is a publication follow-up.",
+    "Two non-fatal browser instrumentation warnings reported missing component version metadata; console errors were zero."
+  ]
+}

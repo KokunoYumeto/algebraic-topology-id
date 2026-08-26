@@ -1,0 +1,403 @@
+{
+  "review_id": "O012-FOMBERG-UNIT-007-INDEPENDENT-SOURCE-LANGUAGE-FINAL",
+  "schema_version": "1.0.0",
+  "date": "2026-08-26",
+  "status": "PASS_P1_P2_P3_ZERO",
+  "review_mode": "independent_read_only_final_source_language_provenance_diagram_and_cursor_review",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "scope": {
+    "edition_unit_id": "O012-FOM-007",
+    "course_route_unit_id": "D60-R12",
+    "source_component": "Fomberg Algebraic Topology Section 1.13: Cellular homology",
+    "source_span": "algebraic_topology.tex:3518-4185",
+    "canonical_reader_mutated_by_reviewer": false,
+    "assets_mutated_by_final_reviewer": false,
+    "only_file_written_by_final_reviewer": "qa/fomberg-unit-007/INDEPENDENT_SOURCE_LANGUAGE_REVIEW_FINAL.json"
+  },
+  "canonical": {
+    "path": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md",
+    "bytes": 60598,
+    "lf_lines": 1934,
+    "sha256": "417b62c6c334b2f55965b623d8bfc8c3c94d4b2e109db149e42e294916673def",
+    "language": "id-ID",
+    "edition_unit_id": "O012-FOM-007",
+    "course_route_unit_id": "D60-R12"
+  },
+  "authority": {
+    "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+    "bytes": 223886,
+    "lf_lines": 6069,
+    "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483",
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+    "license": "CC BY-SA 4.0",
+    "selected_span": {
+      "line_start": 3518,
+      "line_end": 4185,
+      "lf_lines": 668,
+      "bytes": 26533,
+      "sha256": "a22afacfdbecdfad48942421412c4cff1c0f317eb77f18253578125a5d0d7ce2",
+      "first_line": "\\subsection{Cellular homology}",
+      "last_line": "",
+      "next_line_number": 4186,
+      "next_line": "\\subsection{Extras before cohomology}",
+      "independently_recomputed": true
+    }
+  },
+  "reviewed_controls": [
+    {
+      "path": "qa/FOMBERG_UNIT_007_SOURCE_AUDIT.json",
+      "bytes": 18838,
+      "lf_count": 508,
+      "sha256": "1cae10108e5af2dc3c0a9b63dd76861b7c44f42087f3ff5ec158a8d69b68b159",
+      "json_parse": "PASS"
+    },
+    {
+      "path": "qa/fomberg-unit-007/DIAGRAM_ASSET_INVENTORY.json",
+      "bytes": 27193,
+      "lf_count": 269,
+      "sha256": "7742b40613e13583fec63b8202183507f09c8a70f307263ef94421e5b9fcc527",
+      "json_parse": "PASS"
+    },
+    {
+      "path": "qa/fomberg-unit-007/TERMINOLOGY_ROWS_DRAFT.csv",
+      "bytes": 2942,
+      "lf_count": 16,
+      "sha256": "aef46b0f9a29f5c2e46a7c11f7a3c061f67664d0d7028cc4313d3f67c2026cd6",
+      "data_rows": 15,
+      "csv_parse": "PASS"
+    },
+    {
+      "path": "00_control/TERMINOLOGY.csv",
+      "bytes": 62008,
+      "lf_count": 485,
+      "sha256": "1a51fb86b7a83e9528e0a40092e91d7ec8f52a5f3f5cdf657a195e62467820ef",
+      "unit_007_rows_admitted": 15,
+      "unit_007_id_range": "O012-TERM-0470..O012-TERM-0484",
+      "csv_parse": "PASS"
+    },
+    {
+      "path": "qa/fomberg-unit-007/INDEPENDENT_SOURCE_LANGUAGE_REVIEW_PASS1.json",
+      "bytes": 18395,
+      "lf_count": 316,
+      "sha256": "1187e4bfe41d20418f8637a19001ed7498f912ee5e476b173fe8ba282f0ac7d8",
+      "role": "historical pre-admission findings and exact repair targets"
+    }
+  ],
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "checks": {
+    "source_closure_and_order": {
+      "status": "PASS",
+      "source_semantic_environments": 15,
+      "canonical_source_environment_wrappers": 15,
+      "unique_source_environment_ids": 15,
+      "duplicate_source_environment_ids": 0,
+      "missing_source_environment_ids": [],
+      "unexpected_source_environment_ids": [],
+      "source_environment_order_preserved": true,
+      "source_environment_kinds": {
+        "remark": 5,
+        "lemma": 1,
+        "proof": 1,
+        "definition": 2,
+        "example": 6
+      },
+      "source_labels_preserved": [
+        "exmp:cw-for-torus-homology",
+        "exmp:homology-of-genus-two",
+        "exmp:homology-of-rpn"
+      ],
+      "inactive_source_comments_promoted": false,
+      "contiguous_textual_coverage": "PASS"
+    },
+    "environment_ids_in_source_order": [
+      "o012-fom-u007-rem-good-pair",
+      "o012-fom-u007-lem-cellular-skeleta-homology",
+      "o012-fom-u007-proof-cellular-skeleta-homology",
+      "o012-fom-u007-def-cellular-chains",
+      "o012-fom-u007-def-cellular-boundary",
+      "o012-fom-u007-rem-cellular-incidence-formula",
+      "o012-fom-u007-rem-boundary-notation",
+      "o012-fom-u007-rem-computation-summary",
+      "o012-fom-u007-ex-sphere-homology",
+      "o012-fom-u007-ex-complex-projective-homology",
+      "o012-fom-u007-ex-torus-homology",
+      "o012-fom-u007-ex-genus-two-homology",
+      "o012-fom-u007-rem-genus-g-homology",
+      "o012-fom-u007-ex-klein-bottle-homology",
+      "o012-fom-u007-ex-real-projective-space-homology"
+    ],
+    "mathematics_and_translation_fidelity": {
+      "status": "PASS",
+      "formula_index_and_result_scope_checked": [
+        "relative homology of consecutive CW skeleta and oriented-cell generators",
+        "vanishing above skeletal dimension and stabilization below it",
+        "cellular chain groups, connecting maps, quotient maps, and d composed with d equals zero",
+        "typed cellular incidence map between (n-1)-spheres and its degree formula",
+        "sphere and complex-projective-space cellular homology",
+        "torus attaching word, projected degrees, and homology",
+        "source and edition-equivalent genus-two attaching words, degree-zero coefficients, and genus-g homology",
+        "source Klein-bottle polygon b^2 a^2, d_2(Delta)=2(a+b), and homology",
+        "real-projective-space degree 1+(-1)^n, alternating differentials, and both parity cases"
+      ],
+      "formula_or_index_errors": 0,
+      "example_result_errors": 0,
+      "all_six_source_examples_present": true,
+      "all_three_mandatory_proof_repairs_separately_identified": true,
+      "proof_repair_ids": [
+        "FOM-PR-13",
+        "FOM-PR-14",
+        "FOM-PR-15"
+      ],
+      "source_and_original_layers_distinguished": true
+    },
+    "source_corrections": {
+      "status": "PASS",
+      "expected_corrections": 8,
+      "present_corrections": 8,
+      "correction_ids": [
+        "FOM-U007-SRC-001",
+        "FOM-U007-SRC-002",
+        "FOM-U007-SRC-003",
+        "FOM-U007-SRC-004",
+        "FOM-U007-SRC-005",
+        "FOM-U007-SRC-006",
+        "FOM-U007-SRC-007",
+        "FOM-U007-SRC-008"
+      ],
+      "additional_clarifications": 1,
+      "clarification_ids": [
+        "FOM-U007-CLAR-001"
+      ],
+      "cw_delta_overclaim_handling": "PASS: the torus d_1 calculation now uses the direct endpoint argument and does not silently repeat the source's low-dimensional CW/Delta identity claim",
+      "corrections_explicit_and_not_silent": true
+    },
+    "figures_and_diagram_functions": {
+      "status": "PASS",
+      "source_conceptual_diagram_groups": 17,
+      "inventory_mapped_groups": 17,
+      "canonical_figure_ids": 17,
+      "unique_canonical_figure_ids": 17,
+      "duplicate_figure_ids": 0,
+      "missing_figure_ids": [],
+      "unexpected_figure_ids": [],
+      "figure_order_preserved": true,
+      "semantic_reader_displays": 14,
+      "semantic_reader_display_origin": "source-derived",
+      "semantic_reader_display_rendering": "semantic-reflow",
+      "semantic_reader_display_ids_present": 14,
+      "geometric_asset_pairs": 3,
+      "geometric_png_references_resolve": 3,
+      "source_faithful_redraws": [
+        "o012-fom-u007-fig-torus-polygon",
+        "o012-fom-u007-fig-klein-bottle-polygon"
+      ],
+      "source_faithful_redraw_origin": "edition-original-redraw",
+      "genus_two_asset": {
+        "id": "o012-fom-u007-fig-genus-two-polygon",
+        "origin": "edition-original",
+        "source_relationship": "mathematically-equivalent-standard-polygon-not-literal-redraw",
+        "canonical_attribute_present": true,
+        "reader_alt_disclosure_present": true,
+        "reader_prose_disclosure_present": true,
+        "svg_title_and_description_disclose_equivalence": true,
+        "inventory_discloses_equivalence": true,
+        "source_word": "[b,a][c,d] up to cyclic start",
+        "edition_asset_word": "[a,b][c,d]",
+        "equivalence_explanation": "the edition exchanges the first-handle generator names a and b; every exponent sum remains zero"
+      }
+    },
+    "asset_validation": {
+      "status": "PASS",
+      "svg_xml_parse_count": 3,
+      "svg_xml_parse_failures": 0,
+      "svg_aria_labelledby_resolution_count": 3,
+      "svg_aria_failures": 0,
+      "png_identity_count": 3,
+      "png_identity_failures": 0,
+      "inventory_identity_mismatches": 0,
+      "assets": [
+        {
+          "path": "source/id-ID/fomberg/assets/unit-007/torus-cellular-polygon.svg",
+          "bytes": 3367,
+          "sha256": "61788a1d6a189686ef3eb8a0a54174aaff865a977ef8ff92b5c609e46ffb54f9"
+        },
+        {
+          "path": "source/id-ID/fomberg/assets/unit-007/torus-cellular-polygon.png",
+          "bytes": 403115,
+          "sha256": "8ec1b8807587c5a0c481029c791fe84bbcd5de500b659616579e2cafb75e1aac"
+        },
+        {
+          "path": "source/id-ID/fomberg/assets/unit-007/genus-two-cellular-polygon.svg",
+          "bytes": 3968,
+          "sha256": "0d9ed407dfbcba14f6b7695cd8b2776fe029c60b41a15bb4ab0a3f4cd8ed7cc7"
+        },
+        {
+          "path": "source/id-ID/fomberg/assets/unit-007/genus-two-cellular-polygon.png",
+          "bytes": 547693,
+          "sha256": "763204100908218e31cba6c8c269902c5670aaadcdc844b0113cf606913c3f32"
+        },
+        {
+          "path": "source/id-ID/fomberg/assets/unit-007/klein-bottle-cellular-polygon.svg",
+          "bytes": 3602,
+          "sha256": "b95bc43b0c56cedf5dd56662bd7e0ec8a82a2c583220eafc537d6893fa77f8b1"
+        },
+        {
+          "path": "source/id-ID/fomberg/assets/unit-007/klein-bottle-cellular-polygon.png",
+          "bytes": 550645,
+          "sha256": "f865c22500cde383da1661695e368aaf243450a5ea9be933f8802657e6720217"
+        }
+      ]
+    },
+    "provenance_vocabulary": {
+      "status": "PASS",
+      "allowed_values": [
+        "source-derived",
+        "edition-original",
+        "edition-original-redraw"
+      ],
+      "observed_counts": {
+        "source-derived": 30,
+        "edition-original": 39,
+        "edition-original-redraw": 2
+      },
+      "uncontrolled_values": [],
+      "semantic_reflow_recorded_in_separate_rendering_attribute": true,
+      "semantic_reflow_rendering_occurrences": 14
+    },
+    "rights_and_provenance": {
+      "status": "PASS",
+      "source_author": "Yeheli Fomberg",
+      "lecture_relationship": "based on lectures by Nir Lazarovich",
+      "source_commit_present": true,
+      "source_tree_present": true,
+      "selected_span_identity_present": true,
+      "source_license": "CC BY-SA 4.0",
+      "adaptation_license": "CC BY-SA 4.0",
+      "translation_and_changes_disclosed": true,
+      "nonendorsement_disclosed": true,
+      "separate_fomberg_problem_bank_excluded": true,
+      "mit_expression_copied": false,
+      "model_identification_exact": "OpenAI Codex gpt-5.6-sol, Ultra",
+      "private_or_credential_strings_found": 0,
+      "forbidden_umbrella_metadata_strings_found": 0
+    },
+    "terminology_and_language": {
+      "status": "PASS",
+      "locale": "id-ID",
+      "unit_007_terminology_rows": 15,
+      "unit_007_rows_admitted_to_live_terminology": 15,
+      "term_id_range": "O012-TERM-0470..O012-TERM-0484",
+      "draft_to_live_value_mismatches": 0,
+      "terms_checked": [
+        "homologi seluler",
+        "rantai seluler",
+        "grup rantai seluler",
+        "kompleks rantai seluler",
+        "pemetaan batas seluler",
+        "bilangan insidensi",
+        "koefisien insidensi",
+        "teorema homologi seluler",
+        "permukaan kompak terorientasi",
+        "penutup ganda kanonis",
+        "homomorfisma nol",
+        "aproksimasi seluler",
+        "jumlah eksponen",
+        "kolimit tersaring",
+        "hasil bagi filtrasi"
+      ],
+      "pass1_stale_forms_absent": [
+        "bola n",
+        "a irisan b",
+        "torus-$2$",
+        "permukaan terorientasi kompak",
+        "pemetaan penutup ganda kanonis atas",
+        "homomorfisme nol",
+        "direflow"
+      ],
+      "reader_prose_semantic_reflow_phrase": "ditata ulang secara semantik",
+      "reader_prose_semantic_reflow_occurrences": 2,
+      "natural_and_mathematically_precise": true
+    },
+    "structure": {
+      "status": "PASS",
+      "fenced_block_declared_ids": 69,
+      "unique_fenced_block_declared_ids": 69,
+      "duplicate_declared_ids": 0,
+      "fenced_div_nesting_errors": 0,
+      "local_markdown_links_checked": 4,
+      "local_markdown_link_failures": 0,
+      "png_reader_links_checked": 3,
+      "png_reader_link_failures": 0
+    },
+    "cursor": {
+      "status": "PASS",
+      "completed_source_lines": "3518-4185",
+      "completed_section": "1.13 Cellular homology",
+      "next_exact_cursor": 4186,
+      "next_exact_text": "\\subsection{Extras before cohomology}",
+      "selected_fomberg_bridge_complete": true,
+      "no_line_4186_source_content_translated": true
+    }
+  },
+  "pass1_resolution": [
+    {
+      "pass1_finding": "O012-FOM-U007-ISR-P1-001",
+      "status": "RESOLVED",
+      "resolution": "canonical notice supplies exact author/lecture relationship, source identity, CC BY-SA 4.0, change disclosure, non-endorsement, and model identification"
+    },
+    {
+      "pass1_finding": "O012-FOM-U007-ISR-P2-001",
+      "status": "RESOLVED",
+      "resolution": "all canonical data-origin values belong to the admitted three-value vocabulary; semantic reflow uses data-rendering"
+    },
+    {
+      "pass1_finding": "O012-FOM-U007-ISR-P2-002",
+      "status": "RESOLVED",
+      "resolution": "genus-two, Klein-bottle, and real-projective chain displays now carry their reserved figure IDs"
+    },
+    {
+      "pass1_finding": "O012-FOM-U007-ISR-P2-003",
+      "status": "RESOLVED",
+      "resolution": "the genus-two source example is one continuous wrapper with one stable ID"
+    },
+    {
+      "pass1_finding": "O012-FOM-U007-ISR-P2-004",
+      "status": "RESOLVED",
+      "resolution": "the standard genus-two polygon is classified and explained as an edition-original equivalent, not a literal source redraw"
+    },
+    {
+      "pass1_finding": "O012-FOM-U007-ISR-P2-005",
+      "status": "RESOLVED",
+      "resolution": "the torus boundary calculation uses the direct one-cell endpoint argument rather than silently altering the CW/Delta claim"
+    },
+    {
+      "pass1_finding": "O012-FOM-U007-ISR-P2-006",
+      "status": "RESOLVED",
+      "resolution": "accessibility terminology now uses sfera and baji and communicates the correct spaces"
+    },
+    {
+      "pass1_finding": "O012-FOM-U007-ISR-P3-001",
+      "status": "RESOLVED",
+      "resolution": "canonical, inventory, terminology draft, and live terminology now use the natural and internally consistent id-ID forms"
+    }
+  ],
+  "final_decision": {
+    "status": "PASS_P1_P2_P3_ZERO",
+    "canonical_admission": "APPROVED_FOR_NEXT_DETERMINISTIC_BUILD_AND_BACKEND_GATE",
+    "translation_restart_required": false,
+    "remaining_source_language_provenance_or_diagram_blockers": 0
+  },
+  "reviewer_actions": {
+    "files_written": [
+      "qa/fomberg-unit-007/INDEPENDENT_SOURCE_LANGUAGE_REVIEW_FINAL.json"
+    ],
+    "other_files_modified": 0,
+    "git_invoked": false,
+    "network_invoked": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "access_right": "open",
+    "contributors": [
+      {"name": "Lazarovich, Nir", "type": "Other"},
+      {"name": "Editor edisi Bahasa Indonesia", "type": "Editor"},
+      {"name": "Translation and Transcription Project", "type": "Other"}
+    ],
+    "creators": [
+      {"name": "Roberts, David Michael"},
+      {"name": "Fomberg, Yeheli"}
+    ],
+    "description": "<p><strong>Status: checkpoint parsial kursus komposit; korpus Roberts lengkap 30/30 dan komponen Fomberg O012-FOM-001–007 lengkap untuk seluruh bentang terpilih Bagian 1.1–1.13.</strong> Versi 0.30.7 memuat terjemahan Bahasa Indonesia seluruh Kuliah 1–30 dari <em>Algebraic Topology</em> karya David Michael Roberts serta jembatan kompleks Δ, homologi simpleks dan singular, invariansi homotopi, barisan eksak, homologi relatif, eksisi, Mayer–Vietoris, naturalitas, perbandingan homologi simpleks–singular, derajat pemetaan dan derajat lokal, kompleks seluler/CW, serta homologi seluler dari catatan <em>Algebraic Topology</em> karya Yeheli Fomberg, berdasarkan kuliah Nir Lazarovich.</p><p>Cakupan Roberts adalah <code>Notes.tex</code> baris 134–6368 pada komit <code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>. Cakupan Fomberg adalah <code>algebraic_topology.tex</code> baris 31–4185, Bagian 1.1–1.13, pada komit <code>563194fae879178b9a6871b249513bfc27968975</code>; kursor sumber berikutnya ialah baris 4186, tetapi bentang Fomberg yang dipilih telah habis. O012-FOM-001 sampai O012-FOM-007 merupakan komponen Fomberg yang terpisah dari 30 kuliah Roberts dan dipetakan ke D60-R08, D60-R09, D60-R10, D60-R11, serta D60-R12. Kursus komposit tetap parsial karena lapisan penguasaan kumulatif, empat laboratorium komputasi, dan capstone lintas-invarian belum lengkap.</p><p>PDF A4 adalah berkas pembaca pertama. HTML mandiri/offline adalah permukaan akses utama yang terpusat, reflowable pada desktop dan seluler, dan memakai MathML asli tanpa dependensi runtime. Sumber Markdown, backend JSONL ber-ID stabil, lisensi komponen, manifest, checksum, QA, dan provenance ringkas turut disertakan.</p><p>Pembaca dan paket terpadu dirilis di bawah <strong>CC BY-SA 4.0</strong>. Komponen Roberts tetap diidentifikasi sebagai CC BY 4.0 dan komponen Fomberg sebagai CC BY-SA 4.0; atribusi, penandaan perubahan, share-alike, dan non-endorsement dijelaskan dalam <code>RELEASE_RIGHTS.md</code>. Produksi menggunakan <strong>OpenAI Codex gpt-5.6-sol, Ultra</strong> atas arahan pengguna; ini bukan kredit kepengarangan atau endorsement. Edisi ini independen dan tidak disponsori atau disahkan oleh penulis, dosen asal, maupun institusi mereka.</p>",
+    "keywords": [
+      "topologi aljabar",
+      "Bahasa Indonesia",
+      "homotopi",
+      "ruang penutup",
+      "grup fundamental",
+      "homologi simpleks",
+      "homologi singular",
+      "eksisi",
+      "Mayer–Vietoris",
+      "derajat pemetaan",
+      "kompleks seluler",
+      "homologi seluler",
+      "kompleks CW",
+      "MathML",
+      "machine-readable textbook"
+    ],
+    "language": "ind",
+    "license": "cc-by-sa-4.0",
+    "notes": "ID rilis: o012-composite-id-roberts-001-030-fomberg-001-007-v0.30.7. Roberts lengkap 30/30; Fomberg O012-FOM-001–007 lengkap untuk bentang terpilih Bagian 1.1–1.13; kursus komposit tetap parsial. Versi ini melanjutkan konsep Zenodo 10.5281/zenodo.22061489 dan tidak membuat konsep pesaing.",
+    "publication_date": "2026-08-26",
+    "publication_type": "book",
+    "related_identifiers": [
+      {"identifier": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53", "relation": "isDerivedFrom", "scheme": "url"},
+      {"identifier": "https://git.sr.ht/~yp/math-notes/tree/563194fae879178b9a6871b249513bfc27968975", "relation": "isDerivedFrom", "scheme": "url"},
+      {"identifier": "10.5281/zenodo.22061489", "relation": "isVersionOf", "scheme": "doi"},
+      {"identifier": "10.5281/zenodo.22102865", "relation": "isNewVersionOf", "scheme": "doi"}
+    ],
+    "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Roberts 1–30 dan Jembatan Homologi, Derajat, dan Kompleks Seluler §1.1–1.13",
+    "upload_type": "publication",
+    "version": "0.30.7"
+  }
+}

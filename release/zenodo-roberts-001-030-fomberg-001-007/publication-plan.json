@@ -1,0 +1,42 @@
+{
+  "anonymous_byte_readback_required": true,
+  "artifact_identities_known": true,
+  "backend_binding": {
+    "expected_records": 6742,
+    "final_identity_source": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_007_CUMULATIVE_RECEIPT.json",
+    "hardcoded_final_identity": false,
+    "verified_snapshot": {
+      "bundle_sha256": "523b570517eb54720c50007aacc5d4eea525ea252b9ca1f6f45b027182354765",
+      "total_bytes": 8213649,
+      "total_records": 6742
+    }
+  },
+  "credentials_used": false,
+  "current_public_doi": "10.5281/zenodo.22102865",
+  "current_public_record_id": 22102865,
+  "existing_concept_doi": "10.5281/zenodo.22061489",
+  "final_reader_artifacts": {
+    "html": {
+      "bytes": 14885069,
+      "path": "output/html/roberts-001-030-fomberg-001-007/index.html",
+      "sha256": "87d58a5955954125c424ab1220a9c6aa7967a782a9bd739094a31ae0a50af5f6"
+    },
+    "pdf": {
+      "bytes": 8326404,
+      "pages": 472,
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-id.pdf",
+      "sha256": "1beca2d03f04c1fcca7eb01bd2654567908febc1ba7941b459c06b90ef865c22"
+    }
+  },
+  "metadata_payload": "metadata.json",
+  "new_concept_allowed": false,
+  "new_deposition_created": false,
+  "payload_directory": "artifacts",
+  "publication_route": "resolve the latest public record in the existing concept, then create and publish exactly one new version",
+  "publish_not_draft": true,
+  "reader_first_filename": "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_READER.pdf",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-007-v0.30.7",
+  "schema_version": "1.0",
+  "state": "prepared_not_published",
+  "version": "0.30.7"
+}

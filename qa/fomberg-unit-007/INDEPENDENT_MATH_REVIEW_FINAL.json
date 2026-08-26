@@ -1,0 +1,177 @@
+{
+  "review_id": "O012-FOMBERG-UNIT-007-INDEPENDENT-MATH-REVIEW-FINAL",
+  "schema_version": "1.0.0",
+  "date": "2026-08-26",
+  "status": "PASS",
+  "pass": true,
+  "scope": "Final independent mathematical review of the integrated Unit 007 canonical reader, covering FOM-PR-13 through FOM-PR-15 and all six edition-original mastery exercise, hint, and solution triples.",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "canonical_reader": {
+    "path": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md",
+    "bytes": 60598,
+    "lf_lines": 1934,
+    "sha256": "417b62c6c334b2f55965b623d8bfc8c3c94d4b2e109db149e42e294916673def",
+    "edition_unit_id": "O012-FOM-007",
+    "course_route_unit_id": "D60-R12"
+  },
+  "frozen_source_binding": {
+    "official_repository": "https://git.sr.ht/~yp/math-notes",
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+    "authority_path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+    "authority_bytes": 223886,
+    "authority_sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483",
+    "selected_source_lines": "3518-4185",
+    "selected_span_lf_lines": 668,
+    "selected_span_bytes": 26533,
+    "selected_span_sha256": "a22afacfdbecdfad48942421412c4cff1c0f317eb77f18253578125a5d0d7ce2",
+    "next_source_line": 4186,
+    "next_source_text": "\\subsection{Extras before cohomology}",
+    "source_audit_path": "qa/FOMBERG_UNIT_007_SOURCE_AUDIT.json",
+    "source_audit_sha256": "1cae10108e5af2dc3c0a9b63dd76861b7c44f42087f3ff5ec158a8d69b68b159"
+  },
+  "prior_review_binding": {
+    "path": "qa/fomberg-unit-007/INDEPENDENT_MATH_REVIEW_PASS1.json",
+    "bytes": 10555,
+    "sha256": "353398554dd048b92f110b290b2468b170d6b7b021b6ce91c683ac97dad0e580",
+    "prior_status": "CHANGES_REQUIRED",
+    "prior_severity_census": {
+      "P1": 0,
+      "P2": 1,
+      "P3": 2
+    },
+    "repair_closure": [
+      {
+        "prior_finding_id": "O012-FOM-U007-MATH-PASS1-001",
+        "status": "RESOLVED",
+        "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:1765-1803",
+        "evidence": "The presentation comparison now says that the transformed standard relator is a cyclic conjugate of (b^2a^2)^{-1}, uses invariance of the normal closure under conjugation and inversion, and explicitly distinguishes the direct chain isomorphism F_1(y)=s, F_2(Delta_std)=Delta from the generator-induced isomorphism F_1(y)=-s, F_2(Delta_std)=-Delta."
+      },
+      {
+        "prior_finding_id": "O012-FOM-U007-MATH-PASS1-002",
+        "status": "RESOLVED",
+        "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:1633-1803",
+        "evidence": "The unique 0-cell is consistently v_0 and the new degree-one basis is u=a, s=a+b, eliminating the cross-degree symbol collision."
+      },
+      {
+        "prior_finding_id": "O012-FOM-U007-MATH-PASS1-003",
+        "status": "RESOLVED",
+        "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:1441-1447",
+        "evidence": "The skeletal-stabilization display now contains the valid TeX condition H_k(X)\\qquad(k<n)."
+      },
+      {
+        "prior_finding_id": "O012-FOM-U007-MATH-INTEGRATION-PR15-TYPE",
+        "status": "RESOLVED",
+        "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:592-629",
+        "evidence": "The incidence theorem explicitly assumes n>=1 and types n=1 using X^(0)_+, a disjoint basepoint, and degree on reduced H_0(S^0)."
+      }
+    ]
+  },
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "findings": [],
+  "proof_repair_checks": [
+    {
+      "repair_id": "FOM-PR-13",
+      "status": "PASS",
+      "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:143-245",
+      "checks": {
+        "long_exact_sequence_types_and_indices": "PASS",
+        "finite_dimensional_stabilization": "PASS",
+        "arbitrary_cw_compact_support": "PASS",
+        "surjectivity_and_injectivity": "PASS",
+        "non_circularity": "PASS"
+      },
+      "evidence": "For r>=n+1 and n>k, r>k+1, so the relative groups in degrees k+1 and k both vanish and adjacent skeleta induce H_k-isomorphisms. Closure-finiteness plus weak topology proves that a compact subset lies in a finite subcomplex. Cycle support gives surjectivity; the joint support of a cycle and a bounding chain gives injectivity. The proof does not invoke cellular homology."
+    },
+    {
+      "repair_id": "FOM-PR-14",
+      "status": "PASS",
+      "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:338-533",
+      "checks": {
+        "boundary_map_types": "PASS",
+        "d_squared_zero": "PASS",
+        "degree_zero_case": "PASS",
+        "degree_one_case": "PASS",
+        "edge_identification": "PASS",
+        "arbitrary_cw_convergence": "PASS",
+        "naturality": "PASS",
+        "non_circularity": "PASS"
+      },
+      "evidence": "The composition d_n=rho_{n-1}delta_n is typed, and delta_{n-1}rho_{n-1}=0 is the consecutive-map relation in the long exact sequence. Vanishing above skeletal dimension makes rho_n and rho_{n-1} injective, giving ker d_n=im rho_n; rho_0 is the identity and d_0=0. The pair (X^(n+1),X^n), followed by FOM-PR-13, identifies cellular and singular homology. Maps of skeletal pairs prove naturality for cellular maps, and cellular approximation gives the arbitrary-continuous-map statement."
+    },
+    {
+      "repair_id": "FOM-PR-15",
+      "status": "PASS",
+      "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:589-707",
+      "checks": {
+        "n_ge_1_hypothesis": "PASS",
+        "sphere_dimensions": "PASS",
+        "wedge_projection_index": "PASS",
+        "orientation_and_sign": "PASS",
+        "degree_zero_case_excluded": "PASS",
+        "degree_one_reduced_h0_case": "PASS",
+        "finite_support_for_arbitrary_cw": "PASS"
+      },
+      "evidence": "Both incidence spheres have dimension n-1, P_beta collapses precisely the summands delta!=beta, and the outward-normal-first boundary orientation introduces no hidden sign. Coordinate projection after the connecting map yields the stated degree coefficient. The n=1 endpoint incidence is correctly read in reduced H_0(S^0), and compactness of the attaching sphere gives finite support even when the CW complex has infinitely many cells."
+    }
+  ],
+  "mastery_structure": {
+    "expected_triples": 6,
+    "exercise_ids_found": 6,
+    "hint_ids_found": 6,
+    "solution_ids_found": 6,
+    "duplicate_or_missing_ids": 0,
+    "status": "PASS"
+  },
+  "mastery_checks": [
+    {
+      "mastery_id": "F7.1",
+      "status": "PASS",
+      "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:1272-1382",
+      "independent_recomputation": "Exponent sums give d_2=[[2,1],[-1,2]]. Its determinant is 5 and its Smith form is diag(1,5); therefore ker d_2=0, H_2=0, H_1=Z/5, and H_0=Z."
+    },
+    {
+      "mastery_id": "F7.2",
+      "status": "PASS",
+      "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:1384-1462",
+      "independent_recomputation": "The long exact sequence proves vanishing above skeletal dimension, an isomorphism below n, and an epimorphism in degree n. Attaching one (n+1)-cell to S^n by the identity gives D^(n+1), proving that the degree-n epimorphism need not be injective. Finite-subcomplex support supplies the arbitrary-CW passage."
+    },
+    {
+      "mastery_id": "F7.3",
+      "status": "PASS",
+      "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:1464-1548",
+      "independent_recomputation": "The incidence matrix is A=[[1,-2],[0,3],[-1,1]]. Reversing x_1 and e_2 gives A'=PAQ=[[-1,-2],[0,-3],[1,1]]. The two columns are independent; gcd of entries is 1 and gcd of the 2x2 minors 3,-1,3 is 1, so the Smith form has nonzero diagonal 1,1, H_2=0, and H_1=Z."
+    },
+    {
+      "mastery_id": "F7.4",
+      "status": "PASS",
+      "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:1550-1631",
+      "independent_recomputation": "Every generator has exponent sum zero in the product of commutators and every 1-cell is a loop at the unique vertex, so d_2=d_1=0. Hence H_2=Z, H_1=Z^(2g), H_0=Z, and chi=2-2g."
+    },
+    {
+      "mastery_id": "F7.5",
+      "status": "PASS",
+      "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:1633-1804",
+      "independent_recomputation": "The source polygon word b^2a^2 has exponent vector (2,2), so d_2(Delta)=2(a+b), ker d_2=0, im d_2=Z(2,2), H_2=0, H_1=Z plus Z/2, and H_0=Z. The unimodular basis u=a, s=a+b sends d_2 to 2s. Under x=a, y=a^{-1}b^{-1}, the standard relator becomes b^{-1}a^{-2}b^{-1}, a cyclic conjugate of (b^2a^2)^{-1}; the two chain isomorphisms and their signs are now distinguished correctly."
+    },
+    {
+      "mastery_id": "F7.6",
+      "status": "PASS",
+      "canonical_locator": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md:1806-1917",
+      "independent_recomputation": "The two local degree contributions are 1 and deg(antipodal on S^(k-1))=(-1)^k, so d_k=0 for odd k and multiplication by 2 for even k. Thus positive odd homology below n is Z/2, top homology is Z exactly for odd n, and the displayed RP^4 and RP^5 complexes and homology groups have the correct parity."
+    }
+  ],
+  "structural_counts": {
+    "proof_repair_modules": 3,
+    "repair_theorems": 3,
+    "repair_proofs": 3,
+    "mastery_exercises": 6,
+    "mastery_hints": 6,
+    "mastery_solutions": 6
+  },
+  "final_conclusion": "The canonical reader identity reviewed here has no P1, P2, or P3 mathematical findings. FOM-PR-13 through FOM-PR-15 are complete, correctly placed, typed, non-circular, and valid for their stated CW-complex scope; all six mastery triples have correct matrices, Smith reductions, kernel-image calculations, group-presentation comparison, and parity conclusions."
+}

@@ -1,0 +1,144 @@
+{
+  "review_id": "O012-FOMBERG-UNIT-007-INDEPENDENT-MATH-REVIEW-PASS1",
+  "schema_version": "1.0.0",
+  "date": "2026-08-26",
+  "status": "CHANGES_REQUIRED",
+  "pass": false,
+  "scope": "Independent mathematical review of the Unit 007 proof-repair and mastery drafts against the frozen source audit and authority span; no canonical reader or draft was edited.",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "reviewed_inputs": [
+    {
+      "path": "qa/fomberg-unit-007/PROOF_REPAIRS_DRAFT.md",
+      "sha256": "623434efbf76ce143f7bf6a1f2ead5dc4ad8ddf9a1e3351f998a9bac5b3b5996"
+    },
+    {
+      "path": "qa/fomberg-unit-007/MASTERY_DRAFT.md",
+      "sha256": "3448a9c1c2b2b146c3441edbc3c406e519b6c00ae24cce5866e6e5b12c3a5fc0"
+    },
+    {
+      "path": "qa/FOMBERG_UNIT_007_SOURCE_AUDIT.json",
+      "sha256": "1cae10108e5af2dc3c0a9b63dd76861b7c44f42087f3ff5ec158a8d69b68b159"
+    },
+    {
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "reviewed_span": "3518-4185",
+      "span_sha256": "a22afacfdbecdfad48942421412c4cff1c0f317eb77f18253578125a5d0d7ce2"
+    }
+  ],
+  "severity_counts": {
+    "P1": 0,
+    "P2": 1,
+    "P3": 2
+  },
+  "findings": [
+    {
+      "finding_id": "O012-FOM-U007-MATH-PASS1-001",
+      "severity": "P2",
+      "category": "group_presentation_equivalence",
+      "locator": "qa/fomberg-unit-007/MASTERY_DRAFT.md:553-574",
+      "exact_issue": "Under x=a and y=a^{-1}b^{-1}, the standard relator xyx^{-1}y becomes b^{-1}a^{-2}b^{-1}. Its inverse ba^2b is cyclically conjugate to b^2a^2, so the transformed relator is conjugate to the inverse of the source relator, not generally in the same conjugacy class as the source relator. The quotient presentations are nevertheless isomorphic because conjugation and inversion leave a relator's normal closure unchanged. In addition, the group-induced degree-one map sends y to -v, whereas the earlier displayed chain isomorphism sends y to v; these are two valid isomorphisms but should be distinguished explicitly.",
+      "mathematical_impact": "The computed cellular homology and the conclusion that the two presentations define isomorphic groups remain correct, but the stated conjugacy-class claim is too strong and the relation between the two chain maps is under-specified.",
+      "proposed_correction": "Replace the same-conjugacy-class sentence by: 'Relator standar berubah menjadi konjugat siklik dari (b^2a^2)^{-1}; konjugasi dan inversi tidak mengubah penutup normal, sehingga kedua presentasi memberikan grup isomorfik.' Then state explicitly that the generator change induces F_1(x)=u, F_1(y)=-v and is made into a chain map by F_2(Delta_std)=-Delta; keep the earlier F_1(y)=v, F_2(Delta_std)=Delta only as a separate direct chain-complex isomorphism."
+    },
+    {
+      "finding_id": "O012-FOM-U007-MATH-PASS1-002",
+      "severity": "P3",
+      "category": "typed_notation_collision",
+      "locator": "qa/fomberg-unit-007/MASTERY_DRAFT.md:411-432,449-456,500-574",
+      "exact_issue": "F7.5 uses v first for the unique 0-cell and then again for the degree-one basis element v=a+b. The grading makes the intended element recoverable, but expressions such as F_0(v_std)=v and F_1(y)=v reuse the same glyph in different chain groups.",
+      "mathematical_impact": "No computed group changes, but the collision obscures domain and degree in the chain-map comparison.",
+      "proposed_correction": "Rename the 0-cell v_0 throughout F7.5, or rename the new degree-one generator s=a+b and propagate that choice through the matrix, homology decomposition, and chain maps."
+    },
+    {
+      "finding_id": "O012-FOM-U007-MATH-PASS1-003",
+      "severity": "P3",
+      "category": "display_math_typo",
+      "locator": "qa/fomberg-unit-007/MASTERY_DRAFT.md:197",
+      "exact_issue": "The first stabilization display contains the literal text 'H_k(X)quad(k<n)' instead of a TeX spacing command, so the intended condition will render incorrectly.",
+      "mathematical_impact": "The surrounding proof establishes the correct isomorphism; this is a transcription/rendering defect only.",
+      "proposed_correction": "Change the expression to 'H_k(X)\\qquad(k<n)'."
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "PR13_EXACT_SEQUENCE_AND_ARBITRARY_CW",
+      "status": "PASS",
+      "locators": [
+        "qa/fomberg-unit-007/PROOF_REPAIRS_DRAFT.md:31-67",
+        "qa/fomberg-unit-007/PROOF_REPAIRS_DRAFT.md:69-110"
+      ],
+      "evidence": "For r>=n+1 and n>k one has r>=k+2, so both H_{k+1}(X^(r),X^(r-1)) and H_k(X^(r),X^(r-1)) vanish and the inclusion between adjacent skeleta is an isomorphism. The compact-support lemma is valid for arbitrary CW complexes: closure-finiteness makes each chosen-point set closed cellwise, weak topology makes it closed globally, compactness forces only finitely many met cells, and their closures lie in a finite subcomplex. The surjectivity argument contains a cycle support; the injectivity argument contains both cycle and bounding-chain supports. No cellular-homology theorem is used."
+    },
+    {
+      "check_id": "PR14_CHAIN_TYPES_D2_AND_EDGE_IDENTIFICATION",
+      "status": "PASS",
+      "locators": [
+        "qa/fomberg-unit-007/PROOF_REPAIRS_DRAFT.md:127-212",
+        "qa/fomberg-unit-007/PROOF_REPAIRS_DRAFT.md:255-319"
+      ],
+      "evidence": "The types in d_n=rho_{n-1} delta_n match, and delta_{n-1} rho_{n-1}=0 is exactly the consecutive-map relation in the long exact sequence of (X^(n-1),X^(n-2)). For n>=1, H_n(X^(n-1))=0 makes rho_n injective and H_{n-1}(X^(n-2))=0 makes rho_{n-1} injective, giving ker d_n=im rho_n. For n=0, rho_0 is the identity and d_0=0. The pair (X^(n+1),X^n) then gives H_n(C^CW)=H_n(X^(n+1)), and PR13 identifies this with H_n(X). The n=1 case reduces correctly to d_0d_1=0."
+    },
+    {
+      "check_id": "PR14_NONCIRCULARITY_AND_NATURALITY",
+      "status": "PASS",
+      "locators": [
+        "qa/fomberg-unit-007/PROOF_REPAIRS_DRAFT.md:214-253",
+        "qa/fomberg-unit-007/PROOF_REPAIRS_DRAFT.md:321-360"
+      ],
+      "evidence": "The proof uses only relative singular homology of skeletal pairs, the already independently proved skeleton stabilization, exactness, and compact support; it does not invoke the cellular-homology conclusion. For a cellular f, maps of skeletal pairs commute with connecting and pair maps, hence form a chain map and commute with the explicit Theta formula. For an arbitrary continuous f, a cellular approximation induces the same map after Theta because its singular-homology map equals H_n(f), making the construction independent of approximation."
+    },
+    {
+      "check_id": "PR15_INCIDENCE_SIGNS_DIMENSIONS_AND_SUPPORT",
+      "status": "PASS",
+      "locators": [
+        "qa/fomberg-unit-007/PROOF_REPAIRS_DRAFT.md:378-420",
+        "qa/fomberg-unit-007/PROOF_REPAIRS_DRAFT.md:423-499"
+      ],
+      "evidence": "Both incidence-map spheres have dimension n-1, P_beta collapses all other wedge summands, and the outward-normal-first boundary convention makes delta_n[Phi_alpha]=(varphi_alpha)_*[S^(n-1)] without an extra sign. Projection to the beta summand yields the degree coefficient. For n=1, reduced H_0(S^0) gives the signed endpoint incidence. Compactness of the attaching sphere plus the arbitrary-CW finite-subcomplex lemma proves that only finitely many coefficients are nonzero."
+    },
+    {
+      "check_id": "MASTERY_F7_1_MATRIX_SNF",
+      "status": "PASS",
+      "locator": "qa/fomberg-unit-007/MASTERY_DRAFT.md:15-128",
+      "evidence": "Exponent sums give d_2=[[2,1],[-1,2]] in the stated bases. Its determinant is 5 and its Smith form is diag(1,5), so ker d_2=0, coker d_2=Z/5, d_1=0, and (H_2,H_1,H_0)=(0,Z/5,Z)."
+    },
+    {
+      "check_id": "MASTERY_F7_2_SKELETON_ARGUMENT",
+      "status": "PASS_WITH_P3_RENDER_FIX",
+      "locator": "qa/fomberg-unit-007/MASTERY_DRAFT.md:130-219",
+      "evidence": "The relative-group indices prove vanishing above dimension, an isomorphism below n, and a surjection in degree n. Attaching an (n+1)-cell to S^n by the identity gives D^(n+1), so the surjection need not be injective. Filtered finite-subcomplex support extends the claims to arbitrary CW complexes. Finding PASS1-003 is only a malformed TeX command."
+    },
+    {
+      "check_id": "MASTERY_F7_3_ORIENTATION_AND_SNF",
+      "status": "PASS",
+      "locator": "qa/fomberg-unit-007/MASTERY_DRAFT.md:221-321",
+      "evidence": "The incidence matrix is A=[[1,-2],[0,3],[-1,1]]. Reversing x_1 and e_2 gives A'=PAQ=[[-1,-2],[0,-3],[1,1]] with the displayed sign matrices. The rank is two; gcd(entries)=1 and gcd(2x2 minors 3,-1,3)=1, so the Smith form has nonzero diagonal (1,1), H_2=0, and H_1=Z."
+    },
+    {
+      "check_id": "MASTERY_F7_4_ORIENTABLE_SURFACES",
+      "status": "PASS",
+      "locator": "qa/fomberg-unit-007/MASTERY_DRAFT.md:323-408",
+      "evidence": "Each generator has exponent sum zero in the product of commutators, hence d_2=0; all 1-cells loop at the unique vertex, hence d_1=0. Thus H_2=Z, H_1=Z^(2g), H_0=Z and chi=1-2g+1=2-2g."
+    },
+    {
+      "check_id": "MASTERY_F7_5_KLEIN_CHAIN_CALCULATION",
+      "status": "PASS_WITH_P2_AND_P3_TEXT_FIXES",
+      "locator": "qa/fomberg-unit-007/MASTERY_DRAFT.md:410-575",
+      "evidence": "The source polygon arrows give a cyclic word b^2a^2, so d_2(Delta)=(2,2), ker d_2=0, im d_2=Z(2,2), and H_1=Z^2/<(2,2)>=Z plus Z/2. The unimodular basis u=a, v=a+b sends d_2 to (0,2). The standard word xyx^{-1}y has exponent vector (0,2), so the displayed direct chain-complex isomorphism is valid. Findings PASS1-001 and PASS1-002 concern the stronger presentation-level wording and notation, not these homology calculations."
+    },
+    {
+      "check_id": "MASTERY_F7_6_REAL_PROJECTIVE_SPACE",
+      "status": "PASS",
+      "locator": "qa/fomberg-unit-007/MASTERY_DRAFT.md:577-697",
+      "evidence": "The two local contributions are 1 and deg(antipodal on S^(k-1))=(-1)^k, so d_k is 0 for odd k and multiplication by 2 for even k. This yields Z/2 in positive odd degrees below n, top Z exactly when n is odd, and the explicit RP^4 and RP^5 complexes and homology groups shown in the draft."
+    }
+  ],
+  "release_gate": {
+    "mathematical_p1_clear": true,
+    "mathematical_p2_clear": false,
+    "required_before_pass": [
+      "Resolve O012-FOM-U007-MATH-PASS1-001 and independently recheck the corrected presentation comparison.",
+      "Resolve the two P3 notation/rendering defects and rerun this bounded review against new input hashes."
+    ]
+  }
+}

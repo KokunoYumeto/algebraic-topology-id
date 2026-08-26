@@ -1,0 +1,316 @@
+{
+  "review_id": "O012-FOMBERG-UNIT-007-INDEPENDENT-SOURCE-LANGUAGE-PASS1",
+  "schema_version": "1.0.0",
+  "date": "2026-08-26",
+  "status": "CHANGES_REQUIRED_P1_1_P2_6_P3_1",
+  "review_mode": "independent_read_only_source_translation_language_diagram_and_provenance_review",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "scope": {
+    "edition_unit_id": "O012-FOM-007",
+    "course_route_unit_id": "D60-R12",
+    "source_section": "Fomberg Algebraic Topology Section 1.13: Cellular homology",
+    "source_span": "algebraic_topology.tex:3518-4185",
+    "drafts_are_canonical": false,
+    "canonical_reader_mutated_by_reviewer": false,
+    "drafts_mutated_by_reviewer": false
+  },
+  "authority": {
+    "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+    "bytes": 223886,
+    "lf_lines": 6069,
+    "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483",
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b",
+    "license": "CC BY-SA 4.0",
+    "selected_span": {
+      "line_start": 3518,
+      "line_end": 4185,
+      "lf_lines": 668,
+      "bytes": 26533,
+      "sha256": "a22afacfdbecdfad48942421412c4cff1c0f317eb77f18253578125a5d0d7ce2",
+      "first_line": "\\subsection{Cellular homology}",
+      "last_line": "",
+      "next_line_number": 4186,
+      "next_line": "\\subsection{Extras before cohomology}",
+      "status": "PASS_EXACT_BYTE_AND_LINE_BOUNDARY"
+    }
+  },
+  "reviewed_inputs": [
+    {
+      "path": "qa/FOMBERG_UNIT_007_SOURCE_AUDIT.json",
+      "bytes": 18838,
+      "lf_count": 508,
+      "sha256": "1cae10108e5af2dc3c0a9b63dd76861b7c44f42087f3ff5ec158a8d69b68b159"
+    },
+    {
+      "path": "qa/fomberg-unit-007/TRANSLATION_DRAFT_A.md",
+      "bytes": 18267,
+      "lf_count": 523,
+      "sha256": "83bd7e0f1778bb685b88535909737be4c3bb2e8e4c21f5bab531e29ebdf2d330"
+    },
+    {
+      "path": "qa/fomberg-unit-007/TRANSLATION_DRAFT_B.md",
+      "bytes": 15423,
+      "lf_count": 428,
+      "sha256": "dbead6f44bbeca3627702c5197e7a4e6c33baf138a11ac26c894d2e52213e54e"
+    },
+    {
+      "path": "qa/fomberg-unit-007/DIAGRAM_ASSET_INVENTORY.json",
+      "bytes": 26096,
+      "lf_count": 267,
+      "sha256": "327ca77326decfeec2d3a410886df03083e33e6b444fbb8f2cf0bcd49ad6e70e"
+    },
+    {
+      "path": "qa/fomberg-unit-007/TERMINOLOGY_ROWS_DRAFT.csv",
+      "bytes": 2942,
+      "lf_count": 16,
+      "sha256": "815ca81d88cae132807395117031aa2b03c70650f55a98ddba036e8cc1b66c29"
+    },
+    {
+      "path": "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md",
+      "bytes": 41416,
+      "lf_lines": 1053,
+      "sha256": "e8d4d5391f8cdf4e62a019f7a991d09e4b610633e8e660dec4e0ea2b61c538f7",
+      "role": "admitted terminology, provenance, and reader-style comparator"
+    },
+    {
+      "path": "00_control/TERMINOLOGY.csv",
+      "role": "admitted terminology authority"
+    }
+  ],
+  "severity_census": {
+    "P1": 1,
+    "P2": 6,
+    "P3": 1
+  },
+  "checks": {
+    "source_boundary": {
+      "status": "PASS",
+      "draft_a_declared_span": "3518-3849",
+      "draft_b_declared_span": "3850-4185",
+      "gap_or_textual_overlap": false,
+      "blank_terminal_line_4185_accounted_for": true
+    },
+    "source_environment_closure": {
+      "status": "FAIL",
+      "source_semantic_environments": 15,
+      "expected_unique_environment_ids": 15,
+      "draft_environment_wrappers": 16,
+      "draft_unique_environment_ids": 15,
+      "missing_unique_environment_ids": [],
+      "duplicate_environment_ids": [
+        "o012-fom-u007-ex-genus-two-homology"
+      ],
+      "source_order_otherwise_preserved": true
+    },
+    "mathematics_and_translation_fidelity": {
+      "status": "PASS_EXCEPT_FOR_SEPARATELY_LISTED_INTEGRATION_FINDINGS",
+      "formula_index_and_result_scope_checked": [
+        "relative homology of consecutive CW skeleta and its oriented-cell basis",
+        "vanishing above the skeletal dimension and stabilization below it",
+        "cellular chain groups and the two connecting-map/quotient-map composites",
+        "the equation d_(n-1) composed with d_n equals zero",
+        "the corrected incidence map S_alpha^(n-1) to S_beta^(n-1) and degree formula",
+        "sphere and complex-projective-space cellular homology",
+        "torus attaching projections, degree-zero coefficients, and H_*(T^2)",
+        "genus-two and genus-g orientable-surface homology",
+        "the source polygon model for the Klein bottle, d_2(Delta)=2(a+b), and H_1(K)",
+        "real-projective-space attaching degree 1+(-1)^n, alternating differentials, and homology"
+      ],
+      "source_correction_ids_001_through_008_mathematically_applied": true,
+      "mandatory_repairs_13_through_15_not_falsely_claimed_complete_in_translation_drafts": true,
+      "all_six_source_examples_represented": true,
+      "formula_or_homology_result_errors_found": 0
+    },
+    "diagram_function_closure": {
+      "status": "FAIL",
+      "source_conceptual_diagram_groups": 17,
+      "diagram_inventory_groups": 17,
+      "draft_declared_figure_wrappers": 14,
+      "missing_declared_figure_ids": [
+        "o012-fom-u007-fig-genus-two-chain-complex",
+        "o012-fom-u007-fig-klein-bottle-chain-complex",
+        "o012-fom-u007-fig-real-projective-chain-complex"
+      ],
+      "missing_functions_have_unwrapped_formula_content": true,
+      "geometric_svg_png_pairs": 3,
+      "geometric_pngs_visually_inspected_at_original_resolution": 3,
+      "visual_legibility": "PASS",
+      "source_fidelity": "FAIL_FOR_GENUS_TWO_REDRAW_ONLY"
+    },
+    "terminology_and_language": {
+      "status": "FAIL",
+      "core_terms_consistent_with_unit_006": [
+        "homologi seluler",
+        "kompleks rantai seluler",
+        "kerangka",
+        "peta pelekatan",
+        "pemetaan karakteristik",
+        "pemetaan batas",
+        "pasangan baik",
+        "baji",
+        "sfera",
+        "ruang projektif real",
+        "homomorfisma nol"
+      ],
+      "remaining_terminology_or_naturalness_findings": 2
+    },
+    "rights_and_provenance": {
+      "status": "FAIL_AS_CANONICAL_INTEGRATION_INPUT",
+      "exact_model_identification_present_in_both_drafts": true,
+      "source_commit_present_in_draft_a": false,
+      "source_commit_present_in_draft_b": true,
+      "explicit_yeheli_fomberg_author_attribution_present": false,
+      "explicit_nir_lazarovich_lecture_relationship_present": false,
+      "explicit_cc_by_sa_4_0_notice_present": false,
+      "explicit_translation_and_change_notice_present": false,
+      "explicit_nonendorsement_notice_present": false
+    },
+    "provenance_vocabulary": {
+      "status": "FAIL",
+      "admitted_comparator_values": [
+        "source-derived",
+        "edition-original",
+        "edition-original-redraw"
+      ],
+      "invalid_source_semantic_reflow_occurrences": 9,
+      "invalid_source_derived_diagram_specification_occurrences": 5,
+      "prior_same_defect_reference": "backend/corrections.jsonl:532, O012-FOM-U005-INT-P2-002"
+    }
+  },
+  "findings": [
+    {
+      "finding_id": "O012-FOM-U007-ISR-P1-001",
+      "severity": "P1",
+      "category": "rights_and_provenance",
+      "locators": [
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_A.md:1-10",
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_B.md:1-10",
+        "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md:1-53"
+      ],
+      "observed": "The fragments identify the component and model, and Draft B gives the source commit, but neither fragment supplies the public-unit attribution and rights closure used by the admitted Unit 006: Yeheli Fomberg as source author, the Nir Lazarovich lecture relationship, CC BY-SA 4.0, translation/change disclosure, and non-endorsement. Draft A also omits the frozen commit.",
+      "impact": "The translated prose may be integrated internally, but the combined unit cannot be admitted or published as-is because its reader-facing rights and provenance are incomplete.",
+      "required_change": "At canonical assembly, add one Unit-007 notice/frontmatter block with exact author and lecture relationship, commit/tree and selected-span identity, CC BY-SA 4.0 source and adaptation notice, changes and excluded-donor disclosure, non-endorsement, and the exact model identification. Do not merely rely on the QA inventory."
+    },
+    {
+      "finding_id": "O012-FOM-U007-ISR-P2-001",
+      "severity": "P2",
+      "category": "provenance_vocabulary",
+      "locators": [
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_A.md:53,126,156,307,350,382,400,434,453",
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_B.md:29,68,125,160,175",
+        "scripts/qa-fomberg-unit-006.py:682-685",
+        "backend/corrections.jsonl:532"
+      ],
+      "observed": "Draft A uses the undefined data-origin value source-semantic-reflow nine times, although that exact value was already rejected and repaired in Unit 005. Draft B introduces another undefined value, source-derived-diagram-specification, five times.",
+      "impact": "Canonical integration would reintroduce uncontrolled provenance classes and make source expression, rendering choice, and original redraw authorship indistinguishable.",
+      "required_change": "Use source-derived for source content and record semantic reflow in a separate rendering attribute. Use edition-original-redraw for independent SVG/PNG redraw blocks; keep source-derived only for the translated source statement or source-located semantic mathematics."
+    },
+    {
+      "finding_id": "O012-FOM-U007-ISR-P2-002",
+      "severity": "P2",
+      "category": "diagram_stable_id_closure",
+      "locators": [
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_B.md:48-55",
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_B.md:141-146",
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_B.md:251-258",
+        "qa/FOMBERG_UNIT_007_SOURCE_AUDIT.json:prospective_diagram_id_inventory",
+        "qa/fomberg-unit-007/DIAGRAM_ASSET_INVENTORY.json:159,198,234"
+      ],
+      "observed": "All three chain-complex formulas are present, but the genus-two, Klein-bottle, and real-projective chain complexes are bare displays. Their reserved figure IDs are absent from the drafts, so only 14 of 17 diagram functions have declared reader figure wrappers.",
+      "impact": "The mathematical text survives, but stable-ID coverage, backend mapping, accessibility prose binding, and the promised 17-of-17 diagram-function closure do not.",
+      "required_change": "Wrap each of the three displays under its reserved figure ID, preserve its exact source lines, and bind the inventory's semantic interpretation and local-scroller/accessibility metadata."
+    },
+    {
+      "finding_id": "O012-FOM-U007-ISR-P2-003",
+      "severity": "P2",
+      "category": "environment_identity",
+      "locators": [
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_A.md:501-506",
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_B.md:25-90"
+      ],
+      "observed": "The one source example spanning the A/B boundary is opened twice as .example with the same stable ID o012-fom-u007-ex-genus-two-homology. The drafts therefore contain 16 source-environment wrappers for 15 source environments, although the unique-ID set is complete.",
+      "impact": "Naive concatenation creates a duplicate DOM/backend identifier and falsely models one source example as two environments.",
+      "required_change": "Assemble one continuous example wrapper for source lines 3847-3971. Remove the Draft-A fragment wrapper or convert it to a noncanonical boundary note outside the canonical reader; never emit the stable ID twice."
+    },
+    {
+      "finding_id": "O012-FOM-U007-ISR-P2-004",
+      "severity": "P2",
+      "category": "diagram_source_fidelity",
+      "locators": [
+        "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex:3852-3906",
+        "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/header.tex:171-176",
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_B.md:29-42",
+        "qa/fomberg-unit-007/DIAGRAM_ASSET_INVENTORY.json:144-158",
+        "source/id-ID/fomberg/assets/unit-007/genus-two-cellular-polygon.svg"
+      ],
+      "observed": "Draft B accurately records the source's unsigned cyclic label order a,b,a,c,d,c,d,b with opposite orientations in each pair. Reading the source arrows gives, up to cyclic start, the labeled boundary word a b^{-1} a^{-1} c d c^{-1} d^{-1} b. The SVG and inventory instead substitute the standard polygon word a b a^{-1} b^{-1} c d c^{-1} d^{-1} and call it the preserved source function. The replacement is a valid genus-two model and gives the same zero incidence coefficients, but it is not a faithful redraw of the labeled source polygon.",
+      "impact": "The topology and final homology remain correct, but the asset silently changes the cell-polygon presentation and overstates source fidelity.",
+      "required_change": "Either redraw the literal source edge order and arrows, or classify the current standard polygon as a separately identified edition-original equivalent and explicitly explain the change of polygonal presentation/basis. Do not call the current standard word source-derived without that distinction."
+    },
+    {
+      "finding_id": "O012-FOM-U007-ISR-P2-005",
+      "severity": "P2",
+      "category": "silent_source_correction",
+      "locators": [
+        "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex:3771-3773",
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_A.md:413-420",
+        "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md:201-216"
+      ],
+      "observed": "The source says CW complexes are the same as Delta-complexes in dimensions zero and one. Draft A replaces this with a weaker realization-level correspondence in order to justify d_1(a)=d_1(b)=0, but it neither states the needed subdivision qualification nor records the repeated source correction. Unit 006 already distinguishes homeomorphic realizations after subdivision from identical cell structures.",
+      "impact": "The resulting boundary values are correct, but the draft makes a substantive source correction silently, contrary to the correction policy and established Unit-006 treatment.",
+      "required_change": "Add an explicit edition-original source-audit note that links to the prior low-dimensional CW/Delta correction, or avoid the general equivalence claim and argue directly that each one-cell has both endpoints at v."
+    },
+    {
+      "finding_id": "O012-FOM-U007-ISR-P2-006",
+      "severity": "P2",
+      "category": "accessible_mathematical_terminology",
+      "locators": [
+        "qa/fomberg-unit-007/DIAGRAM_ASSET_INVENTORY.json:75",
+        "qa/fomberg-unit-007/DIAGRAM_ASSET_INVENTORY.json:126",
+        "qa/fomberg-unit-007/DIAGRAM_ASSET_INVENTORY.json:216",
+        "00_control/TERMINOLOGY.csv:O012-TERM-0092,O012-TERM-0344"
+      ],
+      "observed": "The sphere-chain alt text says bola n, which denotes a ball rather than S^n and conflicts with the admitted sfera terminology. The torus and Klein projection alt texts call S_a^1 wedge S_b^1 an irisan (intersection), which changes the construction mathematically; the admitted term is baji.",
+      "impact": "Sighted formulas are correct, but the accessibility surface communicates a different space to screen-reader users.",
+      "required_change": "Use sfera-n for S^n and describe S_a^1\\vee S_b^1 as baji dua lingkaran (or baji S_a^1 dan S_b^1), never irisan."
+    },
+    {
+      "finding_id": "O012-FOM-U007-ISR-P3-001",
+      "severity": "P3",
+      "category": "indonesian_naturalness_and_consistency",
+      "locators": [
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_A.md:379",
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_B.md:103",
+        "qa/fomberg-unit-007/TRANSLATION_DRAFT_B.md:316",
+        "qa/fomberg-unit-007/DIAGRAM_ASSET_INVENTORY.json:240",
+        "qa/fomberg-unit-007/TERMINOLOGY_ROWS_DRAFT.csv:O012-TERM-0478"
+      ],
+      "observed": "A few phrases remain less natural or inconsistent with the lane: torus-$2$ is calqued, permukaan terorientasi kompak has awkward modifier order, pemetaan penutup ganda kanonis atas is heavier than the established peta/penutup phrasing, and one alt text switches from homomorfisma to homomorfisme.",
+      "impact": "Meaning remains recoverable, but the prose and accessibility text are not yet fully natural or terminologically uniform id-ID.",
+      "required_change": "Prefer torus berdimensi dua or torus T^2, permukaan kompak terorientasi, peta penutup ganda kanonis dari S^(n-1) ke RP^(n-1), and homomorfisma nol consistently; update draft terminology row O012-TERM-0478 accordingly."
+    }
+  ],
+  "positive_findings": {
+    "formula_and_index_fidelity": "All displayed formulas, typed maps, indices, boundary coefficients, and final homology groups were checked against the frozen source. The eight enumerated source corrections are applied correctly and explicitly except for the separately listed repeated CW/Delta claim.",
+    "example_completeness": "All six source examples are translated, in order, with no formula or result omitted.",
+    "klein_bottle_source_model": "The nonstandard b^2 a^2 polygon in the source really gives both exponent sums equal to two, so d_2(Delta)=2(a+b) and H_1(K)=Z direct-sum Z/2Z are correct for that basis.",
+    "real_projective_space": "The correction x in S^(n-1), the local-degree sum 1+(-1)^n, the alternating cellular differentials, and both parity cases for H_k(RP^n) are correct.",
+    "inactive_comments": "No inactive source comment was promoted as active source prose.",
+    "external_donors": "No MIT text or separate Fomberg problem-bank expression appears in the reviewed drafts."
+  },
+  "admission_decision": {
+    "status": "NOT_READY_FOR_CANONICAL_INTEGRATION",
+    "pass_condition": "Resolve every P1, P2, and P3 finding, re-run exact source/environment/diagram/provenance checks, and require zero findings before PASS.",
+    "translation_restart_required": false,
+    "mathematical_retranslation_required": false
+  },
+  "reviewer_actions": {
+    "files_written": [
+      "qa/fomberg-unit-007/INDEPENDENT_SOURCE_LANGUAGE_REVIEW_PASS1.json"
+    ],
+    "other_files_modified": 0,
+    "git_invoked": false,
+    "network_invoked": false
+  }
+}

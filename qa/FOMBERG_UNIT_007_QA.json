@@ -1,0 +1,552 @@
+{
+  "controls": {
+    "adverse": {
+      "all_resolved": true,
+      "draft_rows": 12,
+      "draft_terminal_id": "O012-ADV-0558",
+      "first_unit_id": "O012-ADV-0547",
+      "live_rows_contiguous": true,
+      "reviewed_rows_contiguous": true,
+      "rows": 564,
+      "terminal_id": "O012-ADV-0564",
+      "unit_rows": 18
+    },
+    "identities": {
+      "00_control/ADVERSE_LEDGER.csv": {
+        "bytes": 216049,
+        "encoding": "UTF-8",
+        "lf_lines": 565,
+        "newline": "LF",
+        "path": "00_control/ADVERSE_LEDGER.csv",
+        "sha256": "a7a95692b336400ac60dfd12034424760349429b9f3f5967b5a42c3da9fd6214"
+      },
+      "00_control/TERMINOLOGY.csv": {
+        "bytes": 62008,
+        "encoding": "UTF-8",
+        "lf_lines": 485,
+        "newline": "LF",
+        "path": "00_control/TERMINOLOGY.csv",
+        "sha256": "1a51fb86b7a83e9528e0a40092e91d7ec8f52a5f3f5cdf657a195e62467820ef"
+      },
+      "qa/fomberg-unit-007/ADVERSE_ROWS_DRAFT.csv": {
+        "bytes": 6658,
+        "encoding": "UTF-8",
+        "lf_lines": 13,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-007/ADVERSE_ROWS_DRAFT.csv",
+        "sha256": "33e55f969fc90a95b888baa4b5fa5a06f1ce8fab8d42e4d58fe65c1b356d72c5"
+      },
+      "qa/fomberg-unit-007/TERMINOLOGY_ROWS_DRAFT.csv": {
+        "bytes": 2942,
+        "encoding": "UTF-8",
+        "lf_lines": 16,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-007/TERMINOLOGY_ROWS_DRAFT.csv",
+        "sha256": "aef46b0f9a29f5c2e46a7c11f7a3c061f67664d0d7028cc4313d3f67c2026cd6"
+      }
+    },
+    "terminology": {
+      "contiguous": true,
+      "draft_status": "draft_for_unit_007",
+      "evidence": {
+        "O012-TERM-0470": {
+          "glossary_form": "homologi seluler",
+          "kind": "exact",
+          "reader_form": "homologi seluler"
+        },
+        "O012-TERM-0471": {
+          "glossary_form": "rantai seluler",
+          "kind": "exact",
+          "reader_form": "rantai seluler"
+        },
+        "O012-TERM-0472": {
+          "glossary_form": "grup rantai seluler",
+          "kind": "alias",
+          "reader_form": "kompleks rantai seluler"
+        },
+        "O012-TERM-0473": {
+          "glossary_form": "kompleks rantai seluler",
+          "kind": "exact",
+          "reader_form": "kompleks rantai seluler"
+        },
+        "O012-TERM-0474": {
+          "glossary_form": "pemetaan batas seluler",
+          "kind": "exact",
+          "reader_form": "pemetaan batas seluler"
+        },
+        "O012-TERM-0475": {
+          "glossary_form": "bilangan insidensi",
+          "kind": "exact",
+          "reader_form": "bilangan insidensi"
+        },
+        "O012-TERM-0476": {
+          "glossary_form": "koefisien insidensi",
+          "kind": "exact",
+          "reader_form": "koefisien insidensi"
+        },
+        "O012-TERM-0477": {
+          "glossary_form": "teorema homologi seluler",
+          "kind": "exact",
+          "reader_form": "teorema homologi seluler"
+        },
+        "O012-TERM-0478": {
+          "glossary_form": "permukaan kompak terorientasi",
+          "kind": "exact",
+          "reader_form": "permukaan kompak terorientasi"
+        },
+        "O012-TERM-0479": {
+          "glossary_form": "penutup ganda kanonis",
+          "kind": "exact",
+          "reader_form": "penutup ganda kanonis"
+        },
+        "O012-TERM-0480": {
+          "glossary_form": "homomorfisma nol",
+          "kind": "exact",
+          "reader_form": "homomorfisma nol"
+        },
+        "O012-TERM-0481": {
+          "glossary_form": "aproksimasi seluler",
+          "kind": "alias",
+          "reader_form": "pendekatan seluler"
+        },
+        "O012-TERM-0482": {
+          "glossary_form": "jumlah eksponen",
+          "kind": "exact",
+          "reader_form": "jumlah eksponen"
+        },
+        "O012-TERM-0483": {
+          "glossary_form": "kolimit tersaring",
+          "kind": "alias",
+          "reader_form": "limit terarah"
+        },
+        "O012-TERM-0484": {
+          "glossary_form": "hasil bagi filtrasi",
+          "kind": "alias",
+          "reader_form": "hasil bagi"
+        }
+      },
+      "first_unit_id": "O012-TERM-0470",
+      "live_status": "admitted",
+      "rows": 484,
+      "terminal_id": "O012-TERM-0484",
+      "unit_rows": 15
+    }
+  },
+  "date": "2026-08-26",
+  "diagram_inventory": {
+    "bytes": 27193,
+    "encoding": "UTF-8",
+    "lf_lines": 269,
+    "newline": "LF",
+    "path": "qa/fomberg-unit-007/DIAGRAM_ASSET_INVENTORY.json",
+    "sha256": "7742b40613e13583fec63b8202183507f09c8a70f307263ef94421e5b9fcc527"
+  },
+  "gates": {
+    "frozen_source_identity_span_and_next_cursor": "PASS",
+    "independent_final_reviews_p1_p2_p3_zero": "PASS",
+    "links_and_prior_unit_fragments": "PASS",
+    "model_identification_and_privacy": "PASS",
+    "pandoc_native_and_mathml": "PASS",
+    "proof_repairs_and_mastery_solutions": "PASS",
+    "provenance_origin_vocabulary_and_rights": "PASS",
+    "seventeen_figures_inventory_and_assets": "PASS",
+    "source_environment_and_label_closure": "PASS",
+    "stable_ids_72_nonroot_71_and_semantic_classes": "PASS",
+    "terminology_and_adverse_ledgers": "PASS"
+  },
+  "independent_review": {
+    "identity": {
+      "bytes": 15526,
+      "encoding": "UTF-8",
+      "lf_lines": 403,
+      "newline": "LF",
+      "path": "qa/fomberg-unit-007/INDEPENDENT_SOURCE_LANGUAGE_REVIEW_FINAL.json",
+      "sha256": "be906b6e9808fea67ce79eec49cc2513668e8b42e590e830d3b2fdb03145c11b"
+    },
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    },
+    "status": "PASS_P1_P2_P3_ZERO"
+  },
+  "independent_reviews": {
+    "math": {
+      "identity": {
+        "bytes": 10168,
+        "encoding": "UTF-8",
+        "lf_lines": 177,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-007/INDEPENDENT_MATH_REVIEW_FINAL.json",
+        "sha256": "191d7b63c2a179b5d670b34ee3778ab032f1b3cd6548825f4fe15ce414969383"
+      },
+      "review_id": "O012-FOMBERG-UNIT-007-INDEPENDENT-MATH-REVIEW-FINAL",
+      "severity_census": {
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      },
+      "status": "PASS"
+    },
+    "source_language": {
+      "identity": {
+        "bytes": 15526,
+        "encoding": "UTF-8",
+        "lf_lines": 403,
+        "newline": "LF",
+        "path": "qa/fomberg-unit-007/INDEPENDENT_SOURCE_LANGUAGE_REVIEW_FINAL.json",
+        "sha256": "be906b6e9808fea67ce79eec49cc2513668e8b42e590e830d3b2fdb03145c11b"
+      },
+      "review_id": "O012-FOMBERG-UNIT-007-INDEPENDENT-SOURCE-LANGUAGE-FINAL",
+      "severity_census": {
+        "P1": 0,
+        "P2": 0,
+        "P3": 0
+      },
+      "status": "PASS_P1_P2_P3_ZERO"
+    }
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "qa_id": "O012-FOMBERG-UNIT-007-STATIC-QA",
+  "reader": {
+    "assets": {
+      "accessible_alt_texts": 3,
+      "all_redraw_provenance_present": true,
+      "files": 6,
+      "identities": {
+        "source/id-ID/fomberg/assets/unit-007/genus-two-cellular-polygon.png": {
+          "bytes": 547693,
+          "dimensions": [
+            1800,
+            1177
+          ],
+          "media_type": "image/png",
+          "path": "source/id-ID/fomberg/assets/unit-007/genus-two-cellular-polygon.png",
+          "sha256": "763204100908218e31cba6c8c269902c5670aaadcdc844b0113cf606913c3f32"
+        },
+        "source/id-ID/fomberg/assets/unit-007/genus-two-cellular-polygon.svg": {
+          "bytes": 3968,
+          "media_type": "image/svg+xml",
+          "origin": "edition-original",
+          "path": "source/id-ID/fomberg/assets/unit-007/genus-two-cellular-polygon.svg",
+          "sha256": "0d9ed407dfbcba14f6b7695cd8b2776fe029c60b41a15bb4ab0a3f4cd8ed7cc7"
+        },
+        "source/id-ID/fomberg/assets/unit-007/klein-bottle-cellular-polygon.png": {
+          "bytes": 550645,
+          "dimensions": [
+            1800,
+            1084
+          ],
+          "media_type": "image/png",
+          "path": "source/id-ID/fomberg/assets/unit-007/klein-bottle-cellular-polygon.png",
+          "sha256": "f865c22500cde383da1661695e368aaf243450a5ea9be933f8802657e6720217"
+        },
+        "source/id-ID/fomberg/assets/unit-007/klein-bottle-cellular-polygon.svg": {
+          "bytes": 3602,
+          "media_type": "image/svg+xml",
+          "origin": "edition-original-redraw",
+          "path": "source/id-ID/fomberg/assets/unit-007/klein-bottle-cellular-polygon.svg",
+          "sha256": "b95bc43b0c56cedf5dd56662bd7e0ec8a82a2c583220eafc537d6893fa77f8b1"
+        },
+        "source/id-ID/fomberg/assets/unit-007/torus-cellular-polygon.png": {
+          "bytes": 403115,
+          "dimensions": [
+            1800,
+            1029
+          ],
+          "media_type": "image/png",
+          "path": "source/id-ID/fomberg/assets/unit-007/torus-cellular-polygon.png",
+          "sha256": "8ec1b8807587c5a0c481029c791fe84bbcd5de500b659616579e2cafb75e1aac"
+        },
+        "source/id-ID/fomberg/assets/unit-007/torus-cellular-polygon.svg": {
+          "bytes": 3367,
+          "media_type": "image/svg+xml",
+          "origin": "edition-original-redraw",
+          "path": "source/id-ID/fomberg/assets/unit-007/torus-cellular-polygon.svg",
+          "sha256": "61788a1d6a189686ef3eb8a0a54174aaff865a977ef8ff92b5c609e46ffb54f9"
+        }
+      },
+      "png_fallbacks": 3,
+      "reader_references": [
+        "../assets/unit-007/torus-cellular-polygon.png",
+        "../assets/unit-007/genus-two-cellular-polygon.png",
+        "../assets/unit-007/klein-bottle-cellular-polygon.png"
+      ],
+      "semantic_figures": 17,
+      "svg_files": 3
+    },
+    "fenced_divs": {
+      "balanced": true,
+      "closed": 69,
+      "opened": 69
+    },
+    "figures": {
+      "asset_pairs": 3,
+      "semantic": 14,
+      "total": 17
+    },
+    "fragment_links": {
+      "count": 11,
+      "distinct_targets": 11,
+      "local_fragments": 2,
+      "resolved": 11,
+      "target_counts": {
+        "#o012-fom-u007-ex-genus-two-homology": 1,
+        "#o012-fom-u007-ex-torus-homology": 1,
+        "../assets/unit-007/genus-two-cellular-polygon.png": 1,
+        "../assets/unit-007/klein-bottle-cellular-polygon.png": 1,
+        "../assets/unit-007/torus-cellular-polygon.png": 1,
+        "fomberg-unit-005-degree-maps-local-degree.md#o012-fom-u005-prop-local-to-global": 1,
+        "fomberg-unit-006-cellular-complexes.md#o012-fom-u006-ex-sphere-n": 1,
+        "fomberg-unit-006-cellular-complexes.md#o012-fom-u006-ex-torus": 1,
+        "fomberg-unit-006-cellular-complexes.md#o012-fom-u006-mcheck-001": 1,
+        "https://creativecommons.org/licenses/by-sa/4.0/": 1,
+        "https://git.sr.ht/~yp/math-notes/tree/563194fae879178b9a6871b249513bfc27968975/item/algebraic_topology.tex": 1
+      }
+    },
+    "identity": {
+      "bytes": 60598,
+      "encoding": "UTF-8",
+      "lf_lines": 1934,
+      "newline": "LF",
+      "path": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md",
+      "sha256": "417b62c6c334b2f55965b623d8bfc8c3c94d4b2e109db149e42e294916673def"
+    },
+    "mastery": {
+      "complete_solutions": 6,
+      "exercise_hint_solution_triples": 6,
+      "source_exercises_preserved": 0
+    },
+    "nonroot_ids": 71,
+    "ordered_stable_ids_sha256": "af353bd5d7549acb9db95e602f2e3b4e7e3dc48452fbea728421f9d7d8ff7a40",
+    "pandoc": {
+      "display_mathml_nodes": 132,
+      "mathml_nodes": 672,
+      "mathml_render": "PASS",
+      "native_parse": "PASS",
+      "version": "pandoc 3.9.0.2",
+      "warnings": 0
+    },
+    "proof_repairs": [
+      "FOM-PR-13",
+      "FOM-PR-14",
+      "FOM-PR-15"
+    ],
+    "provenance_origin_counts": {
+      "None": 1,
+      "edition-original": 39,
+      "edition-original-redraw": 2,
+      "source-derived": 30
+    },
+    "rights_provenance_privacy": "PASS",
+    "semantic_class_counts": {
+      "boundary": 1,
+      "definition": 2,
+      "example": 6,
+      "exercise": 6,
+      "figure": 17,
+      "heading": 3,
+      "hint": 6,
+      "lemma": 1,
+      "proof": 4,
+      "proof-repair": 3,
+      "remark": 5,
+      "solution": 6,
+      "source-audit": 9,
+      "theorem": 3
+    },
+    "source_aliases": {
+      "exmp:cw-for-torus-homology": "o012-fom-u007-ex-torus-homology",
+      "exmp:homology-of-genus-two": "o012-fom-u007-ex-genus-two-homology",
+      "exmp:homology-of-rpn": "o012-fom-u007-ex-real-projective-space-homology"
+    },
+    "source_corrections": [
+      "FOM-U007-SRC-001",
+      "FOM-U007-SRC-002",
+      "FOM-U007-SRC-003",
+      "FOM-U007-SRC-004",
+      "FOM-U007-SRC-005",
+      "FOM-U007-SRC-006",
+      "FOM-U007-SRC-007",
+      "FOM-U007-SRC-008"
+    ],
+    "source_locators": {
+      "count": 51,
+      "valid": true
+    },
+    "stable_ids": 72,
+    "stable_ids_unique": 72
+  },
+  "schema_version": "1.0.0",
+  "source": {
+    "authority_identity": {
+      "bytes": 223886,
+      "encoding": "UTF-8",
+      "lf_lines": 6069,
+      "newline": "LF",
+      "path": "authority/upstream/math-notes-563194fae879178b9a6871b249513bfc27968975/tree/algebraic_topology.tex",
+      "sha256": "d27095de0f38f0c14b2d7716cb52d51d064f0594dd9f82f9d1b3e6af5b35a483"
+    },
+    "commit": "563194fae879178b9a6871b249513bfc27968975",
+    "diagram_syntax": {
+      "conceptual_groups": 17,
+      "inline_tikz": 10,
+      "tikzcd": 9,
+      "tikzpicture": 3
+    },
+    "mathematical_environment_spans": [
+      {
+        "kind": "remark",
+        "line_end": 3523,
+        "line_start": 3520
+      },
+      {
+        "kind": "lemma",
+        "line_end": 3540,
+        "line_start": 3525
+      },
+      {
+        "kind": "proof",
+        "line_end": 3594,
+        "line_start": 3541
+      },
+      {
+        "kind": "definition",
+        "line_end": 3610,
+        "line_start": 3596
+      },
+      {
+        "kind": "definition",
+        "line_end": 3640,
+        "line_start": 3612
+      },
+      {
+        "kind": "remark",
+        "line_end": 3664,
+        "line_start": 3642
+      },
+      {
+        "kind": "remark",
+        "line_end": 3670,
+        "line_start": 3666
+      },
+      {
+        "kind": "remark",
+        "line_end": 3682,
+        "line_start": 3672
+      },
+      {
+        "kind": "example",
+        "line_end": 3710,
+        "line_start": 3684
+      },
+      {
+        "kind": "example",
+        "line_end": 3738,
+        "line_start": 3712
+      },
+      {
+        "kind": "example",
+        "line_end": 3845,
+        "line_start": 3740
+      },
+      {
+        "kind": "example",
+        "line_end": 3971,
+        "line_start": 3847
+      },
+      {
+        "kind": "remark",
+        "line_end": 3988,
+        "line_start": 3973
+      },
+      {
+        "kind": "example",
+        "line_end": 4097,
+        "line_start": 3990
+      },
+      {
+        "kind": "example",
+        "line_end": 4184,
+        "line_start": 4099
+      }
+    ],
+    "mathematical_environment_total": 15,
+    "mathematical_environments": {
+      "definition": 2,
+      "example": 6,
+      "lemma": 1,
+      "proof": 1,
+      "remark": 5
+    },
+    "next_line": 4186,
+    "next_line_text": "\\subsection{Extras before cohomology}",
+    "selected_span": {
+      "bytes": 26533,
+      "lf_lines": 668,
+      "line_end": 4185,
+      "line_start": 3518,
+      "sha256": "a22afacfdbecdfad48942421412c4cff1c0f317eb77f18253578125a5d0d7ce2"
+    },
+    "source_audit": {
+      "diagram_groups": 17,
+      "identity": {
+        "bytes": 18838,
+        "encoding": "UTF-8",
+        "lf_lines": 508,
+        "newline": "LF",
+        "path": "qa/FOMBERG_UNIT_007_SOURCE_AUDIT.json",
+        "sha256": "1cae10108e5af2dc3c0a9b63dd76861b7c44f42087f3ff5ec158a8d69b68b159"
+      },
+      "next_exact_cursor": 4186,
+      "proof_repairs": [
+        "FOM-PR-13",
+        "FOM-PR-14",
+        "FOM-PR-15"
+      ],
+      "semantic_environment_total": 15,
+      "source_corrections": [
+        "FOM-U007-SRC-001",
+        "FOM-U007-SRC-002",
+        "FOM-U007-SRC-003",
+        "FOM-U007-SRC-004",
+        "FOM-U007-SRC-005",
+        "FOM-U007-SRC-006",
+        "FOM-U007-SRC-007",
+        "FOM-U007-SRC-008"
+      ],
+      "status": "PASS_WITH_MANDATORY_REPAIRS_IDENTIFIED"
+    },
+    "source_labels": [
+      "exmp:cw-for-torus-homology",
+      "exmp:homology-of-genus-two",
+      "exmp:homology-of-rpn"
+    ],
+    "subsections": 1,
+    "tree": "fb678966d1533d529bdd72f49d8496a3bdc14a9b"
+  },
+  "source_audit": {
+    "bytes": 18838,
+    "encoding": "UTF-8",
+    "lf_lines": 508,
+    "newline": "LF",
+    "path": "qa/FOMBERG_UNIT_007_SOURCE_AUDIT.json",
+    "sha256": "1cae10108e5af2dc3c0a9b63dd76861b7c44f42087f3ff5ec158a8d69b68b159"
+  },
+  "status": "PASS",
+  "translation_closure": {
+    "contiguous_span": "3518-4185",
+    "figures_total": 17,
+    "geometric_asset_pairs": 3,
+    "mastery_triples_complete": 6,
+    "next_exact_cursor": 4186,
+    "next_exact_text": "\\subsection{Extras before cohomology}",
+    "nonroot_ids": 71,
+    "proof_repairs_complete": 3,
+    "semantic_reader_displays": 14,
+    "source_corrections_recorded": 8,
+    "source_exercises_preserved": 0,
+    "source_mathematical_environments": 15,
+    "stable_ids": 72
+  }
+}

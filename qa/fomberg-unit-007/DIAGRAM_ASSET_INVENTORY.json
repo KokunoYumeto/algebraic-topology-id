@@ -1,0 +1,269 @@
+{
+  "inventory_id": "O012-FOMBERG-UNIT-007-DIAGRAM-ASSET-INVENTORY",
+  "schema_version": "1.0.0",
+  "date": "2026-08-26",
+  "status": "PASS",
+  "scope": {
+    "edition_unit_id": "O012-FOM-007",
+    "course_route_unit_id": "D60-R12",
+    "source_span": "algebraic_topology.tex:3518-4185",
+    "source_audit": "qa/FOMBERG_UNIT_007_SOURCE_AUDIT.json",
+    "asset_root": "source/id-ID/fomberg/assets/unit-007",
+    "source_license": "CC BY-SA 4.0",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "representation_policy": {
+    "geometric_figures": "A geometric quotient polygon is an independently authored accessible SVG master with a lossless reader-sized PNG fallback. The torus and Klein-bottle assets preserve their labeled source models; the genus-two asset is an explicitly disclosed edition-original equivalent standard polygon, not a literal redraw of the source's cyclic edge arrangement.",
+    "algebraic_displays": "Long exact sequences, chain complexes, projection composites, and null-homotopy calculations remain semantic reader displays so symbols, maps, and reading order stay selectable and accessible.",
+    "color_policy": "Color is redundant: every oriented edge also carries an arrow and a textual label, and every SVG supplies title/description accessibility text.",
+    "reader_policy": "Use the SVG as the primary reader asset, the paired PNG as fallback, and the Indonesian alt-text recommendation below at the inclusion site. Semantic displays must expose their mathematical text directly rather than use an image-only alt surrogate."
+  },
+  "summary": {
+    "audit_diagram_groups": 17,
+    "mapped_groups": 17,
+    "geometric_asset_pairs": 3,
+    "semantic_reader_displays": 14,
+    "svg_files": 3,
+    "png_fallbacks": 3,
+    "unmapped_groups": 0,
+    "unexpected_groups": 0
+  },
+  "items": [
+    {
+      "audit_id": "o012-fom-u007-fig-les-vanishing",
+      "source_lines": {"start": 3571, "end": 3576},
+      "source_syntax": "tikzcd",
+      "source_primitives": 1,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Shows the four consecutive terms used to deduce that the homology map between adjacent skeleta is an isomorphism when both relative groups vanish.",
+      "alt_text_recommendation": "Potongan barisan eksak panjang dari H subskrip k tambah 1 untuk pasangan dua kerangka bertetangga menuju H subskrip k kerangka n kurang 1, lalu H subskrip k kerangka n, lalu grup relatif H subskrip k.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No raster or vector file: the equation and arrows must remain semantic text."},
+      "semantic_reader_display": {"recommended_form": "Four-term MathML/HTML exact sequence with labeled source and target groups and explicit left-to-right arrows.", "layout": "Reader-width horizontal scroller only when necessary; never scale text below the surrounding mathematical font.", "accessibility": "Expose every group and arrow in DOM/MathML reading order and supply a one-sentence prose interpretation."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-cellular-chain-complex",
+      "source_lines": {"start": 3603, "end": 3609},
+      "source_syntax": "tikzcd",
+      "source_primitives": 1,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Defines the cellular chain complex from successive relative homology groups and labels the differentials d subscript n plus 1 and d subscript n.",
+      "alt_text_recommendation": "Kompleks rantai seluler: elipsis menuju H subskrip n tambah 1 dari pasangan kerangka n tambah 1 dan n, melalui d subskrip n tambah 1 menuju H subskrip n dari pasangan kerangka n dan n kurang 1, melalui d subskrip n menuju suku berikutnya.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: a chain complex is more accessible as semantic mathematics."},
+      "semantic_reader_display": {"recommended_form": "MathML/HTML chain complex with differential labels above arrows.", "layout": "Single logical row with a local horizontal scroller on narrow screens.", "accessibility": "Keep maps, indices, pair parentheses, and arrow order machine-readable."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-cellular-boundary-diagram",
+      "source_lines": {"start": 3618, "end": 3635},
+      "source_syntax": "tikzcd",
+      "source_primitives": 1,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Combines the long exact sequences for two adjacent skeletal pairs and identifies the cellular differential as the connecting map followed by the quotient map.",
+      "alt_text_recommendation": "Diagram komutatif barisan eksak pasangan kerangka yang menempatkan diferensial seluler d subskrip n pada baris tengah dan memfaktorkannya sebagai q subskrip n kurang 1 setelah pemetaan batas parsial subskrip n.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: the multirow commutative diagram must retain semantic node and edge relations."},
+      "semantic_reader_display": {"recommended_form": "Accessible HTML grid or MathML table whose nodes have stable IDs and whose arrows carry explicit labels.", "layout": "Bounded local scroller on mobile, with a prose path d_n = q_(n-1) composed with partial_n directly below.", "accessibility": "Provide row/column reading order plus an adjacent text list of all labeled arrows."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-sphere-chain-complex",
+      "source_lines": {"start": 3690, "end": 3699},
+      "source_syntax": "tikzcd",
+      "source_primitives": 1,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Displays the cellular chain complex of the n-sphere with one generator in dimensions n and 0 and zero groups elsewhere.",
+      "alt_text_recommendation": "Kompleks rantai seluler sfera berdimensi n: Z pada derajat n dan derajat nol, grup nol pada semua derajat di antaranya dan di luar keduanya, dengan semua diferensial nol.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: the sparse chain complex is semantic mathematics."},
+      "semantic_reader_display": {"recommended_form": "Degree-labeled MathML/HTML chain row with zero maps stated explicitly.", "layout": "Wrap only at degree boundaries, preserving map order.", "accessibility": "State in prose which two degrees carry Z and that every differential vanishes."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-complex-projective-chain-complex",
+      "source_lines": {"start": 3719, "end": 3729},
+      "source_syntax": "tikzcd",
+      "source_primitives": 1,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Displays the cellular chain complex of complex projective n-space, with one integer generator in each even degree and zero groups in odd degrees.",
+      "alt_text_recommendation": "Kompleks rantai seluler ruang proyektif kompleks dimensi n: satu salinan Z pada setiap derajat genap dari nol sampai dua n, nol pada derajat ganjil, sehingga semua diferensial nol.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: the alternating degree pattern is semantic mathematics."},
+      "semantic_reader_display": {"recommended_form": "Degree-indexed MathML/HTML chain complex plus a compact textual pattern statement.", "layout": "A local horizontal scroller may be used for the full chain; keep the pattern sentence unscrolled.", "accessibility": "Expose degree labels and the even/odd pattern, not just repeated anonymous Z and zero symbols."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-torus-polygon",
+      "source_lines": {"start": 3743, "end": 3761},
+      "source_syntax": "tikzpicture",
+      "source_primitives": 1,
+      "representation": "asset_pair",
+      "function_preserved": "Shows the torus as a square quotient with opposite oriented a- and b-edges, one vertex, and one two-cell whose attaching word is a b a inverse b inverse.",
+      "alt_text_recommendation": "Poligon seluler torus berupa persegi: kedua sisi tegak berlabel a dan berarah ke atas, kedua sisi mendatar berlabel b dan berarah ke kanan, keempat sudut diidentifikasi menjadi v, dan interiornya adalah sel dua Delta; kata pelekatannya a b a invers b invers.",
+      "file_metrics": {"dimensions": {"svg": "980x560; viewBox 0 0 980 560", "png": "1800x1029"}, "bytes": {"svg": 3367, "png": 403115, "total": 406482}, "sha256": {"svg": "61788a1d6a189686ef3eb8a0a54174aaff865a977ef8ff92b5c609e46ffb54f9", "png": "8ec1b8807587c5a0c481029c791fe84bbcd5de500b659616579e2cafb75e1aac"}},
+      "assets": [
+        {"role": "accessible_svg_master", "path": "source/id-ID/fomberg/assets/unit-007/torus-cellular-polygon.svg", "media_type": "image/svg+xml", "width": 980, "height": 560, "viewBox": "0 0 980 560", "bytes": 3367, "sha256": "61788a1d6a189686ef3eb8a0a54174aaff865a977ef8ff92b5c609e46ffb54f9"},
+        {"role": "png_fallback", "path": "source/id-ID/fomberg/assets/unit-007/torus-cellular-polygon.png", "media_type": "image/png", "width": 1800, "height": 1029, "pixel_mode": "RGB 8-bit", "bytes": 403115, "sha256": "8ec1b8807587c5a0c481029c791fe84bbcd5de500b659616579e2cafb75e1aac"}
+      ],
+      "validation": {"status": "PASS", "audit_id_covered": true, "svg_xml_well_formed": true, "svg_role_img": true, "svg_title_and_description": true, "svg_aria_labelledby_resolves": true, "svg_data_audit_id_matches": true, "svg_source_lines_match": true, "png_signature_valid": true, "png_dimensions_valid": true, "visual_inspection": "PASS: labels, orientations, word, cell, and vertex identifications are legible without relying on color."}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-torus-chain-complex",
+      "source_lines": {"start": 3763, "end": 3770},
+      "source_syntax": "tikzcd",
+      "source_primitives": 1,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Shows the torus cellular chain groups Z Delta, Z a direct-sum Z b, and Z v with the degree-indexed differentials.",
+      "alt_text_recommendation": "Kompleks rantai seluler torus: Z Delta pada derajat dua menuju Z a jumlah langsung Z b pada derajat satu menuju Z v pada derajat nol, dengan grup nol di kedua ujung.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: preserve generators and differentials as semantic mathematics."},
+      "semantic_reader_display": {"recommended_form": "MathML/HTML chain row with generator names and d_2, d_1 labels.", "layout": "Local horizontal scroller only if needed on narrow screens.", "accessibility": "Name every generator and degree in adjacent prose."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-torus-attaching-projection",
+      "source_lines": {"start": 3783, "end": 3803},
+      "source_syntax": "inline_tikz",
+      "source_primitives": 2,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Tracks the torus two-cell attaching map through the wedge a∨b and the projection that collapses the b-circle to obtain the a-sphere incidence map.",
+      "alt_text_recommendation": "Komposit pemetaan pelekatan torus: batas cakram Delta dipetakan ke kerangka satu berupa baji lingkaran a dan lingkaran b, kemudian lingkaran b diruntuhkan oleh p subskrip a sehingga tersisa S satu subskrip a.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: projection composites are clearer and more accessible as labeled semantic maps."},
+      "semantic_reader_display": {"recommended_form": "Labeled map composite with a semantic wedge symbol and an explicit sentence saying which summand is collapsed.", "layout": "Allow the composite to scroll locally; do not rasterize the map labels.", "accessibility": "Expose domain, codomain, attaching map, projection, and collapsed summand in reading order."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-torus-nullhomotopy",
+      "source_lines": {"start": 3808, "end": 3829},
+      "source_syntax": "inline_tikz",
+      "source_primitives": 2,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Shows that after projection the torus attaching loop traverses the a-circle once in each orientation, hence is null-homotopic and has degree zero.",
+      "alt_text_recommendation": "Setelah diproyeksikan ke lingkaran a, batas sel dua torus menelusuri a sekali lalu menelusuri a dalam arah berlawanan; lintasan ini homotopik dengan lintasan konstan dan derajatnya nol.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: the null-homotopy argument is a semantic word-and-map calculation."},
+      "semantic_reader_display": {"recommended_form": "Semantic boundary word followed by its projected word a a^{-1}, a homotopy symbol, and the constant loop.", "layout": "Keep the word calculation on one locally scrollable line and its prose conclusion immediately after it.", "accessibility": "State explicitly that null-homotopic refers to the map and degree zero to the boundary coefficient."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-genus-two-polygon",
+      "source_lines": {"start": 3852, "end": 3906},
+      "source_syntax": "tikzpicture",
+      "source_primitives": 1,
+      "representation": "asset_pair",
+      "provenance_class": "edition-original",
+      "source_relationship": "mathematically_equivalent_standard_polygon_not_literal_redraw",
+      "function_preserved": "Provides an edition-original standard octagonal quotient model equivalent to the source's closed orientable genus-two surface, with one vertex, four one-cells, one two-cell, and boundary word a b a inverse b inverse c d c inverse d inverse. It preserves the cellular-homology function but not the source's literal cyclic edge order.",
+      "alt_text_recommendation": "Model standar ekuivalen permukaan genus dua berupa oktagon dengan sisi berurutan a, b, a invers, b invers, c, d, c invers, d invers; semua delapan verteks diidentifikasi menjadi v dan interiornya adalah sel dua Delta. Diagram ini adalah gambar asli edisi yang ekuivalen, bukan gambar ulang literal susunan sisi sumber.",
+      "file_metrics": {"dimensions": {"svg": "1040x680; viewBox 0 0 1040 680", "png": "1800x1177"}, "bytes": {"svg": 3968, "png": 547693, "total": 551661}, "sha256": {"svg": "0d9ed407dfbcba14f6b7695cd8b2776fe029c60b41a15bb4ab0a3f4cd8ed7cc7", "png": "763204100908218e31cba6c8c269902c5670aaadcdc844b0113cf606913c3f32"}},
+      "assets": [
+        {"role": "accessible_svg_master", "provenance_class": "edition-original", "source_relationship": "mathematically_equivalent_standard_polygon_not_literal_redraw", "path": "source/id-ID/fomberg/assets/unit-007/genus-two-cellular-polygon.svg", "media_type": "image/svg+xml", "width": 1040, "height": 680, "viewBox": "0 0 1040 680", "bytes": 3968, "sha256": "0d9ed407dfbcba14f6b7695cd8b2776fe029c60b41a15bb4ab0a3f4cd8ed7cc7"},
+        {"role": "png_fallback", "path": "source/id-ID/fomberg/assets/unit-007/genus-two-cellular-polygon.png", "media_type": "image/png", "width": 1800, "height": 1177, "pixel_mode": "RGB 8-bit", "bytes": 547693, "sha256": "763204100908218e31cba6c8c269902c5670aaadcdc844b0113cf606913c3f32"}
+      ],
+      "validation": {"status": "PASS", "audit_id_covered": true, "svg_xml_well_formed": true, "svg_role_img": true, "svg_title_and_description": true, "svg_aria_labelledby_resolves": true, "svg_data_audit_id_matches": true, "svg_source_lines_match": true, "literal_source_redraw": false, "equivalent_standard_polygon_disclosed": true, "png_signature_valid": true, "png_dimensions_valid": true, "visual_inspection": "PASS: all eight signed edge labels, arrows, vertices, and the two-cell are readable; the standard genus-two attaching word and its edition-original equivalent status are explicit."}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-genus-two-chain-complex",
+      "source_lines": {"start": 3909, "end": 3916},
+      "source_syntax": "tikzcd",
+      "source_primitives": 1,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Shows the genus-two cellular chain groups Z Delta, four rank-one one-cell summands, and Z v with the degree-indexed differentials.",
+      "alt_text_recommendation": "Kompleks rantai seluler permukaan genus dua: Z Delta pada derajat dua menuju jumlah langsung Z a, Z b, Z c, dan Z d pada derajat satu menuju Z v pada derajat nol.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: preserve the four generators and maps as semantic mathematics."},
+      "semantic_reader_display": {"recommended_form": "MathML/HTML chain row with direct-sum structure and differential labels.", "layout": "Use a local horizontal scroller on narrow screens.", "accessibility": "State the chain rank in each degree and name all four one-cell generators."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-genus-two-nullhomotopy",
+      "source_lines": {"start": 3920, "end": 3959},
+      "source_syntax": "inline_tikz",
+      "source_primitives": 2,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Projects the genus-two attaching word to each circle generator and pairs each traversal with its inverse, proving every incidence degree is zero.",
+      "alt_text_recommendation": "Untuk setiap generator a, b, c, atau d, proyeksi kata batas permukaan genus dua menelusuri lingkaran generator sekali pada tiap orientasi; setiap peta hasil proyeksi homotopik nol dan berderajat nol.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: preserve the projected boundary words and cancellations as semantic text."},
+      "semantic_reader_display": {"recommended_form": "Four compact semantic word projections, optionally factored through one general template.", "layout": "Wrap between generators, not inside an inverse pair.", "accessibility": "Distinguish null-homotopy of each map from the zero value of its degree."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-klein-bottle-polygon",
+      "source_lines": {"start": 3992, "end": 4010},
+      "source_syntax": "tikzpicture",
+      "source_primitives": 1,
+      "representation": "asset_pair",
+      "function_preserved": "Preserves the source's nonstandard square model of the Klein bottle: the boundary word is b squared a squared, so both cellular incidence coefficients equal two.",
+      "alt_text_recommendation": "Model poligon botol Klein dari sumber berupa persegi: sisi atas dan kanan berlabel b sesuai arah batas, sisi bawah dan kiri berlabel a sesuai arah batas, semua sudut diidentifikasi, dan kata batasnya b kuadrat a kuadrat sehingga kedua koefisien insidens bernilai dua.",
+      "file_metrics": {"dimensions": {"svg": "980x590; viewBox 0 0 980 590", "png": "1800x1084"}, "bytes": {"svg": 3602, "png": 550645, "total": 554247}, "sha256": {"svg": "b95bc43b0c56cedf5dd56662bd7e0ec8a82a2c583220eafc537d6893fa77f8b1", "png": "f865c22500cde383da1661695e368aaf243450a5ea9be933f8802657e6720217"}},
+      "assets": [
+        {"role": "accessible_svg_master", "path": "source/id-ID/fomberg/assets/unit-007/klein-bottle-cellular-polygon.svg", "media_type": "image/svg+xml", "width": 980, "height": 590, "viewBox": "0 0 980 590", "bytes": 3602, "sha256": "b95bc43b0c56cedf5dd56662bd7e0ec8a82a2c583220eafc537d6893fa77f8b1"},
+        {"role": "png_fallback", "path": "source/id-ID/fomberg/assets/unit-007/klein-bottle-cellular-polygon.png", "media_type": "image/png", "width": 1800, "height": 1084, "pixel_mode": "RGB 8-bit", "bytes": 550645, "sha256": "f865c22500cde383da1661695e368aaf243450a5ea9be933f8802657e6720217"}
+      ],
+      "validation": {"status": "PASS", "audit_id_covered": true, "svg_xml_well_formed": true, "svg_role_img": true, "svg_title_and_description": true, "svg_aria_labelledby_resolves": true, "svg_data_audit_id_matches": true, "svg_source_lines_match": true, "png_signature_valid": true, "png_dimensions_valid": true, "visual_inspection": "PASS: b-down-right and a-up-left orientations, the b^2 a^2 word, both coefficients, and the source-model qualification are legible."}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-klein-bottle-chain-complex",
+      "source_lines": {"start": 4015, "end": 4022},
+      "source_syntax": "tikzcd",
+      "source_primitives": 1,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Shows the Klein-bottle cellular chain groups Z Delta, Z a direct-sum Z b, and Z v with the degree-indexed differentials.",
+      "alt_text_recommendation": "Kompleks rantai seluler botol Klein: Z Delta pada derajat dua menuju Z a jumlah langsung Z b pada derajat satu menuju Z v pada derajat nol.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: preserve generators and maps as semantic mathematics."},
+      "semantic_reader_display": {"recommended_form": "MathML/HTML chain row with d_2 and d_1 labels.", "layout": "Local horizontal scroller only where needed.", "accessibility": "Name the generators and degree of each chain group."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-klein-bottle-attaching-projection",
+      "source_lines": {"start": 4026, "end": 4046},
+      "source_syntax": "inline_tikz",
+      "source_primitives": 2,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Tracks the Klein-bottle two-cell attaching map through the wedge a∨b and projection to the a-circle, with the other summand collapsed.",
+      "alt_text_recommendation": "Komposit pemetaan pelekatan botol Klein: batas cakram Delta dipetakan ke kerangka satu berupa baji lingkaran a dan lingkaran b, kemudian lingkaran b diruntuhkan oleh p subskrip a sehingga tersisa S satu subskrip a.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: the labeled projection composite is semantic mathematics."},
+      "semantic_reader_display": {"recommended_form": "Labeled map composite with a semantic wedge and an explicit collapsed-summand statement.", "layout": "Local horizontal scroller may contain the composite; retain a separate prose gloss.", "accessibility": "Expose domain, maps, wedge summands, quotient action, and codomain in order."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-klein-bottle-degree-two",
+      "source_lines": {"start": 4048, "end": 4069},
+      "source_syntax": "inline_tikz",
+      "source_primitives": 2,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Shows that projection of the b-squared a-squared attaching word to either retained circle traverses that circle twice, giving degree two and boundary coefficient two.",
+      "alt_text_recommendation": "Proyeksi kata batas b kuadrat a kuadrat ke lingkaran a menelusuri a dua kali dengan orientasi yang sama, sehingga homotopik dengan peta z pangkat dua dan berderajat dua; perhitungan untuk b sama.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: preserve the word projection and degree calculation as semantic mathematics."},
+      "semantic_reader_display": {"recommended_form": "Semantic calculation p_a(b^2 a^2) = a^2, homotopic to z↦z^2, followed by deg = 2; repeat for p_b.", "layout": "One locally scrollable line per projection.", "accessibility": "Name the a and b coefficients separately, correcting the source's repeated a-subscript typo."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    },
+    {
+      "audit_id": "o012-fom-u007-fig-real-projective-chain-complex",
+      "source_lines": {"start": 4105, "end": 4113},
+      "source_syntax": "tikzcd",
+      "source_primitives": 1,
+      "representation": "semantic_reader_display",
+      "function_preserved": "Displays the cellular chain complex of real projective n-space, with one integer generator in every degree from zero through n and alternating multiplication-by-two and zero differentials.",
+      "alt_text_recommendation": "Kompleks rantai seluler ruang proyektif real n: satu salinan Z pada setiap derajat nol sampai n; diferensial d subskrip k adalah perkalian dua bila k genap dan homomorfisma nol bila k ganjil.",
+      "file_metrics": {"dimensions": null, "bytes": null, "sha256": null, "reason": "No file: the degree-indexed alternating maps must remain semantic mathematics."},
+      "semantic_reader_display": {"recommended_form": "Degree-labeled MathML/HTML chain row plus the rule d_k = 2 for even k and 0 for odd k.", "layout": "Use a local horizontal scroller for the long row and a non-scrolling rule statement.", "accessibility": "Do not call deg(d_k); state that the sphere attaching map has degree 1+(-1)^k and d_k is the resulting homomorphism."},
+      "validation": {"status": "PASS", "audit_id_covered": true, "asset_required": false}
+    }
+  ],
+  "validation": {
+    "status": "PASS",
+    "audit_ids_compared_as_sets": true,
+    "audit_ids_expected": 17,
+    "audit_ids_present": 17,
+    "duplicate_audit_ids": 0,
+    "missing_audit_ids": [],
+    "unexpected_audit_ids": [],
+    "asset_pair_count": 3,
+    "semantic_reader_display_count": 14,
+    "svg_xml_parse_count": 3,
+    "svg_xml_parse_failures": 0,
+    "svg_accessibility_surface_count": 3,
+    "png_signature_and_dimension_count": 3,
+    "png_failures": 0,
+    "visual_inspection_count": 3,
+    "visual_inspection_failures": 0,
+    "json_parse": "PASS",
+    "hash_algorithm": "SHA-256",
+    "validation_notes": "Every conceptual diagram group in the frozen source audit is mapped exactly once. File bytes, dimensions, and hashes were recomputed from the live assets; SVG titles/descriptions and source locators were checked against XML; all three PNG fallbacks were rendered at 1800-pixel width and inspected at original resolution. The genus-two SVG is explicitly classified as an edition-original equivalent standard polygon rather than a literal redraw of the source's cyclic edge arrangement."
+  }
+}

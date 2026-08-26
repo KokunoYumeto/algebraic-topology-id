@@ -4,20 +4,20 @@ Edisi Bahasa Indonesia independen dari *Pure Mathematics Topic D: Algebraic
 Topology* karya David Michael Roberts. Ketiga puluh kuliah Roberts sudah
 diterjemahkan secara berurutan sampai akhir sumber; edisi sumber Roberts dengan
 demikian lengkap **30/30**. Jalur kuliah komposit O012/D60 masih **parsial**:
-jembatan Fomberg kini mencakup Bagian 1.1–1.12
-(`algebraic_topology.tex:31–3517`), sedangkan Bagian 1.13 serta lapisan
-pembuktian, latihan bersolusi, laboratorium, dan proyek puncak edisi masih harus
+jembatan Fomberg kini mencakup seluruh bentang terpilih Bagian 1.1–1.13
+(`algebraic_topology.tex:31–4185`). Lapisan penguasaan kumulatif, empat
+laboratorium komputasi, dan proyek puncak lintas-invarian edisi masih harus
 diselesaikan.
 
 ## Mulai membaca
 
-- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.12](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-006/)
+- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.13](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007/)
   adalah permukaan utama: satu berkas mandiri, reflow, tanpa JavaScript atau
   akses jaringan, dengan matematika MathML asli.
-- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-006/index.html) dapat
+- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-007/index.html) dapat
   diunduh dan dibuka secara luring.
-- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-006-id.pdf)
-  adalah permukaan cetak sekunder sepanjang 452 halaman. PDF memakai font
+- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-id.pdf)
+  adalah permukaan cetak sekunder sepanjang 472 halaman. PDF memakai font
   tersemat dan peta Unicode, tetapi belum ditandai secara struktural.
 - [Konsep Zenodo edisi ini](https://doi.org/10.5281/zenodo.22061489)
   mempertahankan garis versi preservasi; nomor konsep tetap sama ketika
@@ -28,19 +28,23 @@ diselesaikan.
   pembaca dan paket sumber/backend untuk cakupan 1.1–1.11 pada garis konsep
   yang sama. Checkpoint terkini
   [0.30.6](https://doi.org/10.5281/zenodo.22102865) mempertahankan tepat byte
-  pembaca, sumber/backend, dan bukti QA untuk cakupan 1.1–1.12.
+  pembaca, sumber/backend, dan bukti QA untuk cakupan 1.1–1.12. Checkpoint
+  terkini [0.30.7](https://doi.org/10.5281/zenodo.22104150) mempertahankan
+  tepat byte pembaca, sumber/backend, dan bukti QA untuk seluruh cakupan
+  terpilih 1.1–1.13 pada garis konsep yang sama.
 
 Checkpoint ini mencakup seluruh 30 kuliah Roberts hingga `Notes.tex:6368`:
 topologi dasar, homotopi, ruang penutup dan monodromi, grup/grupoid fundamental,
 Seifert–van Kampen, klasifikasi ruang penutup, grup homotopi lebih tinggi,
 bundel serat, kompleks, kohomologi, barisan eksak, teori relatif dan tereduksi,
-perbandingan, aksioma, derajat, serta aplikasi klasik. Enam komponen Fomberg
+perbandingan, aksioma, derajat, serta aplikasi klasik. Tujuh komponen Fomberg
 menambahkan kompleks-Δ, kompleks simplisial, rantai, batas, siklus, homologi
 simplisial dan singular, funktorialitas, invariansi homotopi, barisan eksak,
 homologi relatif, eksisi, Mayer–Vietoris, kealamian, pembandingan
 simpleksial–singular, derajat pemetaan, teorema sfera berbulu, derajat lokal,
 rumus lokal-ke-global, kompleks CW, topologi lemah, contoh/noncontoh seluler,
-dan filtrasi ruang projektif dari `algebraic_topology.tex:31–3517`, beserta
+filtrasi ruang projektif, pemetaan batas seluler, bilangan insidensi, dan
+perhitungan homologi seluler dari `algebraic_topology.tex:31–4185`, beserta
 latihan penguasaan dengan petunjuk dan solusi lengkap. Status 30/30 hanya menyatakan
 kelengkapan komponen Roberts,
 bukan kelengkapan jalur komposit.
@@ -52,6 +56,7 @@ tetap dipertahankan tanpa mengubah byte atau resinya, antara lain
 [Roberts 30/30 + Fomberg 1.1–1.6](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-003/),
 [Roberts 30/30 + Fomberg 1.1–1.10](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-004/),
 [Roberts 30/30 + Fomberg 1.1–1.11](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-005/),
+[Roberts 30/30 + Fomberg 1.1–1.12](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-006/),
 [Unit 1](https://kokunoyumeto.github.io/algebraic-topology-id/),
 [Unit 1–13](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-013/),
 [Unit 1–19](https://kokunoyumeto.github.io/algebraic-topology-id/units-001-019/),
@@ -63,18 +68,18 @@ Direktori [`backend/`](backend/) memuat graf `curriculum.interop 0.1.0` yang
 locale-neutral: identitas otoritas dan edisi, unit, segmen, konsep, istilah,
 relasi, latihan–solusi, hak, koreksi, QA, dan artefak. Checkpoint komposit
 mempertahankan awalan Roberts 4.761 rekaman secara byte-identik lalu menambahkan
-1.751 rekaman Fomberg, sehingga berisi 6.512 rekaman append-only (7.855.910 byte)
+1.981 rekaman Fomberg, sehingga berisi 6.742 rekaman append-only (8.213.649 byte)
 dengan digest bundel
-`377be644a38e6db06f8992113ea47b8fc172953254c9b1005493e0ad3b7bd4ad`.
+`523b570517eb54720c50007aacc5d4eea525ea252b9ca1f6f45b027182354765`.
 Backend ini melengkapi—bukan menggantikan—pembaca manusia.
 
 Validasi dan build aktif:
 
 ```powershell
-python -B scripts/qa-fomberg-unit-006.py
-python -B scripts/validate-backend-append-only-fomberg-unit-006.py
-python -B scripts/validate-backend-append-only-fomberg-unit-006-cumulative.py
-pwsh -NoProfile -File scripts/build-roberts-001-030-fomberg-001-006.ps1
+python -B scripts/qa-fomberg-unit-007.py
+python -B scripts/validate-backend-append-only-fomberg-unit-007.py
+python -B scripts/validate-backend-append-only-fomberg-unit-007-cumulative.py
+pwsh -NoProfile -File scripts/build-roberts-001-030-fomberg-001-007.ps1
 ```
 
 Build kumulatif memakai epoch tetap dan dua build bersih yang harus identik
@@ -107,9 +112,8 @@ otoritas disimpan di [`00_control/`](00_control/).
   Catatan proses ini tidak menggantikan kredit David Michael Roberts atau hak
   dan atribusi komponen sumber.
 
-Produksi berikutnya dimulai tepat pada Fomberg `algebraic_topology.tex:3518`,
-melanjutkan jembatan §1.13 tentang homologi seluler, kemudian lapisan perbaikan
-pembuktian/penguasaan/laboratorium/proyek puncak yang ditandai jelas sebagai
-materi edisi.
+Bentang Fomberg terpilih selesai tepat sebelum
+`algebraic_topology.tex:4186`. Produksi berikutnya melanjutkan lapisan
+penguasaan/laboratorium/proyek puncak yang ditandai jelas sebagai materi edisi.
 Hak dan atribusi Roberts, Fomberg, serta materi asli tetap dapat dibedakan pada
 backend dan artefak rilis.
