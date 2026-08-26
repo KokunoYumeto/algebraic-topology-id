@@ -2,7 +2,7 @@
 
 Updated: 2026-08-26
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Fomberg Units 001–007 translate `algebraic_topology.tex:31–4185` contiguously through the complete selected Sections 1.1–1.13, with all independent reviews at P1/P2/P3 zero. The Unit 007 boundary passes semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, package, and hash gates. Its cumulative reader is 14,885,069 bytes of HTML and a 472-page, 8,326,404-byte A4 PDF; backend totals are 6,742 records/8,213,649 bytes with bundle SHA-256 `523b570517eb54720c50007aacc5d4eea525ea252b9ca1f6f45b027182354765`. Zenodo version `0.30.7`, record `22104150`, DOI `10.5281/zenodo.22104150`, is public in the existing concept and all nine files have exact anonymous byte/hash readback. GitHub/Pages still reflects Unit 006 and is the active publication operation. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. After GitHub closure, continue at exact source line 4186 with the separately marked original mastery/laboratory/capstone layer under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Fomberg Units 001–007 translate `algebraic_topology.tex:31–4185` contiguously through the complete selected Sections 1.1–1.13, with all independent reviews at P1/P2/P3 zero. The Unit 007 boundary passes semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, package, and hash gates. Its cumulative reader is 14,885,069 bytes of HTML and a 472-page, 8,326,404-byte A4 PDF; backend totals are 6,742 records/8,213,649 bytes with bundle SHA-256 `523b570517eb54720c50007aacc5d4eea525ea252b9ca1f6f45b027182354765`. Zenodo version `0.30.7`, record `22104150`, DOI `10.5281/zenodo.22104150`, and GitHub commit `1c25c0b43ba605ff16cf95363f405455f78f29eb`/Pages run `32919363394` are public in their existing lineages; the Pages reader and all Zenodo plus commit-pinned witnesses have exact anonymous byte/hash readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. Continue at exact source line 4186 with the separately marked original mastery/laboratory/capstone layer under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
 ### Live recovery note — Fomberg Unit 007 local closure, 2026-08-26
 
@@ -48,9 +48,16 @@ Zenodo version `0.30.7`, record `22104150`, DOI
 anonymous readback. Receipt
 `release/zenodo-roberts-001-030-fomberg-001-007/publication-receipt.json` has
 SHA-256 `3145ad59d3eae2935319e502b30e30fe62c31b1d7eaebab087b5f24b220f874f`.
-The next executable work is the narrow GitHub/Pages publication of this exact
-boundary, then the original proof/mastery/laboratory/capstone closure; source
-line 4186 is the resume cursor.
+GitHub commit `1c25c0b43ba605ff16cf95363f405455f78f29eb`, tree
+`814d6d5a8ea5164928709a60e16ee13946970f52`, Pages run `32919363394`, job
+`98029663052`, deployment `6095315253`, and status `17336537558` succeeded.
+The public Pages reader and nine commit-pinned witnesses match local bytes.
+Receipt
+`00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_007.json`
+is 4,214 bytes/SHA-256
+`51eb8da851deb5aa6aba12b6655e16a54e321811b543e34c772bfa11fdb3fa98`.
+The next executable work is the original proof/mastery/laboratory/capstone
+closure; source line 4186 remains the resume cursor.
 
 ### Live recovery note — Fomberg Unit 006 closure and publication, 2026-08-26
 

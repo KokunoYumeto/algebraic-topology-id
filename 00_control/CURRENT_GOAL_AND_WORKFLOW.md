@@ -47,35 +47,42 @@ add separately marked original material only where the handoff requires it;
 run independent math, source/language, structure, links, accessibility,
 privacy, rights, and hash checks; then advance the cursor only at P1/P2/P3=0.
 
-## Remaining finite to-do list (in order)
+## Closed checkpoint and remaining finite to-do list
 
-1. Keep the Unit 007 local boundary and its backend prefix immutable while
-   packaging the current composite reader.
-2. Build a reader-first release containing Roberts 001–030 plus Fomberg 001–007,
-   compact resumable source/backend, licenses, manifest, and checksums; verify
-   two byte-identical HTML/PDF builds, centered/reflowing HTML, math/figure
-   integrity, and disclosed untagged-PDF limitation.
-3. Push only explicit lane files to the existing GitHub repository and Pages;
-   read back the public HTML and commit-pinned witnesses anonymously and record
-   commit/tree/workflow/deployment IDs and hashes. Never create a duplicate
-   repository or loop on transient service errors.
-4. Publish the same coherent checkpoint as the next version in the existing
-   Zenodo concept (not a new concept), with truthful partial status; read back
-   every public file anonymously and record DOI, record, filenames, bytes, and
-   hashes. Keep credentials runtime-only and out of logs. Figshare is inactive;
-   do not retry or claim publication there.
-5. Create the original closure required by the handoff: complete the eight
-   named Fomberg proof repairs (including both loci of FOM-PR-05), census all
-   selected theorem proof status, provide at least six solved
-   hint-bearing mastery items per each of 14 route units (84), three solved
-   cumulative assessments of eight items (24), four reproducible computation
-   laboratories, and one proof-reconstruction/cross-invariant capstone with
-   oral rubric. Do not copy the excluded Fomberg problem bank.
-6. Extend the backend append-only, preserve the 30-unit/14-route mapping,
-   rerun deterministic builds and full route QA, and publish each worthwhile
-   verified boundary through the existing lineages. After the entire corpus is
-   closed, one concise deduplicated high-confidence upstream issue is permitted,
-   signed `Codex — at the user's direction.`
+The Roberts 001–030 plus Fomberg 001–007 boundary is immutable and public.
+Zenodo `0.30.7` is record `22104150`, DOI `10.5281/zenodo.22104150`, in concept
+`10.5281/zenodo.22061489`; GitHub commit
+`1c25c0b43ba605ff16cf95363f405455f78f29eb` and Pages run `32919363394`
+preserve the same reader boundary. Both lineages and every critical witness
+have exact anonymous byte/hash readback. Do not rebuild, retranslate, or
+renumber this frozen prefix.
+
+1. Produce a route-level census over the frozen backend: map every existing
+   exercise, hint, solution, theorem, and proof repair to `D60-R01`…`R14`;
+   verify the eight mandatory Fomberg repairs, including both loci of
+   `FOM-PR-05`, and record any real gap without double-counting already solved
+   Roberts/Fomberg mastery items.
+2. Fill only the evidenced mastery gaps so every route unit has at least six
+   ordinary items with a hint and checked full solution (84 total across the
+   route), then add three cumulative assessments of eight similarly closed
+   items (24), for at least 108 mapped ordinary solution-bearing items. Do not
+   copy the excluded Fomberg problem bank.
+3. Add four offline reproducible computation laboratories, each with source,
+   tests, expected output, interpretation, and a full check: covering
+   monodromy/group presentations; chain matrices/Smith normal form; cellular
+   boundaries/degree; and comparison of fundamental-group, homology, and
+   cohomology invariants.
+4. Add the final proof-reconstruction/cross-invariant capstone and explicit
+   oral-proof rubric; independently check every new mathematical argument and
+   all cumulative prerequisite edges.
+5. Extend the append-only backend while preserving the 30-edition-unit/14-route
+   view, rebuild centered/reflowing HTML and deterministic PDF, run full route
+   QA, and publish each coherent verified boundary through the same GitHub,
+   Pages, and Zenodo lineages with anonymous byte readback. Keep credentials
+   runtime-only. Figshare remains inactive and is not a completion gate.
+6. When the entire corpus is closed, perform one final duplicate/high-confidence
+   check and, only if a useful upstream correction remains, send at most one
+   concise report signed `Codex — at the user's direction.`
 
 ## Terminal condition
 

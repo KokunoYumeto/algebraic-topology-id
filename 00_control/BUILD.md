@@ -49,6 +49,13 @@ back anonymously and matches the local byte count and SHA-256. Publication
 receipt SHA-256:
 `3145ad59d3eae2935319e502b30e30fe62c31b1d7eaebab087b5f24b220f874f`.
 
+GitHub commit `1c25c0b43ba605ff16cf95363f405455f78f29eb`, tree
+`814d6d5a8ea5164928709a60e16ee13946970f52`, Pages run `32919363394`, job
+`98029663052`, deployment `6095315253`, and status `17336537558` succeeded.
+The public Pages HTML and nine commit-pinned source/release witnesses match
+local bytes. Receipt SHA-256:
+`51eb8da851deb5aa6aba12b6655e16a54e321811b543e34c772bfa11fdb3fa98`.
+
 ## Roberts 001–030 plus Fomberg 001–006 — prior boundary
 
 Builder: `scripts/build-roberts-001-030-fomberg-001-006.ps1`. It freezes the
