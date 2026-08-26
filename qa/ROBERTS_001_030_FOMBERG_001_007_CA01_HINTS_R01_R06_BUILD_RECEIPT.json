@@ -1,0 +1,224 @@
+{
+  "qa_id": "O012-RBT-001-030-FOM-001-007-CA01-HINTS-R01-R06-COMPOSITE-BUILD",
+  "status": "PASS",
+  "scope": "Roberts 30/30; Fomberg Sections 1.1-1.13 through source line 4185; D60-CA01; 36 additive ordinary hints for D60-R01-D60-R06; composite course partial",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "deterministic_build_draft": {
+    "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_BUILD_DRAFT.json",
+    "bytes": 8992,
+    "sha256": "e845fc16ae248cc81370ea65177c318d2709b89341368900c79f8ea1e34bf692"
+  },
+  "artifacts": {
+    "html": {
+      "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06/index.html",
+      "bytes": 15026881,
+      "sha256": "7ed278d73a324ba0a9e5acadedf448221b3791db7322fdf6d29225afd0124d2b",
+      "title": "Topologi Aljabar — Roberts 30/30, Fomberg 1.1–1.13, Asesmen Kumulatif 1, dan Petunjuk Rute 1–6",
+      "lang": "id-ID",
+      "self_contained": true
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-id.pdf",
+      "bytes": 8592243,
+      "sha256": "4da7f1368c17423cd6845c36b7d5190dac98d515ecbd32467c0c59961dd9afcb",
+      "pages": 482,
+      "page_size": "A4",
+      "tagged": false
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06.csv",
+      "bytes": 325,
+      "sha256": "2273669b06917c09e8c909f8bb51ab6518e0572c2f7c9f74e1b647013268dc3a",
+      "entries": 2
+    }
+  },
+  "frozen_predecessor": {
+    "html": {
+      "path": "output/html/roberts-001-030-fomberg-001-007-ca01/index.html",
+      "bytes": 14958219,
+      "sha256": "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-id.pdf",
+      "bytes": 8358561,
+      "sha256": "476b0de3bbb2cbfe03a151ac3060e121c5f89364e70b54d918ab270f4c965ade",
+      "pages": 477
+    },
+    "final_build_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BUILD_RECEIPT.json",
+      "bytes": 7842,
+      "sha256": "22fef828b7963219759f85d11e409e0ebf957889d0fa76dc02ec04f3a707a9e0"
+    },
+    "html_exact_reconstruction": true,
+    "pdf_visual_and_text_prefix": {
+      "status": "PASS",
+      "pages": 477,
+      "page_signature_bundle_sha256": "804336cefb3c66870a589caacabe501a3010585428f88262042c05ad65722389",
+      "extracted_text_byte_identical": true
+    }
+  },
+  "ordinary_hints": {
+    "edition_unit_id": "O012-ORIG-HINTS-R01-R06",
+    "source": {
+      "path": "source/id-ID/mastery/ordinary-hints-r01-r06.md",
+      "bytes": 28698,
+      "sha256": "dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a"
+    },
+    "static_qa": {
+      "path": "qa/ORDINARY_HINTS_R01_R06_QA.json",
+      "bytes": 16616,
+      "sha256": "a0460dbed83242863fc1aab8290b76fac9cd39644276e132401e7d3e9198c33d"
+    },
+    "independent_math_review": {
+      "path": "qa/ordinary-hints-r01-r06/INDEPENDENT_MATH_REVIEW.json",
+      "bytes": 19289,
+      "sha256": "8ed5b3563976b415e1aa471f7cdeb3405888cbc70aec101bc02e4fab9e45de5a"
+    },
+    "independent_language_review": {
+      "path": "qa/ordinary-hints-r01-r06/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+      "bytes": 18324,
+      "sha256": "6c29009da4ee0380c878c3705dcd2a99cbe7a8495cc4b7f5ce456bb40f910968"
+    },
+    "rights": {
+      "license": "CC BY-SA 4.0",
+      "origin": "edition_original",
+      "source_problem_bank_used": false
+    },
+    "census": {
+      "stable_ids": 43,
+      "hint_blocks": 36,
+      "exercise_solution_pairs": 36,
+      "visible_predecessor_links": 72,
+      "routes": ["D60-R01", "D60-R02", "D60-R03", "D60-R04", "D60-R05", "D60-R06"]
+    }
+  },
+  "backend_boundary": {
+    "status": "PASS_APPEND_ONLY_REPLAYABLE",
+    "receipt": {
+      "path": "qa/BACKEND_APPEND_ONLY_ORDINARY_HINTS_R01_R06_CUMULATIVE_RECEIPT.json",
+      "bytes": 10252,
+      "sha256": "10e9d32848b950148983d0d8c38d6753a9956a674f657858b31dd257af5b2aa8"
+    },
+    "immutable_prefix_records": 6854,
+    "records_added": 158,
+    "cumulative_records": 7012,
+    "cumulative_bytes": 8545732,
+    "cumulative_bundle_sha256": "7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b",
+    "prompt_solution_solves_immutability": "PASS",
+    "route_mastery_census": {
+      "path": "qa/ROUTE_MASTERY_CENSUS.json",
+      "bytes": 140589,
+      "sha256": "068072d3c67aeed28d55fdb9947a3084e4028ba0b808e28f46c0657ba84d20ff",
+      "ordinary_capped_credit": 84,
+      "ordinary_target": 84,
+      "ca01_credit": 8,
+      "total_credit": 92,
+      "final_target": 108,
+      "remaining_ca02_ca03_items": 16,
+      "duplicate_or_reused_solution_ids": 0,
+      "validation_errors": 0
+    }
+  },
+  "html_checks": {
+    "status": "PASS",
+    "serialized_dom_ids": 2395,
+    "live_browser_dom_ids": 2396,
+    "live_browser_unique_dom_ids": 2396,
+    "live_runtime_injected_ids": 1,
+    "fragment_links": 514,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 16300,
+    "hint_blocks_added": 36,
+    "visible_predecessor_links_added": 72,
+    "self_contained": true,
+    "centered_reflow": true
+  },
+  "pdf_checks": {
+    "status": "PASS",
+    "pages": 482,
+    "appended_hint_pages": 5,
+    "all_pages_a4": true,
+    "fonts": 59,
+    "all_fonts_embedded_subset_tounicode": true,
+    "trailer_id_suppressed": true,
+    "predecessor_outline_entries": 389,
+    "hint_outline_entries_added": 7,
+    "merged_outline_entries": 396,
+    "predecessor_named_destinations": 2873,
+    "predecessor_stable_id_destinations_added": 72,
+    "hint_named_destinations_added": 43,
+    "merged_named_destinations": 2988,
+    "all_source_stable_ids_resolve": true,
+    "visible_links_to_predecessor_resolve": true,
+    "independent_link_page_audit": {
+      "status": "PASS",
+      "links_checked": 72,
+      "wrong_pages": 0,
+      "name_collisions": 0
+    }
+  },
+  "reproducibility": {
+    "frozen_inputs_fail_closed": true,
+    "html_fragment_clean_builds": 2,
+    "html_fragment_sha256": "efb63ab2875ae100595a83e7a1ebf5deacd5a6c6b896562890959497f219ba6b",
+    "html_builds_byte_identical": true,
+    "hint_pdf_clean_builds": 2,
+    "hint_pdf_sha256": "c068b3bacc76528fed445fc9259a1403b4ee3d5a2ef7c8707c250c8a6cdd06bc",
+    "hint_pdf_builds_byte_identical": true,
+    "merged_pdf_clean_builds": 2,
+    "merged_pdf_builds_byte_identical": true,
+    "source_date_epoch": 1787702400,
+    "build_scratch_removed_after_finalizer": true
+  },
+  "toolchain": {
+    "builder": {
+      "path": "scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06.ps1",
+      "bytes": 31632,
+      "sha256": "aea55ab49113795f78166fe5c89313d77d1ad424e61a24066b8f0c6e6ae9f957"
+    },
+    "finalizer": {
+      "path": "scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06.py",
+      "bytes": 33376,
+      "sha256": "9e6539ada691998bdee2040773dc7c77a384c488518e7d42f9b85d06ee80abec"
+    },
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_merger": "pypdf 6.12.2 object-copy append with reviewed predecessor stable-ID destination repair",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "visual_checks": {
+    "status": "PASS",
+    "visual_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_VISUAL_QA.md",
+      "bytes": 5341,
+      "sha256": "fce44f8ef46c6bbc2ed8ef09f1c04072ebb8ee56033af98e7c8431e920d73afd"
+    },
+    "render_inventory": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_RENDER_INVENTORY.csv",
+      "bytes": 1829,
+      "sha256": "ce997bf4d974a7dae8f798dd92fa65063dd68b3d50ab9a168e323b41dfefe352"
+    },
+    "pages_inspected": [477, 478, 479, 480, 481, 482],
+    "severity_census": {"P1": 0, "P2": 0, "P3": 0}
+  },
+  "browser_checks": {
+    "status": "PASS",
+    "browser_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_BROWSER_QA.json",
+      "bytes": 4483,
+      "sha256": "e42eb5965a3568f94d8ff01f9d65578283dd71016e3d11f8fcb9b1f905141a23"
+    },
+    "desktop": "PASS",
+    "mobile": "PASS",
+    "offline": "PASS",
+    "unresolved_fragment_links": 0,
+    "runtime_external_asset_references": 0,
+    "console_errors": 0,
+    "console_warnings": 0,
+    "severity_census": {"P1": 0, "P2": 0, "P3": 0}
+  },
+  "limitations": [
+    "The composite course remains partial: CA02 and CA03 contribute the remaining 16 ordinary solution-bearing assessment items, and the laboratories and capstone remain pending.",
+    "The PDF remains untagged; the self-contained native-MathML HTML is the primary reflowable surface.",
+    "Public-byte readback is a post-publication transaction and is not claimed by this local build receipt."
+  ]
+}

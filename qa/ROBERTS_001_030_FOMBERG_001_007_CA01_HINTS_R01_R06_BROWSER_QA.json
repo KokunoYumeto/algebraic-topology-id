@@ -1,0 +1,151 @@
+{
+  "qa_id": "O012-RBT-001-030-FOM-001-007-CA01-HINTS-R01-R06-BROWSER-QA",
+  "status": "PASS",
+  "date": "2026-08-26",
+  "surface": "local loopback self-contained HTML in the Codex in-app browser",
+  "artifact": {
+    "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06/index.html",
+    "bytes": 15026881,
+    "sha256": "7ed278d73a324ba0a9e5acadedf448221b3791db7322fdf6d29225afd0124d2b",
+    "title": "Topologi Aljabar — Roberts 30/30, Fomberg 1.1–1.13, Asesmen Kumulatif 1, dan Petunjuk Rute 1–6",
+    "lang": "id-ID"
+  },
+  "desktop": {
+    "status": "PASS",
+    "viewport_css_pixels": [1440, 900],
+    "document_client_width": 1425,
+    "document_scroll_width": 1425,
+    "page_level_horizontal_overflow": false,
+    "body_box": {
+      "left": 136.44,
+      "right": 1288.44,
+      "width": 1152.0
+    },
+    "hint_root_box": {
+      "left": 156.44,
+      "right": 1268.44,
+      "width": 1112.0
+    },
+    "centered_and_page_filling": true,
+    "hint_blocks_escaping_body": 0,
+    "non_math_nodes_escaping_viewport": 0,
+    "links_escaping_viewport": 0
+  },
+  "mobile": {
+    "status": "PASS",
+    "viewport_css_pixels": [375, 812],
+    "document_client_width": 360,
+    "document_scroll_width": 360,
+    "page_level_horizontal_overflow": false,
+    "body_box": {
+      "left": 0.0,
+      "right": 360.0,
+      "width": 360.0
+    },
+    "hint_root_box": {
+      "left": 17.6,
+      "right": 342.4,
+      "width": 324.81
+    },
+    "hint_blocks_escaping_body": 0,
+    "non_math_nodes_escaping_viewport": 0,
+    "math_nodes_escaping_viewport": 0,
+    "links_escaping_viewport": 0,
+    "hint_mathml_nodes": 170,
+    "hint_formula_local_scrollers": 170
+  },
+  "semantic_and_binding_checks": {
+    "live_dom_ids": 2396,
+    "unique_live_dom_ids": 2396,
+    "duplicate_live_dom_ids": 0,
+    "fragment_links": 514,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 16300,
+    "raw_tex_markers": 0,
+    "hint_blocks": 36,
+    "hint_links": 72,
+    "hint_blocks_missing_required_attributes": 0,
+    "required_hint_attributes": [
+      "data-origin",
+      "data-course-route-unit-id",
+      "data-component-id",
+      "data-target-exercise-id",
+      "data-existing-solution-id",
+      "data-source-path"
+    ],
+    "hint_section_ids": [
+      "o012-d60-hints-r01-r06",
+      "o012-d60-hints-r01",
+      "o012-d60-hints-r02",
+      "o012-d60-hints-r03",
+      "o012-d60-hints-r04",
+      "o012-d60-hints-r05",
+      "o012-d60-hints-r06"
+    ],
+    "semantic_heading_sequence": [
+      "Petunjuk penguasaan untuk Rute 1–6",
+      "D60-R01 — topologi dasar dan konstruksi universal",
+      "D60-R02 — keterhubungan, homotopi, dan kategori homotopi",
+      "D60-R03 — ruang penutup, tarik balik, dan transpor",
+      "D60-R04 — grup fundamental, grupoid, dan aksi monodromi",
+      "D60-R05 — pushout dan Seifert–van Kampen",
+      "D60-R06 — klasifikasi ruang penutup"
+    ],
+    "runtime_external_asset_references": 0,
+    "self_contained_offline_surface": true
+  },
+  "language_checks": {
+    "required_intro_present": true,
+    "required_rights_sentence_present": true,
+    "required_terms_present": [
+      "gabungan saling lepas",
+      "trivialitas lokal",
+      "Prakomposisikan",
+      "Prakomposisi",
+      "pemetaan hasil bagi"
+    ],
+    "rejected_forms_absent": [
+      "gabungan lepas",
+      "pra-komposisi",
+      "peta hasil bagi"
+    ]
+  },
+  "navigation_and_keyboard": {
+    "all_fragment_targets_exist_in_live_dom": true,
+    "toc_hint_link_href": "#o012-d60-hints-r01-r06",
+    "toc_hint_link_desktop_activation": "PASS",
+    "r06_special_solution_link": {
+      "source_hint_id": "o012-d60-r06-hint-006",
+      "href": "#o012-rbt-l14-sol-006",
+      "target_count": 1,
+      "activation_result": "PASS"
+    },
+    "keyboard_focus": {
+      "status": "PASS",
+      "focused_href": "#o012-rbt-l01-ex-001",
+      "focus_visible": true,
+      "outline_style": "auto",
+      "outline_width_css_pixels": 0.888889,
+      "outline_offset_css_pixels": 0.888889
+    }
+  },
+  "contrast": {
+    "theme_observed": "dark",
+    "hint_text_to_hint_background_ratio": 12.83,
+    "hint_link_to_hint_background_ratio": 9.13,
+    "heading_to_body_background_ratio": 10.52,
+    "wcag_aa_normal_text_threshold": 4.5,
+    "status": "PASS"
+  },
+  "console": {
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS_PREPARED_NOT_PUBLISHED",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-v0.31.1",
+  "scope": "Roberts 30/30 complete; selected Fomberg 1.1-1.13 complete; D60-CA01 complete 8/8; ordinary mastery complete 84/84; total required mastery 92/108; composite course partial",
+  "release_directory": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06",
+  "reader_first_filename": "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_READER.pdf",
+  "frozen_input_ledger": {
+    "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06/frozen-inputs.json",
+    "bytes": 56626,
+    "sha256": "9c805c1682873c00b87a715d9fc5010a09398ad5853e7088fec23c8b7ffc7bf2",
+    "entries": 298
+  },
+  "packager": {
+    "path": "scripts/package-release-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06.py",
+    "bytes": 47540,
+    "sha256": "72d5cbb6fedbcfd0f508f8b0e959602432814fa470718d762940825c95aae209"
+  },
+  "files": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_READER.pdf",
+      "bytes": 8592243,
+      "sha256": "4da7f1368c17423cd6845c36b7d5190dac98d515ecbd32467c0c59961dd9afcb"
+    },
+    {
+      "filename": "LICENSE.md",
+      "bytes": 1239,
+      "sha256": "c884018591dda22cd09eab62e49629c8b7d8017fb2ff7a452337cf1d966afc75"
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "bytes": 2581,
+      "sha256": "e14ee439c2f94dd160c7a17279f400bb110b350eccbc548c8d9888e274c26c6a"
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "bytes": 2742,
+      "sha256": "1d662455c5fdca0ed05d6aad34bac420ccb42632978094962c8abcd9b54c2e7d"
+    },
+    {
+      "filename": "SHA256SUMS",
+      "bytes": 953,
+      "sha256": "c8784e25f0029d93b0f6ff94a7f895b38084902fe475d636306e1c9a7d457700"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 7849015,
+      "sha256": "4c9d17f44f2c8e5e56203ed092d9ccae2383ab7fd79fc7fc11a927ac8dff69e6"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_QA_PROVENANCE.zip",
+      "bytes": 380414,
+      "sha256": "b85e9a95351c6326ff37870fc541f7ac2c850f8cd56e61f38ea16c89186a704b"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_READER.html",
+      "bytes": 15026881,
+      "sha256": "7ed278d73a324ba0a9e5acadedf448221b3791db7322fdf6d29225afd0124d2b"
+    },
+    {
+      "filename": "release-manifest.json",
+      "bytes": 72254,
+      "sha256": "3f07efd8352a16a9186c934fda67e3957dc2eafc52badc07fa3c8e887bc9d59d"
+    }
+  ],
+  "file_count": 9,
+  "total_payload_bytes": 31928322,
+  "archives": [
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 7849015,
+      "sha256": "4c9d17f44f2c8e5e56203ed092d9ccae2383ab7fd79fc7fc11a927ac8dff69e6",
+      "entry_count": 180,
+      "uncompressed_bytes": 19145294,
+      "crc_status": "PASS",
+      "first_entry": "00_control/ADVERSE_LEDGER.csv",
+      "last_entry": "source/id-ID/units/unit-030-lecture-030.md"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_QA_PROVENANCE.zip",
+      "bytes": 380414,
+      "sha256": "b85e9a95351c6326ff37870fc541f7ac2c850f8cd56e61f38ea16c89186a704b",
+      "entry_count": 112,
+      "uncompressed_bytes": 1824499,
+      "crc_status": "PASS",
+      "first_entry": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06.csv",
+      "last_entry": "release/release-manifest.template.json"
+    }
+  ],
+  "verification": {
+    "manifest_artifact_identities_match": true,
+    "sha256sums_match": true,
+    "zip_crc_and_inventory_pass": true,
+    "source_archive_local_link_closure_pass": true,
+    "rights_component_scope_consistent": true,
+    "reader_first": true,
+    "final_build_visual_browser_gates": true,
+    "ca01_independent_reviews": true,
+    "ordinary_hint_independent_reviews": true,
+    "route_and_proof_censuses_included": true,
+    "integrated_license": "CC BY-SA 4.0",
+    "roberts_component_license": "CC BY 4.0",
+    "fomberg_component_license": "CC BY-SA 4.0",
+    "original_ca01_license": "CC BY-SA 4.0",
+    "original_hint_license": "CC BY-SA 4.0",
+    "new_concept_created": false,
+    "network_actions": 0,
+    "git_actions": 0,
+    "credentials_used": false,
+    "published": false
+  }
+}

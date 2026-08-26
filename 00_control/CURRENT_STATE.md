@@ -2,7 +2,52 @@
 
 Updated: 2026-08-26
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` through source EOF, and Fomberg Units 001–007 translate the entire selected `algebraic_topology.tex:31–4185` / Sections 1.1–1.13 span. Every admitted unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Cumulative Assessment 1 is also complete and public: the current reader is 14,958,219 bytes of centered/reflowing HTML and a 477-page, 8,358,561-byte A4 PDF; the backend has 6,854 records/8,345,799 bytes with bundle SHA-256 `51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57`. GitHub commit `4b5f8f74bf361e45687d55fc31a95ea3e0c657ab` / Pages run `32924728855` and Zenodo version `0.31.0`, record `22105179`, DOI `10.5281/zenodo.22105179`, are public in their existing lineages with exact anonymous byte/hash readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. The exact next action is the 36-hint ordinary-mastery closure for `D60-R01`–`D60-R06`; source line 4186 is only the nominal post-Fomberg marker and is not authority to translate beyond the selected span.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` through source EOF, and Fomberg Units 001–007 translate the entire selected `algebraic_topology.tex:31–4185` / Sections 1.1–1.13 span. Every admitted unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Cumulative Assessment 1 remains public. The successor ordinary-mastery boundary is locally complete and release-ready: 36 separately modeled hints bind 36 existing exercise/full-solution pairs across `D60-R01`–`R06`, closing the ordinary distribution at 84/84 and the overall solution-bearing census at 92/108. Its centered/reflowing HTML is 15,026,881 bytes; its PDF is 482 A4 pages/8,592,243 bytes; the backend has 7,012 records/8,545,732 bytes with bundle SHA-256 `7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b`. The public predecessor remains GitHub commit `4b5f8f74bf361e45687d55fc31a95ea3e0c657ab` / Pages run `32924728855` and Zenodo version `0.31.0`, record `22105179`, DOI `10.5281/zenodo.22105179`, until this successor is published and anonymously read back in those same lineages. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. The exact next production action after publication is Cumulative Assessments 2 and 3, eight original exercise-hint-complete-solution triples each; source line 4186 is only the nominal post-Fomberg marker and is not authority to translate beyond the selected span.
+
+### Live recovery note — ordinary mastery 84/84 local checkpoint, 2026-08-26
+
+`O012-ORIG-HINTS-R01-R06` is complete and admitted. Source
+`source/id-ID/mastery/ordinary-hints-r01-r06.md` is 28,698 bytes/410 LF
+lines, contains 36 hint blocks and 43 stable IDs, and has SHA-256
+`dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a`.
+The static QA receipt is 16,616 bytes/SHA-256
+`a0460dbed83242863fc1aab8290b76fac9cd39644276e132401e7d3e9198c33d`;
+independent mathematics review is 19,289 bytes/SHA-256
+`8ed5b3563976b415e1aa471f7cdeb3405888cbc70aec101bc02e4fab9e45de5a`;
+independent source-language review is 18,324 bytes/SHA-256
+`6c29009da4ee0380c878c3705dcd2a99cbe7a8495cc4b7f5ce456bb40f910968`.
+All three pass with P1/P2/P3 zero. Each hint has one exact existing exercise
+target and one exact existing complete solution; no prompt, solution, or solve
+edge changed, and no Fomberg problem-bank expression was used.
+
+Append-only admission preserves the 6,854-record/8,345,799-byte CA01 prefix
+exactly, adds 158 records, and ends at 7,012 records/8,545,732 bytes with
+bundle SHA-256
+`7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b`.
+Receipt `qa/BACKEND_APPEND_ONLY_ORDINARY_HINTS_R01_R06_CUMULATIVE_RECEIPT.json`
+is 10,252 bytes/SHA-256
+`10e9d32848b950148983d0d8c38d6753a9956a674f657858b31dd257af5b2aa8`.
+`qa/ROUTE_MASTERY_CENSUS.json` is 140,589 bytes/SHA-256
+`068072d3c67aeed28d55fdb9947a3084e4028ba0b808e28f46c0657ba84d20ff`:
+84/84 ordinary items, CA01 8/8, 92/108 total, 16 CA02/CA03 items remaining,
+zero duplicate/reused solution IDs, and zero validation errors.
+
+The deterministic successor HTML
+`output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06/index.html`
+is 15,026,881 bytes/SHA-256
+`7ed278d73a324ba0a9e5acadedf448221b3791db7322fdf6d29225afd0124d2b`.
+The PDF
+`output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-id.pdf`
+is 8,592,243 bytes/482 A4 pages/SHA-256
+`4da7f1368c17423cd6845c36b7d5190dac98d515ecbd32467c0c59961dd9afcb`.
+Final build receipt `qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_BUILD_RECEIPT.json`
+is 8,674 bytes/SHA-256
+`e0192345c0a5bf75c508edb005c95e712ef6c70630e368feab01fcb7f9e0ce76`.
+Desktop/mobile browser, visual, font, outline, named-destination, fragment,
+language, rights, privacy, and deterministic-build checks pass. The PDF remains
+untagged; the self-contained native-MathML HTML is the primary accessible
+surface. Publish this boundary as the successor of Zenodo record `22105179`
+and through the existing GitHub/Pages repository; then begin CA02 and CA03.
 
 ### Live recovery note — Cumulative Assessment 1 public checkpoint, 2026-08-26
 

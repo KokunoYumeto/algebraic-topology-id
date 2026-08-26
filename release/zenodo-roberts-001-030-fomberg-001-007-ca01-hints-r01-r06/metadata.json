@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "access_right": "open",
+    "contributors": [
+      {"name": "Lazarovich, Nir", "type": "Other"},
+      {"name": "Editor edisi Bahasa Indonesia", "type": "Editor"},
+      {"name": "Translation and Transcription Project", "type": "Other"}
+    ],
+    "creators": [
+      {"name": "Roberts, David Michael"},
+      {"name": "Fomberg, Yeheli"}
+    ],
+    "description": "<p><strong>Status: checkpoint parsial kursus komposit; Roberts lengkap 30/30, bentang Fomberg terpilih O012-FOM-001–007 lengkap, Asesmen Kumulatif 1 (D60-CA01) lengkap 8/8, dan kuota penguasaan biasa lengkap 84/84.</strong> Versi 0.31.1 mempertahankan seluruh checkpoint 0.31.0 dan menambahkan 36 petunjuk asli ber-ID stabil bagi 36 pasangan soal–solusi lengkap yang sudah ada pada D60-R01–D60-R06. Petunjuk ini tidak menggandakan atau mengubah soal, solusi, maupun relasi penyelesaian.</p><p>Cakupan Roberts adalah <code>Notes.tex</code> baris 134–6368 pada komit <code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>. Cakupan Fomberg adalah <code>algebraic_topology.tex</code> baris 31–4185, Bagian 1.1–1.13, pada komit <code>563194fae879178b9a6871b249513bfc27968975</code>. D60-CA01 dan lapisan petunjuk O012-ORIG-HINTS-R01-R06 adalah materi asli edisi, bukan teks Roberts, Fomberg, atau bank soal pihak ketiga.</p><p>Sensus penguasaan pada boundary ini memberi kredit 84/84 butir biasa dan 8 butir D60-CA01, sehingga 92/108 butir wajib telah lengkap. Kursus komposit tetap parsial: D60-CA02 dan D60-CA03 masih memerlukan 16 butir, diikuti empat laboratorium komputasi, capstone lintas-invarian, dan penutupan grafik bukti yang masih tercatat.</p><p>PDF A4 482 halaman adalah berkas pembaca pertama. HTML mandiri/offline adalah permukaan akses utama yang terpusat dan reflowable, dengan MathML asli tanpa dependensi runtime. Sumber Markdown, backend JSONL ber-ID stabil, lisensi komponen, manifest, checksum, QA, dan provenance ringkas turut disertakan.</p><p>Pembaca dan paket terpadu dirilis di bawah <strong>CC BY-SA 4.0</strong>. Komponen Roberts tetap CC BY 4.0; komponen Fomberg, D60-CA01, dan petunjuk asli R01–R06 tetap CC BY-SA 4.0. Produksi menggunakan <strong>OpenAI Codex gpt-5.6-sol, Ultra</strong> atas arahan pengguna; ini bukan kredit kepengarangan atau endorsement. Edisi ini independen dan tidak disponsori atau disahkan oleh penulis, dosen asal, maupun institusi mereka.</p>",
+    "keywords": [
+      "topologi aljabar",
+      "Bahasa Indonesia",
+      "homotopi",
+      "ruang penutup",
+      "grup fundamental",
+      "homologi simpleks",
+      "homologi singular",
+      "homologi seluler",
+      "asesmen kumulatif",
+      "petunjuk penguasaan",
+      "MathML",
+      "machine-readable textbook"
+    ],
+    "language": "ind",
+    "license": "cc-by-sa-4.0",
+    "notes": "ID rilis: o012-composite-id-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-v0.31.1. Roberts 30/30, Fomberg O012-FOM-001–007, D60-CA01 8/8, dan penguasaan biasa 84/84 lengkap; total wajib 92/108; kursus komposit tetap parsial. Versi ini melanjutkan konsep Zenodo 10.5281/zenodo.22061489 dan pendahulu langsung 10.5281/zenodo.22105179; tidak membuat konsep pesaing.",
+    "publication_date": "2026-08-26",
+    "publication_type": "book",
+    "related_identifiers": [
+      {"identifier": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53", "relation": "isDerivedFrom", "scheme": "url"},
+      {"identifier": "https://git.sr.ht/~yp/math-notes/tree/563194fae879178b9a6871b249513bfc27968975", "relation": "isDerivedFrom", "scheme": "url"},
+      {"identifier": "10.5281/zenodo.22061489", "relation": "isVersionOf", "scheme": "doi"},
+      {"identifier": "10.5281/zenodo.22105179", "relation": "isNewVersionOf", "scheme": "doi"}
+    ],
+    "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Roberts 1–30, Jembatan Homologi §1.1–1.13, Asesmen Kumulatif 1, dan Petunjuk Rute 1–6",
+    "upload_type": "publication",
+    "version": "0.31.1"
+  }
+}

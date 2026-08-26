@@ -1,0 +1,62 @@
+{
+  "artifact_order": [
+    "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_READER.pdf",
+    "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_READER.html",
+    "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_EDITABLE_SOURCE_BACKEND.zip",
+    "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_QA_PROVENANCE.zip",
+    "LICENSE.md",
+    "README_RELEASE.md",
+    "RELEASE_RIGHTS.md"
+  ],
+  "component_numbering": {
+    "assessment_ids": ["D60-CA01"],
+    "course_route_unit_ids": ["D60-R01", "D60-R02", "D60-R03", "D60-R04", "D60-R05", "D60-R06", "D60-R08", "D60-R09", "D60-R10", "D60-R11", "D60-R12"],
+    "fomberg_component_ids": ["O012-FOM-001", "O012-FOM-002", "O012-FOM-003", "O012-FOM-004", "O012-FOM-005", "O012-FOM-006", "O012-FOM-007"],
+    "fomberg_is_not_roberts_units_031_037": true,
+    "original_edition_unit_ids": ["O012-ORIG-CA01", "O012-ORIG-HINTS-R01-R06"],
+    "roberts_edition_units": "001-030"
+  },
+  "generated_fields": [
+    "metadata_sha256",
+    "publication_plan_sha256",
+    "frozen_input_ledger",
+    "sources",
+    "assessment",
+    "ordinary_hints",
+    "course_closure",
+    "reader_qa",
+    "backend",
+    "archives",
+    "artifacts",
+    "privacy",
+    "production_provenance",
+    "credentials_used",
+    "network_actions"
+  ],
+  "publication_lineage": {
+    "existing_concept_doi": "10.5281/zenodo.22061489",
+    "new_concept_created": false,
+    "previous_record_id": 22105179,
+    "previous_version_doi": "10.5281/zenodo.22105179",
+    "publication_performed_by_packager": false,
+    "route": "new_version_in_existing_concept"
+  },
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-v0.31.1",
+  "rights": {
+    "attribution_preserved": true,
+    "changes_disclosed": true,
+    "fomberg_component": "CC BY-SA 4.0",
+    "integrated_payload": "CC BY-SA 4.0",
+    "non_endorsement_preserved": true,
+    "original_ca01_component": "CC BY-SA 4.0",
+    "original_hint_component": "CC BY-SA 4.0",
+    "roberts_component": "CC BY 4.0",
+    "share_alike_preserved": true
+  },
+  "schema_version": "1.0",
+  "scope_truth": "Roberts Notes.tex lines 134-6368, lectures 1-30 complete; Fomberg algebraic_topology.tex lines 31-4185, Sections 1.1-1.13 complete; D60-CA01 complete 8/8; 36 original R01-R06 hints close ordinary mastery 84/84; total required mastery 92/108; composite course partial",
+  "status": "roberts_complete_fomberg_units_001_007_complete_ca01_complete_ordinary_mastery_84_complete_composite_course_partial",
+  "template_state": "static_controls_unsealed_generated_fields_unset",
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Roberts 1–30, Jembatan Homologi §1.1–1.13, Asesmen Kumulatif 1, dan Petunjuk Rute 1–6",
+  "version": "0.31.1"
+}

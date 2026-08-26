@@ -1,0 +1,22 @@
+{
+  "all_live_files_equal_replay": true,
+  "edition_unit_id": "O012-ORIG-HINTS-R01-R06",
+  "immutable_prefix": {
+    "bundle_sha256": "51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57",
+    "bytes": 8345799,
+    "records": 6854
+  },
+  "receipt_kind": "isolated_binary_replay",
+  "replay": {
+    "exact_file_matches": 11,
+    "final": {
+      "bundle_sha256": "7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b",
+      "bytes": 8545732,
+      "records": 7012
+    },
+    "status": "PASS",
+    "suffix_bytes": 199933,
+    "temporary_replay_removed": true
+  },
+  "status": "PASS"
+}

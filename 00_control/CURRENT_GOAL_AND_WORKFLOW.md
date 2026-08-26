@@ -57,14 +57,24 @@ preserve the same reader boundary. Both lineages and every critical witness
 have exact anonymous byte/hash readback. Do not rebuild, retranslate, or
 renumber this frozen prefix.
 
-The route/proof census and Cumulative Assessment 1 are now locally closed.
-CA01 adds eight original exercise-hint-complete-solution triples across
-`D60-R01`-`R07`; its reader source SHA-256 is
+The route/proof census, Cumulative Assessment 1, and the ordinary-mastery
+hint closure are now locally closed. CA01 adds eight original
+exercise-hint-complete-solution triples across `D60-R01`-`R07`; its reader
+source SHA-256 is
 `5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8`.
-The append-only backend now has 6,854 records/8,345,799 bytes and bundle
-SHA-256 `51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57`.
-The centered/reflowing HTML and 477-page deterministic PDF pass independent
-math, language, structural, browser, visual, navigation, rights, and hash QA.
+The separately modeled `O012-ORIG-HINTS-R01-R06` layer adds exactly 36 stable
+hints to 36 existing exercise/full-solution pairs without duplicating or
+altering prompts, solutions, or solve edges. Its source is 28,698 bytes,
+SHA-256 `dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a`.
+All 84 ordinary route items now have exercise, hint, and complete solution;
+CA01 brings the cumulative total to 92/108, leaving exactly the 16 items in
+CA02 and CA03. The append-only backend now has 7,012 records/8,545,732 bytes
+and bundle SHA-256
+`7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b`.
+The centered/reflowing 15,026,881-byte HTML and 482-page deterministic PDF
+pass independent math, language, structural, browser, visual, navigation,
+rights, and hash QA. This successor is locally release-ready and must be
+published in the existing lineages before CA02 production proceeds.
 The CA01 boundary is now public through the existing GitHub, Pages, and Zenodo
 lineages with exact anonymous byte/hash readback. GitHub content commit is
 `4b5f8f74bf361e45687d55fc31a95ea3e0c657ab`; Pages run `32924728855`
@@ -72,29 +82,26 @@ deploys the CA01 reader. Zenodo version `0.31.0` is record `22105179`, DOI
 `10.5281/zenodo.22105179`, in the unchanged concept DOI
 `10.5281/zenodo.22061489`.
 
-1. Add 36 separately modeled stable hints to the census-selected existing
-   full-solution pairs in `D60-R01`-`R06`; do not duplicate prompts or
-   solutions. This closes the remaining ordinary 84-item route distribution.
-2. Add Cumulative Assessments 2 and 3, eight original items each with a hint
+1. Add Cumulative Assessments 2 and 3, eight original items each with a hint
    and complete checked solution, so all 24 cumulative slots and all 108
    required solution-bearing slots are closed. Do not copy the excluded
    Fomberg problem bank.
-3. Add four offline reproducible computation laboratories, each with source,
+2. Add four offline reproducible computation laboratories, each with source,
    tests, expected output, interpretation, and a full check: covering
    monodromy/group presentations; chain matrices/Smith normal form; cellular
    boundaries/degree; and comparison of fundamental-group, homology, and
    cohomology invariants.
-4. Repair the remaining backend proof-link metadata for `FOM-PR-13`-`15` and
+3. Repair the remaining backend proof-link metadata for `FOM-PR-13`-`15` and
    `FOM-U003-QUOTIENT-LES` without rewriting their already checked mathematics;
    then add the final proof-reconstruction/cross-invariant capstone and explicit
    oral-proof rubric; independently check every new mathematical argument and
    all cumulative prerequisite edges.
-5. Extend the append-only backend while preserving the 30-edition-unit/14-route
+4. Extend the append-only backend while preserving the 30-edition-unit/14-route
    view, rebuild centered/reflowing HTML and deterministic PDF, run full route
    QA, and publish each coherent verified boundary through the same GitHub,
    Pages, and Zenodo lineages with anonymous byte readback. Keep credentials
    runtime-only. Figshare remains inactive and is not a completion gate.
-6. When the entire corpus is closed, perform one final duplicate/high-confidence
+5. When the entire corpus is closed, perform one final duplicate/high-confidence
    check and, only if a useful upstream correction remains, send at most one
    concise report signed `Codex — at the user's direction.`
 

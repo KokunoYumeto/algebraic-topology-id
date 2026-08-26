@@ -1,0 +1,242 @@
+{
+  "qa_id": "O012-RBT-001-030-FOM-001-007-CA01-HINTS-R01-R06-DETERMINISTIC-BUILD-DRAFT",
+  "status": "PASS_DETERMINISTIC_BUILD_PENDING_MANUAL_VISUAL_AND_BROWSER_QA",
+  "scope": "Roberts 30/30; Fomberg 1.1-1.13; D60-CA01; 36 additive ordinary hints completing six-per-route ordinary mastery coverage for D60-R01-D60-R06; composite course partial",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "artifacts": {
+    "html": {
+      "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06/index.html",
+      "bytes": 15026881,
+      "sha256": "7ed278d73a324ba0a9e5acadedf448221b3791db7322fdf6d29225afd0124d2b",
+      "lang": "id-ID",
+      "self_contained": true
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-id.pdf",
+      "bytes": 8592243,
+      "sha256": "4da7f1368c17423cd6845c36b7d5190dac98d515ecbd32467c0c59961dd9afcb",
+      "pages": 482,
+      "page_size": "A4",
+      "tagged": false
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06.csv",
+      "bytes": 325,
+      "sha256": "2273669b06917c09e8c909f8bb51ab6518e0572c2f7c9f74e1b647013268dc3a",
+      "entries": 2
+    }
+  },
+  "frozen_predecessor": {
+    "html": {
+      "path": "output/html/roberts-001-030-fomberg-001-007-ca01/index.html",
+      "bytes": 14958219,
+      "sha256": "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-id.pdf",
+      "bytes": 8358561,
+      "sha256": "476b0de3bbb2cbfe03a151ac3060e121c5f89364e70b54d918ab270f4c965ade",
+      "pages": 477
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01.csv",
+      "bytes": 297,
+      "sha256": "eac46f939ac99da1479c7826a350eb926c30f91d4c74fdfe785a597f7a58803d"
+    },
+    "final_build_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BUILD_RECEIPT.json",
+      "bytes": 7842,
+      "sha256": "22fef828b7963219759f85d11e409e0ebf957889d0fa76dc02ec04f3a707a9e0"
+    },
+    "html_exact_reconstruction": true,
+    "pdf_visual_and_text_prefix": {
+      "status": "PASS",
+      "pages": 477,
+      "page_signature_bundle_sha256": "804336cefb3c66870a589caacabe501a3010585428f88262042c05ad65722389",
+      "extracted_text_byte_identical": true
+    }
+  },
+  "ordinary_hints": {
+    "edition_unit_id": "O012-ORIG-HINTS-R01-R06",
+    "source": {
+      "path": "source/id-ID/mastery/ordinary-hints-r01-r06.md",
+      "bytes": 28698,
+      "sha256": "dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a"
+    },
+    "qa": {
+      "path": "qa/ORDINARY_HINTS_R01_R06_QA.json",
+      "bytes": 16616,
+      "sha256": "a0460dbed83242863fc1aab8290b76fac9cd39644276e132401e7d3e9198c33d"
+    },
+    "rights": {
+      "license": "CC BY-SA 4.0",
+      "origin": "edition_original",
+      "source_problem_bank_used": false
+    },
+    "census": {
+      "stable_ids": 43,
+      "hint_blocks": 36,
+      "exercise_solution_pairs": 36,
+      "visible_predecessor_links": 72,
+      "routes": [
+        "D60-R01",
+        "D60-R02",
+        "D60-R03",
+        "D60-R04",
+        "D60-R05",
+        "D60-R06"
+      ]
+    }
+  },
+  "backend_boundary": {
+    "status": "PASS_APPEND_ONLY_REPLAYABLE",
+    "receipt": {
+      "path": "qa/BACKEND_APPEND_ONLY_ORDINARY_HINTS_R01_R06_CUMULATIVE_RECEIPT.json",
+      "bytes": 10252,
+      "sha256": "10e9d32848b950148983d0d8c38d6753a9956a674f657858b31dd257af5b2aa8"
+    },
+    "receipt_kind": "cumulative_backend_boundary",
+    "source_sha256": "dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a"
+  },
+  "html_checks": {
+    "status": "PASS",
+    "dom_ids": 2395,
+    "fragment_links": 514,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 16300,
+    "hint_blocks_added": 36,
+    "visible_predecessor_links_added": 72,
+    "self_contained": true,
+    "centered_reflow_css_markers": true
+  },
+  "pdf_checks": {
+    "status": "PASS_STRUCTURAL",
+    "pages": 482,
+    "appended_hint_pages": 5,
+    "all_pages_a4": true,
+    "fonts": 59,
+    "all_fonts_embedded_subset_tounicode": true,
+    "trailer_id_suppressed": true,
+    "predecessor_outline_entries": 389,
+    "hint_outline_entries_added": 7,
+    "predecessor_named_destinations": 2873,
+    "predecessor_stable_id_destinations_added": 72,
+    "hint_named_destinations_added": 43,
+    "merged_named_destinations": 2988,
+    "all_source_stable_ids_resolve": true,
+    "visible_links_to_predecessor_resolve": true,
+    "predecessor_link_page_map_1_based": {
+      "o012-rbt-l01-ex-001": 12,
+      "o012-rbt-l01-ex-002": 13,
+      "o012-rbt-l01-sol-001": 13,
+      "o012-rbt-l01-sol-002": 13,
+      "o012-rbt-l02-ex-001": 15,
+      "o012-rbt-l02-ex-002": 16,
+      "o012-rbt-l02-ex-003": 16,
+      "o012-rbt-l02-ex-004": 17,
+      "o012-rbt-l02-sol-001": 20,
+      "o012-rbt-l02-sol-002": 21,
+      "o012-rbt-l02-sol-003": 21,
+      "o012-rbt-l02-sol-004": 22,
+      "o012-rbt-l03-ex-001": 24,
+      "o012-rbt-l03-ex-002": 25,
+      "o012-rbt-l03-ex-003": 27,
+      "o012-rbt-l03-ex-004": 30,
+      "o012-rbt-l03-ex-005": 30,
+      "o012-rbt-l03-sol-001": 30,
+      "o012-rbt-l03-sol-002": 31,
+      "o012-rbt-l03-sol-003": 31,
+      "o012-rbt-l03-sol-004": 32,
+      "o012-rbt-l03-sol-005": 32,
+      "o012-rbt-l04-ex-001": 34,
+      "o012-rbt-l04-sol-001": 39,
+      "o012-rbt-l05-mcheck-001": 49,
+      "o012-rbt-l05-mcheck-002": 49,
+      "o012-rbt-l05-mcheck-003": 50,
+      "o012-rbt-l05-mcheck-004": 51,
+      "o012-rbt-l05-sol-001": 49,
+      "o012-rbt-l05-sol-002": 49,
+      "o012-rbt-l05-sol-003": 51,
+      "o012-rbt-l05-sol-004": 51,
+      "o012-rbt-l06-mcheck-001": 59,
+      "o012-rbt-l06-mcheck-002": 60,
+      "o012-rbt-l06-sol-001": 60,
+      "o012-rbt-l06-sol-002": 60,
+      "o012-rbt-l07-mcheck-001": 70,
+      "o012-rbt-l07-mcheck-002": 71,
+      "o012-rbt-l07-mcheck-003": 71,
+      "o012-rbt-l07-mcheck-004": 72,
+      "o012-rbt-l07-sol-001": 70,
+      "o012-rbt-l07-sol-002": 71,
+      "o012-rbt-l07-sol-003": 71,
+      "o012-rbt-l07-sol-004": 72,
+      "o012-rbt-l08-ex-001": 79,
+      "o012-rbt-l08-mcheck-002": 81,
+      "o012-rbt-l08-sol-001": 80,
+      "o012-rbt-l08-sol-002": 81,
+      "o012-rbt-l11-mcheck-001": 115,
+      "o012-rbt-l11-mcheck-002": 116,
+      "o012-rbt-l11-mcheck-003": 116,
+      "o012-rbt-l11-sol-001": 115,
+      "o012-rbt-l11-sol-002": 116,
+      "o012-rbt-l11-sol-003": 117,
+      "o012-rbt-l12-mcheck-001": 126,
+      "o012-rbt-l12-mcheck-002": 127,
+      "o012-rbt-l12-mcheck-003": 127,
+      "o012-rbt-l12-sol-001": 126,
+      "o012-rbt-l12-sol-002": 127,
+      "o012-rbt-l12-sol-003": 128,
+      "o012-rbt-l14-ex-001": 148,
+      "o012-rbt-l14-ex-002": 149,
+      "o012-rbt-l14-mcheck-001": 151,
+      "o012-rbt-l14-mcheck-004": 152,
+      "o012-rbt-l14-mcheck-005": 153,
+      "o012-rbt-l14-mcheck-006": 154,
+      "o012-rbt-l14-sol-001": 151,
+      "o012-rbt-l14-sol-002": 152,
+      "o012-rbt-l14-sol-003": 152,
+      "o012-rbt-l14-sol-004": 153,
+      "o012-rbt-l14-sol-005": 153,
+      "o012-rbt-l14-sol-006": 154
+    }
+  },
+  "reproducibility": {
+    "frozen_inputs_fail_closed": true,
+    "html_fragment_clean_builds": 2,
+    "html_fragment_sha256": "efb63ab2875ae100595a83e7a1ebf5deacd5a6c6b896562890959497f219ba6b",
+    "html_builds_byte_identical": true,
+    "hint_pdf_clean_builds": 2,
+    "hint_pdf_sha256": "c068b3bacc76528fed445fc9259a1403b4ee3d5a2ef7c8707c250c8a6cdd06bc",
+    "hint_pdf_builds_byte_identical": true,
+    "merged_pdf_clean_builds": 2,
+    "merged_pdf_builds_byte_identical": true,
+    "source_date_epoch": 1787702400,
+    "build_scratch_removed_after_finalizer": true
+  },
+  "toolchain": {
+    "builder": {
+      "path": "scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06.ps1",
+      "bytes": 31632,
+      "sha256": "aea55ab49113795f78166fe5c89313d77d1ad424e61a24066b8f0c6e6ae9f957"
+    },
+    "finalizer": {
+      "path": "scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06.py",
+      "bytes": 33376,
+      "sha256": "9e6539ada691998bdee2040773dc7c77a384c488518e7d42f9b85d06ee80abec"
+    },
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_merger": "pypdf 6.12.2 object-copy append; 477-page CA01 outline/name tree preserved; 72 reviewed predecessor stable-ID destinations added; seven source-derived outline entries and all 43 source stable-ID destinations rebuilt; 72 visible predecessor links resolved",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "qa_not_claimed": {
+    "manual_visual_qa": "NOT_PERFORMED",
+    "live_browser_desktop_qa": "NOT_PERFORMED",
+    "live_browser_mobile_qa": "NOT_PERFORMED",
+    "public_byte_readback": "NOT_PERFORMED"
+  },
+  "limitations": [
+    "The composite course remains partial.",
+    "The PDF remains untagged; native-MathML HTML is the primary reflowable surface.",
+    "Manual visual and live-browser QA must precede a final build receipt."
+  ]
+}

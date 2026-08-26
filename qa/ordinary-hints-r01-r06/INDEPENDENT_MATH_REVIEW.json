@@ -1,0 +1,447 @@
+{
+  "review_id": "O012-D60-ORDINARY-HINTS-R01-R06-INDEPENDENT-MATH-REVIEW",
+  "review_kind": "independent_mathematics_and_binding",
+  "status": "PASS",
+  "independent_from_production": true,
+  "date": "2026-08-26",
+  "hint_source_path": "source/id-ID/mastery/ordinary-hints-r01-r06.md",
+  "hint_source_bytes": 28698,
+  "hint_source_lf_count": 410,
+  "hint_source_sha256": "dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a",
+  "review_scope": {
+    "hints_reviewed": 36,
+    "route_span": "D60-R01 through D60-R06",
+    "checks": [
+      "one-to-one binding to the exact existing exercise and complete solution",
+      "visible target-exercise and complete-solution links",
+      "mathematical correctness and agreement with the bound prompt and solution",
+      "useful scaffolding without disclosure of the complete solution",
+      "typed category-theoretic compositions and naturality squares",
+      "right-action, chronological-product, monodromy, and path-concatenation conventions",
+      "six distinct hints per route D60-R01 through D60-R06"
+    ]
+  },
+  "binding_audit": {
+    "hint_ids": 36,
+    "distinct_hint_ids": 36,
+    "distinct_target_exercise_ids": 36,
+    "distinct_existing_solution_ids": 36,
+    "target_anchors_resolved_exactly_once": 36,
+    "solution_anchors_resolved_exactly_once": 36,
+    "visible_target_links": 36,
+    "visible_solution_links": 36,
+    "binding_issues": 0,
+    "corrected_distinct_unit_14_bindings": [
+      {
+        "target_exercise_id": "o012-rbt-l14-ex-001",
+        "existing_solution_id": "o012-rbt-l14-sol-002",
+        "verdict": "PASS",
+        "note": "Source Exercise 14.1 asks for Lemma 14.1 and explicitly points to Mastery Check 14.2; solution 14.2 is therefore the correct complete solution."
+      },
+      {
+        "target_exercise_id": "o012-rbt-l14-ex-002",
+        "existing_solution_id": "o012-rbt-l14-sol-003",
+        "verdict": "PASS",
+        "note": "Source Exercise 14.2 asks for Lemma 14.2 and explicitly points to Mastery Check 14.3; solution 14.3 is therefore the correct complete solution."
+      }
+    ]
+  },
+  "bound_source_identities": [
+    {
+      "path": "source/id-ID/reader-unit-001.md",
+      "bytes": 16179,
+      "sha256": "dccc7b727695d26d0b425c0eae22db1697cea93e295391fa7685fbca2d011dc7"
+    },
+    {
+      "path": "source/id-ID/units/unit-002-lecture-002.md",
+      "bytes": 25090,
+      "sha256": "9aa5063c167cc0b2bc8a5edbc81cb36995606d5073a1afe22db608609ad29377"
+    },
+    {
+      "path": "source/id-ID/units/unit-003-lecture-003.md",
+      "bytes": 25822,
+      "sha256": "f757bc58ea6f0d0dbe37ebdb2e44da7d3814b32052d8e23a39331d66d1f025b2"
+    },
+    {
+      "path": "source/id-ID/units/unit-004-lecture-004.md",
+      "bytes": 24546,
+      "sha256": "35aa8adfec6f7652f9a9f21f2c6b6656347309f866689a0939d6f0c517974ea3"
+    },
+    {
+      "path": "source/id-ID/units/unit-005-lecture-005.md",
+      "bytes": 22662,
+      "sha256": "9d25dc7cd89c0c9f69841850b03489e742e8dc50c2e68ca405aff593ec128f90"
+    },
+    {
+      "path": "source/id-ID/units/unit-006-lecture-006.md",
+      "bytes": 32116,
+      "sha256": "2276a34177100bc14e3e9f96461f6a7ab3bf27a25f652af4cc2d27493f420c8e"
+    },
+    {
+      "path": "source/id-ID/units/unit-007-lecture-007.md",
+      "bytes": 22107,
+      "sha256": "f93659dd290272ad3d526b74565f7bdc7316c366c09f1efaac599abde4cbc59d"
+    },
+    {
+      "path": "source/id-ID/units/unit-008-lecture-008.md",
+      "bytes": 28468,
+      "sha256": "4b5c579a1891a99ddff89c458f9d653ec03973e0aaa32839c87be5896ab653a8"
+    },
+    {
+      "path": "source/id-ID/units/unit-011-lecture-011.md",
+      "bytes": 28465,
+      "sha256": "7acb205dd9f760631f7548208d77470e22cd208849439e2ad2a8eb4b2465b0f8"
+    },
+    {
+      "path": "source/id-ID/units/unit-012-lecture-012.md",
+      "bytes": 32850,
+      "sha256": "b7ba7cad3d12605628693d57d50a41e06f40a6b7da1109752fe05d870b4b28f0"
+    },
+    {
+      "path": "source/id-ID/units/unit-014-lecture-014.md",
+      "bytes": 28488,
+      "sha256": "da6f18b455d76adafd8b9b648ed7c277958eca95c0b7d76a8bd9895d79ec6677"
+    }
+  ],
+  "item_results": [
+    {
+      "hint_id": "o012-d60-r01-hint-001",
+      "route_id": "D60-R01",
+      "target_exercise_id": "o012-rbt-l01-ex-001",
+      "existing_solution_id": "o012-rbt-l01-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly directs the learner from an arbitrary point of the preimage through a target basic neighbourhood to a source basic neighbourhood, without supplying the completed openness argument."
+    },
+    {
+      "hint_id": "o012-d60-r01-hint-002",
+      "route_id": "D60-R01",
+      "target_exercise_id": "o012-rbt-l01-ex-002",
+      "existing_solution_id": "o012-rbt-l01-sol-002",
+      "verdict": "PASS",
+      "notes": "Correctly separates the three neighbourhood-basis axioms and identifies finite-preimage intersections and local refinement as the needed mechanisms."
+    },
+    {
+      "hint_id": "o012-d60-r01-hint-003",
+      "route_id": "D60-R01",
+      "target_exercise_id": "o012-rbt-l02-ex-001",
+      "existing_solution_id": "o012-rbt-l02-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly uses equality of images to transfer the same basic initial-topology neighbourhood and prompts the symmetric implication."
+    },
+    {
+      "hint_id": "o012-d60-r01-hint-004",
+      "route_id": "D60-R01",
+      "target_exercise_id": "o012-rbt-l02-ex-002",
+      "existing_solution_id": "o012-rbt-l02-sol-002",
+      "verdict": "PASS",
+      "notes": "Correctly preserves the coproduct label, uses the coproduct universal property for the forward map, and uses the open component cover for the inverse."
+    },
+    {
+      "hint_id": "o012-d60-r01-hint-005",
+      "route_id": "D60-R01",
+      "target_exercise_id": "o012-rbt-l02-ex-003",
+      "existing_solution_id": "o012-rbt-l02-sol-003",
+      "verdict": "PASS",
+      "notes": "Correctly identifies componentwise forced values and the final-topology characterization needed for continuity and uniqueness."
+    },
+    {
+      "hint_id": "o012-d60-r01-hint-006",
+      "route_id": "D60-R01",
+      "target_exercise_id": "o012-rbt-l02-ex-004",
+      "existing_solution_id": "o012-rbt-l02-sol-004",
+      "verdict": "PASS",
+      "notes": "Correctly prompts the union identity over an open cover and the subspace-topology converse without reproducing the finished proof."
+    },
+    {
+      "hint_id": "o012-d60-r02-hint-001",
+      "route_id": "D60-R02",
+      "target_exercise_id": "o012-rbt-l03-ex-001",
+      "existing_solution_id": "o012-rbt-l03-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly transports maps through the inverse homeomorphism, preserves image information, and yields the symmetric connectedness conclusion."
+    },
+    {
+      "hint_id": "o012-d60-r02-hint-002",
+      "route_id": "D60-R02",
+      "target_exercise_id": "o012-rbt-l03-ex-002",
+      "existing_solution_id": "o012-rbt-l03-sol-002",
+      "verdict": "PASS",
+      "notes": "Correctly uses the common intersection point to synchronize constant values, then guides transitivity and the maximal connected-component argument."
+    },
+    {
+      "hint_id": "o012-d60-r02-hint-003",
+      "route_id": "D60-R02",
+      "target_exercise_id": "o012-rbt-l03-ex-003",
+      "existing_solution_id": "o012-rbt-l03-sol-003",
+      "verdict": "PASS",
+      "notes": "Correctly exploits discreteness to assemble pointwise paths; the reverse-direction cue identifies the singleton domain as sufficient to encode two arbitrary points via two maps."
+    },
+    {
+      "hint_id": "o012-d60-r02-hint-004",
+      "route_id": "D60-R02",
+      "target_exercise_id": "o012-rbt-l03-ex-004",
+      "existing_solution_id": "o012-rbt-l03-sol-004",
+      "verdict": "PASS",
+      "notes": "Correctly types postcomposition on homotopy classes and prompts well-definedness before the identity and composition laws."
+    },
+    {
+      "hint_id": "o012-d60-r02-hint-005",
+      "route_id": "D60-R02",
+      "target_exercise_id": "o012-rbt-l03-ex-005",
+      "existing_solution_id": "o012-rbt-l03-sol-005",
+      "verdict": "PASS",
+      "notes": "Correctly stages replacement of both representatives and then translates inverse equations in the homotopy category into the two required homotopies."
+    },
+    {
+      "hint_id": "o012-d60-r02-hint-006",
+      "route_id": "D60-R02",
+      "target_exercise_id": "o012-rbt-l04-ex-001",
+      "existing_solution_id": "o012-rbt-l04-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly types the action of a homotopy-class morphism and separately flags independence of the point-map and ambient-map representatives."
+    },
+    {
+      "hint_id": "o012-d60-r03-hint-001",
+      "route_id": "D60-R03",
+      "target_exercise_id": "o012-rbt-l05-mcheck-001",
+      "existing_solution_id": "o012-rbt-l05-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly distinguishes mere existence of a fibre bijection from path-determined transport and highlights dependence on the selected path."
+    },
+    {
+      "hint_id": "o012-d60-r03-hint-002",
+      "route_id": "D60-R03",
+      "target_exercise_id": "o012-rbt-l05-mcheck-002",
+      "existing_solution_id": "o012-rbt-l05-sol-002",
+      "verdict": "PASS",
+      "notes": "Correctly outlines local triviality, morphism pullback, iterated pullback, and the canonical fibre projection, with all map coordinates correctly typed."
+    },
+    {
+      "hint_id": "o012-d60-r03-hint-003",
+      "route_id": "D60-R03",
+      "target_exercise_id": "o012-rbt-l05-mcheck-003",
+      "existing_solution_id": "o012-rbt-l05-sol-003",
+      "verdict": "PASS",
+      "notes": "Correctly prompts the lifted angle satisfying the covering equation and endpoint evaluation, while leaving the explicit formula to the learner."
+    },
+    {
+      "hint_id": "o012-d60-r03-hint-004",
+      "route_id": "D60-R03",
+      "target_exercise_id": "o012-rbt-l05-mcheck-004",
+      "existing_solution_id": "o012-rbt-l05-sol-004",
+      "verdict": "PASS",
+      "notes": "Correctly composes the lift with a covering morphism, invokes uniqueness at the correctly typed starting point, and delays endpoint evaluation to the final step."
+    },
+    {
+      "hint_id": "o012-d60-r03-hint-005",
+      "route_id": "D60-R03",
+      "target_exercise_id": "o012-rbt-l06-mcheck-001",
+      "existing_solution_id": "o012-rbt-l06-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly identifies the affine lift and insists that the second concatenated lift starts at the first endpoint, giving the correct additive winding convention."
+    },
+    {
+      "hint_id": "o012-d60-r03-hint-006",
+      "route_id": "D60-R03",
+      "target_exercise_id": "o012-rbt-l06-mcheck-002",
+      "existing_solution_id": "o012-rbt-l06-sol-002",
+      "verdict": "PASS",
+      "notes": "Correctly decomposes the compact-open basis, evaluation and postcomposition, supremum-metric comparison, and exponential-law proof into useful proof stages without giving their details."
+    },
+    {
+      "hint_id": "o012-d60-r04-hint-001",
+      "route_id": "D60-R04",
+      "target_exercise_id": "o012-rbt-l07-mcheck-001",
+      "existing_solution_id": "o012-rbt-l07-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly concatenates lifts in sequence and flags the resulting transport order as eta-star after gamma-star."
+    },
+    {
+      "hint_id": "o012-d60-r04-hint-002",
+      "route_id": "D60-R04",
+      "target_exercise_id": "o012-rbt-l07-mcheck-002",
+      "existing_solution_id": "o012-rbt-l07-sol-002",
+      "verdict": "PASS",
+      "notes": "Correctly builds the three-variable adjoint, checks the seam by the gluing lemma, and then invokes the compact-open exponential law into the loop-space subspace."
+    },
+    {
+      "hint_id": "o012-d60-r04-hint-003",
+      "route_id": "D60-R04",
+      "target_exercise_id": "o012-rbt-l07-mcheck-003",
+      "existing_solution_id": "o012-rbt-l07-sol-003",
+      "verdict": "PASS",
+      "notes": "Correctly separates product components, passage of loop-space homotopies to group laws, and the right-action identity with the proper concatenation order."
+    },
+    {
+      "hint_id": "o012-d60-r04-hint-004",
+      "route_id": "D60-R04",
+      "target_exercise_id": "o012-rbt-l07-mcheck-004",
+      "existing_solution_id": "o012-rbt-l07-sol-004",
+      "verdict": "PASS",
+      "notes": "Correctly prompts loop-functor postcomposition, quotient factorization through the circle, endpoint-fixed homotopy factorization, naturality, and the pinch-map product."
+    },
+    {
+      "hint_id": "o012-d60-r04-hint-005",
+      "route_id": "D60-R04",
+      "target_exercise_id": "o012-rbt-l08-ex-001",
+      "existing_solution_id": "o012-rbt-l08-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly uses the star centre for a contraction and points toward path connectedness and endpoint-fixed uniqueness of path classes without spelling out the homotopy."
+    },
+    {
+      "hint_id": "o012-d60-r04-hint-006",
+      "route_id": "D60-R04",
+      "target_exercise_id": "o012-rbt-l08-mcheck-002",
+      "existing_solution_id": "o012-rbt-l08-sol-002",
+      "verdict": "PASS",
+      "notes": "Correctly types conjugation and the automorphism torsor, identifies action-groupoid components and stabilizers, and retains the empty-object edge cases for discreteness and codiscreteness."
+    },
+    {
+      "hint_id": "o012-d60-r05-hint-001",
+      "route_id": "D60-R05",
+      "target_exercise_id": "o012-rbt-l11-mcheck-001",
+      "existing_solution_id": "o012-rbt-l11-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly scaffolds evaluation on reduced and alternating words and explicitly warns that the universal composition order must be type-checked."
+    },
+    {
+      "hint_id": "o012-d60-r05-hint-002",
+      "route_id": "D60-R05",
+      "target_exercise_id": "o012-rbt-l11-mcheck-002",
+      "existing_solution_id": "o012-rbt-l11-sol-002",
+      "verdict": "PASS",
+      "notes": "Correctly invokes gluing for the topological pushout and kernel descent from the direct sum for the vector-space pushout."
+    },
+    {
+      "hint_id": "o012-d60-r05-hint-003",
+      "route_id": "D60-R05",
+      "target_exercise_id": "o012-rbt-l11-mcheck-003",
+      "existing_solution_id": "o012-rbt-l11-sol-003",
+      "verdict": "PASS",
+      "notes": "Correctly identifies refinement invariance, seam and boundary checks for the square homotopy, and the precise remaining global-cover gap."
+    },
+    {
+      "hint_id": "o012-d60-r05-hint-004",
+      "route_id": "D60-R05",
+      "target_exercise_id": "o012-rbt-l12-mcheck-001",
+      "existing_solution_id": "o012-rbt-l12-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly distinguishes local functorial equality from the global construction, then prompts subordinate partitions for composition and local factorization for uniqueness."
+    },
+    {
+      "hint_id": "o012-d60-r05-hint-005",
+      "route_id": "D60-R05",
+      "target_exercise_id": "o012-rbt-l12-mcheck-002",
+      "existing_solution_id": "o012-rbt-l12-sol-002",
+      "verdict": "PASS",
+      "notes": "Correctly moves a cocone through the retraction into the known pushout and returns through the inclusion, with the retraction identity giving uniqueness."
+    },
+    {
+      "hint_id": "o012-d60-r05-hint-006",
+      "route_id": "D60-R05",
+      "target_exercise_id": "o012-rbt-l12-mcheck-003",
+      "existing_solution_id": "o012-rbt-l12-sol-003",
+      "verdict": "PASS",
+      "notes": "Correctly types the chosen endpoint paths in the groupoid retraction, identifies inverse-path cancellation, and requires one intersection-compatible choice for strict cube commutativity."
+    },
+    {
+      "hint_id": "o012-d60-r06-hint-001",
+      "route_id": "D60-R06",
+      "target_exercise_id": "o012-rbt-l14-ex-001",
+      "existing_solution_id": "o012-rbt-l14-sol-002",
+      "verdict": "PASS",
+      "notes": "Correctly binds Source Exercise 14.1 to Solution 14.2 and uses quasi-inverse precomposition with the two natural isomorphisms to prove restriction is an equivalence."
+    },
+    {
+      "hint_id": "o012-d60-r06-hint-002",
+      "route_id": "D60-R06",
+      "target_exercise_id": "o012-rbt-l14-ex-002",
+      "existing_solution_id": "o012-rbt-l14-sol-003",
+      "verdict": "PASS",
+      "notes": "Correctly binds Source Exercise 14.2 to Solution 14.3 and treats both functors and natural transformations in the coproduct-category decomposition."
+    },
+    {
+      "hint_id": "o012-d60-r06-hint-003",
+      "route_id": "D60-R06",
+      "target_exercise_id": "o012-rbt-l14-mcheck-001",
+      "existing_solution_id": "o012-rbt-l14-sol-001",
+      "verdict": "PASS",
+      "notes": "Correctly proves fibre-map naturality by uniqueness of lifts and types the composite fibre map and stacked naturality squares."
+    },
+    {
+      "hint_id": "o012-d60-r06-hint-004",
+      "route_id": "D60-R06",
+      "target_exercise_id": "o012-rbt-l14-mcheck-004",
+      "existing_solution_id": "o012-rbt-l14-sol-004",
+      "verdict": "PASS",
+      "notes": "Correctly derives a right action from a functor on the one-object groupoid under chronological multiplication and identifies naturality with equivariance."
+    },
+    {
+      "hint_id": "o012-d60-r06-hint-005",
+      "route_id": "D60-R06",
+      "target_exercise_id": "o012-rbt-l14-mcheck-005",
+      "existing_solution_id": "o012-rbt-l14-sol-005",
+      "verdict": "PASS",
+      "notes": "Correctly fixes the pointed monodromy domain, prompts direct equivariance of reduction modulo n, and flags why the abelian example hides left-versus-right operator order."
+    },
+    {
+      "hint_id": "o012-d60-r06-hint-006",
+      "route_id": "D60-R06",
+      "target_exercise_id": "o012-rbt-l14-mcheck-006",
+      "existing_solution_id": "o012-rbt-l14-sol-006",
+      "verdict": "PASS",
+      "notes": "Correctly guides essential surjectivity, the right-G-set isomorphism from left cosets H-backslash-G, and the local path-connectedness argument for covering-space components."
+    }
+  ],
+  "route_totals": {
+    "D60-R01": {
+      "reviewed": 6,
+      "passed": 6,
+      "distinct_targets": 6,
+      "distinct_solutions": 6
+    },
+    "D60-R02": {
+      "reviewed": 6,
+      "passed": 6,
+      "distinct_targets": 6,
+      "distinct_solutions": 6
+    },
+    "D60-R03": {
+      "reviewed": 6,
+      "passed": 6,
+      "distinct_targets": 6,
+      "distinct_solutions": 6
+    },
+    "D60-R04": {
+      "reviewed": 6,
+      "passed": 6,
+      "distinct_targets": 6,
+      "distinct_solutions": 6
+    },
+    "D60-R05": {
+      "reviewed": 6,
+      "passed": 6,
+      "distinct_targets": 6,
+      "distinct_solutions": 6
+    },
+    "D60-R06": {
+      "reviewed": 6,
+      "passed": 6,
+      "distinct_targets": 6,
+      "distinct_solutions": 6
+    },
+    "overall": {
+      "reviewed": 36,
+      "passed": 36,
+      "distinct_targets": 36,
+      "distinct_solutions": 36
+    }
+  },
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "unresolved_findings": [],
+  "conclusion": "All 36 hints are mathematically correct, useful without disclosing the complete solution, visibly linked to 36 distinct exercises and 36 distinct complete solutions, and correctly preserve the categorical, right-action, monodromy, and path-order conventions."
+}

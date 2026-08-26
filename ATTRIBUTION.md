@@ -44,6 +44,13 @@ Penutup, dan Homotopi* is original edition material under CC BY-SA 4.0. It is
 not part of either Roberts's or Fomberg's source text and does not imply their
 authorship or endorsement.
 
+The separately identified *Petunjuk penguasaan untuk Rute 1–6* is also
+original edition material under CC BY-SA 4.0. Its 36 hints are an additive
+reader layer bound to existing exercises and complete solutions; they do not
+alter or claim authorship of those underlying prompts or solutions, are not
+part of either Roberts's or Fomberg's source text, and do not imply either
+author's endorsement.
+
 ## Production provenance
 
 The Indonesian edition's translation, semantic restructuring, quality assurance, build engineering, and release preparation were carried out with **OpenAI Codex gpt-5.6-sol, Ultra**, acting at the user's direction. This process note does not replace or diminish the source author's credit, the human direction of the edition, or any component-specific attribution and license notice.

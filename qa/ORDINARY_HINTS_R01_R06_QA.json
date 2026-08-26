@@ -1,0 +1,398 @@
+{
+  "binding_census": {
+    "distinct_existing_solutions": 36,
+    "distinct_target_exercises": 36,
+    "exact_existing_solve_edges": 36,
+    "preexisting_hint_edges_for_targets": 0,
+    "prompt_records_changed": 0,
+    "routes": {
+      "D60-R01": 6,
+      "D60-R02": 6,
+      "D60-R03": 6,
+      "D60-R04": 6,
+      "D60-R05": 6,
+      "D60-R06": 6
+    },
+    "solution_records_changed": 0,
+    "solutions_previously_reserved_by_hint_triples": 0,
+    "solves_relations_changed": 0
+  },
+  "bindings": [
+    {
+      "component_id": "o012-rbt-l01",
+      "course_route_unit_id": "D60-R01",
+      "existing_solution_id": "unit:o012-rbt-l01-sol-001",
+      "existing_solve_relation_id": "relation:solves:sol-001:ex-001",
+      "source_path": "source/id-ID/reader-unit-001.md",
+      "stable_id": "o012-d60-r01-hint-001",
+      "target_exercise_id": "unit:o012-rbt-l01-ex-001"
+    },
+    {
+      "component_id": "o012-rbt-l01",
+      "course_route_unit_id": "D60-R01",
+      "existing_solution_id": "unit:o012-rbt-l01-sol-002",
+      "existing_solve_relation_id": "relation:solves:sol-002:ex-002",
+      "source_path": "source/id-ID/reader-unit-001.md",
+      "stable_id": "o012-d60-r01-hint-002",
+      "target_exercise_id": "unit:o012-rbt-l01-ex-002"
+    },
+    {
+      "component_id": "o012-rbt-l02",
+      "course_route_unit_id": "D60-R01",
+      "existing_solution_id": "unit:o012-rbt-l02-sol-001",
+      "existing_solve_relation_id": "relation:solves:l02-sol-001:l02-ex-001",
+      "source_path": "source/id-ID/units/unit-002-lecture-002.md",
+      "stable_id": "o012-d60-r01-hint-003",
+      "target_exercise_id": "unit:o012-rbt-l02-ex-001"
+    },
+    {
+      "component_id": "o012-rbt-l02",
+      "course_route_unit_id": "D60-R01",
+      "existing_solution_id": "unit:o012-rbt-l02-sol-002",
+      "existing_solve_relation_id": "relation:solves:l02-sol-002:l02-ex-002",
+      "source_path": "source/id-ID/units/unit-002-lecture-002.md",
+      "stable_id": "o012-d60-r01-hint-004",
+      "target_exercise_id": "unit:o012-rbt-l02-ex-002"
+    },
+    {
+      "component_id": "o012-rbt-l02",
+      "course_route_unit_id": "D60-R01",
+      "existing_solution_id": "unit:o012-rbt-l02-sol-003",
+      "existing_solve_relation_id": "relation:solves:l02-sol-003:l02-ex-003",
+      "source_path": "source/id-ID/units/unit-002-lecture-002.md",
+      "stable_id": "o012-d60-r01-hint-005",
+      "target_exercise_id": "unit:o012-rbt-l02-ex-003"
+    },
+    {
+      "component_id": "o012-rbt-l02",
+      "course_route_unit_id": "D60-R01",
+      "existing_solution_id": "unit:o012-rbt-l02-sol-004",
+      "existing_solve_relation_id": "relation:solves:l02-sol-004:l02-ex-004",
+      "source_path": "source/id-ID/units/unit-002-lecture-002.md",
+      "stable_id": "o012-d60-r01-hint-006",
+      "target_exercise_id": "unit:o012-rbt-l02-ex-004"
+    },
+    {
+      "component_id": "o012-rbt-l03",
+      "course_route_unit_id": "D60-R02",
+      "existing_solution_id": "unit:o012-rbt-l03-sol-001",
+      "existing_solve_relation_id": "relation:solves:l03-sol-001:l03-ex-001",
+      "source_path": "source/id-ID/units/unit-003-lecture-003.md",
+      "stable_id": "o012-d60-r02-hint-001",
+      "target_exercise_id": "unit:o012-rbt-l03-ex-001"
+    },
+    {
+      "component_id": "o012-rbt-l03",
+      "course_route_unit_id": "D60-R02",
+      "existing_solution_id": "unit:o012-rbt-l03-sol-002",
+      "existing_solve_relation_id": "relation:solves:l03-sol-002:l03-ex-002",
+      "source_path": "source/id-ID/units/unit-003-lecture-003.md",
+      "stable_id": "o012-d60-r02-hint-002",
+      "target_exercise_id": "unit:o012-rbt-l03-ex-002"
+    },
+    {
+      "component_id": "o012-rbt-l03",
+      "course_route_unit_id": "D60-R02",
+      "existing_solution_id": "unit:o012-rbt-l03-sol-003",
+      "existing_solve_relation_id": "relation:solves:l03-sol-003:l03-ex-003",
+      "source_path": "source/id-ID/units/unit-003-lecture-003.md",
+      "stable_id": "o012-d60-r02-hint-003",
+      "target_exercise_id": "unit:o012-rbt-l03-ex-003"
+    },
+    {
+      "component_id": "o012-rbt-l03",
+      "course_route_unit_id": "D60-R02",
+      "existing_solution_id": "unit:o012-rbt-l03-sol-004",
+      "existing_solve_relation_id": "relation:solves:l03-sol-004:l03-ex-004",
+      "source_path": "source/id-ID/units/unit-003-lecture-003.md",
+      "stable_id": "o012-d60-r02-hint-004",
+      "target_exercise_id": "unit:o012-rbt-l03-ex-004"
+    },
+    {
+      "component_id": "o012-rbt-l03",
+      "course_route_unit_id": "D60-R02",
+      "existing_solution_id": "unit:o012-rbt-l03-sol-005",
+      "existing_solve_relation_id": "relation:solves:l03-sol-005:l03-ex-005",
+      "source_path": "source/id-ID/units/unit-003-lecture-003.md",
+      "stable_id": "o012-d60-r02-hint-005",
+      "target_exercise_id": "unit:o012-rbt-l03-ex-005"
+    },
+    {
+      "component_id": "o012-rbt-l04",
+      "course_route_unit_id": "D60-R02",
+      "existing_solution_id": "unit:o012-rbt-l04-sol-001",
+      "existing_solve_relation_id": "relation:solves:l04-sol-001:l04-ex-001",
+      "source_path": "source/id-ID/units/unit-004-lecture-004.md",
+      "stable_id": "o012-d60-r02-hint-006",
+      "target_exercise_id": "unit:o012-rbt-l04-ex-001"
+    },
+    {
+      "component_id": "o012-rbt-l05",
+      "course_route_unit_id": "D60-R03",
+      "existing_solution_id": "unit:o012-rbt-l05-sol-001",
+      "existing_solve_relation_id": "relation:solves:l05-sol-001:l05-mcheck-001",
+      "source_path": "source/id-ID/units/unit-005-lecture-005.md",
+      "stable_id": "o012-d60-r03-hint-001",
+      "target_exercise_id": "unit:o012-rbt-l05-mcheck-001"
+    },
+    {
+      "component_id": "o012-rbt-l05",
+      "course_route_unit_id": "D60-R03",
+      "existing_solution_id": "unit:o012-rbt-l05-sol-002",
+      "existing_solve_relation_id": "relation:solves:l05-sol-002:l05-mcheck-002",
+      "source_path": "source/id-ID/units/unit-005-lecture-005.md",
+      "stable_id": "o012-d60-r03-hint-002",
+      "target_exercise_id": "unit:o012-rbt-l05-mcheck-002"
+    },
+    {
+      "component_id": "o012-rbt-l05",
+      "course_route_unit_id": "D60-R03",
+      "existing_solution_id": "unit:o012-rbt-l05-sol-003",
+      "existing_solve_relation_id": "relation:solves:l05-sol-003:l05-mcheck-003",
+      "source_path": "source/id-ID/units/unit-005-lecture-005.md",
+      "stable_id": "o012-d60-r03-hint-003",
+      "target_exercise_id": "unit:o012-rbt-l05-mcheck-003"
+    },
+    {
+      "component_id": "o012-rbt-l05",
+      "course_route_unit_id": "D60-R03",
+      "existing_solution_id": "unit:o012-rbt-l05-sol-004",
+      "existing_solve_relation_id": "relation:solves:l05-sol-004:l05-mcheck-004",
+      "source_path": "source/id-ID/units/unit-005-lecture-005.md",
+      "stable_id": "o012-d60-r03-hint-004",
+      "target_exercise_id": "unit:o012-rbt-l05-mcheck-004"
+    },
+    {
+      "component_id": "o012-rbt-l06",
+      "course_route_unit_id": "D60-R03",
+      "existing_solution_id": "unit:o012-rbt-l06-sol-001",
+      "existing_solve_relation_id": "relation:solves:l06-sol-001:l06-mcheck-001",
+      "source_path": "source/id-ID/units/unit-006-lecture-006.md",
+      "stable_id": "o012-d60-r03-hint-005",
+      "target_exercise_id": "unit:o012-rbt-l06-mcheck-001"
+    },
+    {
+      "component_id": "o012-rbt-l06",
+      "course_route_unit_id": "D60-R03",
+      "existing_solution_id": "unit:o012-rbt-l06-sol-002",
+      "existing_solve_relation_id": "relation:solves:l06-sol-002:l06-mcheck-002",
+      "source_path": "source/id-ID/units/unit-006-lecture-006.md",
+      "stable_id": "o012-d60-r03-hint-006",
+      "target_exercise_id": "unit:o012-rbt-l06-mcheck-002"
+    },
+    {
+      "component_id": "o012-rbt-l07",
+      "course_route_unit_id": "D60-R04",
+      "existing_solution_id": "unit:o012-rbt-l07-sol-001",
+      "existing_solve_relation_id": "relation:solves:l07-sol-001:l07-mcheck-001",
+      "source_path": "source/id-ID/units/unit-007-lecture-007.md",
+      "stable_id": "o012-d60-r04-hint-001",
+      "target_exercise_id": "unit:o012-rbt-l07-mcheck-001"
+    },
+    {
+      "component_id": "o012-rbt-l07",
+      "course_route_unit_id": "D60-R04",
+      "existing_solution_id": "unit:o012-rbt-l07-sol-002",
+      "existing_solve_relation_id": "relation:solves:l07-sol-002:l07-mcheck-002",
+      "source_path": "source/id-ID/units/unit-007-lecture-007.md",
+      "stable_id": "o012-d60-r04-hint-002",
+      "target_exercise_id": "unit:o012-rbt-l07-mcheck-002"
+    },
+    {
+      "component_id": "o012-rbt-l07",
+      "course_route_unit_id": "D60-R04",
+      "existing_solution_id": "unit:o012-rbt-l07-sol-003",
+      "existing_solve_relation_id": "relation:solves:l07-sol-003:l07-mcheck-003",
+      "source_path": "source/id-ID/units/unit-007-lecture-007.md",
+      "stable_id": "o012-d60-r04-hint-003",
+      "target_exercise_id": "unit:o012-rbt-l07-mcheck-003"
+    },
+    {
+      "component_id": "o012-rbt-l07",
+      "course_route_unit_id": "D60-R04",
+      "existing_solution_id": "unit:o012-rbt-l07-sol-004",
+      "existing_solve_relation_id": "relation:solves:l07-sol-004:l07-mcheck-004",
+      "source_path": "source/id-ID/units/unit-007-lecture-007.md",
+      "stable_id": "o012-d60-r04-hint-004",
+      "target_exercise_id": "unit:o012-rbt-l07-mcheck-004"
+    },
+    {
+      "component_id": "o012-rbt-l08",
+      "course_route_unit_id": "D60-R04",
+      "existing_solution_id": "unit:o012-rbt-l08-sol-001",
+      "existing_solve_relation_id": "relation:solves:l08-sol-001:l08-ex-001",
+      "source_path": "source/id-ID/units/unit-008-lecture-008.md",
+      "stable_id": "o012-d60-r04-hint-005",
+      "target_exercise_id": "unit:o012-rbt-l08-ex-001"
+    },
+    {
+      "component_id": "o012-rbt-l08",
+      "course_route_unit_id": "D60-R04",
+      "existing_solution_id": "unit:o012-rbt-l08-sol-002",
+      "existing_solve_relation_id": "relation:solves:l08-sol-002:l08-mcheck-002",
+      "source_path": "source/id-ID/units/unit-008-lecture-008.md",
+      "stable_id": "o012-d60-r04-hint-006",
+      "target_exercise_id": "unit:o012-rbt-l08-mcheck-002"
+    },
+    {
+      "component_id": "o012-rbt-l11",
+      "course_route_unit_id": "D60-R05",
+      "existing_solution_id": "unit:o012-rbt-l11-sol-001",
+      "existing_solve_relation_id": "relation:solves:l11-sol-001:l11-mcheck-001",
+      "source_path": "source/id-ID/units/unit-011-lecture-011.md",
+      "stable_id": "o012-d60-r05-hint-001",
+      "target_exercise_id": "unit:o012-rbt-l11-mcheck-001"
+    },
+    {
+      "component_id": "o012-rbt-l11",
+      "course_route_unit_id": "D60-R05",
+      "existing_solution_id": "unit:o012-rbt-l11-sol-002",
+      "existing_solve_relation_id": "relation:solves:l11-sol-002:l11-mcheck-002",
+      "source_path": "source/id-ID/units/unit-011-lecture-011.md",
+      "stable_id": "o012-d60-r05-hint-002",
+      "target_exercise_id": "unit:o012-rbt-l11-mcheck-002"
+    },
+    {
+      "component_id": "o012-rbt-l11",
+      "course_route_unit_id": "D60-R05",
+      "existing_solution_id": "unit:o012-rbt-l11-sol-003",
+      "existing_solve_relation_id": "relation:solves:l11-sol-003:l11-mcheck-003",
+      "source_path": "source/id-ID/units/unit-011-lecture-011.md",
+      "stable_id": "o012-d60-r05-hint-003",
+      "target_exercise_id": "unit:o012-rbt-l11-mcheck-003"
+    },
+    {
+      "component_id": "o012-rbt-l12",
+      "course_route_unit_id": "D60-R05",
+      "existing_solution_id": "unit:o012-rbt-l12-sol-001",
+      "existing_solve_relation_id": "relation:solves:l12-sol-001:l12-mcheck-001",
+      "source_path": "source/id-ID/units/unit-012-lecture-012.md",
+      "stable_id": "o012-d60-r05-hint-004",
+      "target_exercise_id": "unit:o012-rbt-l12-mcheck-001"
+    },
+    {
+      "component_id": "o012-rbt-l12",
+      "course_route_unit_id": "D60-R05",
+      "existing_solution_id": "unit:o012-rbt-l12-sol-002",
+      "existing_solve_relation_id": "relation:solves:l12-sol-002:l12-mcheck-002",
+      "source_path": "source/id-ID/units/unit-012-lecture-012.md",
+      "stable_id": "o012-d60-r05-hint-005",
+      "target_exercise_id": "unit:o012-rbt-l12-mcheck-002"
+    },
+    {
+      "component_id": "o012-rbt-l12",
+      "course_route_unit_id": "D60-R05",
+      "existing_solution_id": "unit:o012-rbt-l12-sol-003",
+      "existing_solve_relation_id": "relation:solves:l12-sol-003:l12-mcheck-003",
+      "source_path": "source/id-ID/units/unit-012-lecture-012.md",
+      "stable_id": "o012-d60-r05-hint-006",
+      "target_exercise_id": "unit:o012-rbt-l12-mcheck-003"
+    },
+    {
+      "component_id": "o012-rbt-l14",
+      "course_route_unit_id": "D60-R06",
+      "existing_solution_id": "unit:o012-rbt-l14-sol-002",
+      "existing_solve_relation_id": "relation:solves:l14-sol-002:l14-ex-001",
+      "source_path": "source/id-ID/units/unit-014-lecture-014.md",
+      "stable_id": "o012-d60-r06-hint-001",
+      "target_exercise_id": "unit:o012-rbt-l14-ex-001"
+    },
+    {
+      "component_id": "o012-rbt-l14",
+      "course_route_unit_id": "D60-R06",
+      "existing_solution_id": "unit:o012-rbt-l14-sol-003",
+      "existing_solve_relation_id": "relation:solves:l14-sol-003:l14-ex-002",
+      "source_path": "source/id-ID/units/unit-014-lecture-014.md",
+      "stable_id": "o012-d60-r06-hint-002",
+      "target_exercise_id": "unit:o012-rbt-l14-ex-002"
+    },
+    {
+      "component_id": "o012-rbt-l14",
+      "course_route_unit_id": "D60-R06",
+      "existing_solution_id": "unit:o012-rbt-l14-sol-001",
+      "existing_solve_relation_id": "relation:solves:l14-sol-001:l14-mcheck-001",
+      "source_path": "source/id-ID/units/unit-014-lecture-014.md",
+      "stable_id": "o012-d60-r06-hint-003",
+      "target_exercise_id": "unit:o012-rbt-l14-mcheck-001"
+    },
+    {
+      "component_id": "o012-rbt-l14",
+      "course_route_unit_id": "D60-R06",
+      "existing_solution_id": "unit:o012-rbt-l14-sol-004",
+      "existing_solve_relation_id": "relation:solves:l14-sol-004:l14-mcheck-004",
+      "source_path": "source/id-ID/units/unit-014-lecture-014.md",
+      "stable_id": "o012-d60-r06-hint-004",
+      "target_exercise_id": "unit:o012-rbt-l14-mcheck-004"
+    },
+    {
+      "component_id": "o012-rbt-l14",
+      "course_route_unit_id": "D60-R06",
+      "existing_solution_id": "unit:o012-rbt-l14-sol-005",
+      "existing_solve_relation_id": "relation:solves:l14-sol-005:l14-mcheck-005",
+      "source_path": "source/id-ID/units/unit-014-lecture-014.md",
+      "stable_id": "o012-d60-r06-hint-005",
+      "target_exercise_id": "unit:o012-rbt-l14-mcheck-005"
+    },
+    {
+      "component_id": "o012-rbt-l14",
+      "course_route_unit_id": "D60-R06",
+      "existing_solution_id": "unit:o012-rbt-l14-sol-006",
+      "existing_solve_relation_id": "relation:solves:l14-sol-006:l14-mcheck-006",
+      "source_path": "source/id-ID/units/unit-014-lecture-014.md",
+      "stable_id": "o012-d60-r06-hint-006",
+      "target_exercise_id": "unit:o012-rbt-l14-mcheck-006"
+    }
+  ],
+  "checks": {
+    "balanced_hint_fences": "PASS",
+    "deterministic_candidate_binding": "PASS",
+    "exercise_solution_source_binding": "PASS",
+    "front_matter": "PASS",
+    "no_existing_hint_collision": "PASS",
+    "one_to_one_existing_solve_edges": "PASS",
+    "privacy": "PASS",
+    "reader_anchor_binding": "PASS",
+    "rights_and_origin": "PASS",
+    "stable_id_uniqueness_and_inventory": "PASS",
+    "utf8_lf_and_sealed_identity": "PASS"
+  },
+  "edition_unit_id": "O012-ORIG-HINTS-R01-R06",
+  "immutable_ca01_backend_prefix": {
+    "bundle_sha256": "51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57",
+    "bytes": 8345799,
+    "preserved_exactly": true,
+    "records": 6854
+  },
+  "independent_reviews": {
+    "mathematics": {
+      "bytes": 19289,
+      "lf_lines": 447,
+      "path": "qa/ordinary-hints-r01-r06/INDEPENDENT_MATH_REVIEW.json",
+      "sha256": "8ed5b3563976b415e1aa471f7cdeb3405888cbc70aec101bc02e4fab9e45de5a",
+      "status": "PASS"
+    },
+    "source_language": {
+      "bytes": 18324,
+      "lf_lines": 221,
+      "path": "qa/ordinary-hints-r01-r06/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+      "sha256": "6c29009da4ee0380c878c3705dcd2a99cbe7a8495cc4b7f5ce456bb40f910968",
+      "status": "PASS"
+    }
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "qa_id": "O012-D60-ORDINARY-HINTS-R01-R06",
+  "rights": {
+    "license": "CC BY-SA 4.0",
+    "origin": "edition_original",
+    "source_prompts_or_solutions_copied": false
+  },
+  "source": {
+    "bytes": 28698,
+    "hint_blocks": 36,
+    "lf_lines": 410,
+    "path": "source/id-ID/mastery/ordinary-hints-r01-r06.md",
+    "sha256": "dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a",
+    "stable_ids": 43
+  },
+  "status": "PASS"
+}

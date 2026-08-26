@@ -1,0 +1,71 @@
+{
+  "edition_unit_id": "O012-ORIG-HINTS-R01-R06",
+  "generic_validator_baseline_diagnostic": {
+    "command": "python -B scripts/validate-backend.py",
+    "exit_code": 1,
+    "interpretation": "The legacy validator rejects historical append order; the immutable prefix is not reordered, and merged schema/reference plus exact replay are the applicable gates.",
+    "output": "backend validation: FAIL: artifacts.jsonl: records are not sorted by ordinal id",
+    "status": "PRE_EXISTING_BASELINE_INCOMPATIBILITY"
+  },
+  "input_identities": {
+    "qa/ORDINARY_HINTS_R01_R06_QA.json": {
+      "bytes": 16616,
+      "lf_lines": 398,
+      "sha256": "a0460dbed83242863fc1aab8290b76fac9cd39644276e132401e7d3e9198c33d"
+    },
+    "qa/ordinary-hints-r01-r06/INDEPENDENT_MATH_REVIEW.json": {
+      "bytes": 19289,
+      "lf_lines": 447,
+      "sha256": "8ed5b3563976b415e1aa471f7cdeb3405888cbc70aec101bc02e4fab9e45de5a"
+    },
+    "qa/ordinary-hints-r01-r06/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json": {
+      "bytes": 18324,
+      "lf_lines": 221,
+      "sha256": "6c29009da4ee0380c878c3705dcd2a99cbe7a8495cc4b7f5ce456bb40f910968"
+    },
+    "source/id-ID/mastery/ordinary-hints-r01-r06.md": {
+      "bytes": 28698,
+      "lf_lines": 410,
+      "sha256": "dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a"
+    }
+  },
+  "receipt_kind": "semantic_append_validation",
+  "route_mastery_census": {
+    "active_hint_relations": 165,
+    "active_hint_units": 165,
+    "active_solve_relations": 221,
+    "bytes": 140589,
+    "ca01_credit": 8,
+    "duplicate_or_reused_solution_ids": [],
+    "graph_complete_triples": 165,
+    "ordinary_capped_credit": 84,
+    "path": "qa/ROUTE_MASTERY_CENSUS.json",
+    "sha256": "068072d3c67aeed28d55fdb9947a3084e4028ba0b808e28f46c0657ba84d20ff",
+    "status": "PASS",
+    "total_credit": 92,
+    "validation_errors": 0
+  },
+  "semantic_checks": {
+    "added_records": 158,
+    "artifact_evidence": "PASS",
+    "global_references": "PASS",
+    "graph_postconditions": {
+      "active_hint_relations": 165,
+      "active_hint_units": 165,
+      "active_solves_relations": 221,
+      "ca01_items": 8,
+      "credited_total": 92,
+      "duplicate_or_reused_solution_ids": 0,
+      "graph_complete_triples": 165,
+      "ordinary_capped_route_credit": 84,
+      "ordinary_graph_complete_triples": 157
+    },
+    "merged_records": 7012,
+    "prompt_solution_solves_immutability": "PASS",
+    "rights_closure": "PASS",
+    "route_mapping": "PASS",
+    "schema_shapes": "PASS"
+  },
+  "source_sha256": "dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a",
+  "status": "PASS"
+}

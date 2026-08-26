@@ -63,6 +63,7 @@ jobs:
               "output/html/roberts-001-030-fomberg-001-006/index.html": (12555960, "80a7d092cb786e4d4f7ecab31ba40746cf59398db50f0adca50f2431746f7c92"),
               "output/html/roberts-001-030-fomberg-001-007/index.html": (14885069, "87d58a5955954125c424ab1220a9c6aa7967a782a9bd739094a31ae0a50af5f6"),
               "output/html/roberts-001-030-fomberg-001-007-ca01/index.html": (14958219, "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf"),
+              "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06/index.html": (15026881, "7ed278d73a324ba0a9e5acadedf448221b3791db7322fdf6d29225afd0124d2b"),
           }
           for name, (size, digest) in expected.items():
               path = Path(name)
@@ -70,8 +71,8 @@ jobs:
               assert len(data) == size, (name, len(data), size)
               assert sha256(data).hexdigest() == digest, name
           actual = sorted(path.relative_to(Path("output/html")).as_posix() for path in Path("output/html").rglob("*") if path.is_file())
-          assert actual == ["index.html", "roberts-001-030-fomberg-001-002/index.html", "roberts-001-030-fomberg-001-003/index.html", "roberts-001-030-fomberg-001-004/index.html", "roberts-001-030-fomberg-001-005/index.html", "roberts-001-030-fomberg-001-006/index.html", "roberts-001-030-fomberg-001-007-ca01/index.html", "roberts-001-030-fomberg-001-007/index.html", "roberts-001-030-fomberg-001/index.html", "units-001-002/index.html", "units-001-003/index.html", "units-001-004/index.html", "units-001-005/index.html", "units-001-007/index.html", "units-001-010/index.html", "units-001-013/index.html", "units-001-019/index.html", "units-001-020/index.html", "units-001-021/index.html", "units-001-022/index.html", "units-001-023/index.html", "units-001-024/index.html", "units-001-025/index.html", "units-001-026/index.html", "units-001-027/index.html", "units-001-028/index.html", "units-001-029/index.html", "units-001-030/index.html"], actual
-          print("Frozen Roberts/Fomberg history plus cumulative assessment 1 HTML verified")
+          assert actual == ["index.html", "roberts-001-030-fomberg-001-002/index.html", "roberts-001-030-fomberg-001-003/index.html", "roberts-001-030-fomberg-001-004/index.html", "roberts-001-030-fomberg-001-005/index.html", "roberts-001-030-fomberg-001-006/index.html", "roberts-001-030-fomberg-001-007-ca01-hints-r01-r06/index.html", "roberts-001-030-fomberg-001-007-ca01/index.html", "roberts-001-030-fomberg-001-007/index.html", "roberts-001-030-fomberg-001/index.html", "units-001-002/index.html", "units-001-003/index.html", "units-001-004/index.html", "units-001-005/index.html", "units-001-007/index.html", "units-001-010/index.html", "units-001-013/index.html", "units-001-019/index.html", "units-001-020/index.html", "units-001-021/index.html", "units-001-022/index.html", "units-001-023/index.html", "units-001-024/index.html", "units-001-025/index.html", "units-001-026/index.html", "units-001-027/index.html", "units-001-028/index.html", "units-001-029/index.html", "units-001-030/index.html"], actual
+          print("Frozen Roberts/Fomberg history, cumulative assessment 1, and R01-R06 hint HTML verified")
           PY
 
       - name: Configure Pages

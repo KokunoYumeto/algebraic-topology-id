@@ -519,3 +519,66 @@ anonymous HTTP readback. Zenodo version `0.31.0`, record `22105179`, DOI
 `10.5281/zenodo.22105179`, reuses concept DOI
 `10.5281/zenodo.22061489`; its exact nine-file, 31,542,547-byte payload passed
 anonymous byte/SHA-256 readback for every file.
+
+## Roberts 001-030, Fomberg 001-007, CA01, and ordinary hints R01-R06
+
+Canonical additive source:
+
+- `source/id-ID/mastery/ordinary-hints-r01-r06.md`: 28,698 bytes; 410 LF
+  lines; 36 hint blocks; 43 stable IDs; SHA-256
+  `dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a`.
+- Every hint binds one exact existing exercise to one exact existing complete
+  solution across `D60-R01`-`R06`; no prompt, solution, or solve edge changed.
+  The layer is original CC BY-SA 4.0 material and does not use the excluded
+  Fomberg problem bank.
+
+Build and QA:
+
+```powershell
+python -B scripts/qa-ordinary-hints-r01-r06.py
+python -B scripts/validate-backend-append-only-ordinary-hints-r01-r06.py
+python -B scripts/census-route-mastery.py
+pwsh -NoProfile -File scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06.ps1
+```
+
+Append-only replay preserves the exact CA01 prefix at 6,854 records and
+8,345,799 bytes, adds 158 records, and ends at 7,012 records/8,545,732 bytes
+with bundle SHA-256
+`7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b`.
+Its cumulative receipt is 10,252 bytes/SHA-256
+`10e9d32848b950148983d0d8c38d6753a9956a674f657858b31dd257af5b2aa8`.
+The route census is 84/84 ordinary items plus CA01 8/8, hence 92/108 total;
+CA02 and CA03 contain the remaining 16 items. Duplicate/reused solution IDs
+and validation errors are both zero.
+
+Final cumulative artifacts and witnesses:
+
+- HTML: 15,026,881 bytes; SHA-256
+  `7ed278d73a324ba0a9e5acadedf448221b3791db7322fdf6d29225afd0124d2b`.
+- PDF: 8,592,243 bytes; 482 A4 pages; SHA-256
+  `4da7f1368c17423cd6845c36b7d5190dac98d515ecbd32467c0c59961dd9afcb`.
+- Artifact manifest: 325 bytes; SHA-256
+  `2273669b06917c09e8c909f8bb51ab6518e0572c2f7c9f74e1b647013268dc3a`.
+- Final build receipt: 8,674 bytes; SHA-256
+  `e0192345c0a5bf75c508edb005c95e712ef6c70630e368feab01fcb7f9e0ce76`.
+- Static hint QA: 16,616 bytes; SHA-256
+  `a0460dbed83242863fc1aab8290b76fac9cd39644276e132401e7d3e9198c33d`.
+- Independent math review: 19,289 bytes; SHA-256
+  `8ed5b3563976b415e1aa471f7cdeb3405888cbc70aec101bc02e4fab9e45de5a`.
+- Independent source-language review: 18,324 bytes; SHA-256
+  `6c29009da4ee0380c878c3705dcd2a99cbe7a8495cc4b7f5ce456bb40f910968`.
+- Visual QA: 5,341 bytes; SHA-256
+  `fce44f8ef46c6bbc2ed8ef09f1c04072ebb8ee56033af98e7c8431e920d73afd`.
+- Browser QA: 4,483 bytes; SHA-256
+  `e42eb5965a3568f94d8ff01f9d65578283dd71016e3d11f8fcb9b1f905141a23`.
+
+Two clean final builds are byte-identical. The 477-page predecessor is
+preserved exactly, five hint pages are appended, all 396 outline entries and
+2,988 named destinations resolve, and all 72 visible predecessor links pass
+structural and independent target-page checks. Pages 477-482 pass rendered
+visual inspection. The self-contained native-MathML HTML has zero unresolved
+fragments, no external runtime assets, centered desktop layout, mobile reflow
+without page-level overflow, keyboard focus, AA contrast, and zero browser
+errors or warnings. The PDF remains intentionally untagged; HTML is the
+primary accessible surface. Public-byte readback remains pending until this
+successor is published through the existing GitHub/Pages and Zenodo lineages.

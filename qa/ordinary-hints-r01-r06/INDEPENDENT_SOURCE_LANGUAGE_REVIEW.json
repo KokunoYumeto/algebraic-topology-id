@@ -1,0 +1,221 @@
+{
+  "review_id": "O012-D60-ORDINARY-HINTS-R01-R06-INDEPENDENT-SOURCE-LANGUAGE-REVIEW",
+  "review_kind": "independent_source_language_and_binding",
+  "status": "PASS",
+  "independent_from_production": true,
+  "date": "2026-08-26",
+  "source_identity": {
+    "path": "source/id-ID/mastery/ordinary-hints-r01-r06.md",
+    "bytes": 28698,
+    "lf_lines": 410,
+    "sha256": "dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a"
+  },
+  "control_identities": {
+    "terminology": {
+      "path": "00_control/TERMINOLOGY.csv",
+      "bytes": 62008,
+      "lf_lines": 485,
+      "sha256": "1a51fb86b7a83e9528e0a40092e91d7ec8f52a5f3f5cdf657a195e62467820ef"
+    },
+    "selection_census_observed": {
+      "path": "qa/ROUTE_MASTERY_CENSUS.json",
+      "bytes": 121128,
+      "sha256": "d011e6f94eec2995d95ed2fe88833a94207a4087f50859d3a068d65c20ec4e41"
+    }
+  },
+  "review_scope": {
+    "locale": "id-ID",
+    "full_document_read": true,
+    "hint_count": 36,
+    "route_count": 6,
+    "declared_source_path_count": 11,
+    "checks": [
+      "precise, natural, university-level Indonesian",
+      "consistency with the controlled terminology ledger",
+      "mathematical fit between each hint, exercise, and complete solution",
+      "stable locale-neutral hint identifiers and exact route/component metadata",
+      "existence and uniqueness of declared exercise and solution anchors",
+      "resolution of both visible links in every hint",
+      "exact agreement with the deterministic 36-pair census selection",
+      "original-layer rights and provenance demarcation",
+      "absence of copied exercise prompts or complete solutions"
+    ]
+  },
+  "aggregate_binding_results": {
+    "unique_hint_ids": 36,
+    "unique_target_exercise_ids": 36,
+    "unique_existing_solution_ids": 36,
+    "existing_declared_source_paths": 36,
+    "exercise_anchors_occurring_exactly_once": 36,
+    "solution_anchors_occurring_exactly_once": 36,
+    "visible_exercise_links_resolving": 36,
+    "visible_solution_links_resolving": 36,
+    "deterministic_census_pairs_matched": 36,
+    "binding_result": "PASS"
+  },
+  "corrected_term_verification": [
+    {
+      "term": "gabungan saling lepas",
+      "hint_id": "o012-d60-r01-hint-005",
+      "terminology_id": "O012-TERM-0031",
+      "result": "PASS",
+      "note": "Uses the admitted term for disjoint union and contains no competing 'gabungan lepas' form."
+    },
+    {
+      "term": "trivialitas lokal",
+      "hint_id": "o012-d60-r03-hint-002",
+      "terminology_id": "O012-TERM-0258",
+      "result": "PASS",
+      "note": "Correctly names the local-triviality property while reserving 'trivialisasi lokal' for an actual local trivialization."
+    },
+    {
+      "term": "prakomposisi",
+      "hint_ids": [
+        "o012-d60-r05-hint-005",
+        "o012-d60-r06-hint-001"
+      ],
+      "result": "PASS",
+      "note": "Uses the unhyphenated Indonesian form consistently, including the verb 'prakomposisikan'; no 'pra-komposisi' variant remains."
+    },
+    {
+      "term": "pemetaan hasil bagi",
+      "hint_id": "o012-d60-r04-hint-004",
+      "terminology_id": "O012-TERM-0093",
+      "result": "PASS",
+      "note": "Uses the admitted term for quotient map and does not shorten it to the competing 'peta hasil bagi' form."
+    }
+  ],
+  "dimension_results": [
+    {
+      "dimension": "language_and_locale",
+      "result": "PASS",
+      "note": "All 36 hints use precise, natural id-ID prose at the appropriate mathematical level; instructions are direct and useful without disclosing the complete solution."
+    },
+    {
+      "dimension": "terminology_and_notation",
+      "result": "PASS",
+      "note": "Terminology and notation agree with the controlled ledger and the bound units, including the four specifically corrected forms."
+    },
+    {
+      "dimension": "exercise_solution_binding",
+      "result": "PASS",
+      "note": "Every hint is mathematically tailored to exactly one exercise and its already-existing complete solution; the R06 source-exercise-to-mastery-solution cross-numbering is deliberate and exact."
+    },
+    {
+      "dimension": "metadata_ids_paths_and_links",
+      "result": "PASS",
+      "note": "All hint IDs are stable and locale-neutral; route and component fields are exact; each source path exists; all 72 declared anchors and all 72 visible links resolve one-to-one."
+    },
+    {
+      "dimension": "rights_and_provenance",
+      "result": "PASS",
+      "note": "The front matter and introductory notice identify the hints as original CC BY-SA 4.0 edition material, preserve source-component separation, and include the required OpenAI Codex gpt-5.6-sol, Ultra provenance statement."
+    },
+    {
+      "dimension": "non_copying",
+      "result": "PASS",
+      "note": "Item-by-item comparison found no reproduced prompt or solution block: each item contains only two short cross-reference labels and independently worded scaffolding."
+    }
+  ],
+  "route_totals": [
+    {
+      "course_route_unit_id": "D60-R01",
+      "hints": 6,
+      "distinct_exercises": 6,
+      "distinct_complete_solutions": 6,
+      "exact_bindings": 6,
+      "language_and_terminology_passes": 6,
+      "result": "PASS"
+    },
+    {
+      "course_route_unit_id": "D60-R02",
+      "hints": 6,
+      "distinct_exercises": 6,
+      "distinct_complete_solutions": 6,
+      "exact_bindings": 6,
+      "language_and_terminology_passes": 6,
+      "result": "PASS"
+    },
+    {
+      "course_route_unit_id": "D60-R03",
+      "hints": 6,
+      "distinct_exercises": 6,
+      "distinct_complete_solutions": 6,
+      "exact_bindings": 6,
+      "language_and_terminology_passes": 6,
+      "result": "PASS"
+    },
+    {
+      "course_route_unit_id": "D60-R04",
+      "hints": 6,
+      "distinct_exercises": 6,
+      "distinct_complete_solutions": 6,
+      "exact_bindings": 6,
+      "language_and_terminology_passes": 6,
+      "result": "PASS"
+    },
+    {
+      "course_route_unit_id": "D60-R05",
+      "hints": 6,
+      "distinct_exercises": 6,
+      "distinct_complete_solutions": 6,
+      "exact_bindings": 6,
+      "language_and_terminology_passes": 6,
+      "result": "PASS"
+    },
+    {
+      "course_route_unit_id": "D60-R06",
+      "hints": 6,
+      "distinct_exercises": 6,
+      "distinct_complete_solutions": 6,
+      "exact_bindings": 6,
+      "language_and_terminology_passes": 6,
+      "result": "PASS"
+    }
+  ],
+  "item_verdicts": [
+    {"hint_id":"o012-d60-r01-hint-001","route":"D60-R01","component":"o012-rbt-l01","exercise_id":"unit:o012-rbt-l01-ex-001","solution_id":"unit:o012-rbt-l01-sol-001","source_path":"source/id-ID/reader-unit-001.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r01-hint-002","route":"D60-R01","component":"o012-rbt-l01","exercise_id":"unit:o012-rbt-l01-ex-002","solution_id":"unit:o012-rbt-l01-sol-002","source_path":"source/id-ID/reader-unit-001.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r01-hint-003","route":"D60-R01","component":"o012-rbt-l02","exercise_id":"unit:o012-rbt-l02-ex-001","solution_id":"unit:o012-rbt-l02-sol-001","source_path":"source/id-ID/units/unit-002-lecture-002.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r01-hint-004","route":"D60-R01","component":"o012-rbt-l02","exercise_id":"unit:o012-rbt-l02-ex-002","solution_id":"unit:o012-rbt-l02-sol-002","source_path":"source/id-ID/units/unit-002-lecture-002.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r01-hint-005","route":"D60-R01","component":"o012-rbt-l02","exercise_id":"unit:o012-rbt-l02-ex-003","solution_id":"unit:o012-rbt-l02-sol-003","source_path":"source/id-ID/units/unit-002-lecture-002.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r01-hint-006","route":"D60-R01","component":"o012-rbt-l02","exercise_id":"unit:o012-rbt-l02-ex-004","solution_id":"unit:o012-rbt-l02-sol-004","source_path":"source/id-ID/units/unit-002-lecture-002.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r02-hint-001","route":"D60-R02","component":"o012-rbt-l03","exercise_id":"unit:o012-rbt-l03-ex-001","solution_id":"unit:o012-rbt-l03-sol-001","source_path":"source/id-ID/units/unit-003-lecture-003.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r02-hint-002","route":"D60-R02","component":"o012-rbt-l03","exercise_id":"unit:o012-rbt-l03-ex-002","solution_id":"unit:o012-rbt-l03-sol-002","source_path":"source/id-ID/units/unit-003-lecture-003.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r02-hint-003","route":"D60-R02","component":"o012-rbt-l03","exercise_id":"unit:o012-rbt-l03-ex-003","solution_id":"unit:o012-rbt-l03-sol-003","source_path":"source/id-ID/units/unit-003-lecture-003.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r02-hint-004","route":"D60-R02","component":"o012-rbt-l03","exercise_id":"unit:o012-rbt-l03-ex-004","solution_id":"unit:o012-rbt-l03-sol-004","source_path":"source/id-ID/units/unit-003-lecture-003.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r02-hint-005","route":"D60-R02","component":"o012-rbt-l03","exercise_id":"unit:o012-rbt-l03-ex-005","solution_id":"unit:o012-rbt-l03-sol-005","source_path":"source/id-ID/units/unit-003-lecture-003.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r02-hint-006","route":"D60-R02","component":"o012-rbt-l04","exercise_id":"unit:o012-rbt-l04-ex-001","solution_id":"unit:o012-rbt-l04-sol-001","source_path":"source/id-ID/units/unit-004-lecture-004.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r03-hint-001","route":"D60-R03","component":"o012-rbt-l05","exercise_id":"unit:o012-rbt-l05-mcheck-001","solution_id":"unit:o012-rbt-l05-sol-001","source_path":"source/id-ID/units/unit-005-lecture-005.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r03-hint-002","route":"D60-R03","component":"o012-rbt-l05","exercise_id":"unit:o012-rbt-l05-mcheck-002","solution_id":"unit:o012-rbt-l05-sol-002","source_path":"source/id-ID/units/unit-005-lecture-005.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r03-hint-003","route":"D60-R03","component":"o012-rbt-l05","exercise_id":"unit:o012-rbt-l05-mcheck-003","solution_id":"unit:o012-rbt-l05-sol-003","source_path":"source/id-ID/units/unit-005-lecture-005.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r03-hint-004","route":"D60-R03","component":"o012-rbt-l05","exercise_id":"unit:o012-rbt-l05-mcheck-004","solution_id":"unit:o012-rbt-l05-sol-004","source_path":"source/id-ID/units/unit-005-lecture-005.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r03-hint-005","route":"D60-R03","component":"o012-rbt-l06","exercise_id":"unit:o012-rbt-l06-mcheck-001","solution_id":"unit:o012-rbt-l06-sol-001","source_path":"source/id-ID/units/unit-006-lecture-006.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r03-hint-006","route":"D60-R03","component":"o012-rbt-l06","exercise_id":"unit:o012-rbt-l06-mcheck-002","solution_id":"unit:o012-rbt-l06-sol-002","source_path":"source/id-ID/units/unit-006-lecture-006.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r04-hint-001","route":"D60-R04","component":"o012-rbt-l07","exercise_id":"unit:o012-rbt-l07-mcheck-001","solution_id":"unit:o012-rbt-l07-sol-001","source_path":"source/id-ID/units/unit-007-lecture-007.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r04-hint-002","route":"D60-R04","component":"o012-rbt-l07","exercise_id":"unit:o012-rbt-l07-mcheck-002","solution_id":"unit:o012-rbt-l07-sol-002","source_path":"source/id-ID/units/unit-007-lecture-007.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r04-hint-003","route":"D60-R04","component":"o012-rbt-l07","exercise_id":"unit:o012-rbt-l07-mcheck-003","solution_id":"unit:o012-rbt-l07-sol-003","source_path":"source/id-ID/units/unit-007-lecture-007.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r04-hint-004","route":"D60-R04","component":"o012-rbt-l07","exercise_id":"unit:o012-rbt-l07-mcheck-004","solution_id":"unit:o012-rbt-l07-sol-004","source_path":"source/id-ID/units/unit-007-lecture-007.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r04-hint-005","route":"D60-R04","component":"o012-rbt-l08","exercise_id":"unit:o012-rbt-l08-ex-001","solution_id":"unit:o012-rbt-l08-sol-001","source_path":"source/id-ID/units/unit-008-lecture-008.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r04-hint-006","route":"D60-R04","component":"o012-rbt-l08","exercise_id":"unit:o012-rbt-l08-mcheck-002","solution_id":"unit:o012-rbt-l08-sol-002","source_path":"source/id-ID/units/unit-008-lecture-008.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r05-hint-001","route":"D60-R05","component":"o012-rbt-l11","exercise_id":"unit:o012-rbt-l11-mcheck-001","solution_id":"unit:o012-rbt-l11-sol-001","source_path":"source/id-ID/units/unit-011-lecture-011.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r05-hint-002","route":"D60-R05","component":"o012-rbt-l11","exercise_id":"unit:o012-rbt-l11-mcheck-002","solution_id":"unit:o012-rbt-l11-sol-002","source_path":"source/id-ID/units/unit-011-lecture-011.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r05-hint-003","route":"D60-R05","component":"o012-rbt-l11","exercise_id":"unit:o012-rbt-l11-mcheck-003","solution_id":"unit:o012-rbt-l11-sol-003","source_path":"source/id-ID/units/unit-011-lecture-011.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r05-hint-004","route":"D60-R05","component":"o012-rbt-l12","exercise_id":"unit:o012-rbt-l12-mcheck-001","solution_id":"unit:o012-rbt-l12-sol-001","source_path":"source/id-ID/units/unit-012-lecture-012.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r05-hint-005","route":"D60-R05","component":"o012-rbt-l12","exercise_id":"unit:o012-rbt-l12-mcheck-002","solution_id":"unit:o012-rbt-l12-sol-002","source_path":"source/id-ID/units/unit-012-lecture-012.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r05-hint-006","route":"D60-R05","component":"o012-rbt-l12","exercise_id":"unit:o012-rbt-l12-mcheck-003","solution_id":"unit:o012-rbt-l12-sol-003","source_path":"source/id-ID/units/unit-012-lecture-012.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r06-hint-001","route":"D60-R06","component":"o012-rbt-l14","exercise_id":"unit:o012-rbt-l14-ex-001","solution_id":"unit:o012-rbt-l14-sol-002","source_path":"source/id-ID/units/unit-014-lecture-014.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r06-hint-002","route":"D60-R06","component":"o012-rbt-l14","exercise_id":"unit:o012-rbt-l14-ex-002","solution_id":"unit:o012-rbt-l14-sol-003","source_path":"source/id-ID/units/unit-014-lecture-014.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r06-hint-003","route":"D60-R06","component":"o012-rbt-l14","exercise_id":"unit:o012-rbt-l14-mcheck-001","solution_id":"unit:o012-rbt-l14-sol-001","source_path":"source/id-ID/units/unit-014-lecture-014.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r06-hint-004","route":"D60-R06","component":"o012-rbt-l14","exercise_id":"unit:o012-rbt-l14-mcheck-004","solution_id":"unit:o012-rbt-l14-sol-004","source_path":"source/id-ID/units/unit-014-lecture-014.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r06-hint-005","route":"D60-R06","component":"o012-rbt-l14","exercise_id":"unit:o012-rbt-l14-mcheck-005","solution_id":"unit:o012-rbt-l14-sol-005","source_path":"source/id-ID/units/unit-014-lecture-014.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"},
+    {"hint_id":"o012-d60-r06-hint-006","route":"D60-R06","component":"o012-rbt-l14","exercise_id":"unit:o012-rbt-l14-mcheck-006","solution_id":"unit:o012-rbt-l14-sol-006","source_path":"source/id-ID/units/unit-014-lecture-014.md","binding":"PASS","language_terminology":"PASS","rights_provenance":"PASS","verdict":"PASS"}
+  ],
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "unresolved_findings": [],
+  "conclusion": "The finalized 36-hint layer passes independent id-ID language, terminology, exact binding, identifier/path/link, rights, provenance, and non-copying review with six clean one-to-one additions in each of D60-R01 through D60-R06 and no unresolved findings."
+}
