@@ -1,0 +1,20 @@
+{
+  "entries": [],
+  "final_boundary_paths": [
+    "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-id.pdf",
+    "output/html/roberts-001-030-fomberg-001-007-ca01/index.html",
+    "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01.csv",
+    "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BUILD_RECEIPT.json",
+    "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_VISUAL_QA.md",
+    "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_RENDER_INVENTORY.csv",
+    "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BROWSER_QA.json",
+    "qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENT_001_CUMULATIVE_RECEIPT.json",
+    "qa/CUMULATIVE_ASSESSMENT_001_QA.json",
+    "qa/ROUTE_MASTERY_CENSUS.json",
+    "qa/PROOF_REPAIR_CENSUS.json"
+  ],
+  "instructions": "After final deterministic build, backend, visual, browser, rights, and control gates are mutually consistent, seal exact path/bytes/sha256 rows in frozen-inputs.json, set state final_inputs_sealed_local_only, bind final reader and backend identities in publication-plan.json, and bind the frozen ledger SHA-256 in the packager. Never infer artifact identities or publish a draft.",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-007-ca01-v0.31.0",
+  "schema_version": "1.0",
+  "state": "template_unsealed_do_not_package"
+}

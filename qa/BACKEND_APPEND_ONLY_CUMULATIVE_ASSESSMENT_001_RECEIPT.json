@@ -1,0 +1,69 @@
+{
+  "assessment_id": "D60-CA01",
+  "generic_validator_baseline_diagnostic": {
+    "command": "python -B scripts/validate-backend.py",
+    "exit_code": 1,
+    "interpretation": "The direct legacy validator rejects historical per-file append order in the immutable published Unit 007 prefix. The prefix was not reordered; merged schema/reference checks and exact replay are the applicable gates.",
+    "output": "backend validation: FAIL: artifacts.jsonl: records are not sorted by ordinal id",
+    "status": "PRE_EXISTING_BASELINE_INCOMPATIBILITY"
+  },
+  "input_identities": {
+    "qa/CUMULATIVE_ASSESSMENT_001_QA.json": {
+      "bytes": 1812,
+      "lf_lines": 64,
+      "sha256": "8dcd7bd124ce16acebef875b8294138caa91801b00d9a621919831bc1f09f602"
+    },
+    "qa/cumulative-assessment-001/INDEPENDENT_MATH_REVIEW.json": {
+      "bytes": 2446,
+      "lf_lines": 44,
+      "sha256": "4bfae9714bf6c5b5c936a7ccf2bf82ab4e5c063f8519e4122bd455740bf5307e"
+    },
+    "qa/cumulative-assessment-001/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json": {
+      "bytes": 2303,
+      "lf_lines": 60,
+      "sha256": "79d8d17df956267af6a433735b0a610c46e5409e67259b74396878c50cf356ad"
+    },
+    "source/id-ID/mastery/cumulative-assessment-001-foundations-coverings-homotopy.md": {
+      "bytes": 15185,
+      "lf_lines": 389,
+      "sha256": "5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8"
+    }
+  },
+  "reader_sha256": "5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8",
+  "receipt_kind": "semantic_append_validation",
+  "semantic_checks": {
+    "added_records": 112,
+    "artifact_evidence": "PASS",
+    "global_references": "PASS",
+    "merged_records": 6854,
+    "original_source_demarcation": "PASS",
+    "qa_type_counts": {
+      "language": 1,
+      "mastery": 1,
+      "math": 1,
+      "structure": 1
+    },
+    "relation_type_counts": {
+      "contains": 27,
+      "hints": 8,
+      "solves": 8,
+      "xref": 10
+    },
+    "rights_closure": "PASS",
+    "route_mapping": "PASS",
+    "schema_shapes": "PASS",
+    "segment_kind_counts": {
+      "assessment": 1,
+      "exercise": 8,
+      "hint": 8,
+      "solution": 8
+    },
+    "unit_kind_counts": {
+      "exercise": 8,
+      "hint": 8,
+      "reader_unit": 1,
+      "solution": 8
+    }
+  },
+  "status": "PASS"
+}

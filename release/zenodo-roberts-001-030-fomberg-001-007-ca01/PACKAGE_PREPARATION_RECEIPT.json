@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS_PREPARED_NOT_PUBLISHED",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-007-ca01-v0.31.0",
+  "scope": "Roberts 30/30 complete; selected Fomberg 1.1-1.13 complete; D60-CA01 complete 8/8; composite course partial",
+  "release_directory": "release/zenodo-roberts-001-030-fomberg-001-007-ca01",
+  "reader_first_filename": "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_READER.pdf",
+  "frozen_input_ledger": {
+    "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01/frozen-inputs.json",
+    "bytes": 54378,
+    "sha256": "94a76f217db6ee925d3923dbce9a51033721636d7274dc61a4c17326cd9efe83",
+    "entries": 288
+  },
+  "packager": {
+    "path": "scripts/package-release-roberts-001-030-fomberg-001-007-ca01.py",
+    "bytes": 42139,
+    "sha256": "9177e8e74cecc1ec6198955388122ac9e2ff1a79e1033af3d830ba3670186221"
+  },
+  "files": [
+    {
+      "filename": "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_READER.pdf",
+      "bytes": 8358561,
+      "sha256": "476b0de3bbb2cbfe03a151ac3060e121c5f89364e70b54d918ab270f4c965ade"
+    },
+    {
+      "filename": "LICENSE.md",
+      "bytes": 1494,
+      "sha256": "949476e143d96aab3af94db0c3b85fa4067985f40ce56ea95b704a392f0befd8"
+    },
+    {
+      "filename": "README_RELEASE.md",
+      "bytes": 3706,
+      "sha256": "3f78bb77e31193f2f7bce8c9b6d25c746f258a578d14f2a9e06bf81df6671edf"
+    },
+    {
+      "filename": "RELEASE_RIGHTS.md",
+      "bytes": 3498,
+      "sha256": "2b3756eafb230b537798b73c3d06e398d2e078f3a90dd3e2488d6b3fd9cbfdea"
+    },
+    {
+      "filename": "SHA256SUMS",
+      "bytes": 897,
+      "sha256": "a5746494219dc668fc0b620f2252eb2daa6a6b967e58ed7bf39d92dbfcd1c070"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 7783502,
+      "sha256": "b0780b97b4a9c9b4ddf33d037caa98053e5a0fdbb39bd9b6dc5e546799a26ca9"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_QA_PROVENANCE.zip",
+      "bytes": 363870,
+      "sha256": "42282d9518ad8827f82b3258736ffd1f9fff80c7d1412dfb4be65b2e8f41d0c8"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_READER.html",
+      "bytes": 14958219,
+      "sha256": "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf"
+    },
+    {
+      "filename": "release-manifest.json",
+      "bytes": 68800,
+      "sha256": "4b1538e52fe743eb35953730423f7a6fb61410fdf5acb9c6558a2d45c337f616"
+    }
+  ],
+  "file_count": 9,
+  "total_payload_bytes": 31542547,
+  "archives": [
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_EDITABLE_SOURCE_BACKEND.zip",
+      "bytes": 7783502,
+      "sha256": "b0780b97b4a9c9b4ddf33d037caa98053e5a0fdbb39bd9b6dc5e546799a26ca9",
+      "entry_count": 174,
+      "uncompressed_bytes": 18759981,
+      "crc_status": "PASS",
+      "first_entry": "00_control/ADVERSE_LEDGER.csv",
+      "last_entry": "source/id-ID/units/unit-030-lecture-030.md"
+    },
+    {
+      "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_QA_PROVENANCE.zip",
+      "bytes": 363870,
+      "sha256": "42282d9518ad8827f82b3258736ffd1f9fff80c7d1412dfb4be65b2e8f41d0c8",
+      "entry_count": 108,
+      "uncompressed_bytes": 1726222,
+      "crc_status": "PASS",
+      "first_entry": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01.csv",
+      "last_entry": "release/release-manifest.template.json"
+    }
+  ],
+  "verification": {
+    "manifest_artifact_identities_match": true,
+    "sha256sums_match": true,
+    "zip_crc_and_inventory_pass": true,
+    "source_archive_local_link_closure_pass": true,
+    "rights_component_scope_consistent": true,
+    "reader_first": true,
+    "final_build_visual_browser_gates": true,
+    "ca01_independent_reviews": true,
+    "route_and_proof_censuses_included": true,
+    "integrated_license": "CC BY-SA 4.0",
+    "roberts_component_license": "CC BY 4.0",
+    "fomberg_component_license": "CC BY-SA 4.0",
+    "original_ca01_license": "CC BY-SA 4.0",
+    "new_concept_created": false,
+    "network_actions": 0,
+    "git_actions": 0,
+    "credentials_used": false,
+    "published": false
+  }
+}

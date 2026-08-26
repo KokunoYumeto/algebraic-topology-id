@@ -1,0 +1,64 @@
+{
+  "qa_id": "O012-D60-CUMULATIVE-ASSESSMENT-001",
+  "status": "PASS",
+  "assessment_id": "D60-CA01",
+  "edition_unit_id": "O012-ORIG-CA01",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "reader": {
+    "identity": {
+      "path": "source/id-ID/mastery/cumulative-assessment-001-foundations-coverings-homotopy.md",
+      "bytes": 15185,
+      "lf_lines": 389,
+      "sha256": "5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8"
+    },
+    "stable_ids": 34,
+    "exercise_hint_solution_triples": 8,
+    "complete_checked_solutions": 8,
+    "primary_route_coverage": [
+      "D60-R01",
+      "D60-R02",
+      "D60-R03",
+      "D60-R04",
+      "D60-R05",
+      "D60-R06",
+      "D60-R07"
+    ],
+    "secondary_route_coverage": [
+      "D60-R04",
+      "D60-R05"
+    ]
+  },
+  "rights": {
+    "license": "CC BY-SA 4.0",
+    "origin": "edition_original",
+    "source_problem_bank_used": false
+  },
+  "independent_reviews": {
+    "mathematics": {
+      "path": "qa/cumulative-assessment-001/INDEPENDENT_MATH_REVIEW.json",
+      "bytes": 2446,
+      "lf_lines": 44,
+      "sha256": "4bfae9714bf6c5b5c936a7ccf2bf82ab4e5c063f8519e4122bd455740bf5307e",
+      "status": "PASS"
+    },
+    "source_language": {
+      "path": "qa/cumulative-assessment-001/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+      "bytes": 2303,
+      "lf_lines": 60,
+      "sha256": "79d8d17df956267af6a433735b0a610c46e5409e67259b74396878c50cf356ad",
+      "status": "PASS"
+    }
+  },
+  "checks": {
+    "utf8_lf": "PASS",
+    "front_matter": "PASS",
+    "stable_id_uniqueness_and_inventory": "PASS",
+    "balanced_fenced_divs": "PASS",
+    "route_binding": "PASS",
+    "eight_hints": "PASS",
+    "eight_full_solutions": "PASS",
+    "display_math_balance": "PASS",
+    "rights_and_origin": "PASS",
+    "privacy": "PASS"
+  }
+}

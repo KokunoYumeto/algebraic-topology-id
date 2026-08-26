@@ -1,0 +1,85 @@
+{
+  "qa_id": "O012-RBT-001-030-FOM-001-007-CA01-BROWSER-QA",
+  "status": "PASS",
+  "date": "2026-08-26",
+  "surface": "local loopback self-contained HTML in the Codex in-app browser",
+  "artifact": {
+    "path": "output/html/roberts-001-030-fomberg-001-007-ca01/index.html",
+    "bytes": 14958219,
+    "sha256": "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf",
+    "title": "Topologi Aljabar - Roberts 30/30, Fomberg 1.1-1.13, dan Asesmen Kumulatif 1",
+    "lang": "id-ID"
+  },
+  "desktop": {
+    "status": "PASS",
+    "viewport_css_pixels": [
+      1440,
+      900
+    ],
+    "document_client_width": 1425,
+    "document_scroll_width": 1425,
+    "page_level_horizontal_overflow": false,
+    "body_box": {
+      "left": 136.44,
+      "right": 1288.44,
+      "width": 1152.0
+    },
+    "ca01_box": {
+      "left": 156.44,
+      "right": 1268.44,
+      "width": 1112.0
+    },
+    "centered_and_page_filling": true
+  },
+  "mobile": {
+    "status": "PASS",
+    "viewport_css_pixels": [
+      375,
+      812
+    ],
+    "document_client_width": 360,
+    "document_scroll_width": 360,
+    "page_level_horizontal_overflow": false,
+    "body_box": {
+      "left": 0.0,
+      "right": 360.0,
+      "width": 360.0
+    },
+    "ca01_box": {
+      "left": 17.6,
+      "right": 342.4,
+      "width": 324.81
+    },
+    "ca01_non_math_block_escapes": 0,
+    "formula_local_scrollers": 484,
+    "ca01_formula_local_scrollers": 3
+  },
+  "semantic_and_navigation": {
+    "live_dom_ids": 2351,
+    "unique_live_dom_ids": 2351,
+    "fragment_links": 441,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 16130,
+    "semantic_figure_like_nodes": 197,
+    "ca01_exercises": 8,
+    "ca01_hints": 8,
+    "ca01_complete_solutions": 8,
+    "runtime_external_asset_references": 0,
+    "self_contained_offline_surface": true
+  },
+  "console": {
+    "errors": 0,
+    "non_fatal_instrumentation_warnings": 2,
+    "unique_warning_messages": [
+      "No version information available for component [tex]/newcommand",
+      "No version information available for component [pretext]/mathjaxknowl3.js"
+    ],
+    "note": "The two warnings are browser instrumentation messages; the reader DOM contains no external runtime asset references."
+  },
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

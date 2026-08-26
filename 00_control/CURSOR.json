@@ -80,6 +80,30 @@
     "qa_receipt": "qa/FOMBERG_UNIT_007_QA.json",
     "qa_receipt_sha256": "3db0476e5f954402a3f704090b5fea0d1a4a0d04e889b3062b048dbea8f51f1f"
   },
+  "latest_original_layer": {
+    "assessment_id": "D60-CA01",
+    "edition_unit_id": "O012-ORIG-CA01",
+    "course_route_unit_ids": [
+      "D60-R01",
+      "D60-R02",
+      "D60-R03",
+      "D60-R04",
+      "D60-R05",
+      "D60-R06",
+      "D60-R07"
+    ],
+    "path": "source/id-ID/mastery/cumulative-assessment-001-foundations-coverings-homotopy.md",
+    "bytes": 15185,
+    "lines": 389,
+    "sha256": "5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8",
+    "stable_ids": 34,
+    "exercises": 8,
+    "hints": 8,
+    "complete_solutions": 8,
+    "independent_review": "mathematics and source-language reviews PASS with P1=0; P2=0; P3=0",
+    "qa_receipt": "qa/CUMULATIVE_ASSESSMENT_001_QA.json",
+    "qa_receipt_sha256": "8dcd7bd124ce16acebef875b8294138caa91801b00d9a621919831bc1f09f602"
+  },
   "backend_state": {
     "status": "PASS_APPEND_ONLY_REPLAYABLE",
     "roberts_terminal_prefix_records": 4761,
@@ -92,11 +116,12 @@
     "fomberg_unit_005_records_added": 196,
     "fomberg_unit_006_records_added": 203,
     "fomberg_unit_007_records_added": 230,
-    "cumulative_records": 6742,
-    "cumulative_bytes": 8213649,
-    "cumulative_bundle_sha256": "523b570517eb54720c50007aacc5d4eea525ea252b9ca1f6f45b027182354765",
-    "receipt": "qa/BACKEND_APPEND_ONLY_FOMBERG_UNIT_007_CUMULATIVE_RECEIPT.json",
-    "receipt_sha256": "6d1bf89439d0c4dae64005a64da2a2d9848153f229a2292b530c688a19cce364",
+    "cumulative_assessment_001_records_added": 112,
+    "cumulative_records": 6854,
+    "cumulative_bytes": 8345799,
+    "cumulative_bundle_sha256": "51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57",
+    "receipt": "qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENT_001_CUMULATIVE_RECEIPT.json",
+    "receipt_sha256": "79fc0c7afde5f72b9eaf3809b08ab27cfd696c9d0269905608a1336ae4cd7e13",
     "semantic_validator_replay": "PASS",
     "static_qa_replay": "PASS",
     "producer_deterministic_replay": "PASS"
@@ -104,25 +129,27 @@
   "reader_state": {
     "status": "PASS_DETERMINISTIC_BROWSER_REFLOW_VISUAL_ACCESSIBILITY_RIGHTS_PRIVACY",
     "html": {
-      "path": "output/html/roberts-001-030-fomberg-001-007/index.html",
-      "bytes": 14885069,
-      "sha256": "87d58a5955954125c424ab1220a9c6aa7967a782a9bd739094a31ae0a50af5f6"
+      "path": "output/html/roberts-001-030-fomberg-001-007-ca01/index.html",
+      "bytes": 14958219,
+      "sha256": "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf"
     },
     "pdf": {
-      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-id.pdf",
-      "bytes": 8326404,
-      "pages": 472,
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-id.pdf",
+      "bytes": 8358561,
+      "pages": 477,
       "page_size": "A4",
-      "sha256": "1beca2d03f04c1fcca7eb01bd2654567908febc1ba7941b459c06b90ef865c22",
+      "sha256": "476b0de3bbb2cbfe03a151ac3060e121c5f89364e70b54d918ab270f4c965ade",
       "tagged": false,
       "tagging_limitation_disclosed": true
     },
-    "manifest": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007.csv",
-    "manifest_sha256": "6a5a49c1a7179c27bb21f9bced2517ff38cf79953d566f75eb3143b6a3039aaa",
-    "build_receipt": "qa/ROBERTS_001_030_FOMBERG_001_007_BUILD_RECEIPT.json",
-    "build_receipt_sha256": "bef3d7fbd0aa1290a34f6a942c0559130fd5b32a66531afb7f56d91cb148cc8e",
-    "visual_receipt": "qa/ROBERTS_001_030_FOMBERG_001_007_VISUAL_QA.md",
-    "visual_receipt_sha256": "1b95790cd0dbb0bade96b54459e51301ed55ea0714ad55d93b5a69c47ccfff25"
+    "manifest": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01.csv",
+    "manifest_sha256": "eac46f939ac99da1479c7826a350eb926c30f91d4c74fdfe785a597f7a58803d",
+    "build_receipt": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BUILD_RECEIPT.json",
+    "build_receipt_sha256": "22fef828b7963219759f85d11e409e0ebf957889d0fa76dc02ec04f3a707a9e0",
+    "visual_receipt": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_VISUAL_QA.md",
+    "visual_receipt_sha256": "c33d75b9f93224ece7e57bcb7aae9413f47a84f3eade72fbd010c09463182e2a",
+    "browser_receipt": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BROWSER_QA.json",
+    "browser_receipt_sha256": "3558f726ed794f4e94729a86e7177b407dc1efabf668b96a76f80d68ca3acca4"
   },
   "publication_state": {
     "github_public_through_unit": 30,
@@ -157,7 +184,7 @@
     "composite_zenodo_version": "0.30.7",
     "composite_zenodo_publication_receipt": "release/zenodo-roberts-001-030-fomberg-001-007/publication-receipt.json",
     "composite_zenodo_publication_receipt_sha256": "3145ad59d3eae2935319e502b30e30fe62c31b1d7eaebab087b5f24b220f874f",
-    "composite_local_release_state": "unit_007_pushed_deployed_published_and_anonymously_byte_verified_on_existing_github_pages_and_zenodo_lineages"
+    "composite_local_release_state": "ca01_locally_verified_pending_authorized_github_pages_and_zenodo_publication; unit_007 remains the latest public boundary"
   },
   "fomberg_next": {
     "official_repository": "https://git.sr.ht/~yp/math-notes",
@@ -174,7 +201,7 @@
     "completed_sections": "1.1-1.13",
     "completed_component_units": ["O012-FOM-001", "O012-FOM-002", "O012-FOM-003", "O012-FOM-004", "O012-FOM-005", "O012-FOM-006", "O012-FOM-007"],
     "next_line": 4186,
-    "next_coherent_route_unit": "original proof-repair, mastery, laboratory, and capstone closure after the selected Fomberg span",
+    "next_coherent_route_unit": "publish CA01, then add 36 stable hints to the census-selected existing D60-R01-D60-R06 exercise/full-solution pairs; CA02-CA03, laboratories, proof-link repair, and capstone follow",
     "license": "CC BY-SA 4.0",
     "build_gate": "55/55 PASS",
     "build_gate_receipt": "qa/FOMBERG_AUTHORITY_BUILD_GATE_QA.json",
@@ -200,7 +227,7 @@
     "next_line_after_unit": 4186,
     "next_line_text": "\\subsection{Extras before cohomology}"
   },
-  "next_action": "complete the original 108-item mastery layer, four reproducible computation laboratories, proof-repair dossier, and cumulative proof/cross-invariant capstone; then run final route closure and maintain the existing publication lineages from exact source cursor 4186",
+  "next_action": "publish and anonymously byte-verify the exact CA01 boundary on the existing GitHub Pages and Zenodo lineages; then add 36 stable hints to the census-selected existing D60-R01-D60-R06 exercise/full-solution pairs without duplicating prompts or solutions",
   "terminology_qa": {
     "status": "PASS",
     "fallback_doi": "10.22146/jmt.56529",

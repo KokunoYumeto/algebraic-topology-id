@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "access_right": "open",
+    "contributors": [
+      {"name": "Lazarovich, Nir", "type": "Other"},
+      {"name": "Editor edisi Bahasa Indonesia", "type": "Editor"},
+      {"name": "Translation and Transcription Project", "type": "Other"}
+    ],
+    "creators": [
+      {"name": "Roberts, David Michael"},
+      {"name": "Fomberg, Yeheli"}
+    ],
+    "description": "<p><strong>Status: checkpoint parsial kursus komposit; Roberts lengkap 30/30, bentang Fomberg terpilih O012-FOM-001–007 lengkap, dan Asesmen Kumulatif 1 (D60-CA01) lengkap 8/8 dengan petunjuk serta solusi penuh.</strong> Versi 0.31.0 memuat terjemahan Bahasa Indonesia seluruh Kuliah 1–30 dari <em>Algebraic Topology</em> karya David Michael Roberts; jembatan homologi Bagian 1.1–1.13 dari catatan <em>Algebraic Topology</em> karya Yeheli Fomberg, berdasarkan kuliah Nir Lazarovich; serta asesmen kumulatif asli pertama yang menghubungkan fondasi, homotopi, ruang penutup, grup fundamental, van Kampen, klasifikasi penutup, dan fibrasi.</p><p>Cakupan Roberts adalah <code>Notes.tex</code> baris 134–6368 pada komit <code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>. Cakupan Fomberg adalah <code>algebraic_topology.tex</code> baris 31–4185, Bagian 1.1–1.13, pada komit <code>563194fae879178b9a6871b249513bfc27968975</code>; bentang Fomberg terpilih telah selesai dan kursor sumber berikutnya ialah baris 4186. D60-CA01 adalah materi pendamping edisi yang asli, bukan teks Roberts atau Fomberg.</p><p>Kursus komposit tetap parsial. Yang masih harus diselesaikan ialah Asesmen Kumulatif 2 dan 3 (16 butir), penutupan petunjuk untuk rute penguasaan biasa yang belum lengkap, empat laboratorium komputasi, capstone lintas-invarian, serta setiap normalisasi grafik bukti yang masih dicatat oleh sensus QA pada boundary ini.</p><p>PDF A4 adalah berkas pembaca pertama. HTML mandiri/offline adalah permukaan akses utama yang terpusat dan reflowable pada desktop maupun seluler, dengan MathML asli tanpa dependensi runtime. Sumber Markdown, backend JSONL ber-ID stabil, lisensi komponen, manifest, checksum, QA, dan provenance ringkas turut disertakan.</p><p>Pembaca dan paket terpadu dirilis di bawah <strong>CC BY-SA 4.0</strong>. Komponen Roberts tetap diidentifikasi sebagai CC BY 4.0; komponen Fomberg dan D60-CA01 sebagai CC BY-SA 4.0. Atribusi, penandaan perubahan, share-alike, dan non-endorsement dijelaskan dalam <code>RELEASE_RIGHTS.md</code>. Produksi menggunakan <strong>OpenAI Codex gpt-5.6-sol, Ultra</strong> atas arahan pengguna; ini bukan kredit kepengarangan atau endorsement. Edisi ini independen dan tidak disponsori atau disahkan oleh penulis, dosen asal, maupun institusi mereka.</p>",
+    "keywords": [
+      "topologi aljabar",
+      "Bahasa Indonesia",
+      "homotopi",
+      "ruang penutup",
+      "grup fundamental",
+      "homologi simpleks",
+      "homologi singular",
+      "eksisi",
+      "Mayer–Vietoris",
+      "homologi seluler",
+      "asesmen kumulatif",
+      "MathML",
+      "machine-readable textbook"
+    ],
+    "language": "ind",
+    "license": "cc-by-sa-4.0",
+    "notes": "ID rilis: o012-composite-id-roberts-001-030-fomberg-001-007-ca01-v0.31.0. Roberts lengkap 30/30; Fomberg O012-FOM-001–007 lengkap untuk bentang terpilih Bagian 1.1–1.13; D60-CA01 lengkap 8/8; kursus komposit tetap parsial. Versi ini melanjutkan konsep Zenodo 10.5281/zenodo.22061489 dan pendahulu langsung 10.5281/zenodo.22104150; tidak membuat konsep pesaing.",
+    "publication_date": "2026-08-26",
+    "publication_type": "book",
+    "related_identifiers": [
+      {"identifier": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53", "relation": "isDerivedFrom", "scheme": "url"},
+      {"identifier": "https://git.sr.ht/~yp/math-notes/tree/563194fae879178b9a6871b249513bfc27968975", "relation": "isDerivedFrom", "scheme": "url"},
+      {"identifier": "10.5281/zenodo.22061489", "relation": "isVersionOf", "scheme": "doi"},
+      {"identifier": "10.5281/zenodo.22104150", "relation": "isNewVersionOf", "scheme": "doi"}
+    ],
+    "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Roberts 1–30, Jembatan Homologi §1.1–1.13, dan Asesmen Kumulatif 1",
+    "upload_type": "publication",
+    "version": "0.31.0"
+  }
+}

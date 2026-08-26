@@ -15,7 +15,8 @@ International License](https://creativecommons.org/licenses/by/4.0/).
 
 ## Fomberg component and integrated reader
 
-The Fomberg bridge currently adapts lines 31–3517, Sections 1.1–1.12, of
+The Fomberg bridge adapts the complete selected span, lines 31–4185 and
+Sections 1.1–1.13, of
 *Algebraic Topology* by Yeheli Fomberg, based on lectures by Nir Lazarovich in
 spring 2025. The frozen source is commit
 `563194fae879178b9a6871b249513bfc27968975` of `~yp/math-notes`.
@@ -37,6 +38,11 @@ Changes include translation into Bahasa Indonesia, semantic restructuring into
 stable reader units, accessibility-oriented reflow, independently documented
 source corrections, semantic redraws/descriptions of diagrams, and separately
 identified worked mastery material with hints and complete solutions.
+
+The separately identified *Asesmen Kumulatif 1 — Topologi Dasar, Ruang
+Penutup, dan Homotopi* is original edition material under CC BY-SA 4.0. It is
+not part of either Roberts's or Fomberg's source text and does not imply their
+authorship or endorsement.
 
 ## Production provenance
 

@@ -1,0 +1,203 @@
+{
+  "qa_id": "O012-RBT-001-030-FOM-001-007-CA01-COMPOSITE-BUILD",
+  "status": "PASS",
+  "scope": "Roberts 30/30; Fomberg Sections 1.1-1.13 through source line 4185; original D60-CA01 with 8 solved items; composite course partial",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "deterministic_build_draft": {
+    "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BUILD_DRAFT.json",
+    "bytes": 6960,
+    "sha256": "3c82d0e81a352dad47649a44c6acec9cefd6d5c0eeefa2996eabe583f3f0319c"
+  },
+  "artifacts": {
+    "html": {
+      "path": "output/html/roberts-001-030-fomberg-001-007-ca01/index.html",
+      "bytes": 14958219,
+      "sha256": "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf",
+      "title": "Topologi Aljabar — Roberts 30/30, Fomberg 1.1–1.13, dan Asesmen Kumulatif 1",
+      "lang": "id-ID",
+      "self_contained": true
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-id.pdf",
+      "bytes": 8358561,
+      "sha256": "476b0de3bbb2cbfe03a151ac3060e121c5f89364e70b54d918ab270f4c965ade",
+      "pages": 477,
+      "page_size": "A4",
+      "tagged": false
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01.csv",
+      "bytes": 297,
+      "sha256": "eac46f939ac99da1479c7826a350eb926c30f91d4c74fdfe785a597f7a58803d",
+      "entries": 2
+    }
+  },
+  "frozen_predecessor": {
+    "html": {
+      "path": "output/html/roberts-001-030-fomberg-001-007/index.html",
+      "bytes": 14885069,
+      "sha256": "87d58a5955954125c424ab1220a9c6aa7967a782a9bd739094a31ae0a50af5f6"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-id.pdf",
+      "bytes": 8326404,
+      "sha256": "1beca2d03f04c1fcca7eb01bd2654567908febc1ba7941b459c06b90ef865c22",
+      "pages": 472
+    },
+    "html_exact_logical_prefix_reconstruction": {
+      "status": "PASS",
+      "bytes": 14885069,
+      "sha256": "87d58a5955954125c424ab1220a9c6aa7967a782a9bd739094a31ae0a50af5f6"
+    },
+    "pdf_page_visual_prefix": {
+      "status": "PASS",
+      "pages_compared": 472,
+      "page_signature_bundle_sha256": "5f088e49d4e72d3da65886e21cfc26308bd2c0a1d54fc3953b0b2fb3e2007d63",
+      "content_resources_boxes_rotation_compared": true,
+      "extracted_text_byte_identical": true
+    }
+  },
+  "ca01": {
+    "assessment_id": "D60-CA01",
+    "edition_unit_id": "O012-ORIG-CA01",
+    "source": {
+      "path": "source/id-ID/mastery/cumulative-assessment-001-foundations-coverings-homotopy.md",
+      "bytes": 15185,
+      "sha256": "5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8"
+    },
+    "qa": {
+      "path": "qa/CUMULATIVE_ASSESSMENT_001_QA.json",
+      "bytes": 1812,
+      "sha256": "8dcd7bd124ce16acebef875b8294138caa91801b00d9a621919831bc1f09f602"
+    },
+    "rights": {
+      "license": "CC BY-SA 4.0",
+      "origin": "edition_original",
+      "source_problem_bank_used": false
+    },
+    "census": {
+      "stable_ids": 34,
+      "exercises": 8,
+      "hints": 8,
+      "complete_solutions": 8,
+      "primary_routes": [
+        "D60-R01",
+        "D60-R02",
+        "D60-R03",
+        "D60-R04",
+        "D60-R05",
+        "D60-R06",
+        "D60-R07"
+      ]
+    }
+  },
+  "backend_boundary": {
+    "status": "PASS_APPEND_ONLY_REPLAYABLE",
+    "unit007_prefix_records": 6742,
+    "unit007_prefix_bytes": 8213649,
+    "unit007_prefix_bundle_sha256": "523b570517eb54720c50007aacc5d4eea525ea252b9ca1f6f45b027182354765",
+    "ca01_records_added": 112,
+    "cumulative_records": 6854,
+    "cumulative_bytes": 8345799,
+    "cumulative_bundle_sha256": "51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57",
+    "receipt": {
+      "path": "qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENT_001_CUMULATIVE_RECEIPT.json",
+      "bytes": 9934,
+      "sha256": "79fc0c7afde5f72b9eaf3809b08ab27cfd696c9d0269905608a1336ae4cd7e13"
+    }
+  },
+  "html_checks": {
+    "status": "PASS",
+    "dom_ids": 2350,
+    "fragment_links": 441,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 16130,
+    "ca01_stable_ids": 34,
+    "ca01_exercise_hint_solution_triples": 8,
+    "self_contained": true,
+    "centered_reflow_css_markers": true
+  },
+  "pdf_checks": {
+    "status": "PASS",
+    "pages": 477,
+    "appended_ca01_pages": 5,
+    "all_pages_a4": true,
+    "fonts": 43,
+    "all_fonts_embedded_subset_tounicode": true,
+    "trailer_id_suppressed": true,
+    "build_only_layout_normalization": "Eight transient \\par\\noindent boundaries prevent Pandoc fenced-div anchors from running exercise prompts into subsection headings; canonical source bytes are unchanged.",
+    "predecessor_outline_entries": 379,
+    "merged_outline_entries": 389,
+    "all_outline_destinations_resolve": true,
+    "predecessor_outline_destinations_preserved_as_exact_prefix": true,
+    "ca01_outline_entries_added": 10,
+    "predecessor_named_destinations": 2863,
+    "merged_named_destinations": 2873,
+    "ca01_named_destinations_added": 10,
+    "all_named_destinations_resolve": true,
+    "outline_note": "All 379 predecessor outline destinations remain an exact title/page prefix and all 10 appended CA01 outline destinations resolve to pages 473–477."
+  },
+  "reproducibility": {
+    "frozen_inputs_fail_closed": true,
+    "html_fragment_clean_builds": 2,
+    "html_fragment_sha256": "7860fe5e4eeb4b740a6be53baad546d0b535e913fc9a1901dad7a6593d240c78",
+    "html_builds_byte_identical": true,
+    "ca01_pdf_clean_builds": 2,
+    "ca01_pdf_sha256": "e21d67ac67fe10b709a401c26eafa4f13cdb92da891745f9c0b217aa1c69e56e",
+    "ca01_pdf_builds_byte_identical": true,
+    "merged_pdf_clean_builds": 2,
+    "merged_pdf_builds_byte_identical": true,
+    "source_date_epoch": 1787616000,
+    "build_scratch_removed_after_finalizer": true
+  },
+  "toolchain": {
+    "builder": {
+      "path": "scripts/build-roberts-001-030-fomberg-001-007-ca01.ps1",
+      "bytes": 28611,
+      "sha256": "0bb806d08094e4c35fd0a48c379a46a8141959d56c8ad564134547eea99682dc"
+    },
+    "finalizer": {
+      "path": "scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01.py",
+      "bytes": 27002,
+      "sha256": "e64c976022c52915ad2836f5a01a772356fe5d1f4ce358053cfe5b811e844495"
+    },
+    "pandoc": "pandoc 3.9.0.2",
+    "pdf_merger": "pypdf 6.12.2 object-copy append; predecessor outline/name tree preserved; 10 CA01 outline destinations rebuilt explicitly against appended pages",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "visual_checks": {
+    "status": "PASS",
+    "visual_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_VISUAL_QA.md",
+      "bytes": 5161,
+      "sha256": "c33d75b9f93224ece7e57bcb7aae9413f47a84f3eade72fbd010c09463182e2a"
+    },
+    "render_inventory": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_RENDER_INVENTORY.csv",
+      "bytes": 1794,
+      "sha256": "3734130dcebd7c8df1d359c3b147883c62e02c77e8a72d9d667bb4abe10fae0c"
+    },
+    "pages_inspected": [472, 473, 474, 475, 476, 477],
+    "severity_census": {"P1": 0, "P2": 0, "P3": 0}
+  },
+  "browser_checks": {
+    "status": "PASS",
+    "browser_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BROWSER_QA.json",
+      "bytes": 2358,
+      "sha256": "3558f726ed794f4e94729a86e7177b407dc1efabf668b96a76f80d68ca3acca4"
+    },
+    "desktop": "PASS",
+    "mobile": "PASS",
+    "offline": "PASS",
+    "unresolved_fragment_links": 0,
+    "runtime_external_asset_references": 0,
+    "console_errors": 0,
+    "severity_census": {"P1": 0, "P2": 0, "P3": 0}
+  },
+  "limitations": [
+    "The composite course remains partial after adding D60-CA01.",
+    "The PDF remains untagged; the self-contained native-MathML HTML is the primary reflowable surface.",
+    "Public-byte readback is a post-publication transaction and is not claimed by this local build receipt."
+  ]
+}

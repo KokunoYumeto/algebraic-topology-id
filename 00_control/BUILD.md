@@ -466,3 +466,48 @@ Strict QA binds 426 stable IDs, 261 semantic blocks, 587 unique artifact IDs, ei
 The PDF is unencrypted, uses A4, carries `id-ID`, has 24/24 fonts embedded, subset, and mapped through ToUnicode, and yields 269,310 extracted characters. It remains intentionally untagged, so semantic HTML is the primary accessibility surface. Fresh Poppler renders of all 138 pages and desktop/mobile browser inspection found no clipping, overlap, broken glyph, unintended blank page, or black box.
 
 The cumulative locale-neutral backend contains 1,762 canonical records across 11 JSONL files, totaling 1,540,725 bytes. The extension is idempotent, both the extension and independent root rerun validate, and the validator-defined bundle SHA-256 is `bb8512f56a8bbcf1283ae10ab69a9a7ecebb1bd39c425c1c021b5b848a1b2910`.
+
+## Roberts 001-030, Fomberg 001-007, and Cumulative Assessment 1
+
+Canonical added source:
+
+- `source/id-ID/mastery/cumulative-assessment-001-foundations-coverings-homotopy.md`: 15,185 bytes; 389 LF lines; 34 stable IDs; SHA-256 `5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8`.
+- The original CC BY-SA 4.0 layer contains exactly eight exercises, eight hints, and eight complete checked solutions, mapped across `D60-R01`-`D60-R07`. It does not copy or adapt the excluded Fomberg problem bank.
+
+Build and QA:
+
+```powershell
+python -B scripts/qa-cumulative-assessment-001.py
+python -B scripts/validate-backend-append-only-cumulative-assessment-001.py
+python -B scripts/census-route-mastery.py
+pwsh -NoProfile -File scripts/build-roberts-001-030-fomberg-001-007-ca01.ps1
+```
+
+The append-only backend preserves the exact 6,742-record Unit 007 prefix and
+adds 112 records. The result has 6,854 records, 8,345,799 bytes, and bundle
+SHA-256 `51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57`.
+The cumulative receipt is
+`qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENT_001_CUMULATIVE_RECEIPT.json`,
+9,934 bytes, SHA-256
+`79fc0c7afde5f72b9eaf3809b08ab27cfd696c9d0269905608a1336ae4cd7e13`.
+
+Final cumulative artifacts and witnesses:
+
+- HTML: 14,958,219 bytes; SHA-256 `d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf`.
+- PDF: 8,358,561 bytes; 477 A4 pages; SHA-256 `476b0de3bbb2cbfe03a151ac3060e121c5f89364e70b54d918ab270f4c965ade`.
+- Artifact manifest: 297 bytes; SHA-256 `eac46f939ac99da1479c7826a350eb926c30f91d4c74fdfe785a597f7a58803d`.
+- Final build receipt: 7,842 bytes; SHA-256 `22fef828b7963219759f85d11e409e0ebf957889d0fa76dc02ec04f3a707a9e0`.
+- Visual QA: 5,161 bytes; SHA-256 `c33d75b9f93224ece7e57bcb7aae9413f47a84f3eade72fbd010c09463182e2a`.
+- Browser QA: 2,358 bytes; SHA-256 `3558f726ed794f4e94729a86e7177b407dc1efabf668b96a76f80d68ca3acca4`.
+
+Two HTML fragments, two standalone CA01 PDFs, and two cumulative PDFs are
+byte-identical at their respective deterministic gates. All 472 predecessor
+PDF pages preserve their visual/content signatures and extracted text. All
+389 outline entries and all 2,873 named destinations resolve; the 379-entry
+predecessor outline is an exact title/page prefix and the ten new CA01 targets
+resolve to physical pages 473-477. Pages 472-477 were rendered at 150 dpi and
+inspected at full detail with P1/P2/P3 all zero. The self-contained native-MathML
+HTML is centered at desktop width and reflows at 375 x 812 with no page-level
+horizontal overflow, no broken fragments, no external runtime asset references,
+and zero console errors. The PDF remains intentionally untagged; HTML is the
+primary accessibility surface.

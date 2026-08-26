@@ -5,20 +5,23 @@ Topology* karya David Michael Roberts. Ketiga puluh kuliah Roberts sudah
 diterjemahkan secara berurutan sampai akhir sumber; edisi sumber Roberts dengan
 demikian lengkap **30/30**. Jalur kuliah komposit O012/D60 masih **parsial**:
 jembatan Fomberg kini mencakup seluruh bentang terpilih Bagian 1.1–1.13
-(`algebraic_topology.tex:31–4185`). Lapisan penguasaan kumulatif, empat
-laboratorium komputasi, dan proyek puncak lintas-invarian edisi masih harus
+(`algebraic_topology.tex:31–4185`). Asesmen Kumulatif 1 kini menambahkan
+delapan soal lintas-rute, masing-masing dengan petunjuk dan solusi lengkap.
+Dua asesmen kumulatif berikutnya, penutupan petunjuk penguasaan biasa, empat
+laboratorium komputasi, dan proyek puncak lintas-invarian masih harus
 diselesaikan.
 
 ## Mulai membaca
 
-- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.13](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007/)
+- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.13 + Asesmen Kumulatif 1](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01/)
   adalah permukaan utama: satu berkas mandiri, reflow, tanpa JavaScript atau
   akses jaringan, dengan matematika MathML asli.
-- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-007/index.html) dapat
+- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-007-ca01/index.html) dapat
   diunduh dan dibuka secara luring.
-- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-id.pdf)
-  adalah permukaan cetak sekunder sepanjang 472 halaman. PDF memakai font
-  tersemat dan peta Unicode, tetapi belum ditandai secara struktural.
+- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-id.pdf)
+  adalah permukaan cetak sekunder sepanjang 477 halaman. PDF memakai font
+  tersemat, peta Unicode, dan 389 tujuan kerangka yang semuanya berfungsi,
+  tetapi belum ditandai secara struktural.
 - [Konsep Zenodo edisi ini](https://doi.org/10.5281/zenodo.22061489)
   mempertahankan garis versi preservasi; nomor konsep tetap sama ketika
   checkpoint baru diterbitkan.
@@ -45,8 +48,9 @@ simpleksial–singular, derajat pemetaan, teorema sfera berbulu, derajat lokal,
 rumus lokal-ke-global, kompleks CW, topologi lemah, contoh/noncontoh seluler,
 filtrasi ruang projektif, pemetaan batas seluler, bilangan insidensi, dan
 perhitungan homologi seluler dari `algebraic_topology.tex:31–4185`, beserta
-latihan penguasaan dengan petunjuk dan solusi lengkap. Status 30/30 hanya menyatakan
-kelengkapan komponen Roberts,
+latihan penguasaan dengan petunjuk dan solusi lengkap. Asesmen Kumulatif 1
+menguji rute `D60-R01`–`D60-R07` melalui delapan soal baru tanpa menyalin bank
+masalah Fomberg. Status 30/30 hanya menyatakan kelengkapan komponen Roberts,
 bukan kelengkapan jalur komposit.
 
 Sumber semantik berada di [`source/id-ID/`](source/id-ID/). Batas historis
@@ -68,18 +72,18 @@ Direktori [`backend/`](backend/) memuat graf `curriculum.interop 0.1.0` yang
 locale-neutral: identitas otoritas dan edisi, unit, segmen, konsep, istilah,
 relasi, latihan–solusi, hak, koreksi, QA, dan artefak. Checkpoint komposit
 mempertahankan awalan Roberts 4.761 rekaman secara byte-identik lalu menambahkan
-1.981 rekaman Fomberg, sehingga berisi 6.742 rekaman append-only (8.213.649 byte)
-dengan digest bundel
-`523b570517eb54720c50007aacc5d4eea525ea252b9ca1f6f45b027182354765`.
+1.981 rekaman Fomberg, lalu 112 rekaman Asesmen Kumulatif 1, sehingga berisi
+6.854 rekaman append-only (8.345.799 byte) dengan digest bundel
+`51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57`.
 Backend ini melengkapi—bukan menggantikan—pembaca manusia.
 
 Validasi dan build aktif:
 
 ```powershell
-python -B scripts/qa-fomberg-unit-007.py
-python -B scripts/validate-backend-append-only-fomberg-unit-007.py
-python -B scripts/validate-backend-append-only-fomberg-unit-007-cumulative.py
-pwsh -NoProfile -File scripts/build-roberts-001-030-fomberg-001-007.ps1
+python -B scripts/qa-cumulative-assessment-001.py
+python -B scripts/validate-backend-append-only-cumulative-assessment-001.py
+python -B scripts/census-route-mastery.py
+pwsh -NoProfile -File scripts/build-roberts-001-030-fomberg-001-007-ca01.ps1
 ```
 
 Build kumulatif memakai epoch tetap dan dua build bersih yang harus identik
@@ -114,6 +118,7 @@ otoritas disimpan di [`00_control/`](00_control/).
 
 Bentang Fomberg terpilih selesai tepat sebelum
 `algebraic_topology.tex:4186`. Produksi berikutnya melanjutkan lapisan
-penguasaan/laboratorium/proyek puncak yang ditandai jelas sebagai materi edisi.
+penguasaan biasa yang belum mempunyai petunjuk stabil, Asesmen Kumulatif 2–3,
+laboratorium, dan proyek puncak yang ditandai jelas sebagai materi edisi.
 Hak dan atribusi Roberts, Fomberg, serta materi asli tetap dapat dibedakan pada
 backend dan artefak rilis.

@@ -57,30 +57,43 @@ preserve the same reader boundary. Both lineages and every critical witness
 have exact anonymous byte/hash readback. Do not rebuild, retranslate, or
 renumber this frozen prefix.
 
-1. Produce a route-level census over the frozen backend: map every existing
-   exercise, hint, solution, theorem, and proof repair to `D60-R01`…`R14`;
-   verify the eight mandatory Fomberg repairs, including both loci of
-   `FOM-PR-05`, and record any real gap without double-counting already solved
-   Roberts/Fomberg mastery items.
-2. Fill only the evidenced mastery gaps so every route unit has at least six
-   ordinary items with a hint and checked full solution (84 total across the
-   route), then add three cumulative assessments of eight similarly closed
-   items (24), for at least 108 mapped ordinary solution-bearing items. Do not
-   copy the excluded Fomberg problem bank.
-3. Add four offline reproducible computation laboratories, each with source,
+The route/proof census and Cumulative Assessment 1 are now locally closed.
+CA01 adds eight original exercise-hint-complete-solution triples across
+`D60-R01`-`R07`; its reader source SHA-256 is
+`5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8`.
+The append-only backend now has 6,854 records/8,345,799 bytes and bundle
+SHA-256 `51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57`.
+The centered/reflowing HTML and 477-page deterministic PDF pass independent
+math, language, structural, browser, visual, navigation, rights, and hash QA.
+The immediate executable boundary is publication through the existing GitHub,
+Pages, and Zenodo lineages followed by anonymous byte readback.
+
+1. Publish the verified CA01 boundary without changing the frozen prefix;
+   record exact commit/tree/run/deployment and Zenodo record/version/DOI plus
+   every public byte/hash readback in this lane.
+2. Add 36 separately modeled stable hints to the census-selected existing
+   full-solution pairs in `D60-R01`-`R06`; do not duplicate prompts or
+   solutions. This closes the remaining ordinary 84-item route distribution.
+3. Add Cumulative Assessments 2 and 3, eight original items each with a hint
+   and complete checked solution, so all 24 cumulative slots and all 108
+   required solution-bearing slots are closed. Do not copy the excluded
+   Fomberg problem bank.
+4. Add four offline reproducible computation laboratories, each with source,
    tests, expected output, interpretation, and a full check: covering
    monodromy/group presentations; chain matrices/Smith normal form; cellular
    boundaries/degree; and comparison of fundamental-group, homology, and
    cohomology invariants.
-4. Add the final proof-reconstruction/cross-invariant capstone and explicit
+5. Repair the remaining backend proof-link metadata for `FOM-PR-13`-`15` and
+   `FOM-U003-QUOTIENT-LES` without rewriting their already checked mathematics;
+   then add the final proof-reconstruction/cross-invariant capstone and explicit
    oral-proof rubric; independently check every new mathematical argument and
    all cumulative prerequisite edges.
-5. Extend the append-only backend while preserving the 30-edition-unit/14-route
+6. Extend the append-only backend while preserving the 30-edition-unit/14-route
    view, rebuild centered/reflowing HTML and deterministic PDF, run full route
    QA, and publish each coherent verified boundary through the same GitHub,
    Pages, and Zenodo lineages with anonymous byte readback. Keep credentials
    runtime-only. Figshare remains inactive and is not a completion gate.
-6. When the entire corpus is closed, perform one final duplicate/high-confidence
+7. When the entire corpus is closed, perform one final duplicate/high-confidence
    check and, only if a useful upstream correction remains, send at most one
    concise report signed `Codex — at the user's direction.`
 

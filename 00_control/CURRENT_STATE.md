@@ -4,6 +4,41 @@ Updated: 2026-08-26
 
 Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` contiguously through source EOF; every unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Fomberg Units 001–007 translate `algebraic_topology.tex:31–4185` contiguously through the complete selected Sections 1.1–1.13, with all independent reviews at P1/P2/P3 zero. The Unit 007 boundary passes semantic-backend, replay, build, browser, visual, accessibility, rights, privacy, package, and hash gates. Its cumulative reader is 14,885,069 bytes of HTML and a 472-page, 8,326,404-byte A4 PDF; backend totals are 6,742 records/8,213,649 bytes with bundle SHA-256 `523b570517eb54720c50007aacc5d4eea525ea252b9ca1f6f45b027182354765`. Zenodo version `0.30.7`, record `22104150`, DOI `10.5281/zenodo.22104150`, and GitHub commit `1c25c0b43ba605ff16cf95363f405455f78f29eb`/Pages run `32919363394` are public in their existing lineages; the Pages reader and all Zenodo plus commit-pinned witnesses have exact anonymous byte/hash readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. Continue at exact source line 4186 with the separately marked original mastery/laboratory/capstone layer under `CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md`.
 
+### Live recovery note — Cumulative Assessment 1 local closure, 2026-08-26
+
+`D60-CA01` / `O012-ORIG-CA01` is locally complete and frozen pending its
+authorized publication transaction. The reader source
+`source/id-ID/mastery/cumulative-assessment-001-foundations-coverings-homotopy.md`
+is 15,185 bytes/389 LF lines/34 stable IDs, SHA-256
+`5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8`.
+It contains exactly eight original exercises, eight hints, and eight complete
+solutions across `D60-R01`-`R07`; both independent reviews and static QA are
+P1/P2/P3 zero. No Fomberg problem-bank prompt was copied or adapted.
+
+The append-only extension preserves the exact 6,742-record Unit 007 prefix and
+adds 112 records, ending at 6,854 records/8,345,799 bytes with bundle SHA-256
+`51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57`.
+The route census credits 56/108 required slots: 48 ordinary route slots and
+eight CA01 slots. The remaining finite mastery work is 36 stable hints for
+already solved `D60-R01`-`R06` pairs plus CA02 and CA03 (16 items); no new
+ordinary prompts or solutions are required for that 36-slot closure.
+
+The cumulative HTML is 14,958,219 bytes, SHA-256
+`d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf`.
+The PDF is 8,358,561 bytes/477 A4 pages, SHA-256
+`476b0de3bbb2cbfe03a151ac3060e121c5f89364e70b54d918ab270f4c965ade`.
+Two deterministic builds agree; all 472 predecessor pages retain identical
+visual/content signatures and extracted text. All 389 outline entries and all
+2,873 named destinations resolve. Pages 472-477 pass 150 dpi visual inspection,
+and the centered HTML passes 1440 x 900 plus 375 x 812 browser QA with no page
+overflow or unresolved fragments. Final build receipt
+`qa/ROBERTS_001_030_FOMBERG_001_007_CA01_BUILD_RECEIPT.json` is 7,842 bytes,
+SHA-256 `22fef828b7963219759f85d11e409e0ebf957889d0fa76dc02ec04f3a707a9e0`.
+Next executable action: publish this exact boundary to the existing GitHub,
+Pages, and Zenodo lineages, anonymously read back every public byte, then begin
+the 36-hint ordinary-mastery closure. Source line 4186 remains the nominal
+post-Fomberg cursor; it is not authority to translate beyond the selected span.
+
 ### Live recovery note — Fomberg Unit 007 local closure, 2026-08-26
 
 Do not translate Fomberg lines 3518–4185 again. `O012-FOM-007`/`D60-R12`

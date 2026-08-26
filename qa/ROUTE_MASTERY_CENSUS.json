@@ -1,0 +1,3117 @@
+{
+  "assessments": {
+    "backend": {
+      "complete_assessment_count": 1,
+      "complete_assessment_ids": [
+        "D60-CA01"
+      ],
+      "credited_items": 8,
+      "detail": {
+        "D60-CA01": {
+          "complete_eight_item_assessment": true,
+          "exercise_ids": [
+            "unit:o012-d60-ca01-ex-001",
+            "unit:o012-d60-ca01-ex-002",
+            "unit:o012-d60-ca01-ex-003",
+            "unit:o012-d60-ca01-ex-004",
+            "unit:o012-d60-ca01-ex-005",
+            "unit:o012-d60-ca01-ex-006",
+            "unit:o012-d60-ca01-ex-007",
+            "unit:o012-d60-ca01-ex-008"
+          ],
+          "graph_complete_items": 8
+        }
+      },
+      "detected_assessment_ids": [
+        "D60-CA01"
+      ],
+      "item_gap": 16,
+      "required_items": 24
+    },
+    "source_ca01": {
+      "admissible_complete": true,
+      "assessment_id": "D60-CA01",
+      "block_counts": {
+        "exercise": 8,
+        "hint": 8,
+        "solution": 8
+      },
+      "expected_reviewed_sha256": "5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8",
+      "hash_matches_reviewed_boundary": true,
+      "identity": {
+        "bytes": 15185,
+        "lf_count": 389,
+        "path": "source/id-ID/mastery/cumulative-assessment-001-foundations-coverings-homotopy.md",
+        "sha256": "5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8"
+      },
+      "independent_math_review": {
+        "bound_reader_sha256": "5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8",
+        "bound_to_current_source": true,
+        "identity": {
+          "bytes": 2446,
+          "lf_count": 44,
+          "path": "qa/cumulative-assessment-001/INDEPENDENT_MATH_REVIEW.json",
+          "sha256": "4bfae9714bf6c5b5c936a7ccf2bf82ab4e5c063f8519e4122bd455740bf5307e"
+        },
+        "severity_census": {
+          "P1": 0,
+          "P2": 0,
+          "P3": 0
+        },
+        "status": "PASS"
+      },
+      "item_suffixes": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008"
+      ],
+      "structure_complete": true
+    },
+    "source_plus_backend": {
+      "complete_assessment_count": 1,
+      "complete_assessment_ids": [
+        "D60-CA01"
+      ],
+      "credited_items": 8,
+      "item_gap": 16,
+      "missing_assessment_ids": [
+        "D60-CA02",
+        "D60-CA03"
+      ],
+      "required_items": 24
+    }
+  },
+  "compliance": {
+    "backend_admitted": {
+      "assessment_slots_covered": 8,
+      "gap": 52,
+      "met": false,
+      "ordinary_route_slots_covered": 48,
+      "required": 108,
+      "total_slots_covered": 56
+    },
+    "raw_inventory_does_not_override_required_distribution": true,
+    "source_including_reviewed_ca01": {
+      "assessment_slots_covered": 8,
+      "gap": 52,
+      "met": false,
+      "ordinary_route_slots_covered": 48,
+      "required": 108,
+      "total_slots_covered": 56
+    }
+  },
+  "course_id": "D60",
+  "frozen_route_mapping": {
+    "D60-R01": {
+      "components": [
+        "o012-rbt-l01",
+        "o012-rbt-l02"
+      ],
+      "edition_mapping": "Roberts L1–L2, lines 136–584",
+      "required_material": "Entry diagnostics and point-set review; bypass allowed"
+    },
+    "D60-R02": {
+      "components": [
+        "o012-rbt-l03",
+        "o012-rbt-l04"
+      ],
+      "edition_mapping": "Roberts L3–L4, lines 585–1131",
+      "required_material": "Homotopy, deformation, categories, basic invariants"
+    },
+    "D60-R03": {
+      "components": [
+        "o012-rbt-l05",
+        "o012-rbt-l06"
+      ],
+      "edition_mapping": "Roberts L5–L6, lines 1132–1515",
+      "required_material": "Coverings, pullbacks, lifting, initial monodromy"
+    },
+    "D60-R04": {
+      "components": [
+        "o012-rbt-l07",
+        "o012-rbt-l08",
+        "o012-rbt-l09",
+        "o012-rbt-l10"
+      ],
+      "edition_mapping": "Roberts L7–L10, lines 1516–2272",
+      "required_material": "Monodromy, fundamental groups/groupoids, computations"
+    },
+    "D60-R05": {
+      "components": [
+        "o012-rbt-l11",
+        "o012-rbt-l12",
+        "o012-rbt-l13"
+      ],
+      "edition_mapping": "Roberts L11–L13, lines 2273–3046",
+      "required_material": "Seifert–van Kampen, pushouts, presentations"
+    },
+    "D60-R06": {
+      "components": [
+        "o012-rbt-l14",
+        "o012-rbt-l15",
+        "o012-rbt-l16",
+        "o012-rbt-l17"
+      ],
+      "edition_mapping": "Roberts L14–L17, lines 3047–3481",
+      "required_material": "Classification of covering spaces"
+    },
+    "D60-R07": {
+      "components": [
+        "o012-rbt-l18",
+        "o012-rbt-l19"
+      ],
+      "edition_mapping": "Roberts L18–L19, lines 3482–3947",
+      "required_material": "Higher homotopy, fibre bundles, homotopy LES"
+    },
+    "D60-R08": {
+      "components": [
+        "o012-fom-u001"
+      ],
+      "edition_mapping": "Fomberg §§1.1–1.2, lines 31–614",
+      "required_material": "Delta/simplicial complexes and simplicial homology"
+    },
+    "D60-R09": {
+      "components": [
+        "o012-fom-u002"
+      ],
+      "edition_mapping": "Fomberg §§1.3–1.4, lines 615–1290",
+      "required_material": "Singular homology, functoriality, homotopy invariance"
+    },
+    "D60-R10": {
+      "components": [
+        "o012-fom-u003"
+      ],
+      "edition_mapping": "Fomberg §§1.5–1.6, lines 1291–1922",
+      "required_material": "Exact and relative homology"
+    },
+    "D60-R11": {
+      "components": [
+        "o012-fom-u004"
+      ],
+      "edition_mapping": "Fomberg §§1.7–1.10, lines 1923–2846",
+      "required_material": "Excision, Mayer–Vietoris, comparison"
+    },
+    "D60-R12": {
+      "components": [
+        "o012-fom-u005",
+        "o012-fom-u006",
+        "o012-fom-u007"
+      ],
+      "edition_mapping": "Fomberg §§1.12–1.13, lines 3123–4185; optional §1.11, lines 2847–3122",
+      "required_material": "CW and cellular homology; optional degree cross-check"
+    },
+    "D60-R13": {
+      "components": [
+        "o012-rbt-l20",
+        "o012-rbt-l21",
+        "o012-rbt-l22",
+        "o012-rbt-l23",
+        "o012-rbt-l24",
+        "o012-rbt-l25",
+        "o012-rbt-l26",
+        "o012-rbt-l27"
+      ],
+      "edition_mapping": "Roberts L20–L27, lines 3948–5923",
+      "required_material": "Complexes, combinatorial cohomology, exact/relative/reduced theory"
+    },
+    "D60-R14": {
+      "components": [
+        "o012-rbt-l28",
+        "o012-rbt-l29",
+        "o012-rbt-l30"
+      ],
+      "edition_mapping": "Roberts L28–L30, lines 5924–6368 plus original synthesis",
+      "required_material": "Comparison, axioms, degree, classical applications, capstone"
+    }
+  },
+  "graph_validation": {
+    "active_hint_relations": 129,
+    "active_hint_units": 129,
+    "active_solve_relations": 221,
+    "duplicate_or_reused_triple_solution_ids": [],
+    "graph_complete_triples_all_classes": 129,
+    "ordinary_exercise_ids_with_inferred_route": [
+      "unit:o012-rbt-l18-mcheck-001",
+      "unit:o012-rbt-l18-mcheck-002",
+      "unit:o012-rbt-l18-mcheck-003",
+      "unit:o012-rbt-l18-mcheck-004",
+      "unit:o012-rbt-l18-mcheck-005",
+      "unit:o012-rbt-l18-mcheck-006",
+      "unit:o012-rbt-l19-mcheck-001",
+      "unit:o012-rbt-l19-mcheck-002",
+      "unit:o012-rbt-l19-mcheck-003",
+      "unit:o012-rbt-l19-mcheck-004",
+      "unit:o012-rbt-l19-mcheck-005",
+      "unit:o012-rbt-l19-mcheck-006",
+      "unit:o012-rbt-l20-mcheck-001",
+      "unit:o012-rbt-l20-mcheck-002",
+      "unit:o012-rbt-l20-mcheck-003",
+      "unit:o012-rbt-l20-mcheck-004",
+      "unit:o012-rbt-l20-mcheck-005",
+      "unit:o012-rbt-l20-mcheck-006",
+      "unit:o012-rbt-l21-mcheck-001",
+      "unit:o012-rbt-l21-mcheck-002",
+      "unit:o012-rbt-l21-mcheck-003",
+      "unit:o012-rbt-l21-mcheck-004",
+      "unit:o012-rbt-l21-mcheck-005",
+      "unit:o012-rbt-l21-mcheck-006",
+      "unit:o012-rbt-l22-mcheck-001",
+      "unit:o012-rbt-l22-mcheck-002",
+      "unit:o012-rbt-l22-mcheck-003",
+      "unit:o012-rbt-l22-mcheck-004",
+      "unit:o012-rbt-l22-mcheck-005",
+      "unit:o012-rbt-l22-mcheck-006"
+    ],
+    "ordinary_exercises_with_inferred_route": 30,
+    "ordinary_triple_member_records_with_inferred_route": 90,
+    "validation_error_count": 0,
+    "validation_errors": []
+  },
+  "inputs": {
+    "backend_jsonl": {
+      "artifacts.jsonl": {
+        "bytes": 157480,
+        "lf_count": 193,
+        "path": "backend/artifacts.jsonl",
+        "record_count": 193,
+        "sha256": "c50a3140513a5d243a6ce9f7256a29e97e3fab776764be476c9bfe9949a83b93"
+      },
+      "assets.jsonl": {
+        "bytes": 64692,
+        "lf_count": 87,
+        "path": "backend/assets.jsonl",
+        "record_count": 87,
+        "sha256": "1df40f8f6ca4f2fbfbe8a7b924a68a153713a20a4eebe1d014d8fb04669945f7"
+      },
+      "authority.jsonl": {
+        "bytes": 4374,
+        "lf_count": 6,
+        "path": "backend/authority.jsonl",
+        "record_count": 6,
+        "sha256": "84c622f56dbbd5ba379361245ecfe07bc79c9f4fd6b18ba21b82b5f545211869"
+      },
+      "concepts.jsonl": {
+        "bytes": 152695,
+        "lf_count": 483,
+        "path": "backend/concepts.jsonl",
+        "record_count": 483,
+        "sha256": "720d96a10a3c2abebab164e2181486743ef99efb50c6ef419faefbf528b8ead3"
+      },
+      "corrections.jsonl": {
+        "bytes": 594720,
+        "lf_count": 564,
+        "path": "backend/corrections.jsonl",
+        "record_count": 564,
+        "sha256": "bd961fad5d83e96fec6ef83caa8447e2e5f282c603fd4983d79b5b4b54049fbb"
+      },
+      "qa.jsonl": {
+        "bytes": 91181,
+        "lf_count": 166,
+        "path": "backend/qa.jsonl",
+        "record_count": 166,
+        "sha256": "25d3dae94c3c117e6aeb8a020fb5076199d25e71e2184ad5bf7c59ab3db722d4"
+      },
+      "relations.jsonl": {
+        "bytes": 355526,
+        "lf_count": 837,
+        "path": "backend/relations.jsonl",
+        "record_count": 837,
+        "sha256": "64aeedd8836ccae7a9fa9418a4a8b83f93c026432bc8c00dd0ba53a8d0e65ba9"
+      },
+      "rights.jsonl": {
+        "bytes": 94600,
+        "lf_count": 104,
+        "path": "backend/rights.jsonl",
+        "record_count": 104,
+        "sha256": "2a034be29f7d544de52f4a0a1970bd4923531d4ac13180eaa45b432dc999b404"
+      },
+      "segments.jsonl": {
+        "bytes": 3177411,
+        "lf_count": 1954,
+        "path": "backend/segments.jsonl",
+        "record_count": 1954,
+        "sha256": "d17646479e4a8d91b618de5c4995c083dec5c208ef755d203a876645f7ab9d54"
+      },
+      "terms.jsonl": {
+        "bytes": 315218,
+        "lf_count": 476,
+        "path": "backend/terms.jsonl",
+        "record_count": 476,
+        "sha256": "4b82f9d582ba747829373a7935fcc3cae56b96fd6b7486969ebb6d54cf927c50"
+      },
+      "units.jsonl": {
+        "bytes": 3337902,
+        "lf_count": 1984,
+        "path": "backend/units.jsonl",
+        "record_count": 1984,
+        "sha256": "26cf11a2ba912bd8e22983204641ff22ffb0152128f20ca166195cb2abd41f3f"
+      }
+    },
+    "controls": {
+      "cursor": {
+        "bytes": 10309,
+        "lf_count": 211,
+        "path": "00_control/CURSOR.json",
+        "sha256": "643146f28ce8354606a85dd4a012fd025addf1ce51a9d08b931a7b638a569ffe"
+      },
+      "cursor_next_action": "complete the original 108-item mastery layer, four reproducible computation laboratories, proof-repair dossier, and cumulative proof/cross-invariant capstone; then run final route closure and maintain the existing publication lineages from exact source cursor 4186",
+      "handoff": {
+        "bytes": 8115,
+        "lf_count": 139,
+        "path": "00_control/CURRICULUM_ROUTE_AND_FOMBERG_HANDOFF.md",
+        "sha256": "0faecfb535065cff3ac88eb0e59b55ff311981535a842e32981ca499eb4228d3"
+      }
+    },
+    "script": {
+      "bytes": 37794,
+      "lf_count": 944,
+      "path": "scripts/census-route-mastery.py",
+      "sha256": "a8af0c6fe68f2dc3079f6ed8907a86910a003645fa89589f2e840d3fdfbe22ea"
+    }
+  },
+  "next_deficits": {
+    "backend_assessment_items_not_yet_admitted": 16,
+    "backend_route_metadata": {
+      "ordinary_triple_exercises_requiring_explicit_route_backfill": [
+        "unit:o012-rbt-l18-mcheck-001",
+        "unit:o012-rbt-l18-mcheck-002",
+        "unit:o012-rbt-l18-mcheck-003",
+        "unit:o012-rbt-l18-mcheck-004",
+        "unit:o012-rbt-l18-mcheck-005",
+        "unit:o012-rbt-l18-mcheck-006",
+        "unit:o012-rbt-l19-mcheck-001",
+        "unit:o012-rbt-l19-mcheck-002",
+        "unit:o012-rbt-l19-mcheck-003",
+        "unit:o012-rbt-l19-mcheck-004",
+        "unit:o012-rbt-l19-mcheck-005",
+        "unit:o012-rbt-l19-mcheck-006",
+        "unit:o012-rbt-l20-mcheck-001",
+        "unit:o012-rbt-l20-mcheck-002",
+        "unit:o012-rbt-l20-mcheck-003",
+        "unit:o012-rbt-l20-mcheck-004",
+        "unit:o012-rbt-l20-mcheck-005",
+        "unit:o012-rbt-l20-mcheck-006",
+        "unit:o012-rbt-l21-mcheck-001",
+        "unit:o012-rbt-l21-mcheck-002",
+        "unit:o012-rbt-l21-mcheck-003",
+        "unit:o012-rbt-l21-mcheck-004",
+        "unit:o012-rbt-l21-mcheck-005",
+        "unit:o012-rbt-l21-mcheck-006",
+        "unit:o012-rbt-l22-mcheck-001",
+        "unit:o012-rbt-l22-mcheck-002",
+        "unit:o012-rbt-l22-mcheck-003",
+        "unit:o012-rbt-l22-mcheck-004",
+        "unit:o012-rbt-l22-mcheck-005",
+        "unit:o012-rbt-l22-mcheck-006"
+      ],
+      "ordinary_triple_member_records_requiring_explicit_route_backfill": [
+        "unit:o012-rbt-l18-hint-001",
+        "unit:o012-rbt-l18-hint-002",
+        "unit:o012-rbt-l18-hint-003",
+        "unit:o012-rbt-l18-hint-004",
+        "unit:o012-rbt-l18-hint-005",
+        "unit:o012-rbt-l18-hint-006",
+        "unit:o012-rbt-l18-mcheck-001",
+        "unit:o012-rbt-l18-mcheck-002",
+        "unit:o012-rbt-l18-mcheck-003",
+        "unit:o012-rbt-l18-mcheck-004",
+        "unit:o012-rbt-l18-mcheck-005",
+        "unit:o012-rbt-l18-mcheck-006",
+        "unit:o012-rbt-l18-sol-001",
+        "unit:o012-rbt-l18-sol-002",
+        "unit:o012-rbt-l18-sol-003",
+        "unit:o012-rbt-l18-sol-004",
+        "unit:o012-rbt-l18-sol-005",
+        "unit:o012-rbt-l18-sol-006",
+        "unit:o012-rbt-l19-hint-001",
+        "unit:o012-rbt-l19-hint-002",
+        "unit:o012-rbt-l19-hint-003",
+        "unit:o012-rbt-l19-hint-004",
+        "unit:o012-rbt-l19-hint-005",
+        "unit:o012-rbt-l19-hint-006",
+        "unit:o012-rbt-l19-mcheck-001",
+        "unit:o012-rbt-l19-mcheck-002",
+        "unit:o012-rbt-l19-mcheck-003",
+        "unit:o012-rbt-l19-mcheck-004",
+        "unit:o012-rbt-l19-mcheck-005",
+        "unit:o012-rbt-l19-mcheck-006",
+        "unit:o012-rbt-l19-sol-001",
+        "unit:o012-rbt-l19-sol-002",
+        "unit:o012-rbt-l19-sol-003",
+        "unit:o012-rbt-l19-sol-004",
+        "unit:o012-rbt-l19-sol-005",
+        "unit:o012-rbt-l19-sol-006",
+        "unit:o012-rbt-l20-hint-001",
+        "unit:o012-rbt-l20-hint-002",
+        "unit:o012-rbt-l20-hint-003",
+        "unit:o012-rbt-l20-hint-004",
+        "unit:o012-rbt-l20-hint-005",
+        "unit:o012-rbt-l20-hint-006",
+        "unit:o012-rbt-l20-mcheck-001",
+        "unit:o012-rbt-l20-mcheck-002",
+        "unit:o012-rbt-l20-mcheck-003",
+        "unit:o012-rbt-l20-mcheck-004",
+        "unit:o012-rbt-l20-mcheck-005",
+        "unit:o012-rbt-l20-mcheck-006",
+        "unit:o012-rbt-l20-sol-001",
+        "unit:o012-rbt-l20-sol-002",
+        "unit:o012-rbt-l20-sol-003",
+        "unit:o012-rbt-l20-sol-004",
+        "unit:o012-rbt-l20-sol-005",
+        "unit:o012-rbt-l20-sol-006",
+        "unit:o012-rbt-l21-hint-001",
+        "unit:o012-rbt-l21-hint-002",
+        "unit:o012-rbt-l21-hint-003",
+        "unit:o012-rbt-l21-hint-004",
+        "unit:o012-rbt-l21-hint-005",
+        "unit:o012-rbt-l21-hint-006",
+        "unit:o012-rbt-l21-mcheck-001",
+        "unit:o012-rbt-l21-mcheck-002",
+        "unit:o012-rbt-l21-mcheck-003",
+        "unit:o012-rbt-l21-mcheck-004",
+        "unit:o012-rbt-l21-mcheck-005",
+        "unit:o012-rbt-l21-mcheck-006",
+        "unit:o012-rbt-l21-sol-001",
+        "unit:o012-rbt-l21-sol-002",
+        "unit:o012-rbt-l21-sol-003",
+        "unit:o012-rbt-l21-sol-004",
+        "unit:o012-rbt-l21-sol-005",
+        "unit:o012-rbt-l21-sol-006",
+        "unit:o012-rbt-l22-hint-001",
+        "unit:o012-rbt-l22-hint-002",
+        "unit:o012-rbt-l22-hint-003",
+        "unit:o012-rbt-l22-hint-004",
+        "unit:o012-rbt-l22-hint-005",
+        "unit:o012-rbt-l22-hint-006",
+        "unit:o012-rbt-l22-mcheck-001",
+        "unit:o012-rbt-l22-mcheck-002",
+        "unit:o012-rbt-l22-mcheck-003",
+        "unit:o012-rbt-l22-mcheck-004",
+        "unit:o012-rbt-l22-mcheck-005",
+        "unit:o012-rbt-l22-mcheck-006",
+        "unit:o012-rbt-l22-sol-001",
+        "unit:o012-rbt-l22-sol-002",
+        "unit:o012-rbt-l22-sol-003",
+        "unit:o012-rbt-l22-sol-004",
+        "unit:o012-rbt-l22-sol-005",
+        "unit:o012-rbt-l22-sol-006"
+      ]
+    },
+    "ordinary_missing_triples": 36,
+    "ordinary_routes": [
+      {
+        "course_route_unit_id": "D60-R01",
+        "deterministic_candidate_hint_targets": [
+          "unit:o012-rbt-l01-ex-001",
+          "unit:o012-rbt-l01-ex-002",
+          "unit:o012-rbt-l02-ex-001",
+          "unit:o012-rbt-l02-ex-002",
+          "unit:o012-rbt-l02-ex-003",
+          "unit:o012-rbt-l02-ex-004"
+        ],
+        "missing_graph_complete_triples": 6,
+        "new_exercises_or_solutions_required": 0,
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+      },
+      {
+        "course_route_unit_id": "D60-R02",
+        "deterministic_candidate_hint_targets": [
+          "unit:o012-rbt-l03-ex-001",
+          "unit:o012-rbt-l03-ex-002",
+          "unit:o012-rbt-l03-ex-003",
+          "unit:o012-rbt-l03-ex-004",
+          "unit:o012-rbt-l03-ex-005",
+          "unit:o012-rbt-l04-ex-001"
+        ],
+        "missing_graph_complete_triples": 6,
+        "new_exercises_or_solutions_required": 0,
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+      },
+      {
+        "course_route_unit_id": "D60-R03",
+        "deterministic_candidate_hint_targets": [
+          "unit:o012-rbt-l05-mcheck-001",
+          "unit:o012-rbt-l05-mcheck-002",
+          "unit:o012-rbt-l05-mcheck-003",
+          "unit:o012-rbt-l05-mcheck-004",
+          "unit:o012-rbt-l06-mcheck-001",
+          "unit:o012-rbt-l06-mcheck-002"
+        ],
+        "missing_graph_complete_triples": 6,
+        "new_exercises_or_solutions_required": 0,
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+      },
+      {
+        "course_route_unit_id": "D60-R04",
+        "deterministic_candidate_hint_targets": [
+          "unit:o012-rbt-l07-mcheck-001",
+          "unit:o012-rbt-l07-mcheck-002",
+          "unit:o012-rbt-l07-mcheck-003",
+          "unit:o012-rbt-l07-mcheck-004",
+          "unit:o012-rbt-l08-ex-001",
+          "unit:o012-rbt-l08-mcheck-002"
+        ],
+        "missing_graph_complete_triples": 6,
+        "new_exercises_or_solutions_required": 0,
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+      },
+      {
+        "course_route_unit_id": "D60-R05",
+        "deterministic_candidate_hint_targets": [
+          "unit:o012-rbt-l11-mcheck-001",
+          "unit:o012-rbt-l11-mcheck-002",
+          "unit:o012-rbt-l11-mcheck-003",
+          "unit:o012-rbt-l12-mcheck-001",
+          "unit:o012-rbt-l12-mcheck-002",
+          "unit:o012-rbt-l12-mcheck-003"
+        ],
+        "missing_graph_complete_triples": 6,
+        "new_exercises_or_solutions_required": 0,
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+      },
+      {
+        "course_route_unit_id": "D60-R06",
+        "deterministic_candidate_hint_targets": [
+          "unit:o012-rbt-l14-ex-001",
+          "unit:o012-rbt-l14-ex-002",
+          "unit:o012-rbt-l14-mcheck-001",
+          "unit:o012-rbt-l14-mcheck-002",
+          "unit:o012-rbt-l14-mcheck-003",
+          "unit:o012-rbt-l14-mcheck-004"
+        ],
+        "missing_graph_complete_triples": 6,
+        "new_exercises_or_solutions_required": 0,
+        "required_action": "add separately modeled active hint units and one-to-one hints relations to selected existing full-solution pairs"
+      }
+    ],
+    "source_assessment_items_to_create": 16,
+    "source_assessments_to_create": [
+      "D60-CA02",
+      "D60-CA03"
+    ],
+    "source_complete_but_not_backend_admitted": []
+  },
+  "ordinary_mastery": {
+    "graph_complete_triple_count": 121,
+    "quota": {
+      "capped_route_credit": 48,
+      "gap": 36,
+      "met": false,
+      "raw_triples": 121,
+      "required": 84
+    },
+    "route_detail": {
+      "D60-R01": {
+        "capped_quota_credit": 0,
+        "frozen_components": [
+          "o012-rbt-l01",
+          "o012-rbt-l02"
+        ],
+        "graph_complete_triples": 0,
+        "quota_gap": 6,
+        "reusable_exercise_ids_without_hint": [
+          "unit:o012-rbt-l01-ex-001",
+          "unit:o012-rbt-l01-ex-002",
+          "unit:o012-rbt-l02-ex-001",
+          "unit:o012-rbt-l02-ex-002",
+          "unit:o012-rbt-l02-ex-003",
+          "unit:o012-rbt-l02-ex-004",
+          "unit:o012-rbt-l02-ex-005",
+          "unit:o012-rbt-l02-ex-006",
+          "unit:o012-rbt-l02-ex-007"
+        ],
+        "reusable_pairs_without_hint": 9,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-rbt-l01-ex-001",
+          "unit:o012-rbt-l01-ex-002",
+          "unit:o012-rbt-l02-ex-001",
+          "unit:o012-rbt-l02-ex-002",
+          "unit:o012-rbt-l02-ex-003",
+          "unit:o012-rbt-l02-ex-004",
+          "unit:o012-rbt-l02-ex-005",
+          "unit:o012-rbt-l02-ex-006",
+          "unit:o012-rbt-l02-ex-007"
+        ],
+        "solution_bearing_exercises": 9,
+        "solution_pair_edges": 9,
+        "triple_exercise_ids": []
+      },
+      "D60-R02": {
+        "capped_quota_credit": 0,
+        "frozen_components": [
+          "o012-rbt-l03",
+          "o012-rbt-l04"
+        ],
+        "graph_complete_triples": 0,
+        "quota_gap": 6,
+        "reusable_exercise_ids_without_hint": [
+          "unit:o012-rbt-l03-ex-001",
+          "unit:o012-rbt-l03-ex-002",
+          "unit:o012-rbt-l03-ex-003",
+          "unit:o012-rbt-l03-ex-004",
+          "unit:o012-rbt-l03-ex-005",
+          "unit:o012-rbt-l04-ex-001",
+          "unit:o012-rbt-l04-ex-002",
+          "unit:o012-rbt-l04-ex-003",
+          "unit:o012-rbt-l04-ex-004"
+        ],
+        "reusable_pairs_without_hint": 9,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-rbt-l03-ex-001",
+          "unit:o012-rbt-l03-ex-002",
+          "unit:o012-rbt-l03-ex-003",
+          "unit:o012-rbt-l03-ex-004",
+          "unit:o012-rbt-l03-ex-005",
+          "unit:o012-rbt-l04-ex-001",
+          "unit:o012-rbt-l04-ex-002",
+          "unit:o012-rbt-l04-ex-003",
+          "unit:o012-rbt-l04-ex-004"
+        ],
+        "solution_bearing_exercises": 9,
+        "solution_pair_edges": 9,
+        "triple_exercise_ids": []
+      },
+      "D60-R03": {
+        "capped_quota_credit": 0,
+        "frozen_components": [
+          "o012-rbt-l05",
+          "o012-rbt-l06"
+        ],
+        "graph_complete_triples": 0,
+        "quota_gap": 6,
+        "reusable_exercise_ids_without_hint": [
+          "unit:o012-rbt-l05-mcheck-001",
+          "unit:o012-rbt-l05-mcheck-002",
+          "unit:o012-rbt-l05-mcheck-003",
+          "unit:o012-rbt-l05-mcheck-004",
+          "unit:o012-rbt-l06-mcheck-001",
+          "unit:o012-rbt-l06-mcheck-002",
+          "unit:o012-rbt-l06-mcheck-003",
+          "unit:o012-rbt-l06-mcheck-004"
+        ],
+        "reusable_pairs_without_hint": 8,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-rbt-l05-mcheck-001",
+          "unit:o012-rbt-l05-mcheck-002",
+          "unit:o012-rbt-l05-mcheck-003",
+          "unit:o012-rbt-l05-mcheck-004",
+          "unit:o012-rbt-l06-mcheck-001",
+          "unit:o012-rbt-l06-mcheck-002",
+          "unit:o012-rbt-l06-mcheck-003",
+          "unit:o012-rbt-l06-mcheck-004"
+        ],
+        "solution_bearing_exercises": 8,
+        "solution_pair_edges": 8,
+        "triple_exercise_ids": []
+      },
+      "D60-R04": {
+        "capped_quota_credit": 0,
+        "frozen_components": [
+          "o012-rbt-l07",
+          "o012-rbt-l08",
+          "o012-rbt-l09",
+          "o012-rbt-l10"
+        ],
+        "graph_complete_triples": 0,
+        "quota_gap": 6,
+        "reusable_exercise_ids_without_hint": [
+          "unit:o012-rbt-l07-mcheck-001",
+          "unit:o012-rbt-l07-mcheck-002",
+          "unit:o012-rbt-l07-mcheck-003",
+          "unit:o012-rbt-l07-mcheck-004",
+          "unit:o012-rbt-l08-ex-001",
+          "unit:o012-rbt-l08-mcheck-002",
+          "unit:o012-rbt-l08-mcheck-003",
+          "unit:o012-rbt-l08-mcheck-004",
+          "unit:o012-rbt-l08-mcheck-005",
+          "unit:o012-rbt-l09-ex-001",
+          "unit:o012-rbt-l09-mcheck-002",
+          "unit:o012-rbt-l09-mcheck-003",
+          "unit:o012-rbt-l09-mcheck-004",
+          "unit:o012-rbt-l09-mcheck-005",
+          "unit:o012-rbt-l10-mcheck-001",
+          "unit:o012-rbt-l10-mcheck-002",
+          "unit:o012-rbt-l10-mcheck-003",
+          "unit:o012-rbt-l10-mcheck-004",
+          "unit:o012-rbt-l10-mcheck-005"
+        ],
+        "reusable_pairs_without_hint": 19,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-rbt-l07-mcheck-001",
+          "unit:o012-rbt-l07-mcheck-002",
+          "unit:o012-rbt-l07-mcheck-003",
+          "unit:o012-rbt-l07-mcheck-004",
+          "unit:o012-rbt-l08-ex-001",
+          "unit:o012-rbt-l08-mcheck-002",
+          "unit:o012-rbt-l08-mcheck-003",
+          "unit:o012-rbt-l08-mcheck-004",
+          "unit:o012-rbt-l08-mcheck-005",
+          "unit:o012-rbt-l09-ex-001",
+          "unit:o012-rbt-l09-mcheck-002",
+          "unit:o012-rbt-l09-mcheck-003",
+          "unit:o012-rbt-l09-mcheck-004",
+          "unit:o012-rbt-l09-mcheck-005",
+          "unit:o012-rbt-l10-mcheck-001",
+          "unit:o012-rbt-l10-mcheck-002",
+          "unit:o012-rbt-l10-mcheck-003",
+          "unit:o012-rbt-l10-mcheck-004",
+          "unit:o012-rbt-l10-mcheck-005"
+        ],
+        "solution_bearing_exercises": 19,
+        "solution_pair_edges": 19,
+        "triple_exercise_ids": []
+      },
+      "D60-R05": {
+        "capped_quota_credit": 0,
+        "frozen_components": [
+          "o012-rbt-l11",
+          "o012-rbt-l12",
+          "o012-rbt-l13"
+        ],
+        "graph_complete_triples": 0,
+        "quota_gap": 6,
+        "reusable_exercise_ids_without_hint": [
+          "unit:o012-rbt-l11-mcheck-001",
+          "unit:o012-rbt-l11-mcheck-002",
+          "unit:o012-rbt-l11-mcheck-003",
+          "unit:o012-rbt-l12-mcheck-001",
+          "unit:o012-rbt-l12-mcheck-002",
+          "unit:o012-rbt-l12-mcheck-003",
+          "unit:o012-rbt-l12-mcheck-004",
+          "unit:o012-rbt-l13-ex-001",
+          "unit:o012-rbt-l13-ex-002",
+          "unit:o012-rbt-l13-mcheck-001",
+          "unit:o012-rbt-l13-mcheck-002",
+          "unit:o012-rbt-l13-mcheck-003",
+          "unit:o012-rbt-l13-mcheck-004",
+          "unit:o012-rbt-l13-mcheck-005",
+          "unit:o012-rbt-l13-mcheck-006"
+        ],
+        "reusable_pairs_without_hint": 15,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-rbt-l11-mcheck-001",
+          "unit:o012-rbt-l11-mcheck-002",
+          "unit:o012-rbt-l11-mcheck-003",
+          "unit:o012-rbt-l12-mcheck-001",
+          "unit:o012-rbt-l12-mcheck-002",
+          "unit:o012-rbt-l12-mcheck-003",
+          "unit:o012-rbt-l12-mcheck-004",
+          "unit:o012-rbt-l13-ex-001",
+          "unit:o012-rbt-l13-ex-002",
+          "unit:o012-rbt-l13-mcheck-001",
+          "unit:o012-rbt-l13-mcheck-002",
+          "unit:o012-rbt-l13-mcheck-003",
+          "unit:o012-rbt-l13-mcheck-004",
+          "unit:o012-rbt-l13-mcheck-005",
+          "unit:o012-rbt-l13-mcheck-006"
+        ],
+        "solution_bearing_exercises": 15,
+        "solution_pair_edges": 15,
+        "triple_exercise_ids": []
+      },
+      "D60-R06": {
+        "capped_quota_credit": 0,
+        "frozen_components": [
+          "o012-rbt-l14",
+          "o012-rbt-l15",
+          "o012-rbt-l16",
+          "o012-rbt-l17"
+        ],
+        "graph_complete_triples": 0,
+        "quota_gap": 6,
+        "reusable_exercise_ids_without_hint": [
+          "unit:o012-rbt-l14-ex-001",
+          "unit:o012-rbt-l14-ex-002",
+          "unit:o012-rbt-l14-mcheck-001",
+          "unit:o012-rbt-l14-mcheck-002",
+          "unit:o012-rbt-l14-mcheck-003",
+          "unit:o012-rbt-l14-mcheck-004",
+          "unit:o012-rbt-l14-mcheck-005",
+          "unit:o012-rbt-l14-mcheck-006",
+          "unit:o012-rbt-l15-mcheck-001",
+          "unit:o012-rbt-l15-mcheck-002",
+          "unit:o012-rbt-l15-mcheck-003",
+          "unit:o012-rbt-l15-mcheck-004",
+          "unit:o012-rbt-l15-mcheck-005",
+          "unit:o012-rbt-l15-mcheck-006",
+          "unit:o012-rbt-l15-mcheck-007",
+          "unit:o012-rbt-l16-mcheck-001",
+          "unit:o012-rbt-l16-mcheck-002",
+          "unit:o012-rbt-l16-mcheck-003",
+          "unit:o012-rbt-l16-mcheck-004",
+          "unit:o012-rbt-l16-mcheck-005",
+          "unit:o012-rbt-l16-mcheck-006",
+          "unit:o012-rbt-l17-mcheck-001",
+          "unit:o012-rbt-l17-mcheck-002",
+          "unit:o012-rbt-l17-mcheck-003",
+          "unit:o012-rbt-l17-mcheck-004",
+          "unit:o012-rbt-l17-mcheck-005",
+          "unit:o012-rbt-l17-mcheck-006"
+        ],
+        "reusable_pairs_without_hint": 27,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-rbt-l14-ex-001",
+          "unit:o012-rbt-l14-ex-002",
+          "unit:o012-rbt-l14-mcheck-001",
+          "unit:o012-rbt-l14-mcheck-002",
+          "unit:o012-rbt-l14-mcheck-003",
+          "unit:o012-rbt-l14-mcheck-004",
+          "unit:o012-rbt-l14-mcheck-005",
+          "unit:o012-rbt-l14-mcheck-006",
+          "unit:o012-rbt-l15-mcheck-001",
+          "unit:o012-rbt-l15-mcheck-002",
+          "unit:o012-rbt-l15-mcheck-003",
+          "unit:o012-rbt-l15-mcheck-004",
+          "unit:o012-rbt-l15-mcheck-005",
+          "unit:o012-rbt-l15-mcheck-006",
+          "unit:o012-rbt-l15-mcheck-007",
+          "unit:o012-rbt-l16-mcheck-001",
+          "unit:o012-rbt-l16-mcheck-002",
+          "unit:o012-rbt-l16-mcheck-003",
+          "unit:o012-rbt-l16-mcheck-004",
+          "unit:o012-rbt-l16-mcheck-005",
+          "unit:o012-rbt-l16-mcheck-006",
+          "unit:o012-rbt-l17-mcheck-001",
+          "unit:o012-rbt-l17-mcheck-002",
+          "unit:o012-rbt-l17-mcheck-003",
+          "unit:o012-rbt-l17-mcheck-004",
+          "unit:o012-rbt-l17-mcheck-005",
+          "unit:o012-rbt-l17-mcheck-006"
+        ],
+        "solution_bearing_exercises": 27,
+        "solution_pair_edges": 27,
+        "triple_exercise_ids": []
+      },
+      "D60-R07": {
+        "capped_quota_credit": 6,
+        "frozen_components": [
+          "o012-rbt-l18",
+          "o012-rbt-l19"
+        ],
+        "graph_complete_triples": 12,
+        "quota_gap": 0,
+        "reusable_exercise_ids_without_hint": [],
+        "reusable_pairs_without_hint": 0,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-rbt-l18-mcheck-001",
+          "unit:o012-rbt-l18-mcheck-002",
+          "unit:o012-rbt-l18-mcheck-003",
+          "unit:o012-rbt-l18-mcheck-004",
+          "unit:o012-rbt-l18-mcheck-005",
+          "unit:o012-rbt-l18-mcheck-006",
+          "unit:o012-rbt-l19-mcheck-001",
+          "unit:o012-rbt-l19-mcheck-002",
+          "unit:o012-rbt-l19-mcheck-003",
+          "unit:o012-rbt-l19-mcheck-004",
+          "unit:o012-rbt-l19-mcheck-005",
+          "unit:o012-rbt-l19-mcheck-006"
+        ],
+        "solution_bearing_exercises": 12,
+        "solution_pair_edges": 12,
+        "triple_exercise_ids": [
+          "unit:o012-rbt-l18-mcheck-001",
+          "unit:o012-rbt-l18-mcheck-002",
+          "unit:o012-rbt-l18-mcheck-003",
+          "unit:o012-rbt-l18-mcheck-004",
+          "unit:o012-rbt-l18-mcheck-005",
+          "unit:o012-rbt-l18-mcheck-006",
+          "unit:o012-rbt-l19-mcheck-001",
+          "unit:o012-rbt-l19-mcheck-002",
+          "unit:o012-rbt-l19-mcheck-003",
+          "unit:o012-rbt-l19-mcheck-004",
+          "unit:o012-rbt-l19-mcheck-005",
+          "unit:o012-rbt-l19-mcheck-006"
+        ]
+      },
+      "D60-R08": {
+        "capped_quota_credit": 6,
+        "frozen_components": [
+          "o012-fom-u001"
+        ],
+        "graph_complete_triples": 6,
+        "quota_gap": 0,
+        "reusable_exercise_ids_without_hint": [],
+        "reusable_pairs_without_hint": 0,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-fom-u001-mcheck-001",
+          "unit:o012-fom-u001-mcheck-002",
+          "unit:o012-fom-u001-mcheck-003",
+          "unit:o012-fom-u001-mcheck-004",
+          "unit:o012-fom-u001-mcheck-005",
+          "unit:o012-fom-u001-mcheck-006"
+        ],
+        "solution_bearing_exercises": 6,
+        "solution_pair_edges": 6,
+        "triple_exercise_ids": [
+          "unit:o012-fom-u001-mcheck-001",
+          "unit:o012-fom-u001-mcheck-002",
+          "unit:o012-fom-u001-mcheck-003",
+          "unit:o012-fom-u001-mcheck-004",
+          "unit:o012-fom-u001-mcheck-005",
+          "unit:o012-fom-u001-mcheck-006"
+        ]
+      },
+      "D60-R09": {
+        "capped_quota_credit": 6,
+        "frozen_components": [
+          "o012-fom-u002"
+        ],
+        "graph_complete_triples": 6,
+        "quota_gap": 0,
+        "reusable_exercise_ids_without_hint": [],
+        "reusable_pairs_without_hint": 0,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-fom-u002-mcheck-001",
+          "unit:o012-fom-u002-mcheck-002",
+          "unit:o012-fom-u002-mcheck-003",
+          "unit:o012-fom-u002-mcheck-004",
+          "unit:o012-fom-u002-mcheck-005",
+          "unit:o012-fom-u002-mcheck-006"
+        ],
+        "solution_bearing_exercises": 6,
+        "solution_pair_edges": 6,
+        "triple_exercise_ids": [
+          "unit:o012-fom-u002-mcheck-001",
+          "unit:o012-fom-u002-mcheck-002",
+          "unit:o012-fom-u002-mcheck-003",
+          "unit:o012-fom-u002-mcheck-004",
+          "unit:o012-fom-u002-mcheck-005",
+          "unit:o012-fom-u002-mcheck-006"
+        ]
+      },
+      "D60-R10": {
+        "capped_quota_credit": 6,
+        "frozen_components": [
+          "o012-fom-u003"
+        ],
+        "graph_complete_triples": 6,
+        "quota_gap": 0,
+        "reusable_exercise_ids_without_hint": [],
+        "reusable_pairs_without_hint": 0,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-fom-u003-mcheck-001",
+          "unit:o012-fom-u003-mcheck-002",
+          "unit:o012-fom-u003-mcheck-003",
+          "unit:o012-fom-u003-mcheck-004",
+          "unit:o012-fom-u003-mcheck-005",
+          "unit:o012-fom-u003-mcheck-006"
+        ],
+        "solution_bearing_exercises": 6,
+        "solution_pair_edges": 6,
+        "triple_exercise_ids": [
+          "unit:o012-fom-u003-mcheck-001",
+          "unit:o012-fom-u003-mcheck-002",
+          "unit:o012-fom-u003-mcheck-003",
+          "unit:o012-fom-u003-mcheck-004",
+          "unit:o012-fom-u003-mcheck-005",
+          "unit:o012-fom-u003-mcheck-006"
+        ]
+      },
+      "D60-R11": {
+        "capped_quota_credit": 6,
+        "frozen_components": [
+          "o012-fom-u004"
+        ],
+        "graph_complete_triples": 7,
+        "quota_gap": 0,
+        "reusable_exercise_ids_without_hint": [],
+        "reusable_pairs_without_hint": 0,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-fom-u004-mcheck-001",
+          "unit:o012-fom-u004-mcheck-002",
+          "unit:o012-fom-u004-mcheck-003",
+          "unit:o012-fom-u004-mcheck-004",
+          "unit:o012-fom-u004-mcheck-005",
+          "unit:o012-fom-u004-mcheck-006",
+          "unit:o012-fom-u004-mcheck-007"
+        ],
+        "solution_bearing_exercises": 7,
+        "solution_pair_edges": 7,
+        "triple_exercise_ids": [
+          "unit:o012-fom-u004-mcheck-001",
+          "unit:o012-fom-u004-mcheck-002",
+          "unit:o012-fom-u004-mcheck-003",
+          "unit:o012-fom-u004-mcheck-004",
+          "unit:o012-fom-u004-mcheck-005",
+          "unit:o012-fom-u004-mcheck-006",
+          "unit:o012-fom-u004-mcheck-007"
+        ]
+      },
+      "D60-R12": {
+        "capped_quota_credit": 6,
+        "frozen_components": [
+          "o012-fom-u005",
+          "o012-fom-u006",
+          "o012-fom-u007"
+        ],
+        "graph_complete_triples": 18,
+        "quota_gap": 0,
+        "reusable_exercise_ids_without_hint": [],
+        "reusable_pairs_without_hint": 0,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-fom-u005-mcheck-001",
+          "unit:o012-fom-u005-mcheck-002",
+          "unit:o012-fom-u005-mcheck-003",
+          "unit:o012-fom-u005-mcheck-004",
+          "unit:o012-fom-u005-mcheck-005",
+          "unit:o012-fom-u005-mcheck-006",
+          "unit:o012-fom-u006-mcheck-001",
+          "unit:o012-fom-u006-mcheck-002",
+          "unit:o012-fom-u006-mcheck-003",
+          "unit:o012-fom-u006-mcheck-004",
+          "unit:o012-fom-u006-mcheck-005",
+          "unit:o012-fom-u006-mcheck-006",
+          "unit:o012-fom-u007-mcheck-001",
+          "unit:o012-fom-u007-mcheck-002",
+          "unit:o012-fom-u007-mcheck-003",
+          "unit:o012-fom-u007-mcheck-004",
+          "unit:o012-fom-u007-mcheck-005",
+          "unit:o012-fom-u007-mcheck-006"
+        ],
+        "solution_bearing_exercises": 18,
+        "solution_pair_edges": 18,
+        "triple_exercise_ids": [
+          "unit:o012-fom-u005-mcheck-001",
+          "unit:o012-fom-u005-mcheck-002",
+          "unit:o012-fom-u005-mcheck-003",
+          "unit:o012-fom-u005-mcheck-004",
+          "unit:o012-fom-u005-mcheck-005",
+          "unit:o012-fom-u005-mcheck-006",
+          "unit:o012-fom-u006-mcheck-001",
+          "unit:o012-fom-u006-mcheck-002",
+          "unit:o012-fom-u006-mcheck-003",
+          "unit:o012-fom-u006-mcheck-004",
+          "unit:o012-fom-u006-mcheck-005",
+          "unit:o012-fom-u006-mcheck-006",
+          "unit:o012-fom-u007-mcheck-001",
+          "unit:o012-fom-u007-mcheck-002",
+          "unit:o012-fom-u007-mcheck-003",
+          "unit:o012-fom-u007-mcheck-004",
+          "unit:o012-fom-u007-mcheck-005",
+          "unit:o012-fom-u007-mcheck-006"
+        ]
+      },
+      "D60-R13": {
+        "capped_quota_credit": 6,
+        "frozen_components": [
+          "o012-rbt-l20",
+          "o012-rbt-l21",
+          "o012-rbt-l22",
+          "o012-rbt-l23",
+          "o012-rbt-l24",
+          "o012-rbt-l25",
+          "o012-rbt-l26",
+          "o012-rbt-l27"
+        ],
+        "graph_complete_triples": 48,
+        "quota_gap": 0,
+        "reusable_exercise_ids_without_hint": [
+          "unit:o012-rbt-l20-ex-001",
+          "unit:o012-rbt-l20-ex-002",
+          "unit:o012-rbt-l20-ex-003",
+          "unit:o012-rbt-l20-ex-004"
+        ],
+        "reusable_pairs_without_hint": 4,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-rbt-l20-ex-001",
+          "unit:o012-rbt-l20-ex-002",
+          "unit:o012-rbt-l20-ex-003",
+          "unit:o012-rbt-l20-ex-004",
+          "unit:o012-rbt-l20-mcheck-001",
+          "unit:o012-rbt-l20-mcheck-002",
+          "unit:o012-rbt-l20-mcheck-003",
+          "unit:o012-rbt-l20-mcheck-004",
+          "unit:o012-rbt-l20-mcheck-005",
+          "unit:o012-rbt-l20-mcheck-006",
+          "unit:o012-rbt-l21-mcheck-001",
+          "unit:o012-rbt-l21-mcheck-002",
+          "unit:o012-rbt-l21-mcheck-003",
+          "unit:o012-rbt-l21-mcheck-004",
+          "unit:o012-rbt-l21-mcheck-005",
+          "unit:o012-rbt-l21-mcheck-006",
+          "unit:o012-rbt-l22-mcheck-001",
+          "unit:o012-rbt-l22-mcheck-002",
+          "unit:o012-rbt-l22-mcheck-003",
+          "unit:o012-rbt-l22-mcheck-004",
+          "unit:o012-rbt-l22-mcheck-005",
+          "unit:o012-rbt-l22-mcheck-006",
+          "unit:o012-rbt-l23-mcheck-001",
+          "unit:o012-rbt-l23-mcheck-002",
+          "unit:o012-rbt-l23-mcheck-003",
+          "unit:o012-rbt-l23-mcheck-004",
+          "unit:o012-rbt-l23-mcheck-005",
+          "unit:o012-rbt-l23-mcheck-006",
+          "unit:o012-rbt-l24-mcheck-001",
+          "unit:o012-rbt-l24-mcheck-002",
+          "unit:o012-rbt-l24-mcheck-003",
+          "unit:o012-rbt-l24-mcheck-004",
+          "unit:o012-rbt-l24-mcheck-005",
+          "unit:o012-rbt-l24-mcheck-006",
+          "unit:o012-rbt-l25-mcheck-001",
+          "unit:o012-rbt-l25-mcheck-002",
+          "unit:o012-rbt-l25-mcheck-003",
+          "unit:o012-rbt-l25-mcheck-004",
+          "unit:o012-rbt-l25-mcheck-005",
+          "unit:o012-rbt-l25-mcheck-006",
+          "unit:o012-rbt-l26-mcheck-001",
+          "unit:o012-rbt-l26-mcheck-002",
+          "unit:o012-rbt-l26-mcheck-003",
+          "unit:o012-rbt-l26-mcheck-004",
+          "unit:o012-rbt-l26-mcheck-005",
+          "unit:o012-rbt-l26-mcheck-006",
+          "unit:o012-rbt-l27-mcheck-001",
+          "unit:o012-rbt-l27-mcheck-002",
+          "unit:o012-rbt-l27-mcheck-003",
+          "unit:o012-rbt-l27-mcheck-004",
+          "unit:o012-rbt-l27-mcheck-005",
+          "unit:o012-rbt-l27-mcheck-006"
+        ],
+        "solution_bearing_exercises": 52,
+        "solution_pair_edges": 53,
+        "triple_exercise_ids": [
+          "unit:o012-rbt-l20-mcheck-001",
+          "unit:o012-rbt-l20-mcheck-002",
+          "unit:o012-rbt-l20-mcheck-003",
+          "unit:o012-rbt-l20-mcheck-004",
+          "unit:o012-rbt-l20-mcheck-005",
+          "unit:o012-rbt-l20-mcheck-006",
+          "unit:o012-rbt-l21-mcheck-001",
+          "unit:o012-rbt-l21-mcheck-002",
+          "unit:o012-rbt-l21-mcheck-003",
+          "unit:o012-rbt-l21-mcheck-004",
+          "unit:o012-rbt-l21-mcheck-005",
+          "unit:o012-rbt-l21-mcheck-006",
+          "unit:o012-rbt-l22-mcheck-001",
+          "unit:o012-rbt-l22-mcheck-002",
+          "unit:o012-rbt-l22-mcheck-003",
+          "unit:o012-rbt-l22-mcheck-004",
+          "unit:o012-rbt-l22-mcheck-005",
+          "unit:o012-rbt-l22-mcheck-006",
+          "unit:o012-rbt-l23-mcheck-001",
+          "unit:o012-rbt-l23-mcheck-002",
+          "unit:o012-rbt-l23-mcheck-003",
+          "unit:o012-rbt-l23-mcheck-004",
+          "unit:o012-rbt-l23-mcheck-005",
+          "unit:o012-rbt-l23-mcheck-006",
+          "unit:o012-rbt-l24-mcheck-001",
+          "unit:o012-rbt-l24-mcheck-002",
+          "unit:o012-rbt-l24-mcheck-003",
+          "unit:o012-rbt-l24-mcheck-004",
+          "unit:o012-rbt-l24-mcheck-005",
+          "unit:o012-rbt-l24-mcheck-006",
+          "unit:o012-rbt-l25-mcheck-001",
+          "unit:o012-rbt-l25-mcheck-002",
+          "unit:o012-rbt-l25-mcheck-003",
+          "unit:o012-rbt-l25-mcheck-004",
+          "unit:o012-rbt-l25-mcheck-005",
+          "unit:o012-rbt-l25-mcheck-006",
+          "unit:o012-rbt-l26-mcheck-001",
+          "unit:o012-rbt-l26-mcheck-002",
+          "unit:o012-rbt-l26-mcheck-003",
+          "unit:o012-rbt-l26-mcheck-004",
+          "unit:o012-rbt-l26-mcheck-005",
+          "unit:o012-rbt-l26-mcheck-006",
+          "unit:o012-rbt-l27-mcheck-001",
+          "unit:o012-rbt-l27-mcheck-002",
+          "unit:o012-rbt-l27-mcheck-003",
+          "unit:o012-rbt-l27-mcheck-004",
+          "unit:o012-rbt-l27-mcheck-005",
+          "unit:o012-rbt-l27-mcheck-006"
+        ]
+      },
+      "D60-R14": {
+        "capped_quota_credit": 6,
+        "frozen_components": [
+          "o012-rbt-l28",
+          "o012-rbt-l29",
+          "o012-rbt-l30"
+        ],
+        "graph_complete_triples": 18,
+        "quota_gap": 0,
+        "reusable_exercise_ids_without_hint": [],
+        "reusable_pairs_without_hint": 0,
+        "solution_bearing_exercise_ids": [
+          "unit:o012-rbt-l28-mcheck-001",
+          "unit:o012-rbt-l28-mcheck-002",
+          "unit:o012-rbt-l28-mcheck-003",
+          "unit:o012-rbt-l28-mcheck-004",
+          "unit:o012-rbt-l28-mcheck-005",
+          "unit:o012-rbt-l28-mcheck-006",
+          "unit:o012-rbt-l29-mcheck-001",
+          "unit:o012-rbt-l29-mcheck-002",
+          "unit:o012-rbt-l29-mcheck-003",
+          "unit:o012-rbt-l29-mcheck-004",
+          "unit:o012-rbt-l29-mcheck-005",
+          "unit:o012-rbt-l29-mcheck-006",
+          "unit:o012-rbt-l30-mcheck-001",
+          "unit:o012-rbt-l30-mcheck-002",
+          "unit:o012-rbt-l30-mcheck-003",
+          "unit:o012-rbt-l30-mcheck-004",
+          "unit:o012-rbt-l30-mcheck-005",
+          "unit:o012-rbt-l30-mcheck-006"
+        ],
+        "solution_bearing_exercises": 18,
+        "solution_pair_edges": 18,
+        "triple_exercise_ids": [
+          "unit:o012-rbt-l28-mcheck-001",
+          "unit:o012-rbt-l28-mcheck-002",
+          "unit:o012-rbt-l28-mcheck-003",
+          "unit:o012-rbt-l28-mcheck-004",
+          "unit:o012-rbt-l28-mcheck-005",
+          "unit:o012-rbt-l28-mcheck-006",
+          "unit:o012-rbt-l29-mcheck-001",
+          "unit:o012-rbt-l29-mcheck-002",
+          "unit:o012-rbt-l29-mcheck-003",
+          "unit:o012-rbt-l29-mcheck-004",
+          "unit:o012-rbt-l29-mcheck-005",
+          "unit:o012-rbt-l29-mcheck-006",
+          "unit:o012-rbt-l30-mcheck-001",
+          "unit:o012-rbt-l30-mcheck-002",
+          "unit:o012-rbt-l30-mcheck-003",
+          "unit:o012-rbt-l30-mcheck-004",
+          "unit:o012-rbt-l30-mcheck-005",
+          "unit:o012-rbt-l30-mcheck-006"
+        ]
+      }
+    },
+    "triples": [
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u001",
+        "course_route_unit_id": "D60-R08",
+        "exercise_id": "unit:o012-fom-u001-mcheck-001",
+        "hint_id": "unit:o012-fom-u001-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u001-sol-001",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-001-delta-complexes-simplicial-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u001",
+        "course_route_unit_id": "D60-R08",
+        "exercise_id": "unit:o012-fom-u001-mcheck-002",
+        "hint_id": "unit:o012-fom-u001-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u001-sol-002",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-001-delta-complexes-simplicial-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u001",
+        "course_route_unit_id": "D60-R08",
+        "exercise_id": "unit:o012-fom-u001-mcheck-003",
+        "hint_id": "unit:o012-fom-u001-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u001-sol-003",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-001-delta-complexes-simplicial-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u001",
+        "course_route_unit_id": "D60-R08",
+        "exercise_id": "unit:o012-fom-u001-mcheck-004",
+        "hint_id": "unit:o012-fom-u001-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u001-sol-004",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-001-delta-complexes-simplicial-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u001",
+        "course_route_unit_id": "D60-R08",
+        "exercise_id": "unit:o012-fom-u001-mcheck-005",
+        "hint_id": "unit:o012-fom-u001-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u001-sol-005",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-001-delta-complexes-simplicial-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u001",
+        "course_route_unit_id": "D60-R08",
+        "exercise_id": "unit:o012-fom-u001-mcheck-006",
+        "hint_id": "unit:o012-fom-u001-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u001-sol-006",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-001-delta-complexes-simplicial-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u002",
+        "course_route_unit_id": "D60-R09",
+        "exercise_id": "unit:o012-fom-u002-mcheck-001",
+        "hint_id": "unit:o012-fom-u002-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u002-sol-001",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-002-singular-homology-homotopy-invariance.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u002",
+        "course_route_unit_id": "D60-R09",
+        "exercise_id": "unit:o012-fom-u002-mcheck-002",
+        "hint_id": "unit:o012-fom-u002-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u002-sol-002",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-002-singular-homology-homotopy-invariance.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u002",
+        "course_route_unit_id": "D60-R09",
+        "exercise_id": "unit:o012-fom-u002-mcheck-003",
+        "hint_id": "unit:o012-fom-u002-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u002-sol-003",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-002-singular-homology-homotopy-invariance.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u002",
+        "course_route_unit_id": "D60-R09",
+        "exercise_id": "unit:o012-fom-u002-mcheck-004",
+        "hint_id": "unit:o012-fom-u002-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u002-sol-004",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-002-singular-homology-homotopy-invariance.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u002",
+        "course_route_unit_id": "D60-R09",
+        "exercise_id": "unit:o012-fom-u002-mcheck-005",
+        "hint_id": "unit:o012-fom-u002-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u002-sol-005",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-002-singular-homology-homotopy-invariance.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u002",
+        "course_route_unit_id": "D60-R09",
+        "exercise_id": "unit:o012-fom-u002-mcheck-006",
+        "hint_id": "unit:o012-fom-u002-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u002-sol-006",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-002-singular-homology-homotopy-invariance.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u003",
+        "course_route_unit_id": "D60-R10",
+        "exercise_id": "unit:o012-fom-u003-mcheck-001",
+        "hint_id": "unit:o012-fom-u003-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u003-sol-001",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u003",
+        "course_route_unit_id": "D60-R10",
+        "exercise_id": "unit:o012-fom-u003-mcheck-002",
+        "hint_id": "unit:o012-fom-u003-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u003-sol-002",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u003",
+        "course_route_unit_id": "D60-R10",
+        "exercise_id": "unit:o012-fom-u003-mcheck-003",
+        "hint_id": "unit:o012-fom-u003-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u003-sol-003",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u003",
+        "course_route_unit_id": "D60-R10",
+        "exercise_id": "unit:o012-fom-u003-mcheck-004",
+        "hint_id": "unit:o012-fom-u003-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u003-sol-004",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u003",
+        "course_route_unit_id": "D60-R10",
+        "exercise_id": "unit:o012-fom-u003-mcheck-005",
+        "hint_id": "unit:o012-fom-u003-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u003-sol-005",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u003",
+        "course_route_unit_id": "D60-R10",
+        "exercise_id": "unit:o012-fom-u003-mcheck-006",
+        "hint_id": "unit:o012-fom-u003-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u003-sol-006",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-003-exact-sequences-relative-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u004",
+        "course_route_unit_id": "D60-R11",
+        "exercise_id": "unit:o012-fom-u004-mcheck-001",
+        "hint_id": "unit:o012-fom-u004-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u004-sol-001",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u004",
+        "course_route_unit_id": "D60-R11",
+        "exercise_id": "unit:o012-fom-u004-mcheck-002",
+        "hint_id": "unit:o012-fom-u004-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u004-sol-002",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u004",
+        "course_route_unit_id": "D60-R11",
+        "exercise_id": "unit:o012-fom-u004-mcheck-003",
+        "hint_id": "unit:o012-fom-u004-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u004-sol-003",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u004",
+        "course_route_unit_id": "D60-R11",
+        "exercise_id": "unit:o012-fom-u004-mcheck-004",
+        "hint_id": "unit:o012-fom-u004-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u004-sol-004",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u004",
+        "course_route_unit_id": "D60-R11",
+        "exercise_id": "unit:o012-fom-u004-mcheck-005",
+        "hint_id": "unit:o012-fom-u004-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u004-sol-005",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u004",
+        "course_route_unit_id": "D60-R11",
+        "exercise_id": "unit:o012-fom-u004-mcheck-006",
+        "hint_id": "unit:o012-fom-u004-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u004-sol-006",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u004",
+        "course_route_unit_id": "D60-R11",
+        "exercise_id": "unit:o012-fom-u004-mcheck-007",
+        "hint_id": "unit:o012-fom-u004-hint-007",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u004-sol-007",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-004-excision-mayer-vietoris-naturality-comparison.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u005",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u005-mcheck-001",
+        "hint_id": "unit:o012-fom-u005-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u005-sol-001",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-005-degree-maps-local-degree.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u005",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u005-mcheck-002",
+        "hint_id": "unit:o012-fom-u005-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u005-sol-002",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-005-degree-maps-local-degree.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u005",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u005-mcheck-003",
+        "hint_id": "unit:o012-fom-u005-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u005-sol-003",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-005-degree-maps-local-degree.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u005",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u005-mcheck-004",
+        "hint_id": "unit:o012-fom-u005-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u005-sol-004",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-005-degree-maps-local-degree.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u005",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u005-mcheck-005",
+        "hint_id": "unit:o012-fom-u005-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u005-sol-005",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-005-degree-maps-local-degree.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u005",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u005-mcheck-006",
+        "hint_id": "unit:o012-fom-u005-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u005-sol-006",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-005-degree-maps-local-degree.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u006",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u006-mcheck-001",
+        "hint_id": "unit:o012-fom-u006-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u006-sol-001",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u006",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u006-mcheck-002",
+        "hint_id": "unit:o012-fom-u006-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u006-sol-002",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u006",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u006-mcheck-003",
+        "hint_id": "unit:o012-fom-u006-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u006-sol-003",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u006",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u006-mcheck-004",
+        "hint_id": "unit:o012-fom-u006-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u006-sol-004",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u006",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u006-mcheck-005",
+        "hint_id": "unit:o012-fom-u006-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u006-sol-005",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u006",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u006-mcheck-006",
+        "hint_id": "unit:o012-fom-u006-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u006-sol-006",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-006-cellular-complexes.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u007",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u007-mcheck-001",
+        "hint_id": "unit:o012-fom-u007-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u007-sol-001",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u007",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u007-mcheck-002",
+        "hint_id": "unit:o012-fom-u007-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u007-sol-002",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u007",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u007-mcheck-003",
+        "hint_id": "unit:o012-fom-u007-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u007-sol-003",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u007",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u007-mcheck-004",
+        "hint_id": "unit:o012-fom-u007-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u007-sol-004",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u007",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u007-mcheck-005",
+        "hint_id": "unit:o012-fom-u007-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u007-sol-005",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-fom-u007",
+        "course_route_unit_id": "D60-R12",
+        "exercise_id": "unit:o012-fom-u007-mcheck-006",
+        "hint_id": "unit:o012-fom-u007-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-fom-u007-sol-006",
+        "source_path": "source/id-ID/fomberg/units/fomberg-unit-007-cellular-homology.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l18",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l18-mcheck-001",
+        "hint_id": "unit:o012-rbt-l18-hint-001",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l18-sol-001",
+        "source_path": "source/id-ID/units/unit-018-lecture-018.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l18",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l18-mcheck-002",
+        "hint_id": "unit:o012-rbt-l18-hint-002",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l18-sol-002",
+        "source_path": "source/id-ID/units/unit-018-lecture-018.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l18",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l18-mcheck-003",
+        "hint_id": "unit:o012-rbt-l18-hint-003",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l18-sol-003",
+        "source_path": "source/id-ID/units/unit-018-lecture-018.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l18",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l18-mcheck-004",
+        "hint_id": "unit:o012-rbt-l18-hint-004",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l18-sol-004",
+        "source_path": "source/id-ID/units/unit-018-lecture-018.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l18",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l18-mcheck-005",
+        "hint_id": "unit:o012-rbt-l18-hint-005",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l18-sol-005",
+        "source_path": "source/id-ID/units/unit-018-lecture-018.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l18",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l18-mcheck-006",
+        "hint_id": "unit:o012-rbt-l18-hint-006",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l18-sol-006",
+        "source_path": "source/id-ID/units/unit-018-lecture-018.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l19",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l19-mcheck-001",
+        "hint_id": "unit:o012-rbt-l19-hint-001",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l19-sol-001",
+        "source_path": "source/id-ID/units/unit-019-lecture-019.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l19",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l19-mcheck-002",
+        "hint_id": "unit:o012-rbt-l19-hint-002",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l19-sol-002",
+        "source_path": "source/id-ID/units/unit-019-lecture-019.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l19",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l19-mcheck-003",
+        "hint_id": "unit:o012-rbt-l19-hint-003",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l19-sol-003",
+        "source_path": "source/id-ID/units/unit-019-lecture-019.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l19",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l19-mcheck-004",
+        "hint_id": "unit:o012-rbt-l19-hint-004",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l19-sol-004",
+        "source_path": "source/id-ID/units/unit-019-lecture-019.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l19",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l19-mcheck-005",
+        "hint_id": "unit:o012-rbt-l19-hint-005",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l19-sol-005",
+        "source_path": "source/id-ID/units/unit-019-lecture-019.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l19",
+        "course_route_unit_id": "D60-R07",
+        "exercise_id": "unit:o012-rbt-l19-mcheck-006",
+        "hint_id": "unit:o012-rbt-l19-hint-006",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l19-sol-006",
+        "source_path": "source/id-ID/units/unit-019-lecture-019.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l20",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l20-mcheck-001",
+        "hint_id": "unit:o012-rbt-l20-hint-001",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l20-sol-001",
+        "source_path": "source/id-ID/units/unit-020-lecture-020.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l20",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l20-mcheck-002",
+        "hint_id": "unit:o012-rbt-l20-hint-002",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l20-sol-002",
+        "source_path": "source/id-ID/units/unit-020-lecture-020.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l20",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l20-mcheck-003",
+        "hint_id": "unit:o012-rbt-l20-hint-003",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l20-sol-003",
+        "source_path": "source/id-ID/units/unit-020-lecture-020.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l20",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l20-mcheck-004",
+        "hint_id": "unit:o012-rbt-l20-hint-004",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l20-sol-004",
+        "source_path": "source/id-ID/units/unit-020-lecture-020.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l20",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l20-mcheck-005",
+        "hint_id": "unit:o012-rbt-l20-hint-005",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l20-sol-005",
+        "source_path": "source/id-ID/units/unit-020-lecture-020.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l20",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l20-mcheck-006",
+        "hint_id": "unit:o012-rbt-l20-hint-006",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l20-sol-006",
+        "source_path": "source/id-ID/units/unit-020-lecture-020.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l21",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l21-mcheck-001",
+        "hint_id": "unit:o012-rbt-l21-hint-001",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l21-sol-001",
+        "source_path": "source/id-ID/units/unit-021-lecture-021.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l21",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l21-mcheck-002",
+        "hint_id": "unit:o012-rbt-l21-hint-002",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l21-sol-002",
+        "source_path": "source/id-ID/units/unit-021-lecture-021.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l21",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l21-mcheck-003",
+        "hint_id": "unit:o012-rbt-l21-hint-003",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l21-sol-003",
+        "source_path": "source/id-ID/units/unit-021-lecture-021.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l21",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l21-mcheck-004",
+        "hint_id": "unit:o012-rbt-l21-hint-004",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l21-sol-004",
+        "source_path": "source/id-ID/units/unit-021-lecture-021.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l21",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l21-mcheck-005",
+        "hint_id": "unit:o012-rbt-l21-hint-005",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l21-sol-005",
+        "source_path": "source/id-ID/units/unit-021-lecture-021.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l21",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l21-mcheck-006",
+        "hint_id": "unit:o012-rbt-l21-hint-006",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l21-sol-006",
+        "source_path": "source/id-ID/units/unit-021-lecture-021.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l22",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l22-mcheck-001",
+        "hint_id": "unit:o012-rbt-l22-hint-001",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l22-sol-001",
+        "source_path": "source/id-ID/units/unit-022-lecture-022.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l22",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l22-mcheck-002",
+        "hint_id": "unit:o012-rbt-l22-hint-002",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l22-sol-002",
+        "source_path": "source/id-ID/units/unit-022-lecture-022.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l22",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l22-mcheck-003",
+        "hint_id": "unit:o012-rbt-l22-hint-003",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l22-sol-003",
+        "source_path": "source/id-ID/units/unit-022-lecture-022.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l22",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l22-mcheck-004",
+        "hint_id": "unit:o012-rbt-l22-hint-004",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l22-sol-004",
+        "source_path": "source/id-ID/units/unit-022-lecture-022.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l22",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l22-mcheck-005",
+        "hint_id": "unit:o012-rbt-l22-hint-005",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l22-sol-005",
+        "source_path": "source/id-ID/units/unit-022-lecture-022.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l22",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l22-mcheck-006",
+        "hint_id": "unit:o012-rbt-l22-hint-006",
+        "route_metadata": "inferred_from_control",
+        "solution_id": "unit:o012-rbt-l22-sol-006",
+        "source_path": "source/id-ID/units/unit-022-lecture-022.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l23",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l23-mcheck-001",
+        "hint_id": "unit:o012-rbt-l23-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l23-sol-001",
+        "source_path": "source/id-ID/units/unit-023-lecture-023.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l23",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l23-mcheck-002",
+        "hint_id": "unit:o012-rbt-l23-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l23-sol-002",
+        "source_path": "source/id-ID/units/unit-023-lecture-023.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l23",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l23-mcheck-003",
+        "hint_id": "unit:o012-rbt-l23-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l23-sol-003",
+        "source_path": "source/id-ID/units/unit-023-lecture-023.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l23",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l23-mcheck-004",
+        "hint_id": "unit:o012-rbt-l23-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l23-sol-004",
+        "source_path": "source/id-ID/units/unit-023-lecture-023.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l23",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l23-mcheck-005",
+        "hint_id": "unit:o012-rbt-l23-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l23-sol-005",
+        "source_path": "source/id-ID/units/unit-023-lecture-023.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l23",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l23-mcheck-006",
+        "hint_id": "unit:o012-rbt-l23-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l23-sol-006",
+        "source_path": "source/id-ID/units/unit-023-lecture-023.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l24",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l24-mcheck-001",
+        "hint_id": "unit:o012-rbt-l24-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l24-sol-001",
+        "source_path": "source/id-ID/units/unit-024-lecture-024.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l24",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l24-mcheck-002",
+        "hint_id": "unit:o012-rbt-l24-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l24-sol-002",
+        "source_path": "source/id-ID/units/unit-024-lecture-024.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l24",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l24-mcheck-003",
+        "hint_id": "unit:o012-rbt-l24-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l24-sol-003",
+        "source_path": "source/id-ID/units/unit-024-lecture-024.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l24",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l24-mcheck-004",
+        "hint_id": "unit:o012-rbt-l24-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l24-sol-004",
+        "source_path": "source/id-ID/units/unit-024-lecture-024.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l24",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l24-mcheck-005",
+        "hint_id": "unit:o012-rbt-l24-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l24-sol-005",
+        "source_path": "source/id-ID/units/unit-024-lecture-024.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l24",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l24-mcheck-006",
+        "hint_id": "unit:o012-rbt-l24-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l24-sol-006",
+        "source_path": "source/id-ID/units/unit-024-lecture-024.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l25",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l25-mcheck-001",
+        "hint_id": "unit:o012-rbt-l25-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l25-sol-001",
+        "source_path": "source/id-ID/units/unit-025-lecture-025.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l25",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l25-mcheck-002",
+        "hint_id": "unit:o012-rbt-l25-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l25-sol-002",
+        "source_path": "source/id-ID/units/unit-025-lecture-025.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l25",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l25-mcheck-003",
+        "hint_id": "unit:o012-rbt-l25-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l25-sol-003",
+        "source_path": "source/id-ID/units/unit-025-lecture-025.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l25",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l25-mcheck-004",
+        "hint_id": "unit:o012-rbt-l25-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l25-sol-004",
+        "source_path": "source/id-ID/units/unit-025-lecture-025.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l25",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l25-mcheck-005",
+        "hint_id": "unit:o012-rbt-l25-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l25-sol-005",
+        "source_path": "source/id-ID/units/unit-025-lecture-025.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l25",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l25-mcheck-006",
+        "hint_id": "unit:o012-rbt-l25-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l25-sol-006",
+        "source_path": "source/id-ID/units/unit-025-lecture-025.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l26",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l26-mcheck-001",
+        "hint_id": "unit:o012-rbt-l26-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l26-sol-001",
+        "source_path": "source/id-ID/units/unit-026-lecture-026.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l26",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l26-mcheck-002",
+        "hint_id": "unit:o012-rbt-l26-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l26-sol-002",
+        "source_path": "source/id-ID/units/unit-026-lecture-026.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l26",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l26-mcheck-003",
+        "hint_id": "unit:o012-rbt-l26-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l26-sol-003",
+        "source_path": "source/id-ID/units/unit-026-lecture-026.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l26",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l26-mcheck-004",
+        "hint_id": "unit:o012-rbt-l26-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l26-sol-004",
+        "source_path": "source/id-ID/units/unit-026-lecture-026.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l26",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l26-mcheck-005",
+        "hint_id": "unit:o012-rbt-l26-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l26-sol-005",
+        "source_path": "source/id-ID/units/unit-026-lecture-026.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l26",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l26-mcheck-006",
+        "hint_id": "unit:o012-rbt-l26-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l26-sol-006",
+        "source_path": "source/id-ID/units/unit-026-lecture-026.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l27",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l27-mcheck-001",
+        "hint_id": "unit:o012-rbt-l27-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l27-sol-001",
+        "source_path": "source/id-ID/units/unit-027-lecture-027.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l27",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l27-mcheck-002",
+        "hint_id": "unit:o012-rbt-l27-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l27-sol-002",
+        "source_path": "source/id-ID/units/unit-027-lecture-027.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l27",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l27-mcheck-003",
+        "hint_id": "unit:o012-rbt-l27-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l27-sol-003",
+        "source_path": "source/id-ID/units/unit-027-lecture-027.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l27",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l27-mcheck-004",
+        "hint_id": "unit:o012-rbt-l27-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l27-sol-004",
+        "source_path": "source/id-ID/units/unit-027-lecture-027.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l27",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l27-mcheck-005",
+        "hint_id": "unit:o012-rbt-l27-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l27-sol-005",
+        "source_path": "source/id-ID/units/unit-027-lecture-027.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l27",
+        "course_route_unit_id": "D60-R13",
+        "exercise_id": "unit:o012-rbt-l27-mcheck-006",
+        "hint_id": "unit:o012-rbt-l27-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l27-sol-006",
+        "source_path": "source/id-ID/units/unit-027-lecture-027.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l28",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l28-mcheck-001",
+        "hint_id": "unit:o012-rbt-l28-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l28-sol-001",
+        "source_path": "source/id-ID/units/unit-028-lecture-028.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l28",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l28-mcheck-002",
+        "hint_id": "unit:o012-rbt-l28-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l28-sol-002",
+        "source_path": "source/id-ID/units/unit-028-lecture-028.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l28",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l28-mcheck-003",
+        "hint_id": "unit:o012-rbt-l28-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l28-sol-003",
+        "source_path": "source/id-ID/units/unit-028-lecture-028.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l28",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l28-mcheck-004",
+        "hint_id": "unit:o012-rbt-l28-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l28-sol-004",
+        "source_path": "source/id-ID/units/unit-028-lecture-028.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l28",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l28-mcheck-005",
+        "hint_id": "unit:o012-rbt-l28-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l28-sol-005",
+        "source_path": "source/id-ID/units/unit-028-lecture-028.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l28",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l28-mcheck-006",
+        "hint_id": "unit:o012-rbt-l28-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l28-sol-006",
+        "source_path": "source/id-ID/units/unit-028-lecture-028.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l29",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l29-mcheck-001",
+        "hint_id": "unit:o012-rbt-l29-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l29-sol-001",
+        "source_path": "source/id-ID/units/unit-029-lecture-029.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l29",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l29-mcheck-002",
+        "hint_id": "unit:o012-rbt-l29-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l29-sol-002",
+        "source_path": "source/id-ID/units/unit-029-lecture-029.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l29",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l29-mcheck-003",
+        "hint_id": "unit:o012-rbt-l29-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l29-sol-003",
+        "source_path": "source/id-ID/units/unit-029-lecture-029.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l29",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l29-mcheck-004",
+        "hint_id": "unit:o012-rbt-l29-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l29-sol-004",
+        "source_path": "source/id-ID/units/unit-029-lecture-029.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l29",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l29-mcheck-005",
+        "hint_id": "unit:o012-rbt-l29-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l29-sol-005",
+        "source_path": "source/id-ID/units/unit-029-lecture-029.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l29",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l29-mcheck-006",
+        "hint_id": "unit:o012-rbt-l29-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l29-sol-006",
+        "source_path": "source/id-ID/units/unit-029-lecture-029.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l30",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l30-mcheck-001",
+        "hint_id": "unit:o012-rbt-l30-hint-001",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l30-sol-001",
+        "source_path": "source/id-ID/units/unit-030-lecture-030.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l30",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l30-mcheck-002",
+        "hint_id": "unit:o012-rbt-l30-hint-002",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l30-sol-002",
+        "source_path": "source/id-ID/units/unit-030-lecture-030.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l30",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l30-mcheck-003",
+        "hint_id": "unit:o012-rbt-l30-hint-003",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l30-sol-003",
+        "source_path": "source/id-ID/units/unit-030-lecture-030.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l30",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l30-mcheck-004",
+        "hint_id": "unit:o012-rbt-l30-hint-004",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l30-sol-004",
+        "source_path": "source/id-ID/units/unit-030-lecture-030.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l30",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l30-mcheck-005",
+        "hint_id": "unit:o012-rbt-l30-hint-005",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l30-sol-005",
+        "source_path": "source/id-ID/units/unit-030-lecture-030.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      },
+      {
+        "assessment_id": null,
+        "component_id": "o012-rbt-l30",
+        "course_route_unit_id": "D60-R14",
+        "exercise_id": "unit:o012-rbt-l30-mcheck-006",
+        "hint_id": "unit:o012-rbt-l30-hint-006",
+        "route_metadata": "direct",
+        "solution_id": "unit:o012-rbt-l30-sol-006",
+        "source_path": "source/id-ID/units/unit-030-lecture-030.md",
+        "translation_states": {
+          "exercise": "structurally_verified",
+          "hint": "structurally_verified",
+          "solution": "structurally_verified"
+        }
+      }
+    ]
+  },
+  "requirements": {
+    "cumulative_assessments": 3,
+    "cumulative_items": 24,
+    "items_per_cumulative_assessment": 8,
+    "ordinary_items": 84,
+    "ordinary_per_route": 6,
+    "route_count": 14,
+    "total_solution_bearing_items": 108
+  },
+  "role_id": "O012",
+  "schema_version": "1.0",
+  "scope": {
+    "method": "An ordinary item counts only when one active exercise is the target of exactly one active hints edge from an active hint and exactly one active solves edge from an active full solution. Assessment triples are classified separately. Route credit is capped at six per frozen route unit.",
+    "no_publication_or_backend_mutation": true,
+    "output_path": "qa/ROUTE_MASTERY_CENSUS.json"
+  },
+  "status": "PASS"
+}
