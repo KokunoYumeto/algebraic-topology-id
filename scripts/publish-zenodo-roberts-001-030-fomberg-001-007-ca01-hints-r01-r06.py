@@ -161,13 +161,17 @@ def verify_zip(path: Path) -> None:
 
 
 def verify_scope_metadata(metadata: dict) -> None:
+    license_value = metadata.get("license")
+    if isinstance(license_value, dict):
+        license_value = license_value.get("id")
     if (
         metadata.get("title") != base.TITLE
         or metadata.get("version") != base.VERSION
-        or metadata.get("license") != "cc-by-sa-4.0"
+        or license_value != "cc-by-sa-4.0"
         or metadata.get("language") != "ind"
         or metadata.get("access_right") != "open"
-        or metadata.get("creators") != EXPECTED_CREATORS
+        or normalized_people(metadata.get("creators", []), contributor=False)
+        != normalized_people(EXPECTED_CREATORS, contributor=False)
     ):
         raise RuntimeError("metadata identity/rights/creators drift")
     assert_organization_rule(metadata)
@@ -193,8 +197,9 @@ def verify_scope_metadata(metadata: dict) -> None:
             raise RuntimeError(f"metadata description omits scope marker: {marker}")
     # The exact lecture credit is represented as a Zenodo contributor rather
     # than prose authorship; require that representation explicitly.
-    if {"name": "Lazarovich, Nir", "type": "Other"} not in metadata.get(
-        "contributors", []
+    if not any(
+        row.get("name") == "Lazarovich, Nir" and row.get("type") == "Other"
+        for row in metadata.get("contributors", [])
     ):
         raise RuntimeError("Nir Lazarovich lecture credit is absent")
 

@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS_PUSHED_DEPLOYED_AND_ANONYMOUSLY_BYTE_VERIFIED",
+  "date": "2026-08-26",
+  "scope": "Roberts 30/30; selected Fomberg Sections 1.1-1.13 complete; CA01 8/8; ordinary mastery 84/84; 92/108 required solution-bearing items; composite course partial",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "commit": "646769fb52a51e997f5409fc2148f8892508da1d",
+  "tree": "5c70b30a7a3e2787a81932ae85d2a61878dd2e34",
+  "parent": "df890fe541fdb7caa847b8d092be13db196cbf84",
+  "push": {
+    "status": "PASS",
+    "remote_ref": "refs/heads/main",
+    "remote_commit": "646769fb52a51e997f5409fc2148f8892508da1d"
+  },
+  "pages_workflow": {
+    "status": "completed",
+    "conclusion": "success",
+    "run_id": 32933679761,
+    "job_id": 98070707388,
+    "deployment_id": 6097650955,
+    "deployment_status_id": 17342667144,
+    "deployment_state": "success",
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/32933679761"
+  },
+  "commit_pinned_anonymous_readback": {
+    "status": "PASS",
+    "method": "anonymous HTTPS GET of every exact changed path from raw.githubusercontent.com at the immutable commit",
+    "changed_files": 58,
+    "changed_bytes": 63693654,
+    "matched_files": 58,
+    "mismatched_files": 0,
+    "commit_delta_manifest_sha256": "614dadebbe20a3c625ead1191e29ab704f7cd75981f84c92765406a24ec76ced"
+  },
+  "pages_anonymous_readback": [
+    {
+      "url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06/",
+      "http_status": 200,
+      "bytes": 15026881,
+      "sha256": "7ed278d73a324ba0a9e5acadedf448221b3791db7322fdf6d29225afd0124d2b",
+      "matches_local": true
+    },
+    {
+      "url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01/",
+      "http_status": 200,
+      "bytes": 14958219,
+      "sha256": "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf",
+      "matches_frozen_predecessor": true
+    }
+  ],
+  "publication_truth": {
+    "ordinary_mastery": "84/84",
+    "cumulative_assessment_001": "8/8",
+    "total_required_mastery": "92/108",
+    "remaining_assessment_items": 16,
+    "remaining_laboratories": 4,
+    "capstone_pending": true,
+    "course_complete": false
+  },
+  "credentials_recorded": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

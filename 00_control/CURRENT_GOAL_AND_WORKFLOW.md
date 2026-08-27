@@ -73,8 +73,12 @@ and bundle SHA-256
 `7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b`.
 The centered/reflowing 15,026,881-byte HTML and 482-page deterministic PDF
 pass independent math, language, structural, browser, visual, navigation,
-rights, and hash QA. This successor is locally release-ready and must be
-published in the existing lineages before CA02 production proceeds.
+rights, and hash QA. This successor is public and exactly anonymously verified.
+GitHub commit `646769fb52a51e997f5409fc2148f8892508da1d` and Pages run
+`32933679761` deploy the reader. Zenodo version `0.31.1` is record `22106133`,
+DOI `10.5281/zenodo.22106133`, in the unchanged concept DOI
+`10.5281/zenodo.22061489`; all nine files passed two anonymous byte/SHA-256
+readback passes. The next production action is CA02 and CA03.
 The CA01 boundary is now public through the existing GitHub, Pages, and Zenodo
 lineages with exact anonymous byte/hash readback. GitHub content commit is
 `4b5f8f74bf361e45687d55fc31a95ea3e0c657ab`; Pages run `32924728855`

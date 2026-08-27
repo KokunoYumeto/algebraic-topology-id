@@ -580,5 +580,9 @@ visual inspection. The self-contained native-MathML HTML has zero unresolved
 fragments, no external runtime assets, centered desktop layout, mobile reflow
 without page-level overflow, keyboard focus, AA contrast, and zero browser
 errors or warnings. The PDF remains intentionally untagged; HTML is the
-primary accessible surface. Public-byte readback remains pending until this
-successor is published through the existing GitHub/Pages and Zenodo lineages.
+primary accessible surface. The boundary is public at GitHub commit
+`646769fb52a51e997f5409fc2148f8892508da1d` and Pages run `32933679761`;
+all 58 commit-delta paths and the deployed reader match anonymous bytes.
+Zenodo version `0.31.1`, record `22106133`, DOI
+`10.5281/zenodo.22106133`, preserves concept `10.5281/zenodo.22061489`; all
+nine reader-first files passed two complete anonymous byte/SHA-256 readbacks.

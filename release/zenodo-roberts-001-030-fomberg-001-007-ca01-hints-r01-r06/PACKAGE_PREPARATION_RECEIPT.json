@@ -13,8 +13,8 @@
   },
   "packager": {
     "path": "scripts/package-release-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06.py",
-    "bytes": 47540,
-    "sha256": "72d5cbb6fedbcfd0f508f8b0e959602432814fa470718d762940825c95aae209"
+    "bytes": 48177,
+    "sha256": "a0d1546790930bb0ff5a778b6dc61127bc43c3e2130e599e491c9f98729b22a3"
   },
   "files": [
     {
@@ -40,12 +40,12 @@
     {
       "filename": "SHA256SUMS",
       "bytes": 953,
-      "sha256": "c8784e25f0029d93b0f6ff94a7f895b38084902fe475d636306e1c9a7d457700"
+      "sha256": "45a175cf8c99befe8e8bc020c484f222a9d47feee8089bfc0ef493a7cc275500"
     },
     {
       "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_EDITABLE_SOURCE_BACKEND.zip",
-      "bytes": 7849015,
-      "sha256": "4c9d17f44f2c8e5e56203ed092d9ccae2383ab7fd79fc7fc11a927ac8dff69e6"
+      "bytes": 7849115,
+      "sha256": "c70d050321fd1daae86d09fbe246eee451430fe75ba517f69ef800ea2a20da93"
     },
     {
       "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_QA_PROVENANCE.zip",
@@ -59,19 +59,19 @@
     },
     {
       "filename": "release-manifest.json",
-      "bytes": 72254,
-      "sha256": "3f07efd8352a16a9186c934fda67e3957dc2eafc52badc07fa3c8e887bc9d59d"
+      "bytes": 72654,
+      "sha256": "3f71a5eb573eae7e8cee529b8f79501b39509fac4d0ae46ac630e1628899133b"
     }
   ],
   "file_count": 9,
-  "total_payload_bytes": 31928322,
+  "total_payload_bytes": 31928822,
   "archives": [
     {
       "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_EDITABLE_SOURCE_BACKEND.zip",
-      "bytes": 7849015,
-      "sha256": "4c9d17f44f2c8e5e56203ed092d9ccae2383ab7fd79fc7fc11a927ac8dff69e6",
+      "bytes": 7849115,
+      "sha256": "c70d050321fd1daae86d09fbe246eee451430fe75ba517f69ef800ea2a20da93",
       "entry_count": 180,
-      "uncompressed_bytes": 19145294,
+      "uncompressed_bytes": 19145931,
       "crc_status": "PASS",
       "first_entry": "00_control/ADVERSE_LEDGER.csv",
       "last_entry": "source/id-ID/units/unit-030-lecture-030.md"
@@ -97,6 +97,8 @@
     "final_build_visual_browser_gates": true,
     "ca01_independent_reviews": true,
     "ordinary_hint_independent_reviews": true,
+    "ordinary_hints_static_independent_reviews": true,
+    "ordinary_mastery_84_complete": true,
     "route_and_proof_censuses_included": true,
     "integrated_license": "CC BY-SA 4.0",
     "roberts_component_license": "CC BY 4.0",
