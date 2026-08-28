@@ -758,4 +758,12 @@ unchanged concept `10.5281/zenodo.22061489`; every one of the reader-first nine
 files passed two anonymous byte/SHA-256 readback passes. Sanitized receipt is
 11,568 bytes/SHA-256
 `3fbc40c68fac53010fd6248ccb5438e2ffc7ab1a56c7ac390996b50b6ba35b95`.
-GitHub/Pages publication is the next transaction; Lab 3 follows immediately.
+GitHub content commit `8989fbd602f89d0a8d6c30bc7bac1980a74b2c99`, tree
+`064aa78a25fcc34aaa0a1e8e64d52b2a702c79d7`, and Pages run `33187541456`
+preserve the same Lab 2 boundary. The deployment succeeded at ID `6144286315`
+with status ID `17467474103`. All 71 changed files (68,293,528 bytes) passed
+anonymous commit-pinned raw byte/SHA-256 readback; both the deployed current
+reader and frozen Lab 1 predecessor passed exact Pages/raw comparison. Sanitized
+GitHub receipt is 31,229 bytes/SHA-256
+`c6ccde700267a29dfb2246cb4f5a78428547c75709ac60a56c9a222c84865a80`.
+Lab 3 is the next production boundary.

@@ -94,10 +94,14 @@ anonymous byte/SHA-256 readback passes; sanitized receipt
 `release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/publication-receipt.json`
 is 11,568 bytes/SHA-256
 `3fbc40c68fac53010fd6248ccb5438e2ffc7ab1a56c7ac390996b50b6ba35b95`.
-The exact next action is the narrow GitHub content commit/push, Pages deploy,
-and anonymous readback for this same Lab 2 boundary, followed immediately by
-Laboratory 3 (cellular boundary maps and degree). Do not rebuild or republish
-Labs 1–2 absent a newly demonstrated defect.
+The same Lab 2 boundary is public on GitHub at content commit
+`8989fbd602f89d0a8d6c30bc7bac1980a74b2c99`, tree
+`064aa78a25fcc34aaa0a1e8e64d52b2a702c79d7`, and Pages run `33187541456`.
+All 71 changed files and the deployed reader passed anonymous commit-pinned or
+Pages byte/SHA-256 readback. The sanitized receipt is 31,229 bytes/SHA-256
+`c6ccde700267a29dfb2246cb4f5a78428547c75709ac60a56c9a222c84865a80`.
+The exact next action is Laboratory 3 (cellular boundary maps and degree). Do
+not rebuild or republish Labs 1–2 absent a newly demonstrated defect.
 
 1. Preserve completed Laboratories 1–2 and add the two remaining offline
    reproducible laboratories, each with source, tests, expected output,
