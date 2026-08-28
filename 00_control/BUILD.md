@@ -707,5 +707,12 @@ Zenodo version `0.31.3`, record `22142210`, DOI
 the existing concept `10.5281/zenodo.22061489`. Every file passed two anonymous
 HTTP 200 byte/SHA-256 readback passes. Sanitized publication receipt SHA-256 is
 `ef52c6362b65424c79991ffd35ede64b0ed64d96a0219577fe0df1016b25f830`.
-The matching GitHub/Pages successor remains the next publication action; record
-its public identifiers only after exact anonymous readback.
+GitHub content commit `a8311697800102ce65ce7f67752b0179ccaa9109`, tree
+`4f438d7932f3576ae78be051ca210b5914e1eb30`, Pages run `33162255086`, job
+`98819266824`, deployment `6139369092`, and successful status `17454891852`
+pass. All 69 changed files/66,866,333 bytes match their commit-pinned public
+copies; raw and Pages reader bytes match the local HTML exactly, and the frozen
+predecessor remains exact. Delta-manifest SHA-256 is
+`7a080f8120e58f8c7fd39bd56247d993c03095bd900c329303471119d17e435b`.
+Sanitized GitHub receipt is 30,246 bytes/SHA-256
+`bf9bb396135010ccdfe6ec950b46d84ec59eb6ddfc1c9624a841341fe15086bc`.

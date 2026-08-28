@@ -66,7 +66,7 @@ edges. All 84 ordinary route items and all 24 cumulative-assessment items now
 have an exercise, hint, and complete solution: the required mastery layer is
 108/108. No excluded Fomberg problem-bank expression was used.
 
-Computation Laboratory 1 is complete and preserved on Zenodo: its natural id-ID reader,
+Computation Laboratory 1 is complete and preserved publicly: its natural id-ID reader,
 offline standard-library program, six deterministic tests, expected output,
 interpretation, hint, and complete mathematical solution pass independent
 mathematics and source-language review with P1/P2/P3 zero. Append-only
@@ -85,15 +85,16 @@ Zenodo version `0.31.3`, record `22142210`, DOI
 readback passes. The sanitized receipt is
 `release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01/publication-receipt.json`,
 SHA-256 `ef52c6362b65424c79991ffd35ede64b0ed64d96a0219577fe0df1016b25f830`.
-The public GitHub predecessor remains content commit
-`657f21813ef39bd9e86558a2f4e16e79c23ce491`, tree
-`2d7da6665cabbfe9ea8a0157cd533b53ff053b5c`, and Pages run `33129294989`
-are public; all 66 changed files, the raw reader, the deployed reader, and the
-frozen predecessor passed exact anonymous readback. Receipt SHA-256 is
-`b06804594412a9de0953120478ca8cf2d2e1c0f09f68cbce706e0930c02f2e6b`.
-The exact next action is to publish the verified Laboratory 1 successor through
-the existing GitHub and Pages lineage with anonymous readback, then begin
-Laboratory 2 (chain matrices and Smith normal form).
+GitHub content commit `a8311697800102ce65ce7f67752b0179ccaa9109`, tree
+`4f438d7932f3576ae78be051ca210b5914e1eb30`, and Pages run `33162255086`
+are public. All 69 changed files/66,866,333 bytes, the raw reader, the deployed
+reader, and the frozen predecessor passed exact anonymous byte/SHA-256
+readback. Sanitized GitHub receipt
+`00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01.json`
+is 30,246 bytes/SHA-256
+`bf9bb396135010ccdfe6ec950b46d84ec59eb6ddfc1c9624a841341fe15086bc`.
+The exact next action is to begin Laboratory 2 (chain matrices and Smith normal
+form) without changing the verified 7,404-record backend prefix.
 The CA01 boundary is now public through the existing GitHub, Pages, and Zenodo
 lineages with exact anonymous byte/hash readback. GitHub content commit is
 `4b5f8f74bf361e45687d55fc31a95ea3e0c657ab`; Pages run `32924728855`
