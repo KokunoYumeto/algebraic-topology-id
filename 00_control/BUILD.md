@@ -45,8 +45,16 @@ Zenodo version `0.31.2`, record `22135136`, DOI
 existing concept `10.5281/zenodo.22061489`. Every file passed two anonymous
 HTTP 200 byte/SHA-256 readback passes. Sanitized publication receipt SHA-256:
 `d097cabe1c857b498ec0bf1dcca620e6cd957797ab70777ba229b6c3540a2871`.
-GitHub/Pages identity is recorded separately after the content commit and
-deployment complete.
+GitHub content commit `657f21813ef39bd9e86558a2f4e16e79c23ce491`, tree
+`2d7da6665cabbfe9ea8a0157cd533b53ff053b5c`, Pages run `33129294989`, job
+`98714787548`, deployment `6133283357`, and deployment status `17437766400`
+all pass. Anonymous codeload verification matched all 66 changed files
+(65,610,666 bytes) with zero removals or mismatches and delta-manifest SHA-256
+`0df36a710e29600baa2978d99b60db030559e01bfc67d1f92951e491ffa2af94`.
+The commit-pinned raw reader and deployed Pages reader match the HTML bytes
+exactly; the 0.31.1 predecessor remains byte-identical. GitHub publication
+receipt is 27,588 bytes/SHA-256
+`b06804594412a9de0953120478ca8cf2d2e1c0f09f68cbce706e0930c02f2e6b`.
 
 ## Roberts 001–030 plus Fomberg 001–007 — prior boundary
 

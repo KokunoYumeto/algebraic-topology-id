@@ -2,7 +2,7 @@
 
 Updated: 2026-08-28
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` through source EOF, and Fomberg Units 001–007 translate the entire selected `algebraic_topology.tex:31–4185` / Sections 1.1–1.13 span. Every admitted unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. All three cumulative assessments are now complete: D60-CA01/02/03 contain 24 original exercise-hint-complete-solution triples. Together with the 84/84 ordinary distribution, the required solution-bearing mastery layer is closed at 108/108. The centered/reflowing successor HTML is 15,287,428 bytes; its PDF is 501 A4 pages/8,915,996 bytes; the backend has 7,273 records/8,840,132 bytes with bundle SHA-256 `97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464`. Zenodo version `0.31.2`, record `22135136`, DOI `10.5281/zenodo.22135136`, is public in the existing concept and every one of its nine files passed two anonymous byte/SHA-256 readbacks. GitHub/Pages publication of these exact bytes is the current repository transaction. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. The exact next production action is computation laboratory 1: covering-space monodromy and group presentations. Source line 4186 is only the nominal post-Fomberg marker and is not authority to translate beyond the selected span.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` through source EOF, and Fomberg Units 001–007 translate the entire selected `algebraic_topology.tex:31–4185` / Sections 1.1–1.13 span. Every admitted unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. All three cumulative assessments are now complete: D60-CA01/02/03 contain 24 original exercise-hint-complete-solution triples. Together with the 84/84 ordinary distribution, the required solution-bearing mastery layer is closed at 108/108. The centered/reflowing successor HTML is 15,287,428 bytes; its PDF is 501 A4 pages/8,915,996 bytes; the backend has 7,273 records/8,840,132 bytes with bundle SHA-256 `97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464`. Zenodo version `0.31.2`, record `22135136`, DOI `10.5281/zenodo.22135136`, and GitHub content commit `657f21813ef39bd9e86558a2f4e16e79c23ce491` are public in their existing lineages. Every Zenodo file passed two anonymous byte/SHA-256 readbacks; all 66 GitHub delta files, the raw reader, the deployed Pages reader, and the frozen predecessor passed anonymous exact readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. The exact next production action is computation laboratory 1: covering-space monodromy and group presentations. Source line 4186 is only the nominal post-Fomberg marker and is not authority to translate beyond the selected span.
 
 ### Live recovery note — mastery 108/108 and Zenodo 0.31.2 public, 2026-08-28
 
@@ -57,8 +57,18 @@ No credential, authorization header, bucket URL, absolute local path, or
 personal name is recorded. The privacy scanner's three credential-negative-test
 literals were represented as semantically identical split byte expressions so
 the release gate does not misclassify its own tests as leaked credentials.
-Begin computation lab 1 after the exact GitHub/Pages publication receipt is
-bound.
+GitHub content commit `657f21813ef39bd9e86558a2f4e16e79c23ce491`, tree
+`2d7da6665cabbfe9ea8a0157cd533b53ff053b5c`, Pages run `33129294989`, job
+`98714787548`, deployment `6133283357`, and status `17437766400` pass.
+Anonymous codeload verification matched all 66 changed files/65,610,666 bytes
+under delta-manifest SHA-256
+`0df36a710e29600baa2978d99b60db030559e01bfc67d1f92951e491ffa2af94`;
+the raw and Pages reader bytes match exactly and the predecessor remains exact.
+Receipt
+`00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03.json`
+is 27,588 bytes/SHA-256
+`b06804594412a9de0953120478ca8cf2d2e1c0f09f68cbce706e0930c02f2e6b`.
+Begin computation lab 1 now.
 
 ### Live recovery note — ordinary mastery 84/84 public checkpoint, 2026-08-26
 

@@ -78,7 +78,13 @@ structural, browser, responsive, visual, navigation, rights, privacy, and hash
 QA pass with P1/P2/P3 zero. Zenodo version `0.31.2`, record `22135136`, DOI
 `10.5281/zenodo.22135136`, is public in the unchanged concept DOI
 `10.5281/zenodo.22061489`; all nine files passed two anonymous byte/SHA-256
-readback passes. The exact next production action is computation laboratory 1.
+readback passes. GitHub content commit
+`657f21813ef39bd9e86558a2f4e16e79c23ce491`, tree
+`2d7da6665cabbfe9ea8a0157cd533b53ff053b5c`, and Pages run `33129294989`
+are public; all 66 changed files, the raw reader, the deployed reader, and the
+frozen predecessor passed exact anonymous readback. Receipt SHA-256 is
+`b06804594412a9de0953120478ca8cf2d2e1c0f09f68cbce706e0930c02f2e6b`.
+The exact next production action is computation laboratory 1.
 The CA01 boundary is now public through the existing GitHub, Pages, and Zenodo
 lineages with exact anonymous byte/hash readback. GitHub content commit is
 `4b5f8f74bf361e45687d55fc31a95ea3e0c657ab`; Pages run `32924728855`
