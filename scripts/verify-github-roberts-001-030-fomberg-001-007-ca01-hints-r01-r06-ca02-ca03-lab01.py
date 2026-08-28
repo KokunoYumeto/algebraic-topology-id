@@ -317,7 +317,7 @@ def gh_json(endpoint: str) -> Any:
 
 
 def anonymous_json(url: str) -> Any:
-    return json.loads(fetch(url, accept="application/vnd.github+json"))
+    return json.loads(fetch(url, accept="application/json"))
 
 
 def normalized_local_path(relative: str) -> Path:
