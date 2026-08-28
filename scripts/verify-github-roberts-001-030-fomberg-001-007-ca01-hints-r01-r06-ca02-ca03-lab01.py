@@ -556,8 +556,8 @@ def main() -> int:
             }
         )
 
-    main_ref_payload = anonymous_json(
-        f"https://api.github.com/repos/{OWNER}/{REPOSITORY}/git/ref/heads/main"
+    main_ref_payload = gh_json(
+        f"repos/{OWNER}/{REPOSITORY}/git/ref/heads/main"
     )
     main_ref = main_ref_payload.get("object", {}).get("sha")
     if main_ref != args.content_commit:
@@ -655,7 +655,11 @@ def main() -> int:
         "push": {
             "status": "PASS",
             "remote_ref": "refs/heads/main",
-            "anonymous_remote_commit": main_ref,
+            "remote_commit": main_ref,
+            "metadata_transport": (
+                "authenticated GitHub API; every public file and reader surface is "
+                "verified separately without credentials"
+            ),
         },
         "pages_workflow": {
             "status": "completed",
