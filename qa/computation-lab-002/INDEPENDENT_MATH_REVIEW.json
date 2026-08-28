@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "review_kind": "independent_mathematics",
+  "review_id": "O012-D60-LAB02-INDEPENDENT-MATH",
+  "laboratory_id": "D60-LAB02",
+  "edition_unit_id": "O012-ORIG-LAB02",
+  "course_route_unit_ids": ["D60-R08"],
+  "independent_from_production": true,
+  "reviewer_mode": "separate read-only agent with independent matrix construction, Smith-normal-form oracle comparison, certificate checks, and randomized basis-order checks",
+  "reader_sha256": "532a1e4dacbfb33b680fbe7251accfc16fda933ed7f49f41e836fec15e096b5b",
+  "bound_artifacts": [
+    {
+      "path": "source/id-ID/labs/computation-lab-002-chain-matrices-smith-normal-form.md",
+      "bytes": 16529,
+      "lf_lines": 548,
+      "sha256": "532a1e4dacbfb33b680fbe7251accfc16fda933ed7f49f41e836fec15e096b5b"
+    },
+    {
+      "path": "source/id-ID/labs/o012_d60_lab02_smith_normal_form.py",
+      "bytes": 22052,
+      "lf_lines": 594,
+      "sha256": "47735d76fb1c979d78daaa068a9a32f807ebb234c2da3e5e597f75861e27ae3c"
+    },
+    {
+      "path": "source/id-ID/labs/test_o012_d60_lab02_smith_normal_form.py",
+      "bytes": 7891,
+      "lf_lines": 191,
+      "sha256": "475872356d92f3f439ab353602c293b94db2324fe42209d30f2be6e51b13e2dc"
+    },
+    {
+      "path": "source/id-ID/labs/expected-output-lab02.txt",
+      "bytes": 795,
+      "lf_lines": 35,
+      "sha256": "965994efd39713b7591d43fab5d02bb43d200b68e67c4fa98a5b534452bb537c"
+    },
+    {
+      "path": "qa/computation-lab-002/STATIC_QA.json",
+      "bytes": 3213,
+      "lf_lines": 126,
+      "sha256": "7f8794282747fe30f3bd48fb0548f04f0fdbb6d3355d543c3e1cecb381360972"
+    }
+  ],
+  "independent_results": {
+    "rank_d1": 5,
+    "rank_d2": 10,
+    "smith_d1_nonzero": [1, 1, 1, 1, 1],
+    "smith_d2": [1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+    "homology": {"H0": "Z", "H1": "Z/2", "H2": "0"},
+    "smith_certificates_UAV_equals_D": true,
+    "smith_certificate_determinants_plus_or_minus_one": true,
+    "torsion_cycle_is_cycle": true,
+    "twice_torsion_cycle_is_boundary": true,
+    "mod2_cocycle_annihilates_boundaries": true,
+    "mod2_cocycle_detects_cycle": true,
+    "random_face_permutations_checked": 250,
+    "coherent_edge_and_face_basis_permutations_checked": 100,
+    "deterministic_random_smith_oracle_cases_checked": 2016,
+    "tests_passed": "6/6",
+    "expected_output_byte_exact": true
+  },
+  "resolved_during_review": [
+    "Degenerate simplices are now rejected by a strict vertex-order check.",
+    "The RP2 filling chain is keyed by face label rather than canonical tuple position.",
+    "The mod-2 proof that z is not a boundary is independent of whether the separate 2z filling check succeeds.",
+    "The reader now states the direct-summand argument that identifies homology torsion with the torsion of the relevant cokernel."
+  ],
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0},
+  "human_review_claimed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

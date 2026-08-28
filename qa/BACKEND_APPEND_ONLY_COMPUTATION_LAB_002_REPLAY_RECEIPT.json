@@ -1,0 +1,14 @@
+{
+  "exact_file_matches": 11,
+  "final": {
+    "bundle_sha256": "ac3a0377861ed2b728f9c7473579fdd4febe43e454a92f3ea06451e13d46c8f8",
+    "bytes": 9122755,
+    "records": 7546
+  },
+  "laboratory_id": "D60-LAB02",
+  "receipt_kind": "isolated_exact_backend_replay",
+  "schema_version": "1.0",
+  "status": "PASS",
+  "suffix_bytes": 147055,
+  "temporary_replay_removed": true
+}

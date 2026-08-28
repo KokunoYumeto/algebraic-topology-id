@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "review_kind": "independent_backend_preflight_and_post_append_replay",
+  "review_id": "O012-D60-LAB02-INDEPENDENT-BACKEND",
+  "laboratory_id": "D60-LAB02",
+  "edition_unit_id": "O012-ORIG-LAB02",
+  "course_route_unit_ids": ["D60-R08"],
+  "independent_from_backend_producer": true,
+  "pre_append_review": {
+    "reviewer_mode": "separate read-only agent inspected the producer, validator, deterministic plan, semantic preflight, and all eleven immutable prefix files",
+    "severity_census": {"P1": 0, "P2": 0, "P3": 0},
+    "plan_and_preflight_exit_zero": true,
+    "preflight_rewrites_byte_identical": true,
+    "backend_files_changed_by_preflight": 0
+  },
+  "immutable_prefix": {
+    "records": 7404,
+    "bytes": 8975700,
+    "bundle_sha256": "4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b",
+    "preserved_exactly": true
+  },
+  "delta": {
+    "records": 142,
+    "bytes": 147055,
+    "records_by_file": {
+      "artifacts.jsonl": 10,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 10,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 7,
+      "relations.jsonl": 54,
+      "rights.jsonl": 1,
+      "segments.jsonl": 25,
+      "terms.jsonl": 10,
+      "units.jsonl": 25
+    }
+  },
+  "cumulative": {
+    "records": 7546,
+    "bytes": 9122755,
+    "bundle_sha256": "ac3a0377861ed2b728f9c7473579fdd4febe43e454a92f3ea06451e13d46c8f8",
+    "validator_runs_after_append": 2,
+    "cumulative_receipt_byte_identical_between_runs": true
+  },
+  "semantic_checks": {
+    "global_ids_and_references": "PASS",
+    "artifact_evidence": "PASS",
+    "rights_and_provenance": "PASS",
+    "D60_R08_only_route_scope": "PASS",
+    "ten_term_evidence_mappings": "PASS",
+    "six_tasks_six_hint_edges_six_solution_edges": "PASS",
+    "fourteen_R08_dependency_edges": "PASS",
+    "isolated_exact_replay": "PASS"
+  },
+  "bound_artifacts": [
+    {
+      "path": "scripts/extend-backend-computation-lab-002.py",
+      "bytes": 51323,
+      "lf_lines": 879,
+      "sha256": "10b6fc03ba5b5a72dc8bd53ebe96fc1229763c77ee31a39a0b12b67155b36200"
+    },
+    {
+      "path": "scripts/validate-backend-append-only-computation-lab-002.py",
+      "bytes": 12402,
+      "lf_lines": 289,
+      "sha256": "8c48e30dc232f4b5491d83c7ef2d7f68a3321663cadaac8ffd3c0d815ccf97d8"
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_002_PLAN.json",
+      "bytes": 11065,
+      "lf_lines": 283,
+      "sha256": "7c203de007196b512c199bb478aac192cbea0245d550a7ce8c5d637bb8119e7f"
+    },
+    {
+      "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_002_CUMULATIVE_RECEIPT.json",
+      "bytes": 10039,
+      "lf_lines": 280,
+      "sha256": "8c37c03b59ba638bb7c9533f4078cd75b5500bfaa408e8b816a5bef1b5bc522b"
+    }
+  ],
+  "upstream_contacted": false,
+  "human_review_claimed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

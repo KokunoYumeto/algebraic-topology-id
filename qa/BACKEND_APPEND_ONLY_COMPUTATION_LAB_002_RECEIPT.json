@@ -1,0 +1,76 @@
+{
+  "baseline_receipt": {
+    "bytes": 9727,
+    "lf_lines": 272,
+    "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_001_CUMULATIVE_RECEIPT.json",
+    "sha256": "90f445294eea58aca5bcebe6acaff7293251b21e32aa25f3b62705e64cf8ab74"
+  },
+  "cumulative": {
+    "bundle_sha256": "ac3a0377861ed2b728f9c7473579fdd4febe43e454a92f3ea06451e13d46c8f8",
+    "bytes": 9122755,
+    "records": 7546
+  },
+  "delta": {
+    "bytes": 147055,
+    "bytes_by_file": {
+      "artifacts.jsonl": 8616,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 3277,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 4301,
+      "relations.jsonl": 27768,
+      "rights.jsonl": 1653,
+      "segments.jsonl": 44738,
+      "terms.jsonl": 7783,
+      "units.jsonl": 48919
+    },
+    "records": 142,
+    "records_by_file": {
+      "artifacts.jsonl": 10,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 10,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 7,
+      "relations.jsonl": 54,
+      "rights.jsonl": 1,
+      "segments.jsonl": 25,
+      "terms.jsonl": 10,
+      "units.jsonl": 25
+    }
+  },
+  "edition_unit_id": "O012-ORIG-LAB02",
+  "immutable_prefix": {
+    "bundle_sha256": "4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b",
+    "bytes": 8975700,
+    "records": 7404
+  },
+  "laboratory_id": "D60-LAB02",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "append_only_backend_semantic_validation",
+  "schema_version": "1.0",
+  "semantic_checks": {
+    "added_records": 142,
+    "append_only_ready": "PASS",
+    "artifact_evidence": "PASS",
+    "complete_solutions": 1,
+    "dependency_edges": 14,
+    "dependency_scope": "D60-R08_only",
+    "expected_outputs": 1,
+    "global_references": "PASS",
+    "hints": 1,
+    "independent_reviews": 3,
+    "merged_records": 7546,
+    "new_concepts": 10,
+    "new_terms": 10,
+    "program_sources": 1,
+    "rights_and_provenance": "PASS",
+    "route_edges": 1,
+    "schema_shapes": "PASS",
+    "stable_ids": 25,
+    "tasks": 6,
+    "test_suites": 1
+  },
+  "status": "PASS"
+}

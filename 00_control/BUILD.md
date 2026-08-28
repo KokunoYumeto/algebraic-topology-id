@@ -716,3 +716,46 @@ predecessor remains exact. Delta-manifest SHA-256 is
 `7a080f8120e58f8c7fd39bd56247d993c03095bd900c329303471119d17e435b`.
 Sanitized GitHub receipt is 30,246 bytes/SHA-256
 `bf9bb396135010ccdfe6ec950b46d84ec59eb6ddfc1c9624a841341fe15086bc`.
+
+## Roberts 001-030, Fomberg 001-007, mastery 108/108, and computation Labs 1–2 — current boundary
+
+Laboratory 2 adds an original CC BY-SA 4.0 reader, offline standard-library
+program, six deterministic tests, frozen output, hint, and complete solution
+for simpleksial boundary matrices and Smith normal form. Source/execution/
+review QA is 4,318 bytes/SHA-256
+`c084e575a621906ac7d8a1c6dca6f604de99b8e58a788409be17bb7392dd4319`;
+independent code, mathematics, and source-language reviews pass P1=P2=P3=0.
+
+Append-only replay preserves the exact 7,404-record/8,975,700-byte Lab 1
+prefix, adds 142 records/147,055 bytes, and ends at 7,546 records/9,122,755
+bytes with bundle SHA-256
+`ac3a0377861ed2b728f9c7473579fdd4febe43e454a92f3ea06451e13d46c8f8`.
+The cumulative receipt is 10,039 bytes/SHA-256
+`8c37c03b59ba638bb7c9533f4078cd75b5500bfaa408e8b816a5bef1b5bc522b`.
+
+Final cumulative artifacts and witnesses:
+
+- HTML: 15,615,104 bytes; SHA-256
+  `d0c6afddfa92759d475258bf08f20ea4019eccf72b7554128b2b938bd247b375`.
+- PDF: 9,507,127 bytes; 529 A4 pages; SHA-256
+  `1bad03f9ba031ba91967a0a0ac2af6d15a0f768882cd541fe26dcbe26c4edd0b`.
+- Artifact manifest: 369 bytes; SHA-256
+  `11d45714eddfecfc63a6d660f1dedac99a3ecf3d5fb36dc19961e34fb26c137c`.
+- Final build receipt: 7,468 bytes; SHA-256
+  `d7e224f936cd9dcfe2238038730d9a89d78fe59b2933a8623c6df34121f48b98`.
+- Visual QA: 3,450 bytes; SHA-256
+  `49bb2e287e1b2ad2bfd7a1814a7234a7bc5398ae35deab770f66e101d36271d8`.
+- Browser QA: 3,574 bytes; SHA-256
+  `91ceb3c55c1e0de1448af839b56bbcdb257c8fbf79ccfe7e1c72a5743157974a`.
+
+Two clean HTML, appendix-PDF, and merged-PDF builds are byte-identical. The
+511-page predecessor is structurally and textually preserved. All 19 bounded
+pages pass full-detail visual QA; HTML passes centered desktop and 375 × 812
+mobile reflow with zero page-level overflow, zero unresolved fragments, zero
+external runtime assets, and zero console errors/warnings. Zenodo version
+`0.31.4`, record `22147224`, DOI `10.5281/zenodo.22147224`, is public in the
+unchanged concept `10.5281/zenodo.22061489`; every one of the reader-first nine
+files passed two anonymous byte/SHA-256 readback passes. Sanitized receipt is
+11,568 bytes/SHA-256
+`3fbc40c68fac53010fd6248ccb5438e2ffc7ab1a56c7ac390996b50b6ba35b95`.
+GitHub/Pages publication is the next transaction; Lab 3 follows immediately.

@@ -8,20 +8,21 @@ jembatan Fomberg mencakup seluruh bentang terpilih Bagian 1.1–1.13
 (`algebraic_topology.tex:31–4185`). Ketiga asesmen kumulatif kini lengkap:
 24 soal lintas-rute, 24 petunjuk, dan 24 solusi lengkap. Bersama 84 butir
 penguasaan biasa, lapisan penguasaan berbasis solusi telah mencapai **108/108**.
-Laboratorium Komputasi 1—monodromi ruang penutup dan presentasi grup—sudah
-lengkap dengan program luring, uji, keluaran acuan, interpretasi, dan solusi.
-Tiga laboratorium komputasi, proyek puncak lintas-invarian, dan penutupan
+Laboratorium Komputasi 1—monodromi ruang penutup dan presentasi grup—serta
+Laboratorium Komputasi 2—matriks rantai dan bentuk normal Smith—sudah lengkap
+dengan program luring, uji, keluaran acuan, interpretasi, dan solusi.
+Dua laboratorium komputasi, proyek puncak lintas-invarian, dan penutupan
 metadata grafik bukti yang tercatat masih harus diselesaikan.
 
 ## Mulai membaca
 
-- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.13 + Asesmen Kumulatif 1–3 + Laboratorium 1](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01/)
+- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.13 + Asesmen Kumulatif 1–3 + Laboratorium 1–2](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/)
   adalah permukaan utama: satu berkas mandiri, reflow, tanpa JavaScript atau
   akses jaringan, dengan matematika MathML asli.
-- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01/index.html) dapat
+- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/index.html) dapat
   diunduh dan dibuka secara luring.
-- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-id.pdf)
-  adalah permukaan cetak sekunder sepanjang 511 halaman. Semua font tersemat,
+- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-id.pdf)
+  adalah permukaan cetak sekunder sepanjang 529 halaman. Semua font tersemat,
   subset, dan memiliki peta ToUnicode; PDF belum ditandai secara struktural.
 - [Konsep Zenodo edisi ini](https://doi.org/10.5281/zenodo.22061489)
   mempertahankan garis versi preservasi; nomor konsep tetap sama ketika
@@ -40,10 +41,11 @@ metadata grafik bukti yang tercatat masih harus diselesaikan.
   penguasaan biasa 84/84; versi
   [0.31.2](https://doi.org/10.5281/zenodo.22135136) menambahkan Asesmen
   Kumulatif 2–3, pembaca 501 halaman, dan backend 7.273 rekaman; dan versi
-  terbaru [0.31.3](https://doi.org/10.5281/zenodo.22142210) menambahkan
-  Laboratorium Komputasi 1, pembaca 511 halaman, backend 7.404 rekaman, serta
-  bukti build, visual, browser, eksekusi, dan provenance pada garis konsep
-  yang sama.
+  [0.31.3](https://doi.org/10.5281/zenodo.22142210) menambahkan Laboratorium
+  Komputasi 1; dan versi terbaru
+  [0.31.4](https://doi.org/10.5281/zenodo.22147224) menambahkan Laboratorium
+  Komputasi 2, pembaca 529 halaman, backend 7.546 rekaman, serta bukti build,
+  visual, browser, eksekusi, dan provenans pada garis konsep yang sama.
 
 Checkpoint ini mencakup seluruh 30 kuliah Roberts hingga `Notes.tex:6368`:
 topologi dasar, homotopi, ruang penutup dan monodromi, grup/grupoid fundamental,
@@ -61,7 +63,11 @@ latihan penguasaan dengan petunjuk dan solusi lengkap. Ketiga asesmen
 kumulatif menguji seluruh jalur melalui 24 soal asli tanpa menyalin bank
 masalah Fomberg. Laboratorium 1 menghubungkan aksi monodromi kanan, citra
 permutasi, stabilisator, transversal Schreier, dan presentasi grup melalui
-program Python pustaka-standar yang dapat direproduksi tanpa jaringan. Status
+program Python pustaka-standar yang dapat direproduksi tanpa jaringan.
+Laboratorium 2 membangun kompleks rantai dari matriks batas integral,
+memverifikasi syarat \(d^2=0\), menghitung bentuk normal Smith, dan membaca
+bagian bebas serta torsi homologi dengan uji dan keluaran acuan deterministik.
+Status
 30/30 hanya menyatakan kelengkapan komponen Roberts;
 status 108/108 menyatakan kelengkapan lapisan penguasaan berbasis solusi,
 bukan kelengkapan laboratorium dan proyek puncak jalur komposit.
@@ -84,21 +90,21 @@ dan [Unit 1–25](https://kokunoyumeto.github.io/algebraic-topology-id/units-001
 Direktori [`backend/`](backend/) memuat graf `curriculum.interop 0.1.0` yang
 locale-neutral: identitas otoritas dan edisi, unit, segmen, konsep, istilah,
 relasi, latihan–solusi, hak, koreksi, QA, dan artefak. Checkpoint komposit
-mempertahankan awalan 7.273 rekaman checkpoint 0.31.2 (8.840.132 byte; digest
-bundel `97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464`)
-secara byte-identik, lalu menambahkan 131 rekaman/135.568 byte bagi D60-LAB01.
-Backend kumulatif kini berisi 7.404 rekaman append-only (8.975.700 byte) dengan
+mempertahankan awalan 7.404 rekaman checkpoint 0.31.3 (8.975.700 byte; digest
+bundel `4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b`)
+secara byte-identik, lalu menambahkan 142 rekaman/147.055 byte bagi D60-LAB02.
+Backend kumulatif kini berisi 7.546 rekaman append-only (9.122.755 byte) dengan
 digest bundel
-`4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b`.
+`ac3a0377861ed2b728f9c7473579fdd4febe43e454a92f3ea06451e13d46c8f8`.
 Backend ini melengkapi—bukan menggantikan—pembaca manusia.
 
 Validasi dan build aktif:
 
 ```powershell
-python -B scripts/qa-computation-lab-001.py
-python -B scripts/validate-backend-append-only-computation-lab-001.py
-python -B scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01.py
-python -B scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01.py
+python -B scripts/qa-computation-lab-002.py
+python -B scripts/validate-backend-append-only-computation-lab-002.py
+python -B scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02.py
+python -B scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02.py
 ```
 
 Build kumulatif memakai epoch tetap dan dua build bersih yang harus identik
@@ -133,9 +139,9 @@ otoritas disimpan di [`00_control/`](00_control/).
 
 Bentang Fomberg terpilih selesai tepat sebelum
 `algebraic_topology.tex:4186`; lapisan penguasaan berbasis solusi juga selesai
-108/108, dan Laboratorium Komputasi 1 telah selesai. Produksi berikutnya
-dimulai pada Laboratorium Komputasi 2: matriks rantai dan bentuk normal Smith,
-lalu dua laboratorium lain, penutupan metadata bukti, dan proyek puncak yang
+108/108, dan Laboratorium Komputasi 1–2 telah selesai. Produksi berikutnya
+dimulai pada Laboratorium Komputasi 3: pemetaan batas seluler dan derajat,
+lalu Laboratorium 4, penutupan metadata bukti, dan proyek puncak yang
 ditandai jelas sebagai materi edisi.
 Hak dan atribusi Roberts, Fomberg, serta materi asli tetap dapat dibedakan pada
 backend dan artefak rilis.

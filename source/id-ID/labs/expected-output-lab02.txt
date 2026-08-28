@@ -1,0 +1,35 @@
+LABORATORIUM O012-D60-LAB02
+kompleks: triangulasi_6_simpul_RP2
+simpul: 6
+sisi: 15
+muka: 10
+karakteristik_euler: 1
+setiap_sisi_dua_muka: true
+tautan_simpul_siklus: true
+terorientasi: false
+bentuk_d1: 6x15
+bentuk_d2: 15x10
+d1_d2_nol: true
+rank_d1: 5
+snf_d1: [1, 1, 1, 1, 1]
+rank_d2: 10
+snf_d2: [1, 1, 1, 1, 1, 1, 1, 1, 1, 2]
+sertifikat_d1: true
+sertifikat_d2: true
+H_0: Z
+H_1: Z/2
+H_2: 0
+siklus_torsi_z: e01 - e04 + e14
+rantai_pengisi_2z: f012 + f013 + f024 + f035 - f045 - f125 - f134 + f145 + f234 - f235
+z_adalah_siklus: true
+dua_z_adalah_batas: true
+kosiklus_mod2_mematikan_batas: true
+kosiklus_mod2_mendeteksi_z: true
+z_bukan_batas: true
+kontrol: batas_tetrahedron_S2
+kontrol_terorientasi: true
+kontrol_snf_d1: [1, 1, 1]
+kontrol_snf_d2: [1, 1, 1]
+kontrol_H_0: Z
+kontrol_H_1: 0
+kontrol_H_2: Z

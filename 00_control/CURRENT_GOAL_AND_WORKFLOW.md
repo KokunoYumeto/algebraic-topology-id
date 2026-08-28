@@ -66,47 +66,43 @@ edges. All 84 ordinary route items and all 24 cumulative-assessment items now
 have an exercise, hint, and complete solution: the required mastery layer is
 108/108. No excluded Fomberg problem-bank expression was used.
 
-Computation Laboratory 1 is complete and preserved publicly: its natural id-ID reader,
-offline standard-library program, six deterministic tests, expected output,
-interpretation, hint, and complete mathematical solution pass independent
-mathematics and source-language review with P1/P2/P3 zero. Append-only
-admission preserves the exact 7,273-record/8,840,132-byte checkpoint prefix,
-adds 131 records, and ends at 7,404 records/8,975,700 bytes with bundle SHA-256
-`4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b`.
-The centered/reflowing HTML is 15,389,821 bytes/SHA-256
-`bb0cf484271370878508a6b774e442ee57aaf82b1a3bbca1bed086729360f7ff`;
-the deterministic PDF is 9,193,942 bytes/511 A4 pages/SHA-256
-`722fa7f6c3aa20d1a4c52257d3127fa500bbaf6aad66f64d62177718cd53d128`.
-Execution, independent review, append-only replay, structural, browser,
-responsive, visual, navigation, rights, privacy, and hash QA all pass. The
-Zenodo version `0.31.3`, record `22142210`, DOI
-`10.5281/zenodo.22142210`, is public in the unchanged concept DOI
-`10.5281/zenodo.22061489`; all nine files passed two anonymous byte/SHA-256
-readback passes. The sanitized receipt is
-`release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01/publication-receipt.json`,
-SHA-256 `ef52c6362b65424c79991ffd35ede64b0ed64d96a0219577fe0df1016b25f830`.
-GitHub content commit `a8311697800102ce65ce7f67752b0179ccaa9109`, tree
-`4f438d7932f3576ae78be051ca210b5914e1eb30`, and Pages run `33162255086`
-are public. All 69 changed files/66,866,333 bytes, the raw reader, the deployed
-reader, and the frozen predecessor passed exact anonymous byte/SHA-256
-readback. Sanitized GitHub receipt
-`00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01.json`
-is 30,246 bytes/SHA-256
-`bf9bb396135010ccdfe6ec950b46d84ec59eb6ddfc1c9624a841341fe15086bc`.
-The exact next action is to begin Laboratory 2 (chain matrices and Smith normal
-form) without changing the verified 7,404-record backend prefix.
-The CA01 boundary is now public through the existing GitHub, Pages, and Zenodo
-lineages with exact anonymous byte/hash readback. GitHub content commit is
-`4b5f8f74bf361e45687d55fc31a95ea3e0c657ab`; Pages run `32924728855`
-deploys the CA01 reader. Zenodo version `0.31.0` is record `22105179`, DOI
-`10.5281/zenodo.22105179`, in the unchanged concept DOI
-`10.5281/zenodo.22061489`.
+Computation Laboratories 1–2 are complete. Each has a natural id-ID reader,
+offline standard-library program, six deterministic tests, frozen expected
+output, interpretation, hint, and complete solution. Independent code,
+mathematics, and source-language reviews pass with P1/P2/P3 zero. Lab 2 maps
+its 25 explicit stable IDs only to `D60-R08`; it computes simpleksial boundary
+matrices, exact Smith certificates, `H_*(RP^2)=(Z,Z/2,0)`, and a torsion-free
+sphere control. Append-only admission preserves the exact 7,404-record/
+8,975,700-byte Lab 1 prefix, adds 142 records/147,055 bytes, and ends at 7,546
+records/9,122,755 bytes with bundle SHA-256
+`ac3a0377861ed2b728f9c7473579fdd4febe43e454a92f3ea06451e13d46c8f8`.
 
-1. Preserve completed Laboratory 1 and add the three remaining offline
+The cumulative centered/reflowing HTML is 15,615,104 bytes/SHA-256
+`d0c6afddfa92759d475258bf08f20ea4019eccf72b7554128b2b938bd247b375`;
+the deterministic PDF is 9,507,127 bytes/529 A4 pages/SHA-256
+`1bad03f9ba031ba91967a0a0ac2af6d15a0f768882cd541fe26dcbe26c4edd0b`.
+Two clean HTML, appendix-PDF, and merged-PDF builds are byte-identical. All 19
+transition/new pages, desktop/mobile browser reflow, 1,640 fragments, 17,155
+MathML nodes, fonts, destinations, rights, privacy, and hashes pass; P1/P2/P3
+are zero. Final build receipt SHA-256 is
+`d7e224f936cd9dcfe2238038730d9a89d78fe59b2933a8623c6df34121f48b98`.
+
+Zenodo version `0.31.4`, record `22147224`, DOI
+`10.5281/zenodo.22147224`, is public in the unchanged concept DOI
+`10.5281/zenodo.22061489`. Its reader-first nine-file package passed two exact
+anonymous byte/SHA-256 readback passes; sanitized receipt
+`release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/publication-receipt.json`
+is 11,568 bytes/SHA-256
+`3fbc40c68fac53010fd6248ccb5438e2ffc7ab1a56c7ac390996b50b6ba35b95`.
+The exact next action is the narrow GitHub content commit/push, Pages deploy,
+and anonymous readback for this same Lab 2 boundary, followed immediately by
+Laboratory 3 (cellular boundary maps and degree). Do not rebuild or republish
+Labs 1–2 absent a newly demonstrated defect.
+
+1. Preserve completed Laboratories 1–2 and add the two remaining offline
    reproducible laboratories, each with source, tests, expected output,
-   interpretation, and a full check: chain matrices/Smith normal form;
-   cellular boundaries/degree; and comparison of fundamental-group, homology,
-   and cohomology invariants.
+   interpretation, and a full check: cellular boundaries/degree; and comparison
+   of fundamental-group, homology, and cohomology invariants.
 2. Repair the remaining backend proof-link metadata for `FOM-PR-13`-`15` and
    `FOM-U003-QUOTIENT-LES` without rewriting their already checked mathematics;
    then add the final proof-reconstruction/cross-invariant capstone and explicit

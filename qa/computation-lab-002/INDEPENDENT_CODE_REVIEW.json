@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "review_kind": "independent_code",
+  "review_id": "O012-D60-LAB02-INDEPENDENT-CODE",
+  "laboratory_id": "D60-LAB02",
+  "edition_unit_id": "O012-ORIG-LAB02",
+  "course_route_unit_ids": ["D60-R08"],
+  "independent_from_production": true,
+  "reviewer_mode": "separate read-only agent with determinantal-divisor oracle comparison, malformed-certificate fuzzing, basis-reordering checks, isolated runtime, and file/socket audit",
+  "reader_sha256": "532a1e4dacbfb33b680fbe7251accfc16fda933ed7f49f41e836fec15e096b5b",
+  "bound_artifacts": [
+    {
+      "path": "source/id-ID/labs/o012_d60_lab02_smith_normal_form.py",
+      "bytes": 22052,
+      "lf_lines": 594,
+      "sha256": "47735d76fb1c979d78daaa068a9a32f807ebb234c2da3e5e597f75861e27ae3c"
+    },
+    {
+      "path": "source/id-ID/labs/test_o012_d60_lab02_smith_normal_form.py",
+      "bytes": 7891,
+      "lf_lines": 191,
+      "sha256": "475872356d92f3f439ab353602c293b94db2324fe42209d30f2be6e51b13e2dc"
+    },
+    {
+      "path": "source/id-ID/labs/expected-output-lab02.txt",
+      "bytes": 795,
+      "lf_lines": 35,
+      "sha256": "965994efd39713b7591d43fab5d02bb43d200b68e67c4fa98a5b534452bb537c"
+    }
+  ],
+  "checks": {
+    "tests_6_of_6": "PASS",
+    "expected_output_795_bytes_exact": "PASS",
+    "smith_oracle_cases_11989": "PASS",
+    "malformed_certificate_candidates_10000_no_exception": "PASS",
+    "vertex_edge_face_reorderings_200": "PASS",
+    "signed_basis_changes_200": "PASS",
+    "strict_simplex_validation": "PASS",
+    "empty_domain_codomain_validation": "PASS",
+    "ragged_matrix_and_certificate_validation": "PASS",
+    "torsion_flags_logically_independent": "PASS",
+    "python_I_S_B_unrelated_cwd": "PASS",
+    "four_hash_seeds_identical": "PASS",
+    "standard_library_only": "PASS",
+    "no_post_import_file_socket_or_http_access": "PASS"
+  },
+  "resolved_during_review": [
+    "Repeated vertices are rejected by strict simplex validation.",
+    "Empty-domain boundary construction validates its codomain.",
+    "Ragged certificate matrices fail closed instead of raising an uncaught exception.",
+    "The RP2 torsion witness is label-keyed and its two independent proof flags are no longer conflated."
+  ],
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0},
+  "human_review_claimed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

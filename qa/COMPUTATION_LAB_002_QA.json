@@ -1,0 +1,153 @@
+{
+  "checks": {
+    "excluded_fomberg_problem_bank_used": false,
+    "expected_output_exact": "PASS",
+    "independent_code": "PASS",
+    "independent_mathematics": "PASS",
+    "independent_source_language": "PASS",
+    "offline_program_and_tests": "PASS",
+    "privacy": "PASS",
+    "rights_origin_provenance_non_endorsement": "PASS",
+    "route_scope_D60_R08_only": "PASS",
+    "stable_ids_25_unique": "PASS",
+    "tasks_6_with_hint_and_complete_solution": "PASS",
+    "terminology_0493_0502": "PASS",
+    "two_program_runs_byte_identical": "PASS",
+    "two_test_runs_6_of_6": "PASS"
+  },
+  "course_route_unit_ids": [
+    "D60-R08"
+  ],
+  "edition_unit_id": "O012-ORIG-LAB02",
+  "human_review_claimed": false,
+  "inputs": [
+    {
+      "bytes": 16529,
+      "lf_lines": 548,
+      "path": "source/id-ID/labs/computation-lab-002-chain-matrices-smith-normal-form.md",
+      "sha256": "532a1e4dacbfb33b680fbe7251accfc16fda933ed7f49f41e836fec15e096b5b"
+    },
+    {
+      "bytes": 22052,
+      "lf_lines": 594,
+      "path": "source/id-ID/labs/o012_d60_lab02_smith_normal_form.py",
+      "sha256": "47735d76fb1c979d78daaa068a9a32f807ebb234c2da3e5e597f75861e27ae3c"
+    },
+    {
+      "bytes": 7891,
+      "lf_lines": 191,
+      "path": "source/id-ID/labs/test_o012_d60_lab02_smith_normal_form.py",
+      "sha256": "475872356d92f3f439ab353602c293b94db2324fe42209d30f2be6e51b13e2dc"
+    },
+    {
+      "bytes": 795,
+      "lf_lines": 35,
+      "path": "source/id-ID/labs/expected-output-lab02.txt",
+      "sha256": "965994efd39713b7591d43fab5d02bb43d200b68e67c4fa98a5b534452bb537c"
+    },
+    {
+      "bytes": 65333,
+      "lf_lines": 503,
+      "path": "00_control/TERMINOLOGY.csv",
+      "sha256": "93d680886e18f2fe2aa64f4f4ce583448b1bebcf6bf22016fd35d60be51b21cc"
+    },
+    {
+      "bytes": 15389821,
+      "lf_lines": 59479,
+      "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01/index.html",
+      "sha256": "bb0cf484271370878508a6b774e442ee57aaf82b1a3bbca1bed086729360f7ff"
+    },
+    {
+      "bytes": 3213,
+      "lf_lines": 126,
+      "path": "qa/computation-lab-002/STATIC_QA.json",
+      "sha256": "7f8794282747fe30f3bd48fb0548f04f0fdbb6d3355d543c3e1cecb381360972"
+    },
+    {
+      "bytes": 2383,
+      "lf_lines": 57,
+      "path": "qa/computation-lab-002/INDEPENDENT_CODE_REVIEW.json",
+      "sha256": "e213bd40b02007b194941f4d16b74dd8cd4661a30d0c0baa1390318fca2d7276"
+    },
+    {
+      "bytes": 2949,
+      "lf_lines": 71,
+      "path": "qa/computation-lab-002/INDEPENDENT_MATH_REVIEW.json",
+      "sha256": "a179756455bb4995183688897a9727d07b58ca30a07280057dd7882ed62068ce"
+    },
+    {
+      "bytes": 2829,
+      "lf_lines": 67,
+      "path": "qa/computation-lab-002/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+      "sha256": "5a564f57b75c499f792777f4ca6814158568372e6283531eed0ae33138aa0161"
+    },
+    {
+      "bytes": 1949,
+      "lf_lines": 64,
+      "path": "qa/computation-lab-002/EXECUTION_RECEIPT.json",
+      "sha256": "6af5e23469e32b5f98b3493c07e6a9beb4c5a18fd146cc3f211da9b9e56ad325"
+    }
+  ],
+  "laboratory_id": "D60-LAB02",
+  "mathematical_result": {
+    "chain_condition": true,
+    "d1_unit_minor": -1,
+    "d2_maximal_minor": -2,
+    "d2_unit_9_minor": 1,
+    "edges": 15,
+    "euler_characteristic": 1,
+    "every_edge_has_two_faces": true,
+    "faces": 10,
+    "homology": {
+      "H0": "Z",
+      "H1": "Z/2",
+      "H2": "0"
+    },
+    "orientation_constraint_product": -1,
+    "rank_d1": 5,
+    "rank_d2": 10,
+    "rank_mod2_d2": 9,
+    "smith_d1_nonzero": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "smith_d2": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    "sphere_control_homology": {
+      "H0": "Z",
+      "H1": "0",
+      "H2": "Z"
+    },
+    "torsion_witness": {
+      "mod2_cocycle_annihilates_boundaries": true,
+      "mod2_cocycle_detects_z": true,
+      "two_z_is_boundary": true,
+      "z_is_cycle": true
+    },
+    "vertex_links_are_connected_5_cycles": true,
+    "vertices": 6
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "computation_laboratory_source_execution_review_closure",
+  "schema_version": "1.0",
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "status": "PASS",
+  "upstream_contacted": false
+}

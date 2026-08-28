@@ -1,0 +1,90 @@
+{
+  "qa_id": "O012-RBT-001-030-FOM-001-007-CA01-HINTS-R01-R06-CA02-CA03-LAB01-LAB02-BROWSER-QA",
+  "status": "PASS",
+  "date": "2026-08-28",
+  "surface": "local loopback self-contained HTML in the Codex in-app browser",
+  "artifact": {
+    "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/index.html",
+    "bytes": 15615104,
+    "sha256": "d0c6afddfa92759d475258bf08f20ea4019eccf72b7554128b2b938bd247b375",
+    "title": "Topologi Aljabar — Roberts 30/30, Fomberg 1.1–1.13, Asesmen Kumulatif 1–3, dan Laboratorium Komputasi 1–2",
+    "lang": "id-ID"
+  },
+  "desktop": {
+    "status": "PASS",
+    "viewport_css_pixels": [1440, 900],
+    "document_client_width": 1425,
+    "document_scroll_width": 1425,
+    "page_level_horizontal_overflow": false,
+    "body_box": {"left": 136.44444274902344, "right": 1288.4444427490234, "width": 1152.0},
+    "body_max_width_css_pixels": 1152,
+    "centered_and_page_filling": true,
+    "lab_root_present": true,
+    "non_math_nodes_escaping_viewport": 0
+  },
+  "mobile": {
+    "status": "PASS",
+    "viewport_css_pixels": [375, 812],
+    "document_client_width": 360,
+    "document_scroll_width": 360,
+    "page_level_horizontal_overflow": false,
+    "body_box": {"left": 0.0, "right": 360.0, "width": 360.0},
+    "lab_root_box": {"left": 17.59722328186035, "right": 342.402795791626, "width": 324.8055725097656},
+    "code_blocks": 4,
+    "code_blocks_requiring_local_scroll": 4,
+    "code_blocks_with_overflow_x_auto": 4,
+    "wide_display_math_nodes": 3,
+    "wide_display_math_nodes_with_overflow_x_auto": 3,
+    "predecessor_wide_table_containers": 1,
+    "predecessor_wide_table_containers_with_overflow_x_auto": 1,
+    "coarse_descendant_escape_hits_inside_that_table": 12,
+    "unexpected_local_overflow_nodes": 0
+  },
+  "semantic_and_binding_checks": {
+    "serialized_dom_ids": 3632,
+    "live_browser_dom_ids": 3633,
+    "live_runtime_injected_ids": 1,
+    "duplicate_live_dom_ids": 0,
+    "fragment_links": 1640,
+    "unresolved_fragment_links": 0,
+    "laboratory_stable_ids": 25,
+    "laboratory_root_plus_stable_ids": 26,
+    "laboratory_tasks": 6,
+    "laboratory_mathml_nodes": 83,
+    "document_mathml_nodes": 17155,
+    "asset_references": 19,
+    "runtime_external_asset_references": 0,
+    "self_contained_offline_surface": true
+  },
+  "navigation_and_keyboard": {
+    "toc_lab02_link_count": 1,
+    "toc_lab02_link_href": "#o012-d60-lab02",
+    "toc_lab02_activation": "PASS",
+    "activated_hash": "#o012-d60-lab02",
+    "activated_root_top_css_pixels": -0.2291666716337204,
+    "keyboard_focus": {
+      "status": "PASS",
+      "focused_href": "#o012-composite-status",
+      "focus_visible": true,
+      "outline_style": "auto",
+      "outline_width_css_pixels": 0.888889
+    }
+  },
+  "reader_status_text": {
+    "roberts_complete": true,
+    "fomberg_bridge_complete": true,
+    "solution_bearing_items": 108,
+    "laboratories_complete": 2,
+    "offline_capable": true,
+    "checkpoint_label": "partial"
+  },
+  "visual_observation": {
+    "desktop": "PASS: centered 1152px reading column, clear hierarchy, legible formulas and laboratory prose",
+    "mobile": "PASS: centered 324.81px laboratory column; wide code, display mathematics, and the inherited wide table remain usable through local horizontal scrollers",
+    "theme": "dark",
+    "content_does_not_depend_on_color_alone": true
+  },
+  "console": {"errors": 0, "warnings": 0, "messages": []},
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0},
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}
