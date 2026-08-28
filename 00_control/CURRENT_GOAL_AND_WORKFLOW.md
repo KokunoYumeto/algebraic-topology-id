@@ -66,25 +66,34 @@ edges. All 84 ordinary route items and all 24 cumulative-assessment items now
 have an exercise, hint, and complete solution: the required mastery layer is
 108/108. No excluded Fomberg problem-bank expression was used.
 
-The append-only backend preserves the exact 7,012-record checkpoint prefix and
-adds 261 records, ending at 7,273 records/8,840,132 bytes with bundle SHA-256
-`97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464`.
-The centered/reflowing HTML is 15,287,428 bytes/SHA-256
-`417e50656ae0a61134c480f59df1bcd54d66a68c938d1d54f9c931ba37e2a5d6`;
-the deterministic PDF is 8,915,996 bytes/501 A4 pages/SHA-256
-`74ed9b5bf0f79a98693369dc7beba3e84ac81c711cc96b9951ae950ae9632a16`.
-Independent mathematics and language review, append-only replay, route,
-structural, browser, responsive, visual, navigation, rights, privacy, and hash
-QA pass with P1/P2/P3 zero. Zenodo version `0.31.2`, record `22135136`, DOI
-`10.5281/zenodo.22135136`, is public in the unchanged concept DOI
+Computation Laboratory 1 is complete and preserved on Zenodo: its natural id-ID reader,
+offline standard-library program, six deterministic tests, expected output,
+interpretation, hint, and complete mathematical solution pass independent
+mathematics and source-language review with P1/P2/P3 zero. Append-only
+admission preserves the exact 7,273-record/8,840,132-byte checkpoint prefix,
+adds 131 records, and ends at 7,404 records/8,975,700 bytes with bundle SHA-256
+`4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b`.
+The centered/reflowing HTML is 15,389,821 bytes/SHA-256
+`bb0cf484271370878508a6b774e442ee57aaf82b1a3bbca1bed086729360f7ff`;
+the deterministic PDF is 9,193,942 bytes/511 A4 pages/SHA-256
+`722fa7f6c3aa20d1a4c52257d3127fa500bbaf6aad66f64d62177718cd53d128`.
+Execution, independent review, append-only replay, structural, browser,
+responsive, visual, navigation, rights, privacy, and hash QA all pass. The
+Zenodo version `0.31.3`, record `22142210`, DOI
+`10.5281/zenodo.22142210`, is public in the unchanged concept DOI
 `10.5281/zenodo.22061489`; all nine files passed two anonymous byte/SHA-256
-readback passes. GitHub content commit
+readback passes. The sanitized receipt is
+`release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01/publication-receipt.json`,
+SHA-256 `ef52c6362b65424c79991ffd35ede64b0ed64d96a0219577fe0df1016b25f830`.
+The public GitHub predecessor remains content commit
 `657f21813ef39bd9e86558a2f4e16e79c23ce491`, tree
 `2d7da6665cabbfe9ea8a0157cd533b53ff053b5c`, and Pages run `33129294989`
 are public; all 66 changed files, the raw reader, the deployed reader, and the
 frozen predecessor passed exact anonymous readback. Receipt SHA-256 is
 `b06804594412a9de0953120478ca8cf2d2e1c0f09f68cbce706e0930c02f2e6b`.
-The exact next production action is computation laboratory 1.
+The exact next action is to publish the verified Laboratory 1 successor through
+the existing GitHub and Pages lineage with anonymous readback, then begin
+Laboratory 2 (chain matrices and Smith normal form).
 The CA01 boundary is now public through the existing GitHub, Pages, and Zenodo
 lineages with exact anonymous byte/hash readback. GitHub content commit is
 `4b5f8f74bf361e45687d55fc31a95ea3e0c657ab`; Pages run `32924728855`
@@ -92,11 +101,11 @@ deploys the CA01 reader. Zenodo version `0.31.0` is record `22105179`, DOI
 `10.5281/zenodo.22105179`, in the unchanged concept DOI
 `10.5281/zenodo.22061489`.
 
-1. Add four offline reproducible computation laboratories, each with source,
-   tests, expected output, interpretation, and a full check: covering
-   monodromy/group presentations; chain matrices/Smith normal form; cellular
-   boundaries/degree; and comparison of fundamental-group, homology, and
-   cohomology invariants.
+1. Preserve completed Laboratory 1 and add the three remaining offline
+   reproducible laboratories, each with source, tests, expected output,
+   interpretation, and a full check: chain matrices/Smith normal form;
+   cellular boundaries/degree; and comparison of fundamental-group, homology,
+   and cohomology invariants.
 2. Repair the remaining backend proof-link metadata for `FOM-PR-13`-`15` and
    `FOM-U003-QUOTIENT-LES` without rewriting their already checked mathematics;
    then add the final proof-reconstruction/cross-invariant capstone and explicit

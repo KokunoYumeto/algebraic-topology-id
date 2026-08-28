@@ -2,7 +2,49 @@
 
 Updated: 2026-08-28
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` through source EOF, and Fomberg Units 001–007 translate the entire selected `algebraic_topology.tex:31–4185` / Sections 1.1–1.13 span. Every admitted unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. All three cumulative assessments are now complete: D60-CA01/02/03 contain 24 original exercise-hint-complete-solution triples. Together with the 84/84 ordinary distribution, the required solution-bearing mastery layer is closed at 108/108. The centered/reflowing successor HTML is 15,287,428 bytes; its PDF is 501 A4 pages/8,915,996 bytes; the backend has 7,273 records/8,840,132 bytes with bundle SHA-256 `97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464`. Zenodo version `0.31.2`, record `22135136`, DOI `10.5281/zenodo.22135136`, and GitHub content commit `657f21813ef39bd9e86558a2f4e16e79c23ce491` are public in their existing lineages. Every Zenodo file passed two anonymous byte/SHA-256 readbacks; all 66 GitHub delta files, the raw reader, the deployed Pages reader, and the frozen predecessor passed anonymous exact readback. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. The exact next production action is computation laboratory 1: covering-space monodromy and group presentations. Source line 4186 is only the nominal post-Fomberg marker and is not authority to translate beyond the selected span.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` through source EOF, and Fomberg Units 001–007 translate the entire selected `algebraic_topology.tex:31–4185` / Sections 1.1–1.13 span. Every admitted unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. All three cumulative assessments and the 108/108 solution-bearing mastery layer remain closed. Computation Laboratory 1 is complete with its reader, offline program, six deterministic tests, frozen expected output, interpretation, hint, complete solution, independent reviews, and append-only backend admission. The centered/reflowing successor HTML is 15,389,821 bytes/SHA-256 `bb0cf484271370878508a6b774e442ee57aaf82b1a3bbca1bed086729360f7ff`; its deterministic PDF is 511 A4 pages/9,193,942 bytes/SHA-256 `722fa7f6c3aa20d1a4c52257d3127fa500bbaf6aad66f64d62177718cd53d128`. The backend has 7,404 records/8,975,700 bytes with bundle SHA-256 `4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b`. Final build receipt SHA-256 is `820019c2592c8af11d41a02215b4fb5805368760d926ecb06d4760f4dccf9106`; visual/browser QA and independent reviews pass with P1/P2/P3 zero. Zenodo version `0.31.3`, record `22142210`, DOI `10.5281/zenodo.22142210`, is public in the existing concept and all nine files passed two exact anonymous byte/SHA-256 readbacks; receipt SHA-256 is `ef52c6362b65424c79991ffd35ede64b0ed64d96a0219577fe0df1016b25f830`. The public GitHub predecessor remains content commit `657f21813ef39bd9e86558a2f4e16e79c23ce491` until the Laboratory 1 successor is pushed, deployed, and anonymously read back. The exact next action is that GitHub/Pages transaction, followed immediately by Laboratory 2 (chain matrices and Smith normal form). Source line 4186 is only the nominal post-Fomberg marker and is not authority to translate beyond the selected span. Model provenance remains `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit.
+
+### Live recovery note — computation Laboratory 1 preserved on Zenodo; GitHub/Pages next, 2026-08-28
+
+`D60-LAB01` / `O012-ORIG-LAB01` is complete at
+`source/id-ID/labs/computation-lab-001-monodromy-presentations.md`, 12,275
+bytes/SHA-256
+`165e2f9ba587714fb32a2f5a6432920a36493ebc6902d580f55df9c8ab4c65c4`.
+The associated program, tests, and expected-output files are 8,818, 3,032, and
+478 bytes with SHA-256 values
+`a9c8875aeb2642921a2d152cd0ed316c6c67969a466240ada9836d3c42252628`,
+`ae30ca6604b2a96b12c7df125fdcaa6deea00a9e4594f6b161d7d4785d9b949b`,
+and `ddaa8015f314e53895c311e12be4d2d1dcaa1fa3f20def4ee112f28077a38717`.
+Both program runs are byte-identical to the frozen output; both test runs pass
+6/6. Aggregate source/execution/review QA is 4,258 bytes/SHA-256
+`75dede0eaa0edbb22c75470dc641bdd10f95aac57c05331171ace4ac9e68aa2b`.
+
+Append-only admission preserves the 7,273-record/8,840,132-byte prefix exactly,
+adds 131 records/135,568 bytes, and ends at 7,404 records/8,975,700 bytes with
+bundle SHA-256
+`4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b`.
+Cumulative receipt
+`qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_001_CUMULATIVE_RECEIPT.json` is 9,727
+bytes/SHA-256
+`90f445294eea58aca5bcebe6acaff7293251b21e32aa25f3b62705e64cf8ab74`.
+
+The successor HTML and PDF identities are stated in the status paragraph.
+All ten appended PDF pages plus predecessor transition page 501 pass original-
+detail inspection; desktop 1440×900 and mobile 375×812 browser checks show a
+centered reader, zero page-level overflow, four local code scrollers on mobile,
+zero unresolved fragments, zero external runtime assets, keyboard focus, and
+zero console errors or warnings. Final build receipt is 6,798 bytes/SHA-256
+`820019c2592c8af11d41a02215b4fb5805368760d926ecb06d4760f4dccf9106`.
+Zenodo `0.31.3` is public at record `22142210`, DOI
+`10.5281/zenodo.22142210`, in the existing concept DOI
+`10.5281/zenodo.22061489`; all nine files passed two anonymous HTTP 200
+byte/SHA-256 readback passes. Sanitized receipt
+`release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01/publication-receipt.json`
+has SHA-256
+`ef52c6362b65424c79991ffd35ede64b0ed64d96a0219577fe0df1016b25f830`.
+Publish this exact boundary through GitHub/Pages with public-byte readback;
+then begin `D60-LAB02`. Do not rebuild or reopen Laboratory 1 absent a newly
+demonstrated defect.
 
 ### Live recovery note — mastery 108/108 and Zenodo 0.31.2 public, 2026-08-28
 

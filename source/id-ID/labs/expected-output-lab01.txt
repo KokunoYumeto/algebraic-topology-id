@@ -1,0 +1,28 @@
+LABORATORIUM O012-D60-LAB01
+jumlah_lembaran: 4
+R_a: (0 1 2 3)
+R_b: (1 3)
+orbit_lembaran_0: [0, 1, 2, 3]
+terhubung: true
+orde_citra_monodromi: 8
+relasi_a4: true
+relasi_b2: true
+relasi_baba: true
+indeks_stabilisator: 4
+simpul_graf: 4
+sisi_graf: 8
+rank_grup_penutup: 5
+transversal_schreier:
+  0: 1
+  1: a
+  2: aa
+  3: A
+basis_bebas:
+  b
+  aba
+  aaaa
+  aabAA
+  AbA
+basis_memperbaiki_0: true
+presentasi_citra: <a,b | a^4, b^2, baba>
+presentasi_penutup: <b, aba, aaaa, aabAA, AbA | >

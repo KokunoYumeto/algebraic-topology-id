@@ -1,6 +1,6 @@
 # Build record
 
-## Roberts 001–030 + Fomberg 001–007 + CA01 + hints R01–R06 + CA02–CA03 — current boundary
+## Roberts 001–030 + Fomberg 001–007 + CA01 + hints R01–R06 + CA02–CA03 — prior published boundary
 
 Builder:
 `scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03.ps1`.
@@ -642,3 +642,70 @@ all 58 commit-delta paths and the deployed reader match anonymous bytes.
 Zenodo version `0.31.1`, record `22106133`, DOI
 `10.5281/zenodo.22106133`, preserves concept `10.5281/zenodo.22061489`; all
 nine reader-first files passed two complete anonymous byte/SHA-256 readbacks.
+
+## Roberts 001-030, Fomberg 001-007, mastery 108/108, and computation Lab 1 — current boundary
+
+Canonical additive source and executable closure:
+
+- Reader: `source/id-ID/labs/computation-lab-001-monodromy-presentations.md`,
+  12,275 bytes, 397 LF lines, SHA-256
+  `165e2f9ba587714fb32a2f5a6432920a36493ebc6902d580f55df9c8ab4c65c4`.
+- Program: `source/id-ID/labs/o012_d60_lab01_monodromy.py`, 8,818 bytes,
+  SHA-256 `a9c8875aeb2642921a2d152cd0ed316c6c67969a466240ada9836d3c42252628`.
+- Tests: `source/id-ID/labs/test_o012_d60_lab01_monodromy.py`, 3,032 bytes,
+  SHA-256 `ae30ca6604b2a96b12c7df125fdcaa6deea00a9e4594f6b161d7d4785d9b949b`.
+- Expected output: `source/id-ID/labs/expected-output-lab01.txt`, 478 bytes,
+  SHA-256 `ddaa8015f314e53895c311e12be4d2d1dcaa1fa3f20def4ee112f28077a38717`.
+
+Both program runs are byte-identical and match the expected output; both test
+runs pass 6/6. Independent mathematics and source-language reviews pass with
+P1/P2/P3 zero. Aggregate QA is 4,258 bytes/SHA-256
+`75dede0eaa0edbb22c75470dc641bdd10f95aac57c05331171ace4ac9e68aa2b`.
+
+Build and QA:
+
+```powershell
+python -B scripts/qa-computation-lab-001.py
+python -B scripts/validate-backend-append-only-computation-lab-001.py
+python -B scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01.py
+python -B scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01.py
+```
+
+Append-only replay preserves the exact 7,273-record/8,840,132-byte predecessor,
+adds 131 records/135,568 bytes, and ends at 7,404 records/8,975,700 bytes with
+bundle SHA-256
+`4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b`.
+Its cumulative receipt is 9,727 bytes/SHA-256
+`90f445294eea58aca5bcebe6acaff7293251b21e32aa25f3b62705e64cf8ab74`.
+
+Final cumulative artifacts and witnesses:
+
+- HTML: 15,389,821 bytes; SHA-256
+  `bb0cf484271370878508a6b774e442ee57aaf82b1a3bbca1bed086729360f7ff`.
+- PDF: 9,193,942 bytes; 511 A4 pages; SHA-256
+  `722fa7f6c3aa20d1a4c52257d3127fa500bbaf6aad66f64d62177718cd53d128`.
+- Artifact manifest: 357 bytes; SHA-256
+  `cbb39a0f0a7b4831fa5eaa2e9b3beb6fc5fa15379ec322f2abb8279fa2b7d824`.
+- Final build receipt: 6,798 bytes; SHA-256
+  `820019c2592c8af11d41a02215b4fb5805368760d926ecb06d4760f4dccf9106`.
+- Visual QA: 3,224 bytes; SHA-256
+  `7030f5129208c978a1dc51947bcea916b25751e988abd9a73925cbfcb0c79206`.
+- Browser QA: 2,979 bytes; SHA-256
+  `3a80c7eb7f2b0db70622e0b9785e61ee34763d514add6c92c0d7728e0caad901`.
+
+Two clean HTML, appendix-PDF, and merged-PDF builds are byte-identical. The
+501-page predecessor is preserved by exact extracted-text prefix and page-
+structure evidence. All 24 new destinations and 17 new outline entries resolve;
+all fonts are embedded, subset, and ToUnicode-mapped. Physical pages 501–511
+pass original-detail visual inspection. The HTML is self-contained, centered
+at 1,152 desktop pixels, reflows at 375 × 812 with zero page-level overflow,
+gives all four wide code blocks local mobile scrolling, resolves all 846
+fragment links, exposes keyboard focus, and logs zero browser errors or
+warnings. The PDF remains untagged; HTML is the primary accessible surface.
+Zenodo version `0.31.3`, record `22142210`, DOI
+`10.5281/zenodo.22142210`, now preserves the reader-first nine-file package in
+the existing concept `10.5281/zenodo.22061489`. Every file passed two anonymous
+HTTP 200 byte/SHA-256 readback passes. Sanitized publication receipt SHA-256 is
+`ef52c6362b65424c79991ffd35ede64b0ed64d96a0219577fe0df1016b25f830`.
+The matching GitHub/Pages successor remains the next publication action; record
+its public identifiers only after exact anonymous readback.

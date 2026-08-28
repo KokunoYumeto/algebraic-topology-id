@@ -1,0 +1,272 @@
+{
+  "cumulative": {
+    "bundle_sha256": "4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b",
+    "bytes": 8975700,
+    "computation_laboratories_complete": 1,
+    "computation_laboratories_required": 4,
+    "records": 7404
+  },
+  "delta": {
+    "bundle_sha256": "03ee129a0e49f4a19572265a56264592976c50a7c551a31e714d4009e7f5f01e",
+    "bytes": 135568,
+    "bytes_by_file": {
+      "artifacts.jsonl": 7664,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 2597,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 3601,
+      "relations.jsonl": 25299,
+      "rights.jsonl": 1628,
+      "segments.jsonl": 42339,
+      "terms.jsonl": 6041,
+      "units.jsonl": 46399
+    },
+    "records": 131,
+    "records_by_file": {
+      "artifacts.jsonl": 9,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 8,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 6,
+      "relations.jsonl": 51,
+      "rights.jsonl": 1,
+      "segments.jsonl": 24,
+      "terms.jsonl": 8,
+      "units.jsonl": 24
+    }
+  },
+  "edition_unit_id": "O012-ORIG-LAB01",
+  "files": [
+    {
+      "final_bytes": 176452,
+      "final_records": 214,
+      "final_sha256": "b79da3c77f733a175cf900c655816d4a06fa3f060a495a2644d30b010ce5e8d0",
+      "path": "backend/artifacts.jsonl",
+      "prefix_bytes": 168788,
+      "prefix_preserved": true,
+      "prefix_records": 205,
+      "prefix_sha256": "0f126c6ff8ccc6344af42000ff7c48529211d6c9c8a46d712119630946a97e38",
+      "records_added": 9,
+      "suffix_bytes": 7664,
+      "suffix_exact": true,
+      "suffix_sha256": "473d87a6404dacdf779c91c235982447a7abe6dd4ebd936fce1ea2636e8a4a69"
+    },
+    {
+      "final_bytes": 64692,
+      "final_records": 87,
+      "final_sha256": "1df40f8f6ca4f2fbfbe8a7b924a68a153713a20a4eebe1d014d8fb04669945f7",
+      "path": "backend/assets.jsonl",
+      "prefix_bytes": 64692,
+      "prefix_preserved": true,
+      "prefix_records": 87,
+      "prefix_sha256": "1df40f8f6ca4f2fbfbe8a7b924a68a153713a20a4eebe1d014d8fb04669945f7",
+      "records_added": 0,
+      "suffix_bytes": 0,
+      "suffix_exact": true,
+      "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "final_bytes": 4374,
+      "final_records": 6,
+      "final_sha256": "84c622f56dbbd5ba379361245ecfe07bc79c9f4fd6b18ba21b82b5f545211869",
+      "path": "backend/authority.jsonl",
+      "prefix_bytes": 4374,
+      "prefix_preserved": true,
+      "prefix_records": 6,
+      "prefix_sha256": "84c622f56dbbd5ba379361245ecfe07bc79c9f4fd6b18ba21b82b5f545211869",
+      "records_added": 0,
+      "suffix_bytes": 0,
+      "suffix_exact": true,
+      "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "final_bytes": 155292,
+      "final_records": 491,
+      "final_sha256": "c8ccbc4ee38e0a4f0b0d8ee6088774574a4138a7e611bbaa08133fa3ff2ad764",
+      "path": "backend/concepts.jsonl",
+      "prefix_bytes": 152695,
+      "prefix_preserved": true,
+      "prefix_records": 483,
+      "prefix_sha256": "720d96a10a3c2abebab164e2181486743ef99efb50c6ef419faefbf528b8ead3",
+      "records_added": 8,
+      "suffix_bytes": 2597,
+      "suffix_exact": true,
+      "suffix_sha256": "3fdf4a72a5671d950cf11a296272d86c61df326aa3f9dafa0c87050320676430"
+    },
+    {
+      "final_bytes": 594720,
+      "final_records": 564,
+      "final_sha256": "bd961fad5d83e96fec6ef83caa8447e2e5f282c603fd4983d79b5b4b54049fbb",
+      "path": "backend/corrections.jsonl",
+      "prefix_bytes": 594720,
+      "prefix_preserved": true,
+      "prefix_records": 564,
+      "prefix_sha256": "bd961fad5d83e96fec6ef83caa8447e2e5f282c603fd4983d79b5b4b54049fbb",
+      "records_added": 0,
+      "suffix_bytes": 0,
+      "suffix_exact": true,
+      "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "final_bytes": 101370,
+      "final_records": 184,
+      "final_sha256": "65a0890de4efa5051264900fa85dae8631e073148f3daf1d3fe7ce4132ebc5e9",
+      "path": "backend/qa.jsonl",
+      "prefix_bytes": 97769,
+      "prefix_preserved": true,
+      "prefix_records": 178,
+      "prefix_sha256": "40a3e19ea3a4daae552d92c6c6b41486baced20cb172428c1dc255c3027e70cb",
+      "records_added": 6,
+      "suffix_bytes": 3601,
+      "suffix_exact": true,
+      "suffix_sha256": "ecadd696d5ad39db256c4f855196fcb00c1efb0a0ff2e8dfc005fba5c7f7fd81"
+    },
+    {
+      "final_bytes": 498962,
+      "final_records": 1106,
+      "final_sha256": "6d91e165cb79d4a03d1b21939f934a2155591f2bd2f7e91420a08b6178e485bf",
+      "path": "backend/relations.jsonl",
+      "prefix_bytes": 473663,
+      "prefix_preserved": true,
+      "prefix_records": 1055,
+      "prefix_sha256": "9bef98e30bfbd17551f745a10814efabb349e58785961199791403cb9639b199",
+      "records_added": 51,
+      "suffix_bytes": 25299,
+      "suffix_exact": true,
+      "suffix_sha256": "82e35730955dbfb43df343c7183927e028afad38ec3f65ab9afdb72cf4c12a86"
+    },
+    {
+      "final_bytes": 101740,
+      "final_records": 108,
+      "final_sha256": "aa6c6bf27d9636bbe22d16b6f550a75cce7e8ef7142dffc04f8f4aa3667af69b",
+      "path": "backend/rights.jsonl",
+      "prefix_bytes": 100112,
+      "prefix_preserved": true,
+      "prefix_records": 107,
+      "prefix_sha256": "02e64d84b72eddba24f184544205de396e143d6fb96b09209e8e4c4837b234be",
+      "records_added": 1,
+      "suffix_bytes": 1628,
+      "suffix_exact": true,
+      "suffix_sha256": "09955ff1b9ca06ef75beccac257f7d945d794c6c4f37cc96d245953b0df02639"
+    },
+    {
+      "final_bytes": 3387764,
+      "final_records": 2065,
+      "final_sha256": "8499116f271fca22b3f30aeba2e6d2410c3a480a1bc000120fc44c195ffd5806",
+      "path": "backend/segments.jsonl",
+      "prefix_bytes": 3345425,
+      "prefix_preserved": true,
+      "prefix_records": 2041,
+      "prefix_sha256": "ccdaf7b3d80900a43a92423bc54446a556eaecdf5cce3bc4d40f21e6ad151cfe",
+      "records_added": 24,
+      "suffix_bytes": 42339,
+      "suffix_exact": true,
+      "suffix_sha256": "096cf1dae7d1eca9d19c3c1af6b135b2227001d9c6147fddf0348d8f7b8bc3a7"
+    },
+    {
+      "final_bytes": 321259,
+      "final_records": 484,
+      "final_sha256": "908dd1dcdea9ca52acfc91c681a538a0599670d3d3f7ad25a1d9313b508a1740",
+      "path": "backend/terms.jsonl",
+      "prefix_bytes": 315218,
+      "prefix_preserved": true,
+      "prefix_records": 476,
+      "prefix_sha256": "4b82f9d582ba747829373a7935fcc3cae56b96fd6b7486969ebb6d54cf927c50",
+      "records_added": 8,
+      "suffix_bytes": 6041,
+      "suffix_exact": true,
+      "suffix_sha256": "6a0124662f8e7fea32d5534d836210309f6a68b5cc98cbd4f58f180ecd8c1bbd"
+    },
+    {
+      "final_bytes": 3569075,
+      "final_records": 2095,
+      "final_sha256": "5ae55e8fc36311878a5209a4f9404faa16784bc22b98883a4dcbfaaf9f71fd22",
+      "path": "backend/units.jsonl",
+      "prefix_bytes": 3522676,
+      "prefix_preserved": true,
+      "prefix_records": 2071,
+      "prefix_sha256": "5ecf2049dd4747a14d66c335a0d8579c45946a54e377129fc39cbe838c019219",
+      "records_added": 24,
+      "suffix_bytes": 46399,
+      "suffix_exact": true,
+      "suffix_sha256": "2f13c788b2ebdc52fd4c2d9cd3ee9c9153c5daabe837139932a0fb5e54425a06"
+    }
+  ],
+  "generic_validator_baseline_diagnostic": {
+    "interpretation": "The historical append-only files are not globally ordinal-sorted. The immutable prefix was not reordered; merged schema/reference validation and exact isolated replay are the applicable gates.",
+    "status": "PRE_EXISTING_BASELINE_INCOMPATIBILITY"
+  },
+  "immutable_prefix": {
+    "bundle_sha256": "97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464",
+    "bytes": 8840132,
+    "preserved_exactly": true,
+    "records": 7273
+  },
+  "laboratory_id": "D60-LAB01",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "cumulative_backend_boundary",
+  "replay": {
+    "exact_file_matches": 11,
+    "final": {
+      "bundle_sha256": "4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b",
+      "bytes": 8975700,
+      "records": 7404
+    },
+    "laboratory_id": "D60-LAB01",
+    "receipt_kind": "isolated_exact_backend_replay",
+    "schema_version": "1.0",
+    "status": "PASS",
+    "suffix_bytes": 135568,
+    "temporary_replay_removed": true
+  },
+  "schema_version": "1.0",
+  "semantic_checks": {
+    "added_records": 131,
+    "append_only_ready": "PASS",
+    "artifact_evidence": "PASS",
+    "complete_solutions": 1,
+    "dependency_edges": 10,
+    "expected_outputs": 1,
+    "global_references": "PASS",
+    "hints": 1,
+    "merged_records": 7404,
+    "new_concepts": 8,
+    "new_terms": 8,
+    "program_sources": 1,
+    "rights_and_provenance": "PASS",
+    "route_edges": 3,
+    "schema_shapes": "PASS",
+    "stable_ids": 24,
+    "tasks": 6,
+    "test_suites": 1
+  },
+  "status": "PASS",
+  "supporting_receipts": {
+    "manifest": {
+      "bytes": 2828,
+      "lf_lines": 12,
+      "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_001_FILE_MANIFEST.csv",
+      "sha256": "f73574b3a87c79101eaca79ce8ed5a85bb7be560a5dd92ca806c41b337fbdc2b"
+    },
+    "plan": {
+      "bytes": 9902,
+      "lf_lines": 259,
+      "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_001_PLAN.json",
+      "sha256": "7b45f26028c62fe933f805f9cf0a7aec582c309f61087012db3f79743c0ef0e7"
+    },
+    "replay": {
+      "bytes": 372,
+      "lf_lines": 14,
+      "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_001_REPLAY_RECEIPT.json",
+      "sha256": "baeb93b0af8e8421c9d7d61eaad7d69671e75fba365b35c434cca90e0f8bc061"
+    },
+    "semantic": {
+      "bytes": 1773,
+      "lf_lines": 68,
+      "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_001_RECEIPT.json",
+      "sha256": "8ca7af6761c821752c304c02112e1bf2ce0b36bc1bf8f8d840a2b5637afd4f78"
+    }
+  }
+}

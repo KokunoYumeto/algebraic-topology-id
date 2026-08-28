@@ -1,0 +1,179 @@
+{
+  "checks": {
+    "excluded_fomberg_problem_bank_used": false,
+    "expected_output_exact": "PASS",
+    "independent_mathematics": "PASS",
+    "independent_source_language": "PASS",
+    "offline_program_and_tests": "PASS",
+    "privacy": "PASS",
+    "rights_origin_provenance_non_endorsement": "PASS",
+    "stable_ids_24_unique": "PASS",
+    "tasks_6_with_hint_and_complete_solution": "PASS",
+    "terminology_0485_0492": "PASS",
+    "two_program_runs_byte_identical": "PASS",
+    "two_test_runs_6_of_6": "PASS"
+  },
+  "course_route_unit_ids": [
+    "D60-R04",
+    "D60-R05",
+    "D60-R06"
+  ],
+  "edition_unit_id": "O012-ORIG-LAB01",
+  "human_review_claimed": false,
+  "inputs": [
+    {
+      "bytes": 12275,
+      "lf_lines": 397,
+      "path": "source/id-ID/labs/computation-lab-001-monodromy-presentations.md",
+      "sha256": "165e2f9ba587714fb32a2f5a6432920a36493ebc6902d580f55df9c8ab4c65c4"
+    },
+    {
+      "bytes": 8818,
+      "lf_lines": 237,
+      "path": "source/id-ID/labs/o012_d60_lab01_monodromy.py",
+      "sha256": "a9c8875aeb2642921a2d152cd0ed316c6c67969a466240ada9836d3c42252628"
+    },
+    {
+      "bytes": 3032,
+      "lf_lines": 87,
+      "path": "source/id-ID/labs/test_o012_d60_lab01_monodromy.py",
+      "sha256": "ae30ca6604b2a96b12c7df125fdcaa6deea00a9e4594f6b161d7d4785d9b949b"
+    },
+    {
+      "bytes": 478,
+      "lf_lines": 28,
+      "path": "source/id-ID/labs/expected-output-lab01.txt",
+      "sha256": "ddaa8015f314e53895c311e12be4d2d1dcaa1fa3f20def4ee112f28077a38717"
+    },
+    {
+      "bytes": 63366,
+      "lf_lines": 493,
+      "path": "00_control/TERMINOLOGY.csv",
+      "sha256": "205c37e300fb17116498156abf970e9dfbfdb34d082d7435c2e96eb9ef1092e5"
+    },
+    {
+      "bytes": 3394,
+      "lf_lines": 159,
+      "path": "qa/computation-lab-001/STATIC_QA.json",
+      "sha256": "f74501aad725291c9e9f522e13568ce5c7fb772939e23535f55edcafc0790932"
+    },
+    {
+      "bytes": 2923,
+      "lf_lines": 71,
+      "path": "qa/computation-lab-001/INDEPENDENT_MATH_REVIEW.json",
+      "sha256": "b7ae0519b960be5d6de706b46cbd527978c783b697982ba8b2a1a7a5c3a81e86"
+    },
+    {
+      "bytes": 2638,
+      "lf_lines": 64,
+      "path": "qa/computation-lab-001/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+      "sha256": "e333fe4398caa72911d7ab85f000a73913cf438dd261436ca3c5fad8ade474b0"
+    },
+    {
+      "bytes": 1858,
+      "lf_lines": 61,
+      "path": "qa/computation-lab-001/EXECUTION_RECEIPT.json",
+      "sha256": "ea8c6481c461135b8a00b3fefcf57b6ee1d2c14d7a94a79fbf2c0daaa1bb25db"
+    }
+  ],
+  "laboratory_id": "D60-LAB01",
+  "mathematical_result": {
+    "all_basis_words_fix_0": true,
+    "image_order": 8,
+    "negative_fixture_orbits": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "orbit_0": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "rank": 5,
+    "relations": {
+      "a4": true,
+      "b2": true,
+      "baba": true
+    },
+    "schreier_basis": [
+      "b",
+      "aba",
+      "aaaa",
+      "aabAA",
+      "AbA"
+    ],
+    "schreier_table": [
+      {
+        "generator": "a",
+        "sheet": 0,
+        "target": 1,
+        "word": "1"
+      },
+      {
+        "generator": "b",
+        "sheet": 0,
+        "target": 0,
+        "word": "b"
+      },
+      {
+        "generator": "a",
+        "sheet": 1,
+        "target": 2,
+        "word": "1"
+      },
+      {
+        "generator": "b",
+        "sheet": 1,
+        "target": 3,
+        "word": "aba"
+      },
+      {
+        "generator": "a",
+        "sheet": 2,
+        "target": 3,
+        "word": "aaaa"
+      },
+      {
+        "generator": "b",
+        "sheet": 2,
+        "target": 2,
+        "word": "aabAA"
+      },
+      {
+        "generator": "a",
+        "sheet": 3,
+        "target": 0,
+        "word": "1"
+      },
+      {
+        "generator": "b",
+        "sheet": 3,
+        "target": 1,
+        "word": "AbA"
+      }
+    ],
+    "transversal": {
+      "0": "1",
+      "1": "a",
+      "2": "aa",
+      "3": "A"
+    }
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "computation_laboratory_source_execution_review_closure",
+  "schema_version": "1.0",
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "status": "PASS",
+  "upstream_contacted": false
+}

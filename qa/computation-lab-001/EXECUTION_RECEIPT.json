@@ -1,0 +1,61 @@
+{
+  "all_exit_codes_zero": true,
+  "commands": [
+    "python -B source/id-ID/labs/test_o012_d60_lab01_monodromy.py",
+    "python -B source/id-ID/labs/o012_d60_lab01_monodromy.py"
+  ],
+  "edition_unit_id": "O012-ORIG-LAB01",
+  "expected_output": {
+    "bytes": 478,
+    "lf_lines": 28,
+    "path": "source/id-ID/labs/expected-output-lab01.txt",
+    "sha256": "ddaa8015f314e53895c311e12be4d2d1dcaa1fa3f20def4ee112f28077a38717"
+  },
+  "laboratory_id": "D60-LAB01",
+  "learner_artifacts": [
+    {
+      "bytes": 12275,
+      "lf_lines": 397,
+      "path": "source/id-ID/labs/computation-lab-001-monodromy-presentations.md",
+      "sha256": "165e2f9ba587714fb32a2f5a6432920a36493ebc6902d580f55df9c8ab4c65c4"
+    },
+    {
+      "bytes": 8818,
+      "lf_lines": 237,
+      "path": "source/id-ID/labs/o012_d60_lab01_monodromy.py",
+      "sha256": "a9c8875aeb2642921a2d152cd0ed316c6c67969a466240ada9836d3c42252628"
+    },
+    {
+      "bytes": 3032,
+      "lf_lines": 87,
+      "path": "source/id-ID/labs/test_o012_d60_lab01_monodromy.py",
+      "sha256": "ae30ca6604b2a96b12c7df125fdcaa6deea00a9e4594f6b161d7d4785d9b949b"
+    },
+    {
+      "bytes": 478,
+      "lf_lines": 28,
+      "path": "source/id-ID/labs/expected-output-lab01.txt",
+      "sha256": "ddaa8015f314e53895c311e12be4d2d1dcaa1fa3f20def4ee112f28077a38717"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "program_runs": 2,
+  "program_stdout_byte_identical_between_runs": true,
+  "program_stdout_matches_expected_output": true,
+  "receipt_kind": "offline_deterministic_execution",
+  "runtime": {
+    "implementation": "CPython",
+    "network_used": false,
+    "python_version": "3.13.9",
+    "standard_library_only": true
+  },
+  "schema_version": "1.0",
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "status": "PASS",
+  "test_runs": 2,
+  "tests_per_run": 6
+}

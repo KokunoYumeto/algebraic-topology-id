@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "review_kind": "independent_mathematics",
+  "review_id": "O012-D60-LAB01-INDEPENDENT-MATH",
+  "laboratory_id": "D60-LAB01",
+  "edition_unit_id": "O012-ORIG-LAB01",
+  "independent_from_production": true,
+  "reviewer_mode": "separate read-only agent with an independently recomputed action, image, transversal, and Schreier table",
+  "reader_sha256": "165e2f9ba587714fb32a2f5a6432920a36493ebc6902d580f55df9c8ab4c65c4",
+  "bound_artifacts": [
+    {
+      "path": "source/id-ID/labs/computation-lab-001-monodromy-presentations.md",
+      "bytes": 12275,
+      "lf_lines": 397,
+      "sha256": "165e2f9ba587714fb32a2f5a6432920a36493ebc6902d580f55df9c8ab4c65c4"
+    },
+    {
+      "path": "source/id-ID/labs/o012_d60_lab01_monodromy.py",
+      "bytes": 8818,
+      "lf_lines": 237,
+      "sha256": "a9c8875aeb2642921a2d152cd0ed316c6c67969a466240ada9836d3c42252628"
+    },
+    {
+      "path": "source/id-ID/labs/test_o012_d60_lab01_monodromy.py",
+      "bytes": 3032,
+      "lf_lines": 87,
+      "sha256": "ae30ca6604b2a96b12c7df125fdcaa6deea00a9e4594f6b161d7d4785d9b949b"
+    },
+    {
+      "path": "source/id-ID/labs/expected-output-lab01.txt",
+      "bytes": 478,
+      "lf_lines": 28,
+      "sha256": "ddaa8015f314e53895c311e12be4d2d1dcaa1fa3f20def4ee112f28077a38717"
+    },
+    {
+      "path": "qa/computation-lab-001/STATIC_QA.json",
+      "bytes": 3394,
+      "lf_lines": 159,
+      "sha256": "f74501aad725291c9e9f522e13568ce5c7fb772939e23535f55edcafc0790932"
+    }
+  ],
+  "independent_results": {
+    "right_action_convention": "R_uv = R_v o R_u; rho(g)=R_(g^-1) is the ordinary permutation homomorphism",
+    "orbit_0": [0, 1, 2, 3],
+    "connected": true,
+    "monodromy_image_order": 8,
+    "image_group": "dihedral group of the square",
+    "image_relators": ["a^4", "b^2", "baba"],
+    "transversal_by_sheet": {"0": "1", "1": "a", "2": "aa", "3": "A"},
+    "free_basis": ["b", "aba", "aaaa", "aabAA", "AbA"],
+    "covering_subgroup_index": 4,
+    "covering_group_rank": 5,
+    "graph_vertices": 4,
+    "graph_positive_edges": 8,
+    "negative_fixture_orbits": [[0, 1], [2, 3]]
+  },
+  "checked_distinctions": [
+    "the finite image is a quotient whereas the covering group is the stabilizer subgroup",
+    "the action kernel has index 8 and is not the index-4 covering subgroup",
+    "b and B induce the same involution but remain distinct formal free-group letters",
+    "the eight lifted positive one-cells, not four unoriented labels, determine the graph rank",
+    "the displayed Schreier basis order follows numeric sheet order"
+  ],
+  "resolved_during_review": [
+    "The reader now states im(rho) is isomorphic to F(a,b)/ker(rho), rather than forming a quotient from the direct right-action anti-homomorphism R."
+  ],
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0},
+  "human_review_claimed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

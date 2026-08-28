@@ -1,0 +1,68 @@
+{
+  "cumulative": {
+    "bundle_sha256": "4740eb2ff83b4f9df3c0d90c2426ff77e652b23cad0bbe7763c54ebdefa60b4b",
+    "bytes": 8975700,
+    "records": 7404
+  },
+  "delta": {
+    "bytes": 135568,
+    "bytes_by_file": {
+      "artifacts.jsonl": 7664,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 2597,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 3601,
+      "relations.jsonl": 25299,
+      "rights.jsonl": 1628,
+      "segments.jsonl": 42339,
+      "terms.jsonl": 6041,
+      "units.jsonl": 46399
+    },
+    "records": 131,
+    "records_by_file": {
+      "artifacts.jsonl": 9,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 8,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 6,
+      "relations.jsonl": 51,
+      "rights.jsonl": 1,
+      "segments.jsonl": 24,
+      "terms.jsonl": 8,
+      "units.jsonl": 24
+    }
+  },
+  "edition_unit_id": "O012-ORIG-LAB01",
+  "immutable_prefix": {
+    "bundle_sha256": "97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464",
+    "bytes": 8840132,
+    "records": 7273
+  },
+  "laboratory_id": "D60-LAB01",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "append_only_backend_semantic_validation",
+  "schema_version": "1.0",
+  "semantic_checks": {
+    "added_records": 131,
+    "append_only_ready": "PASS",
+    "artifact_evidence": "PASS",
+    "complete_solutions": 1,
+    "dependency_edges": 10,
+    "expected_outputs": 1,
+    "global_references": "PASS",
+    "hints": 1,
+    "merged_records": 7404,
+    "new_concepts": 8,
+    "new_terms": 8,
+    "program_sources": 1,
+    "rights_and_provenance": "PASS",
+    "route_edges": 3,
+    "schema_shapes": "PASS",
+    "stable_ids": 24,
+    "tasks": 6,
+    "test_suites": 1
+  },
+  "status": "PASS"
+}
