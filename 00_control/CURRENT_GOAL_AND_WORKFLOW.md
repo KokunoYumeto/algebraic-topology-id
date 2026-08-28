@@ -57,28 +57,28 @@ preserve the same reader boundary. Both lineages and every critical witness
 have exact anonymous byte/hash readback. Do not rebuild, retranslate, or
 renumber this frozen prefix.
 
-The route/proof census, Cumulative Assessment 1, and the ordinary-mastery
-hint closure are now locally closed. CA01 adds eight original
-exercise-hint-complete-solution triples across `D60-R01`-`R07`; its reader
-source SHA-256 is
-`5888df0410ad7e8ccf50d8ea8092e43a42f6df94c242f7c09abe0616d972e6f8`.
-The separately modeled `O012-ORIG-HINTS-R01-R06` layer adds exactly 36 stable
-hints to 36 existing exercise/full-solution pairs without duplicating or
-altering prompts, solutions, or solve edges. Its source is 28,698 bytes,
-SHA-256 `dc319cb191d709a5807f0c0792401f9faf2993ceede364764547f20bb4f69c2a`.
-All 84 ordinary route items now have exercise, hint, and complete solution;
-CA01 brings the cumulative total to 92/108, leaving exactly the 16 items in
-CA02 and CA03. The append-only backend now has 7,012 records/8,545,732 bytes
-and bundle SHA-256
-`7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b`.
-The centered/reflowing 15,026,881-byte HTML and 482-page deterministic PDF
-pass independent math, language, structural, browser, visual, navigation,
-rights, and hash QA. This successor is public and exactly anonymously verified.
-GitHub commit `646769fb52a51e997f5409fc2148f8892508da1d` and Pages run
-`32933679761` deploy the reader. Zenodo version `0.31.1` is record `22106133`,
-DOI `10.5281/zenodo.22106133`, in the unchanged concept DOI
+The route census, all three cumulative assessments, and the ordinary-mastery
+hint closure are now closed. CA01, CA02, and CA03 contribute 24 original
+exercise-hint-complete-solution triples; the separately modeled
+`O012-ORIG-HINTS-R01-R06` layer supplies 36 stable hints for existing
+exercise/full-solution pairs without altering prompts, solutions, or solve
+edges. All 84 ordinary route items and all 24 cumulative-assessment items now
+have an exercise, hint, and complete solution: the required mastery layer is
+108/108. No excluded Fomberg problem-bank expression was used.
+
+The append-only backend preserves the exact 7,012-record checkpoint prefix and
+adds 261 records, ending at 7,273 records/8,840,132 bytes with bundle SHA-256
+`97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464`.
+The centered/reflowing HTML is 15,287,428 bytes/SHA-256
+`417e50656ae0a61134c480f59df1bcd54d66a68c938d1d54f9c931ba37e2a5d6`;
+the deterministic PDF is 8,915,996 bytes/501 A4 pages/SHA-256
+`74ed9b5bf0f79a98693369dc7beba3e84ac81c711cc96b9951ae950ae9632a16`.
+Independent mathematics and language review, append-only replay, route,
+structural, browser, responsive, visual, navigation, rights, privacy, and hash
+QA pass with P1/P2/P3 zero. Zenodo version `0.31.2`, record `22135136`, DOI
+`10.5281/zenodo.22135136`, is public in the unchanged concept DOI
 `10.5281/zenodo.22061489`; all nine files passed two anonymous byte/SHA-256
-readback passes. The next production action is CA02 and CA03.
+readback passes. The exact next production action is computation laboratory 1.
 The CA01 boundary is now public through the existing GitHub, Pages, and Zenodo
 lineages with exact anonymous byte/hash readback. GitHub content commit is
 `4b5f8f74bf361e45687d55fc31a95ea3e0c657ab`; Pages run `32924728855`
@@ -86,26 +86,22 @@ deploys the CA01 reader. Zenodo version `0.31.0` is record `22105179`, DOI
 `10.5281/zenodo.22105179`, in the unchanged concept DOI
 `10.5281/zenodo.22061489`.
 
-1. Add Cumulative Assessments 2 and 3, eight original items each with a hint
-   and complete checked solution, so all 24 cumulative slots and all 108
-   required solution-bearing slots are closed. Do not copy the excluded
-   Fomberg problem bank.
-2. Add four offline reproducible computation laboratories, each with source,
+1. Add four offline reproducible computation laboratories, each with source,
    tests, expected output, interpretation, and a full check: covering
    monodromy/group presentations; chain matrices/Smith normal form; cellular
    boundaries/degree; and comparison of fundamental-group, homology, and
    cohomology invariants.
-3. Repair the remaining backend proof-link metadata for `FOM-PR-13`-`15` and
+2. Repair the remaining backend proof-link metadata for `FOM-PR-13`-`15` and
    `FOM-U003-QUOTIENT-LES` without rewriting their already checked mathematics;
    then add the final proof-reconstruction/cross-invariant capstone and explicit
    oral-proof rubric; independently check every new mathematical argument and
    all cumulative prerequisite edges.
-4. Extend the append-only backend while preserving the 30-edition-unit/14-route
+3. Extend the append-only backend while preserving the 30-edition-unit/14-route
    view, rebuild centered/reflowing HTML and deterministic PDF, run full route
    QA, and publish each coherent verified boundary through the same GitHub,
    Pages, and Zenodo lineages with anonymous byte readback. Keep credentials
    runtime-only. Figshare remains inactive and is not a completion gate.
-5. When the entire corpus is closed, perform one final duplicate/high-confidence
+4. When the entire corpus is closed, perform one final duplicate/high-confidence
    check and, only if a useful upstream correction remains, send at most one
    concise report signed `Codex — at the user's direction.`
 
@@ -114,6 +110,6 @@ deploys the CA01 reader. Zenodo version `0.31.0` is record `22105179`, DOI
 Finish only when Roberts 001–030, the selected Fomberg bridge, every required
 proof/mastery/lab/capstone item, backend mappings, rights/provenance, centered
 HTML, deterministic PDF, and public anonymous readbacks are complete and
-hash-bound. Until then the lane remains active and the cursor’s next line is
-the sole production authority. Model provenance to record exactly:
+hash-bound. Until then the lane remains active and `00_control/CURSOR.json`’s
+`next_action` is the sole production authority. Model provenance to record exactly:
 `OpenAI Codex gpt-5.6-sol, Ultra`.

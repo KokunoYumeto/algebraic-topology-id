@@ -1,0 +1,329 @@
+{
+  "assessment_ids": [
+    "D60-CA02",
+    "D60-CA03"
+  ],
+  "cumulative": {
+    "bundle_sha256": "97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464",
+    "bytes": 8840132,
+    "cumulative_assessment_slots": 24,
+    "ordinary_mastery_slots": 84,
+    "records": 7273,
+    "solution_bearing_slots": 108
+  },
+  "delta": {
+    "bundle_sha256": "eddb0b72ac582bcf3fc8bb5e544b1c340fa09cb44aa6a231d415404a2d415edc",
+    "bytes": 294400,
+    "bytes_by_file": {
+      "artifacts.jsonl": 7455,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 0,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 4392,
+      "relations.jsonl": 74134,
+      "rights.jsonl": 3152,
+      "segments.jsonl": 98164,
+      "terms.jsonl": 0,
+      "units.jsonl": 107103
+    },
+    "records": 261,
+    "records_by_file": {
+      "artifacts.jsonl": 8,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 0,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 8,
+      "relations.jsonl": 143,
+      "rights.jsonl": 2,
+      "segments.jsonl": 50,
+      "terms.jsonl": 0,
+      "units.jsonl": 50
+    }
+  },
+  "edition_unit_ids": [
+    "O012-ORIG-CA02",
+    "O012-ORIG-CA03"
+  ],
+  "files": [
+    {
+      "final_bytes": 168788,
+      "final_records": 205,
+      "final_sha256": "0f126c6ff8ccc6344af42000ff7c48529211d6c9c8a46d712119630946a97e38",
+      "path": "backend/artifacts.jsonl",
+      "prefix_bytes": 161333,
+      "prefix_preserved": true,
+      "prefix_records": 197,
+      "prefix_sha256": "64d050e7abb6c61e27f4bd8659c3c5ab7899be43032592cb5e3b0c15cbeb18f6",
+      "records_added": 8,
+      "suffix_bytes": 7455,
+      "suffix_exact": true,
+      "suffix_sha256": "b100a675bb158f5e545c2da48ac9d8197cb0da931bfd3814efd3d378dbb9e235"
+    },
+    {
+      "final_bytes": 64692,
+      "final_records": 87,
+      "final_sha256": "1df40f8f6ca4f2fbfbe8a7b924a68a153713a20a4eebe1d014d8fb04669945f7",
+      "path": "backend/assets.jsonl",
+      "prefix_bytes": 64692,
+      "prefix_preserved": true,
+      "prefix_records": 87,
+      "prefix_sha256": "1df40f8f6ca4f2fbfbe8a7b924a68a153713a20a4eebe1d014d8fb04669945f7",
+      "records_added": 0,
+      "suffix_bytes": 0,
+      "suffix_exact": true,
+      "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "final_bytes": 4374,
+      "final_records": 6,
+      "final_sha256": "84c622f56dbbd5ba379361245ecfe07bc79c9f4fd6b18ba21b82b5f545211869",
+      "path": "backend/authority.jsonl",
+      "prefix_bytes": 4374,
+      "prefix_preserved": true,
+      "prefix_records": 6,
+      "prefix_sha256": "84c622f56dbbd5ba379361245ecfe07bc79c9f4fd6b18ba21b82b5f545211869",
+      "records_added": 0,
+      "suffix_bytes": 0,
+      "suffix_exact": true,
+      "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "final_bytes": 152695,
+      "final_records": 483,
+      "final_sha256": "720d96a10a3c2abebab164e2181486743ef99efb50c6ef419faefbf528b8ead3",
+      "path": "backend/concepts.jsonl",
+      "prefix_bytes": 152695,
+      "prefix_preserved": true,
+      "prefix_records": 483,
+      "prefix_sha256": "720d96a10a3c2abebab164e2181486743ef99efb50c6ef419faefbf528b8ead3",
+      "records_added": 0,
+      "suffix_bytes": 0,
+      "suffix_exact": true,
+      "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "final_bytes": 594720,
+      "final_records": 564,
+      "final_sha256": "bd961fad5d83e96fec6ef83caa8447e2e5f282c603fd4983d79b5b4b54049fbb",
+      "path": "backend/corrections.jsonl",
+      "prefix_bytes": 594720,
+      "prefix_preserved": true,
+      "prefix_records": 564,
+      "prefix_sha256": "bd961fad5d83e96fec6ef83caa8447e2e5f282c603fd4983d79b5b4b54049fbb",
+      "records_added": 0,
+      "suffix_bytes": 0,
+      "suffix_exact": true,
+      "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "final_bytes": 97769,
+      "final_records": 178,
+      "final_sha256": "40a3e19ea3a4daae552d92c6c6b41486baced20cb172428c1dc255c3027e70cb",
+      "path": "backend/qa.jsonl",
+      "prefix_bytes": 93377,
+      "prefix_preserved": true,
+      "prefix_records": 170,
+      "prefix_sha256": "05c2660f74b7ba462cbad260a5067f41c8ec0d451b4bd6229f53a95de4f9c70a",
+      "records_added": 8,
+      "suffix_bytes": 4392,
+      "suffix_exact": true,
+      "suffix_sha256": "0223e66024d24215a6f5477eaa3a85ea18ef3bb01ce77cb60fc8faa254c5749e"
+    },
+    {
+      "final_bytes": 473663,
+      "final_records": 1055,
+      "final_sha256": "9bef98e30bfbd17551f745a10814efabb349e58785961199791403cb9639b199",
+      "path": "backend/relations.jsonl",
+      "prefix_bytes": 399529,
+      "prefix_preserved": true,
+      "prefix_records": 912,
+      "prefix_sha256": "37b0ef08c48f34f7a7b9abef523ab548bcefb3a16ba5dba99b6ccec4f58cee6f",
+      "records_added": 143,
+      "suffix_bytes": 74134,
+      "suffix_exact": true,
+      "suffix_sha256": "032601c8292341883bde12038cd44b695e6ea25b72a84082a0a2de354f8e7b01"
+    },
+    {
+      "final_bytes": 100112,
+      "final_records": 107,
+      "final_sha256": "02e64d84b72eddba24f184544205de396e143d6fb96b09209e8e4c4837b234be",
+      "path": "backend/rights.jsonl",
+      "prefix_bytes": 96960,
+      "prefix_preserved": true,
+      "prefix_records": 105,
+      "prefix_sha256": "3788fae643c94198e10b49465ad313c166abaf08bc42da71553051922054de49",
+      "records_added": 2,
+      "suffix_bytes": 3152,
+      "suffix_exact": true,
+      "suffix_sha256": "ed5f4837202d15c0782e8a59c5d056f160312e77ff8871f87667169732d3782d"
+    },
+    {
+      "final_bytes": 3345425,
+      "final_records": 2041,
+      "final_sha256": "ccdaf7b3d80900a43a92423bc54446a556eaecdf5cce3bc4d40f21e6ad151cfe",
+      "path": "backend/segments.jsonl",
+      "prefix_bytes": 3247261,
+      "prefix_preserved": true,
+      "prefix_records": 1991,
+      "prefix_sha256": "25c31b936b1c53ae39337d1059ec5889782e21da698521041194c6bb37058a79",
+      "records_added": 50,
+      "suffix_bytes": 98164,
+      "suffix_exact": true,
+      "suffix_sha256": "7f957b35ed189f7d59c488e960009998be60ab3a463cd6b342a70ba0763a7e1e"
+    },
+    {
+      "final_bytes": 315218,
+      "final_records": 476,
+      "final_sha256": "4b82f9d582ba747829373a7935fcc3cae56b96fd6b7486969ebb6d54cf927c50",
+      "path": "backend/terms.jsonl",
+      "prefix_bytes": 315218,
+      "prefix_preserved": true,
+      "prefix_records": 476,
+      "prefix_sha256": "4b82f9d582ba747829373a7935fcc3cae56b96fd6b7486969ebb6d54cf927c50",
+      "records_added": 0,
+      "suffix_bytes": 0,
+      "suffix_exact": true,
+      "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "final_bytes": 3522676,
+      "final_records": 2071,
+      "final_sha256": "5ecf2049dd4747a14d66c335a0d8579c45946a54e377129fc39cbe838c019219",
+      "path": "backend/units.jsonl",
+      "prefix_bytes": 3415573,
+      "prefix_preserved": true,
+      "prefix_records": 2021,
+      "prefix_sha256": "08c9f3e5886e9a3cd6b12737d8ffff238caf4b24116d08da4f85f12e7049e86f",
+      "records_added": 50,
+      "suffix_bytes": 107103,
+      "suffix_exact": true,
+      "suffix_sha256": "3990746b79f056d8547acf133b69ad4a11038acab7884b4a446af2df287b9e06"
+    }
+  ],
+  "generic_validator_baseline_diagnostic": {
+    "command": "python -B scripts/validate-backend.py",
+    "exit_code": 1,
+    "interpretation": "The direct legacy validator rejects historical per-file append order in the immutable published prefix. The prefix was not reordered; merged schema/reference checks and exact binary replay are the applicable gates.",
+    "output": "backend validation: FAIL: artifacts.jsonl: records are not sorted by ordinal id",
+    "status": "PRE_EXISTING_BASELINE_INCOMPATIBILITY"
+  },
+  "immutable_prefix": {
+    "bundle_sha256": "7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b",
+    "bytes": 8545732,
+    "preserved_exactly": true,
+    "records": 7012
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "cumulative_backend_boundary",
+  "replay": {
+    "exact_file_matches": 11,
+    "final": {
+      "bundle_sha256": "97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464",
+      "bytes": 8840132,
+      "records": 7273
+    },
+    "status": "PASS",
+    "suffix_bytes": 294400,
+    "temporary_replay_removed": true
+  },
+  "semantic_checks": {
+    "added_records": 261,
+    "artifact_evidence": "PASS",
+    "assessment_items_added": 16,
+    "assessment_results": [
+      {
+        "assessment_id": "D60-CA02",
+        "complete_solutions": 8,
+        "dependency_edges": 16,
+        "exercises": 8,
+        "hints": 8,
+        "route_coverage": [
+          "D60-R08",
+          "D60-R09",
+          "D60-R10",
+          "D60-R11",
+          "D60-R12"
+        ],
+        "segments": 25,
+        "units": 25
+      },
+      {
+        "assessment_id": "D60-CA03",
+        "complete_solutions": 8,
+        "dependency_edges": 17,
+        "exercises": 8,
+        "hints": 8,
+        "route_coverage": [
+          "D60-R13",
+          "D60-R14"
+        ],
+        "segments": 25,
+        "units": 25
+      }
+    ],
+    "concept_closure": "PASS",
+    "cumulative_assessment_items_after_append": 24,
+    "global_id_uniqueness": "PASS",
+    "global_references": "PASS",
+    "merged_records": 7273,
+    "original_source_demarcation": "PASS",
+    "qa_type_counts": {
+      "language": 2,
+      "mastery": 2,
+      "math": 2,
+      "structure": 2
+    },
+    "relation_type_counts": {
+      "contains": 54,
+      "depends-on": 33,
+      "hints": 16,
+      "solves": 16,
+      "xref": 24
+    },
+    "required_solution_bearing_slots_after_append": 108,
+    "rights_and_provenance_closure": "PASS",
+    "route_and_prerequisite_mapping": "PASS",
+    "schema_shapes": "PASS",
+    "segment_kind_counts": {
+      "assessment": 2,
+      "exercise": 16,
+      "hint": 16,
+      "solution": 16
+    },
+    "unit_kind_counts": {
+      "exercise": 16,
+      "hint": 16,
+      "reader_unit": 2,
+      "solution": 16
+    }
+  },
+  "status": "PASS",
+  "supporting_receipts": {
+    "manifest": {
+      "bytes": 2821,
+      "lf_lines": 12,
+      "path": "qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENTS_002_003_FILE_MANIFEST.csv",
+      "sha256": "7269dc02d67e694286809a0b823cf84ac7a05e5eee7f974e5b3420765e22529c"
+    },
+    "plan": {
+      "bytes": 15659,
+      "lf_lines": 361,
+      "path": "qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENTS_002_003_PLAN.json",
+      "sha256": "0c0c42c1e584075769b59d89d8f5000e93a06e626f1c25fd26a3f278de4424e4"
+    },
+    "replay": {
+      "bytes": 619,
+      "lf_lines": 25,
+      "path": "qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENTS_002_003_REPLAY_RECEIPT.json",
+      "sha256": "f3bd98b776990347488c3beace86c26340ed9cad6bce052883e161d71011a323"
+    },
+    "semantic": {
+      "bytes": 3874,
+      "lf_lines": 127,
+      "path": "qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENTS_002_003_RECEIPT.json",
+      "sha256": "1f74a21b99dc50ad032b0a01aba80856517e554532674b7fa98904de4e04f083"
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "assessment_ids": [
+    "D60-CA02",
+    "D60-CA03"
+  ],
+  "edition_unit_ids": [
+    "O012-ORIG-CA02",
+    "O012-ORIG-CA03"
+  ],
+  "generic_validator_baseline_diagnostic": {
+    "command": "python -B scripts/validate-backend.py",
+    "exit_code": 1,
+    "interpretation": "The direct legacy validator rejects historical per-file append order in the immutable published prefix. The prefix was not reordered; merged schema/reference checks and exact binary replay are the applicable gates.",
+    "output": "backend validation: FAIL: artifacts.jsonl: records are not sorted by ordinal id",
+    "status": "PRE_EXISTING_BASELINE_INCOMPATIBILITY"
+  },
+  "input_identities": {
+    "qa/CUMULATIVE_ASSESSMENTS_002_003_QA.json": {
+      "bytes": 3906,
+      "lf_lines": 132,
+      "sha256": "24439975cfe1d877dbffdb2948afaa78839b43cd172b2a95cbf1bb0bee599932"
+    },
+    "qa/cumulative-assessment-002/INDEPENDENT_MATH_REVIEW.json": {
+      "bytes": 3339,
+      "lf_lines": 45,
+      "sha256": "17cf645b3f6a21e7b2c6e287118a342896111180ee26e96cb4e4a047cf89cf4c"
+    },
+    "qa/cumulative-assessment-002/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json": {
+      "bytes": 3040,
+      "lf_lines": 68,
+      "sha256": "35695a9499f9898630d6b17104d3e906d50b708a10d090919efcc109c2dbf677"
+    },
+    "qa/cumulative-assessment-003/INDEPENDENT_MATH_REVIEW.json": {
+      "bytes": 4123,
+      "lf_lines": 79,
+      "sha256": "ba170bceaba1b4b7d6ce5f7d6b8698a9281b54768dcc7fbc4311f5d62d0a9c5f"
+    },
+    "qa/cumulative-assessment-003/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json": {
+      "bytes": 3142,
+      "lf_lines": 68,
+      "sha256": "4db495d83633343edc6b0c25dab50f6cfc102b45643ec0c2a3fc0d1630ab3058"
+    },
+    "source/id-ID/mastery/cumulative-assessment-002-homology-excision-cellular.md": {
+      "bytes": 25321,
+      "lf_lines": 785,
+      "sha256": "2f8dc58eb4fb2da06e239d8e0979112c5f50c846f584900a2e7ea4999a8685ea"
+    },
+    "source/id-ID/mastery/cumulative-assessment-003-cohomology-degree-synthesis.md": {
+      "bytes": 26074,
+      "lf_lines": 711,
+      "sha256": "35c2c9a1b7edbeb1902245b567754e33f4720e11b48d2822bad7666a6a626894"
+    }
+  },
+  "receipt_kind": "semantic_append_validation",
+  "semantic_checks": {
+    "added_records": 261,
+    "artifact_evidence": "PASS",
+    "assessment_items_added": 16,
+    "assessment_results": [
+      {
+        "assessment_id": "D60-CA02",
+        "complete_solutions": 8,
+        "dependency_edges": 16,
+        "exercises": 8,
+        "hints": 8,
+        "route_coverage": [
+          "D60-R08",
+          "D60-R09",
+          "D60-R10",
+          "D60-R11",
+          "D60-R12"
+        ],
+        "segments": 25,
+        "units": 25
+      },
+      {
+        "assessment_id": "D60-CA03",
+        "complete_solutions": 8,
+        "dependency_edges": 17,
+        "exercises": 8,
+        "hints": 8,
+        "route_coverage": [
+          "D60-R13",
+          "D60-R14"
+        ],
+        "segments": 25,
+        "units": 25
+      }
+    ],
+    "concept_closure": "PASS",
+    "cumulative_assessment_items_after_append": 24,
+    "global_id_uniqueness": "PASS",
+    "global_references": "PASS",
+    "merged_records": 7273,
+    "original_source_demarcation": "PASS",
+    "qa_type_counts": {
+      "language": 2,
+      "mastery": 2,
+      "math": 2,
+      "structure": 2
+    },
+    "relation_type_counts": {
+      "contains": 54,
+      "depends-on": 33,
+      "hints": 16,
+      "solves": 16,
+      "xref": 24
+    },
+    "required_solution_bearing_slots_after_append": 108,
+    "rights_and_provenance_closure": "PASS",
+    "route_and_prerequisite_mapping": "PASS",
+    "schema_shapes": "PASS",
+    "segment_kind_counts": {
+      "assessment": 2,
+      "exercise": 16,
+      "hint": 16,
+      "solution": 16
+    },
+    "unit_kind_counts": {
+      "exercise": 16,
+      "hint": 16,
+      "reader_unit": 2,
+      "solution": 16
+    }
+  },
+  "status": "PASS"
+}

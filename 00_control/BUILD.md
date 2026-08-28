@@ -1,6 +1,54 @@
 # Build record
 
-## Roberts 001–030 plus Fomberg 001–007 — current boundary
+## Roberts 001–030 + Fomberg 001–007 + CA01 + hints R01–R06 + CA02–CA03 — current boundary
+
+Builder:
+`scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03.ps1`.
+It preserves the complete 482-page predecessor by semantic and 72-dpi RGB
+pixel equivalence, renders CA02/CA03 twice from clean bounded scratch, and
+requires byte-identical HTML/PDF output, 68 new stable destinations, exact
+assessment QA, the append-only backend prefix, embedded/subset/ToUnicode fonts,
+links, MathML, rights, privacy, and artifact identities.
+
+```powershell
+python -B scripts/qa-cumulative-assessments-002-003.py
+python -B scripts/validate-backend-append-only-cumulative-assessments-002-003.py
+pwsh -NoProfile -File scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03.ps1
+python -B scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03.py
+```
+
+- CA02: 25,321 bytes/SHA-256
+  `2f8dc58eb4fb2da06e239d8e0979112c5f50c846f584900a2e7ea4999a8685ea`.
+- CA03: 26,074 bytes/SHA-256
+  `35c2c9a1b7edbeb1902245b567754e33f4720e11b48d2822bad7666a6a626894`.
+- HTML: 15,287,428 bytes/SHA-256
+  `417e50656ae0a61134c480f59df1bcd54d66a68c938d1d54f9c931ba37e2a5d6`.
+- PDF: 8,915,996 bytes/501 A4 pages/SHA-256
+  `74ed9b5bf0f79a98693369dc7beba3e84ac81c711cc96b9951ae950ae9632a16`.
+- Manifest: 345 bytes/SHA-256
+  `40220aec7c99f28892775a2d274bcc24ae3cc847946737424a254d97aa7f5c69`.
+- Final build receipt: 81,018 bytes/SHA-256
+  `596f0e89e8c4abe310019dca95f0e457e7b70983f490afba26291211af0f55b9`.
+- Backend: 7,273 records/8,840,132 bytes/bundle SHA-256
+  `97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464`.
+
+The serialized HTML has 2,466 unique IDs, 516 resolving fragment links, and
+16,911 native MathML nodes. Browser QA passes at 1,440×900 and 375×812 with a
+centered reading column, zero page-level overflow, zero external assets, and
+only intentional formula-local mobile scrollers. PDF pages 482–501 all pass
+original-detail visual inspection and structural glyph-bound checks; all 20
+are A4 and nonempty, with zero replacement/square markers and zero out-of-page
+glyph boxes. P1/P2/P3 are zero. The PDF remains disclosed as untagged.
+
+Zenodo version `0.31.2`, record `22135136`, DOI
+`10.5281/zenodo.22135136`, preserves the reader-first nine-file package in the
+existing concept `10.5281/zenodo.22061489`. Every file passed two anonymous
+HTTP 200 byte/SHA-256 readback passes. Sanitized publication receipt SHA-256:
+`d097cabe1c857b498ec0bf1dcca620e6cd957797ab70777ba229b6c3540a2871`.
+GitHub/Pages identity is recorded separately after the content commit and
+deployment complete.
+
+## Roberts 001–030 plus Fomberg 001–007 — prior boundary
 
 Builder: `scripts/build-roberts-001-030-fomberg-001-007.ps1`. It freezes the
 complete Roberts component and Fomberg `algebraic_topology.tex:31–4185`, builds

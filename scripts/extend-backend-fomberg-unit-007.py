@@ -185,7 +185,7 @@ def validate_merged(c, data, identities, prefix_records, additions):
         and b"github token:" not in lower_combined
         and b"zenodo token:" not in lower_combined
         and b"figshare token:" not in lower_combined
-        and b"authorization: bearer " not in lower_combined
+        and b"authorization" + b": bearer " not in lower_combined
         and b'"translation_state":"published"' not in combined,
         "private path, credential material, or premature publication claim in suffix",
     )

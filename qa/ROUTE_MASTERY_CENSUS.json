@@ -1,11 +1,13 @@
 {
   "assessments": {
     "backend": {
-      "complete_assessment_count": 1,
+      "complete_assessment_count": 3,
       "complete_assessment_ids": [
-        "D60-CA01"
+        "D60-CA01",
+        "D60-CA02",
+        "D60-CA03"
       ],
-      "credited_items": 8,
+      "credited_items": 24,
       "detail": {
         "D60-CA01": {
           "complete_eight_item_assessment": true,
@@ -20,12 +22,42 @@
             "unit:o012-d60-ca01-ex-008"
           ],
           "graph_complete_items": 8
+        },
+        "D60-CA02": {
+          "complete_eight_item_assessment": true,
+          "exercise_ids": [
+            "unit:o012-d60-ca02-ex-001",
+            "unit:o012-d60-ca02-ex-002",
+            "unit:o012-d60-ca02-ex-003",
+            "unit:o012-d60-ca02-ex-004",
+            "unit:o012-d60-ca02-ex-005",
+            "unit:o012-d60-ca02-ex-006",
+            "unit:o012-d60-ca02-ex-007",
+            "unit:o012-d60-ca02-ex-008"
+          ],
+          "graph_complete_items": 8
+        },
+        "D60-CA03": {
+          "complete_eight_item_assessment": true,
+          "exercise_ids": [
+            "unit:o012-d60-ca03-ex-001",
+            "unit:o012-d60-ca03-ex-002",
+            "unit:o012-d60-ca03-ex-003",
+            "unit:o012-d60-ca03-ex-004",
+            "unit:o012-d60-ca03-ex-005",
+            "unit:o012-d60-ca03-ex-006",
+            "unit:o012-d60-ca03-ex-007",
+            "unit:o012-d60-ca03-ex-008"
+          ],
+          "graph_complete_items": 8
         }
       },
       "detected_assessment_ids": [
-        "D60-CA01"
+        "D60-CA01",
+        "D60-CA02",
+        "D60-CA03"
       ],
-      "item_gap": 16,
+      "item_gap": 0,
       "required_items": 24
     },
     "source_ca01": {
@@ -73,36 +105,35 @@
       "structure_complete": true
     },
     "source_plus_backend": {
-      "complete_assessment_count": 1,
+      "complete_assessment_count": 3,
       "complete_assessment_ids": [
-        "D60-CA01"
-      ],
-      "credited_items": 8,
-      "item_gap": 16,
-      "missing_assessment_ids": [
+        "D60-CA01",
         "D60-CA02",
         "D60-CA03"
       ],
+      "credited_items": 24,
+      "item_gap": 0,
+      "missing_assessment_ids": [],
       "required_items": 24
     }
   },
   "compliance": {
     "backend_admitted": {
-      "assessment_slots_covered": 8,
-      "gap": 16,
-      "met": false,
+      "assessment_slots_covered": 24,
+      "gap": 0,
+      "met": true,
       "ordinary_route_slots_covered": 84,
       "required": 108,
-      "total_slots_covered": 92
+      "total_slots_covered": 108
     },
     "raw_inventory_does_not_override_required_distribution": true,
     "source_including_reviewed_ca01": {
-      "assessment_slots_covered": 8,
-      "gap": 16,
-      "met": false,
+      "assessment_slots_covered": 24,
+      "gap": 0,
+      "met": true,
       "ordinary_route_slots_covered": 84,
       "required": 108,
-      "total_slots_covered": 92
+      "total_slots_covered": 108
     }
   },
   "course_id": "D60",
@@ -230,11 +261,11 @@
     }
   },
   "graph_validation": {
-    "active_hint_relations": 165,
-    "active_hint_units": 165,
-    "active_solve_relations": 221,
+    "active_hint_relations": 181,
+    "active_hint_units": 181,
+    "active_solve_relations": 237,
     "duplicate_or_reused_triple_solution_ids": [],
-    "graph_complete_triples_all_classes": 165,
+    "graph_complete_triples_all_classes": 181,
     "ordinary_exercise_ids_with_inferred_route": [
       "unit:o012-rbt-l01-ex-001",
       "unit:o012-rbt-l01-ex-002",
@@ -311,11 +342,11 @@
   "inputs": {
     "backend_jsonl": {
       "artifacts.jsonl": {
-        "bytes": 161333,
-        "lf_count": 197,
+        "bytes": 168788,
+        "lf_count": 205,
         "path": "backend/artifacts.jsonl",
-        "record_count": 197,
-        "sha256": "64d050e7abb6c61e27f4bd8659c3c5ab7899be43032592cb5e3b0c15cbeb18f6"
+        "record_count": 205,
+        "sha256": "0f126c6ff8ccc6344af42000ff7c48529211d6c9c8a46d712119630946a97e38"
       },
       "assets.jsonl": {
         "bytes": 64692,
@@ -346,32 +377,32 @@
         "sha256": "bd961fad5d83e96fec6ef83caa8447e2e5f282c603fd4983d79b5b4b54049fbb"
       },
       "qa.jsonl": {
-        "bytes": 93377,
-        "lf_count": 170,
+        "bytes": 97769,
+        "lf_count": 178,
         "path": "backend/qa.jsonl",
-        "record_count": 170,
-        "sha256": "05c2660f74b7ba462cbad260a5067f41c8ec0d451b4bd6229f53a95de4f9c70a"
+        "record_count": 178,
+        "sha256": "40a3e19ea3a4daae552d92c6c6b41486baced20cb172428c1dc255c3027e70cb"
       },
       "relations.jsonl": {
-        "bytes": 399529,
-        "lf_count": 912,
+        "bytes": 473663,
+        "lf_count": 1055,
         "path": "backend/relations.jsonl",
-        "record_count": 912,
-        "sha256": "37b0ef08c48f34f7a7b9abef523ab548bcefb3a16ba5dba99b6ccec4f58cee6f"
+        "record_count": 1055,
+        "sha256": "9bef98e30bfbd17551f745a10814efabb349e58785961199791403cb9639b199"
       },
       "rights.jsonl": {
-        "bytes": 96960,
-        "lf_count": 105,
+        "bytes": 100112,
+        "lf_count": 107,
         "path": "backend/rights.jsonl",
-        "record_count": 105,
-        "sha256": "3788fae643c94198e10b49465ad313c166abaf08bc42da71553051922054de49"
+        "record_count": 107,
+        "sha256": "02e64d84b72eddba24f184544205de396e143d6fb96b09209e8e4c4837b234be"
       },
       "segments.jsonl": {
-        "bytes": 3247261,
-        "lf_count": 1991,
+        "bytes": 3345425,
+        "lf_count": 2041,
         "path": "backend/segments.jsonl",
-        "record_count": 1991,
-        "sha256": "25c31b936b1c53ae39337d1059ec5889782e21da698521041194c6bb37058a79"
+        "record_count": 2041,
+        "sha256": "ccdaf7b3d80900a43a92423bc54446a556eaecdf5cce3bc4d40f21e6ad151cfe"
       },
       "terms.jsonl": {
         "bytes": 315218,
@@ -381,21 +412,21 @@
         "sha256": "4b82f9d582ba747829373a7935fcc3cae56b96fd6b7486969ebb6d54cf927c50"
       },
       "units.jsonl": {
-        "bytes": 3415573,
-        "lf_count": 2021,
+        "bytes": 3522676,
+        "lf_count": 2071,
         "path": "backend/units.jsonl",
-        "record_count": 2021,
-        "sha256": "08c9f3e5886e9a3cd6b12737d8ffff238caf4b24116d08da4f85f12e7049e86f"
+        "record_count": 2071,
+        "sha256": "5ecf2049dd4747a14d66c335a0d8579c45946a54e377129fc39cbe838c019219"
       }
     },
     "controls": {
       "cursor": {
-        "bytes": 11479,
-        "lf_count": 238,
+        "bytes": 13433,
+        "lf_count": 273,
         "path": "00_control/CURSOR.json",
-        "sha256": "887ad5f66770ca73e655bc21387dde928359efc3c868f2edbab53f891a2c28d6"
+        "sha256": "8769d258dd0d4dc68b5bcf6005f16c6178cd385c13aec6cfee6725619ebd7183"
       },
-      "cursor_next_action": "continue the 108-item mastery layer by adding 36 stable hints to the census-selected existing D60-R01-D60-R06 exercise/full-solution pairs without duplicating prompts or solutions; independently review and append them to the locale-neutral backend before the next reader boundary",
+      "cursor_next_action": "admit the independently reviewed CA02 and CA03 append-only without changing the verified 7012-record prefix, rebuild and publish their reader boundary, and thereby close the 108-item mastery layer at 108/108",
       "handoff": {
         "bytes": 8115,
         "lf_count": 139,
@@ -411,7 +442,7 @@
     }
   },
   "next_deficits": {
-    "backend_assessment_items_not_yet_admitted": 16,
+    "backend_assessment_items_not_yet_admitted": 0,
     "backend_route_metadata": {
       "ordinary_triple_exercises_requiring_explicit_route_backfill": [
         "unit:o012-rbt-l01-ex-001",
@@ -648,11 +679,8 @@
     },
     "ordinary_missing_triples": 0,
     "ordinary_routes": [],
-    "source_assessment_items_to_create": 16,
-    "source_assessments_to_create": [
-      "D60-CA02",
-      "D60-CA03"
-    ],
+    "source_assessment_items_to_create": 0,
+    "source_assessments_to_create": [],
     "source_complete_but_not_backend_admitted": []
   },
   "ordinary_mastery": {

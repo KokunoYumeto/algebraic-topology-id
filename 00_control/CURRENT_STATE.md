@@ -1,8 +1,64 @@
 # Current state — O012/D60
 
-Updated: 2026-08-26
+Updated: 2026-08-28
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` through source EOF, and Fomberg Units 001–007 translate the entire selected `algebraic_topology.tex:31–4185` / Sections 1.1–1.13 span. Every admitted unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. Cumulative Assessment 1 remains public. The ordinary-mastery successor is also public: 36 separately modeled hints bind 36 existing exercise/full-solution pairs across `D60-R01`–`R06`, closing the ordinary distribution at 84/84 and the overall solution-bearing census at 92/108. Its centered/reflowing HTML is 15,026,881 bytes; its PDF is 482 A4 pages/8,592,243 bytes; the backend has 7,012 records/8,545,732 bytes with bundle SHA-256 `7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b`. GitHub commit `646769fb52a51e997f5409fc2148f8892508da1d`, Pages run `32933679761`, and Zenodo version `0.31.1`, record `22106133`, DOI `10.5281/zenodo.22106133`, are public in the existing lineages; all 58 GitHub commit-delta paths and both current/preceding Pages readers match anonymous bytes, while every one of the nine Zenodo files passed two anonymous byte/SHA-256 readbacks. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. The exact next production action is Cumulative Assessments 2 and 3, eight original exercise-hint-complete-solution triples each; source line 4186 is only the nominal post-Fomberg marker and is not authority to translate beyond the selected span.
+Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 translate `Notes.tex:134–6368` through source EOF, and Fomberg Units 001–007 translate the entire selected `algebraic_topology.tex:31–4185` / Sections 1.1–1.13 span. Every admitted unit has independent P1/P2/P3-zero review, stable IDs, solved mastery, append-only backend records, and deterministic cumulative readers. All three cumulative assessments are now complete: D60-CA01/02/03 contain 24 original exercise-hint-complete-solution triples. Together with the 84/84 ordinary distribution, the required solution-bearing mastery layer is closed at 108/108. The centered/reflowing successor HTML is 15,287,428 bytes; its PDF is 501 A4 pages/8,915,996 bytes; the backend has 7,273 records/8,840,132 bytes with bundle SHA-256 `97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464`. Zenodo version `0.31.2`, record `22135136`, DOI `10.5281/zenodo.22135136`, is public in the existing concept and every one of its nine files passed two anonymous byte/SHA-256 readbacks. GitHub/Pages publication of these exact bytes is the current repository transaction. The same-field Indonesian terminology QA is closed, and the edition records `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit. The exact next production action is computation laboratory 1: covering-space monodromy and group presentations. Source line 4186 is only the nominal post-Fomberg marker and is not authority to translate beyond the selected span.
+
+### Live recovery note — mastery 108/108 and Zenodo 0.31.2 public, 2026-08-28
+
+`D60-CA02` / `O012-ORIG-CA02` is complete at
+`source/id-ID/mastery/cumulative-assessment-002-homology-excision-cellular.md`,
+25,321 bytes/SHA-256
+`2f8dc58eb4fb2da06e239d8e0979112c5f50c846f584900a2e7ea4999a8685ea`.
+`D60-CA03` / `O012-ORIG-CA03` is complete at
+`source/id-ID/mastery/cumulative-assessment-003-cohomology-degree-synthesis.md`,
+26,074 bytes/SHA-256
+`35c2c9a1b7edbeb1902245b567754e33f4720e11b48d2822bad7666a6a626894`.
+Each contains exactly eight exercises, eight hints, and eight complete checked
+solutions; both independent mathematics and source-language reviews pass with
+P1/P2/P3 zero. Combined QA is 3,906 bytes/SHA-256
+`24439975cfe1d877dbffdb2948afaa78839b43cd172b2a95cbf1bb0bee599932`.
+
+Append-only admission preserves the 7,012-record/8,545,732-byte prefix exactly,
+adds 261 records, and ends at 7,273 records/8,840,132 bytes with bundle
+SHA-256 `97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464`.
+Cumulative receipt
+`qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENTS_002_003_CUMULATIVE_RECEIPT.json`
+is 11,073 bytes/SHA-256
+`61e5a3791ca4cacf7a2fbe0c09f5b638afd1c2c427f8784d04b96331903d53c7`.
+`qa/ROUTE_MASTERY_CENSUS.json` is 141,526 bytes/SHA-256
+`67a79a47f966d65862f5006e4255c620f7fc79a9fb02c51e4836cb578ff66977`:
+84 ordinary items plus 24 cumulative items equal 108/108, with zero duplicate
+solution IDs and zero validation errors.
+
+The deterministic HTML
+`output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03/index.html`
+is 15,287,428 bytes/SHA-256
+`417e50656ae0a61134c480f59df1bcd54d66a68c938d1d54f9c931ba37e2a5d6`.
+The PDF is 8,915,996 bytes/501 A4 pages/SHA-256
+`74ed9b5bf0f79a98693369dc7beba3e84ac81c711cc96b9951ae950ae9632a16`.
+Final build receipt is 81,018 bytes/SHA-256
+`596f0e89e8c4abe310019dca95f0e457e7b70983f490afba26291211af0f55b9`.
+Desktop/mobile browser QA, 20-page visual and glyph-bound QA, deterministic
+predecessor comparison, fonts, destinations, fragments, rights, privacy, and
+hashes pass. The PDF remains untagged; native-MathML HTML is the primary
+reflowable surface.
+
+Zenodo `0.31.2` is public at record `22135136`, DOI
+`10.5281/zenodo.22135136`, in concept `10.5281/zenodo.22061489`. Its exact
+nine-file reader-first payload passed two anonymous HTTP 200 byte/SHA-256
+readback passes. Sanitized receipt
+`release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03/publication-receipt.json`
+is 11,228 bytes/SHA-256
+`d097cabe1c857b498ec0bf1dcca620e6cd957797ab70777ba229b6c3540a2871`;
+transaction is 962 bytes/SHA-256
+`66417a63b144f71fb356c9d42595178fdad6defc74e10c5df0b8d3448a38de69`.
+No credential, authorization header, bucket URL, absolute local path, or
+personal name is recorded. The privacy scanner's three credential-negative-test
+literals were represented as semantically identical split byte expressions so
+the release gate does not misclassify its own tests as leaked credentials.
+Begin computation lab 1 after the exact GitHub/Pages publication receipt is
+bound.
 
 ### Live recovery note — ordinary mastery 84/84 public checkpoint, 2026-08-26
 

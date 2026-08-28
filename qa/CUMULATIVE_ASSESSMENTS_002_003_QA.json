@@ -1,0 +1,132 @@
+{
+  "qa_id": "O012-D60-CUMULATIVE-ASSESSMENTS-002-003",
+  "status": "PASS",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "assessments": [
+    {
+      "assessment_id": "D60-CA02",
+      "edition_unit_id": "O012-ORIG-CA02",
+      "reader": {
+        "identity": {
+          "path": "source/id-ID/mastery/cumulative-assessment-002-homology-excision-cellular.md",
+          "bytes": 25321,
+          "lf_lines": 785,
+          "sha256": "2f8dc58eb4fb2da06e239d8e0979112c5f50c846f584900a2e7ea4999a8685ea"
+        },
+        "stable_ids": 34,
+        "exercise_hint_solution_triples": 8,
+        "complete_checked_solutions": 8,
+        "primary_route_sequence": [
+          "D60-R08",
+          "D60-R09",
+          "D60-R10",
+          "D60-R11",
+          "D60-R10",
+          "D60-R12",
+          "D60-R12",
+          "D60-R12"
+        ],
+        "primary_route_coverage": [
+          "D60-R08",
+          "D60-R09",
+          "D60-R10",
+          "D60-R11",
+          "D60-R12"
+        ]
+      },
+      "rights": {
+        "license": "CC BY-SA 4.0",
+        "origin": "edition_original",
+        "source_problem_bank_used": false
+      },
+      "independent_reviews": {
+        "mathematics": {
+          "path": "qa/cumulative-assessment-002/INDEPENDENT_MATH_REVIEW.json",
+          "bytes": 3339,
+          "lf_lines": 45,
+          "sha256": "17cf645b3f6a21e7b2c6e287118a342896111180ee26e96cb4e4a047cf89cf4c",
+          "status": "PASS"
+        },
+        "source_language": {
+          "path": "qa/cumulative-assessment-002/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+          "bytes": 3040,
+          "lf_lines": 68,
+          "sha256": "35695a9499f9898630d6b17104d3e906d50b708a10d090919efcc109c2dbf677",
+          "status": "PASS"
+        }
+      }
+    },
+    {
+      "assessment_id": "D60-CA03",
+      "edition_unit_id": "O012-ORIG-CA03",
+      "reader": {
+        "identity": {
+          "path": "source/id-ID/mastery/cumulative-assessment-003-cohomology-degree-synthesis.md",
+          "bytes": 26074,
+          "lf_lines": 711,
+          "sha256": "35c2c9a1b7edbeb1902245b567754e33f4720e11b48d2822bad7666a6a626894"
+        },
+        "stable_ids": 34,
+        "exercise_hint_solution_triples": 8,
+        "complete_checked_solutions": 8,
+        "primary_route_sequence": [
+          "D60-R13",
+          "D60-R13",
+          "D60-R13",
+          "D60-R13",
+          "D60-R13",
+          "D60-R14",
+          "D60-R14",
+          "D60-R14"
+        ],
+        "primary_route_coverage": [
+          "D60-R13",
+          "D60-R14"
+        ]
+      },
+      "rights": {
+        "license": "CC BY-SA 4.0",
+        "origin": "edition_original",
+        "source_problem_bank_used": false
+      },
+      "independent_reviews": {
+        "mathematics": {
+          "path": "qa/cumulative-assessment-003/INDEPENDENT_MATH_REVIEW.json",
+          "bytes": 4123,
+          "lf_lines": 79,
+          "sha256": "ba170bceaba1b4b7d6ce5f7d6b8698a9281b54768dcc7fbc4311f5d62d0a9c5f",
+          "status": "PASS"
+        },
+        "source_language": {
+          "path": "qa/cumulative-assessment-003/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+          "bytes": 3142,
+          "lf_lines": 68,
+          "sha256": "4db495d83633343edc6b0c25dab50f6cfc102b45643ec0c2a3fc0d1630ab3058",
+          "status": "PASS"
+        }
+      }
+    }
+  ],
+  "cumulative_items_added": 16,
+  "exercise_hint_solution_triples": 16,
+  "complete_checked_solutions": 16,
+  "mastery_postcondition": {
+    "ordinary": 84,
+    "ca01": 8,
+    "ca02": 8,
+    "ca03": 8,
+    "total": 108
+  },
+  "checks": {
+    "utf8_lf": "PASS",
+    "front_matter": "PASS",
+    "stable_id_uniqueness_and_inventory": "PASS",
+    "balanced_fenced_divs": "PASS",
+    "route_binding": "PASS",
+    "sixteen_hints": "PASS",
+    "sixteen_full_solutions": "PASS",
+    "display_math_balance": "PASS",
+    "rights_and_origin": "PASS",
+    "privacy": "PASS"
+  }
+}

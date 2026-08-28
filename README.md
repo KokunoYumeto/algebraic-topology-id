@@ -4,24 +4,23 @@ Edisi Bahasa Indonesia independen dari *Pure Mathematics Topic D: Algebraic
 Topology* karya David Michael Roberts. Ketiga puluh kuliah Roberts sudah
 diterjemahkan secara berurutan sampai akhir sumber; edisi sumber Roberts dengan
 demikian lengkap **30/30**. Jalur kuliah komposit O012/D60 masih **parsial**:
-jembatan Fomberg kini mencakup seluruh bentang terpilih Bagian 1.1–1.13
-(`algebraic_topology.tex:31–4185`). Asesmen Kumulatif 1 kini menambahkan
-delapan soal lintas-rute, masing-masing dengan petunjuk dan solusi lengkap.
-Dua asesmen kumulatif berikutnya, penutupan petunjuk penguasaan biasa, empat
-laboratorium komputasi, dan proyek puncak lintas-invarian masih harus
-diselesaikan.
+jembatan Fomberg mencakup seluruh bentang terpilih Bagian 1.1–1.13
+(`algebraic_topology.tex:31–4185`). Ketiga asesmen kumulatif kini lengkap:
+24 soal lintas-rute, 24 petunjuk, dan 24 solusi lengkap. Bersama 84 butir
+penguasaan biasa, lapisan penguasaan berbasis solusi telah mencapai **108/108**.
+Empat laboratorium komputasi, proyek puncak lintas-invarian, dan penutupan
+metadata grafik bukti yang tercatat masih harus diselesaikan.
 
 ## Mulai membaca
 
-- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.13 + Asesmen Kumulatif 1](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01/)
+- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.13 + Asesmen Kumulatif 1–3](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03/)
   adalah permukaan utama: satu berkas mandiri, reflow, tanpa JavaScript atau
   akses jaringan, dengan matematika MathML asli.
-- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-007-ca01/index.html) dapat
+- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03/index.html) dapat
   diunduh dan dibuka secara luring.
-- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-id.pdf)
-  adalah permukaan cetak sekunder sepanjang 477 halaman. PDF memakai font
-  tersemat, peta Unicode, dan 389 tujuan kerangka yang semuanya berfungsi,
-  tetapi belum ditandai secara struktural.
+- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-id.pdf)
+  adalah permukaan cetak sekunder sepanjang 501 halaman. Semua font tersemat,
+  subset, dan memiliki peta ToUnicode; PDF belum ditandai secara struktural.
 - [Konsep Zenodo edisi ini](https://doi.org/10.5281/zenodo.22061489)
   mempertahankan garis versi preservasi; nomor konsep tetap sama ketika
   checkpoint baru diterbitkan.
@@ -33,11 +32,13 @@ diselesaikan.
   [0.30.6](https://doi.org/10.5281/zenodo.22102865) mempertahankan tepat byte
   pembaca, sumber/backend, dan bukti QA untuk cakupan 1.1–1.12. Checkpoint
   berikutnya [0.30.7](https://doi.org/10.5281/zenodo.22104150) mempertahankan
-  tepat byte pembaca, sumber/backend, dan bukti QA untuk seluruh cakupan
-  terpilih 1.1–1.13 pada garis konsep yang sama. Versi terbaru
-  [0.31.0](https://doi.org/10.5281/zenodo.22105179) menambahkan tepat byte
-  Asesmen Kumulatif 1, pembaca 477 halaman, backend 6.854 rekaman, serta bukti
-  build, visual, browser, dan provenance pada garis konsep yang sama.
+  seluruh cakupan terpilih 1.1–1.13. Versi
+  [0.31.0](https://doi.org/10.5281/zenodo.22105179) menambahkan Asesmen
+  Kumulatif 1; [0.31.1](https://doi.org/10.5281/zenodo.22106133) menutup
+  penguasaan biasa 84/84; dan versi terbaru
+  [0.31.2](https://doi.org/10.5281/zenodo.22135136) menambahkan Asesmen
+  Kumulatif 2–3, pembaca 501 halaman, backend 7.273 rekaman, serta bukti build,
+  visual, browser, dan provenance pada garis konsep yang sama.
 
 Checkpoint ini mencakup seluruh 30 kuliah Roberts hingga `Notes.tex:6368`:
 topologi dasar, homotopi, ruang penutup dan monodromi, grup/grupoid fundamental,
@@ -51,10 +52,11 @@ simpleksial–singular, derajat pemetaan, teorema sfera berbulu, derajat lokal,
 rumus lokal-ke-global, kompleks CW, topologi lemah, contoh/noncontoh seluler,
 filtrasi ruang projektif, pemetaan batas seluler, bilangan insidensi, dan
 perhitungan homologi seluler dari `algebraic_topology.tex:31–4185`, beserta
-latihan penguasaan dengan petunjuk dan solusi lengkap. Asesmen Kumulatif 1
-menguji rute `D60-R01`–`D60-R07` melalui delapan soal baru tanpa menyalin bank
-masalah Fomberg. Status 30/30 hanya menyatakan kelengkapan komponen Roberts,
-bukan kelengkapan jalur komposit.
+latihan penguasaan dengan petunjuk dan solusi lengkap. Ketiga asesmen
+kumulatif menguji seluruh jalur melalui 24 soal asli tanpa menyalin bank
+masalah Fomberg. Status 30/30 hanya menyatakan kelengkapan komponen Roberts;
+status 108/108 menyatakan kelengkapan lapisan penguasaan berbasis solusi,
+bukan kelengkapan laboratorium dan proyek puncak jalur komposit.
 
 Sumber semantik berada di [`source/id-ID/`](source/id-ID/). Batas historis
 tetap dipertahankan tanpa mengubah byte atau resinya, antara lain
@@ -74,19 +76,19 @@ dan [Unit 1–25](https://kokunoyumeto.github.io/algebraic-topology-id/units-001
 Direktori [`backend/`](backend/) memuat graf `curriculum.interop 0.1.0` yang
 locale-neutral: identitas otoritas dan edisi, unit, segmen, konsep, istilah,
 relasi, latihan–solusi, hak, koreksi, QA, dan artefak. Checkpoint komposit
-mempertahankan awalan Roberts 4.761 rekaman secara byte-identik lalu menambahkan
-1.981 rekaman Fomberg, lalu 112 rekaman Asesmen Kumulatif 1, sehingga berisi
-6.854 rekaman append-only (8.345.799 byte) dengan digest bundel
-`51e75d06e620762e629e9e7408da4b0c32b3e337817d9d140fbbdfa438de2f57`.
+mempertahankan awalan 7.012 rekaman checkpoint 0.31.1 secara byte-identik lalu
+menambahkan 261 rekaman bagi D60-CA02 dan D60-CA03, sehingga berisi 7.273
+rekaman append-only (8.840.132 byte) dengan digest bundel
+`97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464`.
 Backend ini melengkapi—bukan menggantikan—pembaca manusia.
 
 Validasi dan build aktif:
 
 ```powershell
-python -B scripts/qa-cumulative-assessment-001.py
-python -B scripts/validate-backend-append-only-cumulative-assessment-001.py
+python -B scripts/qa-cumulative-assessments-002-003.py
+python -B scripts/validate-backend-append-only-cumulative-assessments-002-003.py
 python -B scripts/census-route-mastery.py
-pwsh -NoProfile -File scripts/build-roberts-001-030-fomberg-001-007-ca01.ps1
+pwsh -NoProfile -File scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03.ps1
 ```
 
 Build kumulatif memakai epoch tetap dan dua build bersih yang harus identik
@@ -120,8 +122,10 @@ otoritas disimpan di [`00_control/`](00_control/).
   dan atribusi komponen sumber.
 
 Bentang Fomberg terpilih selesai tepat sebelum
-`algebraic_topology.tex:4186`. Produksi berikutnya melanjutkan lapisan
-penguasaan biasa yang belum mempunyai petunjuk stabil, Asesmen Kumulatif 2–3,
-laboratorium, dan proyek puncak yang ditandai jelas sebagai materi edisi.
+`algebraic_topology.tex:4186`; lapisan penguasaan berbasis solusi juga selesai
+108/108. Produksi berikutnya dimulai pada laboratorium komputasi pertama:
+monodromi ruang penutup dan presentasi grup, lalu tiga laboratorium lain,
+penutupan metadata bukti, dan proyek puncak yang ditandai jelas sebagai materi
+edisi.
 Hak dan atribusi Roberts, Fomberg, serta materi asli tetap dapat dibedakan pada
 backend dan artefak rilis.

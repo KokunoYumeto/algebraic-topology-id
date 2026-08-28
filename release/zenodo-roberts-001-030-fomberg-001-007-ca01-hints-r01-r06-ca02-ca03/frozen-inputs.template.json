@@ -1,0 +1,20 @@
+{
+  "entries": [],
+  "final_boundary_paths": [
+    "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-id.pdf",
+    "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03/index.html",
+    "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03.csv",
+    "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_BUILD_RECEIPT.json",
+    "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_VISUAL_QA.md",
+    "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_RENDER_INVENTORY.csv",
+    "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_BROWSER_QA.json",
+    "qa/BACKEND_APPEND_ONLY_CUMULATIVE_ASSESSMENTS_002_003_CUMULATIVE_RECEIPT.json",
+    "qa/CUMULATIVE_ASSESSMENTS_002_003_QA.json",
+    "qa/ROUTE_MASTERY_CENSUS.json",
+    "qa/PROOF_REPAIR_CENSUS.json"
+  ],
+  "instructions": "After deterministic build, backend, visual, browser, rights, and control gates agree, seal exact path/bytes/sha256 rows in frozen-inputs.json, bind the ledger SHA-256 in the packager, and package locally. Never infer identities, overwrite the predecessor release, access credentials, or publish from the packager.",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-v0.31.2",
+  "schema_version": "1.0",
+  "state": "template_unsealed_do_not_package"
+}

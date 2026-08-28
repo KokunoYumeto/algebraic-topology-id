@@ -5,6 +5,7 @@ output/**/*.html binary
 release/**/artifacts/* binary
 release/**/transaction.json binary
 00_control/*PUBLICATION_RECEIPT*.json binary
+qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_BUILD_DRAFT.json binary
 qa/*-extracted.txt binary
 baseline/**/*.txt binary
 authority/upstream/**/AUTHORITY_BUILD_MANIFEST.json -text

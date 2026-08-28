@@ -1,0 +1,25 @@
+{
+  "all_live_files_equal_replay": true,
+  "assessment_ids": [
+    "D60-CA02",
+    "D60-CA03"
+  ],
+  "immutable_prefix": {
+    "bundle_sha256": "7d723f9ef163303c7dde63d646dc8d5917c2450b1da5d24c87ef77bf4e4d664b",
+    "bytes": 8545732,
+    "records": 7012
+  },
+  "receipt_kind": "isolated_binary_replay",
+  "replay": {
+    "exact_file_matches": 11,
+    "final": {
+      "bundle_sha256": "97edc6371a0bf670ebdaaa4fab8618ec138ae25c4bf54ca9172139934ba0b464",
+      "bytes": 8840132,
+      "records": 7273
+    },
+    "status": "PASS",
+    "suffix_bytes": 294400,
+    "temporary_replay_removed": true
+  },
+  "status": "PASS"
+}
