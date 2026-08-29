@@ -159,9 +159,21 @@ SHA-256 `47b39fe5c9ba36eca57e48b311525f646ee0df32c3a943d51c37be701a34cb39`.
 Finish the same boundary on GitHub/Pages next; do not create another Zenodo
 record or re-upload these bytes.
 
-1. Preserve all four completed offline reproducible laboratories and the exact
-   7,847-record append-only backend while closing their `0.31.6` public
-   GitHub/Pages and Zenodo boundary with anonymous byte/hash readback.
+The same Lab 4 boundary is now public on GitHub at content commit
+`e65c17abd6f3734d6f5eea946183f904c88e0721`, tree
+`484527dc024663aa2f54cfe30998ad733cda3dc5`, and Pages run `33252196508`.
+Deployment `6155609604` closed successfully at status `17498110282`. The
+strict verifier matched all 75 explicit changed paths/71,163,109 bytes, every
+backend file, the deployed reader, the preserved Lab 3 reader, and Zenodo's
+public nine-file inventory. Sanitized receipt SHA-256 is
+`4193c49f470e77c711a571a270cd138fd051bb621cb1a0bc3faeadc83b063b57`.
+The four-lab publication transaction is closed. Continue only with the
+recorded proof-link metadata repairs and final capstone.
+
+1. Preserve all four completed offline reproducible laboratories, the exact
+   7,847-record append-only backend, and their closed `0.31.6` public
+   GitHub/Pages and Zenodo boundary; do not rebuild or republish it absent a
+   newly demonstrated defect.
 2. Repair the remaining backend proof-link metadata for `FOM-PR-13`-`15` and
    `FOM-U003-QUOTIENT-LES` without rewriting their already checked mathematics;
    then add the final proof-reconstruction/cross-invariant capstone and explicit

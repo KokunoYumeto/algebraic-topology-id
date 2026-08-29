@@ -946,3 +946,16 @@ readbacks per file. The sanitized receipt is
 11,815 bytes/SHA-256
 `47b39fe5c9ba36eca57e48b311525f646ee0df32c3a943d51c37be701a34cb39`.
 GitHub/Pages publication remains the only open operation for this boundary.
+
+GitHub content commit `e65c17abd6f3734d6f5eea946183f904c88e0721`, tree
+`484527dc024663aa2f54cfe30998ad733cda3dc5`, and Pages run `33252196508`
+now preserve the same Lab 4 boundary. Job `99099681609`, deployment
+`6155609604`, and success status `17498110282` pass. The strict verifier
+matched all 75 explicit changed paths/71,163,109 bytes, all eleven backend
+files, the deployed 15,974,648-byte reader, the frozen Lab 3 predecessor, and
+Zenodo's exact nine-file inventory. Sanitized receipt:
+`00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04.json`,
+59,702 bytes/SHA-256
+`4193c49f470e77c711a571a270cd138fd051bb621cb1a0bc3faeadc83b063b57`.
+This reader boundary is fully public and verified; the next build is the
+proof-link metadata/capstone successor, not a Lab 4 rebuild.
