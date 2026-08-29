@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "review_kind": "independent_mathematics",
+  "review_id": "O012-D60-LAB03-INDEPENDENT-MATH",
+  "laboratory_id": "D60-LAB03",
+  "edition_unit_id": "O012-ORIG-LAB03",
+  "course_route_unit_ids": [
+    "D60-R12",
+    "D60-R14"
+  ],
+  "independent_from_production": true,
+  "reviewer_mode": "separate task-local agent using an independently written exact-rational enumerator, direct cellular-chain calculations, direct matrix multiplication and determinant checks, explicit fiber-substitution certificates, and a line-by-line cup-product and cellular-approximation proof audit",
+  "reader_sha256": "4c3d88ec7d28d14fd1594c59262a50923efbad3082d7796d947661c7012bdf27",
+  "bound_artifacts": [
+    {
+      "path": "source/id-ID/labs/computation-lab-003-cellular-boundaries-degree.md",
+      "bytes": 19453,
+      "lf_lines": 529,
+      "sha256": "4c3d88ec7d28d14fd1594c59262a50923efbad3082d7796d947661c7012bdf27"
+    },
+    {
+      "path": "source/id-ID/labs/o012_d60_lab03_cellular_degree.py",
+      "bytes": 15641,
+      "lf_lines": 400,
+      "sha256": "2ef4f077a902459b93dcdaef6db1c608e97c89d64b8dacbb8cb378367150009e"
+    },
+    {
+      "path": "source/id-ID/labs/test_o012_d60_lab03_cellular_degree.py",
+      "bytes": 8217,
+      "lf_lines": 197,
+      "sha256": "c1bbe85ff16a76d2ea55dfcb0686d016b52634aa33687e6dd3f9ba4baf568159"
+    },
+    {
+      "path": "source/id-ID/labs/expected-output-lab03.txt",
+      "bytes": 1201,
+      "lf_lines": 45,
+      "sha256": "0ac6d4c262eb8088050b3562025e7156dd329832f8cb13b0fd57e4b7f6fe8381"
+    },
+    {
+      "path": "qa/computation-lab-003/STATIC_QA.json",
+      "bytes": 3461,
+      "lf_lines": 146,
+      "sha256": "9c46eab7d1a6e0c1c00dcd1b08fc3b938c1f29843a950303100ac2971c688e61"
+    }
+  ],
+  "independent_results": {
+    "X3": {
+      "cellular_boundary_d2": [
+        3
+      ],
+      "cellular_boundary_after_reversing_2_cell_orientation": [
+        -3
+      ],
+      "homology": {
+        "H0": "Z",
+        "H1": "Z/3",
+        "H2": "0"
+      },
+      "power_map_target": "1/7",
+      "power_map_preimages": [
+        "1/21",
+        "8/21",
+        "5/7"
+      ],
+      "power_map_local_degrees": [
+        1,
+        1,
+        1
+      ],
+      "power_map_local_degree_sum": 3
+    },
+    "minimal_torus": {
+      "attaching_word": "a b a^-1 b^-1",
+      "signed_incidence": [
+        0,
+        0
+      ],
+      "unsigned_occurrence_control": [
+        2,
+        2
+      ],
+      "homology": {
+        "H0": "Z",
+        "H1": "Z^2",
+        "H2": "Z"
+      }
+    },
+    "torus_endomorphisms": {
+      "M": [
+        [
+          2,
+          1
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "N": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "NM": [
+        [
+          -1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "MN": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "determinants": {
+        "M": 5,
+        "N": -1,
+        "NM": -5,
+        "MN": -5,
+        "C": 0
+      },
+      "column_convention": {
+        "M_times_a": [
+          2,
+          -1
+        ],
+        "M_times_b": [
+          1,
+          2
+        ],
+        "composition_N_after_M_is_NM": true,
+        "NM_differs_from_MN": true
+      },
+      "M_fiber": [
+        {
+          "point": [
+            "0",
+            "1/7"
+          ],
+          "integer_shift_Mx_minus_y": [
+            0,
+            0
+          ],
+          "local_degree": 1
+        },
+        {
+          "point": [
+            "1/5",
+            "26/35"
+          ],
+          "integer_shift_Mx_minus_y": [
+            1,
+            1
+          ],
+          "local_degree": 1
+        },
+        {
+          "point": [
+            "2/5",
+            "12/35"
+          ],
+          "integer_shift_Mx_minus_y": [
+            1,
+            0
+          ],
+          "local_degree": 1
+        },
+        {
+          "point": [
+            "3/5",
+            "33/35"
+          ],
+          "integer_shift_Mx_minus_y": [
+            2,
+            1
+          ],
+          "local_degree": 1
+        },
+        {
+          "point": [
+            "4/5",
+            "19/35"
+          ],
+          "integer_shift_Mx_minus_y": [
+            2,
+            0
+          ],
+          "local_degree": 1
+        }
+      ],
+      "M_local_degree_sum": 5,
+      "N_fiber": [
+        [
+          "2/7",
+          "1/7"
+        ]
+      ],
+      "N_local_degrees": [
+        -1
+      ],
+      "NM_fiber": [
+        [
+          "3/35",
+          "4/35"
+        ],
+        [
+          "2/7",
+          "5/7"
+        ],
+        [
+          "17/35",
+          "11/35"
+        ],
+        [
+          "24/35",
+          "32/35"
+        ],
+        [
+          "31/35",
+          "18/35"
+        ]
+      ],
+      "NM_local_degrees": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "NM_local_degree_sum": -5
+    },
+    "singular_control": {
+      "C": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "left_null_vector": [
+        -2,
+        1
+      ],
+      "left_null_times_C": [
+        0,
+        0
+      ],
+      "left_null_pairing_with_y0": "1/3",
+      "y0_fiber_empty": true,
+      "zero_fiber_contains_circle_t_minus_t": true,
+      "global_degree": 0
+    },
+    "degree_proof_audit": {
+      "homology_column_action_correct": true,
+      "cohomology_pullback_under_column_convention": {
+        "f_star_alpha": "p alpha + q beta",
+        "f_star_beta": "r alpha + s beta"
+      },
+      "graded_cup_expansion_coefficient": "ps-qr",
+      "fundamental_class_pairing_forces_degree_det_A": true,
+      "cellular_approximation_is_required_before_claiming_a_cellular_chain_map": true,
+      "zero_boundary_naturality_alone_does_not_determine_the_C2_coefficient": true,
+      "proof_status": "correct_and_complete_for_the_stated_torus_result"
+    },
+    "executable_cross_check": {
+      "test_runs": 2,
+      "tests_per_run": 6,
+      "tests_passed": "6/6",
+      "program_runs": 2,
+      "program_stdout_bytes": 1201,
+      "program_stdout_sha256": "0ac6d4c262eb8088050b3562025e7156dd329832f8cb13b0fd57e4b7f6fe8381",
+      "program_stdout_byte_exact_expected_output": true,
+      "program_stderr_empty": true
+    }
+  },
+  "checked_claims": [
+    "The attaching degree three gives d2=[3], H1=Z/3, and zero H2; reversing the 2-cell orientation changes only the sign of the column.",
+    "The three exact q3 preimages and their positive local signs sum to the global degree three.",
+    "Signed exponent sums, rather than unsigned letter counts, give the zero cellular boundary for the minimal torus CW structure and hence homology Z, Z^2, Z.",
+    "Direct multiplication gives NM and MN in the displayed order, with the stated determinants and distinct induced maps.",
+    "Every displayed M and NM point satisfies Ax-y in Z^2 with the displayed shift; the N fiber is exact; all local signs equal the determinant sign.",
+    "The left-null obstruction proves the selected C fiber empty, while C(t,-t)=0 proves the zero fiber nonempty and one-dimensional.",
+    "The cup-product argument uses the correct pullback formulas for the column convention and supplies precisely the determinant information that zero-boundary chain naturality cannot supply.",
+    "Cellular approximation is invoked at the correct logical point: it permits a cellular chain representative but is not used as a substitute for the fundamental-class degree proof."
+  ],
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "human_review_claimed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

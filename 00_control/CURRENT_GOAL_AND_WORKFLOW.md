@@ -100,13 +100,28 @@ The same Lab 2 boundary is public on GitHub at content commit
 All 71 changed files and the deployed reader passed anonymous commit-pinned or
 Pages byte/SHA-256 readback. The sanitized receipt is 31,229 bytes/SHA-256
 `c6ccde700267a29dfb2246cb4f5a78428547c75709ac60a56c9a222c84865a80`.
-The exact next action is Laboratory 3 (cellular boundary maps and degree). Do
-not rebuild or republish Labs 1–2 absent a newly demonstrated defect.
+Laboratory 3 (cellular boundary maps and degree) is now complete locally through
+source/execution review, append-only backend admission, deterministic reader,
+17-page visual inspection, and desktop/mobile browser QA. The cumulative HTML
+is 15,828,588 bytes/SHA-256
+`c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d`;
+the PDF is 9,836,725 bytes/545 A4 pages/SHA-256
+`b26b670db97facc9f5ab389eed69cf1f8b03f70e6047eacbd2bfa68c849ccd0d`;
+the final build receipt has SHA-256
+`18cbb0558a08cee737e375351a4f3f7fb7b65c0e29672b22851612a8a58d1eab`.
+Zenodo version `0.31.5`, record `22151513`, DOI
+`10.5281/zenodo.22151513`, is public in the unchanged concept DOI
+`10.5281/zenodo.22061489`. Its exact reader-first nine-file package passed two
+anonymous byte/SHA-256 readback passes; sanitized receipt SHA-256 is
+`7fbf0e059ce9fdba120fc953a27ea2fcba4419420a94ea9e754ffe4b8741ed46`.
+The exact next action is the narrow 70-path GitHub/Pages integration and public
+byte verification, followed immediately by Laboratory 4. Do not rebuild Labs
+1–3 absent a newly demonstrated defect.
 
-1. Preserve completed Laboratories 1–2 and add the two remaining offline
-   reproducible laboratories, each with source, tests, expected output,
-   interpretation, and a full check: cellular boundaries/degree; and comparison
-   of fundamental-group, homology, and cohomology invariants.
+1. Preserve completed Laboratories 1–3 and add the remaining offline
+   reproducible Laboratory 4, with source, tests, expected output,
+   interpretation, and a full check comparing fundamental-group, homology, and
+   cohomology invariants.
 2. Repair the remaining backend proof-link metadata for `FOM-PR-13`-`15` and
    `FOM-U003-QUOTIENT-LES` without rewriting their already checked mathematics;
    then add the final proof-reconstruction/cross-invariant capstone and explicit

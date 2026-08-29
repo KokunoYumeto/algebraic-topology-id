@@ -1,0 +1,101 @@
+{
+  "artifact_order": [
+    "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_READER.pdf",
+    "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_READER.html",
+    "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_EDITABLE_SOURCE_BACKEND.zip",
+    "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_QA_PROVENANCE.zip",
+    "LICENSE.md",
+    "README_RELEASE.md",
+    "RELEASE_RIGHTS.md"
+  ],
+  "component_numbering": {
+    "assessment_ids": [
+      "D60-CA01",
+      "D60-CA02",
+      "D60-CA03"
+    ],
+    "course_route_unit_ids": [
+      "D60-R01",
+      "D60-R02",
+      "D60-R03",
+      "D60-R04",
+      "D60-R05",
+      "D60-R06",
+      "D60-R07",
+      "D60-R08",
+      "D60-R09",
+      "D60-R10",
+      "D60-R11",
+      "D60-R12",
+      "D60-R13",
+      "D60-R14"
+    ],
+    "fomberg_component_ids": [
+      "O012-FOM-001",
+      "O012-FOM-002",
+      "O012-FOM-003",
+      "O012-FOM-004",
+      "O012-FOM-005",
+      "O012-FOM-006",
+      "O012-FOM-007"
+    ],
+    "fomberg_is_not_roberts_units_031_037": true,
+    "laboratory_ids": [
+      "D60-LAB01",
+      "D60-LAB02",
+      "D60-LAB03"
+    ],
+    "original_edition_unit_ids": [
+      "O012-ORIG-CA01",
+      "O012-ORIG-CA02",
+      "O012-ORIG-CA03",
+      "O012-ORIG-HINTS-R01-R06",
+      "O012-ORIG-LAB01",
+      "O012-ORIG-LAB02",
+      "O012-ORIG-LAB03"
+    ],
+    "roberts_edition_units": "001-030"
+  },
+  "generated_fields": [
+    "metadata_sha256",
+    "publication_plan_sha256",
+    "frozen_input_ledger",
+    "assessments",
+    "laboratories",
+    "course_closure",
+    "reader_qa",
+    "backend",
+    "archives",
+    "artifacts",
+    "privacy",
+    "production_provenance"
+  ],
+  "publication_lineage": {
+    "existing_concept_doi": "10.5281/zenodo.22061489",
+    "new_concept_created": false,
+    "previous_record_id": 22147224,
+    "previous_version_doi": "10.5281/zenodo.22147224",
+    "publication_performed_by_packager": false,
+    "route": "new_version_in_existing_concept"
+  },
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-v0.31.5",
+  "rights": {
+    "attribution_preserved": true,
+    "changes_disclosed": true,
+    "fomberg_component": "CC BY-SA 4.0",
+    "integrated_payload": "CC BY-SA 4.0",
+    "non_endorsement_preserved": true,
+    "original_assessment_components": "CC BY-SA 4.0",
+    "original_hint_component": "CC BY-SA 4.0",
+    "original_laboratory_component": "CC BY-SA 4.0",
+    "roberts_component": "CC BY 4.0",
+    "share_alike_preserved": true
+  },
+  "schema_version": "1.0",
+  "scope_truth": "Roberts Notes.tex lines 134-6368, lectures 1-30 complete; Fomberg algebraic_topology.tex lines 31-4185, Sections 1.1-1.13 complete; D60-CA01/02/03 complete 24/24; ordinary mastery 84/84; total solution-bearing mastery 108/108; D60-LAB01/02/03 complete 3/4; composite course partial",
+  "status": "roberts_complete_fomberg_units_001_007_complete_ca01_ca02_ca03_complete_ordinary_mastery_84_complete_solution_bearing_mastery_108_complete_computation_labs_001_002_003_complete_composite_course_partial",
+  "template_state": "static_controls_unsealed_generated_fields_unset",
+  "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Roberts 1–30, Jembatan Homologi §1.1–1.13, Asesmen Kumulatif 1–3, Petunjuk Rute 1–6, dan Laboratorium Komputasi 1–3",
+  "version": "0.31.5"
+}
+

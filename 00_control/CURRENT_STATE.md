@@ -1,8 +1,28 @@
 # Current state — O012/D60
 
-Updated: 2026-08-28
+Updated: 2026-08-29
 
-Status: active production. Source admission and composite route selection are closed. Roberts Units 001–030 and Fomberg Units 001–007 cover the entire admitted spans; all three cumulative assessments and the 108/108 solution-bearing mastery layer remain closed. Computation Laboratories 1–2 are complete with natural id-ID readers, offline programs, 12/12 deterministic tests, frozen expected outputs, interpretation, hints, complete solutions, independent reviews, and append-only backend admission. The centered/reflowing successor HTML is 15,615,104 bytes/SHA-256 `d0c6afddfa92759d475258bf08f20ea4019eccf72b7554128b2b938bd247b375`; its deterministic PDF is 529 A4 pages/9,507,127 bytes/SHA-256 `1bad03f9ba031ba91967a0a0ac2af6d15a0f768882cd541fe26dcbe26c4edd0b`. The backend has 7,546 records/9,122,755 bytes with bundle SHA-256 `ac3a0377861ed2b728f9c7473579fdd4febe43e454a92f3ea06451e13d46c8f8`. Final build receipt SHA-256 is `d7e224f936cd9dcfe2238038730d9a89d78fe59b2933a8623c6df34121f48b98`; visual/browser QA and independent reviews pass with P1/P2/P3 zero. Zenodo version `0.31.4`, record `22147224`, DOI `10.5281/zenodo.22147224`, is public in the existing concept and all nine files passed two exact anonymous byte/SHA-256 readbacks; receipt SHA-256 is `3fbc40c68fac53010fd6248ccb5438e2ffc7ab1a56c7ac390996b50b6ba35b95`. GitHub content commit `8989fbd602f89d0a8d6c30bc7bac1980a74b2c99`, tree `064aa78a25fcc34aaa0a1e8e64d52b2a702c79d7`, and Pages run `33187541456` preserve the same boundary; 71 changed files and the reader passed anonymous byte/SHA-256 readback, with receipt SHA-256 `c6ccde700267a29dfb2246cb4f5a78428547c75709ac60a56c9a222c84865a80`. Begin Laboratory 3 (cellular boundary maps and degree) against the immutable 7,546-record backend prefix. Source line 4186 is only the nominal post-Fomberg marker and is not authority to translate beyond the selected span. Model provenance remains `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit.
+Status: active production. Source admission, Roberts Units 001–030, Fomberg Units 001–007, all three cumulative assessments, and the 108/108 solution-bearing mastery layer remain closed. Computation Laboratory 3 is closed through learner/source, execution, independent review, append-only backend, deterministic reader build, 17-page visual inspection, desktop/mobile browser QA, and Zenodo publication/readback, all at P1/P2/P3 zero. The exact 7,546-record Lab 2 backend prefix is unchanged; Lab 3 adds 148 records/157,630 bytes and ends at 7,694 records/9,280,385 bytes with bundle SHA-256 `cddd65499da547e0c4f01b8a880f68d1c3d314c078a9179528e4a28b2c5f65a2`. The centered/reflowing self-contained HTML is 15,828,588 bytes/SHA-256 `c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d`; the deterministic PDF is 545 A4 pages/9,836,725 bytes/SHA-256 `b26b670db97facc9f5ab389eed69cf1f8b03f70e6047eacbd2bfa68c849ccd0d`. Zenodo `0.31.5` is public at record `22151513`, DOI `10.5281/zenodo.22151513`, in concept `10.5281/zenodo.22061489`; all nine files passed two anonymous byte/SHA-256 readback passes. Sanitized receipt `release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/publication-receipt.json` is 11,691 bytes/SHA-256 `7fbf0e059ce9fdba120fc953a27ea2fcba4419420a94ea9e754ffe4b8741ed46`. The latest GitHub/Pages reader remains Lab 2 at content commit `8989fbd602f89d0a8d6c30bc7bac1980a74b2c99`; the exact next action is the narrow Lab 3 content push, Pages deployment, and anonymous public-byte verification, then Laboratory 4. Source line 4186 remains only the nominal post-Fomberg marker and is not authority to translate beyond the selected span. Model provenance remains `OpenAI Codex gpt-5.6-sol, Ultra` without diminishing source or human credit.
+
+### Live recovery note — computation Laboratory 3 reader build closure, 2026-08-29
+
+Two clean HTML, appendix-PDF, and merged-PDF writes are byte-identical. The
+529-page predecessor is preserved by exact reconstruction, text-prefix, page-
+structure, outline, and named-destination checks. Physical pages 529–545 were
+rendered at 160 dpi and inspected at original detail; browser checks at
+1440×900 and 375×812 found zero page-level overflow, zero unresolved fragments,
+zero external runtime assets, local scrollers for all wide code/mathematics,
+and zero console errors or warnings. Visual QA SHA-256 is
+`43cccd44fc3cbfcf3b01542a32776dfbd37788bd011cd77115ed711bbbc934ba`;
+browser QA SHA-256 is
+`194f6da23dc3f299a8da8c3fc6cfa71f72de5ee202a82cce4a1b9bd460cca070`.
+Do not rebuild this boundary absent a demonstrated defect. Zenodo v0.31.5 is
+public and all nine files match twice under anonymous readback. Push and verify
+the exact narrow Git/Pages delta, then begin `D60-LAB04`.
+
+### Live recovery note — computation Laboratory 3 source and backend closure, 2026-08-29
+
+`D60-LAB03` / `O012-ORIG-LAB03` maps to `D60-R12` and `D60-R14`. The reader `source/id-ID/labs/computation-lab-003-cellular-boundaries-degree.md` is 19,453 bytes/529 LF/SHA-256 `4c3d88ec7d28d14fd1594c59262a50923efbad3082d7796d947661c7012bdf27`; the program is 15,641 bytes/SHA-256 `2ef4f077a902459b93dcdaef6db1c608e97c89d64b8dacbb8cb378367150009e`; the test suite is 8,217 bytes/SHA-256 `c1bbe85ff16a76d2ea55dfcb0686d016b52634aa33687e6dd3f9ba4baf568159`; and the 1,201-byte expected output has SHA-256 `0ac6d4c262eb8088050b3562025e7156dd329832f8cb13b0fd57e4b7f6fe8381`. Combined QA `qa/COMPUTATION_LAB_003_QA.json` is 4,534 bytes/SHA-256 `a13bc301036c0d2cbfb6c92ab1423d2c2ca09a503bfa2a830a62832a0c4bf12f`. The backend suffix and eleven-file isolated replay pass exactly; next execute only the deterministic reader-build and publication sequence recorded in `00_control/CURSOR.json`.
 
 ### Live recovery note — computation Laboratory 2 source/execution/review closure, 2026-08-28
 

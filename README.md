@@ -10,19 +10,20 @@ jembatan Fomberg mencakup seluruh bentang terpilih Bagian 1.1–1.13
 penguasaan biasa, lapisan penguasaan berbasis solusi telah mencapai **108/108**.
 Laboratorium Komputasi 1—monodromi ruang penutup dan presentasi grup—serta
 Laboratorium Komputasi 2—matriks rantai dan bentuk normal Smith—sudah lengkap
-dengan program luring, uji, keluaran acuan, interpretasi, dan solusi.
-Dua laboratorium komputasi, proyek puncak lintas-invarian, dan penutupan
+bersama Laboratorium Komputasi 3—batas seluler dan derajat—dengan program
+luring, uji, keluaran acuan, interpretasi, dan solusi. Satu laboratorium
+komputasi, proyek puncak lintas-invarian, dan penutupan
 metadata grafik bukti yang tercatat masih harus diselesaikan.
 
 ## Mulai membaca
 
-- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.13 + Asesmen Kumulatif 1–3 + Laboratorium 1–2](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/)
+- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.13 + Asesmen Kumulatif 1–3 + Laboratorium 1–3](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/)
   adalah permukaan utama: satu berkas mandiri, reflow, tanpa JavaScript atau
   akses jaringan, dengan matematika MathML asli.
-- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/index.html) dapat
+- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/index.html) dapat
   diunduh dan dibuka secara luring.
-- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-id.pdf)
-  adalah permukaan cetak sekunder sepanjang 529 halaman. Semua font tersemat,
+- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-id.pdf)
+  adalah permukaan cetak sekunder sepanjang 545 halaman. Semua font tersemat,
   subset, dan memiliki peta ToUnicode; PDF belum ditandai secara struktural.
 - [Konsep Zenodo edisi ini](https://doi.org/10.5281/zenodo.22061489)
   mempertahankan garis versi preservasi; nomor konsep tetap sama ketika
@@ -42,10 +43,14 @@ metadata grafik bukti yang tercatat masih harus diselesaikan.
   [0.31.2](https://doi.org/10.5281/zenodo.22135136) menambahkan Asesmen
   Kumulatif 2–3, pembaca 501 halaman, dan backend 7.273 rekaman; dan versi
   [0.31.3](https://doi.org/10.5281/zenodo.22142210) menambahkan Laboratorium
-  Komputasi 1; dan versi terbaru
+  Komputasi 1; kemudian
   [0.31.4](https://doi.org/10.5281/zenodo.22147224) menambahkan Laboratorium
   Komputasi 2, pembaca 529 halaman, backend 7.546 rekaman, serta bukti build,
-  visual, browser, eksekusi, dan provenans pada garis konsep yang sama.
+  visual, browser, eksekusi, dan provenans. Versi terbaru
+  [0.31.5](https://doi.org/10.5281/zenodo.22151513) menambahkan Laboratorium
+  Komputasi 3, pembaca 545 halaman, dan backend 7.694 rekaman pada garis konsep
+  yang sama; kesembilan berkas publik cocok byte demi byte pada dua pembacaan
+  anonim.
 
 Checkpoint ini mencakup seluruh 30 kuliah Roberts hingga `Notes.tex:6368`:
 topologi dasar, homotopi, ruang penutup dan monodromi, grup/grupoid fundamental,
@@ -67,6 +72,9 @@ program Python pustaka-standar yang dapat direproduksi tanpa jaringan.
 Laboratorium 2 membangun kompleks rantai dari matriks batas integral,
 memverifikasi syarat \(d^2=0\), menghitung bentuk normal Smith, dan membaca
 bagian bebas serta torsi homologi dengan uji dan keluaran acuan deterministik.
+Laboratorium 3 menghubungkan koefisien batas seluler, derajat pada kelas
+fundamental, jumlah derajat lokal, komposisi pemetaan torus, serta kontrol
+singular dengan aritmetika bilangan bulat dan pecahan yang eksak.
 Status
 30/30 hanya menyatakan kelengkapan komponen Roberts;
 status 108/108 menyatakan kelengkapan lapisan penguasaan berbasis solusi,

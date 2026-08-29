@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "review_kind": "independent_code",
+  "review_id": "O012-D60-LAB03-INDEPENDENT-CODE",
+  "laboratory_id": "D60-LAB03",
+  "edition_unit_id": "O012-ORIG-LAB03",
+  "course_route_unit_ids": ["D60-R12", "D60-R14"],
+  "independent_from_production": true,
+  "reviewer_mode": "separate read-only agent using exact-rational fixture reconstruction, exhaustive small-matrix fiber enumeration, malformed-input probes, isolated runtimes, hash-seed replay, and post-import file/socket/HTTP audit",
+  "reader_sha256": "4c3d88ec7d28d14fd1594c59262a50923efbad3082d7796d947661c7012bdf27",
+  "reader_contract": {
+    "path": "source/id-ID/labs/computation-lab-003-cellular-boundaries-degree.md",
+    "bytes": 19453,
+    "lf_lines": 529,
+    "sha256": "4c3d88ec7d28d14fd1594c59262a50923efbad3082d7796d947661c7012bdf27"
+  },
+  "bound_artifacts": [
+    {
+      "path": "source/id-ID/labs/computation-lab-003-cellular-boundaries-degree.md",
+      "bytes": 19453,
+      "lf_lines": 529,
+      "sha256": "4c3d88ec7d28d14fd1594c59262a50923efbad3082d7796d947661c7012bdf27"
+    },
+    {
+      "path": "source/id-ID/labs/o012_d60_lab03_cellular_degree.py",
+      "bytes": 15641,
+      "lf_lines": 400,
+      "sha256": "2ef4f077a902459b93dcdaef6db1c608e97c89d64b8dacbb8cb378367150009e"
+    },
+    {
+      "path": "source/id-ID/labs/test_o012_d60_lab03_cellular_degree.py",
+      "bytes": 8217,
+      "lf_lines": 197,
+      "sha256": "c1bbe85ff16a76d2ea55dfcb0686d016b52634aa33687e6dd3f9ba4baf568159"
+    },
+    {
+      "path": "source/id-ID/labs/expected-output-lab03.txt",
+      "bytes": 1201,
+      "lf_lines": 45,
+      "sha256": "0ac6d4c262eb8088050b3562025e7156dd329832f8cb13b0fd57e4b7f6fe8381"
+    },
+    {
+      "path": "qa/computation-lab-003/STATIC_QA.json",
+      "bytes": 3461,
+      "lf_lines": 146,
+      "sha256": "9c46eab7d1a6e0c1c00dcd1b08fc3b938c1f29843a950303100ac2971c688e61"
+    }
+  ],
+  "checks": {
+    "tests_6_of_6_two_runs": "PASS",
+    "expected_output_1201_bytes_exact": "PASS",
+    "utf8_lf_no_bom_and_empty_program_stderr": "PASS",
+    "X3_boundary_homology_orientation_and_three_exact_preimages": "PASS",
+    "signed_torus_incidence_and_homology": "PASS",
+    "column_convention_and_composition_order_NM_not_MN": "PASS",
+    "five_exact_M_preimages_and_shifts": "PASS",
+    "one_exact_N_preimage_and_negative_local_sign": "PASS",
+    "five_exact_NM_preimages_shifts_and_negative_local_signs": "PASS",
+    "small_invertible_matrix_oracle_matrices_496": "PASS",
+    "small_invertible_matrix_oracle_fibers_1488": "PASS",
+    "small_invertible_matrix_oracle_points_4104": "PASS",
+    "power_map_exact_oracle_cases_96": "PASS",
+    "shift_search_bound_completeness_and_cardinality_abs_det": "PASS",
+    "singular_left_null_nonimage_certificate": "PASS",
+    "singular_zero_fiber_explicit_witnesses_4": "PASS",
+    "malformed_input_cases_20_fail_closed": "PASS",
+    "strict_plain_integer_and_fraction_validation": "PASS",
+    "standard_library_only": "PASS",
+    "python_I_S_B_unrelated_cwd": "PASS",
+    "four_hash_seeds_identical": "PASS",
+    "no_post_import_file_socket_or_http_access": "PASS",
+    "static_QA_input_identities_and_claims_aligned": "PASS"
+  },
+  "resolved_during_review": [
+    "The reader now distinguishes unittest's conventional status stream from the executable program's required empty stderr.",
+    "The test suite now binds all five exact NM preimages and their integral shift vectors, rather than checking only cardinality and the signed sum.",
+    "The singular control now checks an explicit point in the nonempty zero fiber, rather than treating failure of one nonimage certificate as proof of membership."
+  ],
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0},
+  "human_review_claimed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "upstream_contacted": false
+}

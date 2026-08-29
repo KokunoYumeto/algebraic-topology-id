@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-v0.31.5",
+  "parent_record_id": 22147224,
+  "concept_key": "22061489",
+  "metadata_sha256": "7943d4c1b1b97778fe30f03b335bc81ad35cd57723707ed037adc4b65bf2620f",
+  "manifest_sha256": "30b1c0b8fba4657f18c0a2adc2d1f4fb25f08e2c048762c0f6359d4318e91928",
+  "state": "published_and_anonymously_verified",
+  "intent_created_at": "2026-08-29T00:11:29.078226+00:00",
+  "deposition_id": 22151513,
+  "record_id": 22151513,
+  "doi": "10.5281/zenodo.22151513",
+  "concept_doi": "10.5281/zenodo.22061489",
+  "anonymous_readback_reproduced": true,
+  "anonymous_readback_passes": 2,
+  "publication_receipt_sha256": "7fbf0e059ce9fdba120fc953a27ea2fcba4419420a94ea9e754ffe4b8741ed46",
+  "sanitized": true,
+  "credentials_recorded": false,
+  "authorization_header_recorded": false,
+  "bucket_url_recorded": false,
+  "absolute_local_paths_recorded": false
+}

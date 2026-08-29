@@ -1,0 +1,222 @@
+{
+  "qa_id": "O012-RBT-001-030-FOM-001-007-CA01-HINTS-R01-R06-CA02-CA03-LAB01-LAB02-LAB03-COMPOSITE-BUILD",
+  "status": "PASS",
+  "scope": "Roberts 30/30; Fomberg Sections 1.1-1.13; D60-CA01/02/03; ordinary mastery 84/84; solution-bearing mastery 108/108; computation Labs 1-3 complete; Lab 4, proof-metadata closure, and capstone pending",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "deterministic_build_draft": {
+    "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_BUILD_DRAFT.json",
+    "bytes": 43321,
+    "sha256": "36f61138b172f42b993e3769c02c9ccb5af794638536024a91b4a9f73106906e"
+  },
+  "sources": [
+    {
+      "path": "source/id-ID/labs/computation-lab-003-cellular-boundaries-degree.md",
+      "bytes": 19453,
+      "sha256": "4c3d88ec7d28d14fd1594c59262a50923efbad3082d7796d947661c7012bdf27"
+    },
+    {
+      "path": "source/id-ID/labs/o012_d60_lab03_cellular_degree.py",
+      "bytes": 15641,
+      "sha256": "2ef4f077a902459b93dcdaef6db1c608e97c89d64b8dacbb8cb378367150009e"
+    },
+    {
+      "path": "source/id-ID/labs/test_o012_d60_lab03_cellular_degree.py",
+      "bytes": 8217,
+      "sha256": "c1bbe85ff16a76d2ea55dfcb0686d016b52634aa33687e6dd3f9ba4baf568159"
+    },
+    {
+      "path": "source/id-ID/labs/expected-output-lab03.txt",
+      "bytes": 1201,
+      "sha256": "0ac6d4c262eb8088050b3562025e7156dd329832f8cb13b0fd57e4b7f6fe8381"
+    }
+  ],
+  "source_execution_review": {
+    "status": "PASS",
+    "receipt": {
+      "path": "qa/COMPUTATION_LAB_003_QA.json",
+      "bytes": 4534,
+      "sha256": "a13bc301036c0d2cbfb6c92ab1423d2c2ca09a503bfa2a830a62832a0c4bf12f"
+    },
+    "routes": [
+      "D60-R12",
+      "D60-R14"
+    ],
+    "tasks": 6,
+    "tests": 6,
+    "stable_ids": 25,
+    "headings": 18,
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    }
+  },
+  "html": {
+    "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/index.html",
+    "bytes": 15828588,
+    "sha256": "c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d",
+    "title": "Topologi Aljabar — Roberts 30/30, Fomberg 1.1–1.13, Asesmen Kumulatif 1–3, dan Laboratorium Komputasi 1–3",
+    "lang": "id-ID",
+    "self_contained": true
+  },
+  "pdf": {
+    "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-id.pdf",
+    "bytes": 9836725,
+    "sha256": "b26b670db97facc9f5ab389eed69cf1f8b03f70e6047eacbd2bfa68c849ccd0d",
+    "pages": 545,
+    "page_size": "A4",
+    "tagged": false
+  },
+  "manifest": {
+    "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03.csv",
+    "bytes": 381,
+    "sha256": "29b27f5dac78797428539e0941f75f4c27362ab8efcd0149b2e803ed9c5c63c0",
+    "entries": 2
+  },
+  "backend_boundary": {
+    "status": "PASS_APPEND_ONLY_REPLAYABLE",
+    "receipt": {
+      "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_CUMULATIVE_RECEIPT.json",
+      "bytes": 10047,
+      "sha256": "7ee69a9291368d407e38de4c63440d599b5cd13ec5fc288f5468084bc7774c80"
+    },
+    "immutable_prefix_records": 7546,
+    "records_added": 148,
+    "cumulative_records": 7694,
+    "cumulative_bytes": 9280385,
+    "cumulative_bundle_sha256": "cddd65499da547e0c4f01b8a880f68d1c3d314c078a9179528e4a28b2c5f65a2",
+    "laboratories_complete": 3,
+    "laboratories_required": 4
+  },
+  "html_checks": {
+    "status": "PASS",
+    "serialized_dom_ids": 4258,
+    "live_browser_dom_ids": 4259,
+    "fragment_links": 2242,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 17386,
+    "stable_ids_added": 25,
+    "headings_added": 18,
+    "tasks_added": 6,
+    "self_contained": true,
+    "centered_reflow": true
+  },
+  "pdf_checks": {
+    "status": "PASS",
+    "pages": 545,
+    "appended_lab_pages": 16,
+    "bounded_pages_checked": 17,
+    "all_bounded_pages_a4_nonempty": true,
+    "fonts": 127,
+    "all_fonts_embedded_subset_tounicode": true,
+    "stable_id_destinations_added": 25,
+    "outline_entries_added": 18
+  },
+  "reproducibility": {
+    "frozen_inputs_fail_closed": true,
+    "html_clean_writes": 2,
+    "pdf_appendix_clean_builds": 2,
+    "merged_pdf_clean_builds": 2,
+    "merged_pdf_builds_byte_identical": true,
+    "predecessor_html_exact_reconstruction": true,
+    "predecessor_pdf_extracted_text_prefix_identical": true,
+    "predecessor_pdf_pages_structurally_preserved": 529,
+    "predecessor_pdf_page_structure_aggregate_sha256": "d7232a88d5375925ffbfef77213d4d7ee6de96aadddc8d8db341f79001317f0e",
+    "source_date_epoch": 1787875200
+  },
+  "toolchain": {
+    "builder": {
+      "path": "scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+      "bytes": 33753,
+      "sha256": "6c05b72eb7ba66393b9f484607c93b1b908151051f361c10696927b90a6eccd4"
+    },
+    "merger": {
+      "path": "scripts/merge-computation-lab-003.py",
+      "bytes": 10292,
+      "sha256": "f9b9a2d11131153a15f28d1a763a8d5b17f4c6fca7c8eef93cfcea13feb8512c"
+    },
+    "finalizer": {
+      "path": "scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+      "bytes": 23129,
+      "sha256": "af40a4b3fb50dc3eb5511bd7bbb41f3f3980874ce04db01cb27e1038c710f343"
+    },
+    "pandoc": "pandoc 3.9.0.2",
+    "pypdf": "6.12.2",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "visual_checks": {
+    "status": "PASS",
+    "visual_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_VISUAL_QA.md",
+      "bytes": 3804,
+      "sha256": "43cccd44fc3cbfcf3b01542a32776dfbd37788bd011cd77115ed711bbbc934ba"
+    },
+    "render_inventory": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_RENDER_INVENTORY.csv",
+      "bytes": 1786,
+      "sha256": "14297a040f18402d518e3945aaf629c8bdc41cb989bed242062008c58cef7090"
+    },
+    "pages_inspected": [
+      529,
+      530,
+      531,
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      542,
+      543,
+      544,
+      545
+    ],
+    "render_count": 17,
+    "render_bytes": 4037435,
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    }
+  },
+  "browser_checks": {
+    "status": "PASS",
+    "browser_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_BROWSER_QA.json",
+      "bytes": 3622,
+      "sha256": "194f6da23dc3f299a8da8c3fc6cfa71f72de5ee202a82cce4a1b9bd460cca070"
+    },
+    "desktop": "PASS",
+    "mobile": "PASS",
+    "offline": "PASS",
+    "code_local_scrollers": 4,
+    "math_local_scrollers": 3,
+    "predecessor_table_local_scrollers": 1,
+    "unexpected_local_overflow_nodes": 0,
+    "unresolved_fragment_links": 0,
+    "runtime_external_asset_references": 0,
+    "console_errors": 0,
+    "console_warnings": 0,
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    }
+  },
+  "remaining": {
+    "computation_labs": [
+      "D60-LAB04"
+    ],
+    "proof_metadata_status": "FAIL_CLOSED",
+    "capstone": "pending"
+  },
+  "limitations": [
+    "The composite course remains partial: computation Lab 4, the cross-invariant capstone, and the recorded proof-metadata closure remain.",
+    "The PDF remains untagged; the self-contained native-MathML HTML is the primary reflowable surface.",
+    "Public-byte readback is a post-publication transaction and is not claimed by this local build receipt."
+  ]
+}

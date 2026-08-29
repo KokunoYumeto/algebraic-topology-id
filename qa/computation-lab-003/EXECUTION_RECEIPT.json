@@ -1,0 +1,65 @@
+{
+  "all_exit_codes_zero": true,
+  "commands": [
+    "python -B source/id-ID/labs/test_o012_d60_lab03_cellular_degree.py",
+    "python -B source/id-ID/labs/o012_d60_lab03_cellular_degree.py"
+  ],
+  "course_route_unit_ids": [
+    "D60-R12",
+    "D60-R14"
+  ],
+  "edition_unit_id": "O012-ORIG-LAB03",
+  "expected_output": {
+    "bytes": 1201,
+    "lf_lines": 45,
+    "path": "source/id-ID/labs/expected-output-lab03.txt",
+    "sha256": "0ac6d4c262eb8088050b3562025e7156dd329832f8cb13b0fd57e4b7f6fe8381"
+  },
+  "laboratory_id": "D60-LAB03",
+  "learner_artifacts": [
+    {
+      "bytes": 19453,
+      "lf_lines": 529,
+      "path": "source/id-ID/labs/computation-lab-003-cellular-boundaries-degree.md",
+      "sha256": "4c3d88ec7d28d14fd1594c59262a50923efbad3082d7796d947661c7012bdf27"
+    },
+    {
+      "bytes": 15641,
+      "lf_lines": 400,
+      "path": "source/id-ID/labs/o012_d60_lab03_cellular_degree.py",
+      "sha256": "2ef4f077a902459b93dcdaef6db1c608e97c89d64b8dacbb8cb378367150009e"
+    },
+    {
+      "bytes": 8217,
+      "lf_lines": 197,
+      "path": "source/id-ID/labs/test_o012_d60_lab03_cellular_degree.py",
+      "sha256": "c1bbe85ff16a76d2ea55dfcb0686d016b52634aa33687e6dd3f9ba4baf568159"
+    },
+    {
+      "bytes": 1201,
+      "lf_lines": 45,
+      "path": "source/id-ID/labs/expected-output-lab03.txt",
+      "sha256": "0ac6d4c262eb8088050b3562025e7156dd329832f8cb13b0fd57e4b7f6fe8381"
+    }
+  ],
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "program_runs": 2,
+  "program_stdout_byte_identical_between_runs": true,
+  "program_stdout_matches_expected_output": true,
+  "receipt_kind": "offline_deterministic_execution",
+  "runtime": {
+    "implementation": "CPython",
+    "network_used": false,
+    "python_version": "3.13.9",
+    "standard_library_only": true
+  },
+  "schema_version": "1.0",
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "status": "PASS",
+  "test_runs": 2,
+  "tests_per_run": 6
+}

@@ -1,5 +1,51 @@
 # Build record
 
+## Roberts 001–030 + Fomberg 001–007 + CA01 + hints R01–R06 + CA02–CA03 + Labs 1–3 — finalized local boundary
+
+Builder:
+`scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py`.
+Finalizer:
+`scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py`.
+The builder preserves the complete 529-page Lab 2 predecessor, performs two
+clean deterministic HTML/appendix-PDF/merged-PDF writes, adds 25 stable IDs,
+18 headings, and six solved tasks, and rejects unresolved include markers.
+The finalizer binds source/execution review, the exact 7,694-record append-only
+backend, visual/browser QA, embedded/subset/ToUnicode fonts, links, MathML,
+rights, privacy, and final artifact identities.
+
+```powershell
+python -B scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py
+python -B scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py
+```
+
+- HTML: 15,828,588 bytes/SHA-256
+  `c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d`.
+- PDF: 9,836,725 bytes/545 A4 pages/SHA-256
+  `b26b670db97facc9f5ab389eed69cf1f8b03f70e6047eacbd2bfa68c849ccd0d`.
+- Manifest: 381 bytes/SHA-256
+  `29b27f5dac78797428539e0941f75f4c27362ab8efcd0149b2e803ed9c5c63c0`.
+- Final build receipt: 7,575 bytes/SHA-256
+  `18cbb0558a08cee737e375351a4f3f7fb7b65c0e29672b22851612a8a58d1eab`.
+- Visual QA: pages 529–545, 17 RGB renders at 160 dpi, P1/P2/P3 zero;
+  receipt SHA-256
+  `43cccd44fc3cbfcf3b01542a32776dfbd37788bd011cd77115ed711bbbc934ba`.
+- Browser QA: desktop/mobile PASS, 4 code and 3 math local scrollers, 2,242
+  resolved fragments, 17,386 MathML nodes, zero external runtime assets,
+  zero console errors/warnings, P1/P2/P3 zero; receipt SHA-256
+  `194f6da23dc3f299a8da8c3fc6cfa71f72de5ee202a82cce4a1b9bd460cca070`.
+- PDF remains untagged; the self-contained native-MathML HTML is the primary
+  reflowable and accessibility-oriented surface.
+
+Zenodo version `0.31.5`, record `22151513`, DOI
+`10.5281/zenodo.22151513`, is public in concept
+`10.5281/zenodo.22061489`. The exact nine-file reader-first package passed two
+complete anonymous HTTP 200 byte/SHA-256 readback passes. Sanitized publication
+receipt is 11,691 bytes/SHA-256
+`7fbf0e059ce9fdba120fc953a27ea2fcba4419420a94ea9e754ffe4b8741ed46`;
+transaction receipt is 980 bytes/SHA-256
+`b6704000dda644f677af833a3a0abe6f9490061e08aad9ec0d28e1c673568fb9`.
+GitHub/Pages integration is the remaining public action for this boundary.
+
 ## Roberts 001–030 + Fomberg 001–007 + CA01 + hints R01–R06 + CA02–CA03 — prior published boundary
 
 Builder:

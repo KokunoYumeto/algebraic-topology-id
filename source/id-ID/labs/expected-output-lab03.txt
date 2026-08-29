@@ -1,0 +1,45 @@
+LABORATORIUM O012-D60-LAB03
+fixture_seluler_1: torus_minimal
+kata_pelekatan_torus: a b a^-1 b^-1
+insidensi_torus_(a,b): [0, 0]
+hitung_tak_bertanda_torus: [2, 2]
+d1_torus_nol: true
+H_0_torus: Z
+H_1_torus: Z^2
+H_2_torus: Z
+fixture_seluler_2: X3
+derajat_pelekatan_X3: 3
+d2_X3: [3]
+H_0_X3: Z
+H_1_X3: Z/3
+H_2_X3: 0
+d2_X3_orientasi_dibalik: [-3]
+homologi_orientasi_dibalik_tetap: true
+target_pangkat_3: 1/7
+prabayangan_pangkat_3: [1/21, 8/21, 5/7]
+kontribusi_lokal_pangkat_3: [1, 1, 1]
+jumlah_derajat_lokal_pangkat_3: 3
+matriks_M: [[2, 1], [-1, 2]]
+determinan_M: 5
+aksi_H1_M: [[2, 1], [-1, 2]]
+aksi_H2_M: kali_5
+target_torus: [1/7, 2/7]
+prabayangan_M: [(0, 1/7), (1/5, 26/35), (2/5, 12/35), (3/5, 33/35), (4/5, 19/35)]
+jumlah_prabayangan_M: 5
+kontribusi_lokal_M: [1, 1, 1, 1, 1]
+jumlah_derajat_lokal_M: 5
+matriks_N: [[0, 1], [1, 0]]
+determinan_N: -1
+prabayangan_N: [(2/7, 1/7)]
+jumlah_derajat_lokal_N: -1
+matriks_N_setelah_M: [[-1, 2], [2, 1]]
+matriks_M_setelah_N: [[1, 2], [2, -1]]
+urutan_komposisi_berbeda: true
+derajat_N_setelah_M: -5
+derajat_multiplikatif: true
+matriks_C: [[1, 1], [2, 2]]
+determinan_C: 0
+target_noncitra_C: [0, 1/3]
+vektor_null_kiri_C: [-2, 1]
+sertifikat_noncitra_C: true
+derajat_C: 0

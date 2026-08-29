@@ -1,0 +1,172 @@
+{
+  "checks": {
+    "excluded_fomberg_problem_bank_used": false,
+    "expected_output_exact": "PASS",
+    "independent_code": "PASS",
+    "independent_mathematics": "PASS",
+    "independent_source_language": "PASS",
+    "offline_program_and_tests": "PASS",
+    "privacy": "PASS",
+    "rights_origin_provenance_non_endorsement": "PASS",
+    "route_scope_D60_R12_R14": "PASS",
+    "stable_ids_25_unique": "PASS",
+    "tasks_6_with_hint_and_complete_solution": "PASS",
+    "terminology_0503_0514": "PASS",
+    "two_program_runs_byte_identical": "PASS",
+    "two_test_runs_6_of_6": "PASS"
+  },
+  "course_route_unit_ids": [
+    "D60-R12",
+    "D60-R14"
+  ],
+  "edition_unit_id": "O012-ORIG-LAB03",
+  "human_review_claimed": false,
+  "inputs": [
+    {
+      "bytes": 19453,
+      "lf_lines": 529,
+      "path": "source/id-ID/labs/computation-lab-003-cellular-boundaries-degree.md",
+      "sha256": "4c3d88ec7d28d14fd1594c59262a50923efbad3082d7796d947661c7012bdf27"
+    },
+    {
+      "bytes": 15641,
+      "lf_lines": 400,
+      "path": "source/id-ID/labs/o012_d60_lab03_cellular_degree.py",
+      "sha256": "2ef4f077a902459b93dcdaef6db1c608e97c89d64b8dacbb8cb378367150009e"
+    },
+    {
+      "bytes": 8217,
+      "lf_lines": 197,
+      "path": "source/id-ID/labs/test_o012_d60_lab03_cellular_degree.py",
+      "sha256": "c1bbe85ff16a76d2ea55dfcb0686d016b52634aa33687e6dd3f9ba4baf568159"
+    },
+    {
+      "bytes": 1201,
+      "lf_lines": 45,
+      "path": "source/id-ID/labs/expected-output-lab03.txt",
+      "sha256": "0ac6d4c262eb8088050b3562025e7156dd329832f8cb13b0fd57e4b7f6fe8381"
+    },
+    {
+      "bytes": 67957,
+      "lf_lines": 515,
+      "path": "00_control/TERMINOLOGY.csv",
+      "sha256": "92f818f0a7058f77e074ba002cb6944854438bbfd5cf0bcdb169db4f9dc42314"
+    },
+    {
+      "bytes": 15615104,
+      "lf_lines": 60941,
+      "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/index.html",
+      "sha256": "d0c6afddfa92759d475258bf08f20ea4019eccf72b7554128b2b938bd247b375"
+    },
+    {
+      "bytes": 3461,
+      "lf_lines": 146,
+      "path": "qa/computation-lab-003/STATIC_QA.json",
+      "sha256": "9c46eab7d1a6e0c1c00dcd1b08fc3b938c1f29843a950303100ac2971c688e61"
+    },
+    {
+      "bytes": 3858,
+      "lf_lines": 84,
+      "path": "qa/computation-lab-003/INDEPENDENT_CODE_REVIEW.json",
+      "sha256": "547a01cfe1abd0e4675054f2c3cc7ba92b70cbba744a5cfb24a8786399cc2f74"
+    },
+    {
+      "bytes": 7806,
+      "lf_lines": 311,
+      "path": "qa/computation-lab-003/INDEPENDENT_MATH_REVIEW.json",
+      "sha256": "1cf6a62b772c6e5a30646dcf32d6148762f62b0461dce1bc4ece66dce2dd5000"
+    },
+    {
+      "bytes": 3273,
+      "lf_lines": 72,
+      "path": "qa/computation-lab-003/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+      "sha256": "dcdc9499744731b9d3e57a32ad5330b0d077cd4b5e02e937c9ed70f173f650c8"
+    },
+    {
+      "bytes": 1952,
+      "lf_lines": 65,
+      "path": "qa/computation-lab-003/EXECUTION_RECEIPT.json",
+      "sha256": "7d7f21652d9f3259834e10467020efa65710c0b13448d49fd3a76f0015604084"
+    }
+  ],
+  "laboratory_id": "D60-LAB03",
+  "mathematical_result": {
+    "cellular": {
+      "X3_d2": [
+        3
+      ],
+      "X3_homology": {
+        "H0": "Z",
+        "H1": "Z/3",
+        "H2": "0"
+      },
+      "X3_reversed_d2": [
+        -3
+      ],
+      "torus_homology": {
+        "H0": "Z",
+        "H1": "Z^2",
+        "H2": "Z"
+      },
+      "torus_signed_incidence": [
+        0,
+        0
+      ],
+      "torus_unsigned_occurrences": [
+        2,
+        2
+      ]
+    },
+    "degree": {
+      "MN": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "M_local_degree_sum": 5,
+      "M_preimages": 5,
+      "NM": [
+        [
+          -1,
+          2
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "NM_local_degree_sum": -5,
+      "NM_preimages": 5,
+      "N_local_degree_sum": -1,
+      "N_preimages": 1,
+      "degree_multiplicativity": true,
+      "det_C": 0,
+      "det_M": 5,
+      "det_N": -1
+    },
+    "singular_control": {
+      "left_null": [
+        -2,
+        1
+      ],
+      "target_outside_image": true,
+      "target_pairing": "1/3",
+      "zero_fiber_nonempty": true
+    }
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "computation_laboratory_source_execution_review_closure",
+  "schema_version": "1.0",
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "status": "PASS",
+  "upstream_contacted": false
+}
