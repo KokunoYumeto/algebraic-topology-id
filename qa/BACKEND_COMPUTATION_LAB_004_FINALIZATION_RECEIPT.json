@@ -1,0 +1,66 @@
+{
+  "candidate": {
+    "bundle_sha256": "256a8333f7d1ba49086166560ed1200b4834a8914631d1cb8a094f30891dd48e",
+    "bytes": 162865,
+    "records": 153
+  },
+  "cumulative": {
+    "bundle_sha256": "2633732fd2fd2b5fb8afb5888b1864b6bcda9dca52eb85a6636c777ac1018c1f",
+    "bytes": 9443250,
+    "computation_laboratories_complete": 4,
+    "computation_laboratories_required": 4,
+    "records": 7847
+  },
+  "edition_unit_id": "O012-ORIG-LAB04",
+  "independent_cumulative_receipt": {
+    "bytes": 12455,
+    "lf_lines": 336,
+    "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_004_CUMULATIVE_RECEIPT.json",
+    "sha256": "2364c6e3e518605f41f3b2083adacc4016e5c5f7accdc606430a08aa0f8564a1"
+  },
+  "laboratory_id": "D60-LAB04",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "producer": {
+    "bytes": 45130,
+    "lf_lines": 667,
+    "path": "scripts/extend-backend-computation-lab-004.py",
+    "sha256": "22d31bdf053893ef7819e959c8ed8511886fa656a34aae620ae81aa71cb1dda0"
+  },
+  "producer_skipped_as_already_complete": false,
+  "producer_two_run_replay_receipt": {
+    "bytes": 3693,
+    "lf_lines": 133,
+    "path": "qa/computation-lab-004/backend-candidate-replay-20260829/REPLAY_RECEIPT.json",
+    "sha256": "3e42d421badff721f6474ba47de7d2752419d246d79f648b64d23e231260615c"
+  },
+  "promotion": {
+    "files_already_complete": [
+      "assets.jsonl",
+      "authority.jsonl",
+      "corrections.jsonl"
+    ],
+    "files_promoted": [
+      "artifacts.jsonl",
+      "concepts.jsonl",
+      "qa.jsonl",
+      "relations.jsonl",
+      "rights.jsonl",
+      "segments.jsonl",
+      "terms.jsonl",
+      "units.jsonl"
+    ],
+    "final_file_count": 11,
+    "promotion_kind": "exact_resume_safe_per_file_atomic_replacement",
+    "status": "PASS"
+  },
+  "receipt_kind": "resume_safe_backend_finalization",
+  "schema_version": "1.0",
+  "state_before": "LAB3_PREFIX",
+  "status": "PASS",
+  "validator": {
+    "bytes": 51927,
+    "lf_lines": 983,
+    "path": "scripts/validate-backend-append-only-computation-lab-004.py",
+    "sha256": "590a19af3c222d8c60b61bc5fd46a1dd95cdea057a3a2779f39c7acdc3784140"
+  }
+}

@@ -1,0 +1,1190 @@
+{
+  "schema_version": "1.4",
+  "status": "PASS_PUSHED_DEPLOYED_AND_ANONYMOUSLY_BYTE_VERIFIED",
+  "verified_at": "2026-08-29T03:10:09+02:00",
+  "scope": "Roberts 30/30; selected Fomberg Sections 1.1-1.13 complete; CA01/02/03 24/24; ordinary mastery 84/84; solution-bearing mastery 108/108; computation laboratories 1-3/4 complete; laboratory 4, proof-metadata closure, and capstone pending",
+  "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+  "branch": "main",
+  "parent": "b6a175771209e3a31b047cb84af142980ca81f46",
+  "predecessor_reader_content_commit": "8989fbd602f89d0a8d6c30bc7bac1980a74b2c99",
+  "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+  "content_tree": "27a6ef284579d2dcd1817077b5c4351acff0a38f",
+  "push": {
+    "status": "PASS",
+    "remote_ref": "refs/heads/main",
+    "remote_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+    "metadata_transport": "authenticated GitHub API; every public file and reader surface is verified separately without credentials"
+  },
+  "pages_workflow": {
+    "status": "completed",
+    "conclusion": "success",
+    "run_id": 33223430957,
+    "workflow_id": 339307301,
+    "check_suite_id": 90045126636,
+    "job_id": 99022162212,
+    "deployment_id": 6150632335,
+    "deployment_status_id": 17485382930,
+    "deployment_state": "success",
+    "run_url": "https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/33223430957"
+  },
+  "commit_pinned_anonymous_readback": {
+    "status": "PASS",
+    "method": "GitHub compare API explicit delta plus anonymous commit-pinned raw byte/SHA-256 verification of every changed file",
+    "changed_files": 70,
+    "changed_bytes": 69724313,
+    "matched_files": 70,
+    "mismatched_files": 0,
+    "removed_files": 0,
+    "compare_url": "https://github.com/KokunoYumeto/algebraic-topology-id/compare/b6a175771209e3a31b047cb84af142980ca81f46...2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+    "commit_delta_manifest_sha256": "c2f9aebc6b34d39ccbbdf5f2ba749a8b87ad7abaa274712240e27e025422314c",
+    "files": [
+      {
+        "path": ".github/workflows/pages.yml",
+        "status": "modified",
+        "bytes": 7645,
+        "sha256": "4f1d5ff699e7670df3f243d4007ad80dd7c5eba433b4ed974c50c9b2b8f1c5f8",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "00_control/BUILD.md",
+        "status": "modified",
+        "bytes": 51945,
+        "sha256": "72432985c11dd96b0caf98ef1bf5210e58d9ec06c1095b25e2bdf89f91b8f679",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "00_control/CURRENT_GOAL_AND_WORKFLOW.md",
+        "status": "modified",
+        "bytes": 8865,
+        "sha256": "5c1cddf0071de51d74505a13517de9a1362a5b72f359f0bec2c9d57b0c3d9e72",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "00_control/CURRENT_STATE.md",
+        "status": "modified",
+        "bytes": 103281,
+        "sha256": "b1a49d4931bc7ea642862a53c601b7089be3a3ed821dc0e1fca08e2b24158b32",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "00_control/CURSOR.json",
+        "status": "modified",
+        "bytes": 16175,
+        "sha256": "1ac489cca1ef5fe402001f6d2a781d0738136de87dbf292c561a6097dcc98077",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "00_control/TERMINOLOGY.csv",
+        "status": "modified",
+        "bytes": 67957,
+        "sha256": "92f818f0a7058f77e074ba002cb6944854438bbfd5cf0bcdb169db4f9dc42314",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "README.md",
+        "status": "modified",
+        "bytes": 10375,
+        "sha256": "29c0042433a9a9fdea7b6b044e9c065b5b3daf45c35d4b8353804b98f1db08d3",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "backend/artifacts.jsonl",
+        "status": "modified",
+        "bytes": 193675,
+        "sha256": "1535c6096f79fcd84878dca9d918e16e130571fa1f5423a210db55e3b62a782f",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "backend/concepts.jsonl",
+        "status": "modified",
+        "bytes": 162561,
+        "sha256": "5b921e4bb055fa53cd7f017d5d72b43a0122e5a31b5b8ec760b6efc4ca7e7fcc",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "backend/qa.jsonl",
+        "status": "modified",
+        "bytes": 109899,
+        "sha256": "1a1eb9f45ea992496a536a0f9bac0c439bfda9d6e10de1a292329727372e0a54",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "backend/relations.jsonl",
+        "status": "modified",
+        "bytes": 555459,
+        "sha256": "0504529956092a8d78f334f6cdf2dbceaa5a319ac09f812d1ccfa09d9b4f2cf0",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "backend/rights.jsonl",
+        "status": "modified",
+        "bytes": 105027,
+        "sha256": "73fdb740a3867d2cf74c6c84c9cce4f99b8feef39ccf5d5b900425cc46cdf872",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "backend/segments.jsonl",
+        "status": "modified",
+        "bytes": 3480791,
+        "sha256": "24d76e94204df4d87100ce4394e4c534c0cbdf45897d6f29c9ef0bc66418de67",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "backend/terms.jsonl",
+        "status": "modified",
+        "bytes": 338679,
+        "sha256": "394f877bcd0e0e537cdf09d1634185425d3fa2af6ba2c4fd955ff392dfc79214",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "backend/units.jsonl",
+        "status": "modified",
+        "bytes": 3670508,
+        "sha256": "93fc6a9bde31abf13d909e2dad66ad18d57738c326706897fd271c80fec70ecc",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03.csv",
+        "status": "added",
+        "bytes": 381,
+        "sha256": "29b27f5dac78797428539e0941f75f4c27362ab8efcd0149b2e803ed9c5c63c0",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/index.html",
+        "status": "added",
+        "bytes": 15828588,
+        "sha256": "c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-id.pdf",
+        "status": "added",
+        "bytes": 9836725,
+        "sha256": "b26b670db97facc9f5ab389eed69cf1f8b03f70e6047eacbd2bfa68c849ccd0d",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_CUMULATIVE_RECEIPT.json",
+        "status": "added",
+        "bytes": 10047,
+        "sha256": "7ee69a9291368d407e38de4c63440d599b5cd13ec5fc288f5468084bc7774c80",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_FILE_MANIFEST.csv",
+        "status": "added",
+        "bytes": 2832,
+        "sha256": "863b11f109e4cdcbf245f0a812b4958b105b5e53e863bc2015d4f883ad3cab46",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_PLAN.json",
+        "status": "added",
+        "bytes": 11444,
+        "sha256": "a2a36172d93efeb8628558f89c3a2db6dadee5bc354b737b4bd300d79bf4a55b",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_RECEIPT.json",
+        "status": "added",
+        "bytes": 2088,
+        "sha256": "246c4a8096f1879bc2c0532689c01ba7290cf3cc993ec6fdf9366866d3e14b90",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_REPLAY_RECEIPT.json",
+        "status": "added",
+        "bytes": 372,
+        "sha256": "d19a4569e0a068666d4e55e8c520777d5a801b3ed5726f7e5eea6e959d759a92",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/COMPUTATION_LAB_003_QA.json",
+        "status": "added",
+        "bytes": 4534,
+        "sha256": "a13bc301036c0d2cbfb6c92ab1423d2c2ca09a503bfa2a830a62832a0c4bf12f",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_BROWSER_QA.json",
+        "status": "added",
+        "bytes": 3622,
+        "sha256": "194f6da23dc3f299a8da8c3fc6cfa71f72de5ee202a82cce4a1b9bd460cca070",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_BUILD_DRAFT.json",
+        "status": "added",
+        "bytes": 43321,
+        "sha256": "36f61138b172f42b993e3769c02c9ccb5af794638536024a91b4a9f73106906e",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_BUILD_RECEIPT.json",
+        "status": "added",
+        "bytes": 7575,
+        "sha256": "18cbb0558a08cee737e375351a4f3f7fb7b65c0e29672b22851612a8a58d1eab",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_RENDER_INVENTORY.csv",
+        "status": "added",
+        "bytes": 1786,
+        "sha256": "14297a040f18402d518e3945aaf629c8bdc41cb989bed242062008c58cef7090",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_VISUAL_QA.md",
+        "status": "added",
+        "bytes": 3804,
+        "sha256": "43cccd44fc3cbfcf3b01542a32776dfbd37788bd011cd77115ed711bbbc934ba",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/computation-lab-003/EXECUTION_RECEIPT.json",
+        "status": "added",
+        "bytes": 1952,
+        "sha256": "7d7f21652d9f3259834e10467020efa65710c0b13448d49fd3a76f0015604084",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/computation-lab-003/INDEPENDENT_CODE_REVIEW.json",
+        "status": "added",
+        "bytes": 3858,
+        "sha256": "547a01cfe1abd0e4675054f2c3cc7ba92b70cbba744a5cfb24a8786399cc2f74",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/computation-lab-003/INDEPENDENT_MATH_REVIEW.json",
+        "status": "added",
+        "bytes": 7806,
+        "sha256": "1cf6a62b772c6e5a30646dcf32d6148762f62b0461dce1bc4ece66dce2dd5000",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/computation-lab-003/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+        "status": "added",
+        "bytes": 3273,
+        "sha256": "dcdc9499744731b9d3e57a32ad5330b0d077cd4b5e02e937c9ed70f173f650c8",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "qa/computation-lab-003/STATIC_QA.json",
+        "status": "added",
+        "bytes": 3461,
+        "sha256": "9c46eab7d1a6e0c1c00dcd1b08fc3b938c1f29843a950303100ac2971c688e61",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/LICENSE.md",
+        "status": "added",
+        "bytes": 1329,
+        "sha256": "f55ef2d6054014d2035316c4b53bedcd60491fdabd1ed1f5eb8b2fa52c4960d8",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/PACKAGE_PREPARATION_RECEIPT.json",
+        "status": "added",
+        "bytes": 88473,
+        "sha256": "b320813a056db08e49a6f3ce36543fd35aa553b7ccbaabe202b76852d8990ac1",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/README_RELEASE.md",
+        "status": "added",
+        "bytes": 3055,
+        "sha256": "f83de5858a8e43f8ce8d9cc8f95f0c7f8bce120b0c8ca9c4ca5a8a44316efcbb",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/RELEASE_RIGHTS.md",
+        "status": "added",
+        "bytes": 3493,
+        "sha256": "0aeaa1d33bdd550c892cb87c92e1fa8121fc393947f8d24b1f2f947960078486",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/SHA256SUMS.template",
+        "status": "added",
+        "bytes": 617,
+        "sha256": "5170ef96786c12c92cbc52d0ef78f1bdd3f14c4c1e7cb82961ff6e1ece494933",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/SOURCE_PACKAGE_README.md",
+        "status": "added",
+        "bytes": 2091,
+        "sha256": "42d26619fc35f5cd777b424c9fd71dc6e7e4d4aab6af3909214919d3bee2a623",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_READER.pdf",
+        "status": "added",
+        "bytes": 9836725,
+        "sha256": "b26b670db97facc9f5ab389eed69cf1f8b03f70e6047eacbd2bfa68c849ccd0d",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/LICENSE.md",
+        "status": "added",
+        "bytes": 1329,
+        "sha256": "f55ef2d6054014d2035316c4b53bedcd60491fdabd1ed1f5eb8b2fa52c4960d8",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/README_RELEASE.md",
+        "status": "added",
+        "bytes": 3055,
+        "sha256": "f83de5858a8e43f8ce8d9cc8f95f0c7f8bce120b0c8ca9c4ca5a8a44316efcbb",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/RELEASE_RIGHTS.md",
+        "status": "added",
+        "bytes": 3493,
+        "sha256": "0aeaa1d33bdd550c892cb87c92e1fa8121fc393947f8d24b1f2f947960078486",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/SHA256SUMS",
+        "status": "added",
+        "bytes": 1065,
+        "sha256": "dfba245d7e894774f1725dd40314e792dedfdc4147d49978857b1ad490f8ade0",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_EDITABLE_SOURCE_BACKEND.zip",
+        "status": "added",
+        "bytes": 8188182,
+        "sha256": "2421d0f79b736e67653d03d0b660d971df60eb09741fb69055641923f6a2fa5d",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_QA_PROVENANCE.zip",
+        "status": "added",
+        "bytes": 636870,
+        "sha256": "a0ea4947fbf6c75ffbaf43722137988ac7b95fd622ec9632eaf7178b781f7ea6",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_READER.html",
+        "status": "added",
+        "bytes": 15828588,
+        "sha256": "c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/release-manifest.json",
+        "status": "added",
+        "bytes": 93232,
+        "sha256": "30b1c0b8fba4657f18c0a2adc2d1f4fb25f08e2c048762c0f6359d4318e91928",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/frozen-inputs.json",
+        "status": "added",
+        "bytes": 79419,
+        "sha256": "2489f20688940ee08b9e006d03a0a386281c242f3db1b187f4c37834dcf317db",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/frozen-inputs.template.json",
+        "status": "added",
+        "bytes": 1539,
+        "sha256": "6f4fee833808da45acdd141598b69e89623a02445f1b767504b39f8d03361c84",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/metadata.json",
+        "status": "added",
+        "bytes": 4956,
+        "sha256": "7943d4c1b1b97778fe30f03b335bc81ad35cd57723707ed037adc4b65bf2620f",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/publication-plan.json",
+        "status": "added",
+        "bytes": 1855,
+        "sha256": "50fc3582883b6facf048553c4f766bce8f63c1670d493967a115aa7660c1b17d",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/publication-receipt.json",
+        "status": "added",
+        "bytes": 11691,
+        "sha256": "7fbf0e059ce9fdba120fc953a27ea2fcba4419420a94ea9e754ffe4b8741ed46",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/release-manifest.template.json",
+        "status": "added",
+        "bytes": 3542,
+        "sha256": "4ad710fdc32ed8368c99f3d8e0f549da8e8b0c6abf876259ed7002eb88cc5660",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/transaction.json",
+        "status": "added",
+        "bytes": 980,
+        "sha256": "b6704000dda644f677af833a3a0abe6f9490061e08aad9ec0d28e1c673568fb9",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+        "status": "added",
+        "bytes": 33753,
+        "sha256": "6c05b72eb7ba66393b9f484607c93b1b908151051f361c10696927b90a6eccd4",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "scripts/extend-backend-computation-lab-003.py",
+        "status": "added",
+        "bytes": 36992,
+        "sha256": "8e1c6cfd56a3ad9c73302a54e08d3147a03c9c68f46af32bb3b27e4a701828b2",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+        "status": "added",
+        "bytes": 23129,
+        "sha256": "af40a4b3fb50dc3eb5511bd7bbb41f3f3980874ce04db01cb27e1038c710f343",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "scripts/finalize-computation-lab-003-qa.py",
+        "status": "added",
+        "bytes": 10576,
+        "sha256": "48cef4ba495ecda9d62fd3c7cf71efc9d7349fb0b125a9bd3a0b9206182df8dc",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "scripts/merge-computation-lab-003.py",
+        "status": "added",
+        "bytes": 10292,
+        "sha256": "f9b9a2d11131153a15f28d1a763a8d5b17f4c6fca7c8eef93cfcea13feb8512c",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "scripts/package-release-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+        "status": "added",
+        "bytes": 31206,
+        "sha256": "c9ae97325fd2ef0d4b18b4ec6e71b70441c28f21d1b6ac0b5e89032c8c7d7ca0",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "scripts/publish-zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+        "status": "added",
+        "bytes": 17372,
+        "sha256": "8d12adc91a6a84682683daaac028bcbc3079981aacc0934ff2dddcafa3a8f3ed",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "scripts/qa-computation-lab-003.py",
+        "status": "added",
+        "bytes": 13199,
+        "sha256": "1971c02853cd413cc7f7c1ff02a7e6c0cb55db290b0151cda2986537e5d3f094",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "scripts/validate-backend-append-only-computation-lab-003.py",
+        "status": "added",
+        "bytes": 3500,
+        "sha256": "86fc26fe1a874c8cc38580d47342a3c576a7769c909ba473e6810ab19522e9e3",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "scripts/verify-github-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+        "status": "added",
+        "bytes": 43892,
+        "sha256": "3c4ba098a51be3e86c776d37c6225fbe22452be154be0869eb961015739b4f46",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "source/id-ID/labs/computation-lab-003-cellular-boundaries-degree.md",
+        "status": "added",
+        "bytes": 19453,
+        "sha256": "4c3d88ec7d28d14fd1594c59262a50923efbad3082d7796d947661c7012bdf27",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "source/id-ID/labs/expected-output-lab03.txt",
+        "status": "added",
+        "bytes": 1201,
+        "sha256": "0ac6d4c262eb8088050b3562025e7156dd329832f8cb13b0fd57e4b7f6fe8381",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "source/id-ID/labs/o012_d60_lab03_cellular_degree.py",
+        "status": "added",
+        "bytes": 15641,
+        "sha256": "2ef4f077a902459b93dcdaef6db1c608e97c89d64b8dacbb8cb378367150009e",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      },
+      {
+        "path": "source/id-ID/labs/test_o012_d60_lab03_cellular_degree.py",
+        "status": "added",
+        "bytes": 8217,
+        "sha256": "c1bbe85ff16a76d2ea55dfcb0686d016b52634aa33687e6dd3f9ba4baf568159",
+        "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+        "anonymous_commit_pinned_raw_exact": true
+      }
+    ]
+  },
+  "reader_anonymous_readback": [
+    {
+      "surface": "GitHub Pages",
+      "url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/",
+      "http_status": 200,
+      "bytes": 15828588,
+      "sha256": "c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d",
+      "matches_content_commit": true
+    },
+    {
+      "surface": "commit-pinned raw GitHub",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/2196b7cb998b66c50a182a1312dcca7ddba29ccf/output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/index.html",
+      "http_status": 200,
+      "bytes": 15828588,
+      "sha256": "c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d",
+      "matches_content_commit": true
+    },
+    {
+      "surface": "frozen predecessor GitHub Pages",
+      "url": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/",
+      "http_status": 200,
+      "bytes": 15615104,
+      "sha256": "d0c6afddfa92759d475258bf08f20ea4019eccf72b7554128b2b938bd247b375",
+      "matches_frozen_predecessor": true
+    },
+    {
+      "surface": "frozen predecessor commit-pinned raw GitHub",
+      "url": "https://raw.githubusercontent.com/KokunoYumeto/algebraic-topology-id/8989fbd602f89d0a8d6c30bc7bac1980a74b2c99/output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/index.html",
+      "http_status": 200,
+      "bytes": 15615104,
+      "sha256": "d0c6afddfa92759d475258bf08f20ea4019eccf72b7554128b2b938bd247b375",
+      "content_commit": "8989fbd602f89d0a8d6c30bc7bac1980a74b2c99",
+      "matches_frozen_predecessor": true
+    }
+  ],
+  "backend": {
+    "status": "PASS_APPEND_ONLY_REPLAYABLE",
+    "records": 7694,
+    "bytes": 9280385,
+    "bundle_sha256": "cddd65499da547e0c4f01b8a880f68d1c3d314c078a9179528e4a28b2c5f65a2",
+    "immutable_prefix_records": 7546,
+    "immutable_prefix_preserved": true,
+    "laboratories_complete": 3,
+    "laboratories_required": 4,
+    "receipt": {
+      "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_CUMULATIVE_RECEIPT.json",
+      "bytes": 10047,
+      "sha256": "7ee69a9291368d407e38de4c63440d599b5cd13ec5fc288f5468084bc7774c80"
+    },
+    "supporting_receipts": [
+      {
+        "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_FILE_MANIFEST.csv",
+        "bytes": 2832,
+        "lf_lines": 12,
+        "sha256": "863b11f109e4cdcbf245f0a812b4958b105b5e53e863bc2015d4f883ad3cab46"
+      },
+      {
+        "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_PLAN.json",
+        "bytes": 11444,
+        "lf_lines": 289,
+        "sha256": "a2a36172d93efeb8628558f89c3a2db6dadee5bc354b737b4bd300d79bf4a55b"
+      },
+      {
+        "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_REPLAY_RECEIPT.json",
+        "bytes": 372,
+        "lf_lines": 14,
+        "sha256": "d19a4569e0a068666d4e55e8c520777d5a801b3ed5726f7e5eea6e959d759a92"
+      },
+      {
+        "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_RECEIPT.json",
+        "bytes": 2088,
+        "lf_lines": 76,
+        "sha256": "246c4a8096f1879bc2c0532689c01ba7290cf3cc993ec6fdf9366866d3e14b90"
+      }
+    ],
+    "files": [
+      {
+        "path": "backend/artifacts.jsonl",
+        "records": 234,
+        "bytes": 193675,
+        "sha256": "1535c6096f79fcd84878dca9d918e16e130571fa1f5423a210db55e3b62a782f",
+        "prefix_records": 224,
+        "prefix_bytes": 185068,
+        "prefix_sha256": "e28ed6e26a8f9812db1e54da035dc58675cd39303138fd85b6e00e9cffb06c94",
+        "suffix_records": 10,
+        "suffix_bytes": 8607,
+        "suffix_sha256": "b2321c465b5af28fb56f0ea10315e4a06cb355324247f10f1a894c72d000338b"
+      },
+      {
+        "path": "backend/assets.jsonl",
+        "records": 87,
+        "bytes": 64692,
+        "sha256": "1df40f8f6ca4f2fbfbe8a7b924a68a153713a20a4eebe1d014d8fb04669945f7",
+        "prefix_records": 87,
+        "prefix_bytes": 64692,
+        "prefix_sha256": "1df40f8f6ca4f2fbfbe8a7b924a68a153713a20a4eebe1d014d8fb04669945f7",
+        "suffix_records": 0,
+        "suffix_bytes": 0,
+        "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "backend/authority.jsonl",
+        "records": 6,
+        "bytes": 4374,
+        "sha256": "84c622f56dbbd5ba379361245ecfe07bc79c9f4fd6b18ba21b82b5f545211869",
+        "prefix_records": 6,
+        "prefix_bytes": 4374,
+        "prefix_sha256": "84c622f56dbbd5ba379361245ecfe07bc79c9f4fd6b18ba21b82b5f545211869",
+        "suffix_records": 0,
+        "suffix_bytes": 0,
+        "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "backend/concepts.jsonl",
+        "records": 513,
+        "bytes": 162561,
+        "sha256": "5b921e4bb055fa53cd7f017d5d72b43a0122e5a31b5b8ec760b6efc4ca7e7fcc",
+        "prefix_records": 501,
+        "prefix_bytes": 158569,
+        "prefix_sha256": "20a163b753cc00f018d9a8cd8f71c6467c7dab607a3b13e8eb5532d6b04ab44c",
+        "suffix_records": 12,
+        "suffix_bytes": 3992,
+        "suffix_sha256": "e4821a7d3c382177f795f1a133d1ef0b8987fe891eb6e730e898579307801cbf"
+      },
+      {
+        "path": "backend/corrections.jsonl",
+        "records": 564,
+        "bytes": 594720,
+        "sha256": "bd961fad5d83e96fec6ef83caa8447e2e5f282c603fd4983d79b5b4b54049fbb",
+        "prefix_records": 564,
+        "prefix_bytes": 594720,
+        "prefix_sha256": "bd961fad5d83e96fec6ef83caa8447e2e5f282c603fd4983d79b5b4b54049fbb",
+        "suffix_records": 0,
+        "suffix_bytes": 0,
+        "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "backend/qa.jsonl",
+        "records": 198,
+        "bytes": 109899,
+        "sha256": "1a1eb9f45ea992496a536a0f9bac0c439bfda9d6e10de1a292329727372e0a54",
+        "prefix_records": 191,
+        "prefix_bytes": 105671,
+        "prefix_sha256": "54372bca72f81e8dab6580af8db7ab350ff6dc2717fc067f87a6a0e00200a6da",
+        "suffix_records": 7,
+        "suffix_bytes": 4228,
+        "suffix_sha256": "17323ccff156ad8ac1626bb9f72963530bc7efcd74a097cb465ddc721c62b014"
+      },
+      {
+        "path": "backend/relations.jsonl",
+        "records": 1216,
+        "bytes": 555459,
+        "sha256": "0504529956092a8d78f334f6cdf2dbceaa5a319ac09f812d1ccfa09d9b4f2cf0",
+        "prefix_records": 1160,
+        "prefix_bytes": 526730,
+        "prefix_sha256": "96d4d3cec3e42f87e21a5b245cd92f851d9122e4de02865166ed4a9e9c53c04a",
+        "suffix_records": 56,
+        "suffix_bytes": 28729,
+        "suffix_sha256": "0b02fb3714d9642cb434e0b82603b2f24b1a3b4819bc9ad2fb411519856d44fa"
+      },
+      {
+        "path": "backend/rights.jsonl",
+        "records": 110,
+        "bytes": 105027,
+        "sha256": "73fdb740a3867d2cf74c6c84c9cce4f99b8feef39ccf5d5b900425cc46cdf872",
+        "prefix_records": 109,
+        "prefix_bytes": 103393,
+        "prefix_sha256": "ebfcb9d92d9c1a097df404bc16b0abfe2e1c2a02ed5a359e0f615508025f22df",
+        "suffix_records": 1,
+        "suffix_bytes": 1634,
+        "suffix_sha256": "58cc5dab607f5775ca1b2b4aa4daba1378ffac828d3aea54c001a6b12c687edf"
+      },
+      {
+        "path": "backend/segments.jsonl",
+        "records": 2115,
+        "bytes": 3480791,
+        "sha256": "24d76e94204df4d87100ce4394e4c534c0cbdf45897d6f29c9ef0bc66418de67",
+        "prefix_records": 2090,
+        "prefix_bytes": 3432502,
+        "prefix_sha256": "c8ee822c289168ef7895788151a0f173365ea2a3caf606e3160d8407d18bd204",
+        "suffix_records": 25,
+        "suffix_bytes": 48289,
+        "suffix_sha256": "4ff627a4fcc8f8779db107cec3dc4ba2e937ead7e4383ab5ffda853407a0bdfb"
+      },
+      {
+        "path": "backend/terms.jsonl",
+        "records": 506,
+        "bytes": 338679,
+        "sha256": "394f877bcd0e0e537cdf09d1634185425d3fa2af6ba2c4fd955ff392dfc79214",
+        "prefix_records": 494,
+        "prefix_bytes": 329042,
+        "prefix_sha256": "e1b94dff63d858610b1ddc48cb248b0ca99f05303964c00163718bab12ba870a",
+        "suffix_records": 12,
+        "suffix_bytes": 9637,
+        "suffix_sha256": "f6aea77476b55ddc8e95b6a9d78ac740dda8471681a79b24db116576c7bd3fd4"
+      },
+      {
+        "path": "backend/units.jsonl",
+        "records": 2145,
+        "bytes": 3670508,
+        "sha256": "93fc6a9bde31abf13d909e2dad66ad18d57738c326706897fd271c80fec70ecc",
+        "prefix_records": 2120,
+        "prefix_bytes": 3617994,
+        "prefix_sha256": "fa1b11fb7231fcb5e765126dbbdba70365b63df544b0b65dcdd60d2c6ef21a7f",
+        "suffix_records": 25,
+        "suffix_bytes": 52514,
+        "suffix_sha256": "7e4f8484ba2a99cb08f57c302e1942b760b044eba3dd909baae3a5a7f03377c3"
+      }
+    ],
+    "all_files_commit_pinned_anonymous_readback": {
+      "status": "PASS",
+      "files": [
+        {
+          "path": "backend/artifacts.jsonl",
+          "records": 234,
+          "bytes": 193675,
+          "sha256": "1535c6096f79fcd84878dca9d918e16e130571fa1f5423a210db55e3b62a782f",
+          "prefix_records": 224,
+          "prefix_bytes": 185068,
+          "prefix_sha256": "e28ed6e26a8f9812db1e54da035dc58675cd39303138fd85b6e00e9cffb06c94",
+          "suffix_records": 10,
+          "suffix_bytes": 8607,
+          "suffix_sha256": "b2321c465b5af28fb56f0ea10315e4a06cb355324247f10f1a894c72d000338b",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        },
+        {
+          "path": "backend/assets.jsonl",
+          "records": 87,
+          "bytes": 64692,
+          "sha256": "1df40f8f6ca4f2fbfbe8a7b924a68a153713a20a4eebe1d014d8fb04669945f7",
+          "prefix_records": 87,
+          "prefix_bytes": 64692,
+          "prefix_sha256": "1df40f8f6ca4f2fbfbe8a7b924a68a153713a20a4eebe1d014d8fb04669945f7",
+          "suffix_records": 0,
+          "suffix_bytes": 0,
+          "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        },
+        {
+          "path": "backend/authority.jsonl",
+          "records": 6,
+          "bytes": 4374,
+          "sha256": "84c622f56dbbd5ba379361245ecfe07bc79c9f4fd6b18ba21b82b5f545211869",
+          "prefix_records": 6,
+          "prefix_bytes": 4374,
+          "prefix_sha256": "84c622f56dbbd5ba379361245ecfe07bc79c9f4fd6b18ba21b82b5f545211869",
+          "suffix_records": 0,
+          "suffix_bytes": 0,
+          "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        },
+        {
+          "path": "backend/concepts.jsonl",
+          "records": 513,
+          "bytes": 162561,
+          "sha256": "5b921e4bb055fa53cd7f017d5d72b43a0122e5a31b5b8ec760b6efc4ca7e7fcc",
+          "prefix_records": 501,
+          "prefix_bytes": 158569,
+          "prefix_sha256": "20a163b753cc00f018d9a8cd8f71c6467c7dab607a3b13e8eb5532d6b04ab44c",
+          "suffix_records": 12,
+          "suffix_bytes": 3992,
+          "suffix_sha256": "e4821a7d3c382177f795f1a133d1ef0b8987fe891eb6e730e898579307801cbf",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        },
+        {
+          "path": "backend/corrections.jsonl",
+          "records": 564,
+          "bytes": 594720,
+          "sha256": "bd961fad5d83e96fec6ef83caa8447e2e5f282c603fd4983d79b5b4b54049fbb",
+          "prefix_records": 564,
+          "prefix_bytes": 594720,
+          "prefix_sha256": "bd961fad5d83e96fec6ef83caa8447e2e5f282c603fd4983d79b5b4b54049fbb",
+          "suffix_records": 0,
+          "suffix_bytes": 0,
+          "suffix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        },
+        {
+          "path": "backend/qa.jsonl",
+          "records": 198,
+          "bytes": 109899,
+          "sha256": "1a1eb9f45ea992496a536a0f9bac0c439bfda9d6e10de1a292329727372e0a54",
+          "prefix_records": 191,
+          "prefix_bytes": 105671,
+          "prefix_sha256": "54372bca72f81e8dab6580af8db7ab350ff6dc2717fc067f87a6a0e00200a6da",
+          "suffix_records": 7,
+          "suffix_bytes": 4228,
+          "suffix_sha256": "17323ccff156ad8ac1626bb9f72963530bc7efcd74a097cb465ddc721c62b014",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        },
+        {
+          "path": "backend/relations.jsonl",
+          "records": 1216,
+          "bytes": 555459,
+          "sha256": "0504529956092a8d78f334f6cdf2dbceaa5a319ac09f812d1ccfa09d9b4f2cf0",
+          "prefix_records": 1160,
+          "prefix_bytes": 526730,
+          "prefix_sha256": "96d4d3cec3e42f87e21a5b245cd92f851d9122e4de02865166ed4a9e9c53c04a",
+          "suffix_records": 56,
+          "suffix_bytes": 28729,
+          "suffix_sha256": "0b02fb3714d9642cb434e0b82603b2f24b1a3b4819bc9ad2fb411519856d44fa",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        },
+        {
+          "path": "backend/rights.jsonl",
+          "records": 110,
+          "bytes": 105027,
+          "sha256": "73fdb740a3867d2cf74c6c84c9cce4f99b8feef39ccf5d5b900425cc46cdf872",
+          "prefix_records": 109,
+          "prefix_bytes": 103393,
+          "prefix_sha256": "ebfcb9d92d9c1a097df404bc16b0abfe2e1c2a02ed5a359e0f615508025f22df",
+          "suffix_records": 1,
+          "suffix_bytes": 1634,
+          "suffix_sha256": "58cc5dab607f5775ca1b2b4aa4daba1378ffac828d3aea54c001a6b12c687edf",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        },
+        {
+          "path": "backend/segments.jsonl",
+          "records": 2115,
+          "bytes": 3480791,
+          "sha256": "24d76e94204df4d87100ce4394e4c534c0cbdf45897d6f29c9ef0bc66418de67",
+          "prefix_records": 2090,
+          "prefix_bytes": 3432502,
+          "prefix_sha256": "c8ee822c289168ef7895788151a0f173365ea2a3caf606e3160d8407d18bd204",
+          "suffix_records": 25,
+          "suffix_bytes": 48289,
+          "suffix_sha256": "4ff627a4fcc8f8779db107cec3dc4ba2e937ead7e4383ab5ffda853407a0bdfb",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        },
+        {
+          "path": "backend/terms.jsonl",
+          "records": 506,
+          "bytes": 338679,
+          "sha256": "394f877bcd0e0e537cdf09d1634185425d3fa2af6ba2c4fd955ff392dfc79214",
+          "prefix_records": 494,
+          "prefix_bytes": 329042,
+          "prefix_sha256": "e1b94dff63d858610b1ddc48cb248b0ca99f05303964c00163718bab12ba870a",
+          "suffix_records": 12,
+          "suffix_bytes": 9637,
+          "suffix_sha256": "f6aea77476b55ddc8e95b6a9d78ac740dda8471681a79b24db116576c7bd3fd4",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        },
+        {
+          "path": "backend/units.jsonl",
+          "records": 2145,
+          "bytes": 3670508,
+          "sha256": "93fc6a9bde31abf13d909e2dad66ad18d57738c326706897fd271c80fec70ecc",
+          "prefix_records": 2120,
+          "prefix_bytes": 3617994,
+          "prefix_sha256": "fa1b11fb7231fcb5e765126dbbdba70365b63df544b0b65dcdd60d2c6ef21a7f",
+          "suffix_records": 25,
+          "suffix_bytes": 52514,
+          "suffix_sha256": "7e4f8484ba2a99cb08f57c302e1942b760b044eba3dd909baae3a5a7f03377c3",
+          "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+          "anonymous_commit_pinned_raw_exact": true
+        }
+      ]
+    }
+  },
+  "publication_truth": {
+    "ordinary_mastery": "84/84",
+    "cumulative_assessments": "24/24",
+    "total_required_mastery": "108/108",
+    "computation_laboratories": "3/4",
+    "remaining_laboratories": 1,
+    "proof_metadata_closure_pending": true,
+    "capstone_pending": true,
+    "course_complete": false
+  },
+  "sibling_zenodo_checkpoint": {
+    "version": "0.31.5",
+    "record_id": 22151513,
+    "doi": "10.5281/zenodo.22151513",
+    "concept_doi": "10.5281/zenodo.22061489",
+    "public_api_identity_verified": true,
+    "publication_receipt_status": "PUBLISHED_AND_TWICE_ANONYMOUSLY_VERIFIED",
+    "anonymous_exact_readback_passes": 2
+  },
+  "credentials_recorded": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "source_and_human_credit_preserved": true,
+  "upstream_contacted": false,
+  "boundary_inputs": {
+    "delta_base_commit": "b6a175771209e3a31b047cb84af142980ca81f46",
+    "predecessor_content_commit": "8989fbd602f89d0a8d6c30bc7bac1980a74b2c99",
+    "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+    "content_tree": "27a6ef284579d2dcd1817077b5c4351acff0a38f",
+    "html": {
+      "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/index.html",
+      "bytes": 15828588,
+      "sha256": "c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d"
+    },
+    "pdf": {
+      "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-id.pdf",
+      "bytes": 9836725,
+      "sha256": "b26b670db97facc9f5ab389eed69cf1f8b03f70e6047eacbd2bfa68c849ccd0d"
+    },
+    "manifest": {
+      "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03.csv",
+      "bytes": 381,
+      "sha256": "29b27f5dac78797428539e0941f75f4c27362ab8efcd0149b2e803ed9c5c63c0"
+    },
+    "backend": {
+      "records": 7694,
+      "bytes": 9280385,
+      "bundle_sha256": "cddd65499da547e0c4f01b8a880f68d1c3d314c078a9179528e4a28b2c5f65a2"
+    }
+  },
+  "zenodo_public_file_readback": {
+    "status": "PASS_EXACT_NINE_FILE_PUBLIC_INVENTORY_AND_FRESH_READBACK",
+    "record_id": 22151513,
+    "files": [
+      {
+        "filename": "00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_READER.pdf",
+        "bytes": 9836725,
+        "sha256": "b26b670db97facc9f5ab389eed69cf1f8b03f70e6047eacbd2bfa68c849ccd0d",
+        "anonymous_fresh_readback": true
+      },
+      {
+        "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_READER.html",
+        "bytes": 15828588,
+        "sha256": "c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d",
+        "anonymous_fresh_readback": true
+      },
+      {
+        "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_EDITABLE_SOURCE_BACKEND.zip",
+        "bytes": 8188182,
+        "sha256": "2421d0f79b736e67653d03d0b660d971df60eb09741fb69055641923f6a2fa5d",
+        "anonymous_fresh_readback": true
+      },
+      {
+        "filename": "TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_QA_PROVENANCE.zip",
+        "bytes": 636870,
+        "sha256": "a0ea4947fbf6c75ffbaf43722137988ac7b95fd622ec9632eaf7178b781f7ea6",
+        "anonymous_fresh_readback": true
+      },
+      {
+        "filename": "LICENSE.md",
+        "bytes": 1329,
+        "sha256": "f55ef2d6054014d2035316c4b53bedcd60491fdabd1ed1f5eb8b2fa52c4960d8",
+        "anonymous_fresh_readback": true
+      },
+      {
+        "filename": "README_RELEASE.md",
+        "bytes": 3055,
+        "sha256": "f83de5858a8e43f8ce8d9cc8f95f0c7f8bce120b0c8ca9c4ca5a8a44316efcbb",
+        "anonymous_fresh_readback": true
+      },
+      {
+        "filename": "RELEASE_RIGHTS.md",
+        "bytes": 3493,
+        "sha256": "0aeaa1d33bdd550c892cb87c92e1fa8121fc393947f8d24b1f2f947960078486",
+        "anonymous_fresh_readback": true
+      },
+      {
+        "filename": "release-manifest.json",
+        "bytes": 93232,
+        "sha256": "30b1c0b8fba4657f18c0a2adc2d1f4fb25f08e2c048762c0f6359d4318e91928",
+        "anonymous_fresh_readback": true
+      },
+      {
+        "filename": "SHA256SUMS",
+        "bytes": 1065,
+        "sha256": "dfba245d7e894774f1725dd40314e792dedfdc4147d49978857b1ad490f8ade0",
+        "anonymous_fresh_readback": true
+      }
+    ]
+  },
+  "explicit_changed_path_inventory": {
+    "status": "PASS_EXACT_SET",
+    "files": 70,
+    "paths": [
+      ".github/workflows/pages.yml",
+      "00_control/BUILD.md",
+      "00_control/CURRENT_GOAL_AND_WORKFLOW.md",
+      "00_control/CURRENT_STATE.md",
+      "00_control/CURSOR.json",
+      "00_control/TERMINOLOGY.csv",
+      "README.md",
+      "backend/artifacts.jsonl",
+      "backend/concepts.jsonl",
+      "backend/qa.jsonl",
+      "backend/relations.jsonl",
+      "backend/rights.jsonl",
+      "backend/segments.jsonl",
+      "backend/terms.jsonl",
+      "backend/units.jsonl",
+      "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03.csv",
+      "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/index.html",
+      "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-id.pdf",
+      "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_CUMULATIVE_RECEIPT.json",
+      "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_FILE_MANIFEST.csv",
+      "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_PLAN.json",
+      "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_RECEIPT.json",
+      "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_003_REPLAY_RECEIPT.json",
+      "qa/COMPUTATION_LAB_003_QA.json",
+      "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_BROWSER_QA.json",
+      "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_BUILD_DRAFT.json",
+      "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_BUILD_RECEIPT.json",
+      "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_RENDER_INVENTORY.csv",
+      "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_VISUAL_QA.md",
+      "qa/computation-lab-003/EXECUTION_RECEIPT.json",
+      "qa/computation-lab-003/INDEPENDENT_CODE_REVIEW.json",
+      "qa/computation-lab-003/INDEPENDENT_MATH_REVIEW.json",
+      "qa/computation-lab-003/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+      "qa/computation-lab-003/STATIC_QA.json",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/LICENSE.md",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/PACKAGE_PREPARATION_RECEIPT.json",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/README_RELEASE.md",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/RELEASE_RIGHTS.md",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/SHA256SUMS.template",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/SOURCE_PACKAGE_README.md",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/00_TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_READER.pdf",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/LICENSE.md",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/README_RELEASE.md",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/RELEASE_RIGHTS.md",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/SHA256SUMS",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_EDITABLE_SOURCE_BACKEND.zip",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_QA_PROVENANCE.zip",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/TOPOLOGI_ALJABAR_ID_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_READER.html",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/artifacts/release-manifest.json",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/frozen-inputs.json",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/frozen-inputs.template.json",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/metadata.json",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/publication-plan.json",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/publication-receipt.json",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/release-manifest.template.json",
+      "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/transaction.json",
+      "scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+      "scripts/extend-backend-computation-lab-003.py",
+      "scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+      "scripts/finalize-computation-lab-003-qa.py",
+      "scripts/merge-computation-lab-003.py",
+      "scripts/package-release-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+      "scripts/publish-zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+      "scripts/qa-computation-lab-003.py",
+      "scripts/validate-backend-append-only-computation-lab-003.py",
+      "scripts/verify-github-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+      "source/id-ID/labs/computation-lab-003-cellular-boundaries-degree.md",
+      "source/id-ID/labs/expected-output-lab03.txt",
+      "source/id-ID/labs/o012_d60_lab03_cellular_degree.py",
+      "source/id-ID/labs/test_o012_d60_lab03_cellular_degree.py"
+    ]
+  },
+  "verifier_provenance": {
+    "published_content_commit_copy": {
+      "path": "scripts/verify-github-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+      "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+      "bytes": 43892,
+      "sha256": "3c4ba098a51be3e86c776d37c6225fbe22452be154be0869eb961015739b4f46",
+      "anonymous_commit_pinned_raw_exact": true
+    },
+    "runtime_hardened_copy": {
+      "path": "scripts/verify-github-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03.py",
+      "bytes": 49318,
+      "sha256": "17d51e9ba58be5b947023ab48e9886a36acdbcd6feb7bddf3d10a19b14869ca9",
+      "unchanged_during_transaction": true,
+      "relationship": "Post-content-commit transport hardening; the published content-commit copy is verified separately above."
+    }
+  },
+  "local_content_commit_witness": {
+    "status": "PASS_EXACT_EXPLICIT_SET",
+    "content_commit": "2196b7cb998b66c50a182a1312dcca7ddba29ccf",
+    "content_tree": "27a6ef284579d2dcd1817077b5c4351acff0a38f",
+    "files": 70,
+    "source": "local Git object database, one exact git show per explicit changed path",
+    "mutable_worktree_used_for_changed_file_identity": false,
+    "temporary_shadows_removed_after_transaction": true
+  },
+  "predecessor_retention": {
+    "status": "PASS",
+    "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/index.html",
+    "bytes": 15615104,
+    "sha256": "d0c6afddfa92759d475258bf08f20ea4019eccf72b7554128b2b938bd247b375",
+    "content_commit": "8989fbd602f89d0a8d6c30bc7bac1980a74b2c99",
+    "pages_and_commit_pinned_raw_byte_identical": true
+  }
+}

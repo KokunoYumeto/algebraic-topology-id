@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "status": "PASS",
+  "review_kind": "independent_source_language",
+  "review_id": "O012-D60-LAB04-INDEPENDENT-SOURCE-LANGUAGE",
+  "laboratory_id": "D60-LAB04",
+  "edition_unit_id": "O012-ORIG-LAB04",
+  "course_route_unit_ids": [
+    "D60-R04",
+    "D60-R05",
+    "D60-R12",
+    "D60-R13",
+    "D60-R14"
+  ],
+  "independent_from_production": true,
+  "reviewer_mode": "separate agent that did not author the final learner artifacts; bounded read-only re-review of the corrected reader, terminology controls, executable contract, links, route scope, rights, provenance, source demarcation, and non-endorsement",
+  "reader_sha256": "5e4d7bd4402d7ad0bd4be031c239ef2f7c223942431d800fee823b64fde327f4",
+  "terminology_sha256": "31a8e706fbdc971d76b2813e8a01c557c2b321fe40e01261dd7d80a3654306fc",
+  "bound_artifacts": [
+    {
+      "path": "source/id-ID/labs/computation-lab-004-cross-invariant-comparison.md",
+      "bytes": 15716,
+      "lf_lines": 388,
+      "sha256": "5e4d7bd4402d7ad0bd4be031c239ef2f7c223942431d800fee823b64fde327f4"
+    },
+    {
+      "path": "source/id-ID/labs/o012_d60_lab04_cross_invariants.py",
+      "bytes": 13392,
+      "lf_lines": 353,
+      "sha256": "63a874df2dff8ee2a6c4a7528e5195916744e0efb93f15972208d0e82609230b"
+    },
+    {
+      "path": "source/id-ID/labs/test_o012_d60_lab04_cross_invariants.py",
+      "bytes": 7204,
+      "lf_lines": 164,
+      "sha256": "5be88132683cc23980e129d3b8ee4e4930e84d1c0e65afc91ca301377a997031"
+    },
+    {
+      "path": "source/id-ID/labs/expected-output-lab04.txt",
+      "bytes": 609,
+      "lf_lines": 12,
+      "sha256": "d92d0988c3aea1b79faba84a1302d6acf4854dadfa22d6ea616248ede362bf17"
+    },
+    {
+      "path": "00_control/TERMINOLOGY.csv",
+      "bytes": 70559,
+      "lf_lines": 527,
+      "sha256": "31a8e706fbdc971d76b2813e8a01c557c2b321fe40e01261dd7d80a3654306fc"
+    }
+  ],
+  "checks": {
+    "natural_id_ID_reader_prose": "PASS",
+    "mathematical_terminology_unambiguous": "PASS",
+    "reader_program_test_output_agreement": "PASS",
+    "route_scope_D60_R04_R05_R12_R13_R14": "PASS",
+    "stable_id_inventory_25_unique": "PASS",
+    "heading_inventory_18_unique": "PASS",
+    "exercise_inventory_6_unique": "PASS",
+    "shared_hint_and_complete_solution_for_all_6_tasks": "PASS",
+    "prerequisite_anchors_6_resolve_exactly_once": "PASS",
+    "relative_executable_file_links_3_resolve": "PASS",
+    "include_markers_3_exactly_once": "PASS",
+    "terminology_controls_O012_TERM_0515_through_0526": "PASS",
+    "tests_6_of_6": "PASS",
+    "program_stdout_matches_609_byte_expected_output": "PASS",
+    "program_stderr_empty": "PASS",
+    "source_anchor_and_original_material_demarcation": "PASS",
+    "rights_origin_model_provenance_and_non_endorsement": "PASS",
+    "excluded_fomberg_problem_bank_expression_absent": "PASS",
+    "private_path_and_credential_markers_absent": "PASS"
+  },
+  "evidence": {
+    "structure": {
+      "stable_ids": 25,
+      "headings": 18,
+      "tasks": 6,
+      "shared_hints": 1,
+      "solution_subsections": 5,
+      "include_markers": 3
+    },
+    "links": {
+      "prerequisite_anchors_checked": 6,
+      "prerequisite_anchors_resolving_exactly_once": 6,
+      "relative_executable_files_checked": 3
+    },
+    "terminology": {
+      "first_id": "O012-TERM-0515",
+      "last_id": "O012-TERM-0526",
+      "rows_checked": 12,
+      "unique_ids": 12,
+      "admitted_rows": 12
+    },
+    "execution": {
+      "test_exit_code": 0,
+      "tests_run": 6,
+      "test_stdout_bytes": 0,
+      "test_report_ends_OK": true,
+      "program_exit_code": 0,
+      "program_stderr_bytes": 0,
+      "program_stdout_bytes": 609,
+      "program_stdout_byte_exact_expected_output": true
+    },
+    "disclosures": {
+      "original_edition_material": true,
+      "license": "CC BY-SA 4.0",
+      "source_relationships_distinguished": true,
+      "excluded_problem_bank_disclaimed": true,
+      "model_provenance_present": true,
+      "non_endorsement_present": true
+    }
+  },
+  "resolved_before_final_freeze": [
+    "Restored the missing TeX command escape in the constant attaching-map label.",
+    "Rephrased the wedge cup-product sentence so it states that products of positive-degree classes are zero.",
+    "Made the complex-projective-space CW reference explicit in Indonesian.",
+    "Replaced an ambiguous contraction word with the admitted retraction term.",
+    "Harmonized the sparse cup-product table wording with O012-TERM-0521."
+  ],
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "human_review_claimed": false,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+}

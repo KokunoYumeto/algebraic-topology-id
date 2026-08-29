@@ -19,6 +19,8 @@ import io
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 import tempfile
 import urllib.parse
@@ -68,6 +70,11 @@ ZENODO_RELEASE_DIR = f"release/zenodo-{SLUG}"
 ZENODO_RECEIPT_PATH = f"{ZENODO_RELEASE_DIR}/publication-receipt.json"
 OUTPUT = ROOT / f"00_control/GITHUB_PUBLICATION_RECEIPT_{TOKEN}.json"
 PAGES_URL = f"https://kokunoyumeto.github.io/algebraic-topology-id/{SLUG}/"
+VERIFIER_PATH = f"scripts/verify-github-{SLUG}.py"
+PUBLISHED_VERIFIER_IDENTITY = (
+    43_892,
+    "3c4ba098a51be3e86c776d37c6225fbe22452be154be0869eb961015739b4f46",
+)
 
 DELTA_BASE_COMMIT = "b6a175771209e3a31b047cb84af142980ca81f46"
 PREDECESSOR_CONTENT_COMMIT = "8989fbd602f89d0a8d6c30bc7bac1980a74b2c99"
@@ -301,6 +308,17 @@ def require_row(
         raise RuntimeError(f"{label} identity mismatch: {actual}, expected {expected}")
 
 
+def github_json_resilient(endpoint: str) -> Any:
+    """Read public GitHub metadata with the shared retrying HTTP transport."""
+
+    url = endpoint if endpoint.startswith("https://") else f"https://api.github.com/{endpoint}"
+    payload = module.fetch(url, accept="application/vnd.github+json", attempts=8)
+    try:
+        return json.loads(payload.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"GitHub metadata was not valid JSON: {endpoint}") from exc
+
+
 def configure_transport(args: argparse.Namespace) -> None:
     module.GIT_DELTA_BASE_COMMIT = DELTA_BASE_COMMIT
     module.PREDECESSOR_CONTENT_COMMIT = PREDECESSOR_CONTENT_COMMIT
@@ -328,6 +346,7 @@ def configure_transport(args: argparse.Namespace) -> None:
     module.REQUIRED_DYNAMIC_CHANGED = set(EXPECTED_CHANGED_PATHS)
     module.ALLOWED_CHANGED_PREFIXES = ()
     module.ALLOWED_CHANGED_FILES = set(EXPECTED_CHANGED_PATHS)
+    module.gh_json = github_json_resilient
 
 
 def verify_backend_receipt() -> dict[str, Any]:
@@ -829,7 +848,14 @@ def verify_public_zenodo_files(record_id: int) -> dict[str, Any]:
         parsed = urllib.parse.urlparse(content_url)
         if parsed.scheme != "https" or parsed.netloc != "zenodo.org" or parsed.path != expected_suffix:
             raise RuntimeError(f"unexpected public Zenodo content URL for {name}")
-        payload = module.fetch_exact(content_url, size, digest)
+        # Zenodo's file-content endpoint currently returns HTTP 406 for an
+        # explicit ``Accept: application/octet-stream`` header even though the
+        # successful response itself is application/octet-stream.  The shared
+        # GitHub verifier needs that header for raw GitHub endpoints, so keep
+        # its transport unchanged and use Zenodo's supported wildcard here.
+        payload = module.fetch(content_url, accept="*/*")
+        if (len(payload), module.sha256(payload)) != (size, digest):
+            raise RuntimeError(f"fresh public Zenodo byte identity mismatch: {name}")
         verified.append(
             {
                 "filename": name,
@@ -904,6 +930,43 @@ def main() -> int:
 
     scratch_parent = ROOT / "tmp"
     scratch_parent.mkdir(parents=True, exist_ok=True)
+    runtime_verifier_path = Path(__file__).resolve()
+    runtime_verifier_start = runtime_verifier_path.read_bytes()
+    commit_shadow_root = Path(
+        tempfile.mkdtemp(prefix="github-lab03-content-commit-", dir=scratch_parent)
+    )
+    if not commit_shadow_root.resolve().is_relative_to(scratch_parent.resolve()):
+        raise RuntimeError("content-commit shadow escaped the bounded scratch directory")
+    commit_shadow_cache: dict[str, Path] = {}
+    inherited_normalized_local_path = module.normalized_local_path
+
+    def normalized_local_path_at_content_commit(relative: str) -> Path:
+        if relative in EXPECTED_CHANGED_PATHS:
+            if relative not in commit_shadow_cache:
+                relative_path = Path(relative)
+                if relative_path.is_absolute() or ".." in relative_path.parts:
+                    raise RuntimeError(f"unsafe explicit content-commit path: {relative}")
+                process = subprocess.run(
+                    ["git", "show", "--no-ext-diff", f"{args.content_commit}:{relative}"],
+                    cwd=ROOT,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.PIPE,
+                    timeout=180,
+                    check=False,
+                )
+                if process.returncode != 0:
+                    raise RuntimeError(
+                        f"cannot read explicit content-commit blob {relative}: "
+                        f"{process.stderr.decode('utf-8', errors='replace').strip()}"
+                    )
+                shadow = commit_shadow_root / relative_path
+                shadow.parent.mkdir(parents=True, exist_ok=True)
+                shadow.write_bytes(process.stdout)
+                commit_shadow_cache[relative] = shadow
+            return commit_shadow_cache[relative]
+        return inherited_normalized_local_path(relative)
+
+    module.normalized_local_path = normalized_local_path_at_content_commit
     descriptor, scratch_name = tempfile.mkstemp(
         prefix="github-lab03-verifier-",
         suffix=".json",
@@ -978,6 +1041,46 @@ def main() -> int:
             "files": len(EXPECTED_CHANGED_PATHS),
             "paths": sorted(EXPECTED_CHANGED_PATHS),
         }
+        if set(commit_shadow_cache) != EXPECTED_CHANGED_PATHS:
+            raise RuntimeError(
+                "content-commit local blob witness did not cover the exact changed-path set"
+            )
+        published_verifier = commit_shadow_cache[VERIFIER_PATH].read_bytes()
+        if (len(published_verifier), module.sha256(published_verifier)) != (
+            PUBLISHED_VERIFIER_IDENTITY
+        ):
+            raise RuntimeError("published content-commit verifier identity drift")
+        runtime_verifier_end = runtime_verifier_path.read_bytes()
+        if runtime_verifier_end != runtime_verifier_start:
+            raise RuntimeError("runtime verifier changed during the publication audit")
+        receipt["verifier_provenance"] = {
+            "published_content_commit_copy": {
+                "path": VERIFIER_PATH,
+                "content_commit": args.content_commit,
+                "bytes": len(published_verifier),
+                "sha256": module.sha256(published_verifier),
+                "anonymous_commit_pinned_raw_exact": True,
+            },
+            "runtime_hardened_copy": {
+                "path": VERIFIER_PATH,
+                "bytes": len(runtime_verifier_start),
+                "sha256": module.sha256(runtime_verifier_start),
+                "unchanged_during_transaction": True,
+                "relationship": (
+                    "Post-content-commit transport hardening; the published "
+                    "content-commit copy is verified separately above."
+                ),
+            },
+        }
+        receipt["local_content_commit_witness"] = {
+            "status": "PASS_EXACT_EXPLICIT_SET",
+            "content_commit": args.content_commit,
+            "content_tree": args.content_tree,
+            "files": len(commit_shadow_cache),
+            "source": "local Git object database, one exact git show per explicit changed path",
+            "mutable_worktree_used_for_changed_file_identity": False,
+            "temporary_shadows_removed_after_transaction": True,
+        }
         receipt["predecessor_retention"] = {
             "status": "PASS",
             "path": PREDECESSOR_PATH,
@@ -1005,8 +1108,11 @@ def main() -> int:
         )
         return result
     finally:
+        module.normalized_local_path = inherited_normalized_local_path
         if scratch.exists():
             scratch.unlink()
+        if commit_shadow_root.exists():
+            shutil.rmtree(commit_shadow_root)
 
 
 if __name__ == "__main__":

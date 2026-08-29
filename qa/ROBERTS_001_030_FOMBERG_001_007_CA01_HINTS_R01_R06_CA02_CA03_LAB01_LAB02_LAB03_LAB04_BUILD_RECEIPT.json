@@ -1,0 +1,239 @@
+{
+  "qa_id": "O012-RBT-001-030-FOM-001-007-CA01-HINTS-R01-R06-CA02-CA03-LAB01-LAB02-LAB03-LAB04-COMPOSITE-BUILD",
+  "status": "PASS",
+  "scope": "Roberts 30/30; Fomberg Sections 1.1-1.13; D60-CA01/02/03; ordinary mastery 84/84; solution-bearing mastery 108/108; computation Labs 1-4 complete; proof-metadata closure and capstone pending",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "deterministic_build_draft": {
+    "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_BUILD_DRAFT.json",
+    "bytes": 45182,
+    "sha256": "a37f8c341841d032f5401f7ceb61dc40dcd2b939e0bac1871702c9abf6382f7d"
+  },
+  "runtime_boundary_bindings": {
+    "lab_qa": {
+      "path": "qa/COMPUTATION_LAB_004_QA.json",
+      "bytes": 4668,
+      "lf_lines": 169,
+      "sha256": "c021dc617a9d015c1f6b6a5e4a4695822e9b5ce89e44c1b60808d0e6ac300712"
+    },
+    "backend_receipt": {
+      "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_004_CUMULATIVE_RECEIPT.json",
+      "bytes": 12455,
+      "lf_lines": 336,
+      "sha256": "2364c6e3e518605f41f3b2083adacc4016e5c5f7accdc606430a08aa0f8564a1"
+    },
+    "backend_cumulative": {
+      "records": 7847,
+      "bytes": 9443250,
+      "bundle_sha256": "2633732fd2fd2b5fb8afb5888b1864b6bcda9dca52eb85a6636c777ac1018c1f"
+    }
+  },
+  "sources": [
+    {
+      "path": "source/id-ID/labs/computation-lab-004-cross-invariant-comparison.md",
+      "bytes": 15716,
+      "sha256": "5e4d7bd4402d7ad0bd4be031c239ef2f7c223942431d800fee823b64fde327f4"
+    },
+    {
+      "path": "source/id-ID/labs/o012_d60_lab04_cross_invariants.py",
+      "bytes": 13392,
+      "sha256": "63a874df2dff8ee2a6c4a7528e5195916744e0efb93f15972208d0e82609230b"
+    },
+    {
+      "path": "source/id-ID/labs/test_o012_d60_lab04_cross_invariants.py",
+      "bytes": 7204,
+      "sha256": "5be88132683cc23980e129d3b8ee4e4930e84d1c0e65afc91ca301377a997031"
+    },
+    {
+      "path": "source/id-ID/labs/expected-output-lab04.txt",
+      "bytes": 609,
+      "sha256": "d92d0988c3aea1b79faba84a1302d6acf4854dadfa22d6ea616248ede362bf17"
+    }
+  ],
+  "source_execution_review": {
+    "status": "PASS",
+    "receipt": {
+      "path": "qa/COMPUTATION_LAB_004_QA.json",
+      "bytes": 4668,
+      "sha256": "c021dc617a9d015c1f6b6a5e4a4695822e9b5ce89e44c1b60808d0e6ac300712"
+    },
+    "routes": [
+      "D60-R04",
+      "D60-R05",
+      "D60-R12",
+      "D60-R13",
+      "D60-R14"
+    ],
+    "tasks": 6,
+    "tests": 6,
+    "stable_ids": 25,
+    "headings": 18,
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    }
+  },
+  "html": {
+    "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04/index.html",
+    "bytes": 15974648,
+    "sha256": "a76e31fc92e1554a6b14ffaccc1ad1001ee5c2838a3e36d1441b98519b39d4f8",
+    "title": "Topologi Aljabar — Roberts 30/30, Fomberg 1.1–1.13, Asesmen Kumulatif 1–3, dan Laboratorium Komputasi 1–4",
+    "lang": "id-ID",
+    "self_contained": true
+  },
+  "pdf": {
+    "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-id.pdf",
+    "bytes": 10131344,
+    "sha256": "337dcb8bf7ee3d5b5b58c0efc621e661db2542b49f52f1b12b786b55db4fa2fc",
+    "pages": 558,
+    "page_size": "A4",
+    "tagged": false
+  },
+  "manifest": {
+    "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04.csv",
+    "bytes": 394,
+    "sha256": "2ae57ef9dfba517586cb983ed3fb94942e0e418ae36680f147d427acb3101c81",
+    "entries": 2
+  },
+  "backend_boundary": {
+    "status": "PASS_APPEND_ONLY_REPLAYABLE",
+    "receipt": {
+      "path": "qa/BACKEND_APPEND_ONLY_COMPUTATION_LAB_004_CUMULATIVE_RECEIPT.json",
+      "bytes": 12455,
+      "sha256": "2364c6e3e518605f41f3b2083adacc4016e5c5f7accdc606430a08aa0f8564a1"
+    },
+    "immutable_prefix_records": 7694,
+    "records_added": 153,
+    "cumulative_records": 7847,
+    "cumulative_bytes": 9443250,
+    "cumulative_bundle_sha256": "2633732fd2fd2b5fb8afb5888b1864b6bcda9dca52eb85a6636c777ac1018c1f",
+    "laboratories_complete": 4,
+    "laboratories_required": 4
+  },
+  "html_checks": {
+    "status": "PASS",
+    "serialized_dom_ids": 4804,
+    "live_browser_dom_ids": 4805,
+    "fragment_links": 2766,
+    "unresolved_fragment_links": 0,
+    "mathml_nodes": 17487,
+    "stable_ids_added": 25,
+    "headings_added": 18,
+    "tasks_added": 6,
+    "self_contained": true,
+    "centered_reflow": true
+  },
+  "pdf_checks": {
+    "status": "PASS",
+    "pages": 558,
+    "appended_lab_pages": 13,
+    "bounded_pages_checked": 14,
+    "all_bounded_pages_a4_nonempty": true,
+    "fonts": 144,
+    "all_fonts_embedded_subset_tounicode": true,
+    "stable_id_destinations_added": 25,
+    "outline_entries_added": 18
+  },
+  "reproducibility": {
+    "frozen_inputs_fail_closed": true,
+    "html_clean_writes": 2,
+    "pdf_appendix_clean_builds": 2,
+    "merged_pdf_clean_builds": 2,
+    "merged_pdf_builds_byte_identical": true,
+    "predecessor_html_exact_reconstruction": true,
+    "predecessor_pdf_extracted_text_prefix_identical": true,
+    "predecessor_pdf_pages_structurally_preserved": 545,
+    "predecessor_pdf_page_structure_aggregate_sha256": "55adb10575556626e64a213e4c3a14514c1f8da9b4c9125f9d7b8454a0475e45",
+    "source_date_epoch": 1787961600
+  },
+  "toolchain": {
+    "builder": {
+      "path": "scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04.py",
+      "bytes": 33851,
+      "sha256": "03f505f7710f3168c41ff84445f91ba807a879efa54f6d186c787d566019b6ec"
+    },
+    "merger": {
+      "path": "scripts/merge-computation-lab-004.py",
+      "bytes": 10657,
+      "sha256": "b0a48ed9af51045a42e3eedf52d3aa228fe6e35c1741511f65128da817bb9c22"
+    },
+    "finalizer": {
+      "path": "scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04.py",
+      "bytes": 24692,
+      "sha256": "eb74a2ca4bec9ad976a67d518668b08a037f1c0f19c291a5ec876e7d2be43473"
+    },
+    "pandoc": "pandoc 3.9.0.2",
+    "pypdf": "6.12.2",
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "visual_checks": {
+    "status": "PASS",
+    "visual_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_VISUAL_QA.md",
+      "bytes": 3622,
+      "sha256": "c3ad953547446ee23574a0b0f90dfd6958384d5caea9087ec83f3adf6bbea1ea"
+    },
+    "render_inventory": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_RENDER_INVENTORY.csv",
+      "bytes": 1469,
+      "sha256": "04fcdaa0cadf53189f6013de26b8056406d270bcbff388dcd40ce23ecbc34e21"
+    },
+    "pages_inspected": [
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      555,
+      556,
+      557,
+      558
+    ],
+    "render_count": 14,
+    "render_bytes": 3865830,
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    }
+  },
+  "browser_checks": {
+    "status": "PASS",
+    "browser_receipt": {
+      "path": "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_BROWSER_QA.json",
+      "bytes": 3722,
+      "sha256": "0f24144742334477e8f2662d7a79fab7a19e4542bf6d26884f282d3b97a40209"
+    },
+    "desktop": "PASS",
+    "mobile": "PASS",
+    "offline": "PASS",
+    "code_local_scrollers": 4,
+    "math_local_scrollers": 3,
+    "predecessor_table_local_scrollers": 1,
+    "unexpected_local_overflow_nodes": 0,
+    "unresolved_fragment_links": 0,
+    "runtime_external_asset_references": 0,
+    "console_errors": 0,
+    "console_warnings": 0,
+    "severity_census": {
+      "P1": 0,
+      "P2": 0,
+      "P3": 0
+    }
+  },
+  "remaining": {
+    "computation_labs": [],
+    "proof_metadata_status": "FAIL_CLOSED",
+    "capstone": "pending"
+  },
+  "limitations": [
+    "The composite course remains partial: the cross-invariant capstone and the recorded proof-metadata closure remain.",
+    "The PDF remains untagged; the self-contained native-MathML HTML is the primary reflowable surface.",
+    "Public-byte readback is a post-publication transaction and is not claimed by this local build receipt."
+  ]
+}

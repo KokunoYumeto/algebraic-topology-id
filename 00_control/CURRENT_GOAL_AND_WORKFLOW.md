@@ -114,14 +114,54 @@ Zenodo version `0.31.5`, record `22151513`, DOI
 `10.5281/zenodo.22061489`. Its exact reader-first nine-file package passed two
 anonymous byte/SHA-256 readback passes; sanitized receipt SHA-256 is
 `7fbf0e059ce9fdba120fc953a27ea2fcba4419420a94ea9e754ffe4b8741ed46`.
-The exact next action is the narrow 70-path GitHub/Pages integration and public
-byte verification, followed immediately by Laboratory 4. Do not rebuild Labs
-1–3 absent a newly demonstrated defect.
+The same Lab 3 boundary is now public on GitHub at content commit
+`2196b7cb998b66c50a182a1312dcca7ddba29ccf`, tree
+`27a6ef284579d2dcd1817077b5c4351acff0a38f`, and Pages run `33223430957`.
+All 70 explicit changed paths, the current reader, the preserved Lab 2 reader,
+all eleven backend files, and the nine public Zenodo files passed anonymous
+byte/SHA-256 readback. The sanitized GitHub receipt is 56,936 bytes/SHA-256
+`145f085aa531d198deff47b50f3a35f809fada62051fe26e7ee4c8dfc6558dcd`.
+Do not rebuild or republish Labs 1–3 absent a newly demonstrated defect.
 
-1. Preserve completed Laboratories 1–3 and add the remaining offline
-   reproducible Laboratory 4, with source, tests, expected output,
-   interpretation, and a full check comparing fundamental-group, homology, and
-   cohomology invariants.
+Laboratory 4 is in active production. Its first coherent reader/program boundary
+exists with 25 stable IDs, six tasks, one hint, complete solutions, twelve new
+controlled terms, a standard-library-only verifier, six deterministic tests,
+and frozen output. The reader/program/tests/output SHA-256 values are
+`5e4d7bd4402d7ad0bd4be031c239ef2f7c223942431d800fee823b64fde327f4`,
+`63a874df2dff8ee2a6c4a7528e5195916744e0efb93f15972208d0e82609230b`,
+`5be88132683cc23980e129d3b8ee4e4930e84d1c0e65afc91ca301377a997031`,
+and `d92d0988c3aea1b79faba84a1302d6acf4854dadfa22d6ea616248ede362bf17`.
+Static QA is PASS after evidenced language and fail-closed corrections. All
+three clean independent reviews pass with P1/P2/P3 zero, and the combined
+source/execution QA receipt is closed. Append-only backend admission preserved
+the immutable 7,694-record Lab 3 prefix byte-for-byte, added 153 records, and
+closed all four required laboratories at 7,847 records/9,443,250 bytes with
+bundle SHA-256 `2633732fd2fd2b5fb8afb5888b1864b6bcda9dca52eb85a6636c777ac1018c1f`.
+The cumulative four-lab reader is now locally closed. Two clean builds are
+byte-identical. The centered/reflowing HTML is 15,974,648 bytes/SHA-256
+`a76e31fc92e1554a6b14ffaccc1ad1001ee5c2838a3e36d1441b98519b39d4f8`;
+the deterministic PDF is 10,131,344 bytes/558 A4 pages/SHA-256
+`337dcb8bf7ee3d5b5b58c0efc621e661db2542b49f52f1b12b786b55db4fa2fc`.
+The exact 545-page Lab 3 predecessor is preserved, 13 Lab 4 pages are added,
+and all bounded visual, desktop/mobile browser, fragment, MathML, font,
+destination, rights, privacy, and hash gates pass with P1/P2/P3 zero. Final
+build receipt SHA-256 is
+`21e62297589346d3fbf5cf4a91f0a322d46e059c4a86f585556a942053190fa9`.
+Package and publish this exact boundary as version `0.31.6` in the existing
+GitHub/Pages and Zenodo concept lineages, anonymously read back every public
+file, then continue the proof-link repairs and capstone.
+
+Zenodo version `0.31.6`, record `22161294`, DOI
+`10.5281/zenodo.22161294`, is now public in the unchanged concept DOI
+`10.5281/zenodo.22061489`; all nine files passed two complete anonymous
+byte/SHA-256 readbacks. The sanitized publication receipt is 11,815 bytes with
+SHA-256 `47b39fe5c9ba36eca57e48b311525f646ee0df32c3a943d51c37be701a34cb39`.
+Finish the same boundary on GitHub/Pages next; do not create another Zenodo
+record or re-upload these bytes.
+
+1. Preserve all four completed offline reproducible laboratories and the exact
+   7,847-record append-only backend while closing their `0.31.6` public
+   GitHub/Pages and Zenodo boundary with anonymous byte/hash readback.
 2. Repair the remaining backend proof-link metadata for `FOM-PR-13`-`15` and
    `FOM-U003-QUOTIENT-LES` without rewriting their already checked mathematics;
    then add the final proof-reconstruction/cross-invariant capstone and explicit

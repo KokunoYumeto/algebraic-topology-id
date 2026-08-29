@@ -1,0 +1,161 @@
+{
+  "candidate": {
+    "bundle_sha256": "256a8333f7d1ba49086166560ed1200b4834a8914631d1cb8a094f30891dd48e",
+    "bytes": 162865,
+    "bytes_by_file": {
+      "artifacts.jsonl": 8608,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 3995,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 4268,
+      "relations.jsonl": 31427,
+      "rights.jsonl": 1650,
+      "segments.jsonl": 49515,
+      "terms.jsonl": 9657,
+      "units.jsonl": 53745
+    },
+    "records": 153,
+    "records_by_file": {
+      "artifacts.jsonl": 10,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 12,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 7,
+      "relations.jsonl": 61,
+      "rights.jsonl": 1,
+      "segments.jsonl": 25,
+      "terms.jsonl": 12,
+      "units.jsonl": 25
+    },
+    "sha256_by_file": {
+      "artifacts.jsonl": "b3b8ff5eb4f97493f1ad9e09bcbe27b151e33902654592696a073fd375103bf2",
+      "assets.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "authority.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "concepts.jsonl": "00b00928298ce79e23077806e664064a77a560b88b726e637a8e33dbc8c7fcf0",
+      "corrections.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qa.jsonl": "f67d0f1f45b2fb2095ae28c42890ab85d97e519ab5b170432f55f29484479b97",
+      "relations.jsonl": "8d4089498d94bdb7dbfa05c587634b403ed20e9f9927be17e49e703b831e557d",
+      "rights.jsonl": "70e3c8a1844800f7802d2a2a654abde31f95fd503de05f71c5c3bd53a42f1c42",
+      "segments.jsonl": "052ae8d2c10e9a4e4bdb1b11c477893ddf023c76d720488dc3ad00d51a102677",
+      "terms.jsonl": "74e41fd0a960a9eb48a020dbba076a1fbff3168aa98ad7e812518c66140f9be3",
+      "units.jsonl": "7d2cc03cf21ab9e9b3824d5cb574c5536d32c83d8bdeaf6aed97a3de82fc3972"
+    }
+  },
+  "cumulative": {
+    "bundle_sha256": "2633732fd2fd2b5fb8afb5888b1864b6bcda9dca52eb85a6636c777ac1018c1f",
+    "bytes": 9443250,
+    "records": 7847
+  },
+  "edition_unit_id": "O012-ORIG-LAB04",
+  "immutable_prefix": {
+    "bundle_sha256": "cddd65499da547e0c4f01b8a880f68d1c3d314c078a9179528e4a28b2c5f65a2",
+    "bytes": 9280385,
+    "records": 7694
+  },
+  "independent_semantic_checks": {
+    "append_only_ordering": "PASS",
+    "artifact_records": 10,
+    "artifact_review_binding": "PASS",
+    "code_review_edition_binding": "FROZEN_SCHEMA_OMISSION_EXPLICITLY_CLOSED_BY_LAB_ID_ROUTES_READER_HASH_BOUND_ARTIFACTS_AND_COMBINED_QA",
+    "complete_solutions": 1,
+    "course_route_unit_ids": [
+      "D60-R04",
+      "D60-R05",
+      "D60-R12",
+      "D60-R13",
+      "D60-R14"
+    ],
+    "dependency_edges": 17,
+    "dependency_scope": "five_assigned_routes_plus_explicit_R08_prerequisite",
+    "dependency_tasks": 6,
+    "independent_semantics": "PASS",
+    "new_concepts": 12,
+    "new_terms": 12,
+    "qa_events": 7,
+    "records_added": 153,
+    "records_by_file": {
+      "artifacts.jsonl": 10,
+      "assets.jsonl": 0,
+      "authority.jsonl": 0,
+      "concepts.jsonl": 12,
+      "corrections.jsonl": 0,
+      "qa.jsonl": 7,
+      "relations.jsonl": 61,
+      "rights.jsonl": 1,
+      "segments.jsonl": 25,
+      "terms.jsonl": 12,
+      "units.jsonl": 25
+    },
+    "relation_reference_integrity": "PASS",
+    "rights_and_provenance": "PASS",
+    "rights_records": 1,
+    "route_edges": 5,
+    "shared_hints": 1,
+    "stable_ids": 25,
+    "tasks": 6
+  },
+  "laboratory_id": "D60-LAB04",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "independent_append_only_backend_semantic_validation",
+  "schema_version": "1.0",
+  "sealed_inputs": {
+    "00_control/TERMINOLOGY.csv": {
+      "bytes": 70559,
+      "lf_lines": 527,
+      "sha256": "31a8e706fbdc971d76b2813e8a01c557c2b321fe40e01261dd7d80a3654306fc"
+    },
+    "qa/COMPUTATION_LAB_004_QA.json": {
+      "bytes": 4668,
+      "lf_lines": 169,
+      "sha256": "c021dc617a9d015c1f6b6a5e4a4695822e9b5ce89e44c1b60808d0e6ac300712"
+    },
+    "qa/computation-lab-004/EXECUTION_RECEIPT.json": {
+      "bytes": 1999,
+      "lf_lines": 68,
+      "sha256": "cbe2d26e63b580b0ec390ea66dcbfb48fdc932df3deec78d4c92051746955b88"
+    },
+    "qa/computation-lab-004/INDEPENDENT_CODE_REVIEW.json": {
+      "bytes": 4839,
+      "lf_lines": 153,
+      "sha256": "a841e03d2cb71dbeba55b684d2463d91407275ba8549adc97501a193d0862baa"
+    },
+    "qa/computation-lab-004/INDEPENDENT_MATH_REVIEW.json": {
+      "bytes": 6972,
+      "lf_lines": 179,
+      "sha256": "8aae9b1da8dc639e60a80393025fcb713a7892c6618c7b0706a8e5b70758e89b"
+    },
+    "qa/computation-lab-004/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json": {
+      "bytes": 4628,
+      "lf_lines": 126,
+      "sha256": "7affc837eee816c677f3fc93682b82afb151acaef217a0a2ddfece8166c8eaf1"
+    },
+    "qa/computation-lab-004/STATIC_QA.json": {
+      "bytes": 3580,
+      "lf_lines": 143,
+      "sha256": "68aa02e2830539c21167c106752747d7d85964a8ee82e4d56689c167c2385786"
+    },
+    "source/id-ID/labs/computation-lab-004-cross-invariant-comparison.md": {
+      "bytes": 15716,
+      "lf_lines": 388,
+      "sha256": "5e4d7bd4402d7ad0bd4be031c239ef2f7c223942431d800fee823b64fde327f4"
+    },
+    "source/id-ID/labs/expected-output-lab04.txt": {
+      "bytes": 609,
+      "lf_lines": 12,
+      "sha256": "d92d0988c3aea1b79faba84a1302d6acf4854dadfa22d6ea616248ede362bf17"
+    },
+    "source/id-ID/labs/o012_d60_lab04_cross_invariants.py": {
+      "bytes": 13392,
+      "lf_lines": 353,
+      "sha256": "63a874df2dff8ee2a6c4a7528e5195916744e0efb93f15972208d0e82609230b"
+    },
+    "source/id-ID/labs/test_o012_d60_lab04_cross_invariants.py": {
+      "bytes": 7204,
+      "lf_lines": 164,
+      "sha256": "5be88132683cc23980e129d3b8ee4e4930e84d1c0e65afc91ca301377a997031"
+    }
+  },
+  "status": "PASS"
+}

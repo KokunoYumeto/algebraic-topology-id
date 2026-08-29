@@ -1,0 +1,12 @@
+D60-LAB04 | sintesis lintas-invarian
+Pasangan A: T^2 vs S^1 v S^1 v S^2
+  pi1: Z^2 vs F_2; komutator bebas=(1, 2, -1, -2); jumlah eksponen=(0, 0)
+  homologi: sama (H0=Z, H1=Z^2, H2=Z); chi=0
+  cup: torus alpha cup beta=omega, beta cup alpha=-omega; baji=0
+  pemisah pertama: pi1
+Pasangan B: CP^2 vs S^2 v S^4
+  pi1: 1 vs 1; homologi sama (H0=Z, H2=Z, H4=Z)
+  pelekatan sel-4: Hopf eta vs konstan; x cup x: u vs 0
+  pemisah pertama: produk cup
+Audit: H1 adalah abelianisasi pi1; diferensial seluler tidak menyimpan seluruh peta pelekatan.
+Audit: kesamaan daftar invarian bukan bukti ekuivalensi homotopi umum.

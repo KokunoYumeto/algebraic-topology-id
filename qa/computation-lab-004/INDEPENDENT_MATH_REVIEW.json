@@ -1,0 +1,179 @@
+{
+  "bound_artifacts": [
+    {
+      "bytes": 15716,
+      "lf_lines": 388,
+      "path": "source/id-ID/labs/computation-lab-004-cross-invariant-comparison.md",
+      "sha256": "5e4d7bd4402d7ad0bd4be031c239ef2f7c223942431d800fee823b64fde327f4"
+    },
+    {
+      "bytes": 13392,
+      "lf_lines": 353,
+      "path": "source/id-ID/labs/o012_d60_lab04_cross_invariants.py",
+      "sha256": "63a874df2dff8ee2a6c4a7528e5195916744e0efb93f15972208d0e82609230b"
+    },
+    {
+      "bytes": 7204,
+      "lf_lines": 164,
+      "path": "source/id-ID/labs/test_o012_d60_lab04_cross_invariants.py",
+      "sha256": "5be88132683cc23980e129d3b8ee4e4930e84d1c0e65afc91ca301377a997031"
+    },
+    {
+      "bytes": 609,
+      "lf_lines": 12,
+      "path": "source/id-ID/labs/expected-output-lab04.txt",
+      "sha256": "d92d0988c3aea1b79faba84a1302d6acf4854dadfa22d6ea616248ede362bf17"
+    },
+    {
+      "bytes": 3580,
+      "lf_lines": 143,
+      "path": "qa/computation-lab-004/STATIC_QA.json",
+      "sha256": "68aa02e2830539c21167c106752747d7d85964a8ee82e4d56689c167c2385786"
+    }
+  ],
+  "calculations": {
+    "finite_invariant_guardrail": {
+      "agreement_conclusion": "Agreement of the finite recorded list is only failure of that list to separate the spaces; it is not evidence or an algorithm proving homotopy equivalence.",
+      "disagreement_conclusion": "A mismatch of fundamental groups, integral homology, or integral cohomology rings obstructs homotopy equivalence because each is a homotopy invariant.",
+      "status": "PASS"
+    },
+    "pair_a": {
+      "abelianization": {
+        "S1_wedge_S1_wedge_S2": "Z^2",
+        "T2": "Z^2",
+        "reason": "The commutator has exponent-sum vector (0,0), so its image imposes no relation on the free abelianization."
+      },
+      "additive_cohomology": {
+        "0": "Z",
+        "1": "Z^2",
+        "2": "Z"
+      },
+      "attaching_words": {
+        "S1_wedge_S1_wedge_S2": "constant",
+        "T2": [
+          1,
+          2,
+          -1,
+          -2
+        ],
+        "T2_exponent_sums": [
+          0,
+          0
+        ],
+        "T2_freely_reduced_word": [
+          1,
+          2,
+          -1,
+          -2
+        ],
+        "T2_word_nonidentity_in_F2": true
+      },
+      "cellular_chain_complex": "0 -> Z --0--> Z^2 --0--> Z -> 0",
+      "cup_products": {
+        "S1_wedge_S1_wedge_S2": "Every product of two positive-degree classes is zero.",
+        "T2": [
+          "alpha cup beta = omega",
+          "beta cup alpha = -omega",
+          "alpha cup alpha = 0",
+          "beta cup beta = 0"
+        ],
+        "ring_isomorphic": false
+      },
+      "euler_characteristic": 0,
+      "first_separator_in_declared_audit_order": "pi1",
+      "fundamental_groups": {
+        "S1_wedge_S1_wedge_S2": "F_2",
+        "T2": "Z^2",
+        "isomorphic": false,
+        "reason": "Z^2 is abelian, while F_2 on two generators is nonabelian; the freely reduced commutator witnesses noncommutativity."
+      },
+      "homology": {
+        "0": "Z",
+        "1": "Z^2",
+        "2": "Z"
+      },
+      "status": "PASS"
+    },
+    "pair_b": {
+      "additive_cohomology": {
+        "0": "Z",
+        "2": "Z",
+        "4": "Z"
+      },
+      "attaching_maps": {
+        "CP2": "Hopf map eta: S^3 -> S^2",
+        "S2_wedge_S4": "constant map S^3 -> S^2",
+        "homotopic": false
+      },
+      "cellular_chain_complex": "0 -> Z (degree 4) --0--> 0 -> Z (degree 2) --0--> 0 -> Z (degree 0) -> 0",
+      "cup_square": {
+        "CP2": "x cup x = u",
+        "S2_wedge_S4": "x cup x = 0",
+        "coefficient_formula": "x cup x = H(f)u for S^2 union_f e^4",
+        "constant_map_Hopf_invariant": 0,
+        "eta_Hopf_invariant_with_selected_orientation": 1,
+        "ring_isomorphic": false
+      },
+      "euler_characteristic": 3,
+      "first_separator_in_declared_audit_order": "cup product",
+      "fundamental_groups": {
+        "CP2": "trivial",
+        "S2_wedge_S4": "trivial",
+        "reason": "Each connected CW model has no 1-cells, so cellular approximation moves every loop into the one-point 1-skeleton."
+      },
+      "homology": {
+        "0": "Z",
+        "2": "Z",
+        "4": "Z"
+      },
+      "status": "PASS"
+    }
+  },
+  "course_route_unit_ids": [
+    "D60-R04",
+    "D60-R05",
+    "D60-R12",
+    "D60-R13",
+    "D60-R14"
+  ],
+  "edition_unit_id": "O012-ORIG-LAB04",
+  "evidence": {
+    "executable_checks": {
+      "expected_output_byte_equal": true,
+      "expected_output_bytes": 609,
+      "expected_output_sha256": "d92d0988c3aea1b79faba84a1302d6acf4854dadfa22d6ea616248ede362bf17",
+      "program_runs": 2,
+      "program_stderr_bytes_each_run": 0,
+      "test_runs": 2,
+      "tests_passed_each_run": 6
+    },
+    "independent_method": "The mathematical recomputation used the CW structures, group presentations, cellular boundary formula, cohomology rings of a torus and wedges, and the mapping-cone Hopf-invariant formula. Executable output was used only as a consistency check, not as the source of the conclusions.",
+    "program_model_audit": [
+      "The homology method returns cellular chain ranks under its explicit frozen-model assumption that every cellular differential is zero; that assumption is valid for all four fixtures.",
+      "The torus boundary column is independently recovered from the commutator exponent sums (0,0), while the wedge 2-cell is attached constantly.",
+      "The CP2 and S2-wedge-S4 cellular differentials vanish for dimension reasons even though the Hopf and constant attaching maps are not homotopic.",
+      "The sparse cup tables implement the selected orientations and satisfy the unit, associativity, and graded-commutativity laws checked by the program.",
+      "The comparison order is explicitly conventional, so the reported first separators do not claim a total ordering of invariant strength."
+    ],
+    "static_qa_consistency": "The refreshed static QA reference calculation, reader claims, executable fixtures, six tests, and 12-line expected report agree on both pairs and on the finite-invariant guardrail."
+  },
+  "human_review_claimed": false,
+  "independent_from_production": true,
+  "laboratory_id": "D60-LAB04",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "reader_sha256": "5e4d7bd4402d7ad0bd4be031c239ef2f7c223942431d800fee823b64fde327f4",
+  "review_kind": "independent_mathematics",
+  "review_scope": [
+    "Pair A fundamental groups, abelianizations, cellular homology, Euler characteristic, additive cohomology, and cup products",
+    "Pair B simple connectivity, cellular homology, Euler characteristic, additive cohomology, attaching maps, Hopf invariants, and cup-square coefficient",
+    "homotopy-obstruction logic and the limits of any finite recorded invariant list",
+    "mathematical consistency of reader, executable model, tests, expected output, and static QA"
+  ],
+  "schema_version": "1.0",
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "status": "PASS"
+}

@@ -812,4 +812,137 @@ anonymous commit-pinned raw byte/SHA-256 readback; both the deployed current
 reader and frozen Lab 1 predecessor passed exact Pages/raw comparison. Sanitized
 GitHub receipt is 31,229 bytes/SHA-256
 `c6ccde700267a29dfb2246cb4f5a78428547c75709ac60a56c9a222c84865a80`.
-Lab 3 is the next production boundary.
+## Roberts 001-030, Fomberg 001-007, mastery 108/108, and computation Labs 1–3 — public boundary
+
+Laboratory 3 adds the original CC BY-SA 4.0 cellular-boundary/degree reader,
+standard-library program, six deterministic tests, frozen expected output,
+interpretation, hint, and complete solutions. Independent code, mathematics,
+and source-language reviews close at P1=P2=P3=0. Append-only admission
+preserves the exact 7,546-record Lab 2 prefix, adds 148 records/157,630 bytes,
+and ends at 7,694 records/9,280,385 bytes with bundle SHA-256
+`cddd65499da547e0c4f01b8a880f68d1c3d314c078a9179528e4a28b2c5f65a2`.
+
+The centered/reflowing HTML is 15,828,588 bytes/SHA-256
+`c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d`;
+the deterministic PDF is 9,836,725 bytes/545 A4 pages/SHA-256
+`b26b670db97facc9f5ab389eed69cf1f8b03f70e6047eacbd2bfa68c849ccd0d`.
+Two clean builds match byte-for-byte. Physical pages 529–545 pass original-
+detail visual inspection, and desktop/mobile browser QA passes centered
+reflow, local wide-content scrolling, fragments, navigation, keyboard focus,
+offline assets, and console checks. Final build receipt SHA-256 is
+`18cbb0558a08cee737e375351a4f3f7fb7b65c0e29672b22851612a8a58d1eab`.
+
+Zenodo version `0.31.5`, record `22151513`, DOI
+`10.5281/zenodo.22151513`, is public in concept `10.5281/zenodo.22061489`;
+all nine files passed two anonymous exact readbacks. GitHub content commit
+`2196b7cb998b66c50a182a1312dcca7ddba29ccf`, tree
+`27a6ef284579d2dcd1817077b5c4351acff0a38f`, Pages run `33223430957`, job
+`99022162212`, deployment `6150632335`, and status `17485382930` pass. The
+strict verifier matched all 70 explicit changed paths, all eleven backend
+files, the deployed reader, its Lab 2 predecessor, and Zenodo's public
+nine-file inventory. Sanitized GitHub receipt is 56,936 bytes/SHA-256
+`145f085aa531d198deff47b50f3a35f809fada62051fe26e7ee4c8dfc6558dcd`.
+
+## Computation Laboratory 4 — first coherent source/executable boundary
+
+The current frozen learner files are:
+
+- reader: 15,716 bytes/388 LF/SHA-256
+  `5e4d7bd4402d7ad0bd4be031c239ef2f7c223942431d800fee823b64fde327f4`;
+- program: 13,392 bytes/353 LF/SHA-256
+  `63a874df2dff8ee2a6c4a7528e5195916744e0efb93f15972208d0e82609230b`;
+- tests: 7,204 bytes/164 LF/SHA-256
+  `5be88132683cc23980e129d3b8ee4e4930e84d1c0e65afc91ca301377a997031`;
+- expected output: 609 bytes/12 LF/SHA-256
+  `d92d0988c3aea1b79faba84a1302d6acf4854dadfa22d6ea616248ede362bf17`.
+
+The six tests and program output pass repeatedly; static QA is 3,580 bytes/
+SHA-256 `68aa02e2830539c21167c106752747d7d85964a8ee82e4d56689c167c2385786`.
+Clean independent review, backend admission, and cumulative reader build are
+the next gates; no Lab 4 build or publication is claimed here.
+
+## Computation Laboratory 4 — independent source/execution gate closed
+
+All three clean independent reviews now pass with P1/P2/P3 zero and bind the
+same frozen reader, program, tests, expected output, and static QA identities:
+
+- independent code review: 4,839 bytes/153 LF/SHA-256
+  `a841e03d2cb71dbeba55b684d2463d91407275ba8549adc97501a193d0862baa`;
+- independent mathematics review: 6,972 bytes/179 LF/SHA-256
+  `8aae9b1da8dc639e60a80393025fcb713a7892c6618c7b0706a8e5b70758e89b`;
+- independent source-language review: 4,628 bytes/126 LF/SHA-256
+  `7affc837eee816c677f3fc93682b82afb151acaef217a0a2ddfece8166c8eaf1`;
+- exact execution receipt: 1,999 bytes/68 LF/SHA-256
+  `cbe2d26e63b580b0ec390ea66dcbfb48fdc932df3deec78d4c92051746955b88`;
+- combined QA receipt: 4,668 bytes/169 LF/SHA-256
+  `c021dc617a9d015c1f6b6a5e4a4695822e9b5ce89e44c1b60808d0e6ac300712`.
+
+The six-test suite and command-line program were independently repeated, the
+609-byte expected output matched exactly with empty stderr, adversarial inputs
+were rejected, and the mathematics/ring-law checks passed. Append-only backend
+admission against the exact 7,694-record Lab 3 prefix is now the live gate; no
+Lab 4 reader-build or publication claim is made at this source-only boundary.
+
+## Computation Laboratory 4 — append-only backend admitted
+
+The isolated producer ran twice and matched all 13 candidate files byte for
+byte. Independent semantic validation and resume-safe live replay pass. The
+exact Lab 3 prefix remains 7,694 records/9,280,385 bytes with bundle SHA-256
+`cddd65499da547e0c4f01b8a880f68d1c3d314c078a9179528e4a28b2c5f65a2`.
+Lab 4 adds 153 records/162,865 bytes with delta bundle SHA-256
+`256a8333f7d1ba49086166560ed1200b4834a8914631d1cb8a094f30891dd48e`.
+The live cumulative backend is 7,847 records/9,443,250 bytes with bundle
+SHA-256 `2633732fd2fd2b5fb8afb5888b1864b6bcda9dca52eb85a6636c777ac1018c1f`.
+
+The suffix census is 10 artifacts, 12 concepts, seven QA events, 61 relations,
+one rights record, 25 segments, 12 terms, and 25 units. It binds all 25 reader
+IDs, six tasks, the shared hint/full-solution surface, five route mappings, and
+17 verified prerequisite edges. The independent cumulative receipt is 12,455
+bytes/SHA-256 `2364c6e3e518605f41f3b2083adacc4016e5c5f7accdc606430a08aa0f8564a1`;
+the atomic finalization receipt is 2,099 bytes/SHA-256
+`6663925df8f10a3fe0c95e21e91c6eaf58e593b56d06e52b5a169ccfd1ce2827`.
+All four required laboratories are now admitted. The cumulative four-lab
+reader build and visual/browser QA are next; no publication claim is made here.
+
+## Computation Laboratories 1–4 — final local reader boundary
+
+The fail-closed finalizer independently revalidated the Lab 4 source/execution
+QA, exact append-only backend replay, deterministic build draft, final HTML and
+PDF identities, bounded Poppler render inventory, desktop/mobile browser
+receipt, rights, privacy, and predecessor preservation. The final receipt is
+`qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_BUILD_RECEIPT.json`,
+8,255 bytes/239 LF lines/SHA-256
+`21e62297589346d3fbf5cf4a91f0a322d46e059c4a86f585556a942053190fa9`.
+
+Final cumulative artifacts:
+
+- HTML: 15,974,648 bytes; SHA-256
+  `a76e31fc92e1554a6b14ffaccc1ad1001ee5c2838a3e36d1441b98519b39d4f8`.
+- PDF: 10,131,344 bytes; 558 A4 pages; SHA-256
+  `337dcb8bf7ee3d5b5b58c0efc621e661db2542b49f52f1b12b786b55db4fa2fc`.
+- Artifact manifest: 394 bytes; SHA-256
+  `2ae57ef9dfba517586cb983ed3fb94942e0e418ae36680f147d427acb3101c81`.
+- Visual QA: 3,622 bytes; SHA-256
+  `c3ad953547446ee23574a0b0f90dfd6958384d5caea9087ec83f3adf6bbea1ea`.
+- Browser QA: 3,722 bytes; SHA-256
+  `0f24144742334477e8f2662d7a79fab7a19e4542bf6d26884f282d3b97a40209`.
+
+Two clean final builds are byte-identical. The 545-page predecessor remains
+structurally and textually preserved; 13 Lab 4 pages are appended. All 14
+transition/new pages pass original-detail visual inspection. All 487 outline
+entries and 3,155 named destinations resolve. HTML is self-contained and
+centered, reflows without document overflow at 375 x 812, gives each wide code
+or formula a local scroller, resolves all 2,766 fragments, exposes 17,487
+native MathML nodes, and has zero external runtime assets or browser console
+errors/warnings. The PDF remains intentionally untagged; HTML is the primary
+accessible surface. This is a local verified boundary only until the existing
+GitHub/Pages and Zenodo lineages pass anonymous public-byte readback.
+
+Zenodo version `0.31.6` is now public as record `22161294`, DOI
+`10.5281/zenodo.22161294`, in concept `10.5281/zenodo.22061489`. The exact
+nine-file reader-first package passed two anonymous HTTP 200 byte/SHA-256
+readbacks per file. The sanitized receipt is
+`release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04/publication-receipt.json`,
+11,815 bytes/SHA-256
+`47b39fe5c9ba36eca57e48b311525f646ee0df32c3a943d51c37be701a34cb39`.
+GitHub/Pages publication remains the only open operation for this boundary.
