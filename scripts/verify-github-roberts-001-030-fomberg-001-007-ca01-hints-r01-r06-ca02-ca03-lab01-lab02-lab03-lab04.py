@@ -49,6 +49,7 @@ if SPEC is None or SPEC.loader is None:
 module = importlib.util.module_from_spec(SPEC)
 sys.modules[SPEC.name] = module
 SPEC.loader.exec_module(module)
+AUTHENTICATED_GH_JSON = module.gh_json
 
 
 SLUG = "roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04"
@@ -297,10 +298,15 @@ def require_row(
 
 
 def github_json_resilient(endpoint: str) -> Any:
-    """Read public GitHub metadata with the shared retrying HTTP transport."""
+    """Read GitHub metadata publicly, falling back on gh after rate exhaustion."""
 
     url = endpoint if endpoint.startswith("https://") else f"https://api.github.com/{endpoint}"
-    payload = module.fetch(url, accept="application/vnd.github+json", attempts=8)
+    try:
+        payload = module.fetch(url, accept="application/vnd.github+json", attempts=2)
+    except RuntimeError as exc:
+        if "HTTP Error 403" not in str(exc):
+            raise
+        return AUTHENTICATED_GH_JSON(endpoint)
     try:
         return json.loads(payload.decode("utf-8"))
     except (UnicodeDecodeError, json.JSONDecodeError) as exc:
