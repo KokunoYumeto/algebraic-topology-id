@@ -27,9 +27,10 @@ public. The verifier matched all 134 changed files, all eleven backend files,
 the deployed final reader, every route ID `D60-R01`–`D60-R14`, and the exact
 Zenodo lineage. Do not alter the completed mathematics, create a new DOI
 concept/repository, contact upstream, or touch another lane. After both public
-lineage/repository, contact upstream, or touch another lane. The terminal audit
-is now the only remaining action; mark this durable goal complete when its
-receipt-only commit is public.
+lineage/repository, contact upstream, or touch another lane. Receipt-only commit
+`2a1b1f7b3f8beb6912ab5ce9db0b64f1b64cd691` is public and its receipt bytes
+match anonymously. The terminal audit passes and this durable goal is complete;
+no production, publication, or upstream-contact action remains.
 
 Complete and preserve one lawful, reader-first Bahasa Indonesia edition for
 O012/D60. Translation is the main work: write natural id-ID prose while

@@ -54,6 +54,8 @@
         "publication_receipt": "00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_CAPSTONE.json",
         "publication_receipt_bytes": 10077,
         "publication_receipt_sha256": "5d880698531b69c8e741b846c10cf64fa5bbffffa7395bce2bfa19ceb2a5358e",
+        "receipt_commit": "2a1b1f7b3f8beb6912ab5ce9db0b64f1b64cd691",
+        "receipt_commit_public": true,
         "all_fourteen_routes_public": true
       }
     }
@@ -395,7 +397,7 @@
     "next_line_after_unit": 4186,
     "next_line_text": "\\subsection{Extras before cohomology}"
   },
-  "next_action": "commit and push only the corrected public verifier, sanitized GitHub receipt, and final durable-state updates; verify that receipt commit is public; then mark the active goal complete",
+  "next_action": "none; terminal D60 course, backend, reader, rights, Zenodo, GitHub, Pages, route, and anonymous-byte verification closure is complete",
   "terminology_qa": {
     "status": "PASS",
     "fallback_doi": "10.22146/jmt.56529",

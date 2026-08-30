@@ -1,6 +1,6 @@
 # Current state — O012/D60
 
-Updated: 2026-08-29
+Updated: 2026-08-30
 
 ### Authoritative live recovery note — final D60 local closure, 2026-08-30
 
@@ -32,8 +32,13 @@ and the v0.31.6→v0.31.7 Zenodo lineage. Sanitized GitHub receipt:
 `00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_CAPSTONE.json`,
 10,077 bytes/SHA-256
 `5d880698531b69c8e741b846c10cf64fa5bbffffa7395bce2bfa19ceb2a5358e`.
-All substantive production and both public readbacks are complete. Only the
-receipt-only durable-state commit and terminal goal update remain.
+All substantive production and both public readbacks are complete. The
+receipt-only durable-state commit
+`2a1b1f7b3f8beb6912ab5ce9db0b64f1b64cd691` is also public; its 10,077-byte
+receipt matches SHA-256
+`5d880698531b69c8e741b846c10cf64fa5bbffffa7395bce2bfa19ceb2a5358e`
+through the commit-pinned anonymous endpoint. The D60 lane is terminally
+complete; no further production action is pending.
 
 Status: active production. Source admission, Roberts Units 001–030, Fomberg Units 001–007, all three cumulative assessments, and the 108/108 solution-bearing mastery layer remain closed. Computation Laboratory 3 is closed through learner/source, execution, independent review, append-only backend, deterministic reader build, 17-page visual inspection, desktop/mobile browser QA, and publication/readback in both maintained lineages, all at P1/P2/P3 zero. The exact 7,546-record Lab 2 backend prefix is unchanged; Lab 3 adds 148 records/157,630 bytes and ends at 7,694 records/9,280,385 bytes with bundle SHA-256 `cddd65499da547e0c4f01b8a880f68d1c3d314c078a9179528e4a28b2c5f65a2`. The centered/reflowing self-contained HTML is 15,828,588 bytes/SHA-256 `c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d`; the deterministic PDF is 545 A4 pages/9,836,725 bytes/SHA-256 `b26b670db97facc9f5ab389eed69cf1f8b03f70e6047eacbd2bfa68c849ccd0d`. Zenodo `0.31.5` is public at record `22151513`, DOI `10.5281/zenodo.22151513`, in concept `10.5281/zenodo.22061489`; all nine files passed two anonymous byte/SHA-256 readback passes. GitHub content commit `2196b7cb998b66c50a182a1312dcca7ddba29ccf`, tree `27a6ef284579d2dcd1817077b5c4351acff0a38f`, Pages run `33223430957`, job `99022162212`, deployment `6150632335`, and status `17485382930` are public and exact. All 70 changed paths, the deployed Lab 3 reader, the Lab 2 predecessor, all 11 backend files, and Zenodo's nine public files passed anonymous byte/SHA-256 readback. Sanitized GitHub receipt `00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03.json` is 56,936 bytes/SHA-256 `145f085aa531d198deff47b50f3a35f809fada62051fe26e7ee4c8dfc6558dcd`.
 
