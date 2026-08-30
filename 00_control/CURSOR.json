@@ -4,7 +4,7 @@
   "course_id": "D60",
   "updated": "2026-08-30",
   "authoritative_live_boundary": {
-    "state": "complete_local_course_release_controls_initialized_publication_pending",
+    "state": "complete_course_published_and_anonymously_verified_in_both_lineages",
     "scope": "Roberts 30/30; Fomberg 1.1-1.13; mastery 108/108; Labs 1-4; four proof-link graphs; six-exercise D60 capstone and oral-proof rubric complete",
     "capstone_source": {
       "path": "source/id-ID/capstone/o012-d60-capstone-klein-bottle.md",
@@ -41,7 +41,21 @@
       "doi": "10.5281/zenodo.22168033",
       "publication_receipt": "release/zenodo-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone/publication-receipt.json",
       "publication_receipt_bytes": 11979,
-      "publication_receipt_sha256": "a49688bcb19813a3487b403c52f1f5d1336967270e43d55a77427b7c5f5fe550"
+      "publication_receipt_sha256": "a49688bcb19813a3487b403c52f1f5d1336967270e43d55a77427b7c5f5fe550",
+      "github": {
+        "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+        "content_commit": "bce91390574d024a2b2386af28a811dffff67e2b",
+        "content_tree": "dac9e1a48b2dfaba2228a4662749630c89f871cc",
+        "pages_run_id": 33287539095,
+        "pages_job_id": 99193245127,
+        "deployment_id": 6162327968,
+        "deployment_status_id": 17516574070,
+        "pages_reader": "https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone/",
+        "publication_receipt": "00_control/GITHUB_PUBLICATION_RECEIPT_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_CAPSTONE.json",
+        "publication_receipt_bytes": 10077,
+        "publication_receipt_sha256": "5d880698531b69c8e741b846c10cf64fa5bbffffa7395bce2bfa19ceb2a5358e",
+        "all_fourteen_routes_public": true
+      }
     }
   },
   "roberts_authority": {
@@ -381,7 +395,7 @@
     "next_line_after_unit": 4186,
     "next_line_text": "\\subsection{Extras before cohomology}"
   },
-  "next_action": "push the explicit final delta to the existing GitHub repository, verify the successful Pages deployment and all D60-R01 through D60-R14 routes against public bytes, persist the sanitized GitHub receipt and exact commit/tree/run identities, then complete the durable goal",
+  "next_action": "commit and push only the corrected public verifier, sanitized GitHub receipt, and final durable-state updates; verify that receipt commit is public; then mark the active goal complete",
   "terminology_qa": {
     "status": "PASS",
     "fallback_doi": "10.22146/jmt.56529",

@@ -16,17 +16,20 @@ the deterministic PDF is 10,376,749 bytes/564 A4 pages/SHA-256
 The final build, source/math/language, visual, browser, proof-census, backend
 replay, and independent validation gates all pass with P1/P2/P3 zero.
 
-Zenodo preservation is closed: version `0.31.7`, record `22168033`, DOI
-`10.5281/zenodo.22168033`, is public in concept `10.5281/zenodo.22061489`,
-succeeding record `22161294`; all nine files matched local bytes and SHA-256 on
-two anonymous passes. The sole open operation is the bounded GitHub commit and
-Pages deployment in `KokunoYumeto/algebraic-topology-id`. Push only the
-explicit final delta, verify the commit-pinned files and all fourteen route IDs
-on Pages, and persist the sanitized GitHub receipt. Do not alter the completed
-mathematics, create a new DOI
+Both preservation lineages are closed. Zenodo version `0.31.7`, record
+`22168033`, DOI `10.5281/zenodo.22168033`, is public in concept
+`10.5281/zenodo.22061489`, succeeding record `22161294`; all nine files matched
+local bytes and SHA-256 on two anonymous passes. GitHub content commit
+`bce91390574d024a2b2386af28a811dffff67e2b`, tree
+`dac9e1a48b2dfaba2228a4662749630c89f871cc`, Pages run `33287539095`, job
+`99193245127`, deployment `6162327968`, and success status `17516574070` are
+public. The verifier matched all 134 changed files, all eleven backend files,
+the deployed final reader, every route ID `D60-R01`–`D60-R14`, and the exact
+Zenodo lineage. Do not alter the completed mathematics, create a new DOI
 concept/repository, contact upstream, or touch another lane. After both public
-lineages and durable receipts are exact, perform the terminal audit and mark
-the goal complete.
+lineage/repository, contact upstream, or touch another lane. The terminal audit
+is now the only remaining action; mark this durable goal complete when its
+receipt-only commit is public.
 
 Complete and preserve one lawful, reader-first Bahasa Indonesia edition for
 O012/D60. Translation is the main work: write natural id-ID prose while

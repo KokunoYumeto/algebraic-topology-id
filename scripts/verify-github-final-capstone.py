@@ -84,11 +84,12 @@ def local_identity(relative: str) -> dict[str, Any]:
 
 def get_json(url: str, *, attempts: int = 12) -> dict[str, Any]:
     last = ""
+    accept = "application/json" if url.startswith("https://zenodo.org/") else "application/vnd.github+json"
     for attempt in range(attempts):
         response = requests.get(
             url,
             headers={
-                "Accept": "application/vnd.github+json",
+                "Accept": accept,
                 "Cache-Control": "no-cache",
                 "User-Agent": "Codex-D60-public-verifier",
             },
@@ -219,12 +220,12 @@ def main() -> None:
             raise RuntimeError(f"learner route missing from public reader: {route_id}")
         route_rows.append({"course_route_unit_id": route_id, "occurrences": occurrences, "status": "PASS"})
     for marker in (
-        "D60-CAPSTONE",
+        'id="o012-d60-capstone"',
         "D60-LAB01",
         "D60-LAB04",
-        "108/108",
-        "Roberts 1–30",
-        "Fomberg 1–7",
+        "108 soal bersolusi",
+        "Roberts 30/30",
+        "Fomberg 1.1–1.13",
     ):
         if marker not in pages_text:
             raise RuntimeError(f"public learner surface omits scope marker: {marker}")

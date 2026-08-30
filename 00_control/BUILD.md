@@ -974,3 +974,6 @@ Visual and browser QA, proof census, and the independently validated
 8,338-record backend all pass. Do not rebuild unless a concrete defect changes
 an input identity; the current operation is only v0.31.7 packaging,
 existing-lineage publication, public readback, and terminal receipt closure.
+Those operations now pass: Zenodo record `22168033` and GitHub/Pages content
+commit `bce91390574d024a2b2386af28a811dffff67e2b` reproduce the exact reader;
+all fourteen course routes are present on the public Pages surface.
