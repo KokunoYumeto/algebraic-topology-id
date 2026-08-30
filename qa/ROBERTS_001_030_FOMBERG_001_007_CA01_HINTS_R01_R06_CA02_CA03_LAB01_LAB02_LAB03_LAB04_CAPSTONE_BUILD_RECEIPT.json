@@ -1,0 +1,133 @@
+{
+  "accessibility": {
+    "document_horizontal_overflow_desktop": false,
+    "document_horizontal_overflow_mobile_375x812": false,
+    "html_lang": "id-ID",
+    "pdf_tagged": false,
+    "primary_surface": "self-contained semantic HTML with native MathML"
+  },
+  "builder_inputs": {
+    "builder": {
+      "bytes": 15721,
+      "lf_lines": 87,
+      "path": "scripts/build-final-capstone.py",
+      "sha256": "13b3d4fb46da2876de3d72c4a557765cebeb93c5ce632107d3d0a3d8f95871dd"
+    },
+    "merger": {
+      "bytes": 6461,
+      "lf_lines": 76,
+      "path": "scripts/merge-capstone.py",
+      "sha256": "425e7b7941bd914dd041e3ee9fff668cf90367bf70ade156c981f3e7f51904a5"
+    }
+  },
+  "date": "2026-08-29",
+  "determinism": {
+    "predecessor_html_exactly_reconstructible": true,
+    "predecessor_pdf_text_prefix_identical": true,
+    "two_clean_appendix_pdf_builds_identical": true,
+    "two_clean_html_builds_identical": true,
+    "two_clean_merged_pdf_builds_identical": true
+  },
+  "frozen_predecessor": {
+    "html": {
+      "bytes": 15974648,
+      "sha256": "a76e31fc92e1554a6b14ffaccc1ad1001ee5c2838a3e36d1441b98519b39d4f8"
+    },
+    "html_exact_reconstruction": true,
+    "pdf": {
+      "bytes": 10131344,
+      "pages": 558,
+      "sha256": "337dcb8bf7ee3d5b5b58c0efc621e661db2542b49f52f1b12b786b55db4fa2fc"
+    },
+    "pdf_extracted_text_prefix_identical": true
+  },
+  "html": {
+    "browser_qa": {
+      "bytes": 1874,
+      "lf_lines": 59,
+      "path": "qa/capstone/BROWSER_QA.json",
+      "sha256": "cc353883558692edf4d91154b66dd5d0c38ca1e60fdfd2684d3e4b4fcca10335"
+    },
+    "bytes": 16049720,
+    "centered_reflowing_self_contained": true,
+    "exercises_added": 6,
+    "headings_added": 14,
+    "hints_added": 6,
+    "native_mathml": true,
+    "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone/index.html",
+    "sha256": "a17ce8e3e4d6b93de5e678ce38f3b7834c3b6a9ca1bff063fd3e879875e254a8",
+    "solutions_added": 6,
+    "stable_ids_added": 34
+  },
+  "manifest": {
+    "bytes": 412,
+    "lf_lines": 3,
+    "path": "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_CAPSTONE.csv",
+    "sha256": "0dbd8dcd74972f52e100d0873120e85d3188364bb3623dd9894ef86069bac95a"
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "pdf": {
+    "all_fonts_embedded_subset_tounicode": true,
+    "appendix_pages": 6,
+    "bytes": 10376749,
+    "fonts": 158,
+    "named_destinations": 3189,
+    "outline_entries_added": 14,
+    "pages": 564,
+    "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone-id.pdf",
+    "sha256": "d29dad39a06224a83aed11afdb4c65b317a45c6b900122dd40948df712ff8340",
+    "stable_id_destinations_added": 34,
+    "trailer_id_suppressed": true,
+    "visual_qa": {
+      "bytes": 2125,
+      "lf_lines": 38,
+      "path": "qa/capstone/VISUAL_QA.json",
+      "sha256": "d176c33140458921b8b8a83bfce69118fce5d9e48f12b449dfb6a1dd25fc328f"
+    }
+  },
+  "proof_census": {
+    "bytes": 31031,
+    "lf_lines": 822,
+    "path": "qa/PROOF_REPAIR_CENSUS.json",
+    "sha256": "29b7d706a4f9e0d304df9dd37cfb138392a829abe56341ecdf822fdb2297db15"
+  },
+  "receipt_kind": "final_d60_capstone_reader_build",
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "source": {
+    "bytes": 21744,
+    "lf_lines": 423,
+    "path": "source/id-ID/capstone/o012-d60-capstone-klein-bottle.md",
+    "sha256": "d26ad5224e61c62080e00074acabfd2cf680779a7bc5d0562cfccc6d715a09c9"
+  },
+  "source_qa": [
+    {
+      "bytes": 2212,
+      "lf_lines": 61,
+      "path": "qa/capstone/STATIC_QA.json",
+      "sha256": "1dd2cc0c11719191ace11c9ca36033ae597ad88731c9bd6c8c611c4a364e85b0"
+    },
+    {
+      "bytes": 2069,
+      "lf_lines": 27,
+      "path": "qa/capstone/INDEPENDENT_MATH_REVIEW.json",
+      "sha256": "da3e4ba9595edaf791ccd59f56bf7a83be9dbe18308909220acc9ee5c89175a3"
+    },
+    {
+      "bytes": 1290,
+      "lf_lines": 22,
+      "path": "qa/capstone/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json",
+      "sha256": "ce385aa5991a7e4e95d12d363a2a1481479f02bee32301a07c501625c08bae7b"
+    },
+    {
+      "bytes": 1436,
+      "lf_lines": 28,
+      "path": "qa/capstone/QA.json",
+      "sha256": "964e0d55f9d52b0ddbab771cd464357abdbabf29bfc608418f36654c98d50d61"
+    }
+  ],
+  "status": "PASS"
+}

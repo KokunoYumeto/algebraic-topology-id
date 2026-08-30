@@ -1,0 +1,61 @@
+{
+  "receipt_kind": "capstone_source_static_qa",
+  "status": "PASS",
+  "capstone_id": "D60-CAPSTONE",
+  "edition_unit_id": "O012-ORIG-CAPSTONE",
+  "course_route_unit_id": "D60-R14",
+  "source": {
+    "path": "source/id-ID/capstone/o012-d60-capstone-klein-bottle.md",
+    "bytes": 21744,
+    "lf_lines": 423,
+    "sha256": "d26ad5224e61c62080e00074acabfd2cf680779a7bc5d0562cfccc6d715a09c9"
+  },
+  "structure": {
+    "stable_ids": 34,
+    "unique_stable_ids": 34,
+    "headings": 14,
+    "exercises": 6,
+    "hints": 6,
+    "solutions": 6,
+    "oral_rubric_criteria": 6,
+    "proof_repair_ids": ["FOM-U003-QUOTIENT-LES", "FOM-PR-13", "FOM-PR-14", "FOM-PR-15"],
+    "fenced_divs_balanced": true,
+    "fragment_links_resolved": true,
+    "native_math": true
+  },
+  "coverage": {
+    "hypotheses_basepoints_orientations_coefficients": "PASS",
+    "pullback_double_cover_monodromy": "PASS",
+    "svk_and_fibration_les_pi1": "PASS",
+    "index_two_torus_subgroup": "PASS",
+    "attaching_word_signed_exponent_sum": "PASS",
+    "cellular_boundary_and_homology": "PASS",
+    "uct_and_cohomology": "PASS",
+    "orientation_and_degree_limit": "PASS",
+    "proof_chain_reconstruction": "PASS",
+    "cross_invariant_limitation": "PASS",
+    "oral_reconstruction_rubric": "PASS",
+    "four_laboratories_scope_exact": "PASS"
+  },
+  "mathematical_checks": {
+    "pi1_presentation": "<a,b | a b a^{-1} b>",
+    "semidirect_product": "Z ⋊_{-1} Z",
+    "cellular_d2": [0, 2],
+    "integral_homology": {"H0": "Z", "H1": "Z ⊕ Z/2", "H2": "0"},
+    "integral_cohomology": {"H^0": "Z", "H^1": "Z", "H^2": "Z/2"},
+    "mod2_homology": {"H0": "F2", "H1": "F2^2", "H2": "F2"},
+    "torus_deck_degree": -1,
+    "degree_T2_to_K_integral": "undefined_target_has_no_integral_fundamental_class",
+    "roberts_unit20_cross_check": "PASS_TYPED_TRANSPOSE_SNF",
+    "roberts_unit20_d2_shape": "3x2_C2_to_C1",
+    "fibration_les_vs_wang_sequence": "PASS_SEPARATED"
+  },
+  "rights_and_provenance": {
+    "rights": "CC BY-SA 4.0",
+    "original_layer": true,
+    "source_text_copied": false,
+    "fomberg_problem_bank_used": false,
+    "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra"
+  },
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0}
+}

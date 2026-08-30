@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone-v0.31.7",
+  "parent_record_id": 22161294,
+  "concept_key": "22061489",
+  "metadata_sha256": "3bba542138dd65ada5515aa19e304816032a857037aa3d9658dd3a78859c41b4",
+  "manifest_sha256": "5eebb16879ab9eed68487277bd3fcf72e8f073fae41b6cc0abd6e34a38c8edee",
+  "state": "published_and_anonymously_verified",
+  "intent_created_at": "2026-08-30T02:07:35.702646+00:00",
+  "deposition_id": 22168033,
+  "record_id": 22168033,
+  "doi": "10.5281/zenodo.22168033",
+  "concept_doi": "10.5281/zenodo.22061489",
+  "anonymous_readback_reproduced": true,
+  "anonymous_readback_passes": 2,
+  "publication_receipt_sha256": "a49688bcb19813a3487b403c52f1f5d1336967270e43d55a77427b7c5f5fe550",
+  "sanitized": true,
+  "credentials_recorded": false,
+  "authorization_header_recorded": false,
+  "bucket_url_recorded": false,
+  "absolute_local_paths_recorded": false
+}

@@ -1,0 +1,83 @@
+{
+  "baseline": {
+    "bundle_sha256": "8aff3dbc16e4f3552d2a16eecf043a6fe7c783c31200dce29bc8f61374504acb",
+    "bytes": 10028356,
+    "records": 8325
+  },
+  "final": {
+    "bundle_sha256": "8a3ffc9618e56dfce048c41e938aabef4ffbfd3db20a03a4f52f218985230dbb",
+    "bytes": 10040043,
+    "records": 8338
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "final_capstone_rev3_artifact_evidence_candidate",
+  "semantic_receipt": {
+    "bytes": 1517,
+    "path": "qa/BACKEND_CAPSTONE_FINAL_REV3_SEMANTIC_RECEIPT.json",
+    "sha256": "6bd3801fb995bf40c7c610965c8bdcf28c4c0062de8243f8ccc0edf8f7fc1360"
+  },
+  "status": "PASS_CANDIDATE",
+  "suffix": {
+    "artifacts.jsonl": {
+      "bytes": 8585,
+      "records": 9,
+      "sha256": "596b3d3d5b09771eb1793bcd1bdbcf69d6dba06df5aea39b9c102e706277b165"
+    },
+    "assets.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "authority.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "concepts.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "corrections.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "qa.jsonl": {
+      "bytes": 3102,
+      "records": 4,
+      "sha256": "c68daac74c87ae2abf0806370a89b83606c7ab88a0d6c3e3f43923e5ede986f9"
+    },
+    "relations.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "rights.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "segments.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "terms.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "units.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "suffix_total": {
+    "bundle_sha256": "76294e7bba888f20d8cb6b6ef6d5554b2ff8dcca869d5672ee48f871def3fd4a",
+    "bytes": 11687,
+    "records": 13
+  },
+  "timestamp": "2026-08-29T00:00:00Z"
+}

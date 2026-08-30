@@ -1,0 +1,59 @@
+{
+  "receipt_kind": "capstone_final_html_browser_qa",
+  "status": "PASS",
+  "date": "2026-08-29",
+  "browser": "Codex In-app Browser",
+  "html": {
+    "path": "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone/index.html",
+    "bytes": 16049720,
+    "sha256": "a17ce8e3e4d6b93de5e678ce38f3b7834c3b6a9ca1bff063fd3e879875e254a8",
+    "lang": "id-ID"
+  },
+  "desktop": {
+    "viewport": {"width": 1280, "height": 720},
+    "document_client_width": 1265,
+    "document_scroll_width": 1265,
+    "capstone_width": 1112,
+    "capstone_left": 76.44444274902344,
+    "capstone_right": 1188.4444427490234,
+    "centered": true,
+    "document_horizontal_overflow": false
+  },
+  "mobile": {
+    "viewport": {"width": 375, "height": 812},
+    "document_client_width": 360,
+    "document_scroll_width": 360,
+    "capstone_width": 324.8055725097656,
+    "capstone_left": 17.59722328186035,
+    "capstone_right": 342.402795791626,
+    "document_horizontal_overflow": false,
+    "wide_math_nodes": 6,
+    "wide_math_has_local_scroll_surface": true
+  },
+  "structure": {
+    "ids": 4840,
+    "unique_ids": 4840,
+    "unresolved_fragments": 0,
+    "mathml_nodes": 17678,
+    "capstone_mathml_nodes": 191,
+    "capstone_exercises": 6,
+    "capstone_hints": 6,
+    "capstone_solutions": 6,
+    "focusable_elements": 2862,
+    "external_runtime_assets": 0
+  },
+  "visual_observation": {
+    "desktop_capstone_anchor": "PASS",
+    "mobile_capstone_anchor": "PASS",
+    "heading_prose_math_and_callout_readability": "PASS"
+  },
+  "correction_markers": {
+    "four_laboratories_present": true,
+    "six_laboratories_absent": true,
+    "every_recorded_source_locus_present": true,
+    "nine_source_loci_absent": true,
+    "raw_gcd_absent": true
+  },
+  "console": {"errors": 0, "warnings": 0},
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0}
+}

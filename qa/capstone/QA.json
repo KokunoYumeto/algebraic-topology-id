@@ -1,0 +1,28 @@
+{
+  "receipt_kind": "capstone_source_execution_review_closure",
+  "status": "PASS",
+  "capstone_id": "D60-CAPSTONE",
+  "edition_unit_id": "O012-ORIG-CAPSTONE",
+  "course_route_unit_id": "D60-R14",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "human_review_claimed": false,
+  "inputs": [
+    {"path": "source/id-ID/capstone/o012-d60-capstone-klein-bottle.md", "bytes": 21744, "lf_lines": 423, "sha256": "d26ad5224e61c62080e00074acabfd2cf680779a7bc5d0562cfccc6d715a09c9"},
+    {"path": "qa/capstone/STATIC_QA.json", "bytes": 2212, "lf_lines": 61, "sha256": "1dd2cc0c11719191ace11c9ca36033ae597ad88731c9bd6c8c611c4a364e85b0"},
+    {"path": "qa/capstone/INDEPENDENT_MATH_REVIEW.json", "bytes": 2069, "lf_lines": 27, "sha256": "da3e4ba9595edaf791ccd59f56bf7a83be9dbe18308909220acc9ee5c89175a3"},
+    {"path": "qa/capstone/INDEPENDENT_SOURCE_LANGUAGE_REVIEW.json", "bytes": 1290, "lf_lines": 22, "sha256": "ce385aa5991a7e4e95d12d363a2a1481479f02bee32301a07c501625c08bae7b"}
+  ],
+  "checks": {
+    "stable_ids_34_unique": "PASS",
+    "six_exercise_hint_solution_triples": "PASS",
+    "six_oral_criteria": "PASS",
+    "four_repair_ids_explicit": "PASS",
+    "independent_mathematics": "PASS",
+    "independent_source_language": "PASS",
+    "rights_and_provenance": "PASS",
+    "no_fomberg_problem_bank": "PASS",
+    "four_laboratories_scope_exact": "PASS"
+  },
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0},
+  "findings": []
+}

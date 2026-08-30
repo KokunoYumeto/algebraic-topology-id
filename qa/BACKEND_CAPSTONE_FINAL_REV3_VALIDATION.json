@@ -1,0 +1,38 @@
+{
+  "backend": {
+    "bundle_sha256": "8a3ffc9618e56dfce048c41e938aabef4ffbfd3db20a03a4f52f218985230dbb",
+    "bytes": 10040043,
+    "records": 8338
+  },
+  "checks": {
+    "adverse_ledger_and_backend_correction_bound": "PASS",
+    "all_references_resolve": "PASS",
+    "canonical_jsonl_and_unique_global_ids": "PASS",
+    "current_rights_terms_and_fifty_four_relations_rebased": "PASS",
+    "five_current_source_qa_pairs_exact": "PASS",
+    "model_provenance_exact": "PASS",
+    "nine_final_artifact_and_four_final_qa_successors_exact": "PASS",
+    "proof_census_bound_to_semantic_boundary": "PASS",
+    "supersedes_graph_unambiguous_and_acyclic": "PASS",
+    "thirty_four_current_unit_segment_pairs_exact_rev3": "PASS"
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "independent_final_capstone_rev3_backend_validation",
+  "semantic_proof_boundary": {
+    "bundle_sha256": "8aff3dbc16e4f3552d2a16eecf043a6fe7c783c31200dce29bc8f61374504acb",
+    "bytes": 10028356,
+    "records": 8325
+  },
+  "severity_census": {
+    "P1": 0,
+    "P2": 0,
+    "P3": 0
+  },
+  "source": {
+    "bytes": 21744,
+    "lf_lines": 423,
+    "path": "source/id-ID/capstone/o012-d60-capstone-klein-bottle.md",
+    "sha256": "d26ad5224e61c62080e00074acabfd2cf680779a7bc5d0562cfccc6d715a09c9"
+  },
+  "status": "PASS"
+}

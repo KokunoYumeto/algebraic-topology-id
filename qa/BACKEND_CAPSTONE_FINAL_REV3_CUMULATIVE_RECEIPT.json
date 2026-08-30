@@ -1,0 +1,56 @@
+{
+  "artifact_suffix": {
+    "bundle_sha256": "76294e7bba888f20d8cb6b6ef6d5554b2ff8dcca869d5672ee48f871def3fd4a",
+    "bytes": 11687,
+    "records": 13
+  },
+  "candidate_runs_byte_identical": true,
+  "files_already_complete": [
+    "assets.jsonl",
+    "authority.jsonl",
+    "concepts.jsonl",
+    "corrections.jsonl",
+    "relations.jsonl",
+    "rights.jsonl",
+    "segments.jsonl",
+    "terms.jsonl",
+    "units.jsonl"
+  ],
+  "files_promoted": [
+    "artifacts.jsonl",
+    "qa.jsonl"
+  ],
+  "final": {
+    "bundle_sha256": "8a3ffc9618e56dfce048c41e938aabef4ffbfd3db20a03a4f52f218985230dbb",
+    "bytes": 10040043,
+    "records": 8338
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "prefix_preserved_byte_for_byte": true,
+  "proof_census_scope_note": "PROOF_REPAIR_CENSUS.json binds the complete semantic proof graph at the immediately preceding 8,325-record rev3 boundary; this suffix adds only nine reader/evidence artifact successors and four final-QA successors.",
+  "receipt_kind": "final_capstone_rev3_complete_backend_cumulative",
+  "semantic_proof_boundary": {
+    "bundle_sha256": "8aff3dbc16e4f3552d2a16eecf043a6fe7c783c31200dce29bc8f61374504acb",
+    "bytes": 10028356,
+    "records": 8325
+  },
+  "semantic_receipt": {
+    "bytes": 1517,
+    "path": "qa/BACKEND_CAPSTONE_FINAL_REV3_SEMANTIC_RECEIPT.json",
+    "sha256": "6bd3801fb995bf40c7c610965c8bdcf28c4c0062de8243f8ccc0edf8f7fc1360"
+  },
+  "state_before": {
+    "artifacts.jsonl": "baseline",
+    "assets.jsonl": "baseline",
+    "authority.jsonl": "baseline",
+    "concepts.jsonl": "baseline",
+    "corrections.jsonl": "baseline",
+    "qa.jsonl": "baseline",
+    "relations.jsonl": "baseline",
+    "rights.jsonl": "baseline",
+    "segments.jsonl": "baseline",
+    "terms.jsonl": "baseline",
+    "units.jsonl": "baseline"
+  },
+  "status": "PASS"
+}

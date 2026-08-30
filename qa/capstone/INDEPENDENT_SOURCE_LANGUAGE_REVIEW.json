@@ -1,0 +1,22 @@
+{
+  "review_id": "O012-D60-CAPSTONE-INDEPENDENT-ID-REVIEW",
+  "review_kind": "independent_capstone_source_language",
+  "status": "PASS",
+  "pass": true,
+  "locale": "id-ID",
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "canonical_reader": {"path": "source/id-ID/capstone/o012-d60-capstone-klein-bottle.md", "bytes": 21744, "lf_lines": 423, "sha256": "d26ad5224e61c62080e00074acabfd2cf680779a7bc5d0562cfccc6d715a09c9"},
+  "checks": {
+    "natural_indonesian_prose": "PASS",
+    "controlled_terms": "PASS",
+    "formula_and_identifier_preservation": "PASS",
+    "reader_accessibility_without_colour": "PASS",
+    "exercise_hint_solution_alignment": "PASS",
+    "rights_non_endorsement_notice": "PASS",
+    "model_provenance_notice": "PASS"
+  },
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0},
+  "findings": [],
+  "scope_reaudit": "PASS_AFTER_CORRECTING_KEENAM_LABORATORIUM_TO_KEEMPAT_LABORATORIUM",
+  "re_audit": {"status": "PASS_AFTER_CORRECTION", "corrections": ["naturalized the groupoid van Kampen caveat and changed diabdikan to diubah", "confirmed \u005crm-to-\u005cmathrm math spelling for warning-free conversion", "replaced avoidable English carryovers with natural id-ID terms, including tarik balik, titik pangkal, bentuk normal Smith, paritas, and kesesuaian"]}
+}

@@ -1,0 +1,38 @@
+{
+  "receipt_kind": "capstone_final_pdf_visual_qa",
+  "status": "PASS",
+  "date": "2026-08-29",
+  "pdf": {
+    "path": "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone-id.pdf",
+    "bytes": 10376749,
+    "pages": 564,
+    "page_size": "A4",
+    "sha256": "d29dad39a06224a83aed11afdb4c65b317a45c6b900122dd40948df712ff8340"
+  },
+  "render": {
+    "tool": "pdftoppm 26.05.0",
+    "resolution_dpi": 150,
+    "range": "physical pages 558-564",
+    "files": [
+      {"path": "qa/capstone/render-rev3-20260829/page-558.png", "bytes": 45033, "sha256": "352e8641f73912b8b4a06c3232cde39d591ec2abaceec53d26679bb66ab190f3"},
+      {"path": "qa/capstone/render-rev3-20260829/page-559.png", "bytes": 367713, "sha256": "be1387e49827e2fbbd15e6a91e935ab01e7d30fdaa084e3d88c33be47b96112e"},
+      {"path": "qa/capstone/render-rev3-20260829/page-560.png", "bytes": 371335, "sha256": "05513058b717a3223ce5b9d70854bfe2c34a1acd3294fbdfa103f9416289f079"},
+      {"path": "qa/capstone/render-rev3-20260829/page-561.png", "bytes": 331558, "sha256": "604847aab23fce08de5a851afdb519e9a2314ec891a0f74b1232c1f197a4130f"},
+      {"path": "qa/capstone/render-rev3-20260829/page-562.png", "bytes": 427406, "sha256": "c578fb096bb050cccba68799021b8b69d376def19b3b45965f2e9903fdafd02d"},
+      {"path": "qa/capstone/render-rev3-20260829/page-563.png", "bytes": 309314, "sha256": "3d6e0fa4333a47686e4c22bec3d03153dfc798c5e03ea754243a1c58224a08f1"},
+      {"path": "qa/capstone/render-rev3-20260829/page-564.png", "bytes": 264023, "sha256": "74b450e17b15c31f0d5ecb43cb1cfc3c86c3d2dd61adc3721606f665ff379cba"}
+    ]
+  },
+  "inspection": {
+    "predecessor_transition_page_558": "PASS",
+    "all_six_capstone_pages_559_564": "PASS",
+    "title_and_section_hierarchy": "PASS",
+    "formula_and_matrix_layout": "PASS",
+    "exercise_hint_solution_readability": "PASS",
+    "proof_map_and_oral_rubric_tables": "PASS",
+    "rights_and_provenance_page": "PASS",
+    "clipping_overlap_or_garbled_glyphs": 0,
+    "blank_unintended_pages": 0
+  },
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0}
+}

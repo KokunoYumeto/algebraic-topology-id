@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "bundle_sha256": "dd689b6cea9933ee5f85e2d30ed6afd44c25ffee470eceb8d74b22ce3248a0ad",
+    "bytes": 9847262,
+    "records": 8181
+  },
+  "candidate_runs_byte_identical": true,
+  "correction_id": "O012-ADV-0566",
+  "final": {
+    "bundle_sha256": "8aff3dbc16e4f3552d2a16eecf043a6fe7c783c31200dce29bc8f61374504acb",
+    "bytes": 10028356,
+    "records": 8325
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "prefix_preserved_byte_for_byte": true,
+  "receipt_kind": "final_capstone_semantic_rev3_append_only_admission",
+  "record_census": {
+    "corrections": 1,
+    "relations": 54,
+    "rights": 1,
+    "segments": 34,
+    "source_qa_artifacts": 5,
+    "source_qa_events": 5,
+    "terms": 10,
+    "units": 34
+  },
+  "source": {
+    "bytes": 21744,
+    "lf_lines": 423,
+    "path": "source/id-ID/capstone/o012-d60-capstone-klein-bottle.md",
+    "sha256": "d26ad5224e61c62080e00074acabfd2cf680779a7bc5d0562cfccc6d715a09c9"
+  },
+  "state_before": {
+    "artifacts.jsonl": "baseline",
+    "assets.jsonl": "baseline",
+    "authority.jsonl": "baseline",
+    "concepts.jsonl": "baseline",
+    "corrections.jsonl": "baseline",
+    "qa.jsonl": "baseline",
+    "relations.jsonl": "baseline",
+    "rights.jsonl": "baseline",
+    "segments.jsonl": "baseline",
+    "terms.jsonl": "baseline",
+    "units.jsonl": "baseline"
+  },
+  "status": "PASS",
+  "suffix": {
+    "bundle_sha256": "87c275c0198e7f10372895ac12a6904d433befd8df2fa6f71fdc6bb9ce3352d9",
+    "bytes": 181094,
+    "records": 144
+  }
+}

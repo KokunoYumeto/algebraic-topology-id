@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "upload_type": "publication",
+    "publication_type": "book",
+    "title": "Topologi Aljabar: Edisi Bahasa Indonesia — Roberts 1–30, Jembatan Homologi §1.1–1.13, Penguasaan 108/108, Laboratorium 1–4, dan Capstone D60",
+    "version": "0.31.7",
+    "publication_date": "2026-08-29",
+    "creators": [
+      {
+        "name": "Roberts, David Michael"
+      },
+      {
+        "name": "Fomberg, Yeheli"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "Lazarovich, Nir",
+        "type": "Other"
+      },
+      {
+        "name": "Editor edisi Bahasa Indonesia",
+        "type": "Editor"
+      },
+      {
+        "name": "Translation and Transcription Project",
+        "type": "Other"
+      }
+    ],
+    "description": "<p><strong>Status: edisi kursus komposit lengkap.</strong> Roberts 30/30, jembatan homologi Fomberg Bagian 1.1–1.13, penguasaan biasa 84/84, asesmen kumulatif 24/24, keseluruhan penguasaan berbasis solusi 108/108, D60-LAB01, D60-LAB02, D60-LAB03, D60-LAB04, empat grafik perbaikan bukti, dan capstone D60 telah lengkap.</p><p>PDF A4 564 halaman adalah berkas pembaca pertama. HTML mandiri/offline terpusat dan reflowable memakai MathML asli tanpa dependensi runtime. Paket menyertakan sumber yang dapat diedit, backend JSONL ber-ID stabil, lisensi, manifest, checksum, QA, dan provenance ringkas.</p><p>Cakupan Roberts ialah <code>Notes.tex</code> baris 134–6368 pada komit <code>b947ad2e9f9e301bfe24590a9db653bc54fa1a53</code>. Cakupan Fomberg ialah <code>algebraic_topology.tex</code> baris 31–4185 pada komit <code>563194fae879178b9a6871b249513bfc27968975</code>. Materi penguasaan, laboratorium, perbaikan, dan capstone yang ditandai adalah materi asli edisi.</p><p>Paket terpadu berlisensi <strong>CC BY-SA 4.0</strong>; komponen Roberts tetap CC BY 4.0, sedangkan komponen Fomberg dan materi asli edisi tetap CC BY-SA 4.0. Produksi menggunakan <strong>OpenAI Codex gpt-5.6-sol, Ultra</strong> atas arahan pengguna. Edisi independen ini tidak menyiratkan dukungan atau pengesahan penulis maupun institusi sumber.</p>",
+    "keywords": [
+      "topologi aljabar",
+      "Bahasa Indonesia",
+      "homotopi",
+      "ruang penutup",
+      "grup fundamental",
+      "homologi",
+      "kohomologi",
+      "homologi seluler",
+      "produk cup",
+      "laboratorium komputasi",
+      "capstone",
+      "MathML",
+      "machine-readable textbook"
+    ],
+    "language": "ind",
+    "license": "cc-by-sa-4.0",
+    "access_right": "open",
+    "notes": "ID rilis: o012-composite-id-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone-v0.31.7. Kursus komposit lengkap: Roberts 30/30; Fomberg O012-FOM-001–007; penguasaan 108/108; D60-LAB01, D60-LAB02, D60-LAB03, D60-LAB04; empat grafik perbaikan bukti; capstone D60. Versi ini melanjutkan konsep Zenodo 10.5281/zenodo.22061489 dan pendahulu langsung 10.5281/zenodo.22161294; tidak membuat konsep pesaing.",
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/DavidMichaelRoberts/AlgebraicTopology2019/tree/b947ad2e9f9e301bfe24590a9db653bc54fa1a53",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://git.sr.ht/~yp/math-notes/tree/563194fae879178b9a6871b249513bfc27968975",
+        "relation": "isDerivedFrom",
+        "scheme": "url"
+      },
+      {
+        "identifier": "10.5281/zenodo.22061489",
+        "relation": "isVersionOf",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.22161294",
+        "relation": "isNewVersionOf",
+        "scheme": "doi"
+      }
+    ]
+  }
+}

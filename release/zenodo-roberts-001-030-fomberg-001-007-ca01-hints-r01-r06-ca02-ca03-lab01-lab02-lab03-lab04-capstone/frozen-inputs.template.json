@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "state": "template_unsealed_do_not_package",
+  "release_id": "o012-composite-id-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone-v0.31.7",
+  "instructions": "Seal exact path/bytes/SHA-256 rows after every deterministic final gate passes; never infer identities, overwrite the predecessor release, access credentials, or publish from the packager.",
+  "final_boundary_paths": [
+    "output/ARTIFACT_MANIFEST_ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_CAPSTONE.csv",
+    "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone/index.html",
+    "output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone-id.pdf",
+    "qa/BACKEND_CAPSTONE_FINAL_REV3_CUMULATIVE_RECEIPT.json",
+    "qa/BACKEND_CAPSTONE_FINAL_REV3_SEMANTIC_RECEIPT.json",
+    "qa/BACKEND_CAPSTONE_FINAL_REV3_VALIDATION.json",
+    "qa/PROOF_REPAIR_CENSUS.json",
+    "qa/ROBERTS_001_030_FOMBERG_001_007_CA01_HINTS_R01_R06_CA02_CA03_LAB01_LAB02_LAB03_LAB04_CAPSTONE_BUILD_RECEIPT.json",
+    "qa/ROUTE_MASTERY_CENSUS.json",
+    "qa/capstone/BROWSER_QA.json",
+    "qa/capstone/VISUAL_QA.json",
+    "source/id-ID/capstone/o012-d60-capstone-klein-bottle.md"
+  ],
+  "entries": []
+}

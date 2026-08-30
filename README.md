@@ -3,7 +3,7 @@
 Edisi Bahasa Indonesia independen dari *Pure Mathematics Topic D: Algebraic
 Topology* karya David Michael Roberts. Ketiga puluh kuliah Roberts sudah
 diterjemahkan secara berurutan sampai akhir sumber; edisi sumber Roberts dengan
-demikian lengkap **30/30**. Jalur kuliah komposit O012/D60 masih **parsial**:
+demikian lengkap **30/30**. Jalur kuliah komposit O012/D60 juga **lengkap**:
 jembatan Fomberg mencakup seluruh bentang terpilih Bagian 1.1–1.13
 (`algebraic_topology.tex:31–4185`). Ketiga asesmen kumulatif kini lengkap:
 24 soal lintas-rute, 24 petunjuk, dan 24 solusi lengkap. Bersama 84 butir
@@ -11,18 +11,19 @@ penguasaan biasa, lapisan penguasaan berbasis solusi telah mencapai **108/108**.
 Keempat laboratorium komputasi sudah lengkap dengan program luring, uji,
 keluaran acuan, interpretasi, petunjuk, dan solusi: monodromi/presentasi grup;
 matriks rantai/bentuk normal Smith; batas seluler/derajat; serta pembandingan
-grup fundamental, homologi, dan kohomologi. Proyek puncak lintas-invarian dan
-penutupan metadata grafik bukti yang tercatat masih harus diselesaikan.
+grup fundamental, homologi, dan kohomologi. Empat grafik perbaikan bukti sudah
+tertutup; proyek puncak D60 menambahkan enam pasangan soal–petunjuk–solusi,
+sintesis lintas-invarian botol Klein, dan rubrik rekonstruksi bukti oral.
 
 ## Mulai membaca
 
-- [Pembaca HTML terbaru: Roberts 30/30 + Fomberg 1.1–1.13 + Asesmen Kumulatif 1–3 + Laboratorium 1–4](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04/)
+- [Pembaca HTML lengkap: Roberts 30/30 + Fomberg 1.1–1.13 + penguasaan 108/108 + Laboratorium 1–4 + capstone D60](https://kokunoyumeto.github.io/algebraic-topology-id/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone/)
   adalah permukaan utama: satu berkas mandiri, reflow, tanpa JavaScript atau
   akses jaringan, dengan matematika MathML asli.
-- [HTML checkpoint komposit terbaru di repositori](output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04/index.html) dapat
+- [HTML edisi komposit lengkap di repositori](output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone/index.html) dapat
   diunduh dan dibuka secara luring.
-- [PDF A4 checkpoint komposit terbaru](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-id.pdf)
-  adalah permukaan cetak sekunder sepanjang 558 halaman. Semua font tersemat,
+- [PDF A4 edisi komposit lengkap](output/pdf/topologi-aljabar-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone-id.pdf)
+  adalah permukaan cetak sekunder sepanjang 564 halaman. Semua font tersemat,
   subset, dan memiliki peta ToUnicode; PDF belum ditandai secara struktural.
 - [Konsep Zenodo edisi ini](https://doi.org/10.5281/zenodo.22061489)
   mempertahankan garis versi preservasi; nomor konsep tetap sama ketika
@@ -52,7 +53,10 @@ penutupan metadata grafik bukti yang tercatat masih harus diselesaikan.
   anonim. Versi terbaru
   [0.31.6](https://doi.org/10.5281/zenodo.22161294) menambahkan Laboratorium
   Komputasi 4, pembaca 558 halaman, dan backend 7.847 rekaman; kesembilan
-  berkasnya juga lulus dua pembacaan anonim lengkap.
+  berkasnya juga lulus dua pembacaan anonim lengkap. Edisi lengkap
+  [0.31.7](https://doi.org/10.5281/zenodo.22168033) menambahkan penutupan bukti
+  dan capstone D60, pembaca 564 halaman, serta backend 8.338 rekaman; seluruh
+  sembilan berkasnya cocok pada dua pembacaan byte anonim lengkap.
 
 Checkpoint ini mencakup seluruh 30 kuliah Roberts hingga `Notes.tex:6368`:
 topologi dasar, homotopi, ruang penutup dan monodromi, grup/grupoid fundamental,
@@ -80,11 +84,11 @@ singular dengan aritmetika bilangan bulat dan pecahan yang eksak.
 Laboratorium 4 menghitung dan membandingkan grup fundamental terabelkan,
 homologi integral, kohomologi dengan koefisien medan, karakteristik Euler, dan
 produk cup pada keluarga ruang uji; uji adversarial mencegah kesimpulan palsu
-bahwa satu invarian menentukan tipe homotopi.
-Status
-30/30 hanya menyatakan kelengkapan komponen Roberts;
-status 108/108 menyatakan kelengkapan lapisan penguasaan berbasis solusi,
-bukan kelengkapan proyek puncak jalur komposit.
+bahwa satu invarian menentukan tipe homotopi. Status 30/30 menyatakan
+kelengkapan komponen Roberts; status 108/108 menyatakan kelengkapan lapisan
+penguasaan berbasis solusi. Bersama jembatan Fomberg, empat laboratorium,
+empat grafik perbaikan bukti, dan capstone D60, seluruh jalur komposit yang
+dipilih kini lengkap.
 
 Sumber semantik berada di [`source/id-ID/`](source/id-ID/). Batas historis
 tetap dipertahankan tanpa mengubah byte atau resinya, antara lain
@@ -108,19 +112,26 @@ mempertahankan awalan 7.694 rekaman checkpoint Laboratorium 3
 (9.280.385 byte; digest bundel
 `cddd65499da547e0c4f01b8a880f68d1c3d314c078a9179528e4a28b2c5f65a2`)
 secara byte-identik, lalu menambahkan 153 rekaman/162.865 byte bagi D60-LAB04.
-Backend kumulatif kini berisi 7.847 rekaman append-only (9.443.250 byte) dengan
-digest bundel
-`2633732fd2fd2b5fb8afb5888b1864b6bcda9dca52eb85a6636c777ac1018c1f`.
+Backend final mempertahankan seluruh awalan itu dan kini berisi 8.338 rekaman
+append-only (10.040.043 byte) dengan digest bundel
+`8a3ffc9618e56dfce048c41e938aabef4ffbfd3db20a03a4f52f218985230dbb`.
 Backend ini melengkapi—bukan menggantikan—pembaca manusia.
 
 Validasi dan build aktif:
 
 ```powershell
-python -B scripts/qa-computation-lab-004.py
-python -B scripts/validate-backend-append-only-computation-lab-004.py
-python -B scripts/build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04.py
-python -B scripts/finalize-build-roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04.py
+python -B scripts/census-proof-repairs-final.py
+python -B scripts/validate-final-capstone-rev3-backend.py
+python -B scripts/build-final-capstone.py
+python -B scripts/finalize-build-final-capstone.py
 ```
+
+Perintah tersebut berlaku pada checkout repositori lengkap yang menyertakan
+pembaca pendahulu beku dan receipt QA yang dirujuk oleh pemeriksaan fail-closed.
+Arsip `EDITABLE_SOURCE_BACKEND` di Zenodo menyediakan sumber semantik, backend,
+skrip, otoritas, dan kontrol untuk inspeksi serta kelanjutan, tetapi bukan
+checkout build mandiri; gunakan repositori ini bersama arsip `QA_PROVENANCE`
+untuk reproduksi deterministik penuh.
 
 Build kumulatif memakai epoch tetap dan dua build bersih yang harus identik
 byte. GitHub Pages memeriksa ukuran serta SHA-256 setiap pembaca HTML beku
@@ -154,8 +165,8 @@ otoritas disimpan di [`00_control/`](00_control/).
 
 Bentang Fomberg terpilih selesai tepat sebelum
 `algebraic_topology.tex:4186`; lapisan penguasaan berbasis solusi juga selesai
-108/108, dan Laboratorium Komputasi 1–4 telah selesai. Produksi berikutnya
-menutup metadata bukti yang tercatat dan proyek puncak rekonstruksi
-bukti/lintas-invarian yang ditandai jelas sebagai materi edisi.
+108/108; Laboratorium Komputasi 1–4, perbaikan metadata bukti, dan proyek
+puncak rekonstruksi bukti/lintas-invarian juga telah selesai sebagai materi
+edisi yang ditandai jelas.
 Hak dan atribusi Roberts, Fomberg, serta materi asli tetap dapat dibedakan pada
 backend dan artefak rilis.

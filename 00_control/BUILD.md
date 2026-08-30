@@ -959,3 +959,18 @@ Zenodo's exact nine-file inventory. Sanitized receipt:
 `4193c49f470e77c711a571a270cd138fd051bb621cb1a0bc3faeadc83b063b57`.
 This reader boundary is fully public and verified; the next build is the
 proof-link metadata/capstone successor, not a Lab 4 rebuild.
+# Final D60 capstone build boundary — 2026-08-30
+
+The final composite reader build is closed and deterministic. HTML:
+16,049,720 bytes/SHA-256
+`a17ce8e3e4d6b93de5e678ce38f3b7834c3b6a9ca1bff063fd3e879875e254a8`.
+PDF: 10,376,749 bytes, 564 A4 pages, SHA-256
+`d29dad39a06224a83aed11afdb4c65b317a45c6b900122dd40948df712ff8340`.
+Artifact manifest: 412 bytes/SHA-256
+`0dbd8dcd74972f52e100d0873120e85d3188364bb3623dd9894ef86069bac95a`.
+Final build receipt: 4,399 bytes/SHA-256
+`b11c87bdda452f0a9cfa76e07d94b6ac2a696579fe7b39f331b59e3351551461`.
+Visual and browser QA, proof census, and the independently validated
+8,338-record backend all pass. Do not rebuild unless a concrete defect changes
+an input identity; the current operation is only v0.31.7 packaging,
+existing-lineage publication, public readback, and terminal receipt closure.

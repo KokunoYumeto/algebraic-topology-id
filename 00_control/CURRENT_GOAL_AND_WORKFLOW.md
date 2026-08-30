@@ -1,5 +1,33 @@
 # Current goal and workflow — O012/D60 Algebraic Topology
 
+## Authoritative live boundary — 2026-08-30
+
+The complete bounded D60 course is locally closed. Roberts Lectures 001–030,
+Fomberg Sections 1.1–1.13, ordinary mastery 84/84, cumulative assessments
+24/24, all four offline computation laboratories, proof-link repairs
+`FOM-PR-13`–`15` and `FOM-U003-QUOTIENT-LES`, and the six-part D60 capstone
+with oral-proof rubric are complete and independently checked. The final
+append-only backend has 8,338 records, 10,040,043 bytes, and bundle SHA-256
+`8a3ffc9618e56dfce048c41e938aabef4ffbfd3db20a03a4f52f218985230dbb`.
+The centered, reflowable, self-contained HTML is 16,049,720 bytes/SHA-256
+`a17ce8e3e4d6b93de5e678ce38f3b7834c3b6a9ca1bff063fd3e879875e254a8`;
+the deterministic PDF is 10,376,749 bytes/564 A4 pages/SHA-256
+`d29dad39a06224a83aed11afdb4c65b317a45c6b900122dd40948df712ff8340`.
+The final build, source/math/language, visual, browser, proof-census, backend
+replay, and independent validation gates all pass with P1/P2/P3 zero.
+
+Zenodo preservation is closed: version `0.31.7`, record `22168033`, DOI
+`10.5281/zenodo.22168033`, is public in concept `10.5281/zenodo.22061489`,
+succeeding record `22161294`; all nine files matched local bytes and SHA-256 on
+two anonymous passes. The sole open operation is the bounded GitHub commit and
+Pages deployment in `KokunoYumeto/algebraic-topology-id`. Push only the
+explicit final delta, verify the commit-pinned files and all fourteen route IDs
+on Pages, and persist the sanitized GitHub receipt. Do not alter the completed
+mathematics, create a new DOI
+concept/repository, contact upstream, or touch another lane. After both public
+lineages and durable receipts are exact, perform the terminal audit and mark
+the goal complete.
+
 Complete and preserve one lawful, reader-first Bahasa Indonesia edition for
 O012/D60. Translation is the main work: write natural id-ID prose while
 preserving mathematics, source order, identifiers, exercises, hints, proofs,

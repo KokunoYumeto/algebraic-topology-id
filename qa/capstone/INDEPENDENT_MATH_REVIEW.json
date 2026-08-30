@@ -1,0 +1,27 @@
+{
+  "review_id": "O012-D60-CAPSTONE-INDEPENDENT-MATH-REVIEW",
+  "review_kind": "independent_capstone_mathematics",
+  "status": "PASS",
+  "pass": true,
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "canonical_reader": {"path": "source/id-ID/capstone/o012-d60-capstone-klein-bottle.md", "bytes": 21744, "lf_lines": 423, "sha256": "d26ad5224e61c62080e00074acabfd2cf680779a7bc5d0562cfccc6d715a09c9"},
+  "independent_recomputation": {
+    "mapping_torus_monodromy": "r_*= -1 and r^2=id, so the two-fold pullback is T^2",
+    "fundamental_group": "groupoid SvK (with connecting paths) and the fibration homotopy LES plus monodromy agree on <a,b | aba^{-1}b> = Z ⋊_{-1} Z",
+    "index_two_kernel": "epsilon(a)=1, epsilon(b)=0 has kernel <a^2,b> = Z^2",
+    "cellular_chain": "d1=0 and exponent vector of aba^{-1}b is (0,2)",
+    "homology": "ker(0,2)=0 and coker(0,2)=Z ⊕ Z/2",
+    "uct": "H^0=Z, H^1=Z, H^2=Z/2",
+    "mod2_check": "d2 vanishes over F2, giving F2, F2^2, F2",
+    "degree": "deck involution has determinant/degree -1; T^2→K has no integral degree",
+    "roberts_model": "three-edge/two-face model uses the typed 3x2 d2 (the displayed 2x3 transpose is cochain delta^1), has Smith factors 1,2, and the same homology",
+    "wang_sequence": "1-r*=2 is used only in the homology Wang sequence, not the fibration homotopy LES",
+    "proof_chain": "quotient LES → skeleton stabilization → cellular homology → incidence is typed and non-circular",
+    "scope_count": "the capstone depends on exactly the four admitted laboratories D60-LAB01–04"
+  },
+  "proof_repair_bindings": ["FOM-U003-QUOTIENT-LES", "FOM-PR-13", "FOM-PR-14", "FOM-PR-15"],
+  "severity_census": {"P1": 0, "P2": 0, "P3": 0},
+  "findings": [],
+  "scope_reaudit": "PASS_AFTER_CORRECTING_SIX_LABORATORIES_TO_FOUR",
+  "re_audit": {"status": "PASS_AFTER_CORRECTION", "corrections": ["typed Roberts Unit20 d2 as 3x2 and identified transpose as delta^1", "separated fibration homotopy LES from homology Wang sequence", "stated groupoid van Kampen/connecting-path requirement"]}
+}

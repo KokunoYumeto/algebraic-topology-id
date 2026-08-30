@@ -1,0 +1,84 @@
+{
+  "baseline": {
+    "bundle_sha256": "dd689b6cea9933ee5f85e2d30ed6afd44c25ffee470eceb8d74b22ce3248a0ad",
+    "bytes": 9847262,
+    "records": 8181
+  },
+  "final": {
+    "bundle_sha256": "8aff3dbc16e4f3552d2a16eecf043a6fe7c783c31200dce29bc8f61374504acb",
+    "bytes": 10028356,
+    "records": 8325
+  },
+  "model_provenance": "OpenAI Codex gpt-5.6-sol, Ultra",
+  "receipt_kind": "final_capstone_semantic_rev3_append_only_candidate",
+  "source": {
+    "bytes": 21744,
+    "lf_lines": 423,
+    "path": "source/id-ID/capstone/o012-d60-capstone-klein-bottle.md",
+    "sha256": "d26ad5224e61c62080e00074acabfd2cf680779a7bc5d0562cfccc6d715a09c9"
+  },
+  "status": "PASS_CANDIDATE",
+  "suffix": {
+    "artifacts.jsonl": {
+      "bytes": 4059,
+      "records": 5,
+      "sha256": "ab850e701334aa6b94d19b9458be4e2cf4de8a40665e93b48f3a9b772a2d2041"
+    },
+    "assets.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "authority.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "concepts.jsonl": {
+      "bytes": 0,
+      "records": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "corrections.jsonl": {
+      "bytes": 2652,
+      "records": 1,
+      "sha256": "3ff6dd1c6de864c1b0b60b2896dec7ebfafafddf3dc8cf6947637d9c12708117"
+    },
+    "qa.jsonl": {
+      "bytes": 3020,
+      "records": 5,
+      "sha256": "5289ca16e73328d12e12fd1a86d34e9a8376d57ecb68550db1819452215e8b4b"
+    },
+    "relations.jsonl": {
+      "bytes": 26727,
+      "records": 54,
+      "sha256": "d924ce7a0b9becb7afa84ad66647763c2fcf58a1f7f225a268696e33d38fbe95"
+    },
+    "rights.jsonl": {
+      "bytes": 2155,
+      "records": 1,
+      "sha256": "1ee16b7fbbf25cd2116e8902be9ef7f036ef0afd1fcd9fffe834447b3ffc816c"
+    },
+    "segments.jsonl": {
+      "bytes": 64765,
+      "records": 34,
+      "sha256": "e38e5ea31c0123adf878d0e1cb8259fefb7792fb6bf67dd0b4595e57ede3b53b"
+    },
+    "terms.jsonl": {
+      "bytes": 7350,
+      "records": 10,
+      "sha256": "955555342b6409b3364ad990b6b21928b68a26c09f04f93e2a97b580c110ee5f"
+    },
+    "units.jsonl": {
+      "bytes": 70366,
+      "records": 34,
+      "sha256": "9985acd4192c6b288d174a1d226fbb66bd54fed6713b175514e979f66af697c5"
+    }
+  },
+  "suffix_total": {
+    "bundle_sha256": "87c275c0198e7f10372895ac12a6904d433befd8df2fa6f71fdc6bb9ce3352d9",
+    "bytes": 181094,
+    "records": 144
+  },
+  "timestamp": "2026-08-29T00:00:00Z"
+}
