@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - output/html/**
+      - scripts/manage-universal-reader-navigation.py
       - .github/workflows/pages.yml
   workflow_dispatch:
 
@@ -27,59 +28,8 @@ jobs:
       - name: Check out exact source
         uses: actions/checkout@v6
 
-      - name: Verify frozen readers
-        shell: bash
-        run: |
-          python - <<'PY'
-          from hashlib import sha256
-          from pathlib import Path
-
-          expected = {
-              "output/html/index.html": (85580, "5cc4a29f2c29b274328b574d6698a51d75af0939f9959937db8d679c38ad51b8"),
-              "output/html/units-001-002/index.html": (220035, "d3b5cbfaa3511823821ecf9ba26a4eaec7c84d937417927d11bde3f66abc9f54"),
-              "output/html/units-001-003/index.html": (359397, "33281cc46faa3d560c968b657526cd914786c991d1475b5563911a265bd316c1"),
-              "output/html/units-001-004/index.html": (494732, "8c8f5e1ad8172a2d97e3931fc3b4f2a3aa7f9e8a709260a27103f7eca0f1357d"),
-              "output/html/units-001-005/index.html": (610594, "8d3accf480101565409909c05f987f44b73f1c98889128e2f5074a4e049f48f3"),
-              "output/html/units-001-007/index.html": (899803, "55135048eafe0f097c45936add885e008392eefdf475270fea37adf6a2a7b7bb"),
-              "output/html/units-001-010/index.html": (1318415, "e228ac1422b2742d873feffd5b236fe9c1329d0bdb5da0e8deffe5e770361088"),
-              "output/html/units-001-013/index.html": (1824804, "be1473ab5cb8eff26341e554179661775a12cec5784a8ebf3f9c2f3f0633cb71"),
-              "output/html/units-001-019/index.html": (2962478, "ea5481b14dc1772408bd1c3e384b94a18eed9f2be3c9b9379fe4f8dd499253e0"),
-              "output/html/units-001-020/index.html": (3190086, "59cb765f2291fc835ca629c774505303745983baacf5379efc97c49da6205c03"),
-              "output/html/units-001-021/index.html": (3306661, "aec7e94d3697a7feeae87134da983c59faaf29dc8d961bca28b6bfa9c53cdfa6"),
-              "output/html/units-001-022/index.html": (3520527, "15938aac7515e4ad7de66f8cf2d825744f9eb08b654165b835bfeace31aef8f4"),
-              "output/html/units-001-023/index.html": (3707037, "536fbe19e295424d12198bf1b221be3e2f0170f87fa810a9125bcca9f742264b"),
-              "output/html/units-001-024/index.html": (3927104, "28a84406de9e196070965920a7f7937177197977f9ddf118f0f8b07d464cbf0f"),
-              "output/html/units-001-025/index.html": (4112563, "38cd8437f3b4235ac6269f4e3365123fa06485269d35a424ad4f5ddd589025c1"),
-              "output/html/units-001-026/index.html": (4306392, "a9e4bea73cab5e90136822fbb94a11a1006f7e81ffcdf0a5740da52e335b4e3b"),
-              "output/html/units-001-027/index.html": (4504569, "d98c2c29344e1e3cc3e81863e426fbf775ca6b70c0a5534d888d80ad2269486d"),
-              "output/html/units-001-028/index.html": (4624723, "30f4821960a310bfb6f457f05838b6d8355e2a6df5c35b3a3dcdd9c1afa0a13e"),
-              "output/html/units-001-029/index.html": (4751974, "67e5dd915cbbdf9b1961368efb1538b9ce0da8a4596d7ade11a4af051a189167"),
-              "output/html/units-001-030/index.html": (4861791, "ed9da5653b3eacf7418d6e08760fcd2ecff4d75799c47f08689b940798099891"),
-              "output/html/roberts-001-030-fomberg-001/index.html": (5029788, "2b64e8bec1dd5e1689ef6569360fec896ef87a683c7ba291a3780e27084a7390"),
-              "output/html/roberts-001-030-fomberg-001-002/index.html": (5254038, "1f7618003e3ff273a4f1e2d97b5a81fd320f76640c475cae845ed38793fbeccd"),
-              "output/html/roberts-001-030-fomberg-001-003/index.html": (7190228, "484a2a501df79b1810567810d0b454a18298a4cb43ef466c4e082622216b9542"),
-              "output/html/roberts-001-030-fomberg-001-004/index.html": (8155605, "cd620d5557ff05fb81fb9cf044e8bd4848a6f92ef8fcd06078b8a124f6e79326"),
-              "output/html/roberts-001-030-fomberg-001-005/index.html": (8353769, "d726c8d8a565172fb620233080f60e2ccbde4386d6fa03b099bf6219645aea90"),
-              "output/html/roberts-001-030-fomberg-001-006/index.html": (12555960, "80a7d092cb786e4d4f7ecab31ba40746cf59398db50f0adca50f2431746f7c92"),
-              "output/html/roberts-001-030-fomberg-001-007/index.html": (14885069, "87d58a5955954125c424ab1220a9c6aa7967a782a9bd739094a31ae0a50af5f6"),
-              "output/html/roberts-001-030-fomberg-001-007-ca01/index.html": (14958219, "d71e2f3c0eb38b48fe4686a955ad555db3a407df8f18e41371d52908f0bdbbdf"),
-              "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06/index.html": (15026881, "7ed278d73a324ba0a9e5acadedf448221b3791db7322fdf6d29225afd0124d2b"),
-              "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03/index.html": (15287428, "417e50656ae0a61134c480f59df1bcd54d66a68c938d1d54f9c931ba37e2a5d6"),
-              "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01/index.html": (15389821, "bb0cf484271370878508a6b774e442ee57aaf82b1a3bbca1bed086729360f7ff"),
-              "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/index.html": (15615104, "d0c6afddfa92759d475258bf08f20ea4019eccf72b7554128b2b938bd247b375"),
-              "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/index.html": (15828588, "c221955503cec820c7581c740a038ac1774999ac6a6014f8d0783da2cd08bf0d"),
-              "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04/index.html": (15974648, "a76e31fc92e1554a6b14ffaccc1ad1001ee5c2838a3e36d1441b98519b39d4f8"),
-              "output/html/roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone/index.html": (16049720, "a17ce8e3e4d6b93de5e678ce38f3b7834c3b6a9ca1bff063fd3e879875e254a8"),
-          }
-          for name, (size, digest) in expected.items():
-              path = Path(name)
-              data = path.read_bytes()
-              assert len(data) == size, (name, len(data), size)
-              assert sha256(data).hexdigest() == digest, name
-          actual = sorted(path.relative_to(Path("output/html")).as_posix() for path in Path("output/html").rglob("*") if path.is_file())
-          assert actual == ["index.html", "roberts-001-030-fomberg-001-002/index.html", "roberts-001-030-fomberg-001-003/index.html", "roberts-001-030-fomberg-001-004/index.html", "roberts-001-030-fomberg-001-005/index.html", "roberts-001-030-fomberg-001-006/index.html", "roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04-capstone/index.html", "roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03-lab04/index.html", "roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02-lab03/index.html", "roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01-lab02/index.html", "roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03-lab01/index.html", "roberts-001-030-fomberg-001-007-ca01-hints-r01-r06-ca02-ca03/index.html", "roberts-001-030-fomberg-001-007-ca01-hints-r01-r06/index.html", "roberts-001-030-fomberg-001-007-ca01/index.html", "roberts-001-030-fomberg-001-007/index.html", "roberts-001-030-fomberg-001/index.html", "units-001-002/index.html", "units-001-003/index.html", "units-001-004/index.html", "units-001-005/index.html", "units-001-007/index.html", "units-001-010/index.html", "units-001-013/index.html", "units-001-019/index.html", "units-001-020/index.html", "units-001-021/index.html", "units-001-022/index.html", "units-001-023/index.html", "units-001-024/index.html", "units-001-025/index.html", "units-001-026/index.html", "units-001-027/index.html", "units-001-028/index.html", "units-001-029/index.html", "units-001-030/index.html"], actual
-          print("Frozen Roberts/Fomberg history, mastery closure, and computation Labs 1-4 HTML verified")
-          PY
+      - name: Verify frozen reader bodies and universal navigation
+        run: python scripts/manage-universal-reader-navigation.py check
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
