@@ -10,7 +10,11 @@ frozen reader bytes.
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import hashlib
+import json
+import subprocess
+import urllib.request
 from pathlib import Path
 
 
@@ -142,13 +146,87 @@ def check() -> None:
     print("PASS: 35/35 D60 HTML readers contain one accessible bilingual nav; frozen bytes preserved")
 
 
+def check_public(receipt_path: Path, run_id: str) -> None:
+    check()
+    base = "https://kokunoyumeto.github.io/algebraic-topology-id/"
+    rows = []
+    for relative in sorted(BASELINE):
+        url = base if relative == "index.html" else base + relative.removesuffix("index.html")
+        request = urllib.request.Request(url, headers={"User-Agent": "D60-public-readback/1.0"})
+        with urllib.request.urlopen(request, timeout=120) as response:
+            remote = response.read()
+            status = response.status
+        local = (HTML_ROOT / relative).read_bytes()
+        if status != 200 or remote != local:
+            raise SystemExit(f"{relative}: anonymous public bytes differ from committed output")
+        rows.append(
+            {
+                "path": relative,
+                "url": url,
+                "http_status": status,
+                "bytes": len(remote),
+                "sha256": digest(remote),
+                "required_link_count": sum(remote.count(url_bytes) for url_bytes in REQUIRED_URLS),
+                "navigation_marker_count": remote.count(START),
+                "exact_local_match": True,
+            }
+        )
+        print(f"PUBLIC PASS {len(rows):02d}/35 {relative} {len(remote)} {digest(remote)}")
+
+    endpoint_rows = []
+    for url_bytes in REQUIRED_URLS:
+        url = url_bytes.decode("ascii")
+        request = urllib.request.Request(url, headers={"User-Agent": "D60-public-readback/1.0"})
+        with urllib.request.urlopen(request, timeout=120) as response:
+            status = response.status
+        if status != 200:
+            raise SystemExit(f"required destination is not public: {status} {url}")
+        endpoint_rows.append({"url": url, "http_status": status})
+
+    commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
+    tree = subprocess.check_output(["git", "rev-parse", "HEAD^{tree}"], cwd=ROOT, text=True).strip()
+    receipt = {
+        "schema": "program-matematika-federated-reader-navigation-receipt-v1",
+        "generated_at_utc": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),
+        "role_id": "D60",
+        "repository": "https://github.com/KokunoYumeto/algebraic-topology-id",
+        "commit": commit,
+        "tree": tree,
+        "pages_run_id": int(run_id),
+        "pages_run_url": f"https://github.com/KokunoYumeto/algebraic-topology-id/actions/runs/{run_id}",
+        "pages_root": base,
+        "published_html_count": len(rows),
+        "all_public_bytes_match_commit": True,
+        "all_original_reader_bytes_preserved_after_fragment_removal": True,
+        "navigation": {
+            "language_routes": [REQUIRED_URLS[0].decode(), REQUIRED_URLS[1].decode()],
+            "authoritative_originals": [REQUIRED_URLS[2].decode(), REQUIRED_URLS[3].decode()],
+            "fragment_occurrences_per_document": 1,
+            "required_links_per_document": 4,
+        },
+        "destination_checks": endpoint_rows,
+        "documents": rows,
+    }
+    receipt_path.parent.mkdir(parents=True, exist_ok=True)
+    receipt_path.write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    print(f"WROTE {receipt_path}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("mode", choices=("apply", "check"))
+    parser.add_argument("mode", choices=("apply", "check", "public"))
+    parser.add_argument("--receipt", type=Path)
+    parser.add_argument("--run-id")
     args = parser.parse_args()
     if args.mode == "apply":
         apply()
-    check()
+        check()
+    elif args.mode == "check":
+        check()
+    else:
+        if args.receipt is None or args.run_id is None:
+            parser.error("public mode requires --receipt and --run-id")
+        check_public(args.receipt.resolve(), args.run_id)
 
 
 if __name__ == "__main__":
